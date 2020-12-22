@@ -1,0 +1,170 @@
+.markdown {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 2em 2em 4em 2em;
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: 0.25px;
+  }
+  p {
+    font-size: 15px;
+    line-height: 25px;
+    padding: 7px 0;
+  }
+  li {
+    font-size: 15px;
+    line-height: 25px;
+    padding: 4px 2px;
+    position: relative;
+    &::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--color);
+      position: absolute;
+      opacity: 0.8;
+      top: 13px;
+      left: -10px;
+    }
+  }
+  h1 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  h2 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  h4 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  ul {
+    padding: 0px 0 7px 15px;
+  }
+  em {
+    font-style: italic;
+    opacity: 0.8;
+  }
+  hr {
+    width: 100px;
+    opacity: 0.3;
+    margin: 20px auto;
+  }
+  code {
+    background: rgba(128, 128, 128, 0.07);
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-family: 'Fira Code', monospace !important;
+  }
+  pre {
+    background: rgba(128, 128, 128, 0.07);
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-family: 'Fira Code', monospace !important;
+    font-size: 14px !important;
+    code {
+      background: transparent;
+      border-radius: 0;
+      padding: initial;
+    }
+  }
+  pre.shiki {
+    padding: 14px 12px;
+    line-height: 1.4em;
+    max-width: 106%;
+    margin-left: -3%;
+    margin-right: -3%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: auto;
+    filter: invert(0);
+    background: #1e1e1e !important;
+  }
+  pre.block {
+    padding: 14px 12px;
+    line-height: 1.4em;
+    max-width: 106%;
+    margin-left: -3%;
+    margin-right: -3%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 130%;
+    margin-left: -15%;
+    ~ {
+      img {
+        margin-top: 0;
+      }
+    }
+  }
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--theme-primary);
+    transition: opacity 0.2s ease;
+    outline: none;
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+      text-decoration-color: inherit;
+    }
+  }
+  b {
+    font-weight: 600;
+  }
+  blockquote {
+    border-left: 0.2em solid rgba(136, 136, 136, 0.314);
+    padding: 0 0.8em;
+    margin: 0.3em 0;
+    opacity: 0.8;
+    p {
+      padding: 0.1em 0;
+    }
+  }
+  figure {
+    padding-bottom: 15px;
+  }
+  figcaption {
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0.8;
+    font-size: 0.9em;
+  }
+
+  @media (max-width: 680px) {
+    pre.shiki {
+      max-width: calc(100% + 20px);
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+    pre.block {
+      max-width: calc(100% + 20px);
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+    img {
+      max-width: 100vw;
+      width: 100vw;
+      margin-left: -2em;
+    }
+  }
+}
