@@ -1,9 +1,7 @@
 <template lang="pug">
 a.select-none(@click='toggleDark')
-  span(v-show='isDark')
-    span.iconify.text-lg(data-icon='ri:moon-line')
-  span(v-show='!isDark')
-    span.iconify.text-lg(data-icon='ri:sun-line')
+  ri-moon-line(v-show='isDark')
+  ri-sun-line(v-show='!isDark')
 </template>
 
 <script setup lang='ts'>

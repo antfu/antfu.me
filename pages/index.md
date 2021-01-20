@@ -1,10 +1,8 @@
 ---
-id: about
-draft: true
-title: About
+title: Anthony Fu
 ---
 
-## 👋🏼 Hey, I am **Anthony Fu**
+### **Anthony Fu**
 
 A master's student of computer science in Taiwan while being a fanatical open sourceror.
 

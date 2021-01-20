@@ -1,19 +1,21 @@
 import path from 'path'
 import { UserConfig } from 'vite'
-import Voie from 'vite-plugin-voie'
+import Pages from 'vite-plugin-pages'
 import PurgeIcons from 'vite-plugin-purge-icons'
+import Icons, { ViteIconsResolver } from 'vite-plugin-icons'
 import ViteComponents from 'vite-plugin-components'
 import Markdown from 'vite-plugin-md'
-import Shiki from 'markdown-it-shiki'
-
-const alias = {
-  '/~/': path.resolve(__dirname, 'src'),
-}
+import Vue from '@vitejs/plugin-vue'
+import Prism from 'markdown-it-prism'
 
 const config: UserConfig = {
-  alias,
+  alias: [
+    { find: '/~/', replacement: path.resolve(__dirname, 'src')+'/' },
+  ],
   plugins: [
-    Voie({
+    Vue(),
+
+    Pages({
       extensions: ['vue', 'md'],
       pagesDir: 'pages',
     }),
@@ -21,23 +23,22 @@ const config: UserConfig = {
     Markdown({
       wrapperComponent: 'post',
       wrapperClasses: 'markdown m-auto',
+      headEnabled: true,
       markdownItSetup(md) {
-        md.use(Shiki, {
-          theme: {
-            dark: 'min-dark',
-            light: 'min-light',
-          },
-        })
+        md.use(Prism)
       },
     }),
 
     ViteComponents({
-      alias,
       extensions: ['vue', 'md'],
-      customLoaderMatcher: ctx => ctx.path.endsWith('.md')
+      customLoaderMatcher: path => path.endsWith('.md'),
+      customComponentResolvers: ViteIconsResolver({
+        componentPrefix: ''
+      }),
     }),
 
     PurgeIcons(),
+    Icons(),
   ],
 }
 

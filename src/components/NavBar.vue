@@ -8,11 +8,11 @@ header.header
       a(href='/projects') Projects
       a(href='/blog') Blog
       a(href='/')
-        span.iconify.text-lg(data-icon='ri:user-line')
-      a(href='/notes')
-        span.iconify.text-lg(data-icon='ri:chat-1-line')
+        ri-user-line
+      //- a(href='/notes')
+        //- span.iconify.text-lg(data-icon='ri:chat-1-line')
       a(href='/bookmarks')
-        span.iconify.text-lg(data-icon='ri:bookmark-line')
+        ri-bookmark-line
 
       toggle-theme
 </template>
