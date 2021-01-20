@@ -1,5 +1,6 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
+@import './prose.postcss';
 @import 'tailwindcss/utilities';
 
 html,
@@ -9,36 +10,6 @@ body,
   width: 100vw;
   @apply p-0 m-0;
 }
-
-h1, h2, h3, h4, h5, h6, p, body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
-}
-
-h1, h2 {
-  font-weight: 500;
-}
-
-h1 {
-  font-size: 2rem !important;
-  letter-spacing: -1px;
-  line-height: 1.1875;
-}
-h2 {
-  font-size: 1.7rem !important;
-  letter-spacing: -0.75px;
-  line-height: 1.2;
-}
-h3 {
-  font-size: 1.2rem !important;
-  letter-spacing: -0.5px;
-  line-height: 1.1875;
-  color: #a0a0a0;
-  font-weight: normal;
-}
-p {
-  font-size: 1.2rem;
-}
-
 
 html {
   @apply text-gray-700;
@@ -80,20 +51,4 @@ a {
   @apply inline-block cursor-pointer select-none
     opacity-75 transition duration-200 ease-in-out
     hover:opacity-100 hover:text-teal-600;
-}
-
-.shiki {
-  text-align: left;
-}
-
-.shiki-light {
-  background: #fafafa !important;
-}
-
-html.dark .shiki-light {
-  display: none;
-}
-
-html:not(.dark) .shiki-dark {
-  display: none;
 }

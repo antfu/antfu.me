@@ -1,6 +1,4 @@
 import './styles/main.postcss'
-import './styles/markdown.postcss'
-import './styles/prism.css'
 
 import routes from 'vite-plugin-pages/client'
 import NProgress from 'nprogress'

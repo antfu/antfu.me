@@ -10,10 +10,12 @@ import Prism from 'markdown-it-prism'
 
 const config: UserConfig = {
   alias: [
-    { find: '/~/', replacement: path.resolve(__dirname, 'src')+'/' },
+    { find: '/~/', replacement: `${path.resolve(__dirname, 'src')}/` },
   ],
   plugins: [
-    Vue(),
+    Vue({
+      include: [/\.vue$/, /\.md$/],
+    }),
 
     Pages({
       extensions: ['vue', 'md'],
@@ -22,7 +24,7 @@ const config: UserConfig = {
 
     Markdown({
       wrapperComponent: 'post',
-      wrapperClasses: 'markdown m-auto',
+      wrapperClasses: 'prose m-auto',
       headEnabled: true,
       markdownItSetup(md) {
         md.use(Prism)
@@ -33,7 +35,7 @@ const config: UserConfig = {
       extensions: ['vue', 'md'],
       customLoaderMatcher: path => path.endsWith('.md'),
       customComponentResolvers: ViteIconsResolver({
-        componentPrefix: ''
+        componentPrefix: '',
       }),
     }),
 
