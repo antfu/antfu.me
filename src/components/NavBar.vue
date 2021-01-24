@@ -25,13 +25,13 @@ import { isDark } from '/~/logics'
         <router-link to="/bookmarks" title="Bookmarks">
           <ri-bookmark-line />
         </router-link>
-        <a href="https://twitter.com/antfu7" target="_blank" title="Twitter">
+        <a href="https://twitter.com/antfu7" target="_blank" title="Twitter" class="hidden md:block">
           <feather-twitter />
         </a>
-        <a href="https://github.com/antfu" target="_blank" title="GitHub">
+        <a href="https://github.com/antfu" target="_blank" title="GitHub" class="hidden md:block">
           <uil-github-alt />
         </a>
-        <a href="/feed.xml" target="_blank" title="RSS">
+        <a href="/feed.xml" target="_blank" title="RSS" class="hidden md:block">
           <la-rss-square style="font-size:1.25rem; margin: 0 -0.125rem;" />
         </a>
         <toggle-theme />
