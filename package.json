@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "vite --port 3333 --open",
-    "build": "cross-env NODE_ENV=production vite-ssg build --script async && esno ./scripts/rss.ts"
+    "build": "cross-env NODE_ENV=production vite-ssg build --script async && esno ./scripts/rss.ts && cp _dist_redirects dist/_redirects"
   },
   "dependencies": {
     "@iconify/iconify": "^2.0.0-rc.6",
@@ -18,7 +18,6 @@
     "@antfu/eslint-config-vue": "^0.4.3",
     "@iconify/json": "^1.1.291",
     "@octokit/rest": "^18.0.14",
-    "@purge-icons/generated": "^0.5.2",
     "@tailwindcss/typography": "^0.4.0",
     "@types/fs-extra": "^9.0.6",
     "@types/markdown-it": "^12.0.1",
@@ -50,7 +49,7 @@
     "vite-plugin-icons": "^0.2.1",
     "vite-plugin-md": "^0.4.1",
     "vite-plugin-pages": "^0.1.7",
-    "vite-plugin-purge-icons": "^0.5.2",
+    "vite-plugin-purge-icons": "^0.6.0",
     "vite-plugin-pwa": "^0.3.10",
     "vite-plugin-yaml": "^1.0.5",
     "vite-ssg": "^0.4.2"

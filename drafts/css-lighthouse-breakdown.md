@@ -1,11 +1,9 @@
 ---
-draft: true
 title: CSS Lighthouse Game Break Down
-description: ''
 lang: en
 ---
 
-One day I was randomly browsing [CodePen](https://codepen.io/) and accidentally found out this [Pure CSS Game - You Must Build a Lighthouse.](https://codepen.io/ivorjetski/pen/OJXbvdL) by [Ben Evans](https://twitter.com/ivorjetski). With a similar art style of [Townscaper](https://store.steampowered.com/app/1291340), I was immediately attracted. 
+One day I was randomly browsing [CodePen](https://codepen.io/) and accidentally found out this [Pure CSS Game - You Must Build a Lighthouse.](https://codepen.io/ivorjetski/pen/OJXbvdL) by [Ben Evans](https://twitter.com/ivorjetski). With a similar art style of [Townscaper](https://store.steampowered.com/app/1291340), I was immediately attracted.
 
 The goal of this game is to make a lighthouse through a combination of house blocks. Similar to Townscaper, when you have two blocks next to each other, they will become a bigger house. Lighthouse should be able to appear with one of the patterns. The most important of this game is that it's built with PURE CSS, NO Javascript!
 

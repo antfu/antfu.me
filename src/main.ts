@@ -7,7 +7,7 @@ import { ViteSSG } from 'vite-ssg'
 import dayjs from 'dayjs'
 import LocalizedFormat from 'dayjs/plugin/localizedFormat'
 import App from './App.vue'
-import '@purge-icons/generated'
+import 'vite-plugin-purge-icons/generated'
 
 export const createApp = ViteSSG(
   App,

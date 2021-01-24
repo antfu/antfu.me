@@ -42,14 +42,14 @@ async function run() {
   const feed = new Feed({
     title: 'Anthony Fu',
     description: 'Blog of Anthony Fu',
-    id: 'http://antfu.me/',
-    link: 'http://antfu.me/',
-    favicon: 'http://antfu.me/favicon.png',
-    copyright: 'All rights reserved 2013, John Doe',
+    id: 'https://antfu.me/',
+    link: 'https://antfu.me/',
+    favicon: 'https://antfu.me/favicon.png',
+    copyright: 'CC BY-NC 4.0 2021 © Anthony Fu',
     feedLinks: {
       json: 'https://antfu.me/feed.json',
       atom: 'https://antfu.me/feed.atom',
-      rss: 'https://antfu.me/feed.rss',
+      rss: 'https://antfu.me/feed.xml',
     },
     author: {
       name: 'Anthony Fu',
@@ -60,7 +60,7 @@ async function run() {
 
   posts.forEach(i => feed.addItem(i))
 
-  await fs.writeFile('./dist/feed.rss', feed.rss2(), 'utf-8')
+  await fs.writeFile('./dist/feed.xml', feed.rss2(), 'utf-8')
   await fs.writeFile('./dist/feed.atom', feed.atom1(), 'utf-8')
   await fs.writeFile('./dist/feed.json', feed.json1(), 'utf-8')
 }

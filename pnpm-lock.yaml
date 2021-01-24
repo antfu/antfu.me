@@ -11,7 +11,6 @@ devDependencies:
   '@antfu/eslint-config-vue': 0.4.3_eslint@7.18.0+typescript@4.1.3
   '@iconify/json': 1.1.291
   '@octokit/rest': 18.0.14
-  '@purge-icons/generated': 0.5.2
   '@tailwindcss/typography': 0.4.0_tailwindcss@2.0.2
   '@types/fs-extra': 9.0.6
   '@types/markdown-it': 12.0.1
@@ -43,7 +42,7 @@ devDependencies:
   vite-plugin-icons: 0.2.1_a4b82e2d2342f19b76a879e5efac3f45
   vite-plugin-md: 0.4.1_vite@2.0.0-beta.46
   vite-plugin-pages: 0.1.7_vue@3.0.5
-  vite-plugin-purge-icons: 0.5.2_vite@2.0.0-beta.46
+  vite-plugin-purge-icons: 0.6.0_vite@2.0.0-beta.46
   vite-plugin-pwa: 0.3.10
   vite-plugin-yaml: 1.0.5_vite@2.0.0-beta.46
   vite-ssg: 0.4.2_67baffff43cafb4933a0b440cee9b6c9
@@ -1391,7 +1390,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-mzCy7lkYQv+kM58W37uTg/mWoJ4nvRDRCkjSdqlrgA28hJEYNJTMYiGTvmq39cdtnMPJd0hshysBEAaH4D5C7w==
-  /@purge-icons/core/0.5.2:
+  /@purge-icons/core/0.6.0:
     dependencies:
       '@iconify/iconify': 2.0.0-rc.6
       axios: 0.21.1_debug@4.3.2
@@ -1400,13 +1399,13 @@ packages:
       fs-extra: 9.1.0
     dev: true
     resolution:
-      integrity: sha512-lYPscpk562FvVS6sqSbmLiwjIR5EfOoZD8InJdnm2wi4NUzCL4s+V8MPhN6JjTfUpUfRxPin3KnJbAU4ILutuw==
-  /@purge-icons/generated/0.5.2:
+      integrity: sha512-Gp7Fvx1mtPykejxldJ8+1o2C/Gzw54Mpv22JKNoKnaUlKGe1m4f0rAl2MgHDGJd/ghm4kDcfxFzjnna6Z4L5cA==
+  /@purge-icons/generated/0.6.0:
     dependencies:
       '@iconify/iconify': 2.0.0-rc.6
     dev: true
     resolution:
-      integrity: sha512-dcb4Lu6Ll7Hrnz5yYtTClxDq4FKAxD74B2CxPteACc71kmctsOEQD8z6eLsRhcM9waLdf9oygr+IcRVTIrllcg==
+      integrity: sha512-Xg2ckJu/wRSSNEloebCaKSIAamKMZffws4+2oOjA1J3JEyD5FlP3Ewt+kkcuun/i7Mo2czjTKJG9wwSwZgf0cg==
   /@rollup/plugin-babel/5.2.2_825e830c60d51f1c1f95c9515abd283e:
     dependencies:
       '@babel/core': 7.12.10
@@ -5113,15 +5112,15 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
-  /rollup-plugin-purge-icons/0.5.2:
+  /rollup-plugin-purge-icons/0.6.0:
     dependencies:
-      '@purge-icons/core': 0.5.2
-      '@purge-icons/generated': 0.5.2
+      '@purge-icons/core': 0.6.0
+      '@purge-icons/generated': 0.6.0
     dev: true
     engines:
       node: '>= 12'
     resolution:
-      integrity: sha512-5QPoxSwQyHTq35nFzfH7RrB2ISmXm6YKAWUffYKhyD3gsMNOhJsq0ghrpfxbtP74jVFOmuwyReU/UvMzf09CHw==
+      integrity: sha512-8huBXnq7D1Lj2gPZP/rOjuj2hkZ3AXoGQc2r5+MK3lcD3xEgfuONd+G4WIk7P8wJTEVGux5xJ2Ho7nSISLqP1A==
   /rollup-plugin-terser/7.0.2_rollup@2.37.1:
     dependencies:
       '@babel/code-frame': 7.12.11
@@ -5806,11 +5805,11 @@ packages:
       vue: ^3.0.0
     resolution:
       integrity: sha512-/IBAEAX4w4EoLzQpK+hf0D66HUn2lBSZJmLedSKXVykbKCMf9VGME4hlynT91RKMa0AXKYdcXwQJM3xmbyjxdw==
-  /vite-plugin-purge-icons/0.5.2_vite@2.0.0-beta.46:
+  /vite-plugin-purge-icons/0.6.0_vite@2.0.0-beta.46:
     dependencies:
-      '@purge-icons/core': 0.5.2
-      '@purge-icons/generated': 0.5.2
-      rollup-plugin-purge-icons: 0.5.2
+      '@purge-icons/core': 0.6.0
+      '@purge-icons/generated': 0.6.0
+      rollup-plugin-purge-icons: 0.6.0
       vite: 2.0.0-beta.46
     dev: true
     engines:
@@ -5818,7 +5817,7 @@ packages:
     peerDependencies:
       vite: ^2.0.0-beta.3
     resolution:
-      integrity: sha512-6YsH7FBYmYIOFzmt4TEuAUIypTdLKLqo3BUQt8McR8qKbgWHhkvnXaEHS1rLCowqSYSKKcqhGVuHg5x13VwTpw==
+      integrity: sha512-YGW3wh+Pj4Tob23x29+NgVkslru5tAInIMTY0J2eltDNy32RKxSRh8ohb+W0O/X9h2xKkMeiUpNI7mY6k8Uzsw==
   /vite-plugin-pwa/0.3.10:
     dependencies:
       debug: 4.3.2
@@ -6240,7 +6239,6 @@ specifiers:
   '@iconify/iconify': ^2.0.0-rc.6
   '@iconify/json': ^1.1.291
   '@octokit/rest': ^18.0.14
-  '@purge-icons/generated': ^0.5.2
   '@tailwindcss/typography': ^0.4.0
   '@types/fs-extra': ^9.0.6
   '@types/markdown-it': ^12.0.1
@@ -6277,7 +6275,7 @@ specifiers:
   vite-plugin-icons: ^0.2.1
   vite-plugin-md: ^0.4.1
   vite-plugin-pages: ^0.1.7
-  vite-plugin-purge-icons: ^0.5.2
+  vite-plugin-purge-icons: ^0.6.0
   vite-plugin-pwa: ^0.3.10
   vite-plugin-yaml: ^1.0.5
   vite-ssg: ^0.4.2
