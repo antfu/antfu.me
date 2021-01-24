@@ -21,9 +21,11 @@ const { frontmatter } = defineProps<{frontmatter: any}>()
   </div>
   <slot />
   <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-8">
-    <a :href="route.path.split('/').slice(0, -1).join('/') || '/'" class="no-underline">
-      <carbon-chevron-left class="inline-block" /> Back
-    </a>
+    <router-link
+      :to="route.path.split('/').slice(0, -1).join('/') || '/'"
+      class="font-mono no-underline opacity-50 hover:opacity-75"
+    >
+      cd ..
+    </router-link>
   </div>
-  <Footer />
 </template>

@@ -31,11 +31,11 @@ const posts = computed(() => routes.filter(i => i.meta.frontmatter.lang === lang
   </div>
 
   <ul>
-    <a
+    <router-link
       v-for="route in posts"
       :key="route.path"
       class="item block font-normal mb-6 mt-2 no-underline"
-      :href="route.path"
+      :to="route.path"
     >
       <li class="no-underline">
         <div class="title text-lg">
@@ -45,6 +45,6 @@ const posts = computed(() => routes.filter(i => i.meta.frontmatter.lang === lang
           {{ formatDate(route.meta.frontmatter.date) }} <span v-if="route.meta.frontmatter.duration">· {{ route.meta.frontmatter.duration }}</span>
         </div>
       </li>
-    </a>
+    </router-link>
   </ul>
 </template>
