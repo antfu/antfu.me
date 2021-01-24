@@ -4,6 +4,8 @@ import matter from 'gray-matter'
 import MarkdownIt from 'markdown-it'
 import { Feed } from 'feed'
 
+const DOMAIN = 'https://antfu.me'
+
 async function run() {
   const markdown = MarkdownIt({
     html: true,
@@ -12,30 +14,36 @@ async function run() {
   })
   const files = await fg('pages/posts/*.md')
 
-  const posts: any[] = await Promise.all(
-    files.filter(i => !i.includes('index'))
-      .map(async(i) => {
-        const raw = await fs.readFile(i, 'utf-8')
-        const { data, content } = matter(raw)
-        const html = markdown.render(content)
-          .replace('src="/', 'src="https://antfu.me/')
+  const posts: any[] = (
+    await Promise.all(
+      files.filter(i => !i.includes('index'))
+        .map(async(i) => {
+          const raw = await fs.readFile(i, 'utf-8')
+          const { data, content } = matter(raw)
 
-        if (data.image?.startsWith('/'))
-          data.image = `https://antfu.me${data.image}`
+          if (data.lang !== 'en')
+            return
 
-        return {
-          ...data,
-          content: html,
-          author: [
-            {
-              name: 'Anthony Fu',
-              email: 'hi@antfu.me',
-              link: 'https://antfu.me',
-            },
-          ],
-        }
-      }),
-  )
+          const html = markdown.render(content)
+            .replace('src="/', `src="${DOMAIN}/`)
+
+          if (data.image?.startsWith('/'))
+            data.image = DOMAIN + data.image
+
+          return {
+            ...data,
+            content: html,
+            author: [
+              {
+                name: 'Anthony Fu',
+                email: 'hi@antfu.me',
+                link: DOMAIN,
+              },
+            ],
+          }
+        }),
+    ))
+    .filter(Boolean)
 
   posts.sort((a, b) => +new Date(b.date) - +new Date(a.date))
 
@@ -44,7 +52,8 @@ async function run() {
     description: 'Blog of Anthony Fu',
     id: 'https://antfu.me/',
     link: 'https://antfu.me/',
-    favicon: 'https://antfu.me/favicon.png',
+    image: 'https://antfu.me/avatar.png',
+    favicon: 'https://antfu.me/logo.png',
     copyright: 'CC BY-NC 4.0 2021 © Anthony Fu',
     feedLinks: {
       json: 'https://antfu.me/feed.json',
