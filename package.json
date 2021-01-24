@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "vite --port 3333 --open",
-    "build": "cross-env NODE_ENV=production vite-ssg build --script async && esno ./scripts/rss.ts && cp _dist_redirects dist/_redirects"
+    "build": "cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts && cp _dist_redirects dist/_redirects"
   },
   "dependencies": {
     "@iconify/iconify": "^2.0.0-rc.6",
