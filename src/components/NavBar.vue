@@ -10,8 +10,8 @@ import { isDark } from '/~/logics'
       exact
       focusable="false"
     >
-      <img v-show="isDark" src="/favicon-dark.svg" alt="logo">
-      <img v-show="!isDark" src="/favicon.svg" alt="logo">
+      <img v-show="isDark" src="/logo-dark.svg" alt="logo">
+      <img v-show="!isDark" src="/logo.svg" alt="logo">
     </a>
     <nav class="nav">
       <div class="spacer" />
