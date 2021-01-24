@@ -32,9 +32,7 @@ const config: UserConfig = {
 
         if (!path.includes('projects.md')) {
           const md = fs.readFileSync(path, 'utf-8')
-
           const { data } = matter(md)
-
           route.meta = Object.assign(route.meta || {}, { frontmatter: data })
         }
 

@@ -23,7 +23,7 @@ In this post, I will break it down into parts to explain how it works. And hope 
 
 The art of this game is awesome, but before we dig into the art part, let's see how the fundamental - interactivity work first. I am not really into the "CSS Only" world before, the ability to have interactivity and states without JavaScript is just blowing my mind. This is the initial motivation for me to break it down - I must find out how! Luckily, Ben has left some hints on this. In the game, you can see a grid of dots on the top-left corner, every time you toggle the house, some of the dots will alter between gray and blue. They look like radio inputs. Since it's a CSS game, let's remove all the CSS to see what happened.
 
-![Lighthouse with CSS Removed](../images/lighthouse-css-removed.png)
+![Lighthouse with CSS Removed](/images/lighthouse-css-removed.png)
 
 Oh, they're indeed radios! If you play with them, clicking some radios will unselect some others - there are some secret groups for them. That's how the interactivity works without JavaScript, states and logics are handled by the native elements. With this knowledge, we should be able to re-implement it easily.
 
