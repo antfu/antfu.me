@@ -25,6 +25,9 @@ import { isDark } from '/~/logics'
         <a href="/bookmarks" title="Bookmarks">
           <ri-bookmark-line />
         </a>
+        <a href="/feed.xml" title="RSS">
+          <la-rss-square style="font-size:1.25rem; margin: 0 -0.125rem;" />
+        </a>
         <toggle-theme />
       </div>
     </nav>

@@ -85,6 +85,10 @@ projects:
       link: 'https://rhein.netlify.app/'
       desc: 'Text editor with freedom of layouting'
       icon: 'carbon:data-vis-4'
+    - name: 'Prism --theme-vars'
+      link: 'https://github.com/antfu/prism-theme-vars'
+      desc: 'A customizable Prism.js theme using CSS variables'
+      icon: 'carbon:angle'
     - name: 'Foto Rehearser'
       link: 'https://foto.inesfendi.com/'
       desc: 'Photo post planner'
@@ -115,7 +119,6 @@ projects:
       link: 'https://github.com/antfu/esno'
       desc: 'TypeScript / ESNext node runtime powered by ESBuild'
       icon: 'carbon:carbon'
-    - name: ''
 
   Automations:
     - name: 'Knightly'
@@ -126,7 +129,6 @@ projects:
       link: 'https://github.com/antfu/export-size-action'
       desc: 'GitHub Actions for export-size'
       icon: 'carbon:reflect-vertical'
-    - name: ''
 
   VS Code Extensions:
     - name: 'i18n Ally'
@@ -199,16 +201,12 @@ projects:
       link: 'https://github.com/antfu/live-draw'
       desc: 'A tool allows you to draw on screen real-time'
       icon: 'carbon:brush-freehand'
-    - name: ''
-    - name: ''
 
   Toys:
     - name: '1990 Script'
       link: 'https://github.com/antfu/1990-script'
       desc: 'Make your Github history back to 1990'
       icon: 'carbon:time'
-    - name: ''
-    - name: ''
 ---
 
 <ListProjects :projects="frontmatter.projects"/>

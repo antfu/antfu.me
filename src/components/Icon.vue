@@ -1,10 +1,10 @@
 <template>
-  <div ref="el" :class="$attrs.class" style="vertical-align: text-bottom" />
+  <div ref="el" :class="$attrs.class" style="vertical-align: text-bottom; min-width:1em; min-height:1em;" />
 </template>
 
 <script setup lang="ts">
 import { watch, ref, onMounted, nextTick, defineProps } from 'vue'
-import Iconify from '@purge-icons/generated'
+import Iconify from '@iconify/iconify'
 
 const props = defineProps({
   icon: {
