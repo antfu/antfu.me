@@ -1,0 +1,89 @@
+/* https://github.com/antfu/prism-theme-vars */
+@import 'prism-theme-vars/base.css';
+
+:root {
+  --prism-font-size: 0.9rem;
+  --prism-font-family: 'Fira Code', monospace;
+}
+
+html:not(.dark) {
+  --prism-foreground: #393a34;
+  --prism-background: #fbfbfb;
+  --prism-comment: #b8c4b8;
+  --prism-string: #c67b5d;
+  --prism-literal: #3a9c9b;
+  --prism-keyword: #248459;
+  --prism-function: #849145;
+  --prism-deleted: #a14f55;
+  --prism-class: #2b91af;
+  --prism-builtin: #a52727;
+  --prism-property: #ad502b;
+  --prism-namespace: #c96880;
+  --prism-punctuation: #8e8f8b;
+  --prism-decorator: #bd8f8f;
+  --prism-json-property: #698c96;
+}
+
+html.dark {
+  --prism-scheme: dark;
+  --prism-foreground: #d4cfbf;
+  --prism-background: #111111;
+  --prism-comment: #758575;
+  --prism-string: #ce9178;
+  --prism-literal: #4fb09d;
+  --prism-keyword: #4d9375;
+  --prism-function: #c2c275;
+  --prism-deleted: #a14f55;
+  --prism-class: #5ebaa8;
+  --prism-builtin: #cb7676;
+  --prism-property: #dd8e6e;
+  --prism-namespace: #c96880;
+  --prism-punctuation: #d4d4d4;
+  --prism-decorator: #bd8f8f;
+  --prism-regex: #ab5e3f;
+  --prism-json-property: #6b8b9e;
+  --prism-line-number: #888888;
+  --prism-line-number-gutter: #eeeeee;
+  --prism-line-highlight-background: #444444;
+  --prism-selection-background: #444444;
+}
+
+.prose {
+  --fg: #444;
+  --fg-deep: #000;
+
+  a {
+    font-weight: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+
+    &:hover { 
+      border-bottom: 1px solid var(--fg);
+    }
+  }
+
+  a code {
+    color: inherit;
+  }
+
+  hr {
+    width: 50px;
+    margin: 3em auto;
+  }
+}
+
+html.dark .prose {
+  --fg: #aaa;
+  --fg-deep: #fff;
+}
+
+a.item {
+  transition: .2s all ease-out;
+  text-decoration: none;
+  border-bottom: none !important;
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 1;
+  }
+}

@@ -1,20 +1,34 @@
-<template lang='pug'>
-header.header
-  a.w-10.h-10.absolute.m-6.select-none.outline-none(href='/' exact focusable='false')
-    img(src='/logo.png' alt='logo')
-  nav.nav
-    .spacer
-    .right
-      a(href='/projects') Projects
-      a(href='/blog') Blog
-      a(href='/')
-        ri-user-line
-      //- a(href='/notes')
-        //- span.iconify.text-lg(data-icon='ri:chat-1-line')
-      a(href='/bookmarks')
-        ri-bookmark-line
+<script setup lang="ts">
+import { isDark } from '/~/logics'
+</script>
 
-      toggle-theme
+<template>
+  <header class="header">
+    <a
+      class="w-10 h-10 absolute m-6 select-none outline-none"
+      href="/"
+      exact
+      focusable="false"
+    >
+      <img v-show="isDark" src="/favicon-dark.svg" alt="logo">
+      <img v-show="!isDark" src="/favicon.svg" alt="logo">
+    </a>
+    <nav class="nav">
+      <div class="spacer" />
+      <div class="right">
+        <a href="/projects">Projects</a>
+        <a href="/posts">Blog</a>
+        <a href="/" title="Home">
+          <ri-user-line />
+        </a>
+        <!--  a(href='/notes')//  span.iconify.text-lg(data-icon='ri:chat-1-line') -->
+        <a href="/bookmarks" title="Bookmarks">
+          <ri-bookmark-line />
+        </a>
+        <toggle-theme />
+      </div>
+    </nav>
+  </header>
 </template>
 
 <style scoped>

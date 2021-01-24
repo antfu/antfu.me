@@ -1,7 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import './prose.postcss';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html,
 body,
@@ -36,10 +35,6 @@ html.dark {
   }
 }
 
-a {
-  @apply text-teal-600;
-}
-
 .btn {
   @apply px-4 py-1 rounded inline-block
     bg-teal-600 text-white cursor-pointer
@@ -52,3 +47,4 @@ a {
     opacity-75 transition duration-200 ease-in-out
     hover:opacity-100 hover:text-teal-600;
 }
+

@@ -16,6 +16,7 @@ module.exports = {
       safelist: ['prose', 'prose-sm', 'm-auto'],
     },
   },
+  important: true,
   variants: {
     cursor: ['responsive', 'disabled'],
     backgroundColor: ['dark', 'hover', 'disabled'],
@@ -30,26 +31,22 @@ module.exports = {
       colors: {
         teal: colors.teal,
       },
+      fontFamily: {
+        sans: '"Inter", Inter var,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
+      },
       typography: {
         DEFAULT: {
           css: {
-            color: 'inherit',
-            a: {
-              color: 'inherit',
-              opacity: 0.75,
-              '&:hover': {
-                opacity: 1,
-                color: colors.teal[600],
-              },
-            },
-            b: { color: 'inherit' },
-            strong: { color: 'inherit' },
+            color: 'var(--fg)',
+            a: { color: 'var(--fg-deep)' },
+            b: { color: 'var(--fg-deep)' },
+            code: { color: 'var(--fg-deep)' },
+            strong: { color: 'var(--fg-deep)' },
             em: { color: 'inherit' },
-            h1: { color: 'inherit' },
-            h2: { color: 'inherit' },
+            h1: { color: 'var(--fg-deep)' },
+            h2: { color: 'var(--fg-deep)' },
             h3: { color: 'inherit' },
             h4: { color: 'inherit' },
-            code: { color: 'inherit' },
             blockquote: { color: 'inherit' },
           },
         },

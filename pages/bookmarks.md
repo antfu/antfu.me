@@ -1,13 +1,7 @@
 ---
-id: bookmarks
-draft: true
-title: Bookmarks
-
+title: My Bookmarks
+subtitle: Some of my favorite websites/tools with excellent design and UX that I highly recommend
 ---
-
-## My Bookmarks
-
-*Some of my favorite websites/tools with excellent design and UX that I highly recommend*
 
 ### Design
 
