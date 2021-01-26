@@ -4,7 +4,7 @@ title: Anthony Fu
 
 Hey, I am Anthony Fu, a fanatical open sourceror.
 
-Being part of [Vue.js](https://vuejs.org/) core team, I am maintaining [@vue/composition-api](https://github.com/vuejs/composition-api), a plugin providing Composition API to Vue 2. I am interested in [Vite](http://vitejs.dev/) a lot. I made several Vite plugins and an opinionated starter template [Vitesse](https://github.com/antfu/vitesse) where this site is based upon. I am also a member of [wenyan-lang 文言](https://wy-lang.org/), a programming language for the ancient Chinese. I helped building the [VS Code Extension](https://github.com/antfu/wenyan-lang-vscode) and it's [Online IDE](https://ide.wy-lang.org/).
+Being part of [Vue.js](https://vuejs.org/) core team, I am maintaining [@vue/composition-api](https://github.com/vuejs/composition-api), a plugin providing Composition API to Vue 2. I am interested in [Vite](http://vitejs.dev/) a lot. I made several Vite plugins and an opinionated starter template [Vitesse](https://github.com/antfu/vitesse) which is site based upon. I am also a member of [wenyan-lang 文言](https://wy-lang.org/), a programming language for the ancient Chinese. I helped building the [VS Code Extension](https://github.com/antfu/wenyan-lang-vscode) and it's [Online IDE](https://ide.wy-lang.org/).
 
 Dreaming up ideas and making them come true is where my passion lies. Check out my [full projects list here](https://antfu.me/projects).
 
