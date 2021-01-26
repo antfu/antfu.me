@@ -1,11 +1,21 @@
-/github https://github.com/antfu
-/gh https://github.com/antfu
-/twitter https://twitter.com/antfu7
-/sponsor https://github.com/sponsors/antfu
-/sponsors https://github.com/sponsors/antfu
-/support https://github.com/sponsors/antfu
-/instagram https://instagram.com/antfu7
-/ig https://instagram.com/antfu7
+/rss https://github.com/feed.xml 301
+/blog https://github.com/posts 301
+
+/github https://github.com/antfu 301
+/gh https://github.com/antfu 301
+/twitter https://twitter.com/antfu7 301
+/sponsor https://github.com/sponsors/antfu 301
+/sponsors https://github.com/sponsors/antfu 301
+/support https://github.com/sponsors/antfu 301
+/instagram https://instagram.com/antfu7 301
+/ig https://instagram.com/antfu7 301
 
 /talks/2020-09-26 https://github.com/antfu/talks/blob/master/2020-09-26/2020-09-26-binfe-antfu-zh_CN.pdf?raw=true 302
 /talks/2020-09-26/en https://github.com/antfu/talks/blob/master/2020-09-26/2020-09-26-binfe-antfu-en.pdf?raw=true 302
+
+/vueuse https://github.com/vueuse/vueuse 302
+/vue-demi https://github.com/vueuse/vue-demi 302
+/chemistry https://github.com/vueuse/vue-chemistry 302
+/i18n-ally https://github.com/lokalise/i18n-ally 302
+/type-challenges https://github.com/type-challenges/type-challenges 302
+/tc https://github.com/type-challenges/type-challenges 302
