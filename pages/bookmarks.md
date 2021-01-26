@@ -42,6 +42,7 @@ subtitle: Some of my favorite websites/tools with excellent design and UX that I
 ### Resources
 
 - [World Vector Logo](https://worldvectorlogo.com/)
+- [Icônes](http://icones.js.org/)
 
 ### Naming
 
