@@ -15,8 +15,7 @@ It begins on me trying to improve the DX using icons in [this post](https://antf
 
 - [vite-plugin-components](https://github.com/antfu/vite-plugin-components) - On-demand components auto importing for Vite.
 - [vite-plugin-pwa](https://github.com/antfu/vite-plugin-pwa) - Zero-config PWA for Vite.
-- [PurgeIcons](https://github.com/antfu/purge-icons) - Bundles icons on demand, with a Vite plugin.
-- [svg-packer](https://github.com/antfu/svg-packer) - Pack SVGs to Icon Fonts - In Browser.
+- [vite-plugin-purge-icons](https://github.com/antfu/purge-icons) - Bundles icons on demand, with a Vite plugin.
 
 And found some awesome tools form the community:
 
@@ -27,9 +26,26 @@ With them, I got the fundamentals of a Vite project setup that has file based ro
 
 I also learned [Tailwind CSS](https://tailwindcss.com/) as a replacement of the missing UI component libraries for Vue 3. It turns out that I really enjoy Tailwind's way of rapid prototyping. As I got more control over styling things, it make me think more about the design rather then just applying the default theme of the components library I use.
 
-### Markdown and Syntax hightlighting
+### Dark Mode
 
-Then I started working on the [Codecember](http://codecember.ink/) project with [@octref](https://blog.matsu.io/about), an initiative of learning and creating generative arts in December. With the sprite of dogfooding, we chosen Vite for building the site. In Codecember we need to do have a prompt everyday with some texts, code snippets and demos. This comes with the problem that Vite does not have a plugin for handling markdown files at that moment, so I made one myself. Also as we are more like a site than an App, I would need to do some server-side generation to improve our SEO.
+> useDark
+
+### Markdown
+
+Then I started working on the [Codecember](http://codecember.ink/) project with [@octref](https://blog.matsu.io/about), an initiative of learning and creating generative arts in December. With the sprite of dogfooding, we chosen Vite for building the site. In Codecember we need to do have a prompt everyday with some texts, code snippets and demos. This comes with the problem that Vite does not have a plugin for handling markdown files at that moment, so I made one myself.
 
 - [vite-plugin-md](https://github.com/antfu/vite-plugin-md) - Markdown for Vite.
 - [vite-ssg](https://github.com/antfu/vite-ssg) - Server-side generation for Vite.
+
+### The Vite Template
+
+### Serve-side Generatation (SSG)
+
+Also as we are more like a site than an App, I would need to do some server-side generation to improve our SEO.
+
+### Syntax Hightlighting
+
+### The Missing Piece for SSG
+
+### Thanks
+
