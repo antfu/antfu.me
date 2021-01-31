@@ -61,6 +61,10 @@ watch(
 )
 ```
 
+Try click it 👇🏼
+
+<ToggleTheme class="text-xl pb-2 pt-1"/>
+
 If you would like to use it, I also extract the logic above into [`useDark()` in VueUse](https://vueuse.js.org/core/usedark/). Where you can simply do this
 
 ```ts
@@ -69,6 +73,7 @@ import { useDark, useToggle } from '@vueuse/core'
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
 ```
+
 
 ### Markdown
 
@@ -86,7 +91,7 @@ Fight with them for a while you might be able to ease the misalignment eventuall
 
 - [prism-theme-vars](https://github.com/antfu/prism-theme-vars) - A customizable Prism.js theme using CSS variables.
 
-So, instead of dealing with the lengthy CSS theme, now you can have one in less than 20 lines of CSS variables. For example:
+Instead of dealing with the lengthy CSS theme, now you can have one in less than 20 lines of CSS variables. For example:
 
 ```css
 @import "prism-theme-vars/base.css";
@@ -143,7 +148,7 @@ html.dark {
 }
 ```
 
-That's all. You can also play with the themes in the [Playground](https://prism-theme-vars.netlify.app/) and make some your own within 5min. I use it created my first code theme in my life, which is exactly what you are looking at :)
+That's all. You can also play with the themes in the [Playground](https://prism-theme-vars.netlify.app/) and make some your own within 5 mins. I created my first code theme in my life using it, which is also exactly what you are looking at :)
 
 
 ### Serve-Side Generatation (SSG)
@@ -152,7 +157,7 @@ While Codecember is more like a site than an app, we would need to do some serve
 
 - [vite-ssg](https://github.com/antfu/vite-ssg) - Server-side generation for Vite.
 
-The idea here is fairly simple, bundle the app entry and for each route, dump the app using the [`@vue/server-renderer`](https://github.com/vuejs/vue-next/tree/master/packages/server-renderer) package. A simplified code here:
+The idea here is fairly simple: bundle the app entry, then for each route, dump the app using APIs from the [`@vue/server-renderer`](https://github.com/vuejs/vue-next/tree/master/packages/server-renderer) package. Simplified code here:
 
 ```ts
 import { renderToString } from '@vue/server-renderer'
@@ -196,13 +201,13 @@ useHead({
 
 ### The Vite Template
 
-I found myself making small web apps quite often and setting up plugins and configs for Vite kinda becomes the bottleneck of me making my idea into real code. So combining with those tools I am using, I made an opinionated template for myself but unexpectedly got quite some good feedback:
+I found myself making small web apps frequently. Setting up plugins and configs for Vite kinda becomes the bottleneck for me to make my idea landded. So combining with those tools I am using, I made an opinionated template for myself but unexpectedly got quite some good feedback:
 
 - [Vitesse](https://github.com/antfu/vitesse) - Opinionated Vite Starter Template
 
 ## This Website
 
-So, this site is **made from [Vitesse](https://github.com/antfu/vitesse) combining with all the tools I mentioned above**. To be honest, even making a static site generator right is something that could be a hard task to me, not to mention that most of the hard part is handled by Vite itself. I am really happy to see the things I have learned and crafted along the way. And glad I can make these contributions to the Vite ecosystem, that someone could find my work useful for building their apps.
+This site is **made from [Vitesse](https://github.com/antfu/vitesse) combining with all the tools I mentioned above**. To be honest, even making a static site generator right is something that could be a hard task to me, not to mention that most of the hard part is handled by Vite itself. I am really happy to see the things I have learned and crafted along the way. And glad I can make these contributions to the Vite ecosystem, that someone could find my work useful for building their apps.
 
 ## Thanks
 
