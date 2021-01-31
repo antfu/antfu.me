@@ -44,11 +44,11 @@ const f = {
   start: () => {},
 }
 
-const init = ref(5)
-const len = ref(5)
+const init = ref(4)
+const len = ref(6)
 const stopped = ref(false)
 
-watch([init, len], () => f.start())
+// watch([init, len], () => f.start())
 
 watch(size, () => {
   initCanvas(el.value!, size.width, size.height)
@@ -87,10 +87,17 @@ onMounted(async() => {
       steps.push(() => step(nx, ny, rad2))
   }
 
+  let lastTime = performance.now()
+  const interval = 1000 / 40
+
   const frame = () => {
+    if (performance.now() - lastTime < interval)
+      return
+
     iterations += 1
     prevSteps = steps
     steps = []
+    lastTime = performance.now()
 
     if (!prevSteps.length) {
       controls.pause()
@@ -106,14 +113,16 @@ onMounted(async() => {
     iterations = 0
     ctx.clearRect(0, 0, width, height)
     ctx.lineWidth = 1
-    ctx.strokeStyle = '#77777725'
+    ctx.strokeStyle = '#88888825'
     prevSteps = []
     steps = [
-      () => step(0, random() * size.height, 0),
-      () => step(size.width, random() * size.height, r180),
       () => step(random() * size.width, 0, r90),
       () => step(random() * size.width, size.height, -r90),
+      () => step(0, random() * size.height, 0),
+      () => step(size.width, random() * size.height, r180),
     ]
+    if (size.width < 500)
+      steps = steps.slice(0, 2)
     controls.resume()
     stopped.value = false
   }
