@@ -5,7 +5,11 @@ lang: en
 duration: 10min
 description: My site is now powered by Vite!
 meta:
+  - property: og:title
+    content: Rewrite in Vite
   - name: description
+    content: My site is now powered by Vite!
+  - property: og:description
     content: My site is now powered by Vite!
 ---
 
