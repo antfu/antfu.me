@@ -15,11 +15,11 @@ import { isDark } from '/~/logics'
     <nav class="nav">
       <div class="spacer" />
       <div class="right">
-        <router-link to="/projects">
-          Projects
-        </router-link>
         <router-link to="/posts">
           Blog
+        </router-link>
+        <router-link to="/projects">
+          Projects
         </router-link>
         <!--  a(href='/notes')//  span.iconify.text-lg(data-icon='ri:chat-1-line') -->
         <router-link to="/bookmarks" title="Bookmarks">
