@@ -157,11 +157,13 @@ With the [@vueuse/head](https://github.com/vueuse/head) package made by [@egoist
 
 ### The Vite Template
 
-I found myself making small web apps quite often and setting up plugins and configs for Vite kinda becomes the bottleneck of me making my idea into real code. So combining with those tools I am using, I made an opinionated template:
+I found myself making small web apps quite often and setting up plugins and configs for Vite kinda becomes the bottleneck of me making my idea into real code. So combining with those tools I am using, I made an opinionated template for myself but unexpectly got quite some good feedback:
 
 - [Vitesse](https://github.com/antfu/vitesse) - Opinionated Vite Starter Template
 
-### This Site
+### This Website
+
+So, this site is made from [Vitesse](https://github.com/antfu/vitesse) combine with the power of all the tools I mentioned above. To be honest, even making a static site generator right is something could be a hard task to me.
 
 
 ### Thanks
