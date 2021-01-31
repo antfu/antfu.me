@@ -85,9 +85,9 @@ Basically, it uses [`markdown-it`](https://markdown-it.github.io/) to transform 
 
 ### Syntax Highlighting
 
-To get syntax highlight works in dark mode isn't an easy task as well. [Shiki](https://github.com/shikijs/shiki) inlined all the colors into the HTML so you would not be bored by the CSS namespace pollution but that also means it will be really hard to get the colors aware of your global color scheme. [Prism](https://prismjs.com/) on the other hand, uses the classes combining the theme CSS to do the job. It's much easier to merge two different color schemes and make them aware of the `dark` trigger. Bad thing is, themes are often made by different authors with different styles of coloring and styling things. Something, even the font and spacing would be different across different themes. If you even ran into a similar situation, you should know what I mean, or see [Prism's themes collection](https://github.com/PrismJS/prism-themes/tree/master/themes) if you don't ([`prism-vs.css`](https://github.com/PrismJS/prism-themes/blob/c24ddffde2737293d9b2df7dc59939d527648863/themes/prism-vs.css#L9) and [`prism-vsc-dark-plus.css`](https://github.com/PrismJS/prism-themes/blob/c24ddffde2737293d9b2df7dc59939d527648863/themes/prism-vsc-dark-plus.css#L6) for example).
+To get syntax highlight works in dark mode isn't an easy task as well. [Shiki](https://github.com/shikijs/shiki) inlined all the colors into the HTML so you would not be bored by the CSS namespace pollution, but that also means it will be really hard to get the colors aware of your global color scheme. [Prism](https://prismjs.com/) on the other hand, uses the classes combining the CSS theme to do the job. It's easier to merge two color schemes and make them aware of the `dark` trigger. The bad thing is, themes are often wrote by different authors with different styles of coloring and styling things. Sometimes, even the font and spacing could be different across different themes. If you ever ran into a similar situation, you should know what I mean. If you don't (lucky you!), see [Prism's themes collection](https://github.com/PrismJS/prism-themes/tree/master/themes)([`prism-vs.css`](https://github.com/PrismJS/prism-themes/blob/c24ddffde2737293d9b2df7dc59939d527648863/themes/prism-vs.css#L9) and [`prism-vsc-dark-plus.css`](https://github.com/PrismJS/prism-themes/blob/c24ddffde2737293d9b2df7dc59939d527648863/themes/prism-vsc-dark-plus.css#L6) for example).
 
-Fight with them for a while you might be able to ease the misalignment eventually. But what if we can have a smarter way to do this? 
+Fight with them for a while you might be able to ease the misalignment eventually. But what if we can have a smarter way to do this?
 
 - [prism-theme-vars](https://github.com/antfu/prism-theme-vars) - A customizable Prism.js theme using CSS variables.
 
@@ -113,7 +113,7 @@ Instead of dealing with the lengthy CSS theme, now you can have one in less than
 }
 ```
 
-To have it supports dark mode is extemely simple as well:
+To have it supports dark mode is extremely simple as well:
 
 ```css
 html:not(.dark) {
