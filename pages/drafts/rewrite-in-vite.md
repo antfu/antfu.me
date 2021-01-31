@@ -74,7 +74,74 @@ After making Icônes, I started working on the [Codecember](http://codecember.in
 
 Basically, it use [`markdown-it`](https://markdown-it.github.io/) to transform markdown into HTML and feed it intro Vue's template compiler. As the template is handled by Vue, we can easily support Vue components inside Markdown.
 
-### Syntax Hightlighting
+### Syntax Highlighting
+
+To get syntax highlight works in dark mode isn't an easy task as well. [Shiki](https://github.com/shikijs/shiki) inlined all the colors into the HTML so you would not be bored by the CSS namespace poplution but that also means it will be really hard to to get the colors aware of your global color scheme. [Prism](https://prismjs.com/) on the other hands, uses the classes combining the theme css to do the job. It's much easier to merge two different color scheme and make them aware of the `dark` trigger. Bad thing is, themes are often made by differen authors with different style of coloring and styling things. Something, even the font and size would be different across different themes. If you even ran into a similiar situation, you should know what I mean, or see [Prism's themes collection](https://github.com/PrismJS/prism-themes/tree/master/themes) if you don't ([`prism-vs.css`](https://github.com/PrismJS/prism-themes/blob/c24ddffde2737293d9b2df7dc59939d527648863/themes/prism-vs.css#L9) and [`prism-vsc-dark-plus.css`](https://github.com/PrismJS/prism-themes/blob/c24ddffde2737293d9b2df7dc59939d527648863/themes/prism-vsc-dark-plus.css#L6) for example).
+
+Fight with them for a while you might be able to ease the misalignment eventually. But what if we can have a smartter way to do this? 
+
+- [prism-theme-vars](https://github.com/antfu/prism-theme-vars) - A customizable Prism.js theme using CSS variables.
+
+So, instead of dealing with the lengthy CSS theme, now you can have one in less than 20 lines of CSS variables. For example:
+
+```css
+@import "prism-theme-vars/base.css";
+
+:root {
+  --prism-foreground: #393a34;
+  --prism-background: #fbfbfb;
+  --prism-comment: #b8c4b8;
+  --prism-string: #c67b5d;
+  --prism-literal: #3a9c9b;
+  --prism-keyword: #248459;
+  --prism-function: #849145;
+  --prism-deleted: #a14f55;
+  --prism-class: #2b91af;
+  --prism-builtin: #a52727;
+  --prism-property: #ad502b;
+  --prism-namespace: #c96880;
+  --prism-punctuation: #8e8f8b;
+}
+```
+
+To have it supports dark mode is extemely simple as well:
+
+```css
+html:not(.dark) {
+  --prism-foreground: #393a34;
+  --prism-background: #f8f8f8;
+
+  --prism-comment: #758575;
+  --prism-namespace: #444444;
+  --prism-string: #bc8671;
+  --prism-punctuation: #80817d;
+  --prism-literal: #36acaa;
+  --prism-keyword: #248459;
+  --prism-function: #849145;
+  --prism-deleted: #9a050f;
+  --prism-class: #2b91af;
+  --prism-builtin: #800000;
+}
+
+html.dark {
+  --prism-foreground: #d4d4d4;
+  --prism-background: #1e1e1e;
+
+  --prism-namespace: #aaaaaa;
+  --prism-comment: #758575;
+  --prism-namespace: #444444;
+  --prism-string: #ce9178;
+  --prism-punctuation: #d4d4d4;
+  --prism-literal: #36acaa;
+  --prism-keyword: #38a776;
+  --prism-function: #dcdcaa;
+  --prism-deleted: #9a050f;
+  --prism-class: #4ec9b0;
+  --prism-builtin: #d16969;
+}
+```
+
+That's all. You can also play with the themes in the [Playground](https://prism-theme-vars.netlify.app/) and make some your own with in 5min. I use it created my first code theme in my life, which is exactly what you are looking at :)
 
 
 ### Serve-Side Generatation (SSG)
