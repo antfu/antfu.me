@@ -40,7 +40,7 @@ devDependencies:
   vite: 2.0.0-beta.46
   vite-plugin-components: 0.6.6
   vite-plugin-icons: 0.2.1_a4b82e2d2342f19b76a879e5efac3f45
-  vite-plugin-md: 0.4.1_vite@2.0.0-beta.46
+  vite-plugin-md: 0.4.2_vite@2.0.0-beta.46
   vite-plugin-pages: 0.1.7_vue@3.0.5
   vite-plugin-purge-icons: 0.6.0_vite@2.0.0-beta.46
   vite-plugin-pwa: 0.3.10
@@ -5782,7 +5782,7 @@ packages:
       '@vue/compiler-sfc': ^3.0.2
     resolution:
       integrity: sha512-ZIJ8G2AHwEDt4oDST46E6Uy7W2EtVyoe1hzmJMkutbq3esUkcYVoYydT6Y12lhq1ppnVnShkbc0XzfKqolfCSg==
-  /vite-plugin-md/0.4.1_vite@2.0.0-beta.46:
+  /vite-plugin-md/0.4.2_vite@2.0.0-beta.46:
     dependencies:
       gray-matter: 4.0.2
       markdown-it: 12.0.4
@@ -5791,7 +5791,7 @@ packages:
     peerDependencies:
       vite: ^2.0.0-beta.1
     resolution:
-      integrity: sha512-JCvz1KGvK4woRRhbouW5GJLfw+TKxdu/PkXmVv0KNdpJdCMTDL6tQ6dEd09aK3Z1Muz1QvGbs2uSbXN98idAbg==
+      integrity: sha512-gAmtGCiPj0ESdWJikKTg4h0ADqybezRVOh1a51KtWqYk4WgwrvFRpTeVq9fVqLXLFhuU0iUIKJ04V3KeXAeWdQ==
   /vite-plugin-pages/0.1.7_vue@3.0.5:
     dependencies:
       debug: 4.3.2
@@ -6273,7 +6273,7 @@ specifiers:
   vite: ^2.0.0-beta.46
   vite-plugin-components: ^0.6.6
   vite-plugin-icons: ^0.2.1
-  vite-plugin-md: ^0.4.1
+  vite-plugin-md: ^0.4.2
   vite-plugin-pages: ^0.1.7
   vite-plugin-purge-icons: ^0.6.0
   vite-plugin-pwa: ^0.3.10
