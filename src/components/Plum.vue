@@ -1,5 +1,5 @@
 <template lang='pug'>
-.fixed.top-0.bottom-0.left-0.right-0.pointer-events-none
+.fixed.top-0.bottom-0.left-0.right-0.pointer-events-none(style='z-index: -1')
   canvas(ref='el' width='400' height='400')
 </template>
 
@@ -106,7 +106,7 @@ onMounted(async() => {
     iterations = 0
     ctx.clearRect(0, 0, width, height)
     ctx.lineWidth = 1
-    ctx.strokeStyle = '#66666620'
+    ctx.strokeStyle = '#77777725'
     prevSteps = []
     steps = [
       () => step(0, random() * size.height, 0),
