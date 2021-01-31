@@ -1,5 +1,5 @@
-/rss https://github.com/feed.xml 301
-/blog https://github.com/posts 301
+/rss https://antfu.me/feed.xml 301
+/blog https://antfu.me/posts 301
 
 /github https://github.com/antfu 301
 /gh https://github.com/antfu 301
@@ -9,6 +9,8 @@
 /support https://github.com/sponsors/antfu 301
 /instagram https://instagram.com/antfu7 301
 /ig https://instagram.com/antfu7 301
+
+/posts/rewrite-in-vite.html https://antfu.me/posts/rewrite-in-vite 301
 
 /talks/2020-09-26 https://github.com/antfu/talks/blob/master/2020-09-26/2020-09-26-binfe-antfu-zh_CN.pdf?raw=true 302
 /talks/2020-09-26/en https://github.com/antfu/talks/blob/master/2020-09-26/2020-09-26-binfe-antfu-en.pdf?raw=true 302
