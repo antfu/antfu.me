@@ -5,7 +5,7 @@ lang: en
 duration: 8min
 ---
 
-The page you are looking at is now powered by [Vite](https://github.com/vitejs/vite). This is something I want to do for a long while since Vite came out, and it's finally done. As I have mentioned in my [first blog post](https://antfu.me/posts/new-house), this site was powered [Gridsome](https://gridsome.org/) using Vue 2. With this overhaul, I can now take the full advantage of Vue 3 and the [Composition API](https://v3.vuejs.org/guide/composition-api-introduction.html) with the new [`<script setup>` SFC style](https://github.com/vuejs/rfcs/pull/227).
+The page you are looking at is now powered by [Vite](https://github.com/vitejs/vite). This is something I want to do for a long while since Vite came out, and it's finally done. As I have mentioned in my [first blog post](https://antfu.me/posts/new-house), it was powered [Gridsome](https://gridsome.org/) using Vue 2. With this overhaul, I can now take the full advantage of Vue 3 and the [Composition API](https://v3.vuejs.org/guide/composition-api-introduction.html) with the new [`<script setup>` SFC style](https://github.com/vuejs/rfcs/pull/227).
 
 The reason for it taking me so long to do this is because I am busy (enjoy) doing yak shaving, for the tools I need to build this site.
 
@@ -21,6 +21,7 @@ And found some awesome tools form the community:
 
 - [Iconify](https://github.com/iconify/iconify) - Universal icon framework, by [@cyberalien](https://github.com/cyberalien).
 - [vite-plugin-voie](https://github.com/brattonross/vite-plugin-voie) - File system based routing for Vite, by [@brattonross](https://github.com/brattonross).
+- [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) - Another file system based route generator, by [@hannoeru](https://github.com/hannoeru).
 
 With them, I got the fundamentals of a Vite project setup that has file based routing and component auto importing. Where I am quite satisfied with as I can now focus more on the content and logics rather that getting distracted by the routes setup and component registering.
 
@@ -152,12 +153,16 @@ While Codecember is more like a site than an App, we would need to do some serve
 
 Idea here are fairly simple, bundle the app entry and for each route, dump the app using the [`@vue/server-renderer`](https://github.com/vuejs/vue-next/tree/master/packages/server-renderer) package. There code can be found [here](https://github.com/antfu/vite-ssg/blob/fa256449923e05e55bf15dcf4747d517bc22e33a/src/node/build.ts#L94-L104).
 
+With the [@vueuse/head](https://github.com/vueuse/head) package made by [@egoist](https://github.com/egoist), I made the document head/meta manipulation in SSG at ease. Combining with [vite-plugin-md](https://github.com/antfu/vite-plugin-md), I can even use the frontmatter to set the meta (title, description, og:image, etc.).
 
 ### The Vite Template
 
+I found myself making small web apps quite often and setting up plugins and configs for Vite kinda becomes the bottleneck of me making my idea into real code. So combining with those tools I am using, I made an opinionated template:
 
+- [Vitesse](https://github.com/antfu/vitesse) - Opinionated Vite Starter Template
 
-### The Missing Piece for SSG
+### This Site
+
 
 ### Thanks
 
