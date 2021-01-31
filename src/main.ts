@@ -9,16 +9,14 @@ import LocalizedFormat from 'dayjs/plugin/localizedFormat'
 import App from './App.vue'
 import 'vite-plugin-purge-icons/generated'
 
-const routes = [
-  ...autoRoutes.map(i => ({
+const routes = autoRoutes.map((i) => {
+  return {
     ...i,
-    name: `${i.name?.toString()}-html`,
-    path: i.path.endsWith('/')
+    alias: i.path.endsWith('/')
       ? `${i.path}index.html`
       : `${i.path}.html`,
-  })),
-  ...autoRoutes,
-]
+  }
+})
 
 export const createApp = ViteSSG(
   App,
