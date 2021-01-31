@@ -176,7 +176,7 @@ await Promise.all(
 
 The full code can be found [here](https://github.com/antfu/vite-ssg/blob/fa256449923e05e55bf15dcf4747d517bc22e33a/src/node/build.ts#L94-L104).
 
-With the [@vueuse/head](https://github.com/vueuse/head) package made by [@egoist](https://github.com/egoist), I made the document head/meta manipulation in SSG at ease. Combining with [vite-plugin-md](https://github.com/antfu/vite-plugin-md), I can even use the frontmatter to set the meta (title, description, og:image, etc.).
+With the [@vueuse/head](https://github.com/vueuse/head) package made by [@egoist](https://github.com/egoist), I made the document head/meta manipulation in SSG with ease. Combining with [vite-plugin-md](https://github.com/antfu/vite-plugin-md), you can even use the frontmatter to set the meta (title, description, og:image, etc.).
 
 ```html
 <script setup>
@@ -208,7 +208,7 @@ So, this site is **made from [Vitesse](https://github.com/antfu/vitesse) combini
 
 I can't make all these happened without the help/support from the great community, thank y'all!
 
-Also want to have some special thanks to people made significant contributions and made this site possible (A-Z):
+Also want to have some special thanks to people made significant contributions towards these projects 🙌 (A-Z)
 
 - [@hannoeru](https://github.com/hannoeru)
 - [@matias-capeletto](https://github.com/matias-capeletto)
@@ -225,6 +225,6 @@ Appreciation to my sponsors as well for supporting my works:
 
 And thank you for reading through!
 
-**This site is now open sourced: [antfu/antfu.me](https://github.com/antfu/antfu.me)** 🙌
+**This site is now open sourced at [antfu/antfu.me](https://github.com/antfu/antfu.me)**
 
 
