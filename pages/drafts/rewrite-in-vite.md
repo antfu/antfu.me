@@ -28,22 +28,67 @@ I also learned [Tailwind CSS](https://tailwindcss.com/) as a replacement of the 
 
 ### Dark Mode
 
-> useDark
+Dark mode is support as an expiremental feature in Tailwind CSS v1.8 and shipped in v2.0. It support two mode for you to choose from - `media` and `class`. `media` is something that works out-of-box, based on users' system preference. The limitation is that you can't toggle it manually which is something I preferred to have. So go with `class` mode where I have more control over when to enabled the dark theme. That says, I would need to implement the toggling logic myself.
+
+With the power of Vue's Composition API, I am able to combine the best parts - reactive to the system's preference while being able to override manually.
+
+```ts
+import { useStorage, usePreferredDark } from '@vueuse/core'
+
+const preferredDark = usePreferredDark()
+const colorSchema = useStorage('color-schema', 'auto')
+
+export const isDark = computed({
+  get() {
+    return colorSchema.value === 'auto' ? preferredDark.value : colorSchema.value === 'dark'
+  },
+  set(v: boolean) {
+    if (v === preferredDark.value)
+      colorSchema.value = 'auto'
+    else
+      colorSchema.value = v ? 'dark' : 'light'
+  },
+})
+
+watch(
+  isDark,
+  v => document.documentElement.classList.toggle('dark', v),
+  { immediate: true },
+)
+```
+
+If you would like to use it, I also extract the logic above into [`useDark()` in VueUse](https://vueuse.js.org/core/usedark/). Where you can simply do this
+
+```ts
+import { useDark, useToggle } from '@vueuse/core'
+
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
+```
 
 ### Markdown
 
-Then I started working on the [Codecember](http://codecember.ink/) project with [@octref](https://blog.matsu.io/about), an initiative of learning and creating generative arts in December. With the sprite of dogfooding, we chosen Vite for building the site. In Codecember we need to do have a prompt everyday with some texts, code snippets and demos. This comes with the problem that Vite does not have a plugin for handling markdown files at that moment, so I made one myself.
+After making Icônes, I started working on the [Codecember](http://codecember.ink/) project with [@octref](https://blog.matsu.io/about), an initiative of learning and creating generative arts in December. With the sprite of dogfooding, we chosen Vite for building the site. In Codecember we would need to do have a prompt everyday with some texts, code snippets and demos. This comes with the problem that Vite does not have a plugin for handling markdown files at that moment, so I made one myself.
 
 - [vite-plugin-md](https://github.com/antfu/vite-plugin-md) - Markdown for Vite.
+
+Basically, it use [`markdown-it`](https://markdown-it.github.io/) to transform markdown into HTML and feed it intro Vue's template compiler. As the template is handled by Vue, we can easily support Vue components inside Markdown.
+
+### Syntax Hightlighting
+
+
+### Serve-Side Generatation (SSG)
+
+While Codecember is more like a site than an App, we would need to do some server-side generation to improve our [SEO](https://searchengineland.com/guide/what-is-seo). Read quite a lot code from [VitePress](https://github.com/vuejs/vitepress), I came up with this this plugin:
+
 - [vite-ssg](https://github.com/antfu/vite-ssg) - Server-side generation for Vite.
+
+Idea here are fairly simple, bundle the app entry and for each route, dump the app using the [`@vue/server-renderer`](https://github.com/vuejs/vue-next/tree/master/packages/server-renderer) package. There code can be found [here](https://github.com/antfu/vite-ssg/blob/fa256449923e05e55bf15dcf4747d517bc22e33a/src/node/build.ts#L94-L104).
+
 
 ### The Vite Template
 
-### Serve-side Generatation (SSG)
 
-Also as we are more like a site than an App, I would need to do some server-side generation to improve our SEO.
-
-### Syntax Hightlighting
 
 ### The Missing Piece for SSG
 
