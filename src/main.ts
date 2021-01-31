@@ -4,6 +4,7 @@ import './styles/markdown.postcss'
 import autoRoutes from 'vite-plugin-pages/client'
 import NProgress from 'nprogress'
 import { ViteSSG } from 'vite-ssg'
+import { RouterScrollBehavior } from 'vue-router'
 import dayjs from 'dayjs'
 import LocalizedFormat from 'dayjs/plugin/localizedFormat'
 import App from './App.vue'
@@ -18,9 +19,16 @@ const routes = autoRoutes.map((i) => {
   }
 })
 
+const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
+  if (savedPosition)
+    window && window.scrollTo(savedPosition)
+  else
+    window && window.scrollTo({ top: 0 })
+}
+
 export const createApp = ViteSSG(
   App,
-  { routes },
+  { routes, scrollBehavior },
   ({ router, isClient }) => {
     dayjs.extend(LocalizedFormat)
 

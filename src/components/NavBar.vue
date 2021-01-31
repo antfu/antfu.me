@@ -5,7 +5,7 @@ import { isDark } from '/~/logics'
 <template>
   <header class="header">
     <router-link
-      class="w-10 h-10 absolute m-6 select-none outline-none"
+      class="w-10 h-10 fixed m-6 select-none outline-none"
       to="/"
       focusable="false"
     >
