@@ -10,7 +10,13 @@ import App from './App.vue'
 import 'vite-plugin-purge-icons/generated'
 
 const routes = [
-  ...autoRoutes.map(i => ({ ...i, path: `${i.path}.html` })),
+  ...autoRoutes.map(i => ({
+    ...i,
+    name: `${i.name?.toString()}-html`,
+    path: i.path.endsWith('/')
+      ? `${i.path}index.html`
+      : `${i.path}.html`,
+  })),
   ...autoRoutes,
 ]
 
