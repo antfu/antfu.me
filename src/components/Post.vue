@@ -13,7 +13,7 @@ const { frontmatter } = defineProps<{frontmatter: any}>()
       {{ frontmatter.title }}
     </h1>
     <p v-if="frontmatter.date" class="opacity-50 mt-0">
-      Date: {{ formatDate(frontmatter.date) }} <span v-if="frontmatter.duration">· {{ frontmatter.duration }}</span>
+      {{ formatDate(frontmatter.date) }} <span v-if="frontmatter.duration">· {{ frontmatter.duration }}</span>
     </p>
     <p v-if="frontmatter.subtitle" class="opacity-50 mt-1 italic">
       {{ frontmatter.subtitle }}
