@@ -9,6 +9,8 @@ import Markdown from 'vite-plugin-md'
 import Vue from '@vitejs/plugin-vue'
 import Prism from 'markdown-it-prism'
 import matter from 'gray-matter'
+import anchor from 'markdown-it-anchor'
+import { slugify } from './scripts/slugify'
 
 const config: UserConfig = {
   alias: [
@@ -16,6 +18,11 @@ const config: UserConfig = {
   ],
   optimizeDeps: {
     include: [
+      'vue',
+      'vue-router',
+      '@vueuse/core',
+      '@iconify/iconify',
+      'dayjs',
       'dayjs/plugin/localizedFormat',
     ],
   },
@@ -46,6 +53,13 @@ const config: UserConfig = {
       headEnabled: true,
       markdownItSetup(md) {
         md.use(Prism)
+        md.use(anchor, {
+          slugify,
+          permalink: true,
+          permalinkBefore: true,
+          permalinkSymbol: '#',
+          permalinkAttrs: () => ({ 'aria-hidden': true }),
+        })
       },
     }),
 

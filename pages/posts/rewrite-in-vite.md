@@ -6,13 +6,13 @@ duration: 10min
 description: My site is now powered by Vite!
 ---
 
-The page you are looking at is now powered by [Vite](https://github.com/vitejs/vite). This is something I want to do for a long while since Vite came out, and it's finally done. As I have mentioned in my [first blog post](https://antfu.me/posts/new-house), it was powered [Gridsome](https://gridsome.org/) using Vue 2. With this overhaul, I can now take full advantage of Vue 3 and the [Composition API](https://v3.vuejs.org/guide/composition-api-introduction.html) with the new [`<script setup>` SFC style](https://github.com/vuejs/rfcs/pull/227).
+The page you are looking at is now powered by [Vite](https://github.com/vitejs/vite). This is something I want to do for a long while since Vite came out, and it's finally done. As I have mentioned in my [first blog post](/posts/new-house), it was powered [Gridsome](https://gridsome.org/) using Vue 2. With this overhaul, I can now take full advantage of Vue 3 and the [Composition API](https://v3.vuejs.org/guide/composition-api-introduction.html) with the new [`<script setup>` SFC style](https://github.com/vuejs/rfcs/pull/227).
 
 The reason for it taking me so long to do this is because I am busy (enjoy) doing [yak shaving](https://americanexpress.io/yak-shaving), for the tools I need to build this site.
 
 ### Fundamentals
 
-It begins with me trying to improve the DX using icons in [this post](https://antfu.me/posts/journey-with-icons). At that time, Vue 3 just into RC, and Vite didn't reach 1.0 yet. Hearing a lot of how good Vue 3 and Vite are, I decided to give them a try on building the icon site I need. Since Vite is so brand new thing, there aren't really many tools/plugins out there, the ecosystem is way far from what Webpack has. So I took that as a chance for me to dive deep into how Vite works and do some contributions to its ecosystem, I made a few tools while making [Icônes](https://github.com/antfu/icones):
+It begins with me trying to improve the DX using icons in [this post](/posts/journey-with-icons). At that time, Vue 3 just into RC, and Vite didn't reach 1.0 yet. Hearing a lot of how good Vue 3 and Vite are, I decided to give them a try on building the icon site I need. Since Vite is so brand new thing, there aren't really many tools/plugins out there, the ecosystem is way far from what Webpack has. So I took that as a chance for me to dive deep into how Vite works and do some contributions to its ecosystem, I made a few tools while making [Icônes](https://github.com/antfu/icones):
 
 - [vite-plugin-components](https://github.com/antfu/vite-plugin-components) - On-demand components auto importing for Vite.
 - [vite-plugin-pwa](https://github.com/antfu/vite-plugin-pwa) - Zero-config PWA for Vite.
@@ -207,7 +207,7 @@ I found myself making small web apps frequently. Setting up plugins and configs 
 
 ## This Website
 
-This site is **made from [Vitesse](https://github.com/antfu/vitesse) combining with all the tools I mentioned above**. To be honest, even making a static site generator right is something that could be a hard task to me, not to mention that most of the hard part is handled by Vite itself. I am really happy to see the things I have learned and crafted along the way. And glad I can make these contributions to the Vite ecosystem, that someone could find my work useful for building their apps.
+This site is **made from [Vitesse](https://github.com/antfu/vitesse) combining with all the tools I mentioned above**. To be honest, even making a static site generator right is something hard to me, not to mention that most of the hard parts are already handled by Vite. I am really happy to see so many things I have learned and crafted along the way. And glad I can make these contributions to the Vite ecosystem, that someone could find my work useful for building their apps.
 
 ## Thanks
 

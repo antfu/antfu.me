@@ -4,12 +4,30 @@
 </template>
 
 <script setup='props' lang='ts'>
-import { useRafFn, useWindowSize } from '@vueuse/core'
-import { onMounted, ref, watch, reactive } from 'vue'
+import { useRafFn, useWindowSize, noop } from '@vueuse/core'
+import { onMounted, ref, reactive } from 'vue'
+import type { Fn } from '@vueuse/core'
 
 const r180 = Math.PI
 const r90 = Math.PI / 2
 const r15 = Math.PI / 12
+const color = '#88888825'
+
+const el = ref<HTMLCanvasElement | null>(null)
+
+const { random } = Math
+const size = reactive(useWindowSize())
+
+const start = ref<Fn>(noop)
+const init = ref(4)
+const len = ref(6)
+const stopped = ref(false)
+
+// watch([init, len], () => start.value())
+// watch(size, () => {
+//   initCanvas(el.value!, size.width, size.height)
+//   start.value()
+// })
 
 function initCanvas(canvas: HTMLCanvasElement, width = 400, height = 400, _dpi?: number) {
   const ctx = canvas.getContext('2d')!
@@ -35,33 +53,13 @@ function polar2cart(x = 0, y = 0, r = 0, theta = 0) {
   return [x + dx, y + dy]
 }
 
-const el = ref<HTMLCanvasElement | null>(null)
-
-const { random } = Math
-const size = reactive(useWindowSize())
-
-const f = {
-  start: () => {},
-}
-
-const init = ref(4)
-const len = ref(6)
-const stopped = ref(false)
-
-// watch([init, len], () => f.start())
-
-watch(size, () => {
-  initCanvas(el.value!, size.width, size.height)
-  f.start()
-})
-
 onMounted(async() => {
   const canvas = el.value!
   const { ctx } = initCanvas(canvas, size.width, size.height)
   const { width, height } = canvas
 
-  let steps: Function[] = []
-  let prevSteps: Function[] = []
+  let steps: Fn[] = []
+  let prevSteps: Fn[] = []
 
   let iterations = 0
 
@@ -108,12 +106,12 @@ onMounted(async() => {
 
   const controls = useRafFn(frame, { immediate: false })
 
-  f.start = () => {
+  start.value = () => {
     controls.pause()
     iterations = 0
     ctx.clearRect(0, 0, width, height)
     ctx.lineWidth = 1
-    ctx.strokeStyle = '#88888825'
+    ctx.strokeStyle = color
     prevSteps = []
     steps = [
       () => step(random() * size.width, 0, r90),
@@ -127,6 +125,6 @@ onMounted(async() => {
     stopped.value = false
   }
 
-  f.start()
+  start.value()
 })
 </script>
