@@ -5,16 +5,16 @@ import { useRoute } from 'vue-router'
 import { useEventListener, isClient } from '@vueuse/core'
 
 const route = useRoute()
-const { frontmatter } = defineProps<{frontmatter: any}>()
-
-function navigate() {
-  if (isClient && location.hash) {
-    document.querySelector(location.hash)
-      ?.scrollIntoView({ behavior: 'smooth' })
-  }
-}
+const { frontmatter } = defineProps<{ frontmatter: any }>()
 
 if (isClient) {
+  const navigate = () => {
+    if (location.hash) {
+      document.querySelector(location.hash)
+        ?.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   useEventListener(window, 'hashchange', navigate, false)
 
   onMounted(() => {

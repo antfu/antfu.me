@@ -8,7 +8,7 @@ const { projects } = defineProps({
 
 <template lang="pug">
 template(v-for="key in Object.keys(projects)" :key='key')
-  p.opacity-25.text-sm.mt-10.font-bold {{key}}
+  h4.mt-10.font-bold {{key}}
   .project-grid.py-2.-mx-3.gap-2
     a.item.relative.flex(
       v-for="item, idx in projects[key]"
