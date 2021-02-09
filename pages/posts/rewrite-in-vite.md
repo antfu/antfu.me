@@ -12,27 +12,27 @@ The reason for it taking me so long to do this is because I am busy (enjoy) doin
 
 ### Fundamentals
 
-It begins with me trying to improve the DX using icons in [this post](/posts/journey-with-icons). At that time, Vue 3 just into RC, and Vite didn't reach 1.0 yet. Hearing a lot of how good Vue 3 and Vite are, I decided to give them a try on building the icon site I need. Since Vite is so brand new thing, there aren't really many tools/plugins out there, the ecosystem is way far from what Webpack has. So I took that as a chance for me to dive deep into how Vite works and do some contributions to its ecosystem, I made a few tools while making [Icônes](https://github.com/antfu/icones):
+It begins with me trying to improve the DX using icons in [this post](/posts/journey-with-icons). At that time, Vue 3 just into RC, and Vite didn't reach 1.0 yet. Hearing a lot of how good Vue 3 and Vite are, I decided to give them a try on building the icon site I want to build for a long time. Since Vite is such a brand new thing, there aren't many tools/plugins out there, the ecosystem was way far from what Webpack has. I took that as a chance for me to dive deep into how Vite works while doing some contributions the ecosystem. Here is a few tools I made while building the app [Icônes](https://github.com/antfu/icones):
 
 - [vite-plugin-components](https://github.com/antfu/vite-plugin-components) - On-demand components auto importing for Vite.
 - [vite-plugin-pwa](https://github.com/antfu/vite-plugin-pwa) - Zero-config PWA for Vite.
 - [vite-plugin-purge-icons](https://github.com/antfu/purge-icons) - Bundles icons on demand, with a Vite plugin.
 
-And found some awesome tools form the community:
+Also found some awesome tools form the community:
 
 - [Iconify](https://github.com/iconify/iconify) - Universal icon framework, by [@cyberalien](https://github.com/cyberalien).
 - [vite-plugin-voie](https://github.com/brattonross/vite-plugin-voie) - File system based routing for Vite, by [@brattonross](https://github.com/brattonross).
 - [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) - Another file system based route generator, by [@hannoeru](https://github.com/hannoeru).
 
-With them, I got the fundamentals of a Vite project setup that has file-based routing and component auto importing. Where I am quite satisfied with this as I can now focus more on the content and logic rather than getting distracted by the routes setup and component registering.
+With them, I got the fundamentals of a Vite project setup. Nuxt-liked file-based routing and component auto importing. I was quite satisfied with it as I could focus more on the content and logic rather than getting distracted by the routes setup and component registration.
 
 I also learned [Tailwind CSS](https://tailwindcss.com/) as a replacement of the missing UI component libraries for Vue 3. It turns out that I really enjoy Tailwind's way of rapid prototyping. As I got more control over styling things, it makes me think more about the design rather than just applying the default theme of the components library I use.
 
 ### Dark Mode
 
-Dark mode is support as an experimental feature in Tailwind CSS v1.8 and shipped in v2.0. It supports two modes for you to choose from - `media` and `class`. `media` is something that works out-of-box, based on users' system preference. The limitation is that you can't toggle it manually which is something I preferred to have. So go with `class` mode where I have more control over when to enable the dark theme. That says I would need to implement the toggling logic myself.
+Dark mode is supported as an experimental feature in Tailwind CSS v1.8 and shipped in v2.0. It supports two modes for you to choose from - `media` and `class`. `media` is something that works out-of-box, it changes based on users' system preference. But the limitation is that you can't toggle it manually as you want. So I went with `class` mode where I have more controls over it. But that also means I would need to implement the toggling logic myself.
 
-With the power of Vue's Composition API, I am able to combine the best parts - reactive to the system's preference while being able to override manually.
+With the power of Vue's Composition API, I am able to combine the best parts of them - reactive to the system's preference while being able to override manually.
 
 ```ts
 import { useStorage, usePreferredDark } from '@vueuse/core'
@@ -61,7 +61,7 @@ watch(
 )
 ```
 
-Try click it 👇🏼
+Click it to try 👇🏼
 
 <ToggleTheme class="text-2xl pb-2 pt-1"/>
 
@@ -77,15 +77,15 @@ const toggleDark = useToggle(isDark)
 
 ### Markdown
 
-After making Icônes, I started working on the [Codecember](http://codecember.ink/) project with [@octref](https://blog.matsu.io/about), an initiative of learning and creating generative arts in December. With the spirit of dogfooding, we have chosen Vite for building the site. In Codecember we would need to do have a prompt every day with some texts, code snippets, and demos. This comes with the problem that Vite does not have a plugin for handling markdown files at that moment, so I made one myself.
+After building Icônes, I started working on the [Codecember](http://codecember.ink/) project with [@octref](https://blog.matsu.io/about), an initiative of learning and creating generative arts in December. With the spirit of dogfooding, we chosen Vite for building the site. In Codecember we will need to have a prompt every day with some texts, code snippets, and demos. This comes with the problem that Vite does not have a plugin for handling markdown files at that moment, so of course, I made one myself.
 
 - [vite-plugin-md](https://github.com/antfu/vite-plugin-md) - Markdown for Vite.
 
-Basically, it uses [`markdown-it`](https://markdown-it.github.io/) to transform markdown into HTML and feed it into Vue's template compiler. As the template is handled by Vue, we can easily support Vue components inside Markdown.
+Basically, it uses [`markdown-it`](https://markdown-it.github.io/) to transform markdown into HTML and feed it into Vue's template compiler. As the generated template is handled by Vue, we can easily support Vue components inside Markdown.
 
 ### Syntax Highlighting
 
-To get syntax highlight works in dark mode isn't an easy task as well. [Shiki](https://github.com/shikijs/shiki) inlined all the colors into the HTML so you would not be bored by the CSS namespace pollution, but that also means it will be really hard to get the colors aware of your global color scheme. [Prism](https://prismjs.com/) on the other hand, uses the classes combining the CSS theme to do the job. It's easier to merge two color schemes and make them aware of the `dark` trigger. The bad thing is, themes are often wrote by different authors with different styles of coloring and styling things. Sometimes, even the font and spacing could be different across different themes. If you ever ran into a similar situation, you should know what I mean. If you don't (lucky you!), see [Prism's themes collection](https://github.com/PrismJS/prism-themes/tree/master/themes)([`prism-vs.css`](https://github.com/PrismJS/prism-themes/blob/c24ddffde2737293d9b2df7dc59939d527648863/themes/prism-vs.css#L9) and [`prism-vsc-dark-plus.css`](https://github.com/PrismJS/prism-themes/blob/c24ddffde2737293d9b2df7dc59939d527648863/themes/prism-vsc-dark-plus.css#L6) for example).
+Getting syntax highlight works in dark mode isn't an easy task as well. [Shiki](https://github.com/shikijs/shiki) inlined all the colors into the HTML so you would not be bored by the CSS namespace pollution, but that also means it will be really hard to get the colors aware of your global color scheme. [Prism](https://prismjs.com/) on the other hand, uses the classes combining the CSS theme to do the job. It's easier to merge two color schemes and make them aware of the `dark` trigger. The bad thing is, themes are often wrote by different authors with different styles of coloring and styling things. Sometimes, even the font and spacing could be different across different themes. If you ever ran into a similar situation, you should know what I mean. If you don't (lucky you!), see [Prism's themes collection](https://github.com/PrismJS/prism-themes/tree/master/themes)([`prism-vs.css`](https://github.com/PrismJS/prism-themes/blob/c24ddffde2737293d9b2df7dc59939d527648863/themes/prism-vs.css#L9) and [`prism-vsc-dark-plus.css`](https://github.com/PrismJS/prism-themes/blob/c24ddffde2737293d9b2df7dc59939d527648863/themes/prism-vsc-dark-plus.css#L6) for example).
 
 Fight with them for a while you might be able to ease the misalignment eventually. But what if we can have a smarter way to do this?
 
