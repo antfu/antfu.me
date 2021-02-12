@@ -43,6 +43,10 @@ projects:
       link: 'https://github.com/antfu/vite-plugin-pwa'
       desc: 'Zero-config PWA for Vite'
       icon: 'carbon:tropical-storm'
+    - name: 'Vite SSG'
+      link: 'https://github.com/antfu/vite-ssg'
+      desc: 'Server-side generation for Vite'
+      icon: 'carbon:printer'
     - name: 'Vite Icons'
       link: 'https://github.com/antfu/vite-plugin-icons'
       desc: 'Access thousands of icons as Vue components in Vite'
@@ -120,7 +124,7 @@ projects:
     - name: 'esno'
       link: 'https://github.com/antfu/esno'
       desc: 'TypeScript / ESNext node runtime powered by ESBuild'
-      icon: 'carbon:carbon'
+      icon: 'carbon:integration'
 
   Automations:
     - name: 'Knightly'
@@ -149,6 +153,10 @@ projects:
       link: 'https://github.com/antfu/vscode-where-am-i'
       desc: "Don't get lost even you have multiple VS Code opened"
       icon: 'carbon:map'
+    - name: 'Carbon Product Icons'
+      link: 'https://github.com/antfu/vscode-icons-carbon'
+      desc: 'Carbon product icon theme for VS Code'
+      icon: 'carbon:carbon'
 
   Utilities / CLI:
     - name: 'ni'
