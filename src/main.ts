@@ -1,14 +1,14 @@
 import './styles/main.postcss'
+import 'windi.css'
 import './styles/markdown.postcss'
 
-import autoRoutes from 'vite-plugin-pages/client'
+import autoRoutes from 'pages-generated'
 import NProgress from 'nprogress'
 import { ViteSSG } from 'vite-ssg'
 import { RouterScrollBehavior } from 'vue-router'
 import dayjs from 'dayjs'
 import LocalizedFormat from 'dayjs/plugin/localizedFormat'
 import App from './App.vue'
-import 'vite-plugin-purge-icons/generated'
 
 const routes = autoRoutes.map((i) => {
   return {

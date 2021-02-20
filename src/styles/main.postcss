@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --c-bg: #fff;
   --c-scrollbar: #eee;
@@ -22,18 +18,18 @@ html.dark {
 
 #nprogress {
   pointer-events: none;
+}
 
-  .bar {
-    @apply bg-teal-600 opacity-75;
+#nprogress .bar {
+  @apply bg-teal-600 opacity-75;
 
-    position: fixed;
-    z-index: 1031;
-    top: 0;
-    left: 0;
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
 
-    width: 100%;
-    height: 2px;
-  }
+  width: 100%;
+  height: 2px;
 }
 
 .btn {

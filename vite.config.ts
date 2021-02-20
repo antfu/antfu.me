@@ -9,13 +9,16 @@ import Markdown from 'vite-plugin-md'
 import Vue from '@vitejs/plugin-vue'
 import Prism from 'markdown-it-prism'
 import matter from 'gray-matter'
+import WindiCSS from 'vite-plugin-windicss'
 import anchor from 'markdown-it-anchor'
 import { slugify } from './scripts/slugify'
 
 const config: UserConfig = {
-  alias: [
-    { find: '/~/', replacement: `${resolve(__dirname, 'src')}/` },
-  ],
+  resolve: {
+    alias: [
+      { find: '/~/', replacement: `${resolve(__dirname, 'src')}/` },
+    ],
+  },
   optimizeDeps: {
     include: [
       'vue',
@@ -73,6 +76,13 @@ const config: UserConfig = {
 
     PurgeIcons(),
     Icons(),
+
+    WindiCSS({
+      safelist: 'prose prose-sm m-auto',
+      preflight: {
+        enableAll: true,
+      },
+    }),
   ],
 }
 
