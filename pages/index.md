@@ -6,7 +6,7 @@ title: Anthony Fu
   <Plum/>
 </ClientOnly>
 
-Hey, I am Anthony Fu, a fanatical open sourceror.
+Hey, I am Anthony Fu, a fanatical full-time open sourceror.
 
 Being part of [Vue.js](https://vuejs.org/) core team, I am maintaining [@vue/composition-api](https://github.com/vuejs/composition-api), a plugin providing Composition API to Vue 2. Obsessed with [Vite](http://vitejs.dev/) recently, I made several Vite plugins and an opinionated starter template [Vitesse](https://github.com/antfu/vitesse), which is also what [this site built upon](/posts/rewrite-in-vite). You may also know me as a member of [wenyan-lang 文言](https://wy-lang.org/), a programming language for the ancient Chinese. I helped building the [VS Code Extension](https://github.com/antfu/wenyan-lang-vscode) and it's [Online IDE](https://ide.wy-lang.org/).
 
