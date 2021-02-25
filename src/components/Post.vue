@@ -38,10 +38,10 @@ if (isClient) {
     <h1 class="mb-0">
       {{ frontmatter.display || frontmatter.title }}
     </h1>
-    <p v-if="frontmatter.date" class="opacity-50 mt-0">
+    <p v-if="frontmatter.date" class="opacity-50 !-mt-2">
       {{ formatDate(frontmatter.date) }} <span v-if="frontmatter.duration">· {{ frontmatter.duration }}</span>
     </p>
-    <p v-if="frontmatter.subtitle" class="opacity-50 mt-1 italic">
+    <p v-if="frontmatter.subtitle" class="opacity-50 !-mt-6 italic">
       {{ frontmatter.subtitle }}
     </p>
   </div>
