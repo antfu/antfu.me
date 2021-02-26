@@ -72,6 +72,12 @@ projects:
       desc: 'A curated list of awesome things related to Vite.js'
       icon: 'la:glasses-solid'
 
+  Nuxt Ecosystem:
+    - name: 'Vitesse Nuxt'
+      link: 'https://github.com/antfu/vitesse-nuxt'
+      desc: 'Opinionated Vite + Nuxt 2 Starter Template'
+      icon: 'mdi:nuxt'
+
   Design / Compform:
     - name: '100 Day'
       link: 'https://100.antfu.me/'
@@ -99,6 +105,10 @@ projects:
       link: 'https://github.com/antfu/prism-theme-vars'
       desc: 'A customizable Prism.js theme using CSS variables'
       icon: 'carbon:angle'
+    - name: 'ReX'
+      link: 'https://rex.antfu.me/'
+      desc: 'Transform texts with RegExp like a Pro'
+      icon: 'carbon:text-align-mixed'
     - name: 'Foto Rehearser'
       link: 'https://foto.inesfendi.com/'
       desc: 'Photo post planner'
