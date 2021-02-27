@@ -5,6 +5,43 @@ subtitle: Quick notes / tips
 description: Quick notes / tips
 ---
 
+## Match Quotes in Pairs
+
+_2020/02/28_
+
+In JavaScript, single quotes('') and double quotes("") are interchangable. With ES6, we even has backticks(``) for template literals. When you want to write a quick script to find all the strings without introducing a heavy parser, you may think about using RegExp. For example, you can have:
+
+```ts
+/['"`](.*?)['"`]/gm
+```
+
+It works for most of the case, but not for mixed quotes:
+
+```ts
+`const a = "Hi, I'm Anthony"`.match(/['"`](.*)['"`]/m)[1] // "Hi, I"
+```
+
+You have to make sure the starting quote and ending quote are the same type. Initially I thought it was impossible to do it in RegExp, or we have to do like this:
+
+```ts
+/'(.*?)'|"(.*?)"|`(.*?)`/gm
+```
+
+That's definitely a bad idea as it makes you duplicated your notations. Until I found this solution:
+
+```ts
+/(['"`])(.*?)\1/gm
+```
+
+`\1` is a [Backreferences](https://www.regular-expressions.info/backref.html) to your first group, similarly you can have `\2` for the second group 2 and `\3` for the third, you got the idea. This is exactly what I need! Take it a bit further, to exclude the backslash escaping, now we can have a much reliable RegExp for extracting quoted texts from any code.
+
+```ts
+/(["'`])((?:\\\1|(?:(?!\1)|\n|\r).)*?)\1/mg
+```
+
+You can find it running in action on my [`vite-plugin-windicss`](https://github.com/windicss/vite-plugin-windicss/blob/571c1d9d9bcbf699038614e6f9fab0ddc62b959b/packages/plugin-utils/src/regexes.ts#L1).
+
+
 ## Match Chinese Characters
 
 _2020/02/25_
@@ -65,3 +102,11 @@ A solution here is to create a new site with your original name `xxx` and upload
 ```
 
 Note you don't have to link a repo to that, Netlify offers a great feature that [let you drag and drop for static files and serve as a site](https://app.netlify.com/drop). So you can just save `netlify.toml` and upload it, rename the site to your original name. The redirection is done!
+
+<!-- Hack to get regex highlight = =|| -->
+<div class="hidden">
+
+```regex
+```
+
+</div>

@@ -56,6 +56,9 @@ const config: UserConfig = {
       wrapperComponent: 'post',
       wrapperClasses: 'prose m-auto',
       headEnabled: true,
+      markdownItOptions: {
+        quotes: '""\'\'',
+      },
       markdownItSetup(md) {
         md.use(Prism)
         md.use(anchor, {
