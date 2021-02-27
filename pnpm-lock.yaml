@@ -31,6 +31,7 @@ devDependencies:
   gray-matter: 4.0.2
   markdown-it: 12.0.4
   markdown-it-anchor: 7.0.2_markdown-it@12.0.4
+  markdown-it-link-attributes: 3.0.0
   markdown-it-prism: 2.1.4
   markdown-it-shiki: 0.1.1
   pnpm: 5.18.1
@@ -1182,7 +1183,7 @@ packages:
   /@nodelib/fs.walk/1.2.6:
     dependencies:
       '@nodelib/fs.scandir': 2.1.4
-      fastq: 1.10.1
+      fastq: 1.11.0
     dev: true
     engines:
       node: '>= 8'
@@ -1916,7 +1917,7 @@ packages:
   /@vueuse/core/4.2.2_vue@3.0.6:
     dependencies:
       '@vueuse/shared': 4.2.2_vue@3.0.6
-      vue-demi: 0.6.1_vue@3.0.6
+      vue-demi: 0.7.0_vue@3.0.6
     dev: false
     peerDependencies:
       vue: '*'
@@ -1932,7 +1933,7 @@ packages:
       integrity: sha512-SaKib18YjFLrErxHYDxLXsBBY4/Q93b6rYer8WRMaRSBqotmZYGEBaoRURhtVYfneBf5dX9O9P3EdjkSn+gL0g==
   /@vueuse/shared/4.2.2_vue@3.0.6:
     dependencies:
-      vue-demi: 0.6.1_vue@3.0.6
+      vue-demi: 0.7.0_vue@3.0.6
     dev: false
     peerDependencies:
       vue: '*'
@@ -3227,12 +3228,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
-  /fastq/1.10.1:
+  /fastq/1.11.0:
     dependencies:
       reusify: 1.0.4
     dev: true
     resolution:
-      integrity: sha512-AWuv6Ery3pM+dY7LYS8YIaCiQvUaos9OB1RyNgaOWnaX+Tik7Onvcsf8x8c+YtDeT0maYLniBip2hox5KtEXXA==
+      integrity: sha512-7Eczs8gIPDrVzT+EksYBcupqMyxSHXXrHOLRRxU2/DicV8789MRBRR8+Hc2uWzUupOs4YS4JzBmBxjjCVBxD/g==
   /feed/4.2.2:
     dependencies:
       xml-js: 1.6.11
@@ -4129,6 +4130,10 @@ packages:
       markdown-it: '*'
     resolution:
       integrity: sha512-UtYFAkce16mJlixXUMXUf14ZmOWK2YHLGKUpkZUn98w3qP8nVhb7k5sCBZmVHGMq3SpYtrxQ5XOdHQHRuLR40Q==
+  /markdown-it-link-attributes/3.0.0:
+    dev: true
+    resolution:
+      integrity: sha512-B34ySxVeo6MuEGSPCWyIYryuXINOvngNZL87Mp7YYfKIf6DcD837+lXA8mo6EBbauKsnGz22ZH0zsbOiQRWTNg==
   /markdown-it-prism/2.1.4:
     dependencies:
       prismjs: 1.23.0
@@ -5725,16 +5730,20 @@ packages:
     dev: true
     resolution:
       integrity: sha512-orMjjj1r4efP5ocODYZm3orpANakRBsxPZPDoD5UIrFOPKDFtMJQLp6PIH1rb3AYVRD1iYXMhDQoC6tZ+DrigA==
-  /vue-demi/0.6.1_vue@3.0.6:
+  /vue-demi/0.7.0_vue@3.0.6:
     dependencies:
       vue: 3.0.6
     dev: false
     hasBin: true
     peerDependencies:
+      '@vue/composition-api': ^1.0.0-beta.1
       vue: ^2.6.0 || >=3.0.0-rc.1
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
     requiresBuild: true
     resolution:
-      integrity: sha512-2DI0owOzgEDnEBoXpp0nTBquAWLZqVf/+AOJpPUnviT17unMELEPNy5BdSRnQEz+DA0STtqaz+MZtwhzlDHm5Q==
+      integrity: sha512-yOQ/BMfvTFbguwxQ1h6USEFkxvOI8ThhyZ1+57vlOl4jBZKC6ThmkzuQv4KOv4ItdxTj/foZBR6Lr5+tcr7nqg==
   /vue-eslint-parser/7.4.1_eslint@7.20.0:
     dependencies:
       debug: 4.3.1
@@ -6131,6 +6140,7 @@ specifiers:
   gray-matter: ^4.0.2
   markdown-it: ^12.0.4
   markdown-it-anchor: ^7.0.2
+  markdown-it-link-attributes: ^3.0.0
   markdown-it-prism: ^2.1.4
   markdown-it-shiki: ^0.1.1
   nprogress: ^0.2.0

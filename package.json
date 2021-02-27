@@ -38,6 +38,7 @@
     "gray-matter": "^4.0.2",
     "markdown-it": "^12.0.4",
     "markdown-it-anchor": "^7.0.2",
+    "markdown-it-link-attributes": "^3.0.0",
     "markdown-it-prism": "^2.1.4",
     "markdown-it-shiki": "^0.1.1",
     "pnpm": "^5.18.1",

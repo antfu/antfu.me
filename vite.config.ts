@@ -11,6 +11,8 @@ import Prism from 'markdown-it-prism'
 import matter from 'gray-matter'
 import WindiCSS from 'vite-plugin-windicss'
 import anchor from 'markdown-it-anchor'
+// @ts-expect-error
+import markdownAttr from 'markdown-it-link-attributes'
 import { slugify } from './scripts/slugify'
 
 const config: UserConfig = {
@@ -62,6 +64,14 @@ const config: UserConfig = {
           permalinkBefore: true,
           permalinkSymbol: '#',
           permalinkAttrs: () => ({ 'aria-hidden': true }),
+        })
+
+        md.use(markdownAttr, {
+          pattern: /^https?:/,
+          attrs: {
+            target: '_blank',
+            rel: 'noopener',
+          },
         })
       },
     }),

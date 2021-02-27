@@ -45,8 +45,8 @@ On [Netlify](https://netlify.com), you can setup multiple domains for a site. Wh
   force = true
 ```
 
-`*` and `:splat` means it will redirect all the sub routes as-is to the new domain.
-`force = true` specifing always do the redirect even the page exists.
+- `*` and `:splat` mean it will redirect all the sub routes as-is to the new domain.
+- `force = true` specifing it will always redirect even if the request page exists.
 
 ## Netlify Redirects (Site names)
 
