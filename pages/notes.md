@@ -56,7 +56,7 @@ export function defineConfig(options: UserConfig) {
 
 _2020/02/28_
 
-In JavaScript, single quotes('') and double quotes("") are interchangable. With ES6, we even has backticks(``) for template literals. When you want to write a quick script to find all the strings without introducing a heavy parser, you may think about using RegExp. For example, you can have:
+In JavaScript, single quotes('') and double quotes("") are interchangable. With ES6, we now even have backticks(``) for template literals. When you want to write a quick script to find all the strings without introducing a heavy parser, you may think about using RegExp. For example, you can have:
 
 ```ts
 /['"`](.*?)['"`]/gm
