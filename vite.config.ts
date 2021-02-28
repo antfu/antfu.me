@@ -15,6 +15,18 @@ import anchor from 'markdown-it-anchor'
 import markdownAttr from 'markdown-it-link-attributes'
 import { slugify } from './scripts/slugify'
 
+import 'prismjs/components/prism-regex'
+import 'prismjs/components/prism-javascript'
+import 'prismjs/components/prism-typescript'
+import 'prismjs/components/prism-xml-doc'
+import 'prismjs/components/prism-yaml'
+import 'prismjs/components/prism-json'
+import 'prismjs/components/prism-markdown'
+import 'prismjs/components/prism-java'
+import 'prismjs/components/prism-javadoclike'
+import 'prismjs/components/prism-javadoc'
+import 'prismjs/components/prism-jsdoc'
+
 const config: UserConfig = {
   resolve: {
     alias: [
