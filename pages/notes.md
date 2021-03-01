@@ -35,7 +35,7 @@ export function isDarkTheme() {
 }
 ```
 
-Simple, but surprisingly, it works really well. This is used for my[Browse Lite](https://github.com/antfu/vscode-browse-lite) to injecting the preferred color schema to matched with your VS Code's theme. And also [Iconify IntelliSense for VS Code](https://github.com/antfu/vscode-iconify) to update icons color with users' theme.
+Simple, but surprisingly, it works really well. This is used for my [Browse Lite](https://github.com/antfu/vscode-browse-lite) extension to inject the preferred color schema matching with VS Code's theme. And also [Iconify IntelliSense for VS Code](https://github.com/antfu/vscode-iconify) to update icons color with the theme.
 
 </article>
 <article>
