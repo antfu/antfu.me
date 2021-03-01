@@ -5,6 +5,36 @@ subtitle: Quick notes / tips
 description: Quick notes / tips
 ---
 
+## Color Scheme for VS Code Extensions
+
+_2020/03/01_
+
+There is no API to access colors of current theme, nor the infomation about them. It frustrates me a while, until today I came up with a dirty but working solutions.
+
+Since most of the themes follows the convertion of having `Light` or `Dark` in their name. Then we can have:
+
+```ts
+import { workspace } from 'vscode'
+
+export function isDarkTheme() {
+  const theme = workspace.getConfiguration()
+    .get('workbench.colorTheme', '')
+
+  // must be dark
+  if (theme.match(/dark|black/i) != null)
+    return true
+
+  // must be light
+  if (theme.match(/light/i) != null)
+    return false
+
+  // IDK, maybe dark
+  return true
+}
+```
+
+Simple, but surprisingly, it works really well.
+
 ## Type Your Config
 
 _2020/02/29_
