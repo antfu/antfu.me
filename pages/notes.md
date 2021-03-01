@@ -5,11 +5,13 @@ subtitle: Quick notes / tips
 description: Quick notes / tips
 ---
 
+<article>
+
 ## Color Scheme for VS Code Extensions
 
 _2020/03/01_
 
-There is no API to access colors of current theme, nor the infomation about them. It frustrates me a while, until today I came up with a dirty but working solutions.
+There is currently no API to access colors of current theme in VS Code Extensions, nor the meta infomation of them. It frustrates me a while, until today I came up with a dirty but working solutions.
 
 Since most of the themes follows the convertion of having `Light` or `Dark` in their name. Then we can have:
 
@@ -33,7 +35,10 @@ export function isDarkTheme() {
 }
 ```
 
-Simple, but surprisingly, it works really well.
+Simple, but surprisingly, it works really well. This is used for my[Browse Lite](https://github.com/antfu/vscode-browse-lite) to injecting the preferred color schema to matched with your VS Code's theme. And also [Iconify IntelliSense for VS Code](https://github.com/antfu/vscode-iconify) to update icons color with users' theme.
+
+</article>
+<article>
 
 ## Type Your Config
 
@@ -82,6 +87,9 @@ export function defineConfig(options: UserConfig) {
 
 `defineConfig` exists in the runtime, so it works for JavaScript even if the types get truncated. This is really just some small details of DX, but I would wish more tools could adapt this approach and make the type checking more approachable and simplier.
 
+</article>
+<article>
+
 ## Match Quotes in Pairs
 
 _2020/02/28_
@@ -118,6 +126,8 @@ That's definitely a bad idea as it makes you duplicated your notations. Until I 
 
 You can find it running in action on my [`vite-plugin-windicss`](https://github.com/windicss/vite-plugin-windicss/blob/571c1d9d9bcbf699038614e6f9fab0ddc62b959b/packages/plugin-utils/src/regexes.ts#L1).
 
+</article>
+<article>
 
 ## Match Chinese Characters
 
@@ -145,6 +155,9 @@ It's called [Unicode property escapes](https://developer.mozilla.org/en-US/docs/
 
 [All avaliable scripts here](https://www.regular-expressions.info/unicode.html).
 
+</article>
+<article>
+
 ## Netlify Redirects (Domains)
 
 _2020/02/20_
@@ -161,6 +174,9 @@ On [Netlify](https://netlify.com), you can setup multiple domains for a site. Wh
 
 - `*` and `:splat` mean it will redirect all the sub routes as-is to the new domain.
 - `force = true` specifing it will always redirect even if the request page exists.
+
+</article>
+<article>
 
 ## Netlify Redirects (Site names)
 
@@ -179,3 +195,5 @@ A solution here is to create a new site with your original name `xxx` and upload
 ```
 
 Note you don't have to link a repo to that, Netlify offers a great feature that [let you drag and drop for static files and serve as a site](https://app.netlify.com/drop). So you can just save `netlify.toml` and upload it, rename the site to your original name. The redirection is done!
+
+</article>
