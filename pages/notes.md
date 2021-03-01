@@ -11,9 +11,9 @@ description: Quick notes / tips
 
 _2020/03/01_
 
-There is currently no API to access colors of current theme in VS Code Extensions, nor the meta infomation of them. It frustrates me a while, until today I came up with a dirty but working solutions.
+There is currently no API to access colors of current theme in VS Code Extensions, nor the meta infomation of them. It frustrated me for a long while, until today I came up with a dirty but working solution.
 
-Since most of the themes follows the convertion of having `Light` or `Dark` in their name. Then we can have:
+Since most of the themes follow the conversions of having `Light` or `Dark` in their names. Then we can have:
 
 ```ts
 import { workspace } from 'vscode'
