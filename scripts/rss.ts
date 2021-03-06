@@ -2,18 +2,41 @@ import fg from 'fast-glob'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
 import MarkdownIt from 'markdown-it'
-import { Feed } from 'feed'
+import { Feed, FeedOptions, Item } from 'feed'
+import { slugify } from './slugify'
 
 const DOMAIN = 'https://antfu.me'
+const AUTHOR = {
+  name: 'Anthony Fu',
+  email: 'hi@antfu.me',
+  link: DOMAIN,
+}
+const markdown = MarkdownIt({
+  html: true,
+  breaks: true,
+  linkify: true,
+})
 
 async function run() {
-  const markdown = MarkdownIt({
-    html: true,
-    breaks: true,
-    linkify: true,
-  })
+  await buildBlogRSS()
+  await buildNotesRSS()
+}
+
+async function buildBlogRSS() {
   const files = await fg('pages/posts/*.md')
 
+  const options = {
+    title: 'Anthony Fu',
+    description: 'Blog of Anthony Fu',
+    id: 'https://antfu.me/',
+    link: 'https://antfu.me/',
+    copyright: 'CC BY-NC 4.0 2021 © Anthony Fu',
+    feedLinks: {
+      json: 'https://antfu.me/feed.json',
+      atom: 'https://antfu.me/feed.atom',
+      rss: 'https://antfu.me/feed.xml',
+    },
+  }
   const posts: any[] = (
     await Promise.all(
       files.filter(i => !i.includes('index'))
@@ -33,13 +56,7 @@ async function run() {
           return {
             ...data,
             content: html,
-            author: [
-              {
-                name: 'Anthony Fu',
-                email: 'hi@antfu.me',
-                link: DOMAIN,
-              },
-            ],
+            author: [AUTHOR],
           }
         }),
     ))
@@ -47,31 +64,62 @@ async function run() {
 
   posts.sort((a, b) => +new Date(b.date) - +new Date(a.date))
 
-  const feed = new Feed({
-    title: 'Anthony Fu',
-    description: 'Blog of Anthony Fu',
-    id: 'https://antfu.me/',
-    link: 'https://antfu.me/',
-    image: 'https://antfu.me/avatar.png',
-    favicon: 'https://antfu.me/logo.png',
+  await writeFeed('feed', options, posts)
+}
+
+async function buildNotesRSS() {
+  const raw = await fs.readFile('pages/notes.md', 'utf-8')
+
+  const options = {
+    title: 'Anthony Fu Notes',
+    description: 'Anthony Fu Notes',
+    id: 'https://antfu.me/notes',
+    link: 'https://antfu.me/notes',
     copyright: 'CC BY-NC 4.0 2021 © Anthony Fu',
     feedLinks: {
-      json: 'https://antfu.me/feed.json',
-      atom: 'https://antfu.me/feed.atom',
-      rss: 'https://antfu.me/feed.xml',
+      json: 'https://antfu.me/feed-notes.json',
+      atom: 'https://antfu.me/feed-notes.atom',
+      rss: 'https://antfu.me/feed-notes.xml',
     },
-    author: {
-      name: 'Anthony Fu',
-      email: 'hi@antfu.me',
-      link: 'https://antfu.me',
-    },
-  })
+  }
+  const noteMatches = raw.matchAll(/<article>(.*?)<\/article>/gms)
+  const notes = []
 
-  posts.forEach(i => feed.addItem(i))
+  for (const noteMatch of noteMatches) {
+    const rawNote = noteMatch[1]
+    const dateMatch = rawNote.match(/_(.*)_/)!
+    const titleMatch = rawNote.match(/##\s*(.*)\n/)!
+    const title = titleMatch[1]
+    const date = new Date(dateMatch[1])
+    const anchor = slugify(title)
+    const rawContent = rawNote.slice(dateMatch.index).replace(/.*\n/, '').trim()
+    const content = markdown.render(rawContent).replace('src="/', `src="${DOMAIN}/`)
 
-  await fs.writeFile('./dist/feed.xml', feed.rss2(), 'utf-8')
-  await fs.writeFile('./dist/feed.atom', feed.atom1(), 'utf-8')
-  await fs.writeFile('./dist/feed.json', feed.json1(), 'utf-8')
+    notes.push({
+      title,
+      date,
+      content,
+      link: `${DOMAIN}/notes#${anchor}`,
+      lang: 'en',
+      author: [AUTHOR],
+    })
+  }
+
+  await writeFeed('feed-notes', options, notes)
+}
+
+async function writeFeed(name: string, options: FeedOptions, items: Item[]) {
+  options.author = AUTHOR
+  options.image = 'https://antfu.me/avatar.png'
+  options.favicon = 'https://antfu.me/logo.png'
+
+  const feed = new Feed(options)
+
+  items.forEach(item => feed.addItem(item))
+
+  await fs.writeFile(`./dist/${name}.xml`, feed.rss2(), 'utf-8')
+  await fs.writeFile(`./dist/${name}.atom`, feed.atom1(), 'utf-8')
+  await fs.writeFile(`./dist/${name}.json`, feed.json1(), 'utf-8')
 }
 
 run()
