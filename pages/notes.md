@@ -70,7 +70,7 @@ See [the docs](https://v3.vuejs.org/api/composition-api.html#provide-inject) for
 
 _2021/03/01_
 
-There is currently no API to access colors of current theme in VS Code Extensions, nor the meta infomation of them. It frustrated me for a long while, until today I came up with a dirty but working solution.
+There is currently no API to access colors of current theme in VS Code Extensions, nor the meta information of them. It frustrated me for a long while, until today I came up with a dirty but working solution.
 
 Since most of the themes follow the conversions of having `Light` or `Dark` in their names. Then we can have:
 
@@ -103,7 +103,7 @@ Simple, but surprisingly, it works really well. This is used for my [Browse Lite
 
 _2021/02/29_
 
-Configurations can be quite complex, and sometimes you may want to utilize the great type checking that TypeScript provided. Change your `xxx.config.js` to `xxx.config.ts` is not an ideal solutions as you will need to have a Node.js register involved to transplie it into JavaScript and some tools might not support doing that way. Fortunately, TypeScript also support type check in plain JavaScript file with JSDoc. Here is an example of Webpack config with type checks:
+Configurations can be quite complex, and sometimes you may want to utilize the great type checking that TypeScript provided. Change your `xxx.config.js` to `xxx.config.ts` is not an ideal solutions as you will need to have a Node.js register involved to transpile it into JavaScript and some tools might not support doing that way. Fortunately, TypeScript also support type check in plain JavaScript file with JSDoc. Here is an example of Webpack config with type checks:
 
 ```ts
 // webpack.config.js
@@ -144,7 +144,7 @@ export function defineConfig(options: UserConfig) {
 }
 ```
 
-`defineConfig` exists in the runtime, so it works for JavaScript even if the types get truncated. This is really just some small details of DX, but I would wish more tools could adapt this approach and make the type checking more approachable and simplier.
+`defineConfig` exists in the runtime, so it works for JavaScript even if the types get truncated. This is really just some small details of DX, but I would wish more tools could adapt this approach and make the type checking more approachable and simpler.
 
 </article>
 <article>
@@ -153,7 +153,7 @@ export function defineConfig(options: UserConfig) {
 
 _2021/02/28_
 
-In JavaScript, single quotes('') and double quotes("") are interchangable. With ES6, we now even have backticks(``) for template literals. When you want to write a quick script to find all the strings without introducing a heavy parser, you may think about using RegExp. For example, you can have:
+In JavaScript, single quotes('') and double quotes("") are interchangeable. With ES6, we now even have backticks(``) for template literals. When you want to write a quick script to find all the strings without introducing a heavy parser, you may think about using RegExp. For example, you can have:
 
 ```ts
 /['"`](.*?)['"`]/gm
@@ -210,9 +210,9 @@ It works, but a bit dirty. Fortunately, I found [a much simpler solution](https:
 !!'你好'.match(/\p{Script=Han}/u) // true
 ```
 
-It's called [Unicode property escapes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) and already avaliable in [Chrome 64, Firefox 79, Safari 11.1 and Node.js 10](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#browser_compatibility).
+It's called [Unicode property escapes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) and already available in [Chrome 64, Firefox 79, Safari 11.1 and Node.js 10](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#browser_compatibility).
 
-[All avaliable scripts here](https://www.regular-expressions.info/unicode.html).
+[All available scripts here](https://www.regular-expressions.info/unicode.html).
 
 </article>
 <article>
@@ -221,7 +221,7 @@ It's called [Unicode property escapes](https://developer.mozilla.org/en-US/docs/
 
 _2021/02/20_
 
-On [Netlify](https://netlify.com), you can setup multiple domains for a site. When you add a custom domain, the `xxx.netlify.app` is still accessable. Which would potentially cause some confusion to users. In that way, you can setup the redirection in your `netlify.toml` file, for example:
+On [Netlify](https://netlify.com), you can setup multiple domains for a site. When you add a custom domain, the `xxx.netlify.app` is still accessible. Which would potentially cause some confusion to users. In that way, you can setup the redirection in your `netlify.toml` file, for example:
 
 ```toml
 [[redirects]]
@@ -232,7 +232,7 @@ On [Netlify](https://netlify.com), you can setup multiple domains for a site. Wh
 ```
 
 - `*` and `:splat` mean it will redirect all the sub routes as-is to the new domain.
-- `force = true` specifing it will always redirect even if the request page exists.
+- `force = true` specifying it will always redirect even if the request page exists.
 
 </article>
 <article>
