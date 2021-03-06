@@ -10,7 +10,7 @@ description: Quick notes / tips
 
 ## Typed `provide` and `inject` in Vue
 
-_2020/03/05_
+_2021/03/05_
 
 I didn't know that you can type `provide()` and `inject()` elegantly until I watched [Thorsten Lünborg](https://github.com/LinusBorg/)'s talk on [Vue Amsterdam](https://vuejs.amsterdam/).
 
@@ -68,7 +68,7 @@ See [the docs](https://v3.vuejs.org/api/composition-api.html#provide-inject) for
 
 ## Color Scheme for VS Code Extensions
 
-_2020/03/01_
+_2021/03/01_
 
 There is currently no API to access colors of current theme in VS Code Extensions, nor the meta infomation of them. It frustrated me for a long while, until today I came up with a dirty but working solution.
 
@@ -101,7 +101,7 @@ Simple, but surprisingly, it works really well. This is used for my [Browse Lite
 
 ## Type Your Config
 
-_2020/02/29_
+_2021/02/29_
 
 Configurations can be quite complex, and sometimes you may want to utilize the great type checking that TypeScript provided. Change your `xxx.config.js` to `xxx.config.ts` is not an ideal solutions as you will need to have a Node.js register involved to transplie it into JavaScript and some tools might not support doing that way. Fortunately, TypeScript also support type check in plain JavaScript file with JSDoc. Here is an example of Webpack config with type checks:
 
@@ -151,7 +151,7 @@ export function defineConfig(options: UserConfig) {
 
 ## Match Quotes in Pairs
 
-_2020/02/28_
+_2021/02/28_
 
 In JavaScript, single quotes('') and double quotes("") are interchangable. With ES6, we now even have backticks(``) for template literals. When you want to write a quick script to find all the strings without introducing a heavy parser, you may think about using RegExp. For example, you can have:
 
@@ -190,7 +190,7 @@ You can find it running in action on my [`vite-plugin-windicss`](https://github.
 
 ## Match Chinese Characters
 
-_2020/02/25_
+_2021/02/25_
 
 When you need to detect if a string contains Chinese characters, you would commonly think about doing it will RegExp, or grab a ready-to-use package on npm.
 
@@ -219,7 +219,7 @@ It's called [Unicode property escapes](https://developer.mozilla.org/en-US/docs/
 
 ## Netlify Redirects (Domains)
 
-_2020/02/20_
+_2021/02/20_
 
 On [Netlify](https://netlify.com), you can setup multiple domains for a site. When you add a custom domain, the `xxx.netlify.app` is still accessable. Which would potentially cause some confusion to users. In that way, you can setup the redirection in your `netlify.toml` file, for example:
 
@@ -239,7 +239,7 @@ On [Netlify](https://netlify.com), you can setup multiple domains for a site. Wh
 
 ## Netlify Redirects (Site names)
 
-_2020/02/20_
+_2021/02/20_
 
 Unlike domain redirection, sometimes you would need to rename the Netlify subdomain name (a.k.a site name), for example `xxx.netlify.app` to `yyy.netlify.app`. After you do the rename, people visiting `xxx.netlify.app` will receive a 404. And since you no longer have controls over `xxx.netlify.app`, you can't just setup a redirect in your new site.
 
