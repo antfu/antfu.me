@@ -258,3 +258,5 @@ projects:
 ---
 
 <ListProjects :projects="frontmatter.projects"/>
+
+<StarsRanking/>
