@@ -1,3 +1,4 @@
+import { dirname } from 'path'
 import fg from 'fast-glob'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
@@ -27,7 +28,7 @@ async function buildBlogRSS() {
 
   const options = {
     title: 'Anthony Fu',
-    description: 'Blog of Anthony Fu',
+    description: 'Anthony Fu\' Blog',
     id: 'https://antfu.me/',
     link: 'https://antfu.me/',
     copyright: 'CC BY-NC 4.0 2021 © Anthony Fu',
@@ -71,15 +72,15 @@ async function buildNotesRSS() {
   const raw = await fs.readFile('pages/notes.md', 'utf-8')
 
   const options = {
-    title: 'Anthony Fu Notes',
-    description: 'Anthony Fu Notes',
+    title: 'Anthony Fu\'s Notes',
+    description: 'Anthony Fu\'s Notes',
     id: 'https://antfu.me/notes',
     link: 'https://antfu.me/notes',
     copyright: 'CC BY-NC 4.0 2021 © Anthony Fu',
     feedLinks: {
-      json: 'https://antfu.me/feed-notes.json',
-      atom: 'https://antfu.me/feed-notes.atom',
-      rss: 'https://antfu.me/feed-notes.xml',
+      json: 'https://antfu.me/notes/feed.json',
+      atom: 'https://antfu.me/notes/feed.atom',
+      rss: 'https://antfu.me/notes/feed.xml',
     },
   }
   const noteMatches = raw.matchAll(/<article>(.*?)<\/article>/gms)
@@ -105,7 +106,7 @@ async function buildNotesRSS() {
     })
   }
 
-  await writeFeed('feed-notes', options, notes)
+  await writeFeed('notes/feed', options, notes)
 }
 
 async function writeFeed(name: string, options: FeedOptions, items: Item[]) {
@@ -117,6 +118,7 @@ async function writeFeed(name: string, options: FeedOptions, items: Item[]) {
 
   items.forEach(item => feed.addItem(item))
 
+  await fs.ensureDir(dirname(`./dist/${name}`))
   await fs.writeFile(`./dist/${name}.xml`, feed.rss2(), 'utf-8')
   await fs.writeFile(`./dist/${name}.atom`, feed.atom1(), 'utf-8')
   await fs.writeFile(`./dist/${name}.json`, feed.json1(), 'utf-8')

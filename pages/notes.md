@@ -5,6 +5,7 @@ subtitle: Quick notes / tips
 description: Quick notes / tips
 ---
 
+[RSS Feed](https://antfu.me/notes/feed.xml)
 
 <article>
 
