@@ -49,8 +49,6 @@ devDependencies:
   vite-plugin-yaml: 1.0.5_vite@2.0.5
   vite-ssg: 0.8.12_18905f36e6473b2437d75bf1bd2c1afc
 lockfileVersion: 5.2
-overrides:
-  windicss: 2.2.5
 packages:
   /@antfu/eslint-config-basic/0.4.3_eslint@7.21.0:
     dependencies:
@@ -1947,7 +1945,7 @@ packages:
       esbuild-register: 2.2.0_esbuild@0.8.56
       fast-glob: 3.2.5
       micromatch: 4.0.2
-      windicss: 2.2.5
+      windicss: 2.2.8
     dev: true
     resolution:
       integrity: sha512-UBPe1yb4ZzGjISjbHV+e9/sj3+bvK2Bb+Mcn18qSW4mUfPnTY+tXBV7yvoaYILgZat9BOppHrRk9dwrI2DJD3w==
@@ -5626,7 +5624,7 @@ packages:
     dependencies:
       '@windicss/plugin-utils': 0.6.11
       vite: 2.0.5
-      windicss: 2.2.5
+      windicss: 2.2.8
     dev: true
     peerDependencies:
       vite: ^2.0.1
@@ -5848,13 +5846,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
-  /windicss/2.2.5:
+  /windicss/2.2.8:
     dev: true
     engines:
       node: '>= 12'
     hasBin: true
     resolution:
-      integrity: sha512-1EoJu/T9Uwg3odSkav2r2uiAX50/sKeYDH8sY1CAmqXEF5rGlyZUiQkUYTn4pEqUbQz2NnA5ztuTL/0nbCG3Jg==
+      integrity: sha512-zNh65NiuGDChJvCjkEEMpA5NpykouYOc5vGeT3ynC5XydbENJYCEP7Jt9cfVD9BAG+OQxsNYtsYOabtzQeq4Iw==
   /word-wrap/1.2.3:
     dev: true
     engines:

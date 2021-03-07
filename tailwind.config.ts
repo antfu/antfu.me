@@ -1,9 +1,12 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const typography = require('windicss/plugin/typography')
+import { defineConfig } from 'vite-plugin-windicss'
+// @ts-expect-error
+import typography from 'windicss/plugin/typography'
 
-module.exports = {
+export default defineConfig({
   darkMode: 'class',
-  plugins: [typography],
+  plugins: [
+    typography(),
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -31,4 +34,4 @@ module.exports = {
       },
     },
   },
-}
+})

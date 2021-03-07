@@ -56,11 +56,6 @@
     "vite-plugin-yaml": "^1.0.5",
     "vite-ssg": "^0.8.12"
   },
-  "pnpm": {
-    "overrides": {
-      "windicss": "2.2.5"
-    }
-  },
   "eslintConfig": {
     "extends": "@antfu/eslint-config-vue",
     "rules": {

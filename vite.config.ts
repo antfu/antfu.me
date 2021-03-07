@@ -103,7 +103,7 @@ const config: UserConfig = {
     Icons(),
 
     WindiCSS({
-      safelist: 'prose prose-sm m-auto',
+      safelist: 'prose prose-sm m-auto'.split(' '),
       preflight: {
         enableAll: true,
       },
