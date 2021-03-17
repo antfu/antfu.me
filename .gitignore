@@ -4,3 +4,4 @@ dist
 *.local
 .presite
 dist-ssr
+.vite-ssg-temp
