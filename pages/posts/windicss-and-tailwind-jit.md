@@ -1,5 +1,6 @@
 ---
 title: Windi CSS and Tailwind JIT 
+description: Wish this is the end.
 date: 2021-03-18T16:00:00.000+00:00
 lang: en
 duration: 8min
@@ -11,7 +12,7 @@ duration: 8min
 
 I spoke out for [Windi CSS](https://github.com/windicss/windicss) just because keeping silence on this also means we are encouraging such things from happening again in the open-source community. 
 
-Tailwind was once my favorite CSS framework and I was really happy to see we make it works on Vite [much faster](https://twitter.com/antfu7/status/1361398324587163648). And I was totally unexpected to see this result. Don't get me wrong, it's great to see Tailwind's long pain get solved officially with Tailwind JIT and benefit the community. What I am saying is that Tailwind used/inspired Windi's idea **without even mentioning Windi CSS once and claiming it's their own ideas** (until 30min after my tweet saying that, [they appended two tweets in the comments](https://twitter.com/adamwathan/status/1371542711086559237?s=20)). No official reply of this event at all.
+Tailwind was once my favorite CSS framework and I was really happy to see we make it works on Vite [much faster](https://twitter.com/antfu7/status/1361398324587163648). But I was totally unexpected to see that end up being like this. Don't get me wrong, it's great to see Tailwind's long pain get solved officially with Tailwind JIT and benefit the community. What I am saying is that Tailwind used/inspired Windi's idea **without even mentioning Windi CSS once and claiming it's their own ideas** (until 20min after my tweets about that, [they appended two tweets in the comments](https://twitter.com/adamwathan/status/1371542711086559237?s=20), and that's all). No official reply of this event at all.
 
 I don't want to speculate what's the reasons or motivations behind it, all I know is that **I will not use any products from Tailwind Labs anymore**. If you think I was reacting too much or it was not a big deal, then I truly wish such things would never happend to you again.
 
