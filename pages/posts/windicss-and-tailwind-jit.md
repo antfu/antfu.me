@@ -9,7 +9,7 @@ duration: 8min
 <p lang="en" dir="ltr">Congrats Tailwind, and thanks for NOT mentioning Windi CSS at all for your new ideas.<br><br>I appreciated how did Tailwind power my apps and make my life easier. But this really changed my mind about how I see the people behind it.<br><br>Check out <a href="https://t.co/kcEzm5Ickp">https://t.co/kcEzm5Ickp</a> by <a href="https://twitter.com/satireven?ref_src=twsrc%5Etfw">@satireven</a>. <a href="https://t.co/tkJCy8Pgb3">https://t.co/tkJCy8Pgb3</a></p>&mdash; Anthony Fu (@antfu7) <a href="https://twitter.com/antfu7/status/1371533878800748545?ref_src=twsrc%5Etfw">March 15, 2021</a>
 </Tweet> 
 
-I spoke out for [Windi CSS](https://github.com/windicss/windicss) just because keeping silence on this also means you are encourage such things from happening again in the open source community. 
+I spoke out for [Windi CSS](https://github.com/windicss/windicss) just because keeping silence on this also means we are encouraging such things from happening again in the open-source community. 
 
 Tailwind was once my favorite CSS framework and I was really happy to see we make it works on Vite [much faster](https://twitter.com/antfu7/status/1361398324587163648). And I was totally unexpected to see this result. Don't get me wrong, it's great to see Tailwind's long pain get solved officially with Tailwind JIT and benefit the community. What I am saying is that Tailwind used/inspired Windi's idea **without even mentioning Windi CSS once and claiming it's their own ideas** (until 30min after my tweet saying that, [they appended two tweets in the comments](https://twitter.com/adamwathan/status/1371542711086559237?s=20)). No official reply of this event at all.
 
