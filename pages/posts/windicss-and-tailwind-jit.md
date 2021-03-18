@@ -21,7 +21,11 @@ I don't want to speculate what's the reasons or motivations behind it, all I kno
 </Tweet>
 
 
-On the bright side, Tailwind pushed Windi to be independent and keep evolving for not just being a "Tailwind accessory" any longer. We also have a community based CSS-in-JS implementation [Twind](https://github.com/tw-in-js/twind) which you should definitely check out (they are working closely with Windi to bring an uniformed community standard/spec of our DSL, cheers [@sastan](https://github.com/sastan)!). As for me, I will spend more time on working with Windi CSS to make it even better. Here is some of exciting things we are working on:
+On the bright side, Windi pushed Tailwind to make the JIT and improved the DX and Tailwind forced Windi to be independent and evolving to not just being a "Tailwind accessory" any longer.
+
+There is another community based CSS-in-JS alternative called [Twind](https://github.com/tw-in-js/twind), which you definitely want to check out (they are working closely with Windi to bring an uniformed community standard/spec of our DSL, cheers [@sastan](https://github.com/sastan)!). 
+
+As for myself, I will spend more time on working with Windi CSS to make it even better. Here is some of exciting things we are working on:
 
 <Tweet>
 <p lang="en" dir="ltr">Spoiler of the new piece of our playground - interactive selector.<br><br>I always find myself trouble picking the directions of rounded corners and looking up for a huge table of all the possible combinations could be inefficient. So yeah :)<br><br>rounded-1/2 is new in Windi CSS btw 😉 <a href="https://t.co/f841k9BgPF">https://t.co/f841k9BgPF</a> <a href="https://t.co/pVIlB2X1nY">pic.twitter.com/pVIlB2X1nY</a></p>&mdash; Anthony Fu (@antfu7) <a href="https://twitter.com/antfu7/status/1371779599084888064?ref_src=twsrc%5Etfw">March 16, 2021</a>
@@ -31,4 +35,4 @@ On the bright side, Tailwind pushed Windi to be independent and keep evolving fo
 <p lang="en" dir="ltr">Limitation? Let&#39;s break it!💥<br><br>Upcoming feature in <a href="https://twitter.com/windi_css?ref_src=twsrc%5Etfw">@windi_css</a> 🍃<br>&quot;Design in DevTools&quot;!<br><br>Whenever you made changes to the classes in DevTools, the CSS updates automatically for you, on-demand as always :)<br><br>Idea credit goes to <a href="https://twitter.com/MaximoMussini?ref_src=twsrc%5Etfw">@maximomussini</a> 🙌 <a href="https://t.co/DHf2h5wroM">pic.twitter.com/DHf2h5wroM</a></p>&mdash; Anthony Fu (@antfu7) <a href="https://twitter.com/antfu7/status/1372244287975387145?ref_src=twsrc%5Etfw">March 17, 2021</a>
 </Tweet>
 
-Thanks for reading though. And don't feel any pressure about using any tools that you needed. I choose not to use them just because my personal preference. I don't want to force anyone to switch their stack because reading this post, we will keep improve it and show you which is the better one you should use :)
+Thanks for reading though. Don't feel any pressure about using any tools that you needed. I choose not to use them just because my personal preference. I don't want to force anyone to switch their stack because reading this post, we will keep improve it and show you which is the better one you should use :)
