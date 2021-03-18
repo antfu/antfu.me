@@ -56,7 +56,7 @@ import { isDark } from '/~/logics'
 
 .nav {
   padding: 2rem;
-  width: 100vw;
+  width: 100%;
   display: grid;
   grid-template-columns: auto max-content;
   box-sizing: border-box;
