@@ -17,7 +17,7 @@ Tailwind was once my favorite CSS framework and I was really happy to see we mad
 I don't want to speculate what's the reasons or motivations behind it, all I know is that **I will not use any products from Tailwind Labs anymore**. If you think I was reacting too much or it was not a big deal, then I truly wish such things would never happend on you once again.
 
 <Tweet>
-<p lang="en" dir="ltr">I remember the day when Windi got blown up on Twitter, <a href="https://twitter.com/adamwathan?ref_src=twsrc%5Etfw">@adamwathan</a> called me and asked me about how Windi CSS works and he is happy to make it official. And yeah, I was excited to see things are improving for the whole community, so I shared all I know with him.<br><br>1/n <a href="https://t.co/Ho1DddqA33">https://t.co/Ho1DddqA33</a></p>&mdash; Anthony Fu (@antfu7) <a href="https://twitter.com/antfu7/status/1371538602488786945?ref_src=twsrc%5Etfw">March 15, 2021</a></blockquote>
+<p lang="en" dir="ltr">I remember the day when Windi got blown up on Twitter, <a href="https://twitter.com/adamwathan?ref_src=twsrc%5Etfw">@adamwathan</a> called me and asked me about how Windi CSS works and he is happy to make it official. And yeah, I was excited to see things are improving for the whole community, so I shared all I know with him.<br><br>1/n <a href="https://t.co/Ho1DddqA33">https://t.co/Ho1DddqA33</a></p>&mdash; Anthony Fu (@antfu7) <a href="https://twitter.com/antfu7/status/1371538602488786945?ref_src=twsrc%5Etfw">March 15, 2021</a>
 </Tweet>
 
 <Tweet>
