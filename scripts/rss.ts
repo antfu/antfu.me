@@ -31,7 +31,7 @@ async function buildBlogRSS() {
     description: 'Anthony Fu\' Blog',
     id: 'https://antfu.me/',
     link: 'https://antfu.me/',
-    copyright: 'CC BY-NC 4.0 2021 © Anthony Fu',
+    copyright: 'CC BY-NC-SA 4.0 2021 © Anthony Fu',
     feedLinks: {
       json: 'https://antfu.me/feed.json',
       atom: 'https://antfu.me/feed.atom',
@@ -76,7 +76,7 @@ async function buildNotesRSS() {
     description: 'Anthony Fu\'s Notes',
     id: 'https://antfu.me/notes',
     link: 'https://antfu.me/notes',
-    copyright: 'CC BY-NC 4.0 2021 © Anthony Fu',
+    copyright: 'CC BY-NC-SA 4.0 2021 © Anthony Fu',
     feedLinks: {
       json: 'https://antfu.me/notes/feed.json',
       atom: 'https://antfu.me/notes/feed.atom',
