@@ -6,6 +6,8 @@ lang: en
 duration: 8min
 ---
 
+> Disclaimer: All the words are only representing my opinions. None of them applies to the Windi CSS's author nor the team.
+
 <Tweet>
 <p lang="en" dir="ltr">Congrats Tailwind, and thanks for NOT mentioning Windi CSS at all for your new ideas.<br><br>I appreciated how did Tailwind power my apps and make my life easier. But this really changed my mind about how I see the people behind it.<br><br>Check out <a href="https://t.co/kcEzm5Ickp">https://t.co/kcEzm5Ickp</a> by <a href="https://twitter.com/satireven?ref_src=twsrc%5Etfw">@satireven</a>. <a href="https://t.co/tkJCy8Pgb3">https://t.co/tkJCy8Pgb3</a></p>&mdash; Anthony Fu (@antfu7) <a href="https://twitter.com/antfu7/status/1371533878800748545?ref_src=twsrc%5Etfw">March 15, 2021</a>
 </Tweet> 
