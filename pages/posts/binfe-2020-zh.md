@@ -1,14 +1,13 @@
 ---
-title: import { reactive } from 'vue' - 滨江前端沙龙
+title: import { reactive } from 'vue' - at 滨江前端沙龙
 date: 2020-09-26T16:00:00.000+00:00
-hero_image: ''
 lang: zh
 duration: 25min
 ---
 
 > 这是我在2020滨江前端沙龙分享的文稿
 >
-> This is the transcript of my talk for BinFE 2020
+> This is the transcript of my talk at BinFE 2020
 >
 > Slides: [中文 ver.](https://antfu.me/talks/2020-09-26) | [English ver.](https://antfu.me/talks/2020-09-26/en)
 
