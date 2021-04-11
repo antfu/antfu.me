@@ -1,5 +1,4 @@
-import { defineConfig } from 'vite-plugin-windicss'
-// @ts-expect-error
+import { defineConfig } from 'windicss/helpers'
 import typography from 'windicss/plugin/typography'
 
 export default defineConfig({
