@@ -2,6 +2,13 @@ import { defineConfig } from 'windicss/helpers'
 import typography from 'windicss/plugin/typography'
 
 export default defineConfig({
+  extract: {
+    include: [
+      'index.html',
+      'pages/**/*.md',
+      'src/**/*.{vue,ts}',
+    ],
+  },
   darkMode: 'class',
   plugins: [
     typography(),
