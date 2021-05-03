@@ -9,8 +9,10 @@ duration: 30min
 > This is the transcript of my talk **Composable Vue** at [VueDay 2021](https://2021.vueday.it/)
 >
 > Slides: [PDF](https://antfu.me/talks/2021-04-29) | [SPA](https://talks.antfu.me/2021/composable-vue)
-
-> Slides are made with [**Slidev**](https://github.com/slidevjs/slidev) - a slides maker for developers that I am working on recently.
+> 
+> Recording: [YouTube](https://youtu.be/IMJjP6edHd0)
+> 
+> Made with <Slidev class="inline"/>  [**Slidev**](https://github.com/slidevjs/slidev) - a slides maker for developers that I am working on recently.
 
 
 My sharing today is Composable Vue, some pattens and tips that might be able to help you writing better composable logic in Vue.
