@@ -19,7 +19,11 @@ const { projects } = defineProps<{ projects: any }>()
         :class="!item.link ? &quot;opacity-0 pointer-events-none h-0 -mt-8 -mb-4&quot; : &quot;&quot;"
       >
         <div v-if="item.icon" class="pt-2 pr-5">
-          <Icon class="text-3xl opacity-50" :icon="item.icon || 'carbon:unknown'" />
+          <Slidev v-if="item.icon === 'slidev'" class="text-3xl opacity-50" />
+          <VueUse v-else-if="item.icon === 'vueuse'" class="text-3xl opacity-50" />
+          <VueReactivity v-else-if="item.icon === 'vue-reactivity'" class="text-3xl opacity-50" />
+          <VueDemi v-else-if="item.icon === 'vue-demi'" class="text-3xl opacity-50" />
+          <Icon v-else class="text-3xl opacity-50" :icon="item.icon || 'carbon:unknown'" />
         </div>
         <div class="flex-auto">
           <div cla ss="text-normal">{{ item.name }}</div>

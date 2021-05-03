@@ -156,7 +156,7 @@ As you can see in this code snippet, I have used two other composable functions 
 
 You can see the full code or directly use it in VueUse with the link below.
 
-<VueUse name="useDark"/>
+<VueUseFn name="useDark"/>
 
 ### Think as "Connections"
 
@@ -324,7 +324,7 @@ At the first line, unified the ref from the user, or create a new one. And on th
 
 Emm, maybe it's a little bit hard to catch on what's happened in the first line, let me explain a bit.
 
-<VueUse name="useTitle"/>
+<VueUseFn name="useTitle"/>
 
 ### Reuse Refs <MarkerCore />
 
@@ -442,7 +442,7 @@ export function useFetch<R>(url: MaybeRef<string>) {
 
 In the real world, we might also need some flags to show the current state of the request, where you can find the full code in VueUse.
 
-<VueUse name="useFetch"/>
+<VueUseFn name="useFetch"/>
 
 ### Side-effects Self Cleanup <MarkerPattern />
 
@@ -464,7 +464,7 @@ export function useEventListener(target: EventTarget, name: string, fn: any) {
 
 For example, it's common to use `addEventListener` to register the handler to DOM events. When you finish the usage, you would also need to remember to unregister it using `removeEventListener`. In this case, we can have a function `useEventListener` that unregister itself along with the component so you don't need to worry about it anymore.
 
-<VueUse name="useEventListener"/>
+<VueUseFn name="useEventListener"/>
 
 ### `effectScope` RFC <Marker class="text-purple-400">Upcoming</Marker>
 
@@ -659,7 +659,7 @@ We can take a look at the code, you can see we used a writable computed. When ac
 
 Even more, we can actually bind into our children elements's `v-model` very easily.
 
-<VueUse name="useVModel"/>
+<VueUseFn name="useVModel"/>
 
 ## Vue 2 & 3
 
