@@ -85,9 +85,9 @@ App 开发的后期，正逢 Vue 3 的 Composition API RFC，新的 API 看起�
 
 ## Wrapping Up
 
-希望这样的一个看法可以或多多少帮助你在解决自己的问题，或是做一个好的开源产品上，提供一些参考。
+希望这样的一个看法可以或多或少能帮助你在解决自己的问题，或是做一个好的开源产品上，提供一些参考。
 
-推荐一些厉害的 Yak Shaving 大师，也许他们的项目和经历也能给你带来一些灵感。
+同时推荐一些厉害的 Yak Shaving 大师，也许他们的项目和经历也能给你带来一些灵感。
 
 - [Sindre Sorhus](https://github.com/sindresorhus) - 活跃维护 1100+ 个 npm 包，Webpack 和 Babel 都依赖了他 100+ 个包
 - [TJ Holowaychuk](https://github.com/tj) - koa, mocha, express 等项目作者
