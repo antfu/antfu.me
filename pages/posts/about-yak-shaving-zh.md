@@ -93,6 +93,6 @@ App 开发的后期，正逢 Vue 3 的 Composition API RFC，新的 API 看起�
 - [Egoist](https://github.com/egoist) - polka, uvu, klona 等项目作者
 - [Hiroki Osame](https://github.com/privatenumber) - esbuild-loader, vue-2-3 等项目作者
 
-Cheers!
+Cheers, and happy hacking!
 
 [本文谢绝转载，谢谢]
