@@ -16,6 +16,7 @@
 /talks/2021-03-28/en https://github.com/antfu/talks/blob/master/2021-03-28/2021-03-28-vue-beijing-antfu-en.pdf?raw=true 302
 /talks/2021-03-28/zh https://github.com/antfu/talks/blob/master/2021-03-28/2021-03-28-vue-beijing-antfu-zh.pdf?raw=true 302
 /talks/2021-04-29 https://github.com/antfu/talks/blob/master/2021-04-29/2021-04-29-vueday-en.pdf?raw=true 302
+/talks/2021-05-22 https://github.com/antfu/talks/blob/master/2021-05-22/2021-04-29-vueday-en.pdf?raw=true 302
 
 /vueuse https://github.com/vueuse/vueuse 302
 /vue-demi https://github.com/vueuse/vue-demi 302
@@ -35,6 +36,7 @@
 /bcp47	https://github.com/antfu/bcp47	302
 /biconfigs	https://github.com/antfu/biconfigs	302
 /bopomofo	https://github.com/antfu/bopomofo	302
+/broz	https://github.com/antfu/broz	302
 /checklist	https://github.com/antfu/checklist	302
 /chinese-font-subset-for-crowds	https://github.com/antfu/chinese-font-subset-for-crowds	302
 /codemirror-theme-vars	https://github.com/antfu/codemirror-theme-vars	302
@@ -72,4 +74,3 @@
 /set-game	https://github.com/antfu/set-game	302
 /simple-permission	https://github.com/antfu/simple-permission	302
 /svg-packer	https://github.com/antfu/svg-packer	302
-/talks	https://github.com/antfu/talks	302
