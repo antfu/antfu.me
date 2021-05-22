@@ -1,5 +1,5 @@
 ---
-title: import { reactive } from 'vue' - at 滨江前端沙龙
+title: import { reactive } from 'vue' - 滨江前端沙龙 2020
 date: 2020-09-26T16:00:00.000+00:00
 lang: zh
 type: talk
