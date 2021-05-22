@@ -4,11 +4,23 @@ display: Projects
 subtitle: List of projects that I am proud of
 description: List of projects that I am proud of
 projects:
-  Upcoming:
+  Latest:
     - name: 'Slidev'
       link: 'https://github.com/slidevjs/slidev'
       desc: 'Presentation slides for developers'
       icon: 'slidev'
+    - name: 'broz'
+      link: 'https://github.com/antfu/broz'
+      desc: 'A simple, frameless browser for screenshots'
+      icon: 'carbon:checkbox'
+    - name: 'Vite'
+      link: 'https://github.com/vitejs/vite'
+      desc: 'Native-ESM powered web dev build tool (Maintainer)'
+      icon: 'system-uicons:lightning'
+    - name: 'Vite Remote Assets'
+      link: 'https://github.com/antfu/vite-plugin-remote-assets'
+      desc: 'Bundles your assets from remote urls with your app'
+      icon: 'carbon:data-share'
   Vue Ecosystem:
     - name: 'VueUse'
       link: 'https://github.com/antfu/vueuse'
@@ -104,6 +116,12 @@ projects:
       link: 'https://github.com/antfu/windicss-runtime-dom'
       desc: 'Windi CSS for any site with one-line of code'
       icon: 'carbon:run'
+
+  Productive:
+    - name: 'Slidev'
+      link: 'https://github.com/slidevjs/slidev'
+      desc: 'Presentation slides for developers'
+      icon: 'slidev'
 
   Design / Compform:
     - name: '100 Day'
