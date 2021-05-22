@@ -31,7 +31,7 @@ const posts = computed(() =>
           <sup v-if="route.meta.frontmatter.lang === 'zh'" class="text-xs border border-current rounded px-1 pb-0.2">zh</sup>
         </div>
         <div class="time opacity-50 text-sm -mt-1">
-          {{ formatDate(route.meta.frontmatter.date) }} <span v-if="route.meta.frontmatter.duration">· {{ route.meta.frontmatter.duration }}</span>
+          {{ formatDate(route.meta.frontmatter.date) }} <span v-if="route.meta.frontmatter.duration" class="opacity-50">· {{ route.meta.frontmatter.duration }}</span>
         </div>
       </li>
     </router-link>

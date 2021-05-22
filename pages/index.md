@@ -18,6 +18,6 @@ Outside of programming, I enjoy doing photography and traveling. Some of my phot
 
 ***
 
-Find me on [GitHub](https://github.com/antfu) and [Twitter](https://www.twitter.com/antfu7), mail me at [hi@antfu.me](mailto:hi@antfu.me).
+Find me on [GitHub](https://github.com/antfu), [Twitter](https://www.twitter.com/antfu7) or [Zhihu](https://www.zhihu.com/people/antfu), mail me at [hi@antfu.me](mailto:hi@antfu.me).
 
 If you like my works, consider sponsoring me on [GitHub Sponsor](https://github.com/sponsors/antfu) to keep them sustainable.
