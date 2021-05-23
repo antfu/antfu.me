@@ -8,8 +8,7 @@ duration: 30min
 ---
 
 > 幻灯片: [PDF](https://antfu.me/talks/2021-05-22) | [SPA](https://talks.antfu.me/2021/vueconf-china)
-> 
+>
+> 直播录像: [哔哩哔哩](https://www.bilibili.com/video/BV1x54y1V7H6)
+>
 > 使用 <Slidev class="inline"/> [**Slidev**](https://github.com/slidevjs/slidev) 制作 - 一个为开发者打造的演示文档工具
-
-*直播录像后续更新*<br>
-*Recording will be updated whenever it's available*
