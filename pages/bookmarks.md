@@ -10,6 +10,8 @@ subtitle: Some of my favorite websites/tools with excellent design and UX that I
 
 #### Color
 
+- [Scale](https://hihayk.github.io/scale/)
+- [Wheel](https://hihayk.github.io/wheel/)
 - [Adobe Color](https://color.adobe.com/)
 - [NIPPON COLORS - 日本の伝統色](https://nipponcolors.com/)
 - [terminal.sexy](https://terminal.sexy/)
