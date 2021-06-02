@@ -10,7 +10,7 @@ const { frontmatter } = defineProps<{ frontmatter: any }>()
 if (isClient) {
   const navigate = () => {
     if (location.hash) {
-      document.querySelector(location.hash)
+      document.querySelector(decodeURIComponent(location.hash))
         ?.scrollIntoView({ behavior: 'smooth' })
     }
   }
