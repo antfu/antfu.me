@@ -10,6 +10,7 @@ export function getStarsRankingUrl() {
   const repos = [
     'lokalise/i18n-ally',
     'vitejs/awesome-vite',
+    'vitejs/vite',
     'vuejs/composition-api',
     'vueuse/vue-chemistry',
     'vueuse/vue-demi',
