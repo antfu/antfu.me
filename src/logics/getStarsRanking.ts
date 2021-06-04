@@ -5,6 +5,7 @@ export function getStarsRankingUrl() {
     'knightly',
     'type-challenges',
     'vue-reactivity',
+    'slidevjs',
   ]
   const repos = [
     'lokalise/i18n-ally',
