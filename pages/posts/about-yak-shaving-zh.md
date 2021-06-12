@@ -48,7 +48,7 @@ duration: 10min
 
 而希望让 App 能够有足够大的受众面，多语言国际化便是一个不得不考虑的问题。恰好学校有很多外语的科系，便想着利用在学校的资源，可以让同学也参与进来帮忙翻译多语种。可是让学外语的同学手撸 JSON 显然有些不现实，得找一些稍微轻松一点的方案。当时找到了 [`think2011/vscode-vue-i18n`](https://github.com/think2011/vscode-vue-i18n) 这个项目，看起来很不错，但是缺少一些我们需要的功能，联系了作者并获得了 Fork 的同意，于是便有了 [i18n Ally](https://github.com/lokalise/i18n-ally)。
 
-App 开发的后期，正逢 Vue 3 的 Composition API RFC，新的 API 看起来解决了我们开发中的许多痛点，本着实验的精神，我们就装了 Vue 2 的插件开始试用。使用的过程中，发现我们很常会用到一些通用的函数，借由 [`react-use`](https://github.com/streamich/react-use) 的思想，我就顺便把它他们抽离了出来做成了 [VueUse](https://github.com/vueuse/vueuse).
+App 开发的后期，正逢 Vue 3 的 Composition API RFC，新的 API 看起来解决了我们开发中的许多痛点，本着实验的精神，我们就装了 Vue 2 的插件开始试用。使用的过程中，发现我们很常会用到一些通用的函数，借由 [`react-use`](https://github.com/streamich/react-use) 的思想，我就顺便把它们抽离了出来做成了 [VueUse](https://github.com/vueuse/vueuse).
 
 鉴于当时 Vue 3 仍在 Alpha，并且在未来很长一段时间里社区需要从 Vue 2 逐步迁移到 Vue 3。在做 VueUse 的过程中，便有意的将它作为 Vue 2 和 Vue 3 通用的工具以便大家无缝进行迁移，起初的解决方案是同版本发两个针对 Vue 2 和 3 的包在不同的 npm tag 下。随着 Vue 3 的逐步成熟，越来越多的库希望走同样的方式以减少同时维护两份代码库的成本。想着，也许我可以从 VueUse 中找到一个通用的方案，这样大家都可以因此受益，也就有了 [`vue-demi`](https://github.com/vueuse/vue-demi)，也让 VueUse 可以实现一个版本同时支持双版本。
 
