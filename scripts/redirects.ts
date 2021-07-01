@@ -11,8 +11,6 @@ async function run() {
     per_page: 100,
   })
 
-  // console.log(repos)
-
   const redirects: [string, string, number][] = []
 
   for (const repo of repos) {
