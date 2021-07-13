@@ -1,5 +1,4 @@
 <script setup lang='ts'>
-import { defineProps, onMounted } from 'vue'
 import { formatDate } from '/~/logics'
 import { useRoute } from 'vue-router'
 import { useEventListener, isClient } from '@vueuse/core'

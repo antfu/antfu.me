@@ -6,7 +6,6 @@
 
 <script setup='props' lang='ts'>
 import { useRafFn, useWindowSize, noop } from '@vueuse/core'
-import { onMounted, ref, reactive } from 'vue'
 import type { Fn } from '@vueuse/core'
 
 const r180 = Math.PI
@@ -89,6 +88,8 @@ onMounted(async() => {
   let lastTime = performance.now()
   const interval = 1000 / 40
 
+  let controls: ReturnType<typeof useRafFn>
+
   const frame = () => {
     if (performance.now() - lastTime < interval)
       return
@@ -105,7 +106,7 @@ onMounted(async() => {
     prevSteps.forEach(i => i())
   }
 
-  const controls = useRafFn(frame, { immediate: false })
+  controls = useRafFn(frame, { immediate: false })
 
   start.value = () => {
     controls.pause()

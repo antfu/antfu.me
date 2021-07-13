@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
-
-const { projects } = defineProps<{ projects: any }>()
+const { projects } = defineProps<{ projects: Record<string, any[]> }>()
 </script>
 
 <template>

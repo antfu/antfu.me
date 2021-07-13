@@ -9,6 +9,32 @@ description: Quick notes / tips
 
 <article>
 
+## Get Package Root
+
+_2021/07/14_
+
+When you want to get the real file path of a certain package, you could use `require.resolve` to fetch the their main entry path.
+
+```bash
+> require.resolve('vite')
+'/Users/.../node_modules/vite/dist/node/index.js'
+
+> require.resolve('windicss')
+'/Users/.../node_modules/windicss/index.js'
+```
+
+Howeven, when you want to get the root directory of the package, you will find the result of `require.resolve` could vary based on different packages configuration.
+
+A trick for this is to resolve the `package.json` instead, as the `package.json` is always located at the root of the package. Combining with `path.dirname`, you could always get the package root.
+
+```bash
+> path.dirname(require.resolve('vite/package.json'))
+'/Users/.../node_modules/vite'
+```
+
+</article>
+<article>
+
 ## Optimize Await
 
 _2021/07/01_

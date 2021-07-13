@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref, computed, defineProps } from 'vue'
 import { useRouter } from 'vue-router'
 import { formatDate } from '/~/logics'
 

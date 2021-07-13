@@ -1,6 +1,7 @@
 import './styles/main.postcss'
 import 'windi.css'
 import './styles/markdown.postcss'
+import 'vue-global-api'
 
 import autoRoutes from 'pages-generated'
 import NProgress from 'nprogress'
@@ -9,6 +10,12 @@ import { RouterScrollBehavior } from 'vue-router'
 import dayjs from 'dayjs'
 import LocalizedFormat from 'dayjs/plugin/localizedFormat'
 import App from './App.vue'
+
+declare module 'vue-router' {
+  interface RouteMeta {
+    frontmatter: any
+  }
+}
 
 const routes = autoRoutes.map((i) => {
   return {
