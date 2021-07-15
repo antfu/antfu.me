@@ -5,3 +5,4 @@ dist
 .presite
 dist-ssr
 .vite-ssg-temp
+components.d.ts
