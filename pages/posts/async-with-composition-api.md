@@ -6,7 +6,7 @@ lang: en
 duration: 17min
 ---
 
-There is a major caveat when working with asynchronous functions in Vue Composition API, that I believe many of you have come across. I know it for a long while, but every time I want to have a detailed reference to it, I found it's not documented everywhere. So, I am thinking about writing one, with a detailed explanation while sorting out the possible solutions for you.
+There is a major caveat when working with asynchronous functions in Vue Composition API, that I believe many of you have come across it. I know it for a long while, but every time I want to have a detailed reference to it, I found it's not documented everywhere. So, I am thinking about writing one, with a detailed explanation while sorting out the possible solutions for you.
 
 - [The Problem](#the-problem)
 - [The Mechanism](#the-mechanism)
@@ -15,7 +15,7 @@ There is a major caveat when working with asynchronous functions in Vue Composit
 
 ## The Problem
 
-When using asynchronous `setup()`, **you have to use effects and lifecycle hooks before the first `await` statement.**
+When using asynchronous `setup()`, **you have to use effects and lifecycle hooks before the first `await` statement.** ([details](https://github.com/vuejs/rfcs/discussions/234))
 
 For example:
 
