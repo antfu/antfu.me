@@ -128,7 +128,7 @@ component.setup()
 currentInstance = prev 
 ```
 
-The situation changes when the `setup()` is asynchronous. Whenever you `await` a promise, you can think the engine paused the works here and went to do another task. If we `await` the function, it will break the atomic and the app will be missed up.
+The situation changes when the `setup()` is asynchronous. Whenever you `await` a promise, you can think the engine paused the works here and went to do another task. If we `await` the function, during the time period, multiple components creation will change the global variable unpredictably and end up with a mess.
 
 ```ts
 currentInstance = instance
