@@ -175,6 +175,8 @@ But to work around it, I have collected a few solutions for you to choose from b
 
 This is, of course, an obvious "solution". You can try to move your effect and hooks before the first `await` statement and carefully remember not to have them after that again.
 
+If you use ESLint, you could have the [`vue/no-watch-after-await`](https://eslint.vuejs.org/rules/no-watch-after-await.html) and [`vue/no-lifecycle-after-await`](https://eslint.vuejs.org/rules/no-lifecycle-after-await.html) rules from [`eslint-plugin-vue`](https://eslint.vuejs.org/) enabled so it could warn you whenever you made some mistakes (they are enabled by default within the plugin presets).
+
 ### Wrap the Async Function as "Reactive Sync"
 
 In some situations, your logic might be relying on the data that fetched asynchronously. In this way, you could consider using the [trick I have shared on VueDay 2021](/posts/composable-vue-vueday-2021#async-to-sync) to **turn your async function into a sync reactive state**.
