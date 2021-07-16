@@ -6,7 +6,7 @@ lang: en
 duration: 17min
 ---
 
-There is a major caveat when working with asynchronous functions in Vue Composition API, that I believe many of you have come across it. I know it for a long while, but every time I want to have a detailed reference to it, I found it's not documented everywhere. So, I am thinking about writing one, with a detailed explanation while sorting out the possible solutions for you.
+There is a major caveat when working with asynchronous functions in Vue Composition API, that I believe many of you have ever come across. I have acknowledged it for a while from somewhere, but every time I want to have a detailed reference and share to others, I can't find it's documented anywhere. So, I am thinking about writing one, with a detailed explanation while sorting out the possible solutions for you.
 
 - [The Problem](#the-problem)
 - [The Mechanism](#the-mechanism)
@@ -120,7 +120,7 @@ With this approach, as long as the `onMounted` is called inside the component `s
 
 So far so good, but what's wrong with asynchronous functions?
 
-The implementation would work based on the fact that JavaScript is **single-threaded**. Single thread makes sure the following statements will be executed right next to each other, which in other words, there will be no one could accidentally modify the `currentInstance` at the same time (a.k.a. [atomic](https://stackoverflow.com/questions/52196678/what-are-atomic-operations-for-newbies)).
+The implementation would work based on the fact that JavaScript is **single-threaded**. Single thread makes sure the following statements will be executed right next to each other, which in other words, there is no one could accidentally modify the `currentInstance` at the same time (a.k.a. it's [atomic](https://stackoverflow.com/questions/52196678/what-are-atomic-operations-for-newbies)).
 
 ```ts
 currentInstance = instance
