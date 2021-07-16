@@ -175,7 +175,7 @@ But to work around it, I have collected a few solutions for you to choose from b
 
 This is, of course, an obvious "solution". You can try to move your effect and hooks before the first `await` statement and carefully remember not to have them after that again.
 
-If you use ESLint, you could have the [`vue/no-watch-after-await`](https://eslint.vuejs.org/rules/no-watch-after-await.html) and [`vue/no-lifecycle-after-await`](https://eslint.vuejs.org/rules/no-lifecycle-after-await.html) rules from [`eslint-plugin-vue`](https://eslint.vuejs.org/) enabled so it could warn you whenever you made some mistakes (they are enabled by default within the plugin presets).
+Luckily, if you are using ESLint, you can have the [`vue/no-watch-after-await`](https://eslint.vuejs.org/rules/no-watch-after-await.html) and [`vue/no-lifecycle-after-await`](https://eslint.vuejs.org/rules/no-lifecycle-after-await.html) rules from [`eslint-plugin-vue`](https://eslint.vuejs.org/) enabled so it could warn you whenever you made some mistakes (they are enabled by default within the plugin presets).
 
 ### Wrap the Async Function as "Reactive Sync"
 
@@ -197,7 +197,11 @@ fetch('https://api.github.com/')
 const user = computed(() => data?.user)
 ```
 
-Or you can use [`useAsyncState`](https://vueuse.org/useAsyncState) or [`useFetch`](https://vueuse.org/useFetch) from [VueUse](https://vueuse.org/).
+This approach make the "connections" between your logic to resolve first, and then reactive updates when the asynchronous function get resolved and filled with data.
+
+There is also some more general utilities for it from [VueUse](https://vueuse.org/):
+
+#### [`useAsyncState`](https://vueuse.org/useAsyncState)
 
 ```ts
 import { useAsyncState } from '@vueuse/core'
@@ -209,6 +213,8 @@ const { state, ready } = useAsyncState(async () => {
 
 const user = computed(() => state?.user)
 ```
+
+#### [`useFetch`](https://vueuse.org/useFetch)
 
 ```ts
 import { useFetch } from '@vueuse/core'
@@ -239,6 +245,29 @@ export default defineAsyncComponent({
 ```
 
 However, the downside is that this solution **does not work** with `watch` / `watchEffect` / `computed` / `provide` / `inject` as they does not accept the instance argument.
+
+To get the effects work, you could use the [`effectScope` API](https://github.com/vuejs/rfcs/blob/master/active-rfcs/0041-reactivity-effect-scope.md) in the upcoming Vue 3.2.
+
+```ts
+import { effectScope } from 'vue'
+
+export default defineAsyncComponent({
+  async setup() {
+    // create the scope before `await`, so it will be bond to the instance
+    const scope = effectScope()
+
+    const data = await someAsyncFunction() // <-----------
+
+    scope.run(() => {
+      /* Use `computed`, `watch`, etc. ... */
+    })
+
+    // the lifecycle hooks will not be available here,
+    // you will need to combine it with the previous snippet
+    // to have both lifecycle hooks and effects works.
+  }
+})
+```
 
 ### Compile-time Magic!
 
