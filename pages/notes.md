@@ -23,7 +23,7 @@ When you want to get the real file path of a certain package, you could use `req
 '/Users/.../node_modules/windicss/index.js'
 ```
 
-Howeven, when you want to get the root directory of the package, you will find the result of `require.resolve` could vary based on different packages configuration.
+However, when you want to get the root directory of the package, you will find the result of `require.resolve` could vary based on different packages' configuration.
 
 A trick for this is to resolve the `package.json` instead, as the `package.json` is always located at the root of the package. Combining with `path.dirname`, you could always get the package root.
 
