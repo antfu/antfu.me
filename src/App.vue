@@ -7,8 +7,6 @@
 </template>
 
 <script setup lang="ts">
-import { useHead } from '@vueuse/head'
-
 useHead({
   meta: [
     { property: 'og:title', content: 'Anthony Fu' },

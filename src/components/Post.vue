@@ -1,7 +1,6 @@
 <script setup lang='ts'>
 import { formatDate } from '/~/logics'
-import { useRoute } from 'vue-router'
-import { useEventListener, isClient } from '@vueuse/core'
+import { isClient } from '@vueuse/core'
 
 const route = useRoute()
 const { frontmatter } = defineProps<{ frontmatter: any }>()

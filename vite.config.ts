@@ -10,6 +10,7 @@ import Vue from '@vitejs/plugin-vue'
 import Prism from 'markdown-it-prism'
 import matter from 'gray-matter'
 import WindiCSS from 'vite-plugin-windicss'
+import AutoImport from 'unplugin-auto-import/vite'
 import anchor from 'markdown-it-anchor'
 // @ts-expect-error
 import markdownAttr from 'markdown-it-link-attributes'
@@ -91,6 +92,15 @@ const config: UserConfig = {
       },
     }),
 
+    AutoImport({
+      imports: [
+        'vue',
+        'vue-router',
+        '@vueuse/core',
+        '@vueuse/head',
+      ],
+    }),
+
     ViteComponents({
       extensions: ['vue', 'md'],
       globalComponentsDeclaration: true,
@@ -110,6 +120,15 @@ const config: UserConfig = {
       },
     }),
   ],
+
+  build: {
+    rollupOptions: {
+      onwarn(warning, next) {
+        if (warning.code !== 'UNUSED_EXTERNAL_IMPORT')
+          next(warning)
+      },
+    },
+  },
 }
 
 export default config

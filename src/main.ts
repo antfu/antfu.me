@@ -1,7 +1,6 @@
 import './styles/main.postcss'
 import 'windi.css'
 import './styles/markdown.postcss'
-import 'vue-global-api'
 
 import autoRoutes from 'pages-generated'
 import NProgress from 'nprogress'

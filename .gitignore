@@ -6,3 +6,4 @@ dist
 dist-ssr
 .vite-ssg-temp
 components.d.ts
+auto-imports.d.ts

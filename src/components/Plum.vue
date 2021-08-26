@@ -5,7 +5,6 @@
 </template>
 
 <script setup='props' lang='ts'>
-import { useRafFn, useWindowSize, noop } from '@vueuse/core'
 import type { Fn } from '@vueuse/core'
 
 const r180 = Math.PI
@@ -18,16 +17,10 @@ const el = ref<HTMLCanvasElement | null>(null)
 const { random } = Math
 const size = reactive(useWindowSize())
 
-const start = ref<Fn>(noop)
+const start = ref<Fn>(() => {})
 const init = ref(4)
 const len = ref(6)
 const stopped = ref(false)
-
-// watch([init, len], () => start.value())
-// watch(size, () => {
-//   initCanvas(el.value!, size.width, size.height)
-//   start.value()
-// })
 
 function initCanvas(canvas: HTMLCanvasElement, width = 400, height = 400, _dpi?: number) {
   const ctx = canvas.getContext('2d')!
