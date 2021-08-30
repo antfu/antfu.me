@@ -3,8 +3,9 @@ import { UserConfig } from 'vite'
 import fs from 'fs-extra'
 import Pages from 'vite-plugin-pages'
 import PurgeIcons from 'vite-plugin-purge-icons'
-import Icons, { ViteIconsResolver } from 'vite-plugin-icons'
-import ViteComponents from 'vite-plugin-components'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+import Components from 'unplugin-vue-components/vite'
 import Markdown from 'vite-plugin-md'
 import Vue from '@vitejs/plugin-vue'
 import Prism from 'markdown-it-prism'
@@ -12,7 +13,6 @@ import matter from 'gray-matter'
 import WindiCSS from 'vite-plugin-windicss'
 import AutoImport from 'unplugin-auto-import/vite'
 import anchor from 'markdown-it-anchor'
-// @ts-expect-error
 import markdownAttr from 'markdown-it-link-attributes'
 import { slugify } from './scripts/slugify'
 
@@ -101,11 +101,11 @@ const config: UserConfig = {
       ],
     }),
 
-    ViteComponents({
+    Components({
       extensions: ['vue', 'md'],
-      globalComponentsDeclaration: true,
-      customLoaderMatcher: path => path.endsWith('.md'),
-      customComponentResolvers: ViteIconsResolver({
+      dts: true,
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      resolvers: IconsResolver({
         componentPrefix: '',
       }),
     }),
