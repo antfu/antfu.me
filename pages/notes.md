@@ -9,6 +9,41 @@ description: Quick notes / tips
 
 <article>
 
+## Isomorphic `__dirname`
+
+_2021/08/31_
+
+In ESM, you might found your old friends `__dirname` and `__filename` are no longer available. When you search for [solutions](https://stackoverflow.com/questions/46745014/alternative-for-dirname-in-node-when-using-the-experimental-modules-flag), you will find that you will need to parse `import.meta.url` to get the equivalents. While most of the solutions only show you the way to get them in ESM only, If you like me, who write modules in TypeScript and transpile to both CJS and MJS at the same time using tools like [`tsup`](https://tsup.egoist.sh/). Here is the isomorphic solution: 
+
+```js
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
+
+const _dirname = typeof __dirname !== 'undefined'
+  ? __dirname
+  : dirname(fileURLToPath(import.meta.url))
+```
+
+</article>
+<article>
+
+## GitHub Co-authors
+
+_2021/08/24_
+
+You might found GitHub sometimes show you a commit with multiple authors. This is commonly happends in squashed pull requests when multiple people involved with the reviewing and made suggestions or changes. In that situation, GitHub will automatically inject the [`Co-authored-by:`](https://docs.github.com/en/github/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors) to the commit message. This is a great way to give contributors credits while keep the commit history clean.
+
+Note that the format is like `Co-authored-by: name <name@example.com>`, normally GitHub will fill that for you so you don't need to worry about that, but if you want to add it manually, you have to get the email addresses of the contributors. But how do you know their emails?
+
+Well, technically you can indeed find their email by multiple ways, but actually, you don't need to. The easiest way is to copy their user id and append with [`@users.noreply.github.com`](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-email-preferences/setting-your-commit-email-address#about-commit-email-addresses) that provided by GitHub automatically, for example:
+
+```
+Co-authored-by: antfu <antfu@users.noreply.github.com>
+```
+
+</article>
+<article>
+
 ## Get Package Root
 
 _2021/07/14_
