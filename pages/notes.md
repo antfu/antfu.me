@@ -9,11 +9,27 @@ description: Quick notes / tips
 
 <article>
 
+
+## Clean npm cache
+
+_2021/09/08_
+
+My disk is full today :(
+
+```bash
+npm cache clean --force
+yarn cache clean
+pnpm store prune
+```
+
+</article>
+<article>
+
 ## Isomorphic `__dirname`
 
 _2021/08/31_
 
-In ESM, you might found your old friends `__dirname` and `__filename` are no longer available. When you search for [solutions](https://stackoverflow.com/questions/46745014/alternative-for-dirname-in-node-when-using-the-experimental-modules-flag), you will find that you will need to parse `import.meta.url` to get the equivalents. While most of the solutions only show you the way to get them in ESM only, If you like me, who write modules in TypeScript and transpile to both CJS and MJS at the same time using tools like [`tsup`](https://tsup.egoist.sh/). Here is the isomorphic solution: 
+In ESM, you might found your old friends `__dirname` and `__filename` are no longer available. When you search for [solutions](https://stackoverflow.com/questions/46745014/alternative-for-dirname-in-node-when-using-the-experimental-modules-flag), you will find that you will need to parse `import.meta.url` to get the equivalents. While most of the solutions only show you the way to get them in ESM only, If you like me, who write modules in TypeScript and transpile to both CJS and ESM at the same time using tools like [`tsup`](https://tsup.egoist.sh/). Here is the isomorphic solution: 
 
 ```js
 import { dirname } from 'path'
@@ -31,7 +47,7 @@ const _dirname = typeof __dirname !== 'undefined'
 
 _2021/08/24_
 
-You might found GitHub sometimes show you a commit with multiple authors. This is commonly happends in squashed pull requests when multiple people involved with the reviewing and made suggestions or changes. In that situation, GitHub will automatically inject the [`Co-authored-by:`](https://docs.github.com/en/github/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors) to the commit message. This is a great way to give contributors credits while keep the commit history clean.
+You might found GitHub sometimes shows you a commit with multiple authors. This is commonly happening in squashed pull requests when multiple people are involved with the reviewing and made suggestions or changes. In that situation, GitHub will automatically inject the [`Co-authored-by:`](https://docs.github.com/en/github/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors) to the commit message. This is a great way to give contributors credits while keeping the commit history clean.
 
 Note that the format is like `Co-authored-by: name <name@example.com>`, normally GitHub will fill that for you so you don't need to worry about that, but if you want to add it manually, you have to get the email addresses of the contributors. But how do you know their emails?
 
@@ -48,7 +64,7 @@ Co-authored-by: antfu <antfu@users.noreply.github.com>
 
 _2021/07/14_
 
-When you want to get the real file path of a certain package, you could use `require.resolve` to fetch the their main entry path.
+When you want to get the real file path of a certain package, you could use `require.resolve` to fetch their main entry path.
 
 ```bash
 > require.resolve('vite')
@@ -58,7 +74,7 @@ When you want to get the real file path of a certain package, you could use `req
 '/Users/.../node_modules/windicss/index.js'
 ```
 
-However, when you want to get the root directory of the package, you will find the result of `require.resolve` could vary based on different packages' configuration.
+However, when you want to get the root directory of the package, you will find the result of `require.resolve` could vary based on different packages' configurations.
 
 A trick for this is to resolve the `package.json` instead, as the `package.json` is always located at the root of the package. Combining with `path.dirname`, you could always get the package root.
 
