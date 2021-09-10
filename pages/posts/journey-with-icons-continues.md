@@ -282,6 +282,8 @@ Isn't it perfect?!
 
 Learn more: <GitHubLink repo="antfu/unplugin-vue-components" />
 
+> Auto-import integrations for `@nuxt/components` is in progress.
+
 #### Auto-importing for JSX
 
 Oh, I almost forgot about it. Since JSX is more like plain JavaScript in some ways and JSX components are just functions or classes, the thing is actually a bit simpler. For that, we can use another unplugin I made - <GitHubLink repo="antfu/unplugin-auto-import" />.
