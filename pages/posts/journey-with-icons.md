@@ -6,6 +6,8 @@ lang: en
 duration: 7min
 ---
 
+> Update Sep. 2021: [Journey with Icons Continues](/journey-with-icons-continues)
+
 ### TL;DR
 
 To solve the pain I faced in using icons for the web, I built the following tools to make the DX better.
@@ -115,6 +117,12 @@ Auto-completion with icon preview is also available. By typing the icon set id a
 
 ### Journey is not ended
 
-These apps and tools solved my long pain with icons. I can focus on bringing ideas live much more efficiently. I will call it a page for now, however, the journey is not yet ended. I am still passioning about exploring how the tooling for icons could go. And also keep polishing these tools to make them easier to use and integrate. Wish they could benefit more developers and designers, and make site building more simple and pleasant. 
+These apps and tools solved my long pain with icons. I can focus on bringing ideas to life much more efficiently. I will call it a page for no. Howeverr, the journey is not yet ended. I am still passionate about exploring how the tooling for icons could go. And also, keep polishing these tools to make them easier to use and integrate. I wish they could benefit more developers and designers and make site building more simple and pleasant. 
 
 Glad if you found them useful to you as well. And thanks for reading XD.
+
+### Continues
+
+Enjoy the journey and the tools? Here is how it continues in Sep. 2021:
+
+[Journey with Icons Continues](/journey-with-icons-continues)
