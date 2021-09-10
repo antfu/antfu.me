@@ -46,9 +46,9 @@ Fortunately, I found [Iconify](https://iconify.design/) - a unified icons framew
 
 It's done. You get access to all the 6,000 icons with in an unfied syntax. As it's on-demand, you can switch your icon systems whenever you want without worrying about the setup or the bundle size. It's also framework independent, which means you can use it in Vue, React, Svelte, plain html or whatever you want.
 
-This looks so good and the story should be end here, however, it does have some limitations. As it's loaded on demand via web queries with its icon services, there will be a visible delay for icons to be loaded on the first page, specially when users have unstable connections to the Iconify servers. Also, you might have some logic to change icons with user interactions, Iconify will only start to request the icon when you actually rendered the id into the DOM. This causes some flickers on the icon switching which you possibly want to avoid.
+This looks so good and the story should end here, however, it does have some limitations. As it's loaded on demand via web queries with its icon services, there will be a visible delay for icons to be loaded on the first page, especially when users have unstable connections to the Iconify servers. Also, you might have some logic to change icons with user interactions, Iconify will only start to request the icon when you actually rendered the id into the DOM. This causes some flickers on the icon switching which you possibly want to avoid.
 
-The solution for this is quite straight forward, preloading the icons and the icon rendering could become synchronized. However, loading the entire icon set will impact your bundle size while manually picking what you used could be laborious and make it less flexible.
+The solution for this is quite straightforward, preloading the icons and the icon rendering could become synchronized. However, loading the entire icon set will impact your bundle size while manually picking what you used could be laborious and make it less flexible.
 
 ### [PurgeIcons](https://github.com/antfu/purge-icons)
 
@@ -69,11 +69,11 @@ createApp(App).mount('#app')
 
 It also provides a CLI tool and plugins for [Webpack](https://github.com/antfu/purge-icons/tree/main/packages/purge-icons-webpack-plugin) and [Rollup](https://github.com/antfu/purge-icons/tree/main/packages/rollup-plugin-purge-icons). More frameworks support like Vue CLI, Nuxt, Gridsome or even plain html are coming soon.
 
-With it, the tooling is kinda prefect to me now - I can use any icons without any compromise in the runtime. If you want to give it a try, I also made a pre-configured start template [🏕 Vitesse](https://github.com/antfu/vitesse) with PurgeIcons built-in.
+With it, the tooling is kinda perfect to me now - I can use any icons without any compromise in the runtime. If you want to give it a try, I also made a pre-configured start template [🏕 Vitesse](https://github.com/antfu/vitesse) with PurgeIcons built-in.
 
 ## Icon Searching
 
-The tooling get solved, here comes to my another pain for a long time - searching for icons.
+The tooling gets solved, here comes to my another pain for a long time - searching for icons.
 
 I live in China, my network conditions are usually quite unstable for oversee connections. It often took me around 30 seconds to get the searching in [Material Design Icons](https://materialdesignicons.com/) or [Iconify](https://iconify.design/). And for most of the time, you won't get the perfect icons on your first try. Repeating searching for multiple times with a huge delay is just killing me.
 
