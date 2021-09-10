@@ -58,6 +58,7 @@ async function buildBlogRSS() {
             ...data,
             content: html,
             author: [AUTHOR],
+            link: DOMAIN + i.replace(/^pages(.+)\.md$/, '$1'),
           }
         }),
     ))
