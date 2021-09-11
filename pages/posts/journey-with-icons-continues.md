@@ -238,7 +238,7 @@ So yes, we might need a better way to do this.
 
 ### Auto-importing
 
-Inspired by <GitHubLink repo="nuxt/components" /> which registers components under your `./components` directory automatically, I made <GitHubLink repo="antfu/unplugin-vue-components" /> (yes, another unplugin!) do to compile time components auto-importing on-demand. With the on-demand natural, we could even make the components resolving on-demand. What a perfect complement for our icon solution! 
+Inspired by <GitHubLink repo="nuxt/components" /> which registers components under your `./components` directory automatically, I made <GitHubLink repo="antfu/unplugin-vue-components" /> (yes, another unplugin!) do to compile-time components auto-importing on-demand. With the on-demand natural, we could even make the components resolving on-demand. What a perfect complement for our icon solution! 
 
 `unplugin-vue-components` provide the options `resolvers` to provide custom functions to resolve where the components should be imported from.
 
@@ -260,7 +260,7 @@ export default defineConfig({
         IconsResolver({
           // to avoid naming conflicts
           // a prefix can be specified for icons
-          componentPrefix: 'i'
+          prefix: 'i'
         })
       ]
     })
@@ -311,7 +311,8 @@ export default defineConfig({
       ],
       resolvers: [
         IconsResolver({
-          componentPrefix: ''
+          prefix: 'Icon',
+          extension: 'jsx'
         })
       ]
     })
@@ -325,8 +326,8 @@ Here is your React component, and you are welcome :)
 export function MyComponent() {
   return (
     <>
-      <MdiAlarm />
-      <FaBeer style="color: orange"/>
+      <IconMdiAlarm />
+      <IconFaBeer style="color: orange"/>
     </>
   )
 }
@@ -334,14 +335,19 @@ export function MyComponent() {
 
 ## Recap
 
-For a quick summary, here is the list of projects mentioned for this solution:
+For a quick summary, here is the list of projects mentioned for these solutions:
 
 - <GitHubLink repo="unjs/unplugin" /> - Unified plugin system for Vite, Rollup, Webpack, and more.
 - <GitHubLink repo="antfu/unplugin-icons" /> - Access thousands of icons as components on-demand.
 - <GitHubLink repo="antfu/unplugin-vue-components" /> - On-demand components auto importing.
 - <GitHubLink repo="antfu/unplugin-auto-import" /> - Auto import APIs on-demand.
 
-If you enjoy this solution, you might also want to check my Vue + Vite starter template with them configured in-box.
+Meanwhile, you might also find these tools from my last journey helpful:
+
+- <GitHubLink repo="antfu/icones" /> - Icon Explorer for Iconify with Instant searching and exporting.
+- <GitHubLink repo="antfu/vscode-iconify" /> - Iconify IntelliSense for VS Code.
+
+If you enjoy them, you might also want to check my Vue + Vite starter template with them configured in-box.
 
 - <GitHubLink repo="antfu/vitesse" /> - Opinionated Vite Starter Template.
 - <GitHubLink repo="antfu/vitesse-lite" /> - Lightweight version of Vitesse.
