@@ -7,8 +7,24 @@ description: Quick notes / tips
 
 [RSS Feed](https://antfu.me/notes/feed.xml)
 
+
 <article>
 
+## `range` in JavaScript
+
+_2021/09/13_
+
+Credit to [GitHub Copilot](https://copilot.github.com/).
+
+I didn't know you could provide a map function to `Array.from` as a second argument until today.
+
+```js
+Array.from({ length: 10 }, (_, i) => i)
+// [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+</article>
+<article>
 
 ## Clean npm cache
 
