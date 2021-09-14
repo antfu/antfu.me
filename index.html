@@ -14,9 +14,6 @@
   <meta name="theme-color" content="#ffffff">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
   <title>Anthony Fu</title>
-</head>
-<body>
-  <div id="app"></div>
   <script>
     (function() {
       const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -25,6 +22,9 @@
         document.documentElement.classList.toggle('dark', true)
     })()
   </script>
+</head>
+<body>
+  <div id="app"></div>
   <script type="module" src="/src/main.ts"></script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
