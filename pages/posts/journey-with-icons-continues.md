@@ -195,6 +195,7 @@ For what I mean universal, I mean literally, you can use:
 <li><span><solid-logo class="inline"/> Solid + <vite-logo class="inline"/> Vite + <tabler-writing-sign class="inline"/> <a href="https://tabler-icons.io/" target="_blank">Tabler</a></span></li>
 <li><span><logos:javascript class="inline"/> Vanila + <logos:rollup class="inline"/> Rollup + <bx:bx-planet class="inline"/> <a href="https://github.com/atisawd/boxicons" target="_blank">BoxIcons</a></span></li>
 <li><span><logos:webcomponents class="inline"/> Web Components + <vite-logo class="inline"/> Vite + <ant-design:carry-out-twotone class="inline"/> <a href="https://github.com/ant-design/ant-design-icons" target="_blank">Ant Design Icons</a></span></li>
+<li><span><logos:svelte-icon class="inline"/> Svelte + <logos:svelte-icon class="inline"/> SvelteKit + <eos-icons:installing class="inline"/> <a href="https://gitlab.com/SUSE-UIUX/eos-icons" target="_blank">EOS Icons</a></span></li>
 <li><span><line-md:question-circle class="inline"/> Any + <mdi:progress-question class="inline"/> Any + <ph:circle-wavy-question-duotone class="inline"/> Any</span></li>
 </ul>
 
