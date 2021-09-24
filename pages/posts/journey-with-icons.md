@@ -6,7 +6,7 @@ lang: en
 duration: 7min
 ---
 
-> Update Sep. 2021: [Journey with Icons Continues](/journey-with-icons-continues)
+> Update Sep. 2021: [Journey with Icons Continues](/posts/journey-with-icons-continues)
 
 ### TL;DR
 
@@ -125,4 +125,4 @@ Glad if you found them useful to you as well. And thanks for reading XD.
 
 Enjoy the journey and the tools? Here is how it continues in Sep. 2021:
 
-[Journey with Icons Continues](/journey-with-icons-continues)
+[Journey with Icons Continues](/posts/journey-with-icons-continues)
