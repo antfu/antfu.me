@@ -56,6 +56,7 @@ async function buildBlogRSS() {
 
           return {
             ...data,
+            date: new Date(data.date),
             content: html,
             author: [AUTHOR],
             link: DOMAIN + i.replace(/^pages(.+)\.md$/, '$1'),
@@ -89,7 +90,7 @@ async function buildNotesRSS() {
 
   for (const noteMatch of noteMatches) {
     const rawNote = noteMatch[1]
-    const dateMatch = rawNote.match(/_(.*)_/)!
+    const dateMatch = rawNote.match(/\n_(.+)_/)!
     const titleMatch = rawNote.match(/##\s*(.*)\n/)!
     const title = titleMatch[1]
     const date = new Date(dateMatch[1])
@@ -118,6 +119,7 @@ async function writeFeed(name: string, options: FeedOptions, items: Item[]) {
   const feed = new Feed(options)
 
   items.forEach(item => feed.addItem(item))
+  // items.forEach(i=> console.log(i.title, i.date))
 
   await fs.ensureDir(dirname(`./dist/${name}`))
   await fs.writeFile(`./dist/${name}.xml`, feed.rss2(), 'utf-8')
