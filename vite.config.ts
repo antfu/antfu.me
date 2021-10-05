@@ -111,7 +111,11 @@ const config: UserConfig = {
     }),
 
     PurgeIcons(),
-    Icons(),
+
+    Icons({
+      defaultClass: 'inline',
+      defaultStyle: 'vertical-align: sub;',
+    }),
 
     WindiCSS({
       safelist: 'prose prose-sm m-auto'.split(' '),
