@@ -9,4 +9,4 @@ duration: 30min
 
 > Slides: [PDF](https://antfu.me/talks/2021-10-20) | [SPA](https://talks.antfu.me/2021/vue-london)
 >
-> Made with <Slidev class="inline"/>  [**Slidev**](https://github.com/slidevjs/slidev) - a slides maker for developers that I am working on recently.
+> Made with <Slidev class="inline"/>  [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.
