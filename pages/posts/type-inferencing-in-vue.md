@@ -6,7 +6,7 @@ hero_image: ''
 lang: en
 ---
 
-As you may or may not know, I am working on preparing to release the v1.0 version for [@vue/composition-api](https://github.com/vuejs/composition-api) recently. One of the current problems is that the type inference does not play well, [#338](https://github.com/vuejs/composition-api/issues/338). So I get a chance to have a deeper look at [vue-next](https://github.com/vuejs/composition-api)'s type implementations. I will tell you what I learned and how the magic works in Vue.
+As you may or may not know, I am working on preparing to release the v1.0 version for [@vue/composition-api](https://github.com/vuejs/composition-api) recently. One of the current problems is that the type inference does not play well [#338](https://github.com/vuejs/composition-api/issues/338). So I get a chance to have a deeper look at [vue-next](https://github.com/vuejs/composition-api)'s type implementations. I will tell you what I learned and how magic works in Vue.
 
 Forget about the `setup()` function and `Composition API` for now, let talk about the options API in Vue 2 that everybody familiar with. In a classical example, we would have `data`, `computed`, `methods` and some other fields like this:
 
@@ -33,7 +33,7 @@ It works well in Javascript and putting all the context into `this` is pretty st
 
 ## Type for `this`
 
-To explicitly assign type to `this`, we can simpily use the `this parameter`:
+To explicitly assign the type to `this`, we can simply use the `this parameter`:
 
 ```ts
 interface Context {
@@ -45,7 +45,7 @@ function bar(this: Context, a: number) {
 }
 ```
 
-The limitation of this approach is that we will lose the methods signature when working with a dict of methods:
+The limitation of this approach is that we will lose the signature of the method when working with a dict of methods:
 
 ```ts
 type Methods = Record<string, (this: Context, ...args:any[]) => any>
@@ -59,7 +59,7 @@ const methods: Methods = {
 methods.bar('foo', 'bar') // no error, the type of arguments becomes `any[]`
 ```
 
-We would not want to ask users to explicitly type `this` in every methods in order to make the type checking works.
+We would not want to ask users to explicitly type `this` in every method in order to make the type checking works.
 So we will need another approach. 
 
 ### [`ThisType<T>`](https://www.typescriptlang.org/docs/handbook/utility-types.html#thistypet)
@@ -100,7 +100,7 @@ methods.double('foo') // error
 methods.deep.nested.half(4) // ok
 ```
 
-The typing works well, but it still requires users to define the type interface of Methods first. Can we make it infers itself automatically?
+The typing works well, but it still requires users to define the type interface of Methods first. Can we make it infer itself automatically?
 
 We can do that with function inference:
 
@@ -122,12 +122,7 @@ define({
 })
 ```
 
-> The inference graph would be like
->
-> TODO: draw a graph
-
-Cool. There is only one step left, to make context object dynamic inference from `data` and `computed`.
-
+There is only one step left, to make context object dynamic inference from `data` and `computed`.
 
 The full working demo would be:
 
