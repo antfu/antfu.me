@@ -10,6 +10,8 @@ description: Let's take a step back and reimagine what's atomic CSS could be in 
 
 > This post will be a bit longer than usual. It's quite a big announcement to me, and there are many things I want to talk about. I'll be appreciated if you take the time to read through it. The table of contents is hidden on the right if you are on a desktop. Hope you enjoy :)
 
+> [中文 Chinese Version](/posts/reimagine-atomic-css-zh)
+
 ## What is Atomic CSS?
 
 Let's first give a proper definition to **Atomic CSS**:
