@@ -8,7 +8,7 @@ description: Let's take a step back and reimagine what's atomic CSS could be in 
 
 [[toc]]
 
-> This post will be a bit longer than usual. It's quite a big announcement to me, and there are many things I want to talk about. I'll be appreciated if you take the time to read through it. The table of contents is hidden on the right if you are on a desktop. Finally, I hope you enjoy :)
+> This post will be a bit longer than usual. It's quite a big announcement to me, and there are many things I want to talk about. I'll be appreciated if you take the time to read through it. The table of contents is hidden on the right if you are on a desktop. Hope you enjoy :)
 
 ## What is Atomic CSS?
 
@@ -34,7 +34,7 @@ We have quite a few utilities-first CSS framework like [Tailwind CSS](https://ta
 
 While there are also some UI libraries come with some CSS utilities as a complement to the framework, for example [Bootstrap](https://getbootstrap.com/docs/5.1/utilities/api/) and [Chakra UI](https://chakra-ui.com/docs/features/style-props).
 
-We are not going to take about the pros and cons of using atomic CSS(or CSS utilities) here, as you might hear them many times. Today, we are going to use a framework author's perspective to see how we make the trade-off building those frameworks you love, their limitations, what can we do better to eventually benefits your daily work.
+We are not going to take about the pros and cons of using atomic CSS here, as you might hear them many times already. Today, we are going to use a framework author's perspective to see how we make the trade-off building those frameworks you love, their limitations, what we can do better to eventually benefits your daily work.
 
 ## The Background
 
@@ -73,7 +73,7 @@ It will be compiled to:
 .m-10 { margin: 2.5 rem; }
 ```
 
-Great, now you can use `class="m-1"` to set the margin. But as you might see, with this approach, you can't set the margin outside of 1 to 10, and also, you will need to pay the cost of shipping 10 CSS rules even if you have only used one. Later if you want to support different margin directions like `mt` for `margin-top`, `mb` for `margin-bottom`. With the 4 directions, you are multiplying your CSS size by 5. Then when it comes to variants like `hover:` and `focus:` - you know the story. At that point, adding one more utility often means you are going to introduce a few extra kilobytes. Thus, this is also why the traditional Tailwind ships megabytes of CSS.
+Great, now you can use `class="m-1"` to set the margin. But as you might see, with this approach, you can't set the margin outside of 1 to 10, and also, you need to pay the cost of shipping 10 CSS rules even if you have only used one. Later if you want to support different margin directions like `mt` for `margin-top`, `mb` for `margin-bottom`. With those 4 directions, you are multiplying your CSS size by 5. Then when it comes to variants like `hover:` and `focus:` - you know the story. At that point, adding one more utility often means you are going to introduce a few extra kilobytes. Thus, this is also why the traditional Tailwind ships megabytes of CSS.
 
 To solve this, Tailwind came up with the solution by using [PurgeCSS](https://purgecss.com/) to scan your dist bundle and remove the rules you don't need. Now you have only a few KBs of CSS in production. However, note that the purging would only work in the production build, meaning you are still working with the tremendous CSS in development. It wasn't that prominent in Webpack, but it becomes a pain in Vite, giving the rest are now coming blazing fast.
 
