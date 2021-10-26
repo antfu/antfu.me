@@ -7,6 +7,8 @@ type: talk
 duration: 30min
 ---
 
+[[toc]]
+
 > This is the transcript of my talk **Composable Vue** at [VueDay 2021](https://2021.vueday.it/)
 >
 > Slides: [PDF](https://antfu.me/talks/2021-04-29) | [SPA](https://talks.antfu.me/2021/composable-vue)

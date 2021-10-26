@@ -138,7 +138,7 @@ currentInstance = prev
 
 If we don't use `await` to check the instance, calling the `setup()` function will make it finish the tasks before the first `await` statement, and the rest will be executed whenever the `await` statement is resolved.
 
-<div class="grid grid-cols-2 gap-2 <sm:grid-cols-1">
+<div class="grid grid-cols-2 gap-2 lt-sm:grid-cols-1">
 
 ```ts
 async function setup() {

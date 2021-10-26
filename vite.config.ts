@@ -2,7 +2,7 @@ import { resolve } from 'path'
 import { UserConfig } from 'vite'
 import fs from 'fs-extra'
 import Pages from 'vite-plugin-pages'
-import PurgeIcons from 'vite-plugin-purge-icons'
+import Inspect from 'vite-plugin-inspect'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
@@ -10,10 +10,14 @@ import Markdown from 'vite-plugin-md'
 import Vue from '@vitejs/plugin-vue'
 import Prism from 'markdown-it-prism'
 import matter from 'gray-matter'
-import WindiCSS from 'vite-plugin-windicss'
 import AutoImport from 'unplugin-auto-import/vite'
 import anchor from 'markdown-it-anchor'
 import markdownAttr from 'markdown-it-link-attributes'
+import Unocss from 'unocss/vite'
+import { presetAttributify, presetUno } from 'unocss'
+import presetIcons from '@unocss/preset-icons'
+// @ts-expect-error
+import TOC from 'markdown-it-table-of-contents'
 import { slugify } from './scripts/slugify'
 
 import 'prismjs/components/prism-regex'
@@ -45,6 +49,20 @@ const config: UserConfig = {
     ],
   },
   plugins: [
+    // @ts-expect-error
+    Unocss({
+      theme: {
+        fontFamily: {
+          sans: '"Inter", Inter var,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
+        },
+      },
+      presets: [
+        presetIcons({ warn: true }),
+        presetAttributify(),
+        presetUno(),
+      ],
+    }),
+
     Vue({
       include: [/\.vue$/, /\.md$/],
     }),
@@ -76,18 +94,24 @@ const config: UserConfig = {
         md.use(Prism)
         md.use(anchor, {
           slugify,
-          permalink: true,
-          permalinkBefore: true,
-          permalinkSymbol: '#',
-          permalinkAttrs: () => ({ 'aria-hidden': true }),
+          permalink: anchor.permalink.linkInsideHeader({
+            symbol: '#',
+            renderAttrs: () => ({ 'aria-hidden': 'true' }),
+          }),
         })
 
+        // @ts-expect-error
         md.use(markdownAttr, {
           pattern: /^https?:/,
           attrs: {
             target: '_blank',
             rel: 'noopener',
           },
+        })
+
+        md.use(TOC, {
+          includeLevel: [1, 2, 3],
+          slugify,
         })
       },
     }),
@@ -110,19 +134,13 @@ const config: UserConfig = {
       }),
     }),
 
-    PurgeIcons(),
+    Inspect(),
 
     Icons({
       defaultClass: 'inline',
       defaultStyle: 'vertical-align: sub;',
     }),
 
-    WindiCSS({
-      safelist: 'prose prose-sm m-auto'.split(' '),
-      preflight: {
-        enableAll: true,
-      },
-    }),
   ],
 
   build: {
@@ -132,6 +150,10 @@ const config: UserConfig = {
           next(warning)
       },
     },
+  },
+
+  ssgOptions: {
+    formatting: 'minify',
   },
 }
 

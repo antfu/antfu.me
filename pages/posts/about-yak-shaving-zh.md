@@ -5,6 +5,8 @@ lang: zh
 duration: 10min
 ---
 
+[[toc]]
+
 > [English Version](/posts/about-yak-shaving)
 >
 > [知乎链接](https://zhuanlan.zhihu.com/p/373699761)

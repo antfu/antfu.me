@@ -6,6 +6,8 @@ lang: en
 duration: 12min
 ---
 
+[[toc]]
+
 [As you probably know](https://twitter.com/antfu7/status/1298667080804233221), the things I excited most in Vue 3 are the [Composition API](https://v3.vuejs.org/guide/composition-api-introduction.html) and the [reactivity system](https://v3.vuejs.org/guide/reactivity.html). With the Composition API we can reuse logics and states across components or even apps. What's better? The underhood reactivity system is decoupled from Vue, which means you can use it almost everywhere, even without UI.
 
 Here are some proof of concepts for using the reactivity system outside of Vue:
@@ -241,13 +243,13 @@ Done! The thing left to do is to polish, adding overloads to make it more flexib
 
 In Vue, `computed` and `watch` will automatically bind their `effect` runner to the current component instance. When the component get unmounted, the effects bond to it will be auto disposed. More specially, you can read [the source code here](https://github.com/vuejs/vue-next/blob/985bd2bcb5fd8bccd1c15c8c5d89a6919fd73922/packages/runtime-core/src/apiWatch.ts#L294).
 
-Since we don't have an instance, if you want to stop those effects, you have to do them manually. When you have multiple effects in used, to stop them together, you have to manually collect them together. One easier way is to mock similar lifecycles like Vue. This requires some amount of works, I will explain that in another blog post, please keep tuned.
+Since we don't have an instance, if you want to stop those effects, you have to do them manually. When you have multiple effects in used, to stop them together, you have to manually collect them together. One easier way is to mock similar lifecycles like Vue. This requires some amount of works, I will explain that in another blog post. Please keep tuned.
 
 ## Take Away
 
-Thanks for reading! And hope it helpful for you to understand and better play with the Vue reactivity system. If you want to have the `watch` out side of Vue, I made one for you (much more robust than the examples above for sure).
+Thanks for reading! And hope it is helpful for you to understand and better play with the Vue reactivity system. If you want to have the `watch` outside of Vue, I made one for you (much more robust than the examples above for sure).
 
-<pre class="block">
+<pre class="block language-bash">
 npm i <a href='https://github.com/antfu/vue-reactivity-watch' target='_blank'>@vue-reactivity/watch</a>
 </pre> 
 

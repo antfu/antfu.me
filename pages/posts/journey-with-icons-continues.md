@@ -6,6 +6,8 @@ lang: en
 duration: 15min
 ---
 
+[[toc]]
+
 <div class="flex gap-3 text-lg py-2">
   <tabler:code />
   <tabler:bolt />

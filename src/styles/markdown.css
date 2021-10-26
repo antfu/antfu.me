@@ -62,28 +62,28 @@ html.dark {
   --fg: #555;
   --fg-deep: #222;
   --fg-deeper: #000;
-  
+
   color: var(--fg);
+}
 
-  a {
-    font-weight: inherit;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(125,125,125,0.1);
-    transition: border .3s ease-in-out;
+.prose a {
+  font-weight: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(125, 125, 125, 0.3);
+  transition: border 0.3s ease-in-out;
+}
 
-    &:hover { 
-      border-bottom: 1px solid var(--fg);
-    }
-  }
+.prose a:hover {
+  border-bottom: 1px solid var(--fg);
+}
 
-  a code {
-    color: inherit;
-  }
+.prose a code {
+  color: inherit;
+}
 
-  hr {
-    width: 50px;
-    margin: 2em auto;
-  }
+.prose hr {
+  width: 50px;
+  margin: 2em auto;
 }
 
 html.dark .prose {
@@ -93,22 +93,22 @@ html.dark .prose {
 }
 
 a.item {
-  transition: .2s all ease-out;
+  transition: 0.2s all ease-out;
   text-decoration: none;
   border-bottom: none !important;
   opacity: 0.6;
+}
 
-  &:hover {
-    opacity: 1;
-  }
+a.item:hover {
+  opacity: 1;
 }
 
 a.header-anchor {
   float: left;
-  margin-top: .125em;
+  margin-top: 0.125em;
   margin-left: -1.2em;
-  padding-right: .50em;
-  font-size: .85em;
+  padding-right: 0.5em;
+  font-size: 0.85em;
   opacity: 0;
   text-decoration: none;
   border: 0 !important;
@@ -145,9 +145,11 @@ h6:focus .header-anchor {
 .prose blockquote > :first-child {
   margin-top: 0;
 }
+
 .prose blockquote > :last-child {
   margin-bottom: 0;
 }
+
 .prose > ul > li > *:last-child {
   margin-bottom: 0;
 }
@@ -158,4 +160,37 @@ h6:focus .header-anchor {
 
 .prose blockquote p:first-of-type::after {
   content: none;
+}
+
+@media (max-width: 1200px) {
+  .table-of-contents {
+    display: none;
+  }
+}
+
+.table-of-contents {
+  position: fixed;
+  top: 80px;
+  padding-top: 70px;
+  font-size: 0.8em;
+  right: 10px;
+  width: 200px;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+  transition: all .4s ease-out;
+}
+
+.table-of-contents:hover {
+  opacity: 0.5;
+}
+
+.table-of-contents ul > li::before {
+  display: none;
+}
+
+.table-of-contents ul > li {
+  padding-left: 0.8rem;
 }

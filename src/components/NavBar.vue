@@ -3,7 +3,7 @@ import { isDark } from '/~/logics'
 </script>
 
 <template>
-  <header class="header">
+  <header class="header z-40">
     <router-link
       class="w-10 h-10 absolute lg:fixed m-6 select-none outline-none"
       to="/"
@@ -16,17 +16,17 @@ import { isDark } from '/~/logics'
       <div class="spacer" />
       <div class="right">
         <router-link to="/posts">
-          <span class="<md:hidden">Blog</span>
-          <ri-article-line class="md:hidden"/>
+          <span class="lt-md:hidden">Blog</span>
+          <ri-article-line class="md:hidden" />
         </router-link>
-        <router-link to="/talks" class="<md:hidden">
+        <router-link to="/talks" class="lt-md:hidden">
           Talks
         </router-link>
         <router-link to="/projects">
-          <span class="<md:hidden">Projects</span>
-          <ri-lightbulb-line class="md:hidden"/>
+          <span class="lt-md:hidden">Projects</span>
+          <ri-lightbulb-line class="md:hidden" />
         </router-link>
-        <router-link to="/bookmarks" title="Bookmarks" class="<md:hidden">
+        <router-link to="/bookmarks" title="Bookmarks" class="lt-md:hidden">
           <ri-bookmark-line />
         </router-link>
         <router-link to="/notes" title="Notes">
@@ -38,7 +38,7 @@ import { isDark } from '/~/logics'
         <a href="https://github.com/antfu" target="_blank" title="GitHub">
           <uil-github-alt />
         </a>
-        <a href="/feed.xml" target="_blank" title="RSS" class="<md:hidden">
+        <a href="/feed.xml" target="_blank" title="RSS" class="lt-md:hidden">
           <la-rss-square style="font-size:1.25rem; margin: 0 -0.125rem;" />
         </a>
         <toggle-theme />

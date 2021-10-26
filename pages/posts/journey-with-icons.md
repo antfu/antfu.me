@@ -6,6 +6,8 @@ lang: en
 duration: 7min
 ---
 
+[[toc]]
+
 > Update Sep. 2021: [Journey with Icons Continues](/posts/journey-with-icons-continues)
 
 ### TL;DR

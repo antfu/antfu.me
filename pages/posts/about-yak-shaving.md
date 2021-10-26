@@ -5,6 +5,8 @@ lang: en
 duration: 10min
 ---
 
+[[toc]]
+
 > [中文原文 Original in Chinese](/posts/about-yak-shaving-zh)
 
 I recently visited Zhihu occasionally and saw many questions about how to start open source, or how to make open source projects successful. I kinda had similar doubts for a long time, so I thought that maybe I could share some of my rough views on this.
