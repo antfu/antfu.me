@@ -77,7 +77,7 @@ It will be compiled to:
 
 Great, now you can use `class="m-1"` to set the margin. But as you might see, with this approach, you can't set the margin outside of 1 to 10, and also, you need to pay the cost of shipping 10 CSS rules even if you have only used one. Later if you want to support different margin directions like `mt` for `margin-top`, `mb` for `margin-bottom`. With those 4 directions, you are multiplying your CSS size by 5. Then when it comes to variants like `hover:` and `focus:` - you know the story. At that point, adding one more utility often means you are going to introduce a few extra kilobytes. Thus, this is also why the traditional Tailwind ships megabytes of CSS.
 
-To solve this, Tailwind came up with the solution by using [PurgeCSS](https://purgecss.com/) to scan your dist bundle and remove the rules you don't need. Now you have only a few KBs of CSS in production. However, note that the purging would only work in the production build, meaning you are still working with the tremendous CSS in development. It wasn't that prominent in Webpack, but it becomes a pain in Vite, giving the rest are now coming blazing fast.
+To solve this, Tailwind came up with the solution by using [PurgeCSS](https://purgecss.com/) to scan your dist bundle and remove the rules you don't need. Now you have only a few KBs of CSS in production. However, note that the purging would only work in the production build, meaning you are still working with the tremendous CSS in development. It wasn't that prominent in Webpack, but it becomes a pain in Vite, given the rest are now coming blazing fast.
 
 While generating and purging approach have its limitations, could we have a better solution?
 
@@ -414,7 +414,7 @@ Attributify Mode is provided via preset [`@unocss/preset-attributify`](https://g
 
 ###### Pure CSS Icons
 
-If you ever read my previous post [Journey with Icons Continues](/posts/journey-with-icons-continues) you must know that I am very enthusiastic about icons and actively researching for icons solutions. This time with UnoCSS's flexibility, we could even have pure CSS icons! Yes, you read me, **it's purely in CSS and zero JavaScript**! Let's just see how it looks like:
+If you've ever read my previous post [Journey with Icons Continues](/posts/journey-with-icons-continues) you must know that I am very enthusiastic about icons and actively researching for icons solutions. This time with UnoCSS's flexibility, we could even have pure CSS icons! Yes, you read me, **it's purely in CSS and zero JavaScript**! Let's just see how it looks like:
 
 ```html
 <!-- A basic anchor icon from Phosphor icons -->
@@ -455,7 +455,7 @@ Combining with variants, you can even switch icons based on hovering state or ev
 
 Once again, this feature is written with less than 100 lines of code. Check out the preset's implementation [`@unocss/preset-icons`](https://github.com/antfu/unocss/blob/main/packages/preset-icons) to learn the magic!
 
-I hope these presets can give you a general idea of how flexible UnoCSS is. Giving it's still in a very early stage, there are many possibilities for us to explore.
+I hope these presets can give you a general idea of how flexible UnoCSS is. Given it's still in a very early stage, there are many possibilities for us to explore.
 
 ### Scoping
 
@@ -538,7 +538,7 @@ export default {
 }
 ```
 
-Giving Vite also handles the HMR and will involve the `transform` hook again of upon file changes, this allows UnoCSS to finish everything in a single pass with no duplication of file IO and fs watcher. In addition to that, with this approach, the scanning relies on the module graph instead of file globing. Meaning that only the modules that been bundled into your app will affect the generated CSS instead of any files under your folders.
+Given Vite also handles the HMR and will involve the `transform` hook again of upon file changes, this allows UnoCSS to finish everything in a single pass with no duplication of file IO and fs watcher. In addition to that, with this approach, the scanning relies on the module graph instead of file globing. Meaning that only the modules that been bundled into your app will affect the generated CSS instead of any files under your folders.
 
 There are a few more tricks we have done to squeeze out even more performance. I might do another post about them later, but before that, you can read the code to figure out :)
 
