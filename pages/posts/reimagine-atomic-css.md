@@ -372,7 +372,7 @@ Let's unleash the true power of UnoCSS:
 
 [The Attributify Mode](https://windicss.org/posts/v30.html#attributify-mode) is one of the beloved features of Windi CSS. It helps you better organize and group your utilities by using attributes.
 
-It turns your Tailwind code like this:
+It turns your Tailwind code from this:
 
 ```html
 <button class="bg-blue-400 hover:bg-blue-500 text-sm text-white font-mono font-light py-2 px-4 rounded border-2 border-blue-200 dark:bg-blue-500 dark:hover:bg-blue-600">
