@@ -320,7 +320,7 @@ That's it. You only need to add more utilities using the same pattern, and now y
 
 ### Variants
 
-[Variants](https://windicss.org/utilities/variants.html#variants) in UnoCSS is also simple yet powerful. Here are a few examples:
+[Variants](https://windicss.org/utilities/variants.html#variants) in UnoCSS are also simple yet powerful. Here are a few examples:
 
 ```ts
 variants: [
@@ -463,7 +463,7 @@ One other problem that I have faced when using Tailwind/Windi is the preflight. 
 
 So UnoCSS took another aggressive step by not supporting preflights. Instead, it left the control of CSS resetting fully to users (or frameworks on top of UnoCSS) to use the one that fits their needs (Normalize.css, Reset.css, or UI frameworks' resetting, etc.)
 
-This also allows UnoCSS to have more possibility on CSS Scoping. For example, we have an experimental `scoped-vue` mode on the Vite plugin to generated scoped style for each component that you can safely ship as a component library using atomic CSS without worry about the conflicting with users' CSS. For example:
+This also allows UnoCSS to have more possibilities on CSS Scoping. For example, we have an experimental `scoped-vue` mode on the Vite plugin to generate scoped styles for each component so you can safely ship them as a component library using atomic CSS without worry about conflicting with users' CSS. For example:
 
 ```html
 <template>
@@ -556,9 +556,9 @@ Meanwhile, please feel free to share the presets you are making or help contribu
 
 ## What about Windi CSS?
 
-As a team member of Windi CSS, I am working closely with [Voorjaar](https://github.com/voorjaar), the creator of Windi CSS. You can think UnoCSS is an aggressive experiment from the Windi CSS team, and it's likely to be **the new engine of Windi CSS v4** if it went well.
+As a team member of Windi CSS, I am working closely with [Voorjaar](https://github.com/voorjaar), the creator of Windi CSS. You can think UnoCSS is an aggressive experiment from the Windi CSS team, and it's likely to be **the new engine of Windi CSS v4** if it goes well.
 
-Windi CSS as a framework will fill the missing features like `@apply` preprocessing, IDE intelligence sense, preflights, etc., that UnoCSS as an engine intentionally not going to provide. And it will also leverage the performance and the flexibility that UnoCSS offers for both core utilities and user configurations.
+Windi CSS as a framework will fill the missing features like `@apply` preprocessing, IDE intelligence sense, preflights, etc., that UnoCSS as an engine intentionally won't provide. And it will also leverage the performance and the flexibility that UnoCSS offers for both core utilities and user configurations.
 
 Before we work on embedding the new engine for Windi v4, a package to use UnoCSS as an extension of Windi CSS v3 (for example, have pure CSS icons) will soon be released. Stay tuned :)
 
