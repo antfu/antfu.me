@@ -36,7 +36,7 @@ We have quite a few utilities-first CSS framework like [Tailwind CSS](https://ta
 
 While there are also some UI libraries come with some CSS utilities as a complement to the framework, for example [Bootstrap](https://getbootstrap.com/docs/5.1/utilities/api/) and [Chakra UI](https://chakra-ui.com/docs/features/style-props).
 
-We are not going to take about the pros and cons of using atomic CSS here, as you might hear them many times already. Today, we are going to use a framework author's perspective to see how we make the trade-off building those frameworks you love, their limitations, what we can do better to eventually benefits your daily work.
+We are not going to talk about the pros and cons of using atomic CSS here, as you might hear them many times already. Today, we are going to use a framework author's perspective to see how we make the trade-off building those frameworks you love, their limitations, what we can do better to eventually benefits your daily work.
 
 ## The Background
 
