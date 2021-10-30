@@ -25,34 +25,38 @@ defineProps<{ projects: Record<string, any[]> }>()
         </div>
         <div class="flex-auto">
           <div cla ss="text-normal">{{ item.name }}</div>
-          <div
-            class="desc text-sm opacity-50 font-normal"
-            v-html="item.desc"
-          />
+          <div class="desc text-sm opacity-50 font-normal" v-html="item.desc" />
         </div>
       </a>
     </div>
   </template>
   <div class="markdown mt-10">
     <p class="opacity-75">
-      <em>Thanks for getting intersted in my works! If like them or find them useful, consider<a href="https://github.com/sponsors/antfu" target="_blank" rel="nofollow noopener noreferrer">&nbsp;sponsoring me&nbsp;</a>to support me keeping them sustainable. Cheers! :)</em>
+      <em>
+        Thanks for getting intersted in my works! If like them or find them useful, consider
+        <a
+          href="https://github.com/sponsors/antfu"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >&nbsp;sponsoring me&nbsp;</a>to support me keeping them sustainable. Cheers! :)
+      </em>
     </p>
   </div>
 </template>
 
-<style lang="postcss" scoped>
+<style scoped>
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
 
-  a.item {
-    padding: 0.8em 1em;
-    background: transparent;
-    font-size: 1.1rem;
+.project-grid a.item {
+  padding: 0.8em 1em;
+  background: transparent;
+  font-size: 1.1rem;
+}
 
-    &:hover {
-      background: #88888808;
-    }
-  }
+.project-grid a.item:hover {
+  background: #88888808;
 }
 </style>
