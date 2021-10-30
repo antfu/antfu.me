@@ -150,10 +150,6 @@ h6:focus .header-anchor {
   margin-bottom: 0;
 }
 
-.prose > ul > li > *:last-child {
-  margin-bottom: 0;
-}
-
 .prose blockquote p:first-of-type::before {
   content: none;
 }

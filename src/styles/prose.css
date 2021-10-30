@@ -255,12 +255,6 @@
   margin-top: 0.75em;
   margin-bottom: 0.75em;
 }
-.prose > ul > li > *:first-child {
-  margin-top: 1.25em;
-}
-.prose > ul > li > *:last-child {
-  margin-bottom: 1.25em;
-}
 .prose > ol > li > *:first-child {
   margin-top: 1.25em;
 }
