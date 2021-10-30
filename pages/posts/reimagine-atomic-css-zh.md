@@ -209,13 +209,13 @@ module.exports = {
 将产生如下代码：
 
 ```css
-.rotate-1\/4 {
+.rotate-1/4 {
   transform: rotate(90deg);
 }
-.rotate-1\/2 {
+.rotate-1/2 {
   transform: rotate(180deg);
 }
-.rotate-3\/4 {
+.rotate-3/4 {
   transform: rotate(270deg);
 }
 ```
