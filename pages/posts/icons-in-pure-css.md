@@ -21,7 +21,7 @@ If you are interested in how I get here, there is an index of my previous post a
 
 ## Prior Arts
 
-I know there is a Pure CSS icon solution called [`css.gg`](https://github.com/astrit/css.gg), which is a great idea to use pseudo-elements (`::before`, `::after`) to construct the icons. However, that could require some expert knowledge of how CSS works, but I imagine that approach could be hard to create more complex icons. Instead of the limited chooses in a specific set, I am seeking **a more general solution that could apply to any icons**.
+I know there is a Pure CSS icon solution called [`css.gg`](https://github.com/astrit/css.gg), which is a great idea to use pseudo-elements (`::before`, `::after`) to construct the icons. However, that could require some expert knowledge of how CSS works, but I imagine that approach could be hard to create more complex icons. Instead of the limited choices in a specific set, I am seeking **a more general solution that could apply to any icons**.
 
 ## The Idea
 
