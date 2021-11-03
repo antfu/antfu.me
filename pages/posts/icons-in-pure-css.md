@@ -25,7 +25,7 @@ I know there is a Pure CSS icon solution called [`css.gg`](https://github.com/as
 
 ## The Idea
 
-The idea come from [this feature request](https://github.com/antfu/unplugin-icons/issues/88) created by [@husayt](https://github.com/husayt) to `unplugin-icons` and the initial implementation in [this pull request](https://github.com/antfu/unplugin-icons/pull/90) by [@userquin](https://github.com/userquin). The idea here is quite straightforward - to generate CSS with the icons in [DataURL](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) as the background image.
+The idea come from [this feature request](https://github.com/antfu/unplugin-icons/issues/88) created by [@husayt](https://github.com/husayt) to `unplugin-icons` and the initial implementation in [this pull request](https://github.com/antfu/unplugin-icons/pull/90) by [@userquin](https://github.com/userquin). The idea here is quite straightforward - to generate CSS with the icons in [DataURI](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) as the background image.
 
 ```css
 .my-icon {
@@ -53,7 +53,7 @@ It's indeed an interesting idea. However, this is more like an image instead of 
 
 ## Make it Work
 
-### DataURL
+### DataURI
 
 Thanks again to [Iconify](https://iconify.design/), which unified 100+ icon sets with 10,000+ icons into [the consistent JSON format](https://github.com/iconify/collections-json). It allows us to get the SVG of any icon set by simply providing the collection and icon ids. The usage is like this:
 
@@ -64,13 +64,13 @@ const svg = iconToSVG(getIconData('mdi', 'alarm'))
 // (this is not the exact API, simplified here for demo)
 ```
 
-Once we got the SVG string, we could convert the it to DataURL:
+Once we got the SVG string, we could convert the it to DataURI:
 
 ```ts
-const dataUrl = `data:image/svg+xml;base64,${Buffer.from(svg).toString('base64')}`
+const dataUri = `data:image/svg+xml;base64,${Buffer.from(svg).toString('base64')}`
 ```
 
-Talking about DataURL, it's almost the default choice to use [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) until I read [Probably Don't Base64 SVG](https://css-tricks.com/probably-dont-base64-svg/) by Chris Coyier. Base64 is needed to encode binary data like images to be used in plain text files like CSS, while for SVG, since it's already in text format, the extra encoding to Base64 actually makes the file size larger.
+Talking about DataURI, it's almost the default choice to use [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) until I read [Probably Don't Base64 SVG](https://css-tricks.com/probably-dont-base64-svg/) by Chris Coyier. Base64 is needed to encode binary data like images to be used in plain text files like CSS, while for SVG, since it's already in text format, the extra encoding to Base64 actually makes the file size larger.
 
 Combine the technique mentioned in [Optimizing SVGs in data URIs](https://codepen.io/Tigt/post/optimizing-svgs-in-data-uris) by Taylor Hunt to improve the output size, further, here is the solution we end up with.
 
@@ -87,7 +87,7 @@ function encodeSvg(svg: string) {
     .replace(/>/g, '%3E')
 }
 
-const dataUrl = `data:image/svg+xml;utf8,${encodeSvg(svg)}`
+const dataUri = `data:image/svg+xml;utf8,${encodeSvg(svg)}`
 ```
 
 ### Scalable
@@ -116,7 +116,7 @@ By changing the `height` and `width` to `1em`, and the `background-size` to `100
 
 In inlined SVG, we could use [`fill="currentColor"`](https://www.w3.org/TR/css-color-3/#currentcolor) to make the color of the SVG matches with the current text color. However, when we use it as a background image, it becomes a flat image. The dynamic parts of the SVG are lost, so is the `currentColor` magic (it's just like you can't override the color of a PNG).
 
-If you do a quick search, you will find that most people are telling you that you can't. Some might offer you the option to assign the colors in the SVG before converting to DataURL, which could solve the specific problem that you want the icon to have color, but not the root cause that the color is not reactive to the context.
+If you do a quick search, you will find that most people are telling you that you can't. Some might offer you the option to assign the colors in the SVG before converting to DataURI, which could solve the specific problem that you want the icon to have color, but not the root cause that the color is not reactive to the context.
 
 Then you might come up with the idea of using [CSS filters](https://developer.mozilla.org/en-US/docs/Web/CSS/filter), like Una Kravets mentioned in [Solved with CSS! Colorizing SVG Backgrounds](https://css-tricks.com/solved-with-css-colorizing-svg-backgrounds/). That sounds valid, but only that you need to calculate the matrix of how to transform the color to the desired ones. Probably feasible by introducing some runtime JavaScript for that? Maybe, if so, we lost the whole point of trying icons in pure CSS.
 
@@ -168,12 +168,12 @@ const mode = svg.includes('currentColor')
   ? 'mask'
   : 'background-img'
 
-const url = `url("data:image/svg+xml;utf8,${encodeSvg(svg)}")`
+const uri = `url("data:image/svg+xml;utf8,${encodeSvg(svg)}")`
 
 // monochrome
 if (mode === 'mask') {
   return {
-    'mask': `${url} no-repeat`,
+    'mask': `${uri} no-repeat`,
     'mask-size': '100% 100%',
     'background-color': 'currentColor',
     'height': '1em',
@@ -183,7 +183,7 @@ if (mode === 'mask') {
 // colored
 else {
   return {
-    'background': `${url} no-repeat`,
+    'background': `${uri} no-repeat`,
     'background-size': '100% 100%',
     'background-color': 'transparent',
     'height': '1em',
