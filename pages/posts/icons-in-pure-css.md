@@ -8,6 +8,8 @@ description: The icon solution in pure CSS.
 
 [[toc]]
 
+> [中文 Chinese Version](/posts/icons-in-pure-css-zh)
+
 In my previous post about [Reimagine Atomic CSS](/posts/reimagine-atomic-css#pure-css-icons), I introduced a preset of [UnoCSS](https://github.com/antfu/unocss) that provides the ability to **use any icons on-demand in purely CSS**. Today in this post, I'd like to share with you how we made it possible.
 
 ## My Icon Explorations
