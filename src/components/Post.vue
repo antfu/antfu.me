@@ -2,8 +2,10 @@
 import { formatDate } from '/~/logics'
 import { isClient } from '@vueuse/core'
 
-const route = useRoute()
 const { frontmatter } = defineProps<{ frontmatter: any }>()
+const router = useRouter()
+const route = useRoute()
+const content = ref<HTMLElement>()
 
 if (isClient) {
   const navigate = () => {
@@ -13,18 +15,44 @@ if (isClient) {
     }
   }
 
-  useEventListener(window, 'hashchange', navigate, false)
+  const handleAnchors = (
+    event: MouseEvent & {
+      target: HTMLElement
+    },
+  ) => {
+    const link = event.target.closest('a')
+
+    if (
+      !event.defaultPrevented
+      && link
+      && event.button === 0
+      && link.target !== '_blank'
+      && link.rel !== 'external'
+      && !link.download
+      && !event.metaKey
+      && !event.ctrlKey
+      && !event.shiftKey
+      && !event.altKey
+    ) {
+      const url = new URL(link.href)
+      if (url.origin !== window.location.origin) return
+
+      event.preventDefault()
+      const { pathname, hash } = url
+      if (hash && !pathname) {
+        window.history.replaceState({}, '', hash)
+        navigate()
+      }
+      else {
+        router.push({ path: pathname, hash })
+      }
+    }
+  }
+
+  useEventListener(window, 'hashchange', navigate)
+  useEventListener(content, 'click', handleAnchors)
 
   onMounted(() => {
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener('click', (e) => {
-        e.preventDefault()
-        const href = anchor.getAttribute('href') as string
-        history.replaceState({}, '', href)
-        navigate()
-      })
-    })
-
     navigate()
     setTimeout(navigate, 500)
   })
@@ -43,7 +71,9 @@ if (isClient) {
       {{ frontmatter.subtitle }}
     </p>
   </div>
-  <slot />
+  <article ref="content">
+    <slot />
+  </article>
   <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-8">
     <router-link
       :to="route.path.split('/').slice(0, -1).join('/') || '/'"
