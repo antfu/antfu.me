@@ -15,7 +15,7 @@
     "dayjs": "^1.10.7",
     "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.2.2",
-    "vue": "^3.2.22",
+    "vue": "3.2.15",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
@@ -31,8 +31,6 @@
     "@unocss/preset-icons": "^0.11.0",
     "@unocss/reset": "^0.11.0",
     "@vitejs/plugin-vue": "^1.9.4",
-    "@vue/compiler-sfc": "^3.2.22",
-    "@vue/server-renderer": "^3.2.22",
     "@vuedx/typescript-plugin-vue": "^0.7.4",
     "critters": "^0.0.14",
     "cross-env": "^7.0.3",
