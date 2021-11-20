@@ -453,6 +453,8 @@ Combining with variants, you can even switch icons based on hovering state or ev
 
 Once again, this feature is written with less than 100 lines of code. Check out the preset's implementation [`@unocss/preset-icons`](https://github.com/antfu/unocss/blob/main/packages/preset-icons) to learn the magic!
 
+> Update: Read my new post [Icons in Pure CSS](/posts/icons-in-pure-css) to learn more about it!
+
 I hope these presets can give you a general idea of how flexible UnoCSS is. Given it's still in a very early stage, there are many possibilities for us to explore.
 
 ### Scoping
