@@ -10,8 +10,8 @@ description: A short tutorial of shipping both ESM and CJS dual formats in a sin
 
 ## ESM & CJS
 
-ESM - [ECMAScript modules](https://nodejs.org/api/esm.html)
-CJS - [CommonJS](https://nodejs.org/api/modules.html#modules-commonjs-modules)
+- ESM - [ECMAScript modules](https://nodejs.org/api/esm.html)
+- CJS - [CommonJS](https://nodejs.org/api/modules.html#modules-commonjs-modules)
 
 In the past decade, due to the lack of a standard module system of JavaScript, CommonJS (a.k.a the `require('xxx')` and `module.exports` syntax) has been the way how Node.js and NPM packages work. Until 2015, when ECMAScript modules finally show up as the standard solution, the community start migrating to native ESM gradually.
 
@@ -92,7 +92,7 @@ So now we have two copies of code with slightly different module syntax to maint
 - [`tsup`](#tsup)
 - [`unbuild`](#unbuild)
 
-### `tsup`
+### tsup
 
 [`tsup`](https://github.com/egoist/tsup) by [@egoist](https://github.com/egoist) is one of my most used tools. The features zero-config building for TypeScript project. The usage is like:
 
@@ -134,7 +134,7 @@ Here is my go-to template of `package.json` using `tsup`:
 ```
 
 
-### `unbuild`
+### unbuild
 
 If we say `tsup` is a minimal bundler for TypeScript, [`unbuild`](https://github.com/unjs/unbuild) by the [@unjs org](https://github.com/unjs) is a more generalized, customizable and yet powerful. `unbuild` is been used to bundle Nuxt 3 and it's sub packages.
 
