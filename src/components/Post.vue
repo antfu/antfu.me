@@ -55,10 +55,8 @@ onMounted(() => {
   useEventListener(window, 'hashchange', navigate)
   useEventListener(content.value!, 'click', handleAnchors, { passive: false })
 
-  onMounted(() => {
-    navigate()
-    setTimeout(navigate, 500)
-  })
+  navigate()
+  setTimeout(navigate, 500)
 })
 </script>
 
