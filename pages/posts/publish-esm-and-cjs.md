@@ -73,7 +73,7 @@ Some packages now ship [pure-ESM packages](https://gist.github.com/sindresorhus/
 
 Luckily, Node allows you to have those two formats in a single package at the same time. With the new [`exports`](https://nodejs.org/api/packages.html#conditional-exports) field in `package.json`, you can now specify multiple entries to provide those formats conditionally. Node will resolve to the version based on user's or downstream packages environment.
 
-```jsonc
+```json
 {
   "name": "my-cool-package",
   "exports": {
@@ -112,7 +112,7 @@ Two files `dist/index.js` and `dist/index.mjs` will be generate with it and you 
 
 Here is my go-to template of `package.json` using `tsup`:
 
-```jsonc
+```json
 {
   "name": "my-cool-package",
   "main": "./dist/index.js",
