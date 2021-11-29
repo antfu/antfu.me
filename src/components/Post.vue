@@ -1,13 +1,18 @@
 <script setup lang='ts'>
 import { formatDate } from '/~/logics'
-import { isClient } from '@vueuse/core'
 
-const { frontmatter } = defineProps<{ frontmatter: any }>()
+defineProps({
+  frontmatter: {
+    type: Object,
+    required: true,
+  },
+})
+
 const router = useRouter()
 const route = useRoute()
-const content = ref<HTMLElement>()
+const content = ref<HTMLDivElement>()
 
-if (isClient) {
+onMounted(() => {
   const navigate = () => {
     if (location.hash) {
       document.querySelector(decodeURIComponent(location.hash))
@@ -16,9 +21,7 @@ if (isClient) {
   }
 
   const handleAnchors = (
-    event: MouseEvent & {
-      target: HTMLElement
-    },
+    event: MouseEvent & { target: HTMLElement },
   ) => {
     const link = event.target.closest('a')
 
@@ -39,7 +42,7 @@ if (isClient) {
 
       event.preventDefault()
       const { pathname, hash } = url
-      if (hash && !pathname) {
+      if (hash && (!pathname || pathname === location.pathname)) {
         window.history.replaceState({}, '', hash)
         navigate()
       }
@@ -50,13 +53,13 @@ if (isClient) {
   }
 
   useEventListener(window, 'hashchange', navigate)
-  useEventListener(content, 'click', handleAnchors)
+  useEventListener(content.value!, 'click', handleAnchors, { passive: false })
 
   onMounted(() => {
     navigate()
     setTimeout(navigate, 500)
   })
-}
+})
 </script>
 
 <template>
