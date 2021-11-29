@@ -278,7 +278,7 @@ import { createRequire } from 'module'
 const require = createRequire(import.meta.url)
 ```
 
-One good news, if you are using `unbuild`, you can turn on the `cjsBridge` flag and `unbuild` will shims those context automatically for you! 
+Some good news, if you are using `unbuild`, you can turn on the `cjsBridge` flag and `unbuild` will shims those CJS context in ESM automatically for you!.
 
 ```ts
 import { defineBuildConfig } from 'unbuild'
@@ -288,6 +288,8 @@ export default defineBuildConfig({
 })
 ```
 
+On the other hand, if you are using `tsup`, it will shims ESM's `import.meta.url` for you in CJS instead.
+
 ## Final words
 
-This blog post showcased you only a few features of both tools. Do check their docs for more details. And hope you find these setups useful for building your own libraries. If you have any comments or suggestions, ping me on Twitter [@antfu7](https://twitter.com/antfu7)! Happy hacking!
+This blog post showcased you only a few features of both tools. Do check their docs for more details. And hope you find these setups useful for building your own libraries. If you have any comments or suggestions, ping me on Twitter [@antfu7](https://twitter.com/antfu7). Happy hacking!
