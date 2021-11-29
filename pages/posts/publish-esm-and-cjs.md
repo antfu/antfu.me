@@ -6,6 +6,8 @@ duration: 25min
 description: A short tutorial of shipping both ESM and CJS dual formats in a single NPM package.
 ---
 
+[[toc]]
+
 ## ESM & CJS
 
 ESM - [ECMAScript modules](https://nodejs.org/api/esm.html)
