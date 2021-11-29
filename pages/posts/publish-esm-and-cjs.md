@@ -2,7 +2,7 @@
 title: Publish ESM and CJS in a single package
 date: 2021-11-29T16:00:00Z
 lang: en
-duration: 25min
+duration: 15min
 description: A short tutorial of shipping both ESM and CJS dual formats in a single NPM package.
 ---
 
