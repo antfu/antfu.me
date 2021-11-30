@@ -50,7 +50,7 @@ you will receive the following error
 Error [ERR_REQUIRE_ESM]: require() of ES Module esm-only-package not supported.
 ```
 
-The root cause is that ESM is asynchronous by natural, meaning you can't import an async module in synchronous context that `require` is for. This commonly means **if you want to use ESM packages, you have to use ESM as well**. Only one exception is that you can use ESM package in CJS using [dynamic `import()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#dynamic_imports):
+The root cause is that ESM is asynchronous by nature, meaning you can't import an async module in synchronous context that `require` is for. This commonly means **if you want to use ESM packages, you have to use ESM as well**. Only one exception is that you can use ESM package in CJS using [dynamic `import()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#dynamic_imports):
 
 ```ts
 // in CJS
@@ -257,7 +257,7 @@ P.S. `unbuild` is working on providing better out-of-box experience by auto infe
 
 With either of the tools mentioned above, now we are able to write TypeScript as the single source of truth and made the overall codebase easier to maintain. However, there are still some caveats that you will need to keep an eye on it.
 
-**In ESM, there is NO `__dirname`, `__filename`, `require`, `require.resolve`**. Instead, you will need to use `import.meta.url` and and do some convertion to get the file path string.
+**In ESM, there is NO `__dirname`, `__filename`, `require`, `require.resolve`**. Instead, you will need to use `import.meta.url` and also do some convertion to get the file path string.
 
 So since our code will be compiled to both CJS and ESM, it's better to avoiding using those environment specific context whenever possible. If you do need them, you can refer to my note about [Isomorphic `__dirname`](/notes#isomorphic-dirname):
 
