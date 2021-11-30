@@ -253,7 +253,7 @@ This way this allows you to use TypeScript in development while not requiring co
 
 P.S. `unbuild` is working on providing better out-of-box experience by auto infering the entries in `package.json`, [learn more](https://github.com/unjs/unbuild/issues/3).
 
-## Context Misalginment
+## Context Misalignment
 
 With either of the tools mentioned above, now we are able to write TypeScript as the single source of truth and made the overall codebase easier to maintain. However, there are still some caveats that you will need to keep an eye on it.
 
