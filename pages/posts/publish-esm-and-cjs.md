@@ -183,7 +183,7 @@ export default jiti(null, { interopDefault: true })('/Users/antfu/unbuild-test/s
 module.exports = require('jiti')(null, { interopDefault: true })('/Users/antfu/unbuild-test/src/index')
 ```
 
-Instead of the distribution of your code bundle, the dist files are not redirecting to your source code with a wrap of [`jiti`](https://github.com/unjs/jiti) - another treasure hidden in the [@unjs](https://github.com/unjs) org. `jiti` provides the runtime support of TypeScript, ESM for Node by transpiling the modules on the fly. Since it directly goes to your source files, there won't be a misalignment between your source code and bundle dist - thus there is no watcher process needed! This is a huge DX bump for library authors, if you still not getting it, you shall definitely grab it down and play with it yourself.
+Instead of the distribution of your code bundle, the dist files are now redirecting to your source code with a wrap of [`jiti`](https://github.com/unjs/jiti) - another treasure hidden in the [@unjs](https://github.com/unjs) org. `jiti` provides the runtime support of TypeScript, ESM for Node by transpiling the modules on the fly. Since it directly goes to your source files, there won't be a misalignment between your source code and bundle dist - thus there is no watcher process needed! This is a huge DX bump for library authors, if you still not getting it, you shall definitely grab it down and play with it yourself.
 
 #### Bundleless Build
 
