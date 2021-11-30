@@ -108,7 +108,7 @@ To support dual formats, it's just a flag away:
 $ tsup src/index.ts --format cjs,esm
 ```
 
-Two files `dist/index.js` and `dist/index.mjs` will be generate with it and you are good to go. Powered by [`esbuild`](https://github.com/evanw/esbuild), `tsup` is not only super easy to use but also incredible fast. I highly recommend to give it a try.
+Two files `dist/index.js` and `dist/index.mjs` will be generated with it and you are good to go. Powered by [`esbuild`](https://github.com/evanw/esbuild), `tsup` is not only super easy to use but also incredible fast. I highly recommend to give it a try.
 
 Here is my go-to template of `package.json` using `tsup`:
 
@@ -136,7 +136,7 @@ Here is my go-to template of `package.json` using `tsup`:
 
 ### unbuild
 
-If we say `tsup` is a minimal bundler for TypeScript, [`unbuild`](https://github.com/unjs/unbuild) by the [@unjs org](https://github.com/unjs) is a more generalized, customizable and yet powerful. `unbuild` is been used to bundle Nuxt 3 and it's sub packages.
+If we say `tsup` is a minimal bundler for TypeScript, [`unbuild`](https://github.com/unjs/unbuild) by the [@unjs org](https://github.com/unjs) is a more generalized, customizable and yet powerful. `unbuild` is being used to bundle Nuxt 3 and it's sub packages.
 
 To use it, we create `build.config.ts` file in the root
 
@@ -162,7 +162,7 @@ $ unbuild
 
 #### Stubbing
 
-This is one of the most incredible things that I have found when I first look into [Nuxt 3's codebase](https://github.com/nuxt/framework). `unbuild` introduced a new idea called Stubbing. Instead of firing up a watcher to re-trigger the bundling every time you made changes to the source code, the stubbing in `unbuild` (so call Passive watcher) does not require you are have another process for that at all. By calling the following command **only once**:
+This is one of the most incredible things that I have found when I first looked into [Nuxt 3's codebase](https://github.com/nuxt/framework). `unbuild` introduced a new idea called Stubbing. Instead of firing up a watcher to re-trigger the bundling every time you made changes to the source code, the stubbing in `unbuild` (so call Passive watcher) does not require you are have another process for that at all. By calling the following command **only once**:
 
 ```bash
 $ unbuild --stub
