@@ -134,9 +134,11 @@ const config: UserConfig = {
       extensions: ['vue', 'md'],
       dts: true,
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-      resolvers: IconsResolver({
-        componentPrefix: '',
-      }),
+      resolvers: [
+        IconsResolver({
+          componentPrefix: '',
+        }),
+      ],
     }),
 
     Inspect(),
@@ -145,7 +147,6 @@ const config: UserConfig = {
       defaultClass: 'inline',
       defaultStyle: 'vertical-align: sub;',
     }),
-
   ],
 
   build: {
