@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import { UserConfig } from 'vite'
+import type { UserConfig } from 'vite'
 import fs from 'fs-extra'
 import Pages from 'vite-plugin-pages'
 import Inspect from 'vite-plugin-inspect'
