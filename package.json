@@ -54,7 +54,7 @@
     "vite": "^2.7.1",
     "vite-plugin-inspect": "^0.3.11",
     "vite-plugin-md": "^0.11.6",
-    "vite-plugin-pages": "^0.18.2",
+    "vite-plugin-pages": "^0.19.3",
     "vite-plugin-pwa": "^0.11.11",
     "vite-plugin-yaml": "^1.0.5",
     "vite-ssg": "^0.16.2"
