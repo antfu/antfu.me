@@ -5,6 +5,10 @@ subtitle: List of projects that I am proud of
 description: List of projects that I am proud of
 projects:
   Latest:
+    - name: 'Vitest'
+      link: 'https://vitest.dev'
+      desc: 'A blazing fast unit-test framework powered by Vite. In collabration with @patak-dev'
+      icon: 'vitest'
     - name: 'UnoCSS'
       link: 'https://github.com/antfu/unocss'
       desc: 'The instant on-demand atomic CSS engine'
@@ -17,10 +21,6 @@ projects:
       link: 'https://github.com/antfu/unplugin-vue-components'
       desc: 'On-demand components auto importing for Vue'
       icon: 'i-carbon-workspace-import'
-    - name: 'unplugin-vue2-script-setup'
-      link: 'https://github.com/antfu/unplugin-vue2-script-setup'
-      desc: 'Bring <code>&lt;script setup&gt;</code> to Vue 2.'
-      icon: 'i-carbon-text-line-spacing'
     - name: 'unplugin-auto-import'
       link: 'https://github.com/antfu/unplugin-auto-import'
       desc: 'Auto import APIs on-demand for Vite, Webpack and Rollup'
@@ -83,6 +83,10 @@ projects:
       icon: 'i-tabler-currency-dollar'
 
   Vite Ecosystem:
+    - name: 'Vitest'
+      link: 'https://vitest.dev'
+      desc: 'A blazing fast unit-test framework powered by Vite'
+      icon: 'vitest'
     - name: 'vite-plugin-inspect'
       link: 'https://github.com/antfu/vite-plugin-inspect'
       desc: 'Inspect the intermediate state of Vite plugins'
