@@ -159,7 +159,7 @@ const config: UserConfig = {
   },
 
   ssgOptions: {
-    formatting: 'minify',
+    // formatting: 'minify',
   },
 }
 
