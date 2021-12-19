@@ -14,8 +14,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import anchor from 'markdown-it-anchor'
 import markdownAttr from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
-import { presetAttributify, presetUno } from 'unocss'
-import presetIcons from '@unocss/preset-icons'
+import { presetAttributify, presetUno, presetIcons } from 'unocss'
 // @ts-expect-error
 import TOC from 'markdown-it-table-of-contents'
 import { slugify } from './scripts/slugify'
@@ -159,7 +158,8 @@ const config: UserConfig = {
   },
 
   ssgOptions: {
-    // formatting: 'minify',
+    formatting: 'minify',
+    format: 'cjs',
   },
 }
 
