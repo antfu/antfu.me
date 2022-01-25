@@ -12,10 +12,10 @@ import Prism from 'markdown-it-prism'
 import matter from 'gray-matter'
 import AutoImport from 'unplugin-auto-import/vite'
 import anchor from 'markdown-it-anchor'
-import markdownAttr from 'markdown-it-link-attributes'
+import LinkAttributes from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
-import { presetAttributify, presetUno, presetIcons } from 'unocss'
-// @ts-expect-error
+import { presetAttributify, presetIcons, presetUno } from 'unocss'
+// @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
 import { slugify } from './scripts/slugify'
 
@@ -104,9 +104,9 @@ const config: UserConfig = {
           }),
         })
 
-        // @ts-expect-error
-        md.use(markdownAttr, {
-          pattern: /^https?:/,
+        // @ts-expect-error anyway
+        md.use(LinkAttributes, {
+          matcher: (link: string) => /^https?:\/\//.test(link),
           attrs: {
             target: '_blank',
             rel: 'noopener',
