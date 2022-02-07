@@ -578,6 +578,6 @@ Appreciate the early review and feedback provided by (A-Z):
 
 ## Wrapping Up
 
-Thanks a lot for reading through! If it ever got you interested, do remember to check out the repo [`antfu/unocss`](https://github.com/antfu/unocss) for more details and play with it on the [**Online Playground**](https://unocss.antfu.me/).
+Thanks a lot for reading through! If it ever got you interested, do remember to check out the repo [`unocss/unocss`](https://github.com/unocss/unocss) for more details and play with it on the [**Online Playground**](https://unocss.antfu.me/).
 
 Please feel free to comment or retweet [this tweet](https://twitter.com/antfu7/status/1452802545118711812) letting me know what you think! 🙌
