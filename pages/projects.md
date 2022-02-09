@@ -5,9 +5,13 @@ subtitle: List of projects that I am proud of
 description: List of projects that I am proud of
 projects:
   Latest:
+    - name: 'Handle 汉兜'
+      link: 'https://handle.antfu.me'
+      desc: 'A Chinese Hanzi variation of Wordle'
+      icon: 'i-carbon-scatter-matrix'
     - name: 'Vitest'
       link: 'https://vitest.dev'
-      desc: 'A blazing fast unit-test framework powered by Vite. In collabration with @patak-dev'
+      desc: 'A blazing fast unit-test framework powered by Vite. In collaboration with @patak-dev'
       icon: 'vitest'
     - name: 'UnoCSS'
       link: 'https://github.com/antfu/unocss'
@@ -17,10 +21,6 @@ projects:
       link: 'https://github.com/unjs/unplugin'
       desc: 'Unified plugin system for Vite, Rollup, and Webpack'
       icon: 'i-carbon-plug'
-    - name: 'unplugin-vue-components'
-      link: 'https://github.com/antfu/unplugin-vue-components'
-      desc: 'On-demand components auto importing for Vue'
-      icon: 'i-carbon-workspace-import'
     - name: 'unplugin-auto-import'
       link: 'https://github.com/antfu/unplugin-auto-import'
       desc: 'Auto import APIs on-demand for Vite, Webpack and Rollup'
@@ -191,6 +191,12 @@ projects:
       link: 'https://github.com/slidevjs/slidev'
       desc: 'Presentation slides for developers'
       icon: 'slidev'
+
+  Games:
+    - name: 'Handle 汉兜'
+      link: 'https://handle.antfu.me'
+      desc: 'A Chinese Hanzi variation of Wordle'
+      icon: 'i-carbon-scatter-matrix'
 
   Design / Compform:
     - name: '100 Day'
