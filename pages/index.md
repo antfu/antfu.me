@@ -8,7 +8,7 @@ title: Anthony Fu
 
 Hey, I am Anthony Fu, a fanatical open sourceror. Working at [NuxtLabs](https://nuxtlabs.com/).
 
-Creator of [Slidev](https://github.com/slidevjs/slidev), [VueUse](https://github.com/vueuse/vueuse), [UnoCSS](https://github.com/antfu/unocss), [Vitesse](https://github.com/antfu/vitesse), [Type Challenges](https://github.com/type-challenges/type-challenges) and [a few others](/projects).<br>
+Creator of [Vitest](https://github.com/vitest-dev/vitest), [Slidev](https://github.com/slidevjs/slidev), [VueUse](https://github.com/vueuse/vueuse), [UnoCSS](https://github.com/antfu/unocss), [Type Challenges](https://github.com/type-challenges/type-challenges) and [others](/projects).<br>
 Core team member of [Vue](https://vuejs.org/), [Nuxt](http://nuxtjs.org/) and [Vite](http://vitejs.dev/).<br>
 Team member of [Windi CSS](https://windicss.org/), [wenyan-lang 文言](https://wy-lang.org/) and [Intlify](https://github.com/intlify).
 
