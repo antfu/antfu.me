@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useToggle } from '@vueuse/core'
-import { isDark } from '/~/logics'
+import { isDark } from '~/logics'
 
 const toggleDark = useToggle(isDark)
 </script>

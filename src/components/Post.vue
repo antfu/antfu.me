@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import { formatDate } from '/~/logics'
+import { formatDate } from '~/logics'
 
 defineProps({
   frontmatter: {

@@ -446,7 +446,7 @@ variants: [
 </div>
 
 <script setup>
-import { isDark } from '/~/logics'
+import { isDark } from '~/logics'
 
 function toggleDark() {
   isDark.value = !isDark.value

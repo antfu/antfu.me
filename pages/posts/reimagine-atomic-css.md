@@ -442,7 +442,7 @@ If you've ever read my previous post [Journey with Icons Continues](/posts/journ
 </div>
 
 <script setup>
-import { isDark } from '/~/logics'
+import { isDark } from '~/logics'
 
 function toggleDark() {
   isDark.value = !isDark.value
