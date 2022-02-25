@@ -5,6 +5,10 @@ subtitle: List of projects that I am proud of
 description: List of projects that I am proud of
 projects:
   Latest:
+    - name: 'SponsorKit'
+      link: 'https://github.com/antfu/sponsorkit'
+      desc: 'Toolkit for generating sponsors images'
+      icon: 'i-carbon-favorite'
     - name: 'Handle 汉兜'
       link: 'https://handle.antfu.me'
       desc: 'A Chinese Hanzi variation of Wordle'
@@ -17,18 +21,6 @@ projects:
       link: 'https://github.com/antfu/unocss'
       desc: 'The instant on-demand atomic CSS engine'
       icon: 'unocss'
-    - name: 'unplugin'
-      link: 'https://github.com/unjs/unplugin'
-      desc: 'Unified plugin system for Vite, Rollup, and Webpack'
-      icon: 'i-carbon-plug'
-    - name: 'unplugin-auto-import'
-      link: 'https://github.com/antfu/unplugin-auto-import'
-      desc: 'Auto import APIs on-demand for Vite, Webpack and Rollup'
-      icon: 'i-carbon-row-insert'
-    - name: 'Slidev'
-      link: 'https://github.com/slidevjs/slidev'
-      desc: 'Presentation slides for developers'
-      icon: 'slidev'
 
   Unplugins:
     - name: 'unplugin'
@@ -305,6 +297,10 @@ projects:
       desc: 'Use the right package manager'
       link: 'https://github.com/antfu/ni'
       icon: 'i-codicon-package'
+    - name: 'SponsorKit'
+      link: 'https://github.com/antfu/sponsorkit'
+      desc: 'Toolkit for generating sponsors images'
+      icon: 'i-carbon-favorite'
     - name: 'broz'
       link: 'https://github.com/antfu/broz'
       desc: 'A simple, frameless browser for screenshots'
@@ -372,6 +368,8 @@ projects:
       desc: 'Make your Github history back to 1990'
       icon: 'i-carbon-time'
 ---
+
+[Sponsors of these projects](/sponsors)
 
 <ListProjects :projects="frontmatter.projects"/>
 

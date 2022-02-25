@@ -14,6 +14,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import anchor from 'markdown-it-anchor'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
+import SVG from 'vite-svg-loader'
 import { presetAttributify, presetIcons, presetUno } from 'unocss'
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
@@ -146,6 +147,8 @@ const config: UserConfig = {
       defaultClass: 'inline',
       defaultStyle: 'vertical-align: sub;',
     }),
+
+    SVG(),
   ],
 
   build: {

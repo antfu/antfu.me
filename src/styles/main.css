@@ -37,6 +37,19 @@ html {
   scrollbar-color: var(--c-scrollbar) var(--c-bg);
 }
 
+.sponsor-avatar {
+  cursor: pointer;
+}
+.sponsor-tier-title {
+  font-weight: 500;
+  font-size: 20px;
+  fill: currentColor;
+}
+.sponsor-name {
+  font-weight: 300;
+  font-size: 14px;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }

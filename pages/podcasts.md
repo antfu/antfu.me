@@ -16,6 +16,9 @@ items:
     date: '2021-12-09'
     path: 'https://bytetalk.fm/posts/episode-6/'
     lang: 'zh'
+  - title: 'JS Party #214 - Vitest && Slidev'
+    date: '2022-02-17'
+    path: 'https://changelog.com/jsparty/214'
 ---
 
 <SubNav/>
@@ -24,4 +27,4 @@ items:
   <Plum/>
 </ClientOnly>
 
-<ListPosts :posts="frontmatter.items" />
+<ListPosts :posts="frontmatter.items.reverse()" />
