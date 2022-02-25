@@ -369,7 +369,7 @@ projects:
       icon: 'i-carbon-time'
 ---
 
-[Sponsors of these projects](/sponsors)
+[Sponsors of these projects](/sponsors-list)
 
 <ListProjects :projects="frontmatter.projects"/>
 

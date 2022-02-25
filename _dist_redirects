@@ -5,7 +5,6 @@
 /gh https://github.com/antfu 301
 /twitter https://twitter.com/antfu7 301
 /sponsor https://github.com/sponsors/antfu 301
-/sponsors https://github.com/sponsors/antfu 301
 /support https://github.com/sponsors/antfu 301
 /instagram https://instagram.com/antfu7 301
 /ig https://instagram.com/antfu7 301
@@ -24,6 +23,9 @@
 /vue-demi https://github.com/vueuse/vue-demi 302
 /chemistry https://github.com/vueuse/vue-chemistry 302
 /i18n-ally https://github.com/lokalise/i18n-ally 302
+/unocss https://github.com/unocss/unocss 302
+/vitest https://github.com/vitest-dev/vitest 302
+/slidev https://github.com/slidevjs/slidev 302
 /type-challenges https://github.com/type-challenges/type-challenges 302
 /tc https://github.com/type-challenges/type-challenges 302
 
@@ -35,8 +37,10 @@
 /astnote	https://github.com/antfu/astnote	302
 /astphotos	https://github.com/antfu/astphotos	302
 /awesome-cn-cafe-web	https://github.com/antfu/awesome-cn-cafe-web	302
+/babel-plugin-esm-rewrite	https://github.com/antfu/babel-plugin-esm-rewrite	302
 /bcp47	https://github.com/antfu/bcp47	302
 /biconfigs	https://github.com/antfu/biconfigs	302
+/birpc	https://github.com/antfu/birpc	302
 /bopomofo	https://github.com/antfu/bopomofo	302
 /broz	https://github.com/antfu/broz	302
 /checklist	https://github.com/antfu/checklist	302
@@ -56,6 +60,7 @@
 /foto-rehearse	https://github.com/antfu/foto-rehearse	302
 /fsxx	https://github.com/antfu/fsxx	302
 /git-ensure	https://github.com/antfu/git-ensure	302
+/handle	https://github.com/antfu/handle	302
 /has-pkg	https://github.com/antfu/has-pkg	302
 /hex-game	https://github.com/antfu/hex-game	302
 /hjdict	https://github.com/antfu/hjdict	302
@@ -83,12 +88,13 @@
 /set-game	https://github.com/antfu/set-game	302
 /simple-permission	https://github.com/antfu/simple-permission	302
 /slidev-new	https://github.com/antfu/slidev-new	302
+/sponsorkit	https://github.com/antfu/sponsorkit	302
 /svg-packer	https://github.com/antfu/svg-packer	302
 /talks	https://github.com/antfu/talks	302
 /taze	https://github.com/antfu/taze	302
 /ts-starter	https://github.com/antfu/ts-starter	302
+/unconfig	https://github.com/antfu/unconfig	302
 /uno-game	https://github.com/antfu/uno-game	302
-/unocss	https://github.com/antfu/unocss	302
 /unplugin-auto-import	https://github.com/antfu/unplugin-auto-import	302
 /unplugin-icons	https://github.com/antfu/unplugin-icons	302
 /unplugin-starter	https://github.com/antfu/unplugin-starter	302
@@ -97,7 +103,6 @@
 /utils	https://github.com/antfu/utils	302
 /v-dollar	https://github.com/antfu/v-dollar	302
 /vite-fs	https://github.com/antfu/vite-fs	302
-/vite-node	https://github.com/antfu/vite-node	302
 /vite-plugin-editor-nav	https://github.com/antfu/vite-plugin-editor-nav	302
 /vite-plugin-inspect	https://github.com/antfu/vite-plugin-inspect	302
 /vite-plugin-md	https://github.com/antfu/vite-plugin-md	302
@@ -127,4 +132,3 @@
 /vue-2to3-playground	https://github.com/antfu/vue-2to3-playground	302
 /vue-cli-components	https://github.com/antfu/vue-cli-components	302
 /vue-composition-api-benchmark-results	https://github.com/antfu/vue-composition-api-benchmark-results	302
-/vue-global-api	https://github.com/antfu/vue-global-api	302

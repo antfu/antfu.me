@@ -29,7 +29,7 @@ import { isDark } from '~/logics'
           <span class="lt-md:hidden">Projects</span>
           <ri-lightbulb-line class="md:hidden" />
         </router-link>
-        <router-link to="/sponsors" title="Sponsors">
+        <router-link to="/sponsors-list" title="Sponsors">
           <ri-heart-line />
         </router-link>
         <router-link to="/bookmarks" title="Bookmarks" class="lt-md:hidden">
