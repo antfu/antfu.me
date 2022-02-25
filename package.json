@@ -4,7 +4,7 @@
     "build": "npm run static && cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts && cp _dist_redirects dist/_redirects",
     "dev": "vite --port 3333 --open",
     "preview": "vite preview",
-    "static": "rimraf temp && degit antfu/static temp && esno scripts/copy-sponsors",
+    "static": "rimraf temp && degit antfu/static temp --force && esno scripts/copy-sponsors",
     "redirects": "esno scripts/redirects.ts"
   },
   "eslintConfig": {

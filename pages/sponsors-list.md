@@ -18,4 +18,4 @@ If you also enjoy my works, you can sponsor me keep them sustainable and get ear
 import Sponsors from '../public/sponsors.svg?component'
 </script>
 
-<Sponsors />
+<Sponsors w-full h-auto />

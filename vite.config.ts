@@ -148,7 +148,9 @@ const config: UserConfig = {
       defaultStyle: 'vertical-align: sub;',
     }),
 
-    SVG(),
+    SVG({
+      svgo: false,
+    }),
   ],
 
   build: {
