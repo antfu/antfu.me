@@ -19,6 +19,9 @@ items:
   - title: 'JS Party #214 - Vitest && Slidev'
     date: '2022-02-17'
     path: 'https://changelog.com/jsparty/214'
+  - title: 'devtools.fm #25 - Vue, Vite, Vitest, UnoCSS'
+    date: '2022-03-04'
+    path: 'https://devtools.fm/episode/25'
 ---
 
 <SubNav/>
