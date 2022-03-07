@@ -25,6 +25,10 @@ items:
   - title: 'devtools.fm #25 - Vue, Vite, Vitest, UnoCSS'
     date: '2022-03-04'
     path: 'https://devtools.fm/episode/25'
+  - title: 'funnyCoder #4 - Vue 和 NuxtLabs 核心成员 Anthony Fu 的开源人生'
+    date: '2022-03-07'
+    path: 'https://www.bilibili.com/video/BV1eS4y1S7zB'
+    lang: 'zh'
 ---
 
 <SubNav/>
