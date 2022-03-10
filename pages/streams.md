@@ -13,7 +13,7 @@ items:
 > Live stream at [Twitch](https://www.twitch.tv/antfu7) & [哔哩哔哩](https://space.bilibili.com/668380)
 > 
 > Upcoming:<br>
-> **TBA**
+> [**21:00 Sat, March 12th - Beijing Time - 哔哩哔哩 [zh]**](https://space.bilibili.com/668380)
 
 ***
 
