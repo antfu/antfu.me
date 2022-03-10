@@ -267,10 +267,6 @@ projects:
       link: 'https://github.com/antfu/vscode-iconify'
       desc: 'Iconify IntelliSense for VS Code'
       icon: 'i-carbon-face-wink'
-    - name: 'File Nesting Config'
-      link: 'https://github.com/antfu/vscode-file-nesting-config'
-      desc: 'File Nesting Config for VS Code'
-      icon: 'i-carbon:tree-view-alt'
     - name: 'Vite for VS Code'
       link: 'https://github.com/antfu/vscode-vite'
       desc: 'Take one step faster for Vite in VS Code'
@@ -341,6 +337,20 @@ projects:
       link: 'https://github.com/antfu/git-ensure'
       desc: 'Ensure git status before continuing'
       icon: 'i-teenyicons-git-outline'
+
+  Configurations:
+    - name: 'eslint-config'
+      link: 'https://github.com/antfu/eslint-config'
+      desc: 'My ESLint config presets'
+      icon: 'i-simple-icons:eslint'
+    - name: 'vscode-settings'
+      link: 'https://github.com/antfu/vscode-settings'
+      desc: 'My VS Code settings'
+      icon: 'i-simple-icons:visualstudiocode'
+    - name: 'vscode-file-nesting-config'
+      link: 'https://github.com/antfu/vscode-file-nesting-config'
+      desc: 'Config of File Nesting for VS Code'
+      icon: 'i-carbon:tree-view-alt'
 
   Maintaining:
     - name: '@vue/composition-api'
