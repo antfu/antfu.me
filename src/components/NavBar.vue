@@ -25,6 +25,9 @@ import { isDark } from '~/logics'
         <router-link to="/podcasts" class="lt-md:hidden">
           Podcasts
         </router-link>
+        <router-link to="/streams" class="lt-md:hidden">
+          Streams
+        </router-link>
         <router-link to="/projects">
           <span class="lt-md:hidden">Projects</span>
           <ri-lightbulb-line class="md:hidden" />

@@ -7,16 +7,9 @@ import 'uno.css'
 import autoRoutes from 'pages-generated'
 import NProgress from 'nprogress'
 import { ViteSSG } from 'vite-ssg'
-import type { RouterScrollBehavior } from 'vue-router'
 import dayjs from 'dayjs'
 import LocalizedFormat from 'dayjs/plugin/localizedFormat.js'
 import App from './App.vue'
-
-declare module 'vue-router' {
-  interface RouteMeta {
-    frontmatter: any
-  }
-}
 
 const routes = autoRoutes.map((i) => {
   return {
@@ -27,7 +20,7 @@ const routes = autoRoutes.map((i) => {
   }
 })
 
-const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
+const scrollBehavior = (to: any, from: any, savedPosition: any) => {
   if (savedPosition)
     return savedPosition
   else
