@@ -4,6 +4,16 @@ display: Projects
 subtitle: List of projects that I am proud of
 description: List of projects that I am proud of
 projects:
+  Upcoming:
+    - name: 'Zeitreise'
+      link: 'https://twitter.com/antfu7/status/1504639906232307712'
+      desc: 'Time traveling for the Web'
+      icon: 'i-mdi-clock-fast'
+    - name: 'reTypewriter'
+      link: 'https://twitter.com/antfu7/status/1505236765447458817'
+      desc: 'Smartly reply the steps of your changes at ease.'
+      icon: 'i-carbon-keyboard'
+
   Latest:
     - name: 'SponsorKit'
       link: 'https://github.com/antfu/sponsorkit'
@@ -379,7 +389,7 @@ projects:
       icon: 'i-carbon-time'
 ---
 
-[Sponsors of these projects](/sponsors-list)
+[Sponsors](/sponsors-list)
 
 <ListProjects :projects="frontmatter.projects"/>
 
