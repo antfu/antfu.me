@@ -15,6 +15,10 @@ projects:
       icon: 'i-carbon-keyboard'
 
   Latest:
+    - name: 'Smart Clicks'
+      link: 'https://github.com/antfu/vscode-smart-clicks'
+      desc: 'Smart selection with double clicks for VS Code.'
+      icon: 'i-heroicons-solid-cursor-click'
     - name: 'SponsorKit'
       link: 'https://github.com/antfu/sponsorkit'
       desc: 'Toolkit for generating sponsors images'
@@ -269,6 +273,10 @@ projects:
       icon: 'i-carbon-reflect-vertical'
 
   VS Code Extensions:
+    - name: 'Smart Clicks'
+      link: 'https://github.com/antfu/vscode-smart-clicks'
+      desc: 'Smart selection with double clicks for VS Code.'
+      icon: 'i-heroicons-solid-cursor-click'
     - name: 'i18n Ally'
       link: 'https://github.com/antfu/i18n-ally'
       desc: 'All in one i18n extension for VS Code'

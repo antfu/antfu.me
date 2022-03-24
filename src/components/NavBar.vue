@@ -17,7 +17,7 @@ import { isDark } from '~/logics'
       <div class="right">
         <router-link to="/posts">
           <span class="lt-md:hidden">Blog</span>
-          <ri-article-line class="md:hidden" />
+          <div i-ri-article-line md:hidden />
         </router-link>
         <router-link to="/talks" class="lt-md:hidden">
           Talks
@@ -30,25 +30,25 @@ import { isDark } from '~/logics'
         </router-link>
         <router-link to="/projects">
           <span class="lt-md:hidden">Projects</span>
-          <ri-lightbulb-line class="md:hidden" />
+          <div i-ri-lightbulb-line class="md:hidden" />
         </router-link>
         <router-link to="/sponsors-list" title="Sponsors">
-          <ri-heart-line />
+          <div i-ri-heart-line />
         </router-link>
         <router-link to="/bookmarks" title="Bookmarks">
-          <ri-bookmark-line />
+          <div i-ri-bookmark-line />
         </router-link>
         <router-link to="/notes" title="Notes">
-          <ri-sticky-note-line />
+          <div i-ri-sticky-note-line />
         </router-link>
         <a href="https://twitter.com/antfu7" target="_blank" title="Twitter" class="lt-md:hidden">
           <feather-twitter />
         </a>
         <a href="https://github.com/antfu" target="_blank" title="GitHub" class="lt-md:hidden">
-          <uil-github-alt />
+          <div i-uil-github-alt />
         </a>
         <a href="/feed.xml" target="_blank" title="RSS" class="lt-md:hidden">
-          <la-rss-square style="font-size:1.25rem; margin: 0 -0.125rem;" />
+          <div i-la-rss-square style="font-size:1.25rem; margin: 0 -0.125rem;" />
         </a>
         <toggle-theme />
       </div>
