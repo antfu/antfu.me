@@ -7,7 +7,67 @@ description: Quick notes / tips
 
 [RSS Feed](https://antfu.me/notes/feed.xml)
 
+<article>
 
+## Types for sub modules
+
+_2022/03/24_
+
+When you build multiple entries in a single package, you exports them with `exports` syntax. Like
+
+```json
+{
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./foo": {
+      "require": "./dist/foo.cjs",
+      "import": "./dist/foo.mjs",
+      "types": "./dist/foo.d.ts"
+    },
+  }
+}
+```
+
+Then tho you provide `types` field for the sub modules, most of the users still got the error:
+
+```txt
+Cannot find module 'my-pkg/foo' or its corresponding type declarations.
+```
+
+Well that's because the `types` field in `exports` will only be resolved when you add `"moduleResolution": "NodeNext"` to the `tsconfig.json` file. Which might cause more issue since not all the packages are up to date.
+
+So when you trying to import `my-pkg/foo`, TypeScript actually looking for the `foo.d.ts` file under your package root instead of your `dist` folder. One solution I been used for a long time is to create a redirection file that published to npm, like:
+
+```ts
+// foo.d.ts
+export { default } from './dist/foo.d.ts'
+export * from './dist/foo.d.ts'
+```
+
+Which solve the problem, but also making your root directory quite messy.
+
+Until [@tmkx](https://github.com/tmkx) [shared me](https://github.com/antfu/unplugin-auto-import/pull/120) this solution:
+
+```json
+{
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/index.d.ts",
+        "./dist/*"
+      ]
+    }
+  }
+}
+```
+
+Good day! [Reference](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#version-selection-with-typesversions)
+
+</article>
 <article>
 
 ## `range` in JavaScript
@@ -129,7 +189,7 @@ const [app, middlewareA, middlewareB] = await Promise.all(
     createServer(),
     resolveMiddlewareA(),
     resolveMiddlewareB(),
-  ]
+  ],
 )
 
 app.use(middlewareA)
@@ -148,7 +208,7 @@ async function createPlugin() {
     },
     onHookB() {
       toolkit.invokeB()
-    }
+    },
   }
 }
 
@@ -163,13 +223,13 @@ function createPlugin() {
 
   return {
     async onHookA() {
-      let toolkit = await toolkitPromise
+      const toolkit = await toolkitPromise
       toolkit.invokeA()
     },
     async onHookB() {
-      let toolkit = await toolkitPromise
+      const toolkit = await toolkitPromise
       toolkit.invokeB()
-    }
+    },
   }
 }
 
@@ -210,7 +270,7 @@ For example:
 
 ```ts
 // context.ts
-import { InjectionKey } from 'vue'
+import type { InjectionKey } from 'vue'
 
 export interface UserInfo {
   id: number
@@ -222,32 +282,32 @@ export const InjectKeyUser: InjectionKey<UserInfo> = Symbol()
 
 ```ts
 // parent.vue
-import { provide } from 'vue' 
+import { provide } from 'vue'
 import { InjectKeyUser } from './context'
 
 export default {
   setup() {
     provide(InjectKeyUser, {
       id: '117', // type error: should be number
-      name: 'Anthony'
+      name: 'Anthony',
     })
-  }
+  },
 }
 ```
 
 ```ts
 // child.vue
-import { inject } from 'vue' 
+import { inject } from 'vue'
 import { InjectKeyUser } from './context'
 
 export default {
   setup() {
     const user = inject(InjectKeyUser) // UserInfo | undefined
 
-    if (user) {
+    if (user)
       console.log(user.name) // Anthony
-    }
-  }
+
+  },
 }
 ```
 
@@ -303,7 +363,7 @@ Configurations can be quite complex, and sometimes you may want to utilize the g
  * @type {import('webpack').Configuration}
  */
 const config = {
-  /*...*/
+  /* ... */
 }
 
 module.exports = config
@@ -318,7 +378,7 @@ I have never thought about we can do better, until I saw [Vite's approach](https
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  /*...*/
+  /* ... */
 })
 ```
 
@@ -327,7 +387,7 @@ No JSDocs, no need to declare a variable first then export it. And since TypeScr
 How? The `defineConfig` is literally a pass-through, but brings with types:
 
 ```ts
-import { UserConfig } from 'vite'
+import type { UserConfig } from 'vite'
 
 export function defineConfig(options: UserConfig) {
   return options
@@ -352,7 +412,7 @@ In JavaScript, single quotes('') and double quotes("") are interchangeable. With
 It works for most of the case, but not for mixed quotes:
 
 ```ts
-`const a = "Hi, I'm Anthony"`.match(/['"`](.*)['"`]/m)[1] // "Hi, I"
+'const a = "Hi, I\'m Anthony"'.match(/['"`](.*)['"`]/m)[1] // "Hi, I"
 ```
 
 You have to make sure the starting quote and ending quote are the same type. Initially I thought it was impossible to do it in RegExp, or we have to do like this:
@@ -387,7 +447,7 @@ When you need to detect if a string contains Chinese characters, you would commo
 If you Google it, you are likely end up with [this solution](https://stackoverflow.com/a/21113538):
 
 ```ts
-/[\u4E00-\u9FCC\u3400-\u4DB5\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]|[\ud840-\ud868][\udc00-\udfff]|\ud869[\udc00-\uded6\udf00-\udfff]|[\ud86a-\ud86c][\udc00-\udfff]|\ud86d[\udc00-\udf34\udf40-\udfff]|\ud86e[\udc00-\udc1d]/
+/[\u4E00-\u9FCC\u3400-\u4DB5\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]|[\uD840-\uD868][\uDC00-\uDFFF]|\uD869[\uDC00-\uDED6\uDF00-\uDFFF]|[\uD86A-\uD86C][\uDC00-\uDFFF]|\uD86D[\uDC00-\uDF34\uDF40-\uDFFF]|\uD86E[\uDC00-\uDC1D]/
 ```
 
 It works, but a bit dirty. Fortunately, I found [a much simpler solution](https://stackoverflow.com/a/61151122) today:
