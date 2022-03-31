@@ -393,7 +393,7 @@ projects:
   Toys:
     - name: '1990 Script'
       link: 'https://github.com/antfu/1990-script'
-      desc: 'Make your Github history back to 1990'
+      desc: 'Make your GitHub history back to 1990'
       icon: 'i-carbon-time'
 ---
 

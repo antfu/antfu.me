@@ -31,7 +31,7 @@ export default {
 }
 ```
 
-It works well in Javascript and putting all the context into `this` is pretty straightforward and easy to understand. But when you switch to TypeScript for static type checking. `this` will not be the context you expected. How can we make the types work for Vue like the example above?
+It works well in JavaScript and putting all the context into `this` is pretty straightforward and easy to understand. But when you switch to TypeScript for static type checking. `this` will not be the context you expected. How can we make the types work for Vue like the example above?
 
 ## Type for `this`
 
