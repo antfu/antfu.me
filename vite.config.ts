@@ -13,7 +13,7 @@ import matter from 'gray-matter'
 import AutoImport from 'unplugin-auto-import/vite'
 import anchor from 'markdown-it-anchor'
 import LinkAttributes from 'markdown-it-link-attributes'
-import Unocss from 'unocss/vite'
+import UnoCSS from 'unocss/vite'
 import SVG from 'vite-svg-loader'
 import { presetAttributify, presetIcons, presetUno } from 'unocss'
 // @ts-expect-error missing types
@@ -48,7 +48,7 @@ const config: UserConfig = {
     ],
   },
   plugins: [
-    Unocss({
+    UnoCSS({
       theme: {
         fontFamily: {
           sans: '"Inter", Inter var,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
