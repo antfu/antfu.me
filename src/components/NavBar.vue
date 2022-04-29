@@ -19,27 +19,30 @@ import { isDark } from '~/logics'
           <span class="lt-md:hidden">Blog</span>
           <div i-ri-article-line md:hidden />
         </router-link>
-        <router-link to="/talks" class="lt-md:hidden">
-          Talks
-        </router-link>
-        <router-link to="/podcasts" class="lt-md:hidden">
-          Podcasts
-        </router-link>
-        <router-link to="/streams" class="lt-md:hidden">
-          Streams
-        </router-link>
         <router-link to="/projects">
           <span class="lt-md:hidden">Projects</span>
           <div i-ri-lightbulb-line class="md:hidden" />
         </router-link>
-        <router-link to="/sponsors-list" title="Sponsors">
-          <div i-ri-heart-line />
+        <router-link to="/talks" class="lt-md:hidden">
+          <div i-ri-slideshow-2-line />
         </router-link>
-        <router-link to="/bookmarks" title="Bookmarks">
+        <router-link to="/podcasts" class="lt-md:hidden">
+          <div i-ri-mic-line />
+        </router-link>
+        <router-link to="/streams" class="lt-md:hidden">
+          <div i-ri-vidicon-line />
+        </router-link>
+        <router-link to="/demos" title="Demos">
+          <div i-ri-screenshot-line />
+        </router-link>
+        <!-- <router-link to="/bookmarks" title="Bookmarks">
           <div i-ri-bookmark-line />
-        </router-link>
+        </router-link> -->
         <router-link to="/notes" title="Notes">
           <div i-ri-sticky-note-line />
+        </router-link>
+        <router-link to="/sponsors-list" title="Sponsors">
+          <div i-ri-heart-line />
         </router-link>
         <a href="https://twitter.com/antfu7" target="_blank" title="Twitter" class="lt-md:hidden">
           <feather-twitter />
