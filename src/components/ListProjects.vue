@@ -15,6 +15,7 @@ defineProps<{ projects: Record<string, any[]> }>()
         :href="item.link"
         target="_blank"
         :class="!item.link ? 'opacity-0 pointer-events-none h-0 -mt-8 -mb-4' : ''"
+        :title="item.name"
       >
         <div v-if="item.icon" class="pt-2 pr-5">
           <Slidev v-if="item.icon === 'slidev'" class="text-4xl opacity-50" />
