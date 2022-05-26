@@ -19,14 +19,14 @@ When you build multiple entries in a single package, you exports them with `expo
 {
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.cjs"
     },
     "./foo": {
-      "require": "./dist/foo.cjs",
+      "types": "./dist/foo.d.ts",
       "import": "./dist/foo.mjs",
-      "types": "./dist/foo.d.ts"
+      "require": "./dist/foo.cjs"
     },
   }
 }
