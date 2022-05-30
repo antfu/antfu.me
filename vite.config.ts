@@ -70,6 +70,7 @@ const config: UserConfig = {
 
     Vue({
       include: [/\.vue$/, /\.md$/],
+      reactivityTransform: true,
     }),
 
     Pages({
