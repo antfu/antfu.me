@@ -1,5 +1,6 @@
 {
   "private": true,
+  "packageManager": "pnpm@7.1.7",
   "scripts": {
     "build": "npm run static && cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts && cp _dist_redirects dist/_redirects",
     "dev": "vite --port 3333 --open",
