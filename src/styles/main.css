@@ -74,3 +74,11 @@ h2 + p > em:first-child {
   margin-top: -20px;
   font-size: 0.9em;
 }
+
+.dark [img-light] {
+  display: none;
+}
+
+html:not(.dark) [img-dark] {
+  display: none;
+}
