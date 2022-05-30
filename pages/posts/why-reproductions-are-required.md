@@ -20,11 +20,11 @@ I'd first say sorry if it ever makes you feel unpleasant. In this post, let me t
 
 ## Open Source Software is served "as-is"
 
-First of all, let's reach an agreement about Open Source Software (OSS). If you look into the MIT License, one of the most popular licenses, you will see it contains the following statement:
+First of all, let's reach a consensus about Open Source Software(OSS). If you look into the MIT License, one of the most popular licenses, you will see it contains the following statement:
 
 > The software is provided "AS IS", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement.
 
-"As is" means you are free to use the code, fork it, or modify it as you want with the **current state**. Meaning the authors are not responsible to fix or improve anything you might have now or in the future. Since it's free and open source, there is no 24-7 customer service. You as a user, are responsible for the code you use theoretically.
+"As is" stands that you are free to use the code, fork it, or modify it as you want with the **current state**. Meaning the authors are not responsible to fix or improve anything you might have now or in the future. Since it's free and open source, the authors and maintainers gain nothing regardless if you use it or not. And there is no 24-7 customer service. You as a user, are responsible for the code you use theoretically.
 
 Yeah, that sounds scary. But luckily, things are not that bad in real practice. In many open source projects, we build trust between users and maintainers. Users contribute to projects by reporting issues they faced, or even sharing solutions via discussions or Pull Requests. Maintainers spend their time reviewing, making decisions, managing releases, and doing distributions. Both users and maintainers work **voluntarily** toward the same wish - to make the software better, for everyone.
 
