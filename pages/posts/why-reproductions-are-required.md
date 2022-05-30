@@ -24,9 +24,9 @@ First of all, let's reach a consensus about Open Source Software(OSS). If you lo
 
 > The software is provided "AS IS", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement.
 
-"As is" stands that you are free to use the code, fork it, or modify it as you want with the **current state**. Meaning the authors are not responsible to fix or improve anything you might have now or in the future. Since it's free and open source, the authors and maintainers gain nothing regardless if you use it or not. And there is no 24-7 customer service. You as a user, are responsible for the code you use theoretically.
+"As is" stands that you are free to use the code, fork it, or modify it as you want with the **current state**. Meaning the authors are not responsible to fix or improve anything you might have now or in the future. Since it's free and open source, the authors or maintainers gain nothing regardless if you use it or not. There is no 24-7 customer service. Theoretically, you as a user, should be responsible to the code you use.
 
-Yeah, that sounds scary. But luckily, things are not that bad in real practice. In many open source projects, we build trust between users and maintainers. Users contribute to projects by reporting issues they faced, or even sharing solutions via discussions or Pull Requests. Maintainers spend their time reviewing, making decisions, managing releases, and doing distributions. Both users and maintainers work **voluntarily** toward the same wish - to make the software better, for everyone.
+Yeah, that sounds scary. But luckily, things are not that bad in real practice. In many open source projects, we build trust between users and maintainers. Users contribute to projects by reporting issues they faced, or sharing solutions via discussions and pull requests. Maintainers spend their time reviewing, making decisions, managing releases, and doing distributions. Both users and maintainers work **voluntarily** toward the same wish - to make the software better, for everyone.
 
 ## Maintainance takes effort, a lot
 
@@ -40,9 +40,9 @@ Software once written, is never finished. Maintainance plays a crucial role to k
 
 ## Why Reproduction
 
-A good [minimal reproduction](https://stackoverflow.com/help/minimal-reproducible-example) of a potential issue could greatly help maintainers to identify the root cause and land the fix quickly. Without a minimal reproduction, merely from the issue description or a screenshot, maintainers won't even know whether it's a real issue of the project or it's caused by some other factors. To identify that, maintainers might need to spend extra time to make a reproduction themselves, or dive into the giant project people shared as a "non-minimal reproduction". Hours might be spent, but what if it turns out a non-issue or unreproducible? What if there are hundreds of such issues you need to deal with?
+A good [minimal reproduction](https://stackoverflow.com/help/minimal-reproducible-example) of a potential issue could greatly help maintainers to identify the root cause and land the fix quickly. Without a minimal reproduction, merely from the issue description or a screenshot, maintainers won't even know whether it's a real issue of the project or it's caused by some other factors. To identify that, maintainers might need to spend extra time to find a reproduction themselves, or dive into the giant project people shared as a "non-minimal reproduction". Hours might be spent, but what if it turns out a non-issue or unreproducible? What if there are hundreds of such issues you need to deal with?
 
-In my opinion, **asking for minimal reproduction is asking for equity of the effort spent**. If everyone could take a few minutes to create a minimal reproduction before opening issues, it would save maintainers hundreds of hours (or even help themselves to find user-land solutions/mistakes, then they don't even need to create an issue). A well-investigated and well-explained issue would also make maintainers more willing to spend their time and effort in return.
+In my opinion, **asking for minimal reproduction is asking for equity of the effort spent**. If everyone could take some effort to create a minimal reproduction before opening issues, it would save maintainers hundreds of hours (or even help themselves to find user-land solutions/mistakes, then they don't even need to create the issue). A well-investigated and well-explained issue would also make maintainers more willing to spend their time and effort in return.
 
 ## Ending
 
