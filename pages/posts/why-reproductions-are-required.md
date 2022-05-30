@@ -3,7 +3,7 @@ title: Why Reproductions are Required
 date: 2022-05-30T16:00:00Z
 lang: en
 duration: 9min
-description: My thorughts on why reproductions are important in open source.
+description: My thoughts on why reproductions are important in open source.
 ---
 
 [[toc]]
