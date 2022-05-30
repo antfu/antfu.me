@@ -30,7 +30,7 @@ Yeah, that sounds scary. But luckily, things are not that bad in real practice. 
 
 ## Maintainance takes effort, a lot
 
-Software once written, is never finished. Maintainance plays a crucial role to keep a project "alive", to get bug or security fix on time, and to be sustainable in the long run. Things like triaging issues, reviewing PRs, and discussions could take a lot of effort from maintainers. While in open source projects, the ratios of user-to-maintainer are commonly unbalanced. Many popular projects might only have one or two maintainers behind the sense. As a project grows and gains more users, the number of tasks required to maintain the project may easily go beyond one’s capacity.
+Software once written, is never finished. Maintainance plays a crucial role to keep a project "alive", getting bug or security fixes on time, and being sustainable in the long run. Things like triaging issues, reviewing PRs, and discussions could take a lot of effort from maintainers. While in open source projects, the ratios of user-to-maintainer are commonly unbalanced. Many popular projects might only have one or two maintainers behind the sense. As a project grows and gains more users, the number of tasks required to maintain the project may easily go beyond one’s capacity.
 
 <figure>
 <img src="/images/github-inbox-light.png" img-light rounded-lg>
@@ -48,4 +48,4 @@ In my opinion, **asking for minimal reproduction is asking for equity of the eff
 
 As a maintainer, I appreciate all the issues and pull requests opened. And I believe it's true that some of the issues we closed without reproduction might still have real bugs that need to be fixed. But to not be overwhelmed by the notifications, maintainers need to set the priorities for handling the tasks. Keeping the number of issues in a manageable manner is one of the ways to keep the project healthy in the long run.
 
-I believe open source is about building great stuff together, not solely on maintainers' shoulders. Wish we could build a better and healthier comunity together. Thanks for reading :)
+I believe open source is about building great stuff together, not solely on maintainers' shoulders. Wish we could make a better and healthier community together. Thanks for reading :)
