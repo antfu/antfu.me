@@ -30,7 +30,7 @@ Yeah, that sounds scary. But luckily, things are not that bad in real practice. 
 
 ## Maintainance takes effort, a lot
 
-Software once written, is never finished. Maintainance plays a crucial role to keep a project "alive", getting bug or security fixes on time, and being sustainable in the long run. Things like triaging issues, reviewing PRs, and discussions could take a lot of effort from maintainers. While in open source projects, the ratios of user-to-maintainer are commonly unbalanced. Many popular projects might only have one or two maintainers behind the sense. As a project grows and gains more users, the number of tasks required to maintain the project may easily go beyond one’s capacity.
+Software once written, is never finished. Maintainance plays a crucial role to keep a project "alive", getting bug or security fixes on time, and being sustainable in the long run. Things like triaging issues, reviewing PRs, and discussions could take a lot of effort from maintainers. While in open source projects, the ratios of user-to-maintainer are commonly unbalanced. Many popular projects might only have one or two maintainers behind the scene. As a project grows and gains more users, the number of tasks required to maintain the project may easily go beyond one’s capacity.
 
 <figure>
 <img src="/images/github-inbox-light.png" img-light rounded-lg>
@@ -42,7 +42,7 @@ Software once written, is never finished. Maintainance plays a crucial role to k
 
 A good [minimal reproduction](https://stackoverflow.com/help/minimal-reproducible-example) of a potential issue could greatly help maintainers to identify the root cause and land the fix quickly. Without a minimal reproduction, merely from the issue description or a screenshot, maintainers won't even know whether it's a real issue of the project or it's caused by some other factors. To identify that, maintainers might need to spend extra time to find a reproduction themselves, or dive into the giant project people shared as a "non-minimal reproduction". Hours might be spent, but what if it turns out a non-issue or unreproducible? What if there are hundreds of such issues you need to deal with?
 
-In my opinion, **asking for minimal reproduction is asking for equity of the effort spent**. If everyone could take some effort to create a minimal reproduction before opening issues, it would save maintainers hundreds of hours (or even help themselves to find user-land solutions/mistakes, then they don't even need to create the issue). A well-investigated and well-explained issue would also make maintainers more willing to spend their time and effort in return.
+In my opinion, **asking for minimal reproduction is asking for equity of the effort spent**. If everyone could take some time to create a minimal reproduction before opening issues, it would save maintainers hundreds of hours (or even help themselves to find user-land solutions/mistakes, then they don't even need to create the issue). A well-investigated and well-explained issue would also make maintainers more willing to spend their time and effort in return.
 
 ## Ending
 
