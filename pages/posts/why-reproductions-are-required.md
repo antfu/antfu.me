@@ -24,7 +24,7 @@ First of all, let's reach a consensus about Open Source Software(OSS). If you lo
 
 > The software is provided "AS IS", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement.
 
-"As is" stands that you are free to use the code, fork it, or modify it as you want with the **current state**. Meaning the authors are not responsible to fix or improve anything you might have now or in the future. Since it's free and open source, the authors or maintainers gain nothing regardless if you use it or not. There is no 24-7 customer service. Theoretically, you as a user, should be responsible to the code you use.
+"As is" stands that you are free to use the code, fork it, or modify it as you want with the **current state**. Meaning the authors are not responsible to fix or improve anything you might have now or in the future. Since it's free and open source, the authors or maintainers gain nothing regardless if you use it or not. There is no such thing as 24-7 customer service. Theoretically, you as a consumer, should be responsible to the code you use.
 
 Yeah, that sounds scary. But luckily, things are not that bad in real practice. In many open source projects, we build trust between users and maintainers. Users contribute to projects by reporting issues they faced, or sharing solutions via discussions and pull requests. Maintainers spend their time reviewing, making decisions, managing releases, and doing distributions. Both users and maintainers work **voluntarily** toward the same wish - to make the software better, for everyone.
 
@@ -44,7 +44,7 @@ A good [minimal reproduction](https://stackoverflow.com/help/minimal-reproducibl
 
 In my opinion, **asking for minimal reproduction is asking for equity of the effort spent**. If everyone could take some time to create a minimal reproduction before opening issues, it would save maintainers hundreds of hours (or even help themselves to find user-land solutions/mistakes, then they don't even need to create the issue). A well-investigated and well-explained issue would also make maintainers more willing to spend their time and effort in return.
 
-## Ending
+## Wrapping Up
 
 As a maintainer, I appreciate all the issues and pull requests opened. And I believe it's true that some of the issues we closed without reproduction might still have real bugs that need to be fixed. But to not be overwhelmed by the notifications, maintainers need to set the priorities for handling the tasks. Keeping the number of issues in a manageable manner is one of the ways to keep the project healthy in the long run.
 
