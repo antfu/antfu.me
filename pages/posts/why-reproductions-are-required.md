@@ -8,6 +8,8 @@ description: My thoughts on why reproductions are important in open source.
 
 [[toc]]
 
+> [中文 Chinese Version](/posts/why-reproductions-are-required-zh)
+
 If you have ever browsed the issue lists in my repos or created one, you might sometimes see I reply with the following comment and then close the issue:
 
 <figure>
