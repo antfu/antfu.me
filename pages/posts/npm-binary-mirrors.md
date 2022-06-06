@@ -11,7 +11,7 @@ duration: 1min
 
 ```bash
 # === NPM BINRAY CHINA ===
-# https://github.com/cnpm/binary-mirror-config/blob/master/package.json#L48
+# https://github.com/cnpm/binary-mirror-config/blob/main/package.json#L48
 export NODEJS_ORG_MIRROR="https://cdn.npmmirror.com/binaries/node"
 export NVM_NODEJS_ORG_MIRROR="https://cdn.npmmirror.com/binaries/node"
 export PHANTOMJS_CDNURL="https://cdn.npmmirror.com/binaries/phantomjs"

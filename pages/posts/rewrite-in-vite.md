@@ -87,7 +87,7 @@ Basically, it uses [`markdown-it`](https://markdown-it.github.io/) to transform 
 
 ### Syntax Highlighting
 
-Getting syntax highlight works in dark mode isn't an easy task as well. [Shiki](https://github.com/shikijs/shiki) inlined all the colors into the HTML so you would not be bored by the CSS namespace pollution, but that also means it will be really hard to get the colors aware of your global color scheme. [Prism](https://prismjs.com/) on the other hand, uses the classes combining the CSS theme to do the job. It's easier to merge two color schemes and make them aware of the `dark` trigger. The bad thing is, themes are often wrote by different authors with different styles of coloring and styling things. Sometimes, even the font and spacing could be different across different themes. If you ever ran into a similar situation, you should know what I mean. If you don't (lucky you!), see [Prism's themes collection](https://github.com/PrismJS/prism-themes/tree/master/themes)([`prism-vs.css`](https://github.com/PrismJS/prism-themes/blob/c24ddffde2737293d9b2df7dc59939d527648863/themes/prism-vs.css#L9) and [`prism-vsc-dark-plus.css`](https://github.com/PrismJS/prism-themes/blob/c24ddffde2737293d9b2df7dc59939d527648863/themes/prism-vsc-dark-plus.css#L6) for example).
+Getting syntax highlight works in dark mode isn't an easy task as well. [Shiki](https://github.com/shikijs/shiki) inlined all the colors into the HTML so you would not be bored by the CSS namespace pollution, but that also means it will be really hard to get the colors aware of your global color scheme. [Prism](https://prismjs.com/) on the other hand, uses the classes combining the CSS theme to do the job. It's easier to merge two color schemes and make them aware of the `dark` trigger. The bad thing is, themes are often wrote by different authors with different styles of coloring and styling things. Sometimes, even the font and spacing could be different across different themes. If you ever ran into a similar situation, you should know what I mean. If you don't (lucky you!), see [Prism's themes collection](https://github.com/PrismJS/prism-themes/tree/main/themes)([`prism-vs.css`](https://github.com/PrismJS/prism-themes/blob/c24ddffde2737293d9b2df7dc59939d527648863/themes/prism-vs.css#L9) and [`prism-vsc-dark-plus.css`](https://github.com/PrismJS/prism-themes/blob/c24ddffde2737293d9b2df7dc59939d527648863/themes/prism-vsc-dark-plus.css#L6) for example).
 
 Fight with them for a while you might be able to ease the misalignment eventually. But what if we can have a smarter way to do this?
 
@@ -159,7 +159,7 @@ While Codecember is more like a site than an app, we would need to do some serve
 
 - [vite-ssg](https://github.com/antfu/vite-ssg) - Server-side generation for Vite.
 
-The idea here is fairly simple: bundle the app entry, then for each route, dump the app using APIs from the [`@vue/server-renderer`](https://github.com/vuejs/vue-next/tree/master/packages/server-renderer) package. Simplified code here:
+The idea here is fairly simple: bundle the app entry, then for each route, dump the app using APIs from the [`@vue/server-renderer`](https://github.com/vuejs/core/tree/main/packages/server-renderer) package. Simplified code here:
 
 ```ts
 import { renderToString } from '@vue/server-renderer'

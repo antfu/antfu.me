@@ -29,7 +29,7 @@ The drawback of this is that you will need to maintain two codebases which doubl
 
 ## Build Scripts
 
-In [VueUse](https://github.com/antfu/vueuse), I wrote [some build scripts](https://github.com/antfu/vueuse/tree/master/scripts) to make the code imports from the target version's API while building. After that, I would need to publish two tags `vue2` `vue3` to distinguish different version supports. With this, I can wite the code once and make the library supports both Vue versions. The problem of it is that I need to build twice on each release and guide users to install with the corresponding plugin version (and manually install [`@vue/composition-api`](https://github.com/vuejs/composition-api) for Vue 2).
+In [VueUse](https://github.com/antfu/vueuse), I wrote [some build scripts](https://github.com/antfu/vueuse/tree/main/scripts) to make the code imports from the target version's API while building. After that, I would need to publish two tags `vue2` `vue3` to distinguish different version supports. With this, I can wite the code once and make the library supports both Vue versions. The problem of it is that I need to build twice on each release and guide users to install with the corresponding plugin version (and manually install [`@vue/composition-api`](https://github.com/vuejs/composition-api) for Vue 2).
 
 ***
 
@@ -57,9 +57,9 @@ When you are going to create a Vue plugin/library, simply install `vue-demi` as 
 import Vue, { ref, reactive } from 'vue-demi'
 ```
 
-Underhood, it utilized the [`postinstall` npm hook](https://docs.npmjs.com/misc/scripts). After all packages get installed, [the script](https://github.com/antfu/vue-demi/blob/master/scripts/postinstall.js) will start to check the installed Vue version and redirect the exports to based on the local Vue version. When working with Vue 2, it will also install `@vue/composition-api` automatically if it doesn't get installed.
+Underhood, it utilized the [`postinstall` npm hook](https://docs.npmjs.com/misc/scripts). After all packages get installed, [the script](https://github.com/antfu/vue-demi/blob/main/scripts/postinstall.js) will start to check the installed Vue version and redirect the exports to based on the local Vue version. When working with Vue 2, it will also install `@vue/composition-api` automatically if it doesn't get installed.
 
-You can also check [the working examples](https://github.com/antfu/vue-demi/tree/master/examples), where I created a demo library [`@vue-demi/use-mouse`](https://github.com/antfu/vue-demi/blob/master/examples/%40vue-demi/use-mouse/src/index.ts) with just a single file entry.
+You can also check [the working examples](https://github.com/antfu/vue-demi/tree/main/examples), where I created a demo library [`@vue-demi/use-mouse`](https://github.com/antfu/vue-demi/blob/main/examples/%40vue-demi/use-mouse/src/index.ts) with just a single file entry.
 
 Please keep in mind that Vue Demi is experimental and there will definitely be some glitches. Feel free to give it a try and let me know if anything goes wrong.
 

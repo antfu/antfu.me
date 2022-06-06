@@ -41,7 +41,7 @@ I think this is a pretty tricky one. You won't see any warn or error on initiali
 
 ### 💫 `shims-vue.d.ts`
 
-> Update: now you can use [`@vuedx/typescript-plugin-vue`](https://github.com/znck/vue-developer-experience/tree/master/packages/typescript-plugin-vue) for better type inference with SFC (no need for `shims-vue.d.ts` then) 
+> Update: now you can use [`@vuedx/typescript-plugin-vue`](https://github.com/znck/vue-developer-experience/tree/main/packages/typescript-plugin-vue) for better type inference with SFC (no need for `shims-vue.d.ts` then) 
 
 Changed to this:
 

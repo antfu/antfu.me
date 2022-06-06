@@ -12,7 +12,7 @@ duration: 12min
 
 Here are some proof of concepts for using the reactivity system outside of Vue:
 
-- [`@vue/lit`](https://github.com/yyx990803/vue-lit) is a minimal framework wrote by Evan combining [`@vue/reactivity`](https://github.com/vuejs/vue-next/tree/master/packages/reactivity) and [`lit-html`](https://lit-html.polymer-project.org/). It can run directly in browsers, with the almost identical experience as Vue Composition API.
+- [`@vue/lit`](https://github.com/yyx990803/vue-lit) is a minimal framework wrote by Evan combining [`@vue/reactivity`](https://github.com/vuejs/core/tree/main/packages/reactivity) and [`lit-html`](https://lit-html.polymer-project.org/). It can run directly in browsers, with the almost identical experience as Vue Composition API.
 
 - [`ReactiVue`](https://github.com/antfu/reactivue) ports Vue Composition API to React. It also provides React's lifecycles in the Vue style.
 
@@ -104,7 +104,7 @@ const computed = (getter) => {
 }
 ```
 
-If you really interested in how it works in Vue, check out [the source code here](https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/computed.ts)
+If you really interested in how it works in Vue, check out [the source code here](https://github.com/vuejs/core/blob/main/packages/reactivity/src/computed.ts)
 
 ## Build yourself a `watch`
 
@@ -116,7 +116,7 @@ Oh wait, we are missing the `watch` here!
 import { watch } from '@vue/reactivity' // does NOT exist!
 ```
 
-If you take a look at Vue 3's source code, you will find that `watch` is actually [implemented in `@vue/runtime-core`](https://github.com/vuejs/vue-next/blob/master/packages/runtime-core/src/apiWatch.ts), along with the Vue's component model and lifecycles. The main reason for this is that `watch` is deep bound with the component's lifecycles (auto dispose, invalidate, etc.). But it shouldn't be the thing to keep you from using it outside of Vue.
+If you take a look at Vue 3's source code, you will find that `watch` is actually [implemented in `@vue/runtime-core`](https://github.com/vuejs/core/blob/main/packages/runtime-core/src/apiWatch.ts), along with the Vue's component model and lifecycles. The main reason for this is that `watch` is deep bound with the component's lifecycles (auto dispose, invalidate, etc.). But it shouldn't be the thing to keep you from using it outside of Vue.
 
 Let's implement the `watch` our own!
 
@@ -241,7 +241,7 @@ Done! The thing left to do is to polish, adding overloads to make it more flexib
 
 ## Lifecycles
 
-In Vue, `computed` and `watch` will automatically bind their `effect` runner to the current component instance. When the component get unmounted, the effects bond to it will be auto disposed. More specially, you can read [the source code here](https://github.com/vuejs/vue-next/blob/985bd2bcb5fd8bccd1c15c8c5d89a6919fd73922/packages/runtime-core/src/apiWatch.ts#L294).
+In Vue, `computed` and `watch` will automatically bind their `effect` runner to the current component instance. When the component get unmounted, the effects bond to it will be auto disposed. More specially, you can read [the source code here](https://github.com/vuejs/core/blob/985bd2bcb5fd8bccd1c15c8c5d89a6919fd73922/packages/runtime-core/src/apiWatch.ts#L294).
 
 Since we don't have an instance, if you want to stop those effects, you have to do them manually. When you have multiple effects in used, to stop them together, you have to manually collect them together. One easier way is to mock similar lifecycles like Vue. This requires some amount of works, I will explain that in another blog post. Please keep tuned.
 
