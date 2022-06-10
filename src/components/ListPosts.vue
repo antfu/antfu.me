@@ -7,6 +7,8 @@ export interface Post {
   title: string
   date: string
   lang?: string
+  desc?: string
+  platform?: string
   duration?: string
 }
 
@@ -51,9 +53,11 @@ const posts = computed(() => (props.posts || routes).filter(i => !englishOnly.va
             class="text-xs border border-current rounded px-1 pb-0.2"
           >中文</sup>
         </div>
+
         <div class="time opacity-50 text-sm -mt-1">
           {{ formatDate(route.date) }}
-          <span v-if="route.duration" class="opacity-50">· {{ route.duration }}</span>
+          <span v-if="route.duration" op80>· {{ route.duration }}</span>
+          <span v-if="route.platform" op80>· {{ route.platform }}</span>
         </div>
       </li>
     </app-link>
