@@ -51,7 +51,7 @@ items:
 
 <SubNav/>
 
-> Live stream at [YouTube](https://www.youtube.com/channel/UCbzoLT8wqhI3iOAz1Nq0pvw) & [哔哩哔哩](https://space.bilibili.com/668380)
+> Live stream at [YouTube](https://www.youtube.com/anthonyfu7) & [哔哩哔哩](https://space.bilibili.com/668380)
 
 ***
 
