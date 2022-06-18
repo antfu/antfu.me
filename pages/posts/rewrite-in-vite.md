@@ -81,7 +81,7 @@ const toggleDark = useToggle(isDark)
 
 After building Icônes, I started working on the [Codecember](http://codecember.ink/) project with [@octref](https://blog.matsu.io/about), an initiative of learning and creating generative arts in December. With the spirit of dogfooding, we chosen Vite for building the site. In Codecember we will need to have a prompt every day with some texts, code snippets, and demos. This comes with the problem that Vite does not have a plugin for handling markdown files at that moment, so of course, I made one myself.
 
-- [vite-plugin-md](https://github.com/antfu/vite-plugin-md) - Markdown for Vite.
+- [vite-plugin-vue-markdown](https://github.com/antfu/vite-plugin-vue-markdown) - Markdown for Vite.
 
 Basically, it uses [`markdown-it`](https://markdown-it.github.io/) to transform markdown into HTML and feed it into Vue's template compiler. As the generated template is handled by Vue, we can easily support Vue components inside Markdown.
 
@@ -183,7 +183,7 @@ await Promise.all(
 
 The full code can be found [here](https://github.com/antfu/vite-ssg/blob/fa256449923e05e55bf15dcf4747d517bc22e33a/src/node/build.ts#L94-L104).
 
-With the [@vueuse/head](https://github.com/vueuse/head) package made by [@egoist](https://github.com/egoist), I made the document head/meta manipulation in SSG with ease. Combining with [vite-plugin-md](https://github.com/antfu/vite-plugin-md), you can even use the frontmatter to set the meta (title, description, og:image, etc.).
+With the [@vueuse/head](https://github.com/vueuse/head) package made by [@egoist](https://github.com/egoist), I made the document head/meta manipulation in SSG with ease. Combining with [vite-plugin-vue-markdown](https://github.com/antfu/vite-plugin-vue-markdown), you can even use the frontmatter to set the meta (title, description, og:image, etc.).
 
 ```html
 <script setup>

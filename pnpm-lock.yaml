@@ -46,9 +46,9 @@ specifiers:
   unplugin-vue-components: ^0.19.6
   vite: ^2.9.12
   vite-plugin-inspect: ^0.5.0
-  vite-plugin-md: ^0.12.0
   vite-plugin-pages: ^0.24.1
   vite-plugin-pwa: ^0.12.0
+  vite-plugin-vue-markdown: ^0.1.0
   vite-plugin-yaml: ^1.0.5
   vite-ssg: ^0.20.1
   vite-svg-loader: ^3.4.0
@@ -102,9 +102,9 @@ devDependencies:
   unplugin-vue-components: 0.19.6_vite@2.9.12+vue@3.2.37
   vite: 2.9.12
   vite-plugin-inspect: 0.5.0_vite@2.9.12
-  vite-plugin-md: 0.12.4_vite@2.9.12
   vite-plugin-pages: 0.24.1_vite@2.9.12
   vite-plugin-pwa: 0.12.0_vite@2.9.12
+  vite-plugin-vue-markdown: 0.1.0_vite@2.9.12
   vite-plugin-yaml: 1.0.5_vite@2.9.12
   vite-ssg: 0.20.1_qbxdy2o2fmv6tzde6sdikth3qm
   vite-svg-loader: 3.4.0
@@ -2912,10 +2912,6 @@ packages:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
     dev: true
 
-  /entities/2.1.0:
-    resolution: {integrity: sha512-hCx1oky9PFrJ611mf0ifBLBRW8lUUVRlFolb5gWRfIELabBlbp9xZvrqZLZAs+NxFnbfQoeGd8wDkygjg7U85w==}
-    dev: true
-
   /entities/2.2.0:
     resolution: {integrity: sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==}
     dev: true
@@ -4771,12 +4767,6 @@ packages:
     resolution: {integrity: sha512-8ZmlJFVK9iCmtLz19HpSsR8HaAMWBT284VMNednLwlIMDP2hJDCIhUp0IZ2xUcZ+Ob6BM0VvCSJwzASDM45NLQ==}
     dev: true
 
-  /linkify-it/3.0.3:
-    resolution: {integrity: sha512-ynTsyrFSdE5oZ/O9GEf00kPngmOfVwazR5GKDq6EYfhlpFug3J2zybX56a2PRRpc9P+FuSoGNAwjlbDs9jJBPQ==}
-    dependencies:
-      uc.micro: 1.0.6
-    dev: true
-
   /linkify-it/4.0.1:
     resolution: {integrity: sha512-C7bfi1UZmoj8+PQx22XyeXCuBlokoyWQL5pWSP+EI6nzRylyThouddufc2c1NDIcP9k5agmN9fLpA7VNJfIiqw==}
     dependencies:
@@ -4890,17 +4880,6 @@ packages:
   /markdown-it-table-of-contents/0.6.0:
     resolution: {integrity: sha512-jHvEjZVEibyW97zEYg19mZCIXO16lHbvRaPDkEuOfMPBmzlI7cYczMZLMfUvwkhdOVQpIxu3gx6mgaw46KsNsQ==}
     engines: {node: '>6.4.0'}
-    dev: true
-
-  /markdown-it/12.3.2:
-    resolution: {integrity: sha512-TchMembfxfNVpHkbtriWltGWc+m3xszaRD0CZup7GFFhzIgQqxIfn3eGj1yZpfuflzPvfkt611B2Q/Bsk1YnGg==}
-    hasBin: true
-    dependencies:
-      argparse: 2.0.1
-      entities: 2.1.0
-      linkify-it: 3.0.3
-      mdurl: 1.0.1
-      uc.micro: 1.0.6
     dev: true
 
   /markdown-it/13.0.1:
@@ -6484,20 +6463,6 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-md/0.12.4_vite@2.9.12:
-    resolution: {integrity: sha512-qtkzpHAvdp/Zo/2ntmCpfph2JD4F0+tOl1vK3QVAZztpWyoO7Yi8Y2Dqu7Urrnh/fPH7PnIWlrrQy1XV/D92Pg==}
-    peerDependencies:
-      vite: ^2.0.0
-    dependencies:
-      '@antfu/utils': 0.5.2
-      '@rollup/pluginutils': 4.2.1
-      '@types/markdown-it': 12.2.3
-      '@vue/runtime-core': 3.2.37
-      gray-matter: 4.0.3
-      markdown-it: 12.3.2
-      vite: 2.9.12
-    dev: true
-
   /vite-plugin-pages/0.24.1_vite@2.9.12:
     resolution: {integrity: sha512-k7z5MmFpmeGKOhMCnBmVc0Y3r72fek8yh8f7ksOuiWB7LVUmjAfXtcKbtG68+/ZcnEMpA5vcTYrWiYjGk5BwyQ==}
     peerDependencies:
@@ -6536,6 +6501,19 @@ packages:
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
+    dev: true
+
+  /vite-plugin-vue-markdown/0.1.0_vite@2.9.12:
+    resolution: {integrity: sha512-7mnWdF3PjJ2pHidcxwFkvKdT2Il5D9cXPnf9OmKeXo8DStBtz0RMb2TFw5QbVVxrlLUGoFZBsA/BIbGs5mXcdQ==}
+    peerDependencies:
+      vite: ^2.0.0
+    dependencies:
+      '@antfu/utils': 0.5.2
+      '@rollup/pluginutils': 4.2.1
+      '@types/markdown-it': 12.2.3
+      gray-matter: 4.0.3
+      markdown-it: 13.0.1
+      vite: 2.9.12
     dev: true
 
   /vite-plugin-yaml/1.0.5_vite@2.9.12:
