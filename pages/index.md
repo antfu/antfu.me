@@ -14,7 +14,7 @@ Team member of [Windi CSS](https://windicss.org/), [wenyan-lang 文言](https://
 
 Dreaming up ideas and making them come true is where my passion lies. You can find my [full projects list here](/projects). I have also started a 100-day challenge about design, compform, interactivity, and experimenting with new things on [100.antfu.me](https://100.antfu.me/).
 
-Outside of programming, I enjoy doing photography and traveling. Some of my photos can be found on [Instagram](https://www.instagram.com/antfu7). If you happen to be in the same city I live (currently in Shanghai), maybe we can hang out and take some photos or code together.
+Outside of programming, I enjoy doing photography and traveling. Some of my photos can be found on [Instagram](https://www.instagram.com/antfu7). If you happen to be in the same city I live (currently in Xiamen), maybe we can hang out and take some photos or code together.
 
 ***
 
