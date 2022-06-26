@@ -2,4 +2,8 @@
 title: 托尼带水
 ---
 
-Hello!
+## 二群
+
+已经进一群的就麻烦把机会让给其他人吧！🙌
+
+![](/images/wechat-group2.png)
