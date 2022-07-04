@@ -46,6 +46,8 @@ A good [minimal reproduction](https://stackoverflow.com/help/minimal-reproducibl
 
 In my opinion, **asking for minimal reproduction is asking for equity of the effort spent**. If everyone could take some time to create a minimal reproduction before opening issues, it would save maintainers hundreds of hours (or even help themselves to find user-land solutions/mistakes, then they don't even need to create the issue). A well-investigated and well-explained issue would also make maintainers more willing to spend their time and effort in return.
 
+> Recommand watching [a more detailed explanation by Rich Harris](https://youtu.be/dB_YjuAMH3o?t=1376).
+
 ## How to Create a Minimal Reproduction
 
 > This section is ported from [*Please include a repro*](https://gist.github.com/Rich-Harris/88c5fc2ac6dc941b22e7996af05d70ff) by [Rich Harris](https://github.com/Rich-Harris)
