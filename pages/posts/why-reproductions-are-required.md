@@ -46,6 +46,19 @@ A good [minimal reproduction](https://stackoverflow.com/help/minimal-reproducibl
 
 In my opinion, **asking for minimal reproduction is asking for equity of the effort spent**. If everyone could take some time to create a minimal reproduction before opening issues, it would save maintainers hundreds of hours (or even help themselves to find user-land solutions/mistakes, then they don't even need to create the issue). A well-investigated and well-explained issue would also make maintainers more willing to spend their time and effort in return.
 
+## How to Create a Minimal Reproduction
+
+> This section is ported from [*Please include a repro*](https://gist.github.com/Rich-Harris/88c5fc2ac6dc941b22e7996af05d70ff) by [Rich Harris](https://github.com/Rich-Harris)
+
+In some cases, there will be a project-specific way to demonstrate problems – for example, [Rollup](http://rollupjs.org), [Svelte](https://svelte.technology/repl) and [Vue](https://sfc.vuejs.org/) all have dedicated REPLs. Use them!
+
+Often, it's not possible to illustrate the problem with a REPL. Here's what you do:
+
+1. Create a sample repo on GitHub (or wherever)
+2. Demonstrate the problem, and nothing but the problem. If the app where you're experiencing the issue happens to use Gulp, I don't care, unless the problem involves Gulp. Remove that stuff. Whittle it down to the *bare minimum* of code that reliably demonstrates the issue. Get rid of any dependencies that aren't *directly* related to the problem.
+3. Install all your dependencies to `package.json`. If the maintainer can't clone the repo and do `npm install && npm run build` (or similar – see point 4) to see the problem, because the maintainer needs some globally installed CLI tool or whatever, that would make it harder to get to the bottom of the issue.
+4. Include instructions in the repo, along with a description of the expected and actual behaviour. Obviously the issue should include information about the bug as well, but it's really helpful if `README.md` includes that information, plus a link back to the issue. If there are any instructions beyond `npm install && npm run build`, they should go here.
+
 ## Wrapping Up
 
 As a maintainer, I appreciate all the issues and pull requests opened. And I believe it's true that some of the issues we closed without reproduction might still have real bugs that need to be fixed. But to not be overwhelmed by the notifications, maintainers need to set the priorities for handling the tasks. Keeping the number of issues in a manageable manner is one of the ways to keep the project healthy in the long run.
