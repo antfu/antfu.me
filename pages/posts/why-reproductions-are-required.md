@@ -26,7 +26,7 @@ First of all, let's reach a consensus about Open Source Software(OSS). If you lo
 
 > The software is provided "AS IS", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement.
 
-"As is" stands that you are free to use the code, fork it, or modify it as you want with the **current state**. Meaning the authors are not responsible to fix or improve anything you might have now or in the future. Since it's free and open source, the authors or maintainers gain nothing regardless if you use it or not. There is no such thing as 24-7 customer service. Theoretically, you as a consumer, should be responsible to the code you use.
+"As is" stands that you are free to use the code, fork it, or modify it as you want with the **current state**. Meaning the authors are not responsible to fix or improve anything you might have now or in the future. Since it's free and open source, the authors or maintainers gain nothing regardless if you use it or not. There is no such thing as 24-7 customer service. Theoretically, you as a user of open source code, should be responsible to the code you use.
 
 Yeah, that sounds scary. But luckily, things are not that bad in real practice. In many open source projects, we build trust between users and maintainers. Users contribute to projects by reporting issues they faced, or sharing solutions via discussions and pull requests. Maintainers spend their time reviewing, making decisions, managing releases, and doing distributions. Both users and maintainers work **voluntarily** toward the same wish - to make the software better, for everyone.
 
@@ -54,8 +54,8 @@ In some cases, there will be a project-specific way to demonstrate problems – 
 
 Often, it's not possible to illustrate the problem with a REPL. Here's what you do:
 
-1. Create a sample repo on GitHub (or wherever)
-2. Demonstrate the problem, and nothing but the problem. If the app where you're experiencing the issue happens to use Gulp, I don't care, unless the problem involves Gulp. Remove that stuff. Whittle it down to the *bare minimum* of code that reliably demonstrates the issue. Get rid of any dependencies that aren't *directly* related to the problem.
+1. Create a sample repo on GitHub or Stackblitz (or wherever)
+2. Demonstrate the problem, and nothing but the problem. Whittle it down to the *bare minimum* of code that reliably demonstrates the issue. Get rid of any dependencies that aren't *directly* related to the problem.
 3. Install all your dependencies to `package.json`. If the maintainer can't clone the repo and do `npm install && npm run build` (or similar – see point 4) to see the problem, because the maintainer needs some globally installed CLI tool or whatever, that would make it harder to get to the bottom of the issue.
 4. Include instructions in the repo, along with a description of the expected and actual behaviour. Obviously the issue should include information about the bug as well, but it's really helpful if `README.md` includes that information, plus a link back to the issue. If there are any instructions beyond `npm install && npm run build`, they should go here.
 
