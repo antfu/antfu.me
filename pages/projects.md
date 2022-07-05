@@ -11,7 +11,7 @@ projects:
       icon: 'i-mdi-clock-fast'
     - name: 'reTypewriter'
       link: 'https://twitter.com/antfu7/status/1505236765447458817'
-      desc: 'Smartly reply the steps of your changes at ease.'
+      desc: 'Smartly replay the steps of your changes at ease.'
       icon: 'i-carbon-keyboard'
 
   Latest:
