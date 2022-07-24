@@ -44,15 +44,16 @@ const isSameYear = (a: Date | string | number, b: Date | string | number) => a &
         :to="route.path"
       >
         <li class="no-underline">
-          <div class="title text-lg">
-            <sup
+          <div class="title text-lg leading-1.2em">
+            <span
               v-if="route.lang === 'zh'"
-              class="text-xs border border-current rounded px-1 pb-0.2 md:ml--11 mr1"
-            >中文</sup>
-            {{ route.title }}
+              align-middle
+              class="text-xs border border-current rounded px-1 pb-0.2 md:ml--10.5 mr2"
+            >中文</span>
+            <span align-middle>{{ route.title }}</span>
           </div>
 
-          <div class="time opacity-50 text-sm -mt-1">
+          <div class="time opacity-50 text-sm">
             {{ formatDate(route.date) }}
             <span v-if="route.duration" op80>· {{ route.duration }}</span>
             <span v-if="route.platform" op80>· {{ route.platform }}</span>
