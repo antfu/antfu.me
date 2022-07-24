@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import type { UserConfig } from 'vite'
+import { defineConfig } from 'vite'
 import fs from 'fs-extra'
 import Pages from 'vite-plugin-pages'
 import Inspect from 'vite-plugin-inspect'
@@ -8,31 +8,19 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
 import Markdown from 'vite-plugin-vue-markdown'
 import Vue from '@vitejs/plugin-vue'
-import Prism from 'markdown-it-prism'
+import Shiki from 'markdown-it-shiki'
 import matter from 'gray-matter'
 import AutoImport from 'unplugin-auto-import/vite'
 import anchor from 'markdown-it-anchor'
 import LinkAttributes from 'markdown-it-link-attributes'
 import UnoCSS from 'unocss/vite'
 import SVG from 'vite-svg-loader'
-import { presetAttributify, presetIcons, presetUno } from 'unocss'
+import { presetAttributify, presetIcons, presetUno, presetWebFonts } from 'unocss'
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
 import { slugify } from './scripts/slugify'
 
-import 'prismjs/components/prism-regex'
-import 'prismjs/components/prism-javascript'
-import 'prismjs/components/prism-typescript'
-import 'prismjs/components/prism-xml-doc'
-import 'prismjs/components/prism-yaml'
-import 'prismjs/components/prism-json'
-import 'prismjs/components/prism-markdown'
-import 'prismjs/components/prism-java'
-import 'prismjs/components/prism-javadoclike'
-import 'prismjs/components/prism-javadoc'
-import 'prismjs/components/prism-jsdoc'
-
-const config: UserConfig = {
+export default defineConfig({
   resolve: {
     alias: [
       { find: '~/', replacement: `${resolve(__dirname, 'src')}/` },
@@ -49,11 +37,6 @@ const config: UserConfig = {
   },
   plugins: [
     UnoCSS({
-      theme: {
-        fontFamily: {
-          sans: '"Inter", Inter var,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
-        },
-      },
       presets: [
         presetIcons({
           extraProperties: {
@@ -65,6 +48,12 @@ const config: UserConfig = {
         }),
         presetAttributify(),
         presetUno(),
+        presetWebFonts({
+          fonts: {
+            sans: 'Inter',
+            mono: 'DM Mono'
+          }
+        })
       ],
     }),
 
@@ -97,7 +86,12 @@ const config: UserConfig = {
         quotes: '""\'\'',
       },
       markdownItSetup(md) {
-        md.use(Prism)
+        md.use(Shiki, {
+          theme: {
+            light: 'vitesse-light',
+            dark: 'vitesse-dark',
+          },
+        })
         md.use(anchor, {
           slugify,
           permalink: anchor.permalink.linkInsideHeader({
@@ -167,6 +161,4 @@ const config: UserConfig = {
     formatting: 'minify',
     format: 'cjs',
   },
-}
-
-export default config
+})
