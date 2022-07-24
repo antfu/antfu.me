@@ -259,7 +259,7 @@ With either of the tools mentioned above, now we are able to write TypeScript as
 
 **In ESM, there is NO `__dirname`, `__filename`, `require`, `require.resolve`**. Instead, you will need to use `import.meta.url` and also do some convertion to get the file path string.
 
-So since our code will be compiled to both CJS and ESM, it's better to avoiding using those environment specific context whenever possible. If you do need them, you can refer to my note about [Isomorphic `__dirname`](/notes#isomorphic-dirname):
+So since our code will be compiled to both CJS and ESM, it's better to avoiding using those environment specific context whenever possible. If you do need them, you can refer to my note about [Isomorphic `__dirname`](/posts/isomorphic-dirname):
 
 ```ts
 import { dirname } from 'path'

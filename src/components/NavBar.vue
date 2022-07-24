@@ -38,9 +38,9 @@ import { isDark } from '~/logics'
         <!-- <router-link to="/bookmarks" title="Bookmarks">
           <div i-ri-bookmark-line />
         </router-link> -->
-        <router-link to="/notes" title="Notes">
+        <!-- <router-link to="/notes" title="Notes">
           <div i-ri-sticky-note-line />
-        </router-link>
+        </router-link> -->
         <router-link to="/sponsors-list" title="Sponsors">
           <div i-ri-heart-line />
         </router-link>

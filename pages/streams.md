@@ -28,23 +28,23 @@ items:
     platform: Bilibili
     lang: 'zh'
   - title: '实现 Vite 插件 import.meta.glob'
-    data: '2022-03-27'
+    date: '2022-03-27'
     path: 'https://www.bilibili.com/video/BV1ea411x7zm'
     platform: Bilibili
     lang: 'zh'
   - title: 'Vue 全自动引入黑魔法'
-    data: '2022-03-29'
+    date: '2022-03-29'
     path: 'https://www.bilibili.com/video/BV1L34y147jA'
     platform: Bilibili
     lang: 'zh'
   - title: '起飞！跨路由 Vue 组件动画实验'
-    data: '2022-04-01'
+    date: '2022-04-01'
     path: 'https://www.bilibili.com/video/BV1na41147qR'
     platform: Bilibili
     lang: 'zh'
   - title: 'Create with Anthony Fu - A World Clock'
     platform: YouTube
-    data: '2022-06-11'
+    date: '2022-06-11'
     path: 'https://www.youtube.com/watch?v=-EHoncCeg_Y'
     lang: 'en'
 ---

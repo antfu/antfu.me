@@ -1,16 +1,7 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import { englishOnly, formatDate } from '~/logics'
-
-export interface Post {
-  path: string
-  title: string
-  date: string
-  lang?: string
-  desc?: string
-  platform?: string
-  duration?: string
-}
+import type { Post } from '~/types'
 
 const props = defineProps<{
   type?: string
@@ -31,6 +22,9 @@ const routes: Post[] = router.getRoutes()
   }))
 
 const posts = computed(() => (props.posts || routes).filter(i => !englishOnly.value || i.lang !== 'zh'))
+
+const getYear = (a: Date | string | number) => new Date(a).getFullYear()
+const isSameYear = (a: Date | string | number, b: Date | string | number) => a && b && getYear(a) === getYear(b)
 </script>
 
 <template>
@@ -40,26 +34,31 @@ const posts = computed(() => (props.posts || routes).filter(i => !englishOnly.va
         { nothing here yet }
       </div>
     </template>
-    <app-link
-      v-for="route in posts" :key="route.path"
-      class="item block font-normal mb-6 mt-2 no-underline"
-      :to="route.path"
-    >
-      <li class="no-underline">
-        <div class="title text-lg">
-          {{ route.title }}
-          <sup
-            v-if="route.lang === 'zh'"
-            class="text-xs border border-current rounded px-1 pb-0.2"
-          >中文</sup>
-        </div>
 
-        <div class="time opacity-50 text-sm -mt-1">
-          {{ formatDate(route.date) }}
-          <span v-if="route.duration" op80>· {{ route.duration }}</span>
-          <span v-if="route.platform" op80>· {{ route.platform }}</span>
-        </div>
-      </li>
-    </app-link>
+    <template v-for="route, idx in posts" :key="route.path">
+      <div v-if="!isSameYear(route.date, posts[idx - 1]?.date)" relative h20>
+        <span text-8em op10 absolute left--3rem top--2rem font-bold>{{ getYear(route.date) }}</span>
+      </div>
+      <app-link
+        class="item block font-normal mb-6 mt-2 no-underline"
+        :to="route.path"
+      >
+        <li class="no-underline">
+          <div class="title text-lg">
+            {{ route.title }}
+            <sup
+              v-if="route.lang === 'zh'"
+              class="text-xs border border-current rounded px-1 pb-0.2"
+            >中文</sup>
+          </div>
+
+          <div class="time opacity-50 text-sm -mt-1">
+            {{ formatDate(route.date) }}
+            <span v-if="route.duration" op80>· {{ route.duration }}</span>
+            <span v-if="route.platform" op80>· {{ route.platform }}</span>
+          </div>
+        </li>
+      </app-link>
+    </template>
   </ul>
 </template>

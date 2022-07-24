@@ -21,7 +21,6 @@ const markdown = MarkdownIt({
 
 async function run() {
   await buildBlogRSS()
-  await buildNotesRSS()
 }
 
 async function buildBlogRSS() {
@@ -69,47 +68,6 @@ async function buildBlogRSS() {
   posts.sort((a, b) => +new Date(b.date) - +new Date(a.date))
 
   await writeFeed('feed', options, posts)
-}
-
-async function buildNotesRSS() {
-  const raw = await fs.readFile('pages/notes.md', 'utf-8')
-
-  const options = {
-    title: 'Anthony Fu\'s Notes',
-    description: 'Anthony Fu\'s Notes',
-    id: 'https://antfu.me/notes',
-    link: 'https://antfu.me/notes',
-    copyright: 'CC BY-NC-SA 4.0 2021 © Anthony Fu',
-    feedLinks: {
-      json: 'https://antfu.me/notes/feed.json',
-      atom: 'https://antfu.me/notes/feed.atom',
-      rss: 'https://antfu.me/notes/feed.xml',
-    },
-  }
-  const noteMatches = raw.matchAll(/<article>(.*?)<\/article>/gms)
-  const notes = []
-
-  for (const noteMatch of noteMatches) {
-    const rawNote = noteMatch[1]
-    const dateMatch = rawNote.match(/\n_(.+)_/)!
-    const titleMatch = rawNote.match(/##\s*(.*)\n/)!
-    const title = titleMatch[1]
-    const date = new Date(dateMatch[1])
-    const anchor = slugify(title)
-    const rawContent = rawNote.slice(dateMatch.index).replace(/.*\n/, '').trim()
-    const content = markdown.render(rawContent).replace('src="/', `src="${DOMAIN}/`)
-
-    notes.push({
-      title,
-      date,
-      content,
-      link: `${DOMAIN}/notes#${anchor}`,
-      lang: 'en',
-      author: [AUTHOR],
-    })
-  }
-
-  await writeFeed('notes/feed', options, notes)
 }
 
 async function writeFeed(name: string, options: FeedOptions, items: Item[]) {
