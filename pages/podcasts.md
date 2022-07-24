@@ -29,6 +29,20 @@ items:
     date: '2022-03-07'
     path: 'https://www.bilibili.com/video/BV1eS4y1S7zB'
     lang: 'zh'
+  - title: '模拟面试 - 我看你Vue写的挺好的，10K五险一金考虑一下'
+    date: '2022-04-15'
+    path: 'https://www.bilibili.com/video/BV1TY4y1p783'
+    platform: Bilibili
+    lang: 'zh'
+  - title: '模拟面试 - TS 体操 TwoSum'
+    date: '2022-04-18'
+    path: 'https://www.bilibili.com/video/BV1KS4y1A7hS'
+    platform: Bilibili
+    lang: 'zh'
+  - title: 'Vite 3 Announcement with the Team'
+    date: '2022-07-23'
+    path: 'https://www.youtube.com/watch?v=6tSqIW2ds1Y'
+    lang: 'en'
 ---
 
 <SubNav/>

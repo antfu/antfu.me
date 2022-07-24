@@ -42,18 +42,46 @@ items:
     path: 'https://www.bilibili.com/video/BV1na41147qR'
     platform: Bilibili
     lang: 'zh'
-  - title: 'Create with Anthony Fu - A World Clock'
+  - title: '差点坠机！跨路由 Vue 组件动画实验'
+    date: '2022-04-05'
+    path: 'https://www.bilibili.com/video/BV1sa41147qH'
+    platform: Bilibili
+    lang: 'zh'
+  - title: 'Create with Anthony Fu - A World Clock EP1'
     platform: YouTube
     date: '2022-06-11'
     path: 'https://www.youtube.com/watch?v=-EHoncCeg_Y'
     lang: 'en'
+  - title: 'Create with Anthony Fu - A World Clock EP2'
+    platform: YouTube
+    date: '2022-06-12'
+    path: 'https://www.youtube.com/watch?v=8vfDZqZLiG8'
+    lang: 'en'
+  - title: 'Live AMA'
+    platform: YouTube
+    date: '2022-06-23'
+    path: 'https://www.youtube.com/watch?v=Am60EtlGm9Y'
+    lang: 'en'
+  - title: '读评论！AMA'
+    date: '2022-06-23'
+    path: 'https://www.bilibili.com/video/BV11W4y167Uu'
+    platform: Bilibili
+    lang: 'zh'
+  - title: '获取包的所有导出函数'
+    date: '2022-06-28'
+    path: 'https://www.bilibili.com/video/BV1Z34y1H7fJ'
+    platform: Bilibili
+    lang: 'zh'
+  - title: 'VueUse 9.0 / Slidev / UnoCSS 一通乱播'
+    date: '2022-07-08'
+    path: 'https://www.bilibili.com/video/BV1qB4y1i76x'
+    platform: Bilibili
+    lang: 'zh'
 ---
 
 <SubNav/>
 
 > Live stream at [YouTube](https://www.youtube.com/anthonyfu7) & [哔哩哔哩](https://space.bilibili.com/668380)
-
-***
 
 <ListPosts :posts="frontmatter.items.reverse()" />
 

@@ -24,16 +24,17 @@ import { isDark } from '~/logics'
           <div i-ri-lightbulb-line class="md:hidden" />
         </router-link>
         <router-link to="/talks" class="lt-md:hidden" title="Talks">
-          <div i-ri-slideshow-2-line />
+          Talks
         </router-link>
         <router-link to="/podcasts" class="lt-md:hidden" title="Podcasts">
-          <div i-ri-mic-line />
+          Podcasts
         </router-link>
         <router-link to="/streams" class="lt-md:hidden" title="Streams">
-          <div i-ri-vidicon-line />
+          Streams
         </router-link>
         <router-link to="/demos" title="Demos">
-          <div i-ri-screenshot-line />
+          <span class="lt-md:hidden">Demos</span>
+          <div i-ri-screenshot-line class="md:hidden" />
         </router-link>
         <!-- <router-link to="/bookmarks" title="Bookmarks">
           <div i-ri-bookmark-line />

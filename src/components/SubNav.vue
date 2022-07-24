@@ -14,7 +14,7 @@ const route = useRoute()
       English Only
     </button>
 
-    <div mb-0 flex="~ gap-3" text-3xl>
+    <div mb-0 flex="~ gap2 sm:gap3 wrap" text-xl sm:text-3xl>
       <router-link to="/posts" class="!border-none !font-400" :class="route.path === '/posts' ? '' : inactiveStyle">
         Blog
       </router-link>
