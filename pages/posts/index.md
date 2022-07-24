@@ -1,12 +1,9 @@
 ---
 title: Blog - Anthony Fu
 display: ''
+plum: true
 ---
 
 <SubNav/>
-
-<ClientOnly>
-  <Plum/>
-</ClientOnly>
 
 <ListPosts />

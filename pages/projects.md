@@ -3,6 +3,7 @@ title: Projects - Anthony Fu
 display: Projects
 subtitle: List of projects that I am proud of
 description: List of projects that I am proud of
+plum: true
 projects:
   Upcoming:
     - name: 'Zeitreise'

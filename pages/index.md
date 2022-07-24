@@ -1,10 +1,7 @@
 ---
 title: Anthony Fu
+plum: true
 ---
-
-<ClientOnly>
-  <Plum/>
-</ClientOnly>
 
 Hey, I am Anthony Fu, a fanatical open sourceror. Working at [NuxtLabs](https://nuxtlabs.com/).
 

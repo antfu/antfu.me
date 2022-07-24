@@ -65,6 +65,9 @@ onMounted(() => {
 </script>
 
 <template>
+  <ClientOnly v-if="frontmatter.plum">
+    <Plum />
+  </ClientOnly>
   <div v-if="frontmatter.display ?? frontmatter.title" class="prose m-auto mb-8">
     <h1 class="mb-0">
       {{ frontmatter.display ?? frontmatter.title }}

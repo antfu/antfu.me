@@ -1,6 +1,7 @@
 ---
 title: Streams - Anthony Fu
 display: ''
+plum: true
 items:
   - title: '用 Vue 写个扫雷吧！'
     date: '2022-03-09'
@@ -84,7 +85,3 @@ items:
 > Live stream at [YouTube](https://www.youtube.com/anthonyfu7) & [哔哩哔哩](https://space.bilibili.com/668380)
 
 <ListPosts :posts="frontmatter.items.reverse()" />
-
-<ClientOnly>
-  <Plum/>
-</ClientOnly>
