@@ -3,6 +3,7 @@ title: Develop with Vite - Vue Beijing
 type: talk
 date: 2021-03-28T16:00:00.000+00:00
 lang: en
+recording: true
 duration: 18min
 ---
 

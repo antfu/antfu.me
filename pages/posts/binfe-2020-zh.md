@@ -37,7 +37,7 @@ Hello 大家好，非常感谢丁香园这次的邀请，也非常荣幸能够�
 在 Vue 3 里面，我们对整个响应式系统做了一个重新的设计，同时暴露出了这几个新的API，`ref` `reactive` `computed` `effect`。我们把原本 Vue 2 `Object.defineProperty` 的实现改成了使用 `Proxy` 的实现方式。而 Proxy 可以给我们提供对属性更新监控的更大的灵活性。
 
 ```ts
-const reactive = (target) => new Proxy(target, {
+const reactive = target => new Proxy(target, {
   get(target, prop, receiver) {
     track(target, prop)
     return Reflect.get(...arguments) // get original data
@@ -75,7 +75,7 @@ export const trigger = (target, key) => {
 }
 
 export const effect = (fn) => {
-  let effect = function() { fn() }
+  const effect = function () { fn() }
   enableTracking()
   activeEffect = effect
   fn()
@@ -94,14 +94,14 @@ export const effect = (fn) => {
 const computed = (getter) => {
   let value
   let dirty = true
-  
+
   const runner = effect(getter, {
     lazy: true,
     scheduler() {
       dirty = true // deps changed
     }
   })
-  
+
   return {
     get value() {
       if (dirty) {
@@ -264,8 +264,8 @@ export function useDark() {
 
   const dark = computed({
     get() {
-      return setting.value === 'auto' 
-        ? system.value 
+      return setting.value === 'auto'
+        ? system.value
         : setting.value === 'dark'
     },
     set(v) {
@@ -386,7 +386,7 @@ ReactDOM.render(<MyCounter value={10}>, el)
 [`@vue-reactivity`](https://github.com/vue-reactivity) 是一个我对于 `@vue/reactivity` 一些可能性的探索。我希望它会个一系列的工具包。我们现在有的两个已经发布了的工具。其中一个是 [`@vue-reactivity/watch`](https://github.com/vue-reactivity/watch)，在 Vue 中 `watch` 是实现在 `@vue/runtime-core` 里的，因为 `watch` 和 Vue 的组件模型有一些生命周期上的强绑定。那么我们在这里把 Vue 的 `watch` 提取出来做了一些简化之后，你就可以直接在 `@vue/reactivity` 使用 `watch`。
 
 ```ts
-import { ref, reactive, computed } from '@vue/reactivity'
+import { computed, reactive, ref } from '@vue/reactivity'
 import { watch, watchEffect } from '@vue-reactivity/watch'
 
 const count = ref(1)
@@ -407,10 +407,10 @@ stopWatch()
 另外一个是 [`@vue-reactivity/scope`](https://github.com/vue-reactivity/scope)，作用是做 `effect` 的自动收集。我们可以使用 `effectScope`，在这个里面声明的所有的 `effect` 都会被自动收集，我们就可以直接通过一个 `stop()` 函数去清除掉所有的这些 `effects`。这其实类似于类似于组件的 `setup()` 函数，是它的内部实现没有暴露出来，所以我们实现了这样的一个功能。关于这个我提了一个 RFC，希望我们可以把这个功能加入到 `@vue/reactivity` 本身上，然后可以提供给更多的库去做使用。
 
 ```ts
-import { 
+import {
+  computed,
   effectScope,
   ref,
-  computed,
   watch,
 } from '@vue-reactivity/scope'
 

@@ -4,6 +4,7 @@ description: Slides & transcript for my talk at VueDay 2021
 date: 2021-04-28T16:00:00.000+00:00
 lang: en
 type: talk
+recording: true
 duration: 30min
 ---
 
@@ -73,7 +74,7 @@ When using with `refs`, a big obstacle that people facing is the annoying `.valu
 ```ts
 const counter = ref(0)
 
-watch(counter, count => {
+watch(counter, (count) => {
   console.log(count) // same as `counter.value`
 })
 ```
@@ -91,7 +92,7 @@ The `watch` function accepts ref as the watch source directly, and it will retur
 The other one is the nature of Vue, in the template, all the refs are auto unwrapped, even assignments!
 
 ```ts
-import { ref, reactive } from 'vue'
+import { reactive, ref } from 'vue'
 const foo = ref('bar')
 const data = reactive({ foo, id: 10 })
 data.foo // 'bar'
@@ -112,7 +113,7 @@ function unref<T>(r: Ref<T> | T): T {
 The interesting part of it is that if you pass a plain value to `unref` it will return the value as-is to you, you can see the implementation is basically this.
 
 ```ts
-import { unref, ref } from 'vue'
+import { ref, unref } from 'vue'
 
 const foo = ref('foo')
 unref(foo) // 'foo'
@@ -136,8 +137,8 @@ It's actually kind of hard to give a proper definition, but I'd think it's like 
 
 ```ts
 export function useDark(options: UseDarkOptions = {}) {
-  const preferredDark = usePreferredDark()         // <--
-  const store = useStorage('vueuse-dark', 'auto')  // <--
+  const preferredDark = usePreferredDark() // <--
+  const store = useStorage('vueuse-dark', 'auto') // <--
 
   return computed<boolean>({
     get() {
@@ -146,8 +147,9 @@ export function useDark(options: UseDarkOptions = {}) {
         : store.value === 'dark'
     },
     set(v) {
-      store.value = v === preferredDark.value 
-        ? 'auto' : v ? 'dark' : 'light'
+      store.value = v === preferredDark.value
+        ? 'auto'
+        : v ? 'dark' : 'light'
     },
   })
 }
@@ -194,10 +196,10 @@ function add(a: number, b: number) {
 ```
 
 ```ts
-let a = 1
-let b = 2
+const a = 1
+const b = 2
 
-let c = add(a, b) // 3
+const c = add(a, b) // 3
 ```
 
 Here we have a plain add function that sums up the two arguments `a` and `b`. You can also see the example on the right.
@@ -254,7 +256,8 @@ export function useTimeAgo(
 ```
 
 ```ts
-import { computed, unref, Ref } from 'vue'
+import type { Ref } from 'vue'
+import { computed, unref } from 'vue'
 
 type MaybeRef<T> = Ref<T> | T
 
@@ -285,7 +288,7 @@ Here we take `useTitle` function from VueUse as an example. Basically when you c
 Looks good, right? But It creates a new ref whenever you call it. To make it more flexible, we can actually bind an existing ref, even computed!
 
 ```ts
-import { ref, computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useTitle } from '@vueuse/core'
 
 const name = ref('Hello')
@@ -307,7 +310,7 @@ You must be wondering how could this be implemented. Let's take a look at a simp
 
 ```ts
 import { ref, watch } from 'vue'
-import { MaybeRef } from '@vueuse/core'
+import type { MaybeRef } from '@vueuse/core'
 
 export function useTitle(
   newTitle: MaybeRef<string | null | undefined>
@@ -339,7 +342,7 @@ Similar to `unref` - `ref` also checks whether the passed value is ref or not. I
 
 
 ```ts
-const foo = ref(1)   // Ref<1>
+const foo = ref(1) // Ref<1>
 const bar = ref(foo) // Ref<1>
 
 foo === bar // true
@@ -372,7 +375,7 @@ type MaybeRef<T> = Ref<T> | T
 
 function useBala<T>(arg: MaybeRef<T>) {
   const reference = ref(arg) // get the ref
-  const value = unref(arg)   // get the value
+  const value = unref(arg) // get the value
 }
 ```
 
@@ -383,10 +386,10 @@ We can use `MaybeRef` in arguments to make the function flexible, and use `ref()
 Another pattern today is to use objects of refs. When you need to return multiple data entries in a composable function, consider returns an object composed by refs. 
 
 ```ts
-import { ref, reactive } from 'vue'
+import { reactive, ref } from 'vue'
 
 function useMouse() {
-  return { 
+  return {
     x: ref(0),
     y: ref(0)
   }
@@ -498,7 +501,7 @@ But here we have a solution for that. Vue provided a type helper called `Injecti
 
 ```ts
 // context.ts
-import { InjectionKey } from 'vue'
+import type { InjectionKey } from 'vue'
 
 export interface UserInfo {
   id: number
@@ -512,7 +515,7 @@ For example, here I defined an interface `UserInfo` which contains two propertie
 
 ```ts
 // parent.vue
-import { provide } from 'vue' 
+import { provide } from 'vue'
 import { injectKeyUser } from './context'
 
 export default {
@@ -529,12 +532,12 @@ In usage, I can use the `provide` function to provide the data with key. Can you
 
 ```ts
 // child.vue
-import { inject } from 'vue' 
+import { inject } from 'vue'
 import { injectKeyUser } from './context'
 
 export default {
   setup() {
-    const user = inject(injectKeyUser) 
+    const user = inject(injectKeyUser)
     // UserInfo | undefined
 
     if (user)
@@ -687,7 +690,7 @@ Vue.use(VueCompositionAPI)
 ```
 
 ```ts
-import { ref, reactive } from '@vue/composition-api'
+import { reactive, ref } from '@vue/composition-api'
 ```
 
 ### Vue 2.7 <Marker class="text-purple-400">Upcoming</Marker>
@@ -708,7 +711,7 @@ If you are a library author want your libraries to support Vue 2 and 3 with the 
 
 ```ts
 // same syntax for both Vue 2 and 3
-import { ref, reactive, defineComponent } from 'vue-demi'
+import { defineComponent, reactive, ref } from 'vue-demi'
 ```
 
 ## Thank you!
