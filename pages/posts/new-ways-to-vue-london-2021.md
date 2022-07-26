@@ -9,4 +9,6 @@ duration: 30min
 
 > Slides: [PDF](https://antfu.me/talks/2021-10-20) | [SPA](https://talks.antfu.me/2021/vue-london)
 >
+> Recording: [YouTube](https://youtu.be/CyaJLrqE9tc)
+>
 > Made with <Slidev class="inline"/>  [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.
