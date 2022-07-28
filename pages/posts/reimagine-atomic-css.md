@@ -167,9 +167,9 @@ module.exports = {
 }
 ```
 
-Ah, fair enough, now we could list them all and get back to work... wait, where was I? The original task you are working on gets lost, and it takes time to get back to the context again. Later on, if we want to set border colors, we'd need to look up the docs again to see how it could be configured and so on. Maybe someone would enjoy this workflow, but it's not for me. I don't enjoy being interpreted by something that should intuitively work.
+Ah, fair enough, now we could list them all and get back to work... wait, where was I? The original task you are working on gets lost, and it takes time to get back to the context again. Later on, if we want to set border colors, we'd need to look up the docs again to see how it could be configured and so on. Maybe someone would enjoy this workflow, but it's not for me. I don't enjoy being interrupted by something that should intuitively work.
 
-Windi CSS is more relaxed to the rules and will try to provide the corresponding utilities whenever possible. In the previous case, `border-10` will work out-of-box on Windi (thank you!). But due to the fact that Windi is compatible with Tailwind, it has also to use the exact same configuration interface as Tailwind. While the number inferring works in Windi, it would still be a nightmare if you want to add custom utilities. Here is an example from [Tailwind's docs](https://tailwindcss.com/docs/plugins#escaping-class-names):
+Windi CSS is more relaxed to the rules and will try to provide the corresponding utilities whenever possible. In the previous case, `border-10` will work out-of-box on Windi (thank you!). But due to the fact that Windi is compatible with Tailwind, it also has to use the exact same configuration interface as Tailwind. While the number inferring works in Windi, it would still be a nightmare if you want to add custom utilities. Here is an example from [Tailwind's docs](https://tailwindcss.com/docs/plugins#escaping-class-names):
 
 ```ts
 // tailwind.config.js
@@ -200,7 +200,7 @@ module.exports = {
 }
 ```
 
-That along is to generate these:
+That alone is to generate these:
 
 ```css
 .rotate-1\/4 {
