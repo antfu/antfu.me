@@ -25,7 +25,7 @@ My sharing today is Composable Vue, some pattens and tips that might be able to 
 
 It all started with me made this project called VueUse, which is a collection of Vue composable utilities. Initially, I was making this to share some of the functions I wrote with Vue Composition API to be used across apps. Till now, it grows much bigger with the community, we are now an organization on GitHub with 9 team members, 8 add-ons packages for different integrations like motions and document head management. We also have more than 100 functions in the core package that work for both Vue 2 and 3. I have really appreciated all the contributors and the awesome community.
 
-<carbon-logo-github class="inline-block"/> [vueuse/vueuse](https://github.com/vueuse/vueuse)
+<carbon-logo-github class="inline-block"/> <a href="https://github.com/vueuse/vueuse" target="_blank">vueuse/vueuse</a>
 
 In today's talk, I will share with you the patterns and tips that I have learned during developing VueUse and using it to make apps in Composition API.
 
@@ -680,7 +680,7 @@ As you might think those are for Vue 3 only, but actually they also applies for 
 
 In case you didn't know that, if you are still on Vue 2 but want to start using the Composition API, here we offered an official plugin that enables the Composition API for your Vue 2 app. Give it a try if you haven't.
 
-<carbon-logo-github class="inline-block"/> [vuejs/composition-api](https://github.com/vuejs/composition-api)
+<carbon-logo-github class="inline-block"/> <a href="https://github.com/vuejs/composition-api" target="_blank">vuejs/composition-api</a>
 
 ```ts
 import Vue from 'vue'
