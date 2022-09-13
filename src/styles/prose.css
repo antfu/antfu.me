@@ -117,6 +117,7 @@
   margin-top: 1.6em;
   margin-bottom: 0.6em;
   line-height: 1.6;
+  opacity: 0.7;
 }
 .prose h4 {
   color: inherit;
