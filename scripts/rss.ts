@@ -5,7 +5,6 @@ import matter from 'gray-matter'
 import MarkdownIt from 'markdown-it'
 import type { FeedOptions, Item } from 'feed'
 import { Feed } from 'feed'
-import { slugify } from './slugify'
 
 const DOMAIN = 'https://antfu.me'
 const AUTHOR = {
@@ -41,7 +40,7 @@ async function buildBlogRSS() {
   const posts: any[] = (
     await Promise.all(
       files.filter(i => !i.includes('index'))
-        .map(async(i) => {
+        .map(async (i) => {
           const raw = await fs.readFile(i, 'utf-8')
           const { data, content } = matter(raw)
 
