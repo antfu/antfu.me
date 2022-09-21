@@ -6,7 +6,8 @@
     "dev": "vite --port 3333 --open",
     "preview": "vite preview",
     "static": "rimraf temp && degit antfu/static temp --force && esno scripts/copy-sponsors",
-    "redirects": "esno scripts/redirects.ts"
+    "redirects": "esno scripts/redirects.ts",
+    "lint": "eslint . --ext .vue,.ts,.html --fix"
   },
   "dependencies": {
     "@vueuse/core": "^8.9.4",
