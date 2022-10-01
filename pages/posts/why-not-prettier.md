@@ -22,13 +22,17 @@ If you have ever come across my open source projects, you might find that I rare
 
 ### It's Opinionated
 
-Prettier describes itself to be ["an opinionated code formatter"](https://github.com/prettier/prettier). **Opinionated** essentially means it's not for everyone. Prettier makes a lot of hard-coded decisions to provide a minimal configuration interface. That makes it very easy to use (it's excellent!) and the code consistent across projects. However, on the other hand, it also means you are losing the ability to have fine-grained tweaks to how your code should look like. While I love most of Prettier's decisions, it sometimes makes you upset when you find something you don't like and don't have a workaround.
+Prettier describes itself to be ["an opinionated code formatter"](https://github.com/prettier/prettier).
+
+**Opinionated** essentially means it's not for everyone. Prettier makes a lot of hard-coded decisions to provide a minimal configuration interface. That makes it very easy to use (it's excellent!) and the code consistent across projects. However, on the other hand, it also means you are losing the ability to have fine-grained tweaks to how your code should look like.
+
+While I love most of Prettier's decisions, it sometimes makes you upset when you find something you don't want and don't have a workaround.
 
 ### The Line Wrapping Noise
 
 The main thing that itches me a lot is the auto wrapping / unwrapping based on the length of the code. Prettier has the concept of [`printwidth`](https://prettier.io/docs/en/options.html#print-width), which constrains each line to fit with a certain width (by default, it's `80` characters). It's great to make the code fit into one screen and avoid horizontal scrolls.
 
-However, I often found it hurting the readability and git differing.
+However, I often found it hurting the readability and git diffing.
 
 [@patak_dev](https://twitter.com/patak_dev) recently brought up an example of that in PR reviewing:
 
@@ -36,7 +40,7 @@ However, I often found it hurting the readability and git differing.
 <p lang="en" dir="ltr">Formatters are awesome, especially when doing PR reviews. They also introduce issues though, for example when an addition triggers a line break. The diff isn&#39;t showing what changed here. It would be great if diff viewers would be Prettier-aware, counting line breaks as spacing. <a href="https://t.co/ZuApmctllU">pic.twitter.com/ZuApmctllU</a></p>&mdash; patak (@patak_dev) <a href="https://twitter.com/patak_dev/status/1575784199767859200?ref_src=twsrc%5Etfw">September 30, 2022</a>
 </Tweet>
 
-Sometimes when you modify a string literal in JavaScript that may make the line width a bit beyond the `printwidth`, Prettier will force wrap the line. It breaks the inline diffing and make the changes hard to review. Imagine in another pull request, we might deduce the string a bit down, Prettier will unwrap the lines back to one line. Back and forth, it creates a lot of unnecessary noises.
+Sometimes when you modify a string literal in JavaScript that may make the line a bit longer than the value of `printwidth`, Prettier will force wrapping the line. It breaks the inline diffing and make the changes hard to review. Imagine in another pull request, we might reduce the string a bit shorter, Prettier will then unwrap the lines back to one line. Back and forth, it creates a lot of unnecessary noises.
 
 The real pain point is that this is behavior is not optional. **You can't disable it completely** ([#3468](https://github.com/prettier/prettier/issues/3468)). Increasing the `printwidth` only delays the circumstance and will affect other files that you didn't touch.
 
@@ -44,9 +48,9 @@ The following image shows another example:
 
 ![](/images/prettier-print-width.png)
 
-On the left is the input code and on the right is the output of Prettier. It follows the rule too strict, and actually makes the code much harder to read and modify, violating the initial goal of making the code more readable. (the 42 of `printWidth` is made up for demonstration, but it happens in any `printWidth`).
+On the left is the input code and on the right is the output of Prettier. It follows the rule too strict, and actually makes the code much harder to read and modify, violating the initial goal of making the code more readable. (*the 42 of `printWidth` is made up for demonstration, but it happens in any `printWidth`*)
 
-Again, the sad part is that this isn't optional. The only workaround you can do is to use `// @prettier-ignore`, which to me, loses the point of using Prettier in the first place. To make myself clear, I am not blaming Prettier for this. It's just that their opinion is not aligning with my needs.
+Again, the sad part is that this is mandatory. The only workaround you can do is to use `// @prettier-ignore`, which to me, loses the point of using Prettier in the first place. I am not blaming Prettier for this. It's just that their opinion is not aligning with my needs.
 
 ### Mess with ESLint
 
