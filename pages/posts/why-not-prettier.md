@@ -72,7 +72,7 @@ It turns out, the setup configuration can also be very minimal:
 npm i -D @antfu/eslint-config
 ```
 ```json
-// .prettierrc
+// .eslintrc
 {
   "extends": "@antfu"
 }
