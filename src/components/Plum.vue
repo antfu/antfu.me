@@ -1,4 +1,4 @@
-<script setup='props' lang='ts'>
+<script setup lang='ts'>
 import type { Fn } from '@vueuse/core'
 
 const r180 = Math.PI

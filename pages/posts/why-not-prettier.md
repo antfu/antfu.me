@@ -46,27 +46,34 @@ The real pain point is that this is behavior is not optional. **You can't disabl
 
 The following image shows another example:
 
-![](/images/prettier-print-width.png)
+<img src="/images/prettier-print-width.png" scale-110 block m="b--5!" />
 
-On the left is the input code and on the right is the output of Prettier. It follows the rule too strict, and actually makes the code much harder to read and modify, violating the initial goal of making the code more readable. (*the 42 of `printWidth` is made up for demonstration, but it happens in any `printWidth`*)
+<sup><em>The 42 of `printWidth` is made up for demonstration, but it happens in any `printWidth`</em></sup>
 
-Again, the sad part is that this is mandatory. The only workaround you can do is to use `// @prettier-ignore`, which to me, loses the point of using Prettier in the first place. I am not blaming Prettier for this. It's just that their opinion is not aligning with my needs.
+On the left is the input code and on the right is the output of Prettier. I don't need to point out but you probably already have the answer of which is "more pretty". To me, Prettier follows the rule too strict, and in fact makes the code much harder to read and modify, violating the initial goal of formating - to make the code more readable. In that sense, I prefer to judge what is better for readability as a human, instead of having a program to decide what is more readable. 
+
+Again, the sad part is that this is mandatory. The only workaround you can do is to use `// prettier-ignore`, which to me, the "all or nothing" choice loses the point of using Prettier in the first place. I am not blaming Prettier for this. It's just that their opinion is not aligning with what I care about.
+
 
 ### Mess with ESLint
 
-Prettier as a code formatter, only cares about code styles but not the logic. Thus we see it's quite common for projects to use ESLint along with Prettier to also check the logic. If you have ever configured that yourself, you might notice there are some functionality overlaps between them - ESLint can also lint for code styles. The common practice is to use [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) to disable those overlaps rules in ESLint.
+Prettier as a code formatter, only cares about code styles but not the logic. Thus we see it's quite common for projects to use ESLint along with Prettier to also check the logic. If you have ever configured that yourself, you might notice there are some functionality overlaps between them - ESLint can also lint for code styles. The common practice is to use [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) to disable those overlaps rules in ESLint (there are also [a few other solutions to this](https://prettier.io/docs/en/integrating-with-linters.html)).
 
 To me, the approach creates quite a lot of mess:
 
-<Tweet>
+<Tweet conversation="none">
+<p lang="en" dir="ltr">My points here:<br><br>1. Prettier Only is cool - It&#39;s out-of-box.<br>2. If you need to use ESLint, it can do the formatting as good as Prettier - and more configurable</p>&mdash; Anthony Fu (@antfu7) <a href="https://twitter.com/antfu7/status/1279149211523538944?ref_src=twsrc%5Etfw">July 3, 2020</a>
+</Tweet>
+
+<Tweet conversation="none">
 <p lang="en" dir="ltr">3. Prettier + ESLint still needs a lot of configs - It doesn&#39;t make your life easier.<br>4. You can have full control in ESLint but not in Prettier, mixing them together feels weird.<br>5. I don&#39;t think parsing two times can be faster (maybe I am wrong)</p>&mdash; Anthony Fu (@antfu7) <a href="https://twitter.com/antfu7/status/1279149212974776320?ref_src=twsrc%5Etfw">July 3, 2020</a>
 </Tweet>
 
-While on the other hand, ESLint could also do the formatting just as well as Prettier - with even more freedom of choice.
+While on the other hand, [ESLint's auto fix](https://developer.ibm.com/articles/auto-fix-and-format-your-javascript-with-eslint/) could also do the formatting just as well as Prettier - with much more freedom of choices.
 
 ## Alternatives
 
-ESLint is essential for me to ensure the code quality. Since ESLint is capable of doing formatting, the best choice for me is to use it exclusively in one go. Thus I have spent some time configuring my ESLint and made it a config preset.
+ESLint is essential to my workflow to ensure the code quality. If ESLint is capable of doing formatting, the best solution for me is to use it exclusively in one go. Thus I have spent some time configuring my ESLint and made it a config preset.
 
 <GitHubLink repo="antfu/eslint-config" name="@antfu/eslint-config" />
 
@@ -86,7 +93,7 @@ That's all you need. It works similarly to Prettier but respects your choices wh
 
 ## Wrapping Up
 
-This post is only trying to explain my personal experience and opinions. Of course, you can have different views and don't need to agree with me at all. Tools have different purposes and focuses, and there is no better or worse. It's just about using the right tools for the right circumstances. I will still be a happy user of Prettier in usages that I don't need maximum customizability, and keep using ESLint exclusively for project source code.
+This post is only trying to explain my personal experience and opinions. Of course, you can have different views and don't need to agree with me at all. Tools have different purposes and focuses, and there is no better or worse. It's just about using the right tools for the right circumstances. I will still be a happy user of Prettier in usages that I don't need the maximum customizability, and using ESLint exclusively for my projects' source code.
 
 Hope this could make myself clear and maybe give you some insights. Cheers!
 
