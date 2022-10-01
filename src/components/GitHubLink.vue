@@ -1,5 +1,8 @@
 <script setup lang="ts">
-defineProps<{ repo: string }>()
+defineProps<{
+  repo: string
+  name?: string
+}>()
 </script>
 
 <template>
@@ -9,6 +12,6 @@ defineProps<{ repo: string }>()
       class="opacity-50 ml-1"
       :href="`https://github.com/${repo}`"
       target="_blank"
-    >{{ repo.startsWith('antfu/') ? repo.slice(6) : repo }}</a>
+    >{{ name || (repo.startsWith('antfu/') ? repo.slice(6) : repo) }}</a>
   </span>
 </template>
