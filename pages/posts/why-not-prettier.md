@@ -44,7 +44,7 @@ The following image shows another example:
 
 ![](/images/prettier-print-width.png)
 
-On the left is the input code and on the right is the output of Prettier. It follows the rule too strict, and actually makes the code much harder to read and modify, obeying the initial goal of making the code readable. (the 42 of `printWidth` is made up for demonstration, but it happens in any `printWidth`).
+On the left is the input code and on the right is the output of Prettier. It follows the rule too strict, and actually makes the code much harder to read and modify, violating the initial goal of making the code more readable. (the 42 of `printWidth` is made up for demonstration, but it happens in any `printWidth`).
 
 Again, the sad part is that this isn't optional. The only workaround you can do is to use `// @prettier-ignore`, which to me, loses the point of using Prettier in the first place. To make myself clear, I am not blaming Prettier for this. It's just that their opinion is not aligning with my needs.
 
