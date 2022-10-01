@@ -45,7 +45,7 @@ items:
     path: 'https://www.youtube.com/watch?v=6tSqIW2ds1Y'
     lang: 'en'
   - title: 'PodRocket - Vitest and VueUse with Anthony Fu'
-    date: '2022-10-09'
+    date: '2022-09-09'
     path: 'https://twitter.com/PodRocketpod/status/1568267996652601347'
     lang: 'en'
 ---
