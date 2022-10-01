@@ -50,9 +50,9 @@ Again, the sad part is that this isn't optional. The only workaround you can do 
 
 ### Mess with ESLint
 
-Prettier as a code formatter, only cares about code styles but not the logic. Thus we see it's quite common for projects to use ESLint along with Prettier to also check the logic. If you have ever configured that yourself, you might notice there are some functionality overlaps between them - ESLint can also lint for code styles. The common practice is to use [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) to disable those overlaps rules in ESLint (Note that this is actually [NOT recommended by Prettier](https://prettier.io/docs/en/integrating-with-linters.html#notes) either).
+Prettier as a code formatter, only cares about code styles but not the logic. Thus we see it's quite common for projects to use ESLint along with Prettier to also check the logic. If you have ever configured that yourself, you might notice there are some functionality overlaps between them - ESLint can also lint for code styles. The common practice is to use [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) to disable those overlaps rules in ESLint.
 
-To me, this approach creates quite a lot of mess:
+To me, the approach creates quite a lot of mess:
 
 <Tweet>
 <p lang="en" dir="ltr">3. Prettier + ESLint still needs a lot of configs - It doesn&#39;t make your life easier.<br>4. You can have full control in ESLint but not in Prettier, mixing them together feels weird.<br>5. I don&#39;t think parsing two times can be faster (maybe I am wrong)</p>&mdash; Anthony Fu (@antfu7) <a href="https://twitter.com/antfu7/status/1279149212974776320?ref_src=twsrc%5Etfw">July 3, 2020</a>
@@ -82,7 +82,7 @@ That's all you need. It works similarly to Prettier but respects your choices wh
 
 ## Wrapping Up
 
-This post is only trying to explain my personal experience and opinions. Of course, you can have different views and don't need to agree with me at all. Tools have different purposes and focuses, and there is no better or worse. It's just about using the right tools for the right circumstances. I will still be a happy user of Prettier in usages that I don't need maximum customizbility, and keep using ESLint exclusively for project source code.
+This post is only trying to explain my personal experience and opinions. Of course, you can have different views and don't need to agree with me at all. Tools have different purposes and focuses, and there is no better or worse. It's just about using the right tools for the right circumstances. I will still be a happy user of Prettier in usages that I don't need maximum customizability, and keep using ESLint exclusively for project source code.
 
 Hope this could make myself clear and maybe give you some insights. Cheers!
 
