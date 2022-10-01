@@ -30,7 +30,7 @@ While I love most of Prettier's decisions, it sometimes makes you upset when you
 
 ### The Line Wrapping Noise
 
-The main thing that itches me a lot is the auto wrapping / unwrapping based on the length of the code. Prettier has the concept of [`printwidth`](https://prettier.io/docs/en/options.html#print-width), which constrains each line to fit with a certain width (by default, it's `80` characters). It's great to make the code fit into one screen and avoid horizontal scrolls.
+The main thing that itches me a lot is the auto wrapping / unwrapping based on the length of the code. Prettier has the concept of [`printWidth`](https://prettier.io/docs/en/options.html#print-width), which constrains each line to fit with a certain width (by default, it's 80 characters). It's great to make the code fit into one screen and avoid horizontal scrolls.
 
 However, I often found it hurting the readability and git diffing.
 
@@ -42,7 +42,7 @@ However, I often found it hurting the readability and git diffing.
 
 Sometimes when you modify a string literal in JavaScript that may make the line a bit longer than the value of `printwidth`, Prettier will force wrapping the line. It breaks the inline diffing and make the changes hard to review. Imagine in another pull request, we might reduce the string a bit shorter, Prettier will then unwrap the lines back to one line. Back and forth, it creates a lot of unnecessary noises.
 
-The real pain point is that this is behavior is not optional. **You can't disable it completely** ([#3468](https://github.com/prettier/prettier/issues/3468)). Increasing the `printwidth` only delays the circumstance and will affect other files that you didn't touch.
+The real pain point is that this is behavior is not optional. **You can't disable it completely**([#3468](https://github.com/prettier/prettier/issues/3468)). Increasing the `printWidth` only delays the circumstance and will affect other files that you didn't touch.
 
 The following image shows another example:
 
