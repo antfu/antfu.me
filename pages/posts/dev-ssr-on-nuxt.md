@@ -120,7 +120,7 @@ This approach is also how we handle the SSR build in Webpack. However, as you ca
 
 ### Approach 2: Dev Bundler
 
-Having the client in dev mode and SSR in the production bundle would inevitably introduce some inconsistencies as they go into different pipelines. To solve it, [Pooya came out with a brilliant idea](https://github.com/nuxt/vite/pull/201) to use the Vite dev server "constructing" the app in SSR:
+Having the client in dev mode and SSR in the production bundle would inevitably introduce some inconsistencies as they go into different pipelines. To solve it, [Pooya Parsa came out with a brilliant idea](https://github.com/nuxt/vite/pull/201) to use the Vite dev server "constructing" the app in SSR:
 
 ```ts
 import { createViteServer } from 'vite'
@@ -181,6 +181,10 @@ function __vite_ssr_import__(id) {
 export default __vite_ssr_import__('/foo')
 ```
 
+<div text-right>
+<a href="https://github.com/nuxt/framework/blob/47b5baa362bd9a14e7942503a373aec959875eff/packages/vite/src/dev-bundler.ts#L229-L260" target="_blank" op50 font-serif>production code reference</a>
+</div>
+
 We wrap the transformed modules as functions and store them in an object `__modules__` for indexing. Then we can provide a custom import function `__vite_ssr_import__` to evaluate the modules we want.
 
 We call this approach **Dev Bundler**. With it, we don't actually bundle things, but concatenate code transformed by Vite's dev server. We are using the same pipeline and internal cache as the client-side modules, making the SSR build more efficient and consistent with the client build. It then became our approach in Nuxt 3, and works great across our beta period.
@@ -223,6 +227,10 @@ async function importModule(id) {
 
 export default await importModule('/foo')
 ```
+
+<div text-right>
+<a href="https://github.com/vitest-dev/vitest/blob/40862a2f88b8a0f6aaabe6e490538a85c8993adb/packages/vite-node/src/client.ts#L300-L331" target="_blank" op50 font-serif>production code reference</a>
+</div>
 
 Using the [Node `vm`](https://nodejs.org/api/vm.html) allows us to execute modules in a safer and isolated context. With inline sourcemap and the filename argument to the `runInNewContext`, it makes the stacktrace directly point to the correct location of the source file. And most importantly, moving the transform request inside the importing function makes it fully on-demand (caching and sourcemap are simplified in the example).
 
