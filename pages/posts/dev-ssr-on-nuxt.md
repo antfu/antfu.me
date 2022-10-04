@@ -8,9 +8,9 @@ description: The journey of how we made development time SSR working on Nuxt wit
 
 [[toc]]
 
-In [Nuxt 3](https://github.com/nuxt/framework), [we introduced the first-class support for Vite](https://v3.nuxtjs.org/concepts/introduction#why-nuxt) as the bundler, interchangeable with Webpack (also available in [Nuxt 2 with Bridge](https://v3.nuxtjs.org/getting-started/bridge)). Since Vite provides an incredibly fast developer experience, we have to also make sure the SSR works as fast.
+In [Nuxt 3](https://github.com/nuxt/framework), [we introduced first-class support for Vite](https://v3.nuxtjs.org/concepts/introduction#why-nuxt) as bundler, interchangeable with Webpack (also available in [Nuxt 2 with Bridge](https://v3.nuxtjs.org/getting-started/bridge)). Since Vite provides an incredibly fast developer experience, we had to make sure SSR works as fast.
 
-Since [Nuxt 3 RC.9](https://github.com/nuxt/framework/releases/tag/v3.0.0-rc.9), we have shipped a new development-time SSR approach that is fast as Vite's HMR and has the on-demand capability. Here is how we iterated our approach and made it possible:
+Since [Nuxt 3 RC.9](https://github.com/nuxt/framework/releases/tag/v3.0.0-rc.9), we shipped a new development-time SSR approach that is as fast as Vite's HMR with on-demand capability. Here is writeup on how we iterated to make it possible.
 
 ## SSR
 
@@ -29,9 +29,9 @@ Server-side rendering (SSR) is a popular tech to improve SEO and initial page re
 </html>
 ```
 
-When the users visit your website, browsers fetch and evaluate the JavaScript to let the frameworks render the content of your apps (Client-side Rendering, CSR). Compared to the old age that all the contents are directly written in HTML and available directly when visiting, the modern ways to build the websites make the time between users hitting the Enter and seeing the content much longer (we call it [First Meaningful Paint (FMP)](https://web.dev/first-meaningful-paint/) or [LCP](https://web.dev/lcp/) in performance measurement).
+When a user visits your website, the browser fetches and evaluates the JavaScript to let the framework render the content of your app (Client-side Rendering, CSR). Compared to the old age where all the content were directly written in HTML and made available directly when visiting, the modern way to build websites make the time between users hitting the Enter and seeing the content much longer (we call it [First Meaningful Paint (FMP)](https://web.dev/first-meaningful-paint/) or [LCP](https://web.dev/lcp/) in performance measurement).
 
-SSR is introduced to solve this. By rendering the app on the server side before the page is served, the content can be delivered directly in the HTML. With SSR, the example above will be served as:
+SSR is introduced to solve this. By rendering the app on the server side before the page is served, the content can be delivered directly as HTML. With SSR, the example above will be served as:
 
 ```html
 <html>
@@ -50,9 +50,9 @@ SSR is introduced to solve this. By rendering the app on the server side before 
 </html>
 ```
 
-And then, after the JavaScript has been evaluated, the client app will [hydrate](https://blog.somewhatabstract.com/2020/03/16/hydration-and-server-side-rendering/) the static DOM to provide interactivity and dynamics.
+Once the JavaScript has been downloads and evaluated, the client app will [hydrate](https://blog.somewhatabstract.com/2020/03/16/hydration-and-server-side-rendering/) the static DOM to provide client-side interactivity.
 
-If you are interested in learning more details about SSR and CSR, I recommend continuing reading on [Rendering on the Web](https://developers.google.com/web/updates/2019/02/rendering-on-the-web) by [Jason Miller](https://twitter.com/_developit) and [Addy Osmani](https://twitter.com/addyosmani).
+If you are interested in learning more details about SSR and CSR, I recommend reading [Rendering on the Web](https://developers.google.com/web/updates/2019/02/rendering-on-the-web) by [Jason Miller](https://twitter.com/_developit) and [Addy Osmani](https://twitter.com/addyosmani).
 
 ## SSR in Development
 
@@ -62,7 +62,7 @@ SSR improves the performance and UX and allows you to run server-specific logic,
 
 ## The Challenge
 
-The main challenge of making dev SSR is that, unlike production, **development code is addressed to be changed quite often**. Whenever you make some changes to your source code, you would expect the dev server also grab the changes for the SSR. A mechanism to make the SSR reflects are required.
+The main challenge of making dev SSR is that, unlike production, **development code is addressed to be changed quite often**. Whenever you make some changes to your source code, you expect the dev server to grab the changes for the SSR.
 
 In addition, the environments of Node.js and browsers are also different (e.g. you don't have `window` in Node.js). Libraries might have different builds and logic targeting Node and browsers; frameworks might compile components into different outputs for CSR and SSR. This usually means for client build and SSR build, we need two pipelines for handling the transformation and bundling.
 
@@ -120,7 +120,7 @@ This approach is also how we handle the SSR build in Webpack. However, as you ca
 
 ### Approach 2: Dev Bundler
 
-Having the client in dev mode and SSR in the production bundle would inevitably introduce some inconsistencies as they go into different pipelines. To solve it, [Pooya Parsa came out with a brilliant idea](https://github.com/nuxt/vite/pull/201) to use the Vite dev server "constructing" the app in SSR:
+Having the client in dev mode and SSR in the production bundle would inevitably introduce some inconsistencies as they go into different pipelines. To solve it, [Pooya came out with a brilliant idea](https://github.com/nuxt/vite/pull/201) to use the Vite dev server "constructing" the app in SSR:
 
 ```ts
 import { createViteServer } from 'vite'
@@ -156,7 +156,7 @@ Object.defineProperty(__vite_ssr_exports__, 'foo', { value: foo })
 
 Oops, that looks quite complex! But no worries, you don't have to understand it. All it does is transform the reserved ESM keywords `import` / `export` into function calls. The reason why this is needed is that Vite uses a different module resolution algorithm than Node, it was made for the browser's resolution. Since we can't interop the native ESM's resolving logic directly, transforming them into function calls would allow us to provide our custom resolving logic.
 
-So, with this API, we can now get the SSR code for each module. Our task now becomes how we could chain them together. In our first [proof of concept at `nuxt/vite`](https://github.com/nuxt/vite/pull/201), we implemented our own dev-bundler using the `transformRequest()`. Here is a simplified example:
+With this API, we can now get the SSR code for each module. Our task now becomes how we could chain them together. In our first [proof of concept at `nuxt/vite`](https://github.com/nuxt/vite/pull/201), we implemented our own dev-bundler using the `transformRequest()`. Here is a simplified example:
 
 ```ts
 const __modules__ = {
@@ -180,10 +180,6 @@ function __vite_ssr_import__(id) {
 
 export default __vite_ssr_import__('/foo')
 ```
-
-<div text-right>
-<a href="https://github.com/nuxt/framework/blob/47b5baa362bd9a14e7942503a373aec959875eff/packages/vite/src/dev-bundler.ts#L229-L260" target="_blank" op50 font-serif>production code reference</a>
-</div>
 
 We wrap the transformed modules as functions and store them in an object `__modules__` for indexing. Then we can provide a custom import function `__vite_ssr_import__` to evaluate the modules we want.
 
@@ -227,10 +223,6 @@ async function importModule(id) {
 
 export default await importModule('/foo')
 ```
-
-<div text-right>
-<a href="https://github.com/vitest-dev/vitest/blob/40862a2f88b8a0f6aaabe6e490538a85c8993adb/packages/vite-node/src/client.ts#L300-L331" target="_blank" op50 font-serif>production code reference</a>
-</div>
 
 Using the [Node `vm`](https://nodejs.org/api/vm.html) allows us to execute modules in a safer and isolated context. With inline sourcemap and the filename argument to the `runInNewContext`, it makes the stacktrace directly point to the correct location of the source file. And most importantly, moving the transform request inside the importing function makes it fully on-demand (caching and sourcemap are simplified in the example).
 
@@ -298,4 +290,4 @@ In addition, `vite-node` powers [Histoire](https://histoire.dev/), a interactive
 </div>
 
 
-We are happy to see our work on Nuxt inspired and pushed the Vite ecosystem to have more innovations and better tools. We are also eager to see what is comming next for the tools and integrations that built with "on-demand" philosophy in mind, provding the better performance and developer experience.
+We are happy to see our work on Nuxt inspires and pushes the Vite ecosystem for more innovations and better tools. We are also eager to see what is comming next for the tools and integrations that built with "on-demand" philosophy in mind, providing better performance and developer experience.
