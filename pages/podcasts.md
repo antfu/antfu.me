@@ -33,12 +33,10 @@ items:
   - title: '模拟面试 - 我看你Vue写的挺好的，10K五险一金考虑一下'
     date: '2022-04-15'
     path: 'https://www.bilibili.com/video/BV1TY4y1p783'
-    platform: Bilibili
     lang: 'zh'
   - title: '模拟面试 - TS 体操 TwoSum'
     date: '2022-04-18'
     path: 'https://www.bilibili.com/video/BV1KS4y1A7hS'
-    platform: Bilibili
     lang: 'zh'
   - title: 'Vite 3 Announcement with the Team'
     date: '2022-07-23'
@@ -48,10 +46,9 @@ items:
     date: '2022-09-09'
     path: 'https://twitter.com/PodRocketpod/status/1568267996652601347'
     lang: 'en'
-  - title: 'Akamai Developer's Edge S3 - Sharing Code with Open Source'
+  - title: 'Akamai Developers Edge S3 - Sharing Code with Open Source'
     date: '2022-10-06'
     path: 'https://www.youtube.com/watch?v=lhyjPYodG4s'
-    platform: YouTube
     lang: 'en'
 ---
 
