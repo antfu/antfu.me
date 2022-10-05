@@ -48,6 +48,11 @@ items:
     date: '2022-09-09'
     path: 'https://twitter.com/PodRocketpod/status/1568267996652601347'
     lang: 'en'
+  - title: 'Akamai Developer's Edge S3 - Sharing Code with Open Source'
+    date: '2022-10-06'
+    path: 'https://www.youtube.com/watch?v=lhyjPYodG4s'
+    platform: YouTube
+    lang: 'en'
 ---
 
 <SubNav/>
