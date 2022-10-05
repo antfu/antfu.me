@@ -8,7 +8,7 @@ description: The journey of how we made development time SSR working on Nuxt wit
 
 [[toc]]
 
-In [Nuxt 3](https://github.com/nuxt/framework), [we introduced first-class support for Vite](https://v3.nuxtjs.org/concepts/introduction#why-nuxt) as bundler, interchangeable with Webpack (also available in [Nuxt 2 with Bridge](https://v3.nuxtjs.org/getting-started/bridge)). Since Vite provides an incredibly fast developer experience, we had to make sure SSR works as fast.
+In [Nuxt 3](https://github.com/nuxt/framework), [we introduced first-class support for Vite](https://v3.nuxtjs.org/getting-started/introduction#why-nuxt) as bundler, interchangeable with Webpack (also available in [Nuxt 2 with Bridge](https://v3.nuxtjs.org/getting-started/bridge)). Since Vite provides an incredibly fast developer experience, we had to make sure SSR works as fast.
 
 Since [Nuxt 3 RC.9](https://github.com/nuxt/framework/releases/tag/v3.0.0-rc.9), we shipped a new development-time SSR approach that is as fast as Vite's HMR with on-demand capability. Here is writeup on how we iterated to make it possible.
 
