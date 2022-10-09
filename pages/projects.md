@@ -396,6 +396,6 @@ projects:
 
 [Sponsors](/sponsors-list)
 
-<ListProjects :projects="frontmatter.projects"/>
+<ListProjects :projects="frontmatter.projects" />
 
-<StarsRanking/>
+<StarsRanking />

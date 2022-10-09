@@ -52,6 +52,6 @@ items:
     lang: 'en'
 ---
 
-<SubNav/>
+<SubNav />
 
 <ListPosts :posts="frontmatter.items.reverse()" />
