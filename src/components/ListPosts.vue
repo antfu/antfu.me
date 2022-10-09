@@ -20,6 +20,7 @@ const routes: Post[] = router.getRoutes()
     lang: i.meta.frontmatter.lang,
     duration: i.meta.frontmatter.duration,
     recording: i.meta.frontmatter.recording,
+    upcoming: i.meta.frontmatter.upcoming,
   }))
 
 const posts = computed(() => (props.posts || routes).filter(i => !englishOnly.value || i.lang !== 'zh'))
@@ -51,6 +52,11 @@ const isSameYear = (a: Date | string | number, b: Date | string | number) => a &
               align-middle
               class="text-xs border border-current rounded px-1 pb-0.2 md:ml--10.5 mr2"
             >中文</span>
+            <span
+              v-if="route.upcoming"
+              align-middle
+              class="text-xs border rounded px-1 pb-0.2 md:ml--19 mr2 bg-lime/10 border-lime text-lime"
+            >upcoming</span>
             <span align-middle>{{ route.title }}</span>
             <span
               v-if="route.recording"
