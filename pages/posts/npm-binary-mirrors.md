@@ -10,8 +10,8 @@ duration: 1min
 感谢 [@xiaoxiangmoe](https://github.com/xiaoxiangmoe)，[@Kingwl](https://github.com/Kingwl)。
 
 ```bash
-# === NPM BINRAY CHINA ===
-# https://github.com/cnpm/binary-mirror-config/blob/main/package.json#L48
+# === NPM BINARY CHINA ===
+# https://github.com/cnpm/binary-mirror-config/blob/master/package.json#L53
 export NODEJS_ORG_MIRROR="https://cdn.npmmirror.com/binaries/node"
 export NVM_NODEJS_ORG_MIRROR="https://cdn.npmmirror.com/binaries/node"
 export PHANTOMJS_CDNURL="https://cdn.npmmirror.com/binaries/phantomjs"
