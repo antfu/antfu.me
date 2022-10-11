@@ -8,6 +8,8 @@ description: The reason why I don't use Prettier in my projects.
 
 [[toc]]
 
+> [中文 Chinese Version](/posts/why-not-prettier-zh)
+
 I have started writing this post multiple times but never ended up posting it. I wasn't able to figure out a proper way to express my position about Prettier. But this time, I think I should try harder to explain that for future reference.
 
 First of all, I am not against Prettier. Actually, **I love it**.
