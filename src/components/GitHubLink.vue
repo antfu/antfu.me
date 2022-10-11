@@ -6,7 +6,7 @@ defineProps<{
 </script>
 
 <template>
-  <span>
+  <span class="flex-inline items-center">
     <carbon-logo-github class="inline-block opacity-70" />
     <a
       class="opacity-50 ml-1"
