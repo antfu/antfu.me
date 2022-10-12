@@ -81,7 +81,7 @@ Prettier 作为代码格式化程序，只关心代码风格而完全不关心�
 
 [ESLint 的自动修复](https://developer.ibm.com/articles/auto-fix-and-format-your-javascript-with-eslint/) 也可以像 Prettier 一样进行格式化 - 还有更自由的选择。
 
-## 代替方案
+## 替代方案
 
 在我的工作流中，ESLint 对确保代码质量来说不可或缺。如果 ESLint 已经能够进行代码格式化，那么对我来说最好的解决方案就是一次性都由它处理。
 
