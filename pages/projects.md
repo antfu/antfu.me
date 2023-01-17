@@ -5,13 +5,11 @@ subtitle: List of projects that I am proud of
 description: List of projects that I am proud of
 plum: true
 projects:
-  Upcoming:
-    - name: 'Zeitreise'
-      link: 'https://twitter.com/antfu7/status/1504639906232307712'
-      desc: 'Time traveling for the Web'
-      icon: 'i-mdi-clock-fast'
-
   Latest:
+    - name: 'Elk'
+      link: 'https://github.com/elk-zone/elk'
+      desc: 'A nimble Mastodon web client'
+      icon: 'elk'
     - name: 'reTypewriter'
       link: 'https://github.com/antfu/retypewriter'
       desc: 'Smartly replay the steps of your changes at ease.'
@@ -148,42 +146,16 @@ projects:
       link: 'https://github.com/antfu/vitesse-lite'
       desc: 'Lightweight version of Vitesse'
       icon: 'i-carbon-cloud-lightning'
-    - name: 'Vitesse Nuxt Bridge'
-      link: 'https://github.com/antfu/vitesse-nuxt-bridge'
-      desc: 'Vitesse experience for Nuxt 2 and Vue 2'
-      icon: 'i-mdi-nuxt'
     - name: 'Vitesse Nuxt 3'
       link: 'https://github.com/antfu/vitesse-nuxt3'
       desc: 'Vitesse for Nuxt 3'
-      icon: 'i-mdi-nuxt'
+      icon: 'i-logos-nuxt-icon saturate-0'
 
   CSS:
     - name: 'UnoCSS'
       link: 'https://github.com/antfu/unocss'
       desc: 'The instant on-demand atomic CSS engine'
       icon: 'unocss'
-
-  Windi CSS Ecosystem:
-    - name: 'Windi CSS'
-      link: 'https://github.com/windicss/windicss'
-      desc: 'Next generation utility-first CSS framework (Maintainer)'
-      icon: 'i-carbon-windy-strong'
-    - name: 'Windi Vite Plugin'
-      link: 'https://github.com/windicss/vite-plugin-windicss'
-      desc: 'Vite plugin for Windi CSS'
-      icon: 'i-carbon-flash'
-    - name: 'Windi PostCSS Plugin'
-      link: 'https://github.com/windicss/postcss-windicss'
-      desc: 'PostCSS plugin for Windi CSS'
-      icon: 'i-simple-icons-postcss'
-    - name: 'Windi Analyzer'
-      link: 'https://github.com/windicss/windicss-analysis'
-      desc: 'A visual analyzer for Windi CSS'
-      icon: 'i-carbon-chart-multitype'
-    - name: 'Windi Runtime DOM'
-      link: 'https://github.com/antfu/windicss-runtime-dom'
-      desc: 'Windi CSS for any site with one-line of code'
-      icon: 'i-carbon-run'
 
   Productivity:
     - name: 'Slidev'
@@ -212,6 +184,10 @@ projects:
       icon: 'i-carbon-paint-brush'
 
   Websites / Online Tools:
+    - name: 'Elk'
+      link: 'https://github.com/elk-zone/elk'
+      desc: 'A nimble Mastodon web client'
+      icon: 'elk'
     - name: 'Icônes'
       link: 'https://icones.netlify.app/'
       desc: 'Iconify Explorer with Instant searching'
@@ -367,25 +343,46 @@ projects:
       desc: 'Config of File Nesting for VS Code'
       icon: 'i-carbon:tree-view-alt'
 
+
+  Windi CSS Ecosystem:
+    - name: 'Windi CSS'
+      link: 'https://github.com/windicss/windicss'
+      desc: 'Next generation utility-first CSS framework (Maintainer)'
+      icon: 'i-carbon-windy-strong'
+    - name: 'Windi Vite Plugin'
+      link: 'https://github.com/windicss/vite-plugin-windicss'
+      desc: 'Vite plugin for Windi CSS'
+      icon: 'i-carbon-flash'
+    - name: 'Windi PostCSS Plugin'
+      link: 'https://github.com/windicss/postcss-windicss'
+      desc: 'PostCSS plugin for Windi CSS'
+      icon: 'i-simple-icons-postcss'
+    - name: 'Windi Analyzer'
+      link: 'https://github.com/windicss/windicss-analysis'
+      desc: 'A visual analyzer for Windi CSS'
+      icon: 'i-carbon-chart-multitype'
+    - name: 'Windi Runtime DOM'
+      link: 'https://github.com/antfu/windicss-runtime-dom'
+      desc: 'Windi CSS for any site with one-line of code'
+      icon: 'i-carbon-run'
+
   Maintaining:
-    - name: '@vue/composition-api'
-      link: 'https://github.com/vuejs/composition-api'
-      desc: 'Vue 2 Composition API plugin'
-      icon: 'i-uim-vuejs'
+    - name: 'Nuxt'
+      link: 'https://github.com/nuxt/framework'
+      desc: 'The intuitive Vue Framework'
+      icon: 'i-logos-nuxt-icon saturate-0'
     - name: 'Vite'
       link: 'https://github.com/vitejs/vite'
       desc: 'Native-ESM powered web dev build tool'
       icon: 'i-system-uicons-lightning'
+    - name: '@vue/composition-api'
+      link: 'https://github.com/vuejs/composition-api'
+      desc: 'Vue 2 Composition API plugin'
+      icon: 'i-uim-vuejs'
     - name: '文言 wenyan-lang'
       link: 'https://github.com/wenyan-lang/wenyan'
       desc: 'A programming language for the ancient Chinese'
       icon: 'i-carbon-translate'
-
-  Windows:
-    - name: 'Live Draw'
-      link: 'https://github.com/antfu/live-draw'
-      desc: 'A tool allows you to draw on screen real-time'
-      icon: 'i-carbon-brush-freehand'
 
   Toys:
     - name: '1990 Script'
