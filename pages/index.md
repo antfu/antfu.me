@@ -15,7 +15,7 @@ Outside of programming, I enjoy doing photography and traveling. Some of my phot
 
 ***
 
-Find me on [GitHub](https://github.com/antfu), [Twitter](https://www.twitter.com/antfu7), [Mastodon](https://elk.zone/m.webtoo.ls/@antfu@m.webtoo.ls), [YouTube](https://www.youtube.com/anthonyfu7), [知乎](https://www.zhihu.com/people/antfu), [微博](https://weibo.com/u/7485197193) or [哔哩哔哩](https://space.bilibili.com/668380).<br>
+Find me on [GitHub](https://github.com/antfu), [Twitter](https://www.twitter.com/antfu7), [Mastodon](https://elk.zone/m.webtoo.ls/@antfu), [YouTube](https://www.youtube.com/anthonyfu7), [知乎](https://www.zhihu.com/people/antfu), [微博](https://weibo.com/u/7485197193) or [哔哩哔哩](https://space.bilibili.com/668380).<br>
 Mail me at [hi@antfu.me](mailto:hi@antfu.me).<br>
 Chat with the community at [my Discord Server](https://chat.antfu.me).
 
