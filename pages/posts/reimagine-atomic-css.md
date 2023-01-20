@@ -94,8 +94,8 @@ By flipping the order of "generating" and "usage scanning", the "on-demand" appr
 To achieve this, both Windi CSS and Tailwind JIT take the approach of pre-scanning your source code. Here is a simple example of that:
 
 ```ts
-import glob from 'fast-glob'
 import { promises as fs } from 'fs'
+import glob from 'fast-glob'
 
 // this usually comes from user config
 const include = ['src/**/*.{jsx,tsx,vue,html}']
@@ -155,13 +155,13 @@ module.exports = {
   theme: {
     borderWidth: {
       DEFAULT: '1px',
-      '0': '0',
-      '2': '2px',
-      '3': '3px',
-      '4': '4px',
-      '6': '6px',
-      '8': '8px',
-      '10': '10px' // <-- here
+      0: '0',
+      2: '2px',
+      3: '3px',
+      4: '4px',
+      6: '6px',
+      8: '8px',
+      10: '10px' // <-- here
     }
   }
 }
@@ -185,7 +185,7 @@ module.exports = {
     }
   },
   plugins: [
-    plugin(function({ addUtilities, theme, e }) {
+    plugin(({ addUtilities, theme, e }) => {
       const rotateUtilities = _.map(theme('rotate'), (value, key) => {
         return {
           [`.${e(`rotate-${key}`)}`]: {
@@ -289,7 +289,7 @@ To make it dynamic, change the matcher to a RegExp and the body to a function:
 ```ts
 rules: [
   [/^m-(\d+)$/, ([, d]) => ({ margin: `${d / 4}rem` })],
-  [/^p-(\d+)$/, (match) => ({ padding: `${match[1] / 4}rem` })],
+  [/^p-(\d+)$/, match => ({ padding: `${match[1] / 4}rem` })],
 ]
 ```
 
@@ -487,7 +487,7 @@ Given all the flexibility and imagination UnoCSS brings, I would frankly think p
 10/21/2021, 2:17:45 PM
 1656 utilities | x50 runs
 
-none                            8.75 ms /    0.00 ms 
+none                            8.75 ms /    0.00 ms
 unocss       v0.0.0            13.72 ms /    4.97 ms (x1.00)
 windicss     v3.1.9           980.41 ms /  971.66 ms (x195.36)
 tailwindcss  v3.0.0-alpha.1  1258.54 ms / 1249.79 ms (x251.28)
@@ -518,7 +518,8 @@ export default {
       name: 'unocss',
       transform(code, id) {
         // filter out the files you don't want to scan
-        if (!filter(id)) return
+        if (!filter(id))
+          return
 
         // scan the code (also handles invalidate on dev)
         scan(code, id)
@@ -531,9 +532,9 @@ export default {
       },
       async load(id) {
         // generated css is provide as a virtual module
-        if (id === VIRTUAL_CSS_ID) {
+        if (id === VIRTUAL_CSS_ID)
           return { code: await generate() }
-        }
+
       }
     }
   ]
@@ -555,14 +556,6 @@ It's not designed to be a replacement of Windi CSS or Tailwind (consider waiting
 Oh btw, [the site you are reading](https://github.com/antfu/antfu.me) is now solely on UnoCSS, for you to reference :P.
 
 Meanwhile, please feel free to share the presets you are making or help contribute to our default presets. We can't wait to see what you can come up with!
-
-## What about Windi CSS?
-
-As a team member of Windi CSS, I am working closely with [Voorjaar](https://github.com/voorjaar), the creator of Windi CSS. You can think UnoCSS is an aggressive experiment from the Windi CSS team, and it's likely to be **the new engine of Windi CSS v4** if it goes well.
-
-Windi CSS as a framework will fill the missing features like `@apply` preprocessing, IDE intelligence sense, preflights, etc., that UnoCSS as an engine intentionally won't provide. And it will also leverage the performance and the flexibility that UnoCSS offers for both core utilities and user configurations.
-
-Before we work on embedding the new engine for Windi v4, a package to use UnoCSS as an extension of Windi CSS v3 (for example, have pure CSS icons) will soon be released. Stay tuned :)
 
 ## Thanks
 

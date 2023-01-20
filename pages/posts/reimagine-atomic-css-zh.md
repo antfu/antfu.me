@@ -100,8 +100,8 @@ John Polacek 在 [文章 Let’s Define Exactly What Atomic CSS is](https://css-
 为了实现这一点，Windi CSS 和 Tailwind JIT 都采用了预先扫描源代码的方式。下面是一个简单示例：
 
 ```ts
-import glob from 'fast-glob'
 import { promises as fs } from 'fs'
+import glob from 'fast-glob'
 
 // 通常这个是可以配置的
 const include = ['src/**/*.{jsx,tsx,vue,html}']
@@ -161,13 +161,13 @@ module.exports = {
   theme: {
     borderWidth: {
       DEFAULT: '1px',
-      '0': '0',
-      '2': '2px',
-      '3': '3px',
-      '4': '4px',
-      '6': '6px',
-      '8': '8px',
-      '10': '10px' // <-- here
+      0: '0',
+      2: '2px',
+      3: '3px',
+      4: '4px',
+      6: '6px',
+      8: '8px',
+      10: '10px' // <-- here
     }
   }
 }
@@ -191,7 +191,7 @@ module.exports = {
     }
   },
   plugins: [
-    plugin(function({ addUtilities, theme, e }) {
+    plugin(({ addUtilities, theme, e }) => {
       const rotateUtilities = _.map(theme('rotate'), (value, key) => {
         return {
           [`.${e(`rotate-${key}`)}`]: {
@@ -293,7 +293,7 @@ rules: [
 ```ts
 rules: [
   [/^m-(\d+)$/, ([, d]) => ({ margin: `${d / 4}rem` })],
-  [/^p-(\d+)$/, (match) => ({ padding: `${match[1] / 4}rem` })],
+  [/^p-(\d+)$/, match => ({ padding: `${match[1] / 4}rem` })],
 ]
 ```
 
@@ -489,7 +489,7 @@ function toggleDark() {
 10/21/2021, 2:17:45 PM
 1656 utilities | x50 runs
 
-none                            8.75 ms /    0.00 ms 
+none                            8.75 ms /    0.00 ms
 unocss       v0.0.0            13.72 ms /    4.97 ms (x1.00)
 windicss     v3.1.9           980.41 ms /  971.66 ms (x195.36)
 tailwindcss  v3.0.0-alpha.1  1258.54 ms / 1249.79 ms (x251.28)
@@ -518,7 +518,8 @@ export default {
       name: 'unocss',
       transform(code, id) {
         // 过滤掉无需扫描的文件
-        if (!filter(id)) return
+        if (!filter(id))
+          return
 
         // 扫描代码（同时也可以处理开发中的无效内容）
         scan(code, id)
@@ -531,9 +532,9 @@ export default {
       },
       async load(id) {
         // 生成的 css 会作为一个虚拟模块供后续使用
-        if (id === VIRTUAL_CSS_ID) {
+        if (id === VIRTUAL_CSS_ID)
           return { code: await generate() }
-        }
+
       }
     }
   ]
@@ -555,14 +556,6 @@ UnoCSS 仍处于实验阶段，但由于其精简的设计，生成的结果已�
 顺便说一句，目前 [你正在阅读的网站](https://github.com/antfu/antfu.me) 就构建于 UnoCSS 之上，供你参考 :P。
 
 同时，欢迎分享你正在制作的预设或帮助我们贡献默认的预设。期待看到你能够蹦出什么新想法！
-
-## 关于 Windi CSS？
-
-作为 Windi CSS 的团队成员，我与 Windi CSS 的创建者 [Voorjaar](https://github.com/voorjaar) 紧密合作。你可以认为 UnoCSS 是 Windi CSS 团队的一个激进的实验，如果进展顺利，它可能成为 **Windi CSS v4 的新引擎**。
-
-Windi CSS 作为一个框架，将填补 UnoCSS 作为一个引擎有意不提供的 `@apply` 预处理，IDE 智能提示，预处理等功能的缺失。而且它还将利用 UnoCSS 为核心工具为用户配置提供高性能和灵活性。
-
-在我们为 Windi v4 嵌入新引擎之前，一个使用 UnoCSS 作为 Windi CSS 扩展的 npm 包（例如，拥有纯 CSS 图标）将很快发布。敬请关注 :)
 
 ## 结束语
 
