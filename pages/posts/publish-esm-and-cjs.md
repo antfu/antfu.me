@@ -1,5 +1,5 @@
 ---
-title: Publish ESM and CJS in a single package
+title: Ship ESM & CJS in one Package
 date: 2021-11-29T16:00:00Z
 lang: en
 duration: 15min
@@ -64,7 +64,7 @@ On the other hand, if you are able to go with ESM directly, it would be much eas
 ```ts
 // in ESM
 import { named } from 'esm-package'
-import cjs from 'cjs-package' 
+import cjs from 'cjs-package'
 ```
 
 Some packages now ship [pure-ESM packages](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c) advocating the ecosystem to move from CJS to ESM. While this might be the "right thing to do", however, giving the fact that that majority of the ecosystem are still on CJS and the migration is not that easy, I found myself more lean to ship both CJS and ESM formats to make the transition smoother.
@@ -79,7 +79,7 @@ Luckily, Node allows you to have those two formats in a single package at the sa
   "exports": {
     ".": {
       "require": "./index.cjs", // CJS
-      "import": "./index.mjs"   // ESM
+      "import": "./index.mjs" // ESM
     }
   }
 }
@@ -122,7 +122,7 @@ Here is my go-to template of `package.json` using `tsup`:
     ".": {
       "require": "./dist/index.js",
       "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"      
+      "types": "./dist/index.d.ts"
     }
   },
   "scripts": {

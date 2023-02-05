@@ -1,5 +1,5 @@
 ---
-title: Types for sub modules
+title: Types for Submodules
 date: 2021-02-29T16:00:00Z
 lang: en
 duration: 5min
@@ -19,7 +19,7 @@ When you build multiple entries in a single package, you exports them with `expo
       "types": "./dist/foo.d.ts",
       "import": "./dist/foo.mjs",
       "require": "./dist/foo.cjs"
-    },
+    }
   }
 }
 ```

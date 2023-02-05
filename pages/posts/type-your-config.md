@@ -1,5 +1,5 @@
 ---
-title: Type your config
+title: Type your Config
 date: 2021-03-24T16:00:00Z
 lang: en
 duration: 5min
