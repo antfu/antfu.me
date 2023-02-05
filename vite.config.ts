@@ -20,6 +20,8 @@ import TOC from 'markdown-it-table-of-contents'
 import sharp from 'sharp'
 import { slugify } from './scripts/slugify'
 
+const promises: Promise<any>[] = []
+
 export default defineConfig({
   resolve: {
     alias: [
@@ -103,7 +105,7 @@ export default defineConfig({
           if (route === 'index' || frontmatter.image || !frontmatter.title)
             return
           const path = `og/${route}.png`
-          genreateOg(frontmatter.title!.replace(/\s-\s.*$/, '').trim(), `public/${path}`)
+          promises.push(genreateOg(frontmatter.title!.replace(/\s-\s.*$/, '').trim(), `public/${path}`))
           frontmatter.image = `https://antfu.me/${path}`
         })()
         const head = defaults(frontmatter, options)
@@ -142,6 +144,13 @@ export default defineConfig({
       svgo: false,
       defaultImport: 'url',
     }),
+
+    {
+      name: 'await',
+      async buildEnd() {
+        await Promise.all(promises)
+      },
+    },
   ],
 
   build: {
