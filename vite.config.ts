@@ -147,7 +147,7 @@ export default defineConfig({
 
     {
       name: 'await',
-      async buildEnd() {
+      async closeBundle() {
         await Promise.all(promises)
       },
     },
@@ -183,8 +183,13 @@ async function genreateOg(title: string, output: string) {
 
   // eslint-disable-next-line no-console
   console.log(`Generating ${output}`)
-  await sharp(Buffer.from(svg))
-    .resize(1200 * 1.1, 630 * 1.1)
-    .png()
-    .toFile(output)
+  try {
+    await sharp(Buffer.from(svg))
+      .resize(1200 * 1.1, 630 * 1.1)
+      .png()
+      .toFile(output)
+  }
+  catch (e) {
+    console.error('Failed to generate og image', e)
+  }
 }
