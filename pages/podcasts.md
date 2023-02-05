@@ -50,6 +50,10 @@ items:
     date: '2022-10-06'
     path: 'https://www.youtube.com/watch?v=lhyjPYodG4s'
     lang: 'en'
+  - title: 'Learn with Jason - Fast Unit Testing With Vitest'
+    date: '2022-02-02'
+    path: 'https://www.learnwithjason.dev/fast-unit-testing-with-vitest'
+    lang: 'en'
 ---
 
 <SubNav />
