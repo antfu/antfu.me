@@ -5,7 +5,6 @@ date: 2023-02-09T00:00:00.000+00:00
 lang: en
 type: talk
 duration: 25min
-upcoming: true
 ---
 
 > [**Vue Amsterdam 2023**](https://vuejs.amsterdam/)
