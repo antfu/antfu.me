@@ -13,7 +13,7 @@ duration: 25min
 >
 > Made with <Slidev class="inline"/>  [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.
 
-**TL;DR:** <a href="https://github.com/nuxt/devtools" target="_blank"><div i-logos-nuxt-icon /> Nuxt Devtools</a>
+**TL;DR:** <a href="https://github.com/nuxt/devtools" target="_blank"><span i-logos-nuxt-icon /> Nuxt Devtools</a>
 
 ---
 
@@ -149,7 +149,7 @@ This is only something we have right now as a MVP. We see great potential on thi
 
 ---
 
-And so, the preview of Nuxt DevTools is open-sourced, right now! You can give it a star at <a href="https://github.com/nuxt/devtools" target="_blank"><div i-logos-nuxt-icon /> Nuxt Devtools</a> and find the instructions there for trying it in your Nuxt apps.
+And so, the preview of Nuxt DevTools is open-sourced, right now! You can give it a star at <a href="https://github.com/nuxt/devtools" target="_blank"><span i-logos-nuxt-icon /> Nuxt Devtools</a> and find the instructions there for trying it in your Nuxt apps.
 
 That's all for my talk. Thank you!
 
