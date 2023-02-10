@@ -12,8 +12,9 @@ You probably don't need it usually, but in case you want to break lines programm
 ```js
 // break lines at space with maximum 25 characters per line
 text.split(/(.{0,25})(?:\s|$)/g).filter(Boolean)
-//      {min,max}
 ```
+
+A quick example:
 
 ```js
 const text = 'A quick brown fox jumps over the lazy dog.'
