@@ -175,11 +175,15 @@ async function genreateOg(title: string, output: string) {
     return
 
   await fs.mkdir(dirname(output), { recursive: true })
+  // breakline every 25 chars
+  const lines = title.trim().split(/(.{0,25})(?:\s|$)/g).filter(Boolean)
 
   const data: Record<string, string> = {
-    title,
+    line1: lines[0],
+    line2: lines[1],
+    line3: lines[2],
   }
-  const svg = ogSVg.replace(/\{\{([^}]+)}}/g, (_, name) => data[name])
+  const svg = ogSVg.replace(/\{\{([^}]+)}}/g, (_, name) => data[name] || '')
 
   // eslint-disable-next-line no-console
   console.log(`Generating ${output}`)

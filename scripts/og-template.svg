@@ -1,7 +1,7 @@
 <svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g clip-path="url(#clip0_402_22)">
 <rect width="1200" height="675" fill="url(#pattern0)"/>
-<text fill="white" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="57.4708" letter-spacing="0em"><tspan x="274" y="382.898">{{title}}</tspan></text>
+<text fill="white" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="57.4708" letter-spacing="0em"><tspan x="274" y="382.898">{{line1}}</tspan><tspan x="274" y="465">{{line2}}</tspan></text>
 </g>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
