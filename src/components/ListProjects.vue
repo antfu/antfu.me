@@ -28,7 +28,7 @@ defineProps<{ projects: Record<string, any[]> }>()
           <div v-else class="text-3xl opacity-50" :class="item.icon || 'i-carbon-unknown'" />
         </div>
         <div class="flex-auto">
-          <div cla ss="text-normal">{{ item.name }}</div>
+          <div class="text-normal">{{ item.name }}</div>
           <div class="desc text-sm opacity-50 font-normal" v-html="item.desc" />
         </div>
       </a>
