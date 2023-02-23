@@ -362,7 +362,7 @@ function useFoo(foo: Ref<string> | string) {
 
 This could also be extremely useful in composable functions that take `MaybeRef` as argument types.
 
-### `ref` / `undef`
+### `ref` / `unref`
 
 Let's do a quick summary so far. 
 
