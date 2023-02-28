@@ -1,13 +1,16 @@
 import fs from 'fs-extra'
 import { Octokit } from '@octokit/rest'
+import { getStarsRankingUrl } from './stars-rank'
 
 const pages = 2
 
 async function run() {
   const manual = await fs.readFile('_redirects', 'utf-8')
-  const gh = new Octokit({ token: process.env.GITHUB_TOKEN! })
+  const gh = new Octokit({ auth: process.env.GITHUB_TOKEN! })
 
   const redirects: [string, string, number][] = []
+
+  redirects.push(['/stars-rank', getStarsRankingUrl(), 302])
 
   for (let i = 1; i <= pages; i++) {
     const { data: repos } = await gh.repos.listForUser({

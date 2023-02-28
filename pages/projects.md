@@ -395,4 +395,4 @@ projects:
 
 <ListProjects :projects="frontmatter.projects" />
 
-<StarsRanking />
+<a href="https://antfu.me/stars-rank" target="_blank">All projects sort by Stars</a>

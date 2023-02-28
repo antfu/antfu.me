@@ -37,6 +37,7 @@
 /tc https://github.com/type-challenges/type-challenges 302
 /elk https://github.com/elk-zone/elk 302
 
+/stars-rank	https://github.com/search?l=&o=desc&s=stars&type=Repositories&q=user%3Aantfu%20user%3Acodecember%20user%3Aknightly%20user%3Aslidevjs%20user%3Atype-challenges%20user%3Aunocss%20user%3Aelk-zone%20user%3Avueuse%20user%3Avitest-dev%20user%3Avue-reactivity%20user%3Avite-pwa%20repo%3Alokalise%2Fi18n-ally%20repo%3Anuxt%2Fnuxt%20repo%3Anuxt%2Fmodules%20repo%3Anuxt%2Fdevtools%20repo%3Aunjs%2Funplugin%20repo%3Aunjs%2Funimport%20repo%3Avitejs%2Fawesome-vite%20repo%3Avitejs%2Fvite%20repo%3Avuejs%2Fcomposition-api%20repo%3Awenyan-lang%2Fide%20repo%3Awenyan-lang%2Fwenyan%20repo%3Awenyan-lang%2Fwyg%20repo%3Awindicss%2Fvite-plugin-windicss	302
 /.github	https://github.com/antfu/.github	302
 /100	https://github.com/antfu/100	302
 /action-write-config	https://github.com/antfu/action-write-config	302
