@@ -1,9 +1,9 @@
 ---
-title: Invite to talk - Anthony Fu
+title: Giving Talks - Anthony Fu
 display: ''
 ---
 
-# Invite to Talk
+# Giving Talks
 
 Hey! My name is [Anthony Fu](/). I am a fanatical open sourceror living in Paris. I am focusing on many areas in front-end like Vite, Vue, Nuxt, DX, CSS, etc.
 
