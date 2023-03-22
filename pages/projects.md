@@ -391,7 +391,11 @@ projects:
       icon: 'i-carbon-time'
 ---
 
-[💖 Sponsor to support](/sponsors-list)
+
+<RouterLink to="/sponsors-list" op50 px3 py2 mx--2 rounded hover="op100 text-rose bg-rose/10" class="group border-none!" >
+  <div i-carbon-favorite group-hover:i-carbon-favorite-filled />
+  Sponsor to support my work
+</RouterLink>
 
 <ListProjects :projects="frontmatter.projects" />
 
