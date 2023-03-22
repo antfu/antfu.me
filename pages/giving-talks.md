@@ -13,7 +13,7 @@ If you are organizing a frontend related conference or meetup, I would love to g
 
 - I am currently only doing **in-person** talks.
 - I would expect my travel and accommodation to be covered.
-- I am holding a Chinese passport with a Schengen visa. With means for conference out side of Schengen area (US, UK, etc.) I would need some assistance on the business visa application.
+- I am holding a Chinese passport with Schengen visa. Which means for conferences outside of Schengen area (US, UK, etc.) I would need some assistance on the business visa application.
 
 You can reach me out at [talks@antfu.me](mailto:talk@antfu.me), I am looking forward to it!
 
@@ -36,6 +36,9 @@ You can use the following information to present me:
 
   <div text-right pr2 op50 font-bold>Company</div>
   <TextCopy><a href="https://nuxtlabs.com/" target="_blank">NuxtLabs</a></TextCopy>
+
+  <div text-right pr2 op50 font-bold>Website</div>
+  <TextCopy><a href="https://antfu.me" target="_blank">antfu.me</a></TextCopy>
 
   <div text-right pr2 op50 font-bold>GitHub</div>
   <TextCopy><a href="https://github.com/antfu" target="_blank">@antfu</a></TextCopy>
