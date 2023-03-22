@@ -31,11 +31,11 @@ You can use the following information to present me:
   <div text-right pr2 op50 font-bold>Introduction</div>
   <TextCopy>A fanatical open sourceror. Core team member of Vue, Nuxt and Vite. Creator of Vitest, Slidev, VueUse, UnoCSS and Elk. Working at NuxtLabs.</TextCopy>
 
-  <div text-right pr2 op50 font-bold>Company</div>
-  <TextCopy><a href="https://nuxtlabs.com/" target="_blank">NuxtLabs</a></TextCopy>
-
   <div text-right pr2 op50 font-bold>Location</div>
   <TextCopy>Paris, France</TextCopy>
+
+  <div text-right pr2 op50 font-bold>Company</div>
+  <TextCopy><a href="https://nuxtlabs.com/" target="_blank">NuxtLabs</a></TextCopy>
 
   <div text-right pr2 op50 font-bold>GitHub</div>
   <TextCopy><a href="https://github.com/antfu" target="_blank">@antfu</a></TextCopy>
