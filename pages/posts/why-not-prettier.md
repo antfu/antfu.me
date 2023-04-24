@@ -53,7 +53,7 @@ The following image shows another example:
 
 <sup><em>The 42 of `printWidth` is made up for demonstration, but it happens in any `printWidth`</em></sup>
 
-On the left is the input code and on the right is the output of Prettier. I don't need to point out but you probably already have the answer of which one is "more pretty". From my point of view, Prettier follows the rule too strict. And in fact it makes the code much harder to read and modify, violating the initial goal of formating - to make the code more readable.
+On the left is the input code and on the right is the output of Prettier. I don't need to point out but you probably already have the answer of which one is "more pretty". From my point of view, Prettier follows the rule too strict. And in fact it makes the code much harder to read and modify, violating the initial goal of formatting - to make the code more readable.
 
 The real pain point is that this behavior is not optional. **You can't disable it completely**([#3468](https://github.com/prettier/prettier/issues/3468)). Increasing the `printWidth` only delays the circumstance and will affect other files that you didn't touch. The only workaround you can do is to use `// prettier-ignore`, which to me, the "all or nothing" choice loses the point of using Prettier in the first place.
 
