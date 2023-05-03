@@ -1,10 +1,14 @@
 <script setup lang="ts">
 defineProps<{ projects: Record<string, any[]> }>()
+
+function slug(name: string) {
+  return name.toLowerCase().replace(/[\s\\\/]+/g, '-')
+}
 </script>
 
 <template>
   <template v-for="key in Object.keys(projects)" :key="key">
-    <h4 class="mt-10 font-bold">
+    <h4 :id="slug(key)" class="mt-10 font-bold">
       {{ key }}
     </h4>
     <div class="project-grid py-2 -mx-3 gap-2">
@@ -45,6 +49,13 @@ defineProps<{ projects: Record<string, any[]> }>()
         >sponsoring me</a>&nbsp;to support me keeping them sustainable. Cheers! :)
       </em>
     </p>
+  </div>
+  <div class="table-of-contents">
+    <ul>
+      <li v-for="key of Object.keys(projects)" :key="key">
+        <a :href="`#${slug(key)}`">{{ key }} </a>
+      </li>
+    </ul>
   </div>
 </template>
 

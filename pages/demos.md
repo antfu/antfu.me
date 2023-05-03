@@ -6,6 +6,22 @@ description: Demostractions for projects I am working on from Tweets
 ---
 
 <Tweet>
+<p lang="en" dir="ltr">🔍 Now in the latest <a href="https://twitter.com/nuxt_js?ref_src=twsrc%5Etfw">@nuxt_js</a> DevTools, you are able to inspect the elements, open the corresponding source right inside the embedded VS Code, and edit them with HMR!<br><br>FULL FEEDBACK LOOP - make changes without the need to learn project structure - or even leave the browser! 🤯 <a href="https://t.co/sA4iODIuTE">pic.twitter.com/sA4iODIuTE</a></p>&mdash; Anthony Fu (@antfu7) <a href="https://twitter.com/antfu7/status/1652490775664508929?ref_src=twsrc%5Etfw">April 30, 2023</a>
+</Tweet>
+
+<Tweet>
+<p lang="en" dir="ltr">🚀 Quality of Life updates to Icônes!<br><br>🌵 Variants filter<br>🕦 Recently used icons<br>💡 Smart search alias (e.g. person/user/account etc.)<br>🔍 Search all icons from the home page<a href="https://t.co/0IMl8pFxfB">https://t.co/0IMl8pFxfB</a> <a href="https://t.co/uiNe6xrRZp">pic.twitter.com/uiNe6xrRZp</a></p>&mdash; Anthony Fu (@antfu7) <a href="https://twitter.com/antfu7/status/1637080965850755072?ref_src=twsrc%5Etfw">March 18, 2023</a>
+</Tweet>
+
+<Tweet>
+<p lang="en" dir="ltr">🕰️ Bringing Zeitreise to <a href="https://twitter.com/nuxt_js?ref_src=twsrc%5Etfw">@nuxt_js</a> DevTools, the time travel machine!<br><br>🕥 Scroll the time bar, and you can see how old browsers render your app, or how your app looks without flexbox, right in the DevTools! <a href="https://t.co/NccOghmDSA">pic.twitter.com/NccOghmDSA</a></p>&mdash; Anthony Fu (@antfu7) <a href="https://twitter.com/antfu7/status/1630230818042912776?ref_src=twsrc%5Etfw">February 27, 2023</a>
+</Tweet>
+
+<Tweet>
+<p lang="en" dir="ltr">🛹 Slidev finally got built-in slide transitions in v0.39.0! - something I wanted so much since the beginning!<br><br>Thanks a lot to <a href="https://twitter.com/posva?ref_src=twsrc%5Etfw">@posva</a> and <a href="https://t.co/XTaLJ6MMWv">https://t.co/XTaLJ6MMWv</a> for making this possible!<br><br>📖 Documentation here:<a href="https://t.co/ii5vVs1474">https://t.co/ii5vVs1474</a> <a href="https://t.co/oOrsUdvATU">pic.twitter.com/oOrsUdvATU</a></p>&mdash; Anthony Fu (@antfu7) <a href="https://twitter.com/antfu7/status/1619536044311089154?ref_src=twsrc%5Etfw">January 29, 2023</a>
+</Tweet>
+
+<Tweet>
 <p lang="en" dir="ltr">🌈 UnoCSS finally got the docs! - unlike the traditional static docs, I&#39;d like to make it as dynamic and interactive as possible.<br><br>✨ Introducing you the first preview of <a href="https://t.co/PMyE5r1DXM">https://t.co/PMyE5r1DXM</a>! Made by 💚 with <a href="https://twitter.com/nuxt_js?ref_src=twsrc%5Etfw">@nuxt_js</a> 3 and UnoCSS ofc :) <a href="https://t.co/4d7A6yA6Bb">pic.twitter.com/4d7A6yA6Bb</a></p>&mdash; Anthony Fu (@antfu7) <a href="https://twitter.com/antfu7/status/1519684898344554500?ref_src=twsrc%5Etfw">April 28, 2022</a>
 </Tweet>
 

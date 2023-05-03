@@ -5,31 +5,11 @@ subtitle: List of projects that I am proud of
 description: List of projects that I am proud of
 plum: true
 projects:
-  Latest:
+  Current Focus:
     - name: 'Nuxt DevTools'
       link: 'https://github.com/nuxt/devtools'
       desc: 'Unleash Nuxt Developer Experience'
       icon: 'i-logos-nuxt-icon saturate-0'
-    - name: 'vue-template-promise'
-      link: 'https://github.com/antfu/vue-template-promise'
-      desc: 'Template as Promise in Vue'
-      icon: 'i-carbon-cics-region-routing'
-    - name: 'Elk'
-      link: 'https://github.com/elk-zone/elk'
-      desc: 'A nimble Mastodon web client'
-      icon: 'elk'
-    - name: 'reTypewriter'
-      link: 'https://github.com/antfu/retypewriter'
-      desc: 'Smartly replay the steps of your changes at ease.'
-      icon: 'i-carbon-keyboard'
-    - name: 'Smart Clicks'
-      link: 'https://github.com/antfu/vscode-smart-clicks'
-      desc: 'Smart selection with double clicks for VS Code.'
-      icon: 'i-heroicons-solid-cursor-click'
-    - name: 'Vitest'
-      link: 'https://vitest.dev'
-      desc: 'A blazing fast unit-test framework powered by Vite. In collaboration with @patak-dev'
-      icon: 'vitest'
 
   Vue Ecosystem:
     - name: 'VueUse'
@@ -164,6 +144,14 @@ projects:
       link: 'https://github.com/antfu/vitesse-nuxt3'
       desc: 'Vitesse for Nuxt 3'
       icon: 'i-logos-nuxt-icon saturate-0'
+    - name: 'Starter TypeScript'
+      link: 'https://github.com/antfu/starter-ts'
+      desc: 'My TypeScript Library Starter'
+      icon: 'i-carbon-code'
+    - name: 'Starter VS Code'
+      link: 'https://github.com/antfu/starter-vscode'
+      desc: 'My VS Code Extension Starter'
+      icon: 'i-carbon-code'
 
   CSS:
     - name: 'UnoCSS'
@@ -176,6 +164,16 @@ projects:
       link: 'https://github.com/slidevjs/slidev'
       desc: 'Presentation slides for developers'
       icon: 'slidev'
+
+  User Scripts:
+    - name: 'Refined GitHub Notification'
+      link: 'https://github.com/antfu/refined-github-notifications'
+      desc: 'Enhances the GitHub Notifications, more productive and less noisy.'
+      icon: 'i-carbon:box'
+    - name: 'Clean Twitter'
+      link: 'https://github.com/antfu/userscript-clean-twitter'
+      desc: 'Bring back the peace on Twitter'
+      icon: 'i-ion-logo-twitter'
 
   Games:
     - name: 'Handle 汉兜'

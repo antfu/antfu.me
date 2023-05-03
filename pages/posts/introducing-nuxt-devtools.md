@@ -5,6 +5,4 @@ lang: en
 duration: 12min
 ---
 
-Read [the announcement on nuxt.com](https://nuxt.com/blog/introducing-nuxt-devtools).
-
-![](https://nuxt.com/assets/blog/devtools/tab-overview.png)
+[Go to nuxt.com and read the full announcement](https://nuxt.com/blog/introducing-nuxt-devtools).

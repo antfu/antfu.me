@@ -7,7 +7,7 @@ plum: true
 <SubNav />
 
 <RouterLink to="/giving-talks" op50>
-  <div i-carbon-user-speaker />
+  <div i-ri:presentation-line />
   Available for giving talks!
 </RouterLink>
 

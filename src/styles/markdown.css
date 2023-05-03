@@ -22,11 +22,11 @@
   background: #0e0e0e !important;
 }
 
-html.dark .shiki-light {
+html.dark .vitesse-light {
   display: none;
 }
 
-html:not(.dark) .shiki-dark {
+html:not(.dark) .vitesse-dark {
   display: none;
 }
 
