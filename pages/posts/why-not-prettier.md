@@ -95,6 +95,8 @@ npm i -D @antfu/eslint-config
 
 That's all you need. With the IDE extensions, it's also possible to trigger auto fixing on save. It works similarly to Prettier but respects your choices when to break the lines, with many best practices of linting. Oh, of course, it's also very opinionated towards my needs. But maybe, it could be a good reference for you to create your own version.
 
+> Sidenote: You might hear so voicing saying "Don't use ESLint for formatting" - [here are some discussions and a response from the ESLint team](https://github.com/eslint/eslint.org/issues/435), for you to make your own judgement.
+
 ## Wrapping Up
 
 This post is only trying to explain my personal experience and opinions. Of course, you can have different views and don't need to agree with me at all. I am not blaming Prettier for this. Different tools have different purposes and focuses, and there is no better or worse. It's just about using the right tools for the right circumstances. I will still be a happy user of Prettier in usages that I don't need the maximum customizability, and using ESLint exclusively for my projects' source code.
