@@ -5,12 +5,20 @@ subtitle: Great thanks for all the Sponsors!
 description: Sponsors of Anthony Fu
 ---
 
-If you also enjoy my works, you can sponsor me keep them sustainable and get early access to new projects.
+<!-- @layout-full-width -->
 
-<div mb-10>
-  <a href="https://github.com/sponsors/antfu" target="_blank" flex="inline gap-1" px3 py1 rounded shadow bg="pink-400 dark:pink-500" op="80 hover:100" class="!text-white !border-none" items-center>
-    <ri-heart-line />
-    Sponsor me on GitHub
+<div class="prose mx-auto">
+  Sponsor me keep them sustainable and get early access to new projects.
+
+</div>
+
+<div text-center p6>
+  <a
+    href="https://github.com/sponsors/antfu" target="_blank" 
+    mx-auto op50 px3 py2 rounded text-lg
+    hover="op100 text-rose bg-rose/10" class="group border-none!" >
+    <div i-carbon-favorite group-hover:i-carbon-favorite-filled />
+    Sponsor to support my work
   </a>
 </div>
 
@@ -18,4 +26,4 @@ If you also enjoy my works, you can sponsor me keep them sustainable and get ear
 import Sponsors from '../public/sponsors.svg?component'
 </script>
 
-<Sponsors w-full h-auto />
+<Sponsors h-auto max-w-250 w-full mx-auto />

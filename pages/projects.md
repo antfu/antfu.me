@@ -399,12 +399,7 @@ projects:
       icon: 'i-carbon-time'
 ---
 
-
-<RouterLink to="/sponsors-list" op50 px3 py2 mx--2 rounded hover="op100 text-rose bg-rose/10" class="group border-none!" >
-  <div i-carbon-favorite group-hover:i-carbon-favorite-filled />
-  Sponsor to support my work
-</RouterLink>
+<!-- @layout-full-width -->
 
 <ListProjects :projects="frontmatter.projects" />
 
-<a href="https://antfu.me/stars-rank" target="_blank">All projects sort by Stars</a>

@@ -1,6 +1,10 @@
 import { defineConfig, presetAttributify, presetIcons, presetUno, presetWebFonts } from 'unocss'
 
 export default defineConfig({
+  shortcuts: {
+    'bg-base': 'bg-white dark:bg-black',
+    'border-base': 'border-[#8884]',
+  },
   presets: [
     presetIcons({
       extraProperties: {

@@ -18,8 +18,8 @@
     "vue-router": "4.1.6"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.38.5",
-    "@iconify/json": "^2.2.59",
+    "@antfu/eslint-config": "^0.38.6",
+    "@iconify/json": "^2.2.61",
     "@octokit/rest": "^19.0.7",
     "@types/degit": "^2.8.3",
     "@types/diacritics": "^1.3.1",
@@ -27,15 +27,14 @@
     "@types/markdown-it": "^12.2.3",
     "@types/markdown-it-link-attributes": "^3.0.1",
     "@types/nprogress": "^0.2.0",
-    "@types/sharp": "^0.32.0",
     "@unhead/vue": "^1.1.26",
-    "@unocss/reset": "^0.51.8",
+    "@unocss/reset": "^0.51.12",
     "@vitejs/plugin-vue": "^4.2.1",
     "critters": "0.0.16",
     "cross-env": "^7.0.3",
     "degit": "^2.8.4",
     "diacritics": "^1.3.0",
-    "eslint": "^8.39.0",
+    "eslint": "^8.40.0",
     "esno": "^0.16.3",
     "fast-glob": "^3.2.12",
     "feed": "^4.2.2",
@@ -44,21 +43,21 @@
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-link-attributes": "^4.0.1",
-    "markdown-it-shiki": "^0.8.1",
+    "markdown-it-shiki": "^0.9.0",
     "markdown-it-table-of-contents": "^0.6.0",
     "pnpm": "^8.4.0",
     "rimraf": "^5.0.0",
     "sharp": "^0.32.1",
     "typescript": "^5.0.4",
-    "unocss": "^0.51.8",
+    "unocss": "^0.51.12",
     "unplugin-auto-import": "^0.15.3",
     "unplugin-icons": "^0.16.1",
     "unplugin-vue-components": "^0.24.1",
-    "vite": "^4.3.4",
-    "vite-plugin-inspect": "^0.7.24",
+    "vite": "^4.3.5",
+    "vite-plugin-inspect": "^0.7.25",
     "vite-plugin-pages": "^0.29.0",
     "vite-plugin-pwa": "^0.14.7",
-    "vite-plugin-vue-markdown": "^0.23.0",
+    "vite-plugin-vue-markdown": "^0.23.3",
     "vite-plugin-yaml": "^1.0.5",
     "vite-ssg": "^0.22.2",
     "vite-svg-loader": "^4.0.0"
@@ -66,7 +65,12 @@
   "eslintConfig": {
     "extends": "@antfu",
     "rules": {
-      "vue/no-v-text-v-html-on-component": "off"
+      "vue/no-v-text-v-html-on-component": "off",
+      "vue/dot-location": "off",
+      "vue/comma-dangle": "off",
+      "vue/block-tag-newline": "off",
+      "vue/object-curly-newline": "off",
+      "vue/space-unary-ops": "off"
     }
   }
 }
