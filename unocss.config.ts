@@ -6,7 +6,6 @@ export default defineConfig({
       'bg-base': 'bg-white dark:bg-black',
       'border-base': 'border-[#8884]',
     },
-    [/^slide-up-(\d+)$/, (_, num) => `animate-delay-${num} animate-slide-in-up animate-fill-both`],
   ],
   presets: [
     presetIcons({
