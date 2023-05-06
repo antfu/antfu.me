@@ -30,9 +30,9 @@ const { frontmatter, video, date } = defineProps({
       w-full autoplay loop muted playsinline border="b base"
     />
 
-    <div class="prose prose-sm px4 m0 pb3">
+    <div class="prose prose-sm p4 m0 pb3">
       <slot />
-      <span op50 text-sm>{{ formatDate(date, false) }}</span>
+      <div op50 text-sm pt2>{{ formatDate(date, false) }}</div>
     </div>
   </a>
 </template>
