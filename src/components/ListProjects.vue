@@ -17,7 +17,7 @@ function slug(name: string) {
       </RouterLink>
     </div>
 
-    <template v-for="key in Object.keys(projects)" :key="key">
+    <div v-for="key, cidx in Object.keys(projects)" :key="key" slide-up :style="{ animationDelay: `${cidx * 0.2}s`}">
       <h4 :id="slug(key)" class="mt-15 mb-2 font-bold text-center op75">
         {{ key }}
       </h4>
@@ -51,7 +51,7 @@ function slug(name: string) {
           </div>
         </a>
       </div>
-    </template>
+    </div>
     <div class="prose pb5 mx-auto mt10 text-center">
       <p op75>
         <em>

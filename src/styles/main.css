@@ -83,3 +83,49 @@ h2 + p > em:first-child {
 html:not(.dark) [img-dark] {
   display: none;
 }
+
+@keyframes fade-slide-up {
+  0% {
+    transform: translateY(10px);
+    opacity: 0
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 100
+  }
+}
+
+[slide-up], .slide-up {
+  opacity: 0;
+  animation: fade-slide-up 1s ease 1;
+  animation-fill-mode: both;
+}
+
+.slide-up-content p {
+  opacity: 0;
+  animation: fade-slide-up 1s ease 1;
+  animation-fill-mode: both;
+}
+
+.slide-up-content p:nth-child(1) { animation-delay: 50ms; }
+.slide-up-content p:nth-child(2) { animation-delay: 100ms; }
+.slide-up-content p:nth-child(3) { animation-delay: 150ms; }
+.slide-up-content p:nth-child(4) { animation-delay: 200ms; }
+.slide-up-content p:nth-child(5) { animation-delay: 250ms; }
+.slide-up-content p:nth-child(6) { animation-delay: 300ms; }
+.slide-up-content p:nth-child(7) { animation-delay: 350ms; }
+.slide-up-content p:nth-child(8) { animation-delay: 400ms; }
+.slide-up-content p:nth-child(9) { animation-delay: 450ms; }
+.slide-up-content p:nth-child(10) { animation-delay: 500ms; }
+.slide-up-content p:nth-child(11) { animation-delay: 550ms; }
+.slide-up-content p:nth-child(12) { animation-delay: 600ms; }
+.slide-up-content p:nth-child(13) { animation-delay: 650ms; }
+.slide-up-content p:nth-child(14) { animation-delay: 700ms; }
+.slide-up-content p:nth-child(15) { animation-delay: 750ms; }
+.slide-up-content p:nth-child(16) { animation-delay: 800ms; }
+.slide-up-content p:nth-child(17) { animation-delay: 850ms; }
+.slide-up-content p:nth-child(18) { animation-delay: 900ms; }
+.slide-up-content p:nth-child(19) { animation-delay: 950ms; }
+.slide-up-content p:nth-child(20) { animation-delay: 1000ms; }
+

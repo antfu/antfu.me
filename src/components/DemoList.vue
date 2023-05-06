@@ -32,6 +32,8 @@ const parts = computed(() => {
         :key="date"
         :date="date"
         :video="video"
+        class="slide-up"
+        :style="{ animationDelay: `${idx * 0.1}s` }"
       />
     </div>
   </div>

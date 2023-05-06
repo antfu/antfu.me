@@ -70,20 +70,28 @@ onMounted(() => {
     <Plum />
   </ClientOnly>
   <div v-if="frontmatter.display ?? frontmatter.title" class="prose m-auto mb-8">
-    <h1 class="mb-0">
+    <h1 class="mb-0" :class="frontmatter.animation ? 'slide-up' : ''">
       {{ frontmatter.display ?? frontmatter.title }}
     </h1>
-    <p v-if="frontmatter.date" class="opacity-50 !-mt-2">
+    <p 
+      v-if="frontmatter.date" 
+      class="opacity-50 !-mt-2" 
+      :class="frontmatter.animation ? 'slide-up' : ''"
+    >
       {{ formatDate(frontmatter.date) }} <span v-if="frontmatter.duration">· {{ frontmatter.duration }}</span>
     </p>
-    <p v-if="frontmatter.subtitle" class="opacity-50 !-mt-6 italic">
+    <p 
+      v-if="frontmatter.subtitle"
+      class="opacity-50 !-mt-6 italic"  
+      :class="frontmatter.animation ? 'slide-up' : ''"
+    >
       {{ frontmatter.subtitle }}
     </p>
   </div>
-  <article ref="content">
+  <article ref="content" :class="frontmatter.animation ? 'slide-up-content' : ''">
     <slot />
   </article>
-  <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-8">
+  <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-8 slide-up animate-delay-500">
     <template v-if="frontmatter.duration">
       <span font-mono op50>> </span>
       <span op50>comment on </span>

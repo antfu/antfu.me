@@ -1,5 +1,6 @@
 ---
-title: Anthony Fu
+title: Anthony 
+animation: true
 plum: true
 ---
 

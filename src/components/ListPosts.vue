@@ -32,11 +32,11 @@ const posts = computed(() =>
 const getYear = (a: Date | string | number) => new Date(a).getFullYear()
 const isFuture = (a?: Date | string | number) => a && new Date(a) > new Date()
 const isSameYear = (a?: Date | string | number, b?: Date | string | number) => a && b && getYear(a) === getYear(b)
-const isSameGroup = (a: Post, b?: Post) => {
+function isSameGroup(a: Post, b?: Post) {
   return (isFuture(a.date) === isFuture(b?.date)) && isSameYear(a.date, b?.date)
 }
 
-const getGroupName = (p: Post) => {
+function getGroupName(p: Post) {
   if (isFuture(p.date))
     return 'Upcoming'
   return getYear(p.date)
@@ -52,13 +52,17 @@ const getGroupName = (p: Post) => {
     </template>
 
     <template v-for="route, idx in posts" :key="route.path">
-      <div v-if="!isSameGroup(route, posts[idx - 1])" relative h20 pointer-events-none>
+      <div v-if="!isSameGroup(route, posts[idx - 1])" relative h20 pointer-events-none slide-up>
         <span text-8em op8 absolute left--3rem top--2rem font-bold>{{ getGroupName(route) }}</span>
       </div>
-      <app-link
-        class="item block font-normal mb-6 mt-2 no-underline"
-        :to="route.path"
+      <div
+        class="slide-up"
+        :style="{ animationDelay: `${idx * 0.05}s` }"
       >
+        <RouterLink
+          class="item block font-normal mb-6 mt-2 no-underline"
+          :to="route.path"
+        >
         <li class="no-underline" flex="~ col md:row gap-2 md:items-center">
           <div class="title text-lg leading-1.2em">
             <span
@@ -81,7 +85,9 @@ const getGroupName = (p: Post) => {
             <span v-if="route.platform" op80>· {{ route.platform }}</span>
           </div>
         </li>
-      </app-link>
+      </RouterLink>
+      </div>
+      
     </template>
   </ul>
 </template>
