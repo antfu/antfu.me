@@ -96,9 +96,27 @@ html:not(.dark) [img-dark] {
   }
 }
 
+@keyframes fade-slide-up-50 {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+}
+
 [slide-up], .slide-up {
   opacity: 0;
   animation: fade-slide-up 1s ease 1;
+  animation-fill-mode: both;
+}
+
+[slide-up-50], .slide-up-50 {
+  opacity: 0;
+  animation: fade-slide-up-50 1s ease 1;
   animation-fill-mode: both;
 }
 

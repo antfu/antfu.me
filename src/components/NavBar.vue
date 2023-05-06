@@ -4,47 +4,47 @@ import { isDark } from '~/logics'
 
 <template>
   <header class="header z-40">
-    <router-link
+    <RouterLink
       class="w-10 h-10 absolute lg:fixed m-6 select-none outline-none"
       to="/"
       focusable="false"
     >
       <img v-show="isDark" src="/logo-dark.svg?url" alt="logo">
       <img v-show="!isDark" src="/logo.svg?url" alt="logo">
-    </router-link>
+    </RouterLink>
     <nav class="nav">
       <div class="spacer" />
       <div class="right">
-        <router-link to="/posts" title="Blog">
+        <RouterLink to="/posts" title="Blog">
           <span class="lt-md:hidden">Blog</span>
           <div i-ri-article-line md:hidden />
-        </router-link>
-        <router-link to="/projects" title="Projects">
+        </RouterLink>
+        <RouterLink to="/projects" title="Projects">
           <span class="lt-md:hidden">Projects</span>
           <div i-ri-lightbulb-line class="md:hidden" />
-        </router-link>
-        <router-link to="/talks" class="lt-md:hidden" title="Talks">
+        </RouterLink>
+        <RouterLink to="/talks" class="lt-md:hidden" title="Talks">
           Talks
-        </router-link>
-        <router-link to="/podcasts" class="lt-md:hidden" title="Podcasts">
+        </RouterLink>
+        <RouterLink to="/podcasts" class="lt-md:hidden" title="Podcasts">
           Podcasts
-        </router-link>
-        <router-link to="/streams" class="lt-md:hidden" title="Streams">
+        </RouterLink>
+        <RouterLink to="/streams" class="lt-md:hidden" title="Streams">
           Streams
-        </router-link>
-        <router-link to="/demos" title="Demos">
+        </RouterLink>
+        <RouterLink to="/demos" title="Demos">
           <span class="lt-md:hidden">Demos</span>
           <div i-ri-screenshot-line class="md:hidden" />
-        </router-link>
-        <!-- <router-link to="/bookmarks" title="Bookmarks">
+        </RouterLink>
+        <!-- <RouterLink to="/bookmarks" title="Bookmarks">
           <div i-ri-bookmark-line />
-        </router-link> -->
-        <!-- <router-link to="/notes" title="Notes">
+        </RouterLink> -->
+        <!-- <RouterLink to="/notes" title="Notes">
           <div i-ri-sticky-note-line />
-        </router-link> -->
-        <router-link to="/sponsors-list" title="Sponsors">
+        </RouterLink> -->
+        <RouterLink to="/sponsors-list" title="Sponsors">
           <div i-ri-heart-line />
-        </router-link>
+        </RouterLink>
         <a href="https://twitter.com/antfu7" target="_blank" title="Twitter" class="lt-md:hidden">
           <feather-twitter />
         </a>
