@@ -7,9 +7,10 @@ description: Sponsors of Anthony Fu
 
 <!-- @layout-full-width -->
 
+<div slide-up>
+
 <div class="prose mx-auto">
   Sponsor me keep them sustainable and get early access to new projects.
-
 </div>
 
 <div text-center p6>
@@ -22,8 +23,12 @@ description: Sponsors of Anthony Fu
   </a>
 </div>
 
+</div>
+
 <script setup>
 import Sponsors from '../public/sponsors.svg?component'
 </script>
 
+<div slide-up animate-delay-200>
 <Sponsors h-auto max-w-250 w-full mx-auto />
+</div>

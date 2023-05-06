@@ -13,9 +13,11 @@ items:
 
 <SubNav />
 
-<RouterLink to="/giving-talks" op50>
-  <div i-ri:presentation-line />
-  Available for giving talks!
-</RouterLink>
+<div slide-up>
+  <RouterLink to="/giving-talks" op50>
+    <div i-ri:presentation-line />
+    Available for giving talks!
+  </RouterLink>
+</div>
 
 <ListPosts type="talk" :extra="items" />

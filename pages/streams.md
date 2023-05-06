@@ -82,6 +82,10 @@ items:
 
 <SubNav />
 
+<div slide-up>
+
 > Live stream at [YouTube](https://www.youtube.com/anthonyfu7) & [哔哩哔哩](https://space.bilibili.com/668380)
+
+</div>
 
 <ListPosts :posts="frontmatter.items.reverse()" />
