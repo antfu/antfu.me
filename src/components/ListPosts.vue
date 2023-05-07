@@ -76,18 +76,30 @@ function getGroupName(p: Post) {
           class="item block font-normal mb-6 mt-2 no-underline"
         >
           <li class="no-underline" flex="~ col md:row gap-2 md:items-center">
-            <div class="title text-lg leading-1.2em">
+            <div class="title text-lg leading-1.2em" flex gap-2>
               <span
                 v-if="route.lang === 'zh'"
                 align-middle
-                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 md:ml--10.5 mr2"
+                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 md:ml--12 mr2 my-auto"
               >中文</span>
               <span align-middle>{{ route.title }}</span>
               <span
-                v-if="route.recording"
-                align-middle mx1 text-red5 saturate-50
-                i-ri-movie-line
-                title="Has recording playback"
+                v-if="route.inperson"
+                align-middle op50
+                i-ri:group-2-line
+                title="In person"
+              />
+              <span
+                v-if="route.recording || route.video"
+                align-middle op50
+                i-ri:film-line
+                title="Provided in video"
+              />
+              <span
+                v-if="route.radio"
+                align-middle op50
+                i-ri:radio-line
+                title="Provided in radio"
               />
             </div>
 
