@@ -8,7 +8,7 @@ function slug(name: string) {
 
 <template>
   <div class="max-w-300 mx-auto">
-    <div text-center mt-15 mb--5>
+    <div text-center mt-15 mb--5 slide-up>
       <RouterLink
         to="/sponsors-list"
         mx-auto op50 px3 py2 rounded

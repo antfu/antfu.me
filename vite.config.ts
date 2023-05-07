@@ -69,7 +69,7 @@ export default defineConfig({
         : 'WrapperPost',
       wrapperClasses: (id, code) => code.includes('@layout-full-width')
         ? ''
-        : 'prose m-auto',
+        : 'prose m-auto slide-up-content',
       headEnabled: true,
       markdownItOptions: {
         quotes: '""\'\'',
