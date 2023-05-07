@@ -59,9 +59,18 @@ function getGroupName(p: Post) {
         class="slide-up"
         :style="{ animationDelay: `${idx * 0.05}s` }"
       >
-        <RouterLink
+        <component
+          :is="route.path.includes('://') ? 'a' : 'RouterLink'"
+          v-bind="
+            route.path.includes('://') ? {
+              href: route.path,
+              target: '_blank',
+              rel: 'noopener noreferrer',
+            } : {
+              to: route.path,
+            }
+          "
           class="item block font-normal mb-6 mt-2 no-underline"
-          :to="route.path"
         >
           <li class="no-underline" flex="~ col md:row gap-2 md:items-center">
             <div class="title text-lg leading-1.2em">
@@ -85,7 +94,7 @@ function getGroupName(p: Post) {
               <span v-if="route.platform" op80>· {{ route.platform }}</span>
             </div>
           </li>
-        </RouterLink>
+        </component>
       </div>
     </template>
   </ul>
