@@ -63,31 +63,30 @@ function getGroupName(p: Post) {
           class="item block font-normal mb-6 mt-2 no-underline"
           :to="route.path"
         >
-        <li class="no-underline" flex="~ col md:row gap-2 md:items-center">
-          <div class="title text-lg leading-1.2em">
-            <span
-              v-if="route.lang === 'zh'"
-              align-middle
-              class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 md:ml--10.5 mr2"
-            >中文</span>
-            <span align-middle>{{ route.title }}</span>
-            <span
-              v-if="route.recording"
-              align-middle mx1 text-red5 saturate-50
-              i-ri-movie-line
-              title="Has recording playback"
-            />
-          </div>
+          <li class="no-underline" flex="~ col md:row gap-2 md:items-center">
+            <div class="title text-lg leading-1.2em">
+              <span
+                v-if="route.lang === 'zh'"
+                align-middle
+                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 md:ml--10.5 mr2"
+              >中文</span>
+              <span align-middle>{{ route.title }}</span>
+              <span
+                v-if="route.recording"
+                align-middle mx1 text-red5 saturate-50
+                i-ri-movie-line
+                title="Has recording playback"
+              />
+            </div>
 
-          <div class="time opacity-50 text-sm">
-            {{ formatDate(route.date, true) }}
-            <span v-if="route.duration" op80>· {{ route.duration }}</span>
-            <span v-if="route.platform" op80>· {{ route.platform }}</span>
-          </div>
-        </li>
-      </RouterLink>
+            <div class="time opacity-50 text-sm">
+              {{ formatDate(route.date, true) }}
+              <span v-if="route.duration" op80>· {{ route.duration }}</span>
+              <span v-if="route.platform" op80>· {{ route.platform }}</span>
+            </div>
+          </li>
+        </RouterLink>
       </div>
-      
     </template>
   </ul>
 </template>

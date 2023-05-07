@@ -1,4 +1,4 @@
-import { dirname } from 'path'
+import { dirname } from 'node:path'
 import fg from 'fast-glob'
 import fs from 'fs-extra'
 import matter from 'gray-matter'

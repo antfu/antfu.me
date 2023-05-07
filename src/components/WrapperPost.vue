@@ -73,16 +73,16 @@ onMounted(() => {
     <h1 class="mb-0" :class="frontmatter.animation ? 'slide-up' : ''">
       {{ frontmatter.display ?? frontmatter.title }}
     </h1>
-    <p 
-      v-if="frontmatter.date" 
-      class="opacity-50 !-mt-2" 
+    <p
+      v-if="frontmatter.date"
+      class="opacity-50 !-mt-2"
       :class="frontmatter.animation ? 'slide-up' : ''"
     >
       {{ formatDate(frontmatter.date) }} <span v-if="frontmatter.duration">· {{ frontmatter.duration }}</span>
     </p>
-    <p 
+    <p
       v-if="frontmatter.subtitle"
-      class="opacity-50 !-mt-6 italic"  
+      class="opacity-50 !-mt-6 italic"
       :class="frontmatter.animation ? 'slide-up' : ''"
     >
       {{ frontmatter.subtitle }}

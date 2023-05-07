@@ -9,20 +9,22 @@ function slug(name: string) {
 <template>
   <div class="max-w-300 mx-auto">
     <div text-center mt-15 mb--5>
-      <RouterLink to="/sponsors-list" 
-        mx-auto op50 px3 py2 rounded 
-        hover="op100 text-rose bg-rose/10" class="group border-none!" >
+      <RouterLink
+        to="/sponsors-list"
+        mx-auto op50 px3 py2 rounded
+        hover="op100 text-rose bg-rose/10" class="group border-none!"
+      >
         <div i-carbon-favorite group-hover:i-carbon-favorite-filled />
         Sponsor to support my work
       </RouterLink>
     </div>
 
-    <div v-for="key, cidx in Object.keys(projects)" :key="key" slide-up :style="{ animationDelay: `${cidx * 0.2}s`}">
+    <div v-for="key, cidx in Object.keys(projects)" :key="key" slide-up :style="{ animationDelay: `${cidx * 0.2}s` }">
       <h4 :id="slug(key)" class="mt-15 mb-2 font-bold text-center op75">
         {{ key }}
       </h4>
-      <div 
-        class="project-grid py-2 max-w-500 w-max mx-auto" 
+      <div
+        class="project-grid py-2 max-w-500 w-max mx-auto"
         grid="~ cols-1 md:cols-2 lg:cols-3 gap-2"
         :class="projects[key].length === 1 ? 'flex' : ''"
       >
