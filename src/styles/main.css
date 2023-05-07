@@ -23,7 +23,7 @@ html {
 }
 
 #nprogress .bar {
-  background: #395;
+  background: #888;
   opacity: 0.75;
   position: fixed;
   z-index: 1031;
