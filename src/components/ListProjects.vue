@@ -8,7 +8,7 @@ function slug(name: string) {
 
 <template>
   <div class="max-w-300 mx-auto">
-    <div text-center mt-15 mb--5 slide-up>
+    <div text-center mt-15 mb--5 slide-enter>
       <RouterLink
         to="/sponsors-list"
         mx-auto op50 px3 py2 rounded
@@ -19,7 +19,10 @@ function slug(name: string) {
       </RouterLink>
     </div>
 
-    <div v-for="key, cidx in Object.keys(projects)" :key="key" slide-up :style="{ animationDelay: `${cidx * 0.2}s` }">
+    <div
+      v-for="key, cidx in Object.keys(projects)" :key="key" slide-enter
+      :style="{ '--enter-stage': cidx + 1 }"
+    >
       <h4 :id="slug(key)" class="mt-15 mb-2 font-bold text-center op75">
         {{ key }}
       </h4>

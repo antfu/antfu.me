@@ -7,6 +7,11 @@ export default defineConfig({
       'border-base': 'border-[#8884]',
     },
   ],
+  rules: [
+    [/^slide-enter-(\d+)$/, ([_, n]) => ({
+      '--enter-stage': n,
+    })],
+  ],
   presets: [
     presetIcons({
       extraProperties: {

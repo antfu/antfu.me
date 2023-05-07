@@ -7,4 +7,4 @@ description: Demostractions for projects I am working on from Tweets
 
 <!-- @layout-full-width -->
 
-<DemoList />
+<ListDemos />

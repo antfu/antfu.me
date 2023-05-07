@@ -32,8 +32,10 @@ const parts = computed(() => {
         :key="date"
         :date="date"
         :video="video"
-        class="slide-up"
-        :style="{ animationDelay: `${idx * 0.1}s` }"
+        class="slide-enter"
+        :style="{
+          '--enter-stage': idx + 1,
+        }"
       />
     </div>
   </div>

@@ -82,7 +82,7 @@ items:
 
 <SubNav />
 
-<div slide-up>
+<div slide-enter>
 
 > Live stream at [YouTube](https://www.youtube.com/anthonyfu7) & [哔哩哔哩](https://space.bilibili.com/668380)
 

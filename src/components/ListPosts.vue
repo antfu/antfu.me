@@ -52,12 +52,15 @@ function getGroupName(p: Post) {
     </template>
 
     <template v-for="route, idx in posts" :key="route.path">
-      <div v-if="!isSameGroup(route, posts[idx - 1])" relative h20 pointer-events-none slide-up>
+      <div v-if="!isSameGroup(route, posts[idx - 1])" relative h20 pointer-events-none slide-enter>
         <span text-8em op8 absolute left--3rem top--2rem font-bold>{{ getGroupName(route) }}</span>
       </div>
       <div
-        class="slide-up"
-        :style="{ animationDelay: `${idx * 0.05}s` }"
+        class="slide-enter"
+        :style="{
+          '--enter-stage': idx,
+          '--enter-step': '60ms',
+        }"
       >
         <component
           :is="route.path.includes('://') ? 'a' : 'RouterLink'"

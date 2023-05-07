@@ -13,7 +13,7 @@ items:
 
 <SubNav />
 
-<div slide-up>
+<div slide-enter>
   <RouterLink to="/giving-talks" op50>
     <div i-ri:presentation-line />
     Available for giving talks!
