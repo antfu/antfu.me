@@ -1,6 +1,7 @@
 ---
 title: Anthony Fu
-animation: true
+description: Anthony Fu's Portfolio
+image: https://antfu.me/og.png
 plum: true
 ---
 

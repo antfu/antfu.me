@@ -139,8 +139,8 @@ devDependencies:
     specifier: ^0.14.7
     version: 0.14.7(vite@4.3.5)(workbox-build@6.5.4)(workbox-window@6.5.4)
   vite-plugin-vue-markdown:
-    specifier: ^0.23.3
-    version: 0.23.3(rollup@2.79.1)(vite@4.3.5)
+    specifier: ^0.23.4
+    version: 0.23.4(rollup@2.79.1)(vite@4.3.5)
   vite-plugin-yaml:
     specifier: ^1.0.5
     version: 1.0.5(vite@4.3.5)
@@ -7142,8 +7142,8 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-vue-markdown@0.23.3(rollup@2.79.1)(vite@4.3.5):
-    resolution: {integrity: sha512-7anP3wHkCABTA8qud2t0SQCZa6GBRWS8xqUO70t6SAA4uzdjn0iuREgYe464/XEMYWVw9xOq52w6zzulabDeMg==}
+  /vite-plugin-vue-markdown@0.23.4(rollup@2.79.1)(vite@4.3.5):
+    resolution: {integrity: sha512-aGB2baimtxRqLyvyuVzdykSNkyMa8KciwOzF52QxiaaOoW1Kznto1ypz1NG5J7tFHWt/RR5YO51CiADtr344qQ==}
     peerDependencies:
       vite: ^2.0.0 || ^3.0.0-0 || ^4.0.0
     dependencies:
