@@ -18,6 +18,22 @@
           document.documentElement.classList.toggle('dark', true)
       })()
     </script>
+    <style>
+      :root {
+        --c-bg: #fff;
+        --c-scrollbar: #eee;
+        --c-scrollbar-hover: #bbb;
+      }
+      html {
+        background-color: var(--c-bg);
+        overflow: scroll;
+      }
+      html.dark {
+        --c-bg: #050505;
+        --c-scrollbar: #111;
+        --c-scrollbar-hover: #222;
+      }
+    </style>
   </head>
   <body class="font-sans text-gray-700 dark:text-gray-200">
     <div id="app"></div>
