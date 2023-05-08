@@ -5,12 +5,20 @@
 }
 html {
   background-color: var(--c-bg);
-  overflow: scroll;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
+
 html.dark {
   --c-bg: #050505;
   --c-scrollbar: #111;
   --c-scrollbar-hover: #222;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
 }
 
 #nprogress {
@@ -122,4 +130,22 @@ html:not(.dark) [img-dark] {
   .slide-enter-content > *:nth-child(18) { --enter-stage: 18; }
   .slide-enter-content > *:nth-child(19) { --enter-stage: 19; }
   .slide-enter-content > *:nth-child(20) { --enter-stage: 20; }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-old(root) {
+  z-index: 1;
+}
+::view-transition-new(root) {
+  z-index: 9999;
+}
+.dark::view-transition-old(root) {
+  z-index: 9999;
+}
+.dark::view-transition-new(root) {
+  z-index: 1;
 }
