@@ -9,19 +9,7 @@ function slug(name: string) {
 <template>
   <div class="max-w-300 mx-auto">
     <div text-center mt-15 mb--5 slide-enter>
-      <RouterLink
-        to="/sponsors-list"
-        mx-auto op50 px3 py2 rounded
-        transition-all duration-200 ease-out
-        hover="op100 text-rose bg-rose/10" class="group border-none!"
-      >
-        <div
-          i-carbon-favorite
-          group-hover="i-carbon-favorite-filled?mask text-rose"
-          transition-all duration-200 ease-out
-        />
-        Sponsor to support my work
-      </RouterLink>
+      <SponsorButton />
     </div>
 
     <div
