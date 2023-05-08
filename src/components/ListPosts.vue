@@ -76,37 +76,44 @@ function getGroupName(p: Post) {
           class="item block font-normal mb-6 mt-2 no-underline"
         >
           <li class="no-underline" flex="~ col md:row gap-2 md:items-center">
-            <div class="title text-lg leading-1.2em" flex gap-2>
+            <div class="title text-lg leading-1.2em" flex="~ gap-2 wrap">
               <span
                 v-if="route.lang === 'zh'"
-                align-middle
-                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 md:ml--12 mr2 my-auto"
+                align-middle flex-none
+                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--12 mr2 my-auto hidden md:block"
               >中文</span>
               <span align-middle>{{ route.title }}</span>
+            </div>
+
+            <div flex="~ gap-2 items-center">
               <span
                 v-if="route.inperson"
-                align-middle op50
+                align-middle op50 flex-none
                 i-ri:group-2-line
                 title="In person"
               />
               <span
                 v-if="route.recording || route.video"
-                align-middle op50
+                align-middle op50 flex-none
                 i-ri:film-line
                 title="Provided in video"
               />
               <span
                 v-if="route.radio"
-                align-middle op50
+                align-middle op50 flex-none
                 i-ri:radio-line
                 title="Provided in radio"
               />
-            </div>
-
-            <div class="time opacity-50 text-sm">
-              {{ formatDate(route.date, true) }}
-              <span v-if="route.duration" op80>· {{ route.duration }}</span>
-              <span v-if="route.platform" op80>· {{ route.platform }}</span>
+              <span text-sm op50>
+                {{ formatDate(route.date, true) }}
+              </span>
+              <span v-if="route.duration" text-sm op40>· {{ route.duration }}</span>
+              <span v-if="route.platform" text-sm op40>· {{ route.platform }}</span>
+              <span
+                v-if="route.lang === 'zh'"
+                align-middle flex-none
+                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 my-auto md:hidden"
+              >中文</span>
             </div>
           </li>
         </component>
