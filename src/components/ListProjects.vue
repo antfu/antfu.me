@@ -8,10 +8,6 @@ function slug(name: string) {
 
 <template>
   <div class="max-w-300 mx-auto">
-    <div text-center mt-15 mb--5 slide-enter>
-      <SponsorButton />
-    </div>
-
     <div
       v-for="key, cidx in Object.keys(projects)" :key="key" slide-enter
       :style="{ '--enter-stage': cidx + 1 }"
@@ -21,7 +17,7 @@ function slug(name: string) {
       </h4>
       <div
         class="project-grid py-2 max-w-500 w-max mx-auto"
-        grid="~ cols-1 md:cols-2 lg:cols-3 gap-2"
+        grid="~ cols-1 md:cols-2 lg:cols-3 gap-10"
         :class="projects[key].length === 1 ? 'flex' : ''"
       >
         <a
@@ -62,7 +58,10 @@ function slug(name: string) {
         </em>
       </p>
 
-      <a href="https://antfu.me/stars-rank" target="_blank">All projects sort by Stars</a>
+      <SponsorButton />
+      <div block mt-5>
+        <a href="https://antfu.me/stars-rank" target="_blank" op50>All projects sort by Stars</a>
+      </div>
     </div>
   </div>
   <div class="table-of-contents">
@@ -76,10 +75,10 @@ function slug(name: string) {
 
 <style scoped>
 .project-grid a.item {
-  padding: 0.8em 1em;
   background: transparent;
   font-size: 1.1rem;
   width: 350px;
+  max-width: 100%;
 }
 
 .project-grid a.item:hover {

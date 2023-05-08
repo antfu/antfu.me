@@ -29,19 +29,10 @@ import { isDark } from '~/logics'
         <RouterLink to="/podcasts" class="lt-md:hidden" title="Podcasts">
           Podcasts
         </RouterLink>
-        <RouterLink to="/streams" class="lt-md:hidden" title="Streams">
-          Streams
-        </RouterLink>
         <RouterLink to="/demos" title="Demos">
           <span class="lt-md:hidden">Demos</span>
           <div i-ri-screenshot-line class="md:hidden" />
         </RouterLink>
-        <!-- <RouterLink to="/bookmarks" title="Bookmarks">
-          <div i-ri-bookmark-line />
-        </RouterLink> -->
-        <!-- <RouterLink to="/notes" title="Notes">
-          <div i-ri-sticky-note-line />
-        </RouterLink> -->
         <RouterLink to="/sponsors-list" title="Sponsors">
           <div i-ri-heart-line />
         </RouterLink>

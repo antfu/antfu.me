@@ -16,10 +16,8 @@ items:
 <SubNav />
 
 <div slide-enter>
-  <RouterLink to="/giving-talks" op50>
-    <div i-ri:presentation-line />
-    Available for giving talks!
-  </RouterLink>
+  <div i-ri:presentation-line mr-1 />
+  <RouterLink to="/giving-talks" op50>Available for giving talks!</RouterLink>
 </div>
 
 <ListPosts type="talk" :extra="items" />

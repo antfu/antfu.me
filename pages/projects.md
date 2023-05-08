@@ -1,9 +1,9 @@
 ---
 title: Projects - Anthony Fu
 display: Projects
-subtitle: List of projects that I am proud of
 description: List of projects that I am proud of
 plum: true
+wrapperClass: 'text-center'
 projects:
   Current Focus:
     - name: 'Nuxt DevTools'

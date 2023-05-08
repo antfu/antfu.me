@@ -5,17 +5,17 @@ display: ''
 
 # Giving Talks
 
-Hey! My name is [Anthony Fu](/). I am a fanatical open sourceror living in Paris. I am focusing on many areas in front-end like Vite, Vue, Nuxt, DX, CSS, etc.
+Hey! My name is [Anthony Fu](/). I am a fanatical open sourceror living in Paris. I am focusing on many areas in frontend like Vite, Vue, Nuxt, DX, CSS, etc.
 
 [Here are the talks I have given](/talks).
 
-If you are organizing a frontend related conference or meetup, I would love to give a talk!
+If you are organizing a frontend related conference or meetup, I'd be happy to give a talk!
 
 - I am currently only doing **in-person** talks.
 - I would expect my travel and accommodation to be covered.
 - I am holding a Chinese passport with Schengen visa. Which means for conferences outside of Schengen area (US, UK, etc.) I would need some assistance on the business visa application.
 
-You can reach me out at [talks@antfu.me](mailto:talk@antfu.me), I am looking forward to it!
+You can reach me out at [talks@antfu.me](mailto:talk@antfu.me). Looking forward to it!
 
 ## Information
 

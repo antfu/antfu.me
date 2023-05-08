@@ -78,13 +78,34 @@ items:
     path: 'https://www.bilibili.com/video/BV1qB4y1i76x'
     platform: Bilibili
     lang: 'zh'
+  - title: '开源探店第一期'
+    date: '2022-09-19'
+    path: 'https://www.bilibili.com/video/BV1Bt4y1j7L5'
+    platform: Bilibili
+    lang: 'zh'
+  - title: '开源探店第二期'
+    date: '2022-10-09'
+    path: 'https://www.bilibili.com/video/BV1he4y1n7w8'
+    platform: Bilibili
+    lang: 'zh'
+  - title: 'Nuxt，进一步的开发者体验'
+    date: '2023-02-13'
+    path: 'https://www.bilibili.com/video/BV1vx4y1V7VD'
+    platform: Bilibili
+    lang: 'zh'
+  - title: '直播打工1 - Nuxt DevTools SEO 工具'
+    date: '2023-05-05'
+    path: 'https://www.bilibili.com/video/BV1eh4y1J75z'
+    platform: Bilibili
+    lang: 'zh'
 ---
 
 <SubNav />
 
 <div slide-enter>
 
-> Live stream at [YouTube](https://www.youtube.com/anthonyfu7) & [哔哩哔哩](https://space.bilibili.com/668380)
+<div i-ri:vidicon-2-line mr2 />
+<span op50>Live streaming at <a href="https://www.youtube.com/anthonyfu7" target="_blank">YouTube</a> & <a href="https://space.bilibili.com/668380" target="_blank">哔哩哔哩</a></span>
 
 </div>
 

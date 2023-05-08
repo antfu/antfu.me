@@ -2,7 +2,8 @@
 import { useRoute } from 'vue-router'
 import { englishOnly } from '../logics'
 
-const inactiveStyle = 'opacity-20 hover:opacity-50'
+const inactiveStyle = 'opacity-20 hover:opacity-50 font-400'
+const activeStyle = 'opacity-100 !font-600'
 
 const route = useRoute()
 </script>
@@ -15,16 +16,16 @@ const route = useRoute()
     </button>
 
     <div mb-0 flex="~ gap2 sm:gap3 wrap" text-xl sm:text-3xl>
-      <RouterLink to="/posts" class="!border-none !font-400" :class="route.path === '/posts' ? '' : inactiveStyle">
+      <RouterLink to="/posts" class="!border-none" w-17 :class="route.path === '/posts' ? activeStyle : inactiveStyle">
         Blog
       </RouterLink>
-      <RouterLink to="/talks" class="!border-none !font-400" :class="route.path === '/talks' ? '' : inactiveStyle">
+      <RouterLink to="/talks" class="!border-none" w-20 :class="route.path === '/talks' ? activeStyle : inactiveStyle">
         Talks
       </RouterLink>
-      <RouterLink to="/podcasts" class="!border-none !font-400" :class="route.path === '/podcasts' ? '' : inactiveStyle">
+      <RouterLink to="/podcasts" class="!border-none" w-35 :class="route.path === '/podcasts' ? activeStyle : inactiveStyle">
         Podcasts
       </RouterLink>
-      <RouterLink to="/streams" class="!border-none !font-400" :class="route.path === '/streams' ? '' : inactiveStyle">
+      <RouterLink to="/streams" class="!border-none" w-40 :class="route.path === '/streams' ? activeStyle : inactiveStyle">
         Streams
       </RouterLink>
     </div>
