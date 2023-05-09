@@ -49,7 +49,7 @@ function slug(name: string) {
     <div class="prose pb5 mx-auto mt10 text-center">
       <p op75>
         <em>
-          Thanks for getting intersted in my works! If like them or find them useful, consider
+          Thanks for getting interested in my works! If like them or find them useful, consider
           &nbsp;<a
             href="https://github.com/sponsors/antfu"
             target="_blank"
