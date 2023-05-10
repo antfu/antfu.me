@@ -22,6 +22,10 @@ body {
   overflow-x: hidden;
 }
 
+::selection {
+  background: #8884;
+}
+
 #nprogress {
   pointer-events: none;
 }
