@@ -109,7 +109,7 @@ html:not(.dark) [img-dark] {
   .slide-enter,
   .slide-enter-content > * {
     --enter-stage: 0;
-    --enter-step: 120ms;
+    --enter-step: 90ms;
     --enter-initial: 0ms;
     animation: slide-enter 1s both 1;
     animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step));
