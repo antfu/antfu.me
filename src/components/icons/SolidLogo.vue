@@ -1,5 +1,5 @@
 <template>
-  <svg v-pre width="1.2em" hieght="1.2em" viewBox="0 0 166 155.3">
+  <svg v-pre width="1.2em" height="1.2em" viewBox="0 0 166 155.3">
     <path
       d="M163 35S110-4 69 5l-3 1c-6 2-11 5-14 9l-2 3-15 26 26 5c11 7 25 10 38 7l46 9 18-30z"
       fill="#76b3e1"
