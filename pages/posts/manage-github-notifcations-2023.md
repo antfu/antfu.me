@@ -67,9 +67,9 @@ Then I will dismiss a range of notifications immediately as well. For example, t
 
 Then also smaller things like new commits pushed to a working-in-progress PRs, or GitHub Actions been canceled, etc.
 
-Following these rules, I have been manually dismiss them for a long while, until someday I feel it's still a lot of work to do so. So, I wrote a userscript, a piece of JavaScript you injected into GitHub on your local to automate this. It's called **Refined GitHub Notifications**. Be aware it's quite hacky and opinionated, but I wish it could be a good starting point for you to build your own automation.
+Following these rules, I have been manually dismiss them for a long while, until someday I feel it's still a lot of work to do so. So, I wrote a userscript, a piece of JavaScript you injected into GitHub on your local to automate this. It's called [**Refined GitHub Notifications**](https://github.com/antfu/refined-github-notifications). Be aware it's quite hacky and opinionated, but I wish it could be a good starting point for you to build your own automation.
 
-So this is the before, and this is the after.
+![](https://talks.antfu.me/2023/github-notifications/notifications-refined.png)
 
 It does a few things, that I see a huge improvement to my workflow. First, it automatically dismiss the "unrelated" notifications I just mentioned.
 
