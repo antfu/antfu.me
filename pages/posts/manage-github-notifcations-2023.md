@@ -1,8 +1,9 @@
 ---
-title: Manage GitHub Notifications - GitHub Maintainer Summit 2023
+title: How I Manage GitHub Notifications
 description: Manage GitHub Notifications - GitHub Maintainer Summit 2023
 date: 2023-05-17
 lang: en
+recording: true
 type: talk+blog
 duration: 20min
 ---
@@ -11,9 +12,11 @@ duration: 20min
 > 
 > Slides: [PDF](https://antfu.me/talks/2023-05-17) | [SPA](https://talks.antfu.me/2023/github-notifications/)
 >
-> Recording: TBA
+> Recording: [YouTube](https://youtu.be/gu-0b6KCf80)
 >
 > Made with <Slidev class="inline"/>  [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.
+
+## Transcript
 
 As you see, I am maintaining a range of projects, across different organizations and teams. Some are quite large with a lot of users and contributors, some are smaller, like the upstream libraries. In order to keep them maintained, I figured out a methodology, I'd call it "**Notification-driven Developement**".
 
