@@ -2,7 +2,7 @@
 title: import { reactive } from 'vue' - 滨江前端沙龙 2020
 date: 2020-09-26T16:00:00.000+00:00
 lang: zh
-type: talk
+type: talk+blog
 duration: 25min
 ---
 
@@ -37,16 +37,18 @@ Hello 大家好，非常感谢丁香园这次的邀请，也非常荣幸能够�
 在 Vue 3 里面，我们对整个响应式系统做了一个重新的设计，同时暴露出了这几个新的API，`ref` `reactive` `computed` `effect`。我们把原本 Vue 2 `Object.defineProperty` 的实现改成了使用 `Proxy` 的实现方式。而 Proxy 可以给我们提供对属性更新监控的更大的灵活性。
 
 ```ts
-const reactive = target => new Proxy(target, {
-  get(target, prop, receiver) {
-    track(target, prop)
-    return Reflect.get(...arguments) // get original data
-  },
-  set(target, key, value, receiver) {
-    trigger(target, key)
-    return Reflect.set(...arguments)
-  }
-})
+function reactive(target) {
+  return new Proxy(target, {
+    get(target, prop, receiver) {
+      track(target, prop)
+      return Reflect.get(...arguments) // get original data
+    },
+    set(target, key, value, receiver) {
+      trigger(target, key)
+      return Reflect.set(...arguments)
+    }
+  })
+}
 
 const obj = reactive({
   hello: 'world'
@@ -65,16 +67,16 @@ obj.hello = 'vue' // `trigger()` get called
 ```ts
 const targetMap = new WeakMap()
 
-export const track = (target, key) => {
+export function track(target, key) {
   if (tacking && activeEffect)
     targetMap.get(target).key(key).push(activeEffect)
 }
 
-export const trigger = (target, key) => {
+export function trigger(target, key) {
   targetMap.get(target).key(key).forEach(effect => effect())
 }
 
-export const effect = (fn) => {
+export function effect(fn) {
   const effect = function () { fn() }
   enableTracking()
   activeEffect = effect
@@ -91,7 +93,7 @@ export const effect = (fn) => {
 在 Vue 3.0 里面，`computed` 和 `watch` 都是基于 `effect` 的包装，我们这边可以看到一个简单的 `computed` 的实现
 
 ```ts
-const computed = (getter) => {
+function computed(getter) {
   let value
   let dirty = true
 

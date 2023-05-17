@@ -12,7 +12,7 @@ const props = defineProps<{
 const router = useRouter()
 const routes: Post[] = router.getRoutes()
   .filter(i => i.path.startsWith('/posts') && i.meta.frontmatter.date)
-  .filter(i => !i.path.endsWith('.html') && i.meta.frontmatter.type === props.type)
+  .filter(i => !i.path.endsWith('.html') && (i.meta.frontmatter.type || 'blog').split('+').includes(props.type))
   .map(i => ({
     path: i.path,
     title: i.meta.frontmatter.title,

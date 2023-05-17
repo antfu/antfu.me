@@ -3,7 +3,7 @@ title: Composable Vue - VueDay 2021
 description: Slides & transcript for my talk at VueDay 2021
 date: 2021-04-28T16:00:00.000+00:00
 lang: en
-type: talk
+type: talk+blog
 recording: true
 duration: 30min
 ---
@@ -40,6 +40,8 @@ Well, let's start with Ref and Reactive. I bet many of you have wondered the dif
 You can think refs as variables and reactives as objects. When you do the assignment, one is assigning "value" while the other one is assigning properties. While the usage of them can really dependents on what you gonna use them, but if we really need to pick one from them, I'd say go with `ref` whenever you can.
 
 With `ref`, you will need to use `.value` to access and assigning values, but this also gives you more explicit awareness of when you are tracking and triggering the reactivity system. 
+
+<!--eslint-skip-->
 
 ```ts
 import { ref } from 'vue'
@@ -93,6 +95,7 @@ The other one is the nature of Vue, in the template, all the refs are auto unwra
 
 ```ts
 import { reactive, ref } from 'vue'
+
 const foo = ref('bar')
 const data = reactive({ foo, id: 10 })
 data.foo // 'bar'

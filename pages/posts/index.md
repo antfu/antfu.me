@@ -6,4 +6,4 @@ plum: true
 
 <SubNav />
 
-<ListPosts only-date />
+<ListPosts only-date type="blog" />
