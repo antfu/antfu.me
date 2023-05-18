@@ -50,7 +50,7 @@ GitHub supports a magic repository called `.github`. You can create one under yo
 
 Now let's talk about how I manage the notifications. The first tip is to seek for notifications, and don't let them seek for you. I would highly recommand you to turn off your email notifications or the push notifications on your phone, if you haven't. You don't want to being interrupted by notifications when you are working on something else, or in the middle of sleeping. Instead, I would look for notifications proactively, at the beginning of the day, or when I finished my current task.
 
-You can either use GitHub Notifications Inbox to do so, or you can also give to try on Volta, project management tool our team is building on top of GitHub. Allowing you to track your notifications and milestones in a more intractive way. It's free for open source, so I would definitely recommand you to give it a try to see if it fits your workflow. And today, I will focus more on using GitHub's native notifications inbox.
+You can either use GitHub Notifications Inbox to do so, or you can also give to try on [<img src="https://volta.net/logo-dark.svg" alt="Volta Logo" class="h-1.1em! w-1.1em! inline m0! translate-y--2px mr1!" />Volta](https://volta.net/), project management tool our team is building on top of GitHub. Allowing you to track your notifications and milestones in a more intractive way. It's free for open source, so I would definitely recommand you to give it a try to see if it fits your workflow. Today, I will focus more on using GitHub's native notifications inbox.
 
 ## 2. Group Notifications
 
@@ -70,7 +70,7 @@ Then I will dismiss a range of notifications immediately as well. For example, t
 
 Then also smaller things like new commits pushed to a working-in-progress PRs, or GitHub Actions been canceled, etc.
 
-Following these rules, I have been manually dismiss them for a long while, until someday I feel it's still a lot of work to do so. So, I wrote a userscript, a piece of JavaScript you injected into GitHub on your local to automate this. It's called [**Refined GitHub Notifications**](https://github.com/antfu/refined-github-notifications). Be aware it's quite hacky and opinionated, but I wish it could be a good starting point for you to build your own automation.
+Following these rules, I have been manually dismiss them for a long while, until someday I feel it's still a lot of work to do so. So, I wrote a userscript, a piece of JavaScript you injected into GitHub on your local to automate this. It's called <GitHubLink repo="antfu/refined-github-notifications" />. Be aware it's quite hacky and opinionated, but I wish it could be a good starting point for you to build your own automation.
 
 ![](https://talks.antfu.me/2023/github-notifications/notifications-refined.png)
 

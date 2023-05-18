@@ -6,10 +6,10 @@ defineProps<{
 </script>
 
 <template>
-  <span class="flex-inline items-center">
-    <carbon-logo-github class="inline-block opacity-70" />
+  <span ws-nowrap>
+    <carbon-logo-github class="inline-block" />
     <a
-      class="opacity-50 ml-1"
+      class="opacity-70 ml-1 font-mono"
       :href="`https://github.com/${repo}`"
       target="_blank"
     >{{ name || (repo.startsWith('antfu/') ? repo.slice(6) : repo) }}</a>
