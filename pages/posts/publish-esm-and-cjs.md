@@ -18,12 +18,14 @@ In the past decade, due to the lack of a standard module system of JavaScript, C
 ```js
 // CJS
 const circle = require('./circle.js')
+
 console.log(`The area of a circle of radius 4 is ${circle.area(4)}`)
 ```
 
 ```js
 // ESM
 import { area } from './circle.mjs'
+
 console.log(`The area of a circle of radius 4 is ${area(4)}`)
 ```
 
@@ -175,6 +177,7 @@ Want to know the magic? After running the stubbing command, you can check out th
 ```ts
 // dist/index.mjs
 import jiti from 'jiti'
+
 export default jiti(null, { interopDefault: true })('/Users/antfu/unbuild-test/src/index')
 ```
 
@@ -262,8 +265,8 @@ With either of the tools mentioned above, now we are able to write TypeScript as
 So since our code will be compiled to both CJS and ESM, it's better to avoiding using those environment specific context whenever possible. If you do need them, you can refer to my note about [Isomorphic `__dirname`](/posts/isomorphic-dirname):
 
 ```ts
-import { dirname } from 'path'
-import { fileURLToPath } from 'url'
+import { dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 const _dirname = typeof __dirname !== 'undefined'
   ? __dirname
@@ -273,7 +276,7 @@ const _dirname = typeof __dirname !== 'undefined'
 For `require` and `require.resolve`, you can use
 
 ```ts
-import { createRequire } from 'module'
+import { createRequire } from 'node:module'
 
 const require = createRequire(import.meta.url)
 ```
@@ -289,6 +292,10 @@ export default defineBuildConfig({
 ```
 
 On the other hand, if you are using `tsup`, it will shims ESM's `import.meta.url` for you in CJS instead.
+
+## Verify your Packages
+
+Once your published your package, you can verify if it follows the best practices using [publint.dev](https://publint.dev/) made by [@bluwy](https://github.com/bluwy). It will also give you suggestions of how to improve them further.
 
 ## Final words
 
