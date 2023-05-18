@@ -77,7 +77,7 @@ onMounted(() => {
       v-if="frontmatter.date"
       class="opacity-50 !-mt-2 slide-enter"
     >
-      {{ formatDate(frontmatter.date) }} <span v-if="frontmatter.duration">· {{ frontmatter.duration }}</span>
+      {{ formatDate(frontmatter.date, false) }} <span v-if="frontmatter.duration">· {{ frontmatter.duration }}</span>
     </p>
     <p
       v-if="frontmatter.subtitle"
