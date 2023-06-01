@@ -17,7 +17,7 @@ function slug(name: string) {
       </h4>
       <div
         class="project-grid py-2 max-w-500 w-max mx-auto"
-        grid="~ cols-1 md:cols-2 lg:cols-3 gap-10"
+        grid="~ cols-1 md:cols-2 lg:cols-3 gap-4"
         :class="projects[key].length === 1 ? 'flex' : ''"
       >
         <a
@@ -79,6 +79,8 @@ function slug(name: string) {
   font-size: 1.1rem;
   width: 350px;
   max-width: 100%;
+  padding: 0.5rem 0.875rem 0.875rem;
+  border-radius: 6px;
 }
 
 .project-grid a.item:hover {
