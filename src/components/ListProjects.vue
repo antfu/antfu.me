@@ -79,6 +79,8 @@ function slug(name: string) {
   font-size: 1.1rem;
   width: 350px;
   max-width: 100%;
+  padding: 0.5rem 0.875rem 0.875rem;
+  border-radius: 6px;
 }
 
 .project-grid a.item:hover {
