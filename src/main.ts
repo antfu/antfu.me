@@ -9,6 +9,7 @@ import NProgress from 'nprogress'
 import { ViteSSG } from 'vite-ssg'
 import dayjs from 'dayjs'
 import LocalizedFormat from 'dayjs/plugin/localizedFormat.js'
+import { setupRouterScroller } from 'vue-router-better-scroller'
 import App from './App.vue'
 
 const routes = autoRoutes.map((i) => {
@@ -24,25 +25,25 @@ export const createApp = ViteSSG(
   App,
   {
     routes,
-    scrollBehavior(to, from, savedPosition) {
-      if (savedPosition) {
-        document.body.scrollTo(savedPosition)
-        return savedPosition
-      }
-      else {
-        document.body.scrollTo({
-          top: 0,
-        })
-        return {
-          top: 0,
-        }
-      }
-    },
   },
   ({ router, isClient }) => {
     dayjs.extend(LocalizedFormat)
 
     if (isClient) {
+      const html = document.querySelector('html')!
+      setupRouterScroller(router, {
+        selectors: {
+          body(ctx) {
+            // only do the sliding transition when the scroll position is not 0
+            if (ctx.savedPosition?.top)
+              html.classList.add('no-sliding')
+            else
+              html.classList.remove('no-sliding')
+            return true
+          },
+        },
+      })
+
       router.beforeEach(() => {
         NProgress.start()
       })
