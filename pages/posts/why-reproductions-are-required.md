@@ -46,7 +46,7 @@ A good [minimal reproduction](https://stackoverflow.com/help/minimal-reproducibl
 
 In my opinion, **asking for minimal reproduction is asking for equity of the effort spent**. If everyone could take some time to create a minimal reproduction before opening issues, it would save maintainers hundreds of hours (or even help themselves to find user-land solutions/mistakes, then they don't even need to create the issue). A well-investigated and well-explained issue would also make maintainers more willing to spend their time and effort in return.
 
-> Here I'd like to invent a term "**presumption of bug-free**". Similiar to [presumption of innocence](https://en.wikipedia.org/wiki/Presumption_of_innocence) in law, issues should be consider innocent until proven "guilty" with a minimal reproduction. Issue creators should be responsible to provide enough information to prove the issue is not caused by other factors.
+> Here I'd like to coin a term "**presumption of bug-free**". Similiar to [presumption of innocence](https://en.wikipedia.org/wiki/Presumption_of_innocence) in law, issues should be consider innocent until proven "guilty" with a minimal reproduction. Issue creators should be responsible to provide enough information to prove the issue is not caused by other factors.
 
 ## How to Create a Minimal Reproduction
 
