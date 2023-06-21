@@ -48,6 +48,8 @@ description: 关于最小重现之于开源的思考
 
 在我看来，**要求最小重现是在要求使用者与维护者所花费的努力的公平**。如果每个人都能在提 Issue 之前可以花一些时间创建一个最小重现，合集下来就能为维护者节省数百个小时（这甚至可以帮助使用者自己找到解决方案/错误，以至于不再需要提 Issue）。一个经过充分调查和解释的 Issue 也会让维护者更愿意花时间和精力处理。
 
+> 在这里我想发明一个术语 "**无 Bug 推定原则**"。 与法律中的 [无罪推定原则](https://zh.wikipedia.org/wiki/%E6%97%A0%E7%BD%AA%E6%8E%A8%E5%AE%9A%E5%8E%9F%E5%88%99) 类似，Issue 应被视为无效，直到被最小重现证明 "有罪"。 Issue 的创建者应负责提供足够的信息来证明该 Bug 不是由其他因素引起的。
+
 ## 如何建立一个最小重现
 
 > 这部分引用自 [Rich Harris](https://github.com/Rich-Harris) 的 [*Please include a repro*](https://gist.github.com/Rich-Harris/88c5fc2ac6dc941b22e7996af05d70ff)
