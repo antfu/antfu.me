@@ -52,7 +52,7 @@ In my opinion, **asking for minimal reproduction is asking for equity of the eff
 
 ### Failing Test Cases
 
-If you are a developer and familiar with the testing process. **The best reproductions are pull requests that add failing test cases**. This approach doesn't just highlight the problem, but also clearly depicts the expected behavior. Moreover, it leverages the Continuous Integration (CI) system to verify the fix upon landing and provides a safeguard against future regressions.
+If you are a developer and familiar with the testing process. **The best reproductions are pull requests that add failing test cases**. This approach doesn't just highlight the problem, but also clearly depicts the expected behavior. Leveraging the Continuous Integration (CI) system, it also allows verifying the fix upon landing and provides a safeguard against future regressions.
 
 To proceed with this method, initiate by cloning the project's source code and setting up the development environment. Then, create a new branch and navigate to the test folder to introduce a failing test case that mirrors the discrepancy you've observed. Upon successfully making the new test fail -- indicating the bug -- commit the changes, then establish a pull request detailing the issue in its description.
 
