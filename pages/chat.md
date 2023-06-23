@@ -1,7 +1,7 @@
 ---
 title: Let's Chat - Anthony Fu
 display: Let's Chat!
-image: /og-chat.png
+image: https://antfu.me/og-chat.png
 ---
 
 [中文 Chinese](/chat-zh)

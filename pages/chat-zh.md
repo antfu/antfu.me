@@ -1,7 +1,7 @@
 ---
 title: 和 Anthony Fu 聊聊天！
 display: 聊聊天！
-image: /og-chat.png
+image: https://antfu.me/og-chat.png
 ---
 
 [English](/chat)
