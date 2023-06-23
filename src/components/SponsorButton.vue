@@ -1,11 +1,9 @@
 <template>
-  <div flex="~ col">
+  <div flex="~ wrap gap-2 items-center justify-center">
     <a
       href="https://github.com/sponsors/antfu"
       target="_blank"
-      mx-auto op50 px3 py2 rounded
-      transition-all duration-200 ease-out
-      hover="op100 text-rose bg-rose/10" class="group border-none!"
+      class="group btn-rose"
     >
       <div
         i-carbon-favorite
@@ -17,9 +15,7 @@
     <a
       href="https://afdian.net/a/antfu"
       target="_blank"
-      mx-auto op50 px3 py2 rounded
-      transition-all duration-200 ease-out
-      hover="op100 text-yellow bg-yellow/10" class="group border-none!"
+      class="group btn-yellow"
     >
       <div
         i-carbon-flash

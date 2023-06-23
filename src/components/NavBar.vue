@@ -33,8 +33,11 @@ import { isDark } from '~/logics'
           <span class="lt-md:hidden">Demos</span>
           <div i-ri-screenshot-line class="md:hidden" />
         </RouterLink>
+        <RouterLink to="/chat" title="Let's Chat">
+          <div i-ri-chat-1-line />
+        </RouterLink>
         <RouterLink to="/sponsors-list" title="Sponsors">
-          <div i-ri-heart-line />
+          <div i-ri-user-heart-line />
         </RouterLink>
         <a href="https://twitter.com/antfu7" target="_blank" title="Twitter" class="lt-md:hidden">
           <feather-twitter />
