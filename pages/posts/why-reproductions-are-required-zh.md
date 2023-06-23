@@ -52,6 +52,27 @@ description: 关于最小重现之于开源的思考
 
 ## 如何建立一个最小重现
 
+### 失败的测试用例
+
+如果你是一名熟悉测试流程的开发者，**最佳的重现方式是提交添加失败测试用例的 Pull Request**。这种方法不仅突出显示了问题，而且还清晰地描绘了期望的行为。此外，它利用持续集成（CI）系统在修复落地后验证修复，并为未来的回归提供了保障。
+
+要使用此方法，首先需要克隆项目的源码并设置开发环境。然后，创建一个新的分支并找到测试文件夹，根据你所观察到的问题添加失败测试用例。成功让新的测试失败（即指出了漏洞）后，提交更改，然后创建一个详细描述问题的 Pull Request。
+
+以下是一些真实的例子：
+
+- [vuejs/language-tools #2113](https://github.com/vuejs/language-tools/pull/2113)
+  1. [PR 添加失败的测试](https://github.com/vuejs/language-tools/pull/2113/commits/eba91fdc0e35389f495ecb7fe144e301e5ccbd58)
+  2. [之后维护者推送了一个修正，使测试通过](https://github.com/vuejs/language-tools/pull/2113/commits/6b712b22b442184ce6a6abe3052db7d5a3cb5ac4)
+  3. PR被合并，测试被改进以涵盖更多的情况
+- [unjs/magicast #62](https://github.com/unjs/magicast/pull/62)
+  1. [PR 添加失败的测试](https://github.com/unjs/magicast/pull/62/commits/7d3bb7c7955ce2eb697014700771e94795682f89)
+  2. 之后维护者推送了一个修正，使测试通过](https://github.com/unjs/magicast/pull/62/commits/6a27de93b73861eb0750873105fd8c5d51f8912c)
+  3. PR与改进后的测试案例合并
+
+注意此方法可能不一定适用所有的情况。如果无法通过测试用例重现错误，您可以尝试如下所述创建可重现的项目。
+
+### 可重现的项目
+
 > 这部分引用自 [Rich Harris](https://github.com/Rich-Harris) 的 [*Please include a repro*](https://gist.github.com/Rich-Harris/88c5fc2ac6dc941b22e7996af05d70ff)
 
 在某些情况下，一些项目会提供专门的 REPL - 例如：[Rollup](http://rollupjs.org)、[Svelte](https://svelte.technology/repl) 和[Vue](https://sfc.vuejs.org/) 等，你可以使用它们提供重现。

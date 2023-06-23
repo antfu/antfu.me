@@ -61,9 +61,13 @@ Here are some real world examples:
 - [vuejs/language-tools #2113](https://github.com/vuejs/language-tools/pull/2113)
   1. [PR created by adding failing test](https://github.com/vuejs/language-tools/pull/2113/commits/eba91fdc0e35389f495ecb7fe144e301e5ccbd58)
   2. [The maintainer later pushed a fix to make the test pass](https://github.com/vuejs/language-tools/pull/2113/commits/6b712b22b442184ce6a6abe3052db7d5a3cb5ac4)
-  3. PR is merged, and the tests get improved to cover more cases
+  3. PR gets merged, and the tests get improved to cover more cases
+- [unjs/magicast #62](https://github.com/unjs/magicast/pull/62)
+  1. [PR created by adding failing test](https://github.com/unjs/magicast/pull/62/commits/7d3bb7c7955ce2eb697014700771e94795682f89)
+  2. [The maintainer later pushed a fix to make the test pass](https://github.com/unjs/magicast/pull/62/commits/6a27de93b73861eb0750873105fd8c5d51f8912c)
+  3. PR gets merged with the improved test case
 
-> Please note that this method may not always applicable. If the bug is not been able to be reproduced with a test case, you can try to create a repository reproductions instead, as described below.
+Please note that this method may not always applicable. If the bug is not been able to be reproduced with a test case, you can try to create a repository reproductions instead, as described below.
 
 ### Reproducible Projects or Playgrounds
 
