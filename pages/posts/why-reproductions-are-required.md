@@ -50,6 +50,23 @@ In my opinion, **asking for minimal reproduction is asking for equity of the eff
 
 ## How to Create a Minimal Reproduction
 
+### Failing Test Cases
+
+If you are a developer and familiar with the testing process. **The best reproductions are pull requests that add failing test cases**. This approach doesn't just highlight the problem, but also clearly depicts the expected behavior. Moreover, it leverages the Continuous Integration (CI) system to verify the fix upon landing and provides a safeguard against future regressions.
+
+To proceed with this method, initiate by cloning the project's source code and setting up the development environment. Then, create a new branch and navigate to the test folder to introduce a failing test case that mirrors the discrepancy you've observed. Upon successfully making the new test fail -- indicating the bug -- commit the changes, then establish a pull request detailing the issue in its description.
+
+Here are some real world examples:
+
+- [vuejs/language-tools #2113](https://github.com/vuejs/language-tools/pull/2113)
+  1. [PR created by adding failing test](https://github.com/vuejs/language-tools/pull/2113/commits/eba91fdc0e35389f495ecb7fe144e301e5ccbd58)
+  2. [The maintainer later pushed a fix to make the test pass](https://github.com/vuejs/language-tools/pull/2113/commits/6b712b22b442184ce6a6abe3052db7d5a3cb5ac4)
+  3. PR is merged, and the tests get improved to cover more cases
+
+> Please note that this method may not always applicable. If the bug is not been able to be reproduced with a test case, you can try to create a repository reproductions instead, as described below.
+
+### Reproducible Projects or Playgrounds
+
 > This section is ported from [*Please include a repro*](https://gist.github.com/Rich-Harris/88c5fc2ac6dc941b22e7996af05d70ff) by [Rich Harris](https://github.com/Rich-Harris). Also recommand watching [a more detailed explanation by Rich Harris](https://youtu.be/dB_YjuAMH3o?t=1376).
 
 In some cases, there will be a project-specific way to demonstrate problems – for example, [Rollup](http://rollupjs.org), [Svelte](https://svelte.technology/repl) and [Vue](https://sfc.vuejs.org/) all have dedicated REPLs. Use them!
