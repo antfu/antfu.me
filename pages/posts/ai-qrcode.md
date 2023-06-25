@@ -1,6 +1,6 @@
 ---
 title: Stylistic QR Code with Stable Diffusion
-date: 2023-06-25T10:00:00.000+00:00
+date: 2023-06-25T05:00:00.000+00:00
 lang: en
 duration: 20min
 ---
