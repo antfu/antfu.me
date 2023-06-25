@@ -27,9 +27,9 @@ On my end, being a programmer with strong preferences, I would naturally seek fo
 
 ## QR Code Image
 
-A few weeks ago, someone made headlines when they successfully integrated ControlNet with QR Code, and [the tweets](https://twitter.com/LinusEkenstam/status/1666183905039245315) about it went viral. And I managed to find the original article in Chinese: [Use AI to Generate Scannable Images](https://mp.weixin.qq.com/s/i4WR5ULH1ZZYl8Watf3EPw). Unfortunately, I couldn't find an English version of the article. The concept behind it is fascinating, but it seems that the original authors haven't released the model.
+A few weeks ago, [`nhciao` on reddit posted a series of artistic QR codes](https://www.reddit.com/r/StableDiffusion/comments/141hg9x/controlnet_for_qr_code/) created using Stable Diffusion and [ControlNet](https://github.com/lllyasviel/ControlNet). The concept behind them fascinated me, and I defintely want to make one for my own. So I did some research and managed to find the original article in Chinese: [Use AI to Generate Scannable Images](https://mp.weixin.qq.com/s/i4WR5ULH1ZZYl8Watf3EPw). The author provided insights into their motivations and the process of training the model, although they did not release the model itself. On the other hand, they are building a service called [QRBTF.AI](https://qrbtf.com/) to generated suh QR code, however it is not yet available.
 
-Until another day I found an alternative model [QR Pattern Controlnet Model](https://civitai.com/models/90940/controlnet-qr-pattern-qr-codes) on [CivitAI](https://civitai.com). So I decided to give it a try.
+Until another day I found an community model [QR Pattern Controlnet Model](https://civitai.com/models/90940/controlnet-qr-pattern-qr-codes) on [CivitAI](https://civitai.com). I know I got to give it a try!
 
 ## Setup
 
@@ -116,7 +116,7 @@ Lastly, I use Lightroom for subtle color grading and post-processing, and then t
 
 ![Final QR Code Image](/images/ai-qrcode-final.jpg)
 
-The one I end up with doesn't have very good error tolerance, you might need to try a few times to get it scanned :P
+The one I end up with not very good error tolerance, you might need to try a few times or use a more forgiving scanner to get it scanned :P
 
 ## Conclusion
 
@@ -148,5 +148,5 @@ Here are the list of resources for easier reference.
 ### Tutorials
 
 - [Stable Diffusion LoRA Models: A Complete Guide](https://aituts.com/stable-diffusion-lora/) - The one I used to get started
-- [(Chinese) Use AI to genereate scannable images](https://mp.weixin.qq.com/s/i4WR5ULH1ZZYl8Watf3EPw) - I believe it's the original creator this idea. Unfortunately the article is in Chinese and I didn't find a English version of it.
+- [(Chinese) Use AI to genereate scannable images](https://mp.weixin.qq.com/s/i4WR5ULH1ZZYl8Watf3EPw) - Unfortunately the article is in Chinese and I didn't find a English version of it.
 - [Upscale Images With Stable Diffusion](https://easywithai.com/guide/how-to-use-upscalers-in-stable-diffusion/) - Enlarge the image while adding more details
