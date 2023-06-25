@@ -15,6 +15,13 @@
   width: 100%;
 }
 
+.prose p > img {
+  width: 100%;
+  --uno: shadow rounded-lg;
+  transform: scale(1.05);
+  margin: 2.6em 0;
+}
+
 .shiki-light {
   background: #f8f8f8 !important;
 }

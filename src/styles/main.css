@@ -107,7 +107,7 @@ html:not(.dark) [img-dark] {
 @media (prefers-reduced-motion:no-preference) {
   html:not(.no-sliding) [slide-enter],
   html:not(.no-sliding) .slide-enter,
-  html:not(.no-sliding) .slide-enter-content > * {
+  html:not(.no-sliding) .slide-enter-content > *:not(:has(.table-of-contents)) {
     --enter-stage: 0;
     --enter-step: 90ms;
     --enter-initial: 0ms;
