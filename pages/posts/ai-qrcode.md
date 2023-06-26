@@ -112,15 +112,21 @@ Ultimately, I iterate through this process multiple times until I am satisfied w
 
 The recommended generation size is 920x920 pixels. However, the model does not always generate highly detailed results at the pixel level. As a result, details like the face and hands can appear blurry when they are too small. To overcome this, we can upscale the image, providing the model with more pixels to work with. The `SD Upscaler` script in the `img2img` tab is particularly effective for this purpose. You can refer to the guide [Upscale Images With Stable Diffusion](https://easywithai.com/guide/how-to-use-upscalers-in-stable-diffusion/) for more information.
 
-Lastly, I use Lightroom for subtle color grading and post-processing, and then the image is complete!
+### 7. Post-processing
+
+Lastly, I use Photship and Lightroom for subtle color grading and post-processing, and we are done!
 
 ![Final QR Code Image](/images/ai-qrcode-final.jpg)
 
 The one I end up with not very good error tolerance, you might need to try a few times or use a more forgiving scanner to get it scanned :P
 
+And using the similarly process, I made another one for Inès:
+
+![Inès' QR Code Image](/images/ai-qrcode-ines.png)
+
 ## Conclusion
 
-Creating this image took me an full Saturday, with a total of around 10 hours of learning, generating, and refining. The process was incredibly enjoyable for me, and I am thrilled with the end result! I hope this post can offer you some fundamental concepts or inspire you to embark on your own creative journey. There is undoubtedly much more to explore in this field, and I eager to see what's coming next!
+Creating this image took me a full day, with a total of 10 hours of learning, generating, and refining. The process was incredibly enjoyable for me, and I am thrilled with the end result! I hope this post can offer you some fundamental concepts or inspire you to embark on your own creative journey. There is undoubtedly much more to explore in this field, and I eager to see what's coming next!
 
 ## References
 
