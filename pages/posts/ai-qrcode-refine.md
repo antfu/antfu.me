@@ -11,9 +11,7 @@ Last week, I wrote a [blog post](/posts/ai-qrcode) about how I learned to genrea
 
 We need to make a balance, tweaking the weights to try and error. It's still quite hard to find a good composition that prepresents the black & while spots, while keeping the content been meaningful to human. If you go too far, the QR Code will be unscannable, and if you don't go far enough, the image will just be like a borning QR Code.
 
-Since there are quite some randomness in the process, it sometimes could also be pity when you find a good one but realize it's not scannable, or sometime if might want to make a image easier to scan.
-
-To improve this, my workflow was to open up Photoshop, overlay the generated image with the original QR Code, manually checking the difference, using brush to mark those spots and send to **inpaint** to draw those areas. It works at some extend, but pretty inefficient as you need to go back and forth for quite a few times. Meanwhile, doing this manually can also be inaccurate as the scanning algorithm might see them differently.
+Since there are quite some randomness in the process, sometimes it could be pity when you find a good one but realize it's not scannable. To improve this, my workflow was to open up Photoshop, overlay the generated image with the original QR Code, manually checking the difference, using brush to mark those spots and send to **inpaint** to draw those areas. It works at some extend, but pretty inefficient as you need to go back and forth for quite a few times. Meanwhile, doing this manually can also be inaccurate as the scanning algorithm might see them differently.
 
 ![Steps from QR Code to final image](/images/ai-qrcode-refine-5.jpg)
 
