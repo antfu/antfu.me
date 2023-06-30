@@ -2,7 +2,7 @@
 title: Stylistic QR Code with Stable Diffusion
 date: 2023-06-25T05:00:00.000+00:00
 lang: en
-duration: 20min
+duration: 15min
 ---
 
 [[toc]]
@@ -74,6 +74,8 @@ As the regular Text2Image workflow, we need to provide some prompts for the AI t
 (worst quality, low quality:2), overexposure, watermark, text, easynegative, ugly, (blurry:2), bad_prompt,bad-artist, bad hand, ng_deepnegative_v1_75t
 ```
 
+![](/images/ai-qrcode-t2i.png)
+
 Then we need to go the ControlNet section, and upload the QR code image we generated earlier. And configure the parameters as suggested in the model homepage.
 
 ![](/images/ai-qrcode-controlnet-config.png)
@@ -96,6 +98,8 @@ It gets pretty interesting composition, while being less obvious as a QR code. S
 
 ### 5. Refining Details
 
+> Update: I recently built a toolkit to help with this process, check my new blog post [👉 **Refine AI Generated QR Code**](/posts/ai-qrcode-refine) for more details.
+
 The generated images from the model are not perfect in every detail. For instance, you may have noticed that the hand and face appear slightly distorted, and the three anchor boxes in the corner are less visually appealing. We can use the **inpaint** feature to tell the model to redraw some parts of the image (it would better if you keep the same or similiar prompts as the original generation).
 
 Inpainting typically requires a similar amount of time as generating a text-to-image, and it involves either luck or patience. Often, I utilize Photoshop to "borrow" some parts from previously generated images and utilize the spot healing brush tool to clean up glitches and artifacts. My Photoshop layers would looks like this:
@@ -116,6 +120,8 @@ Ultimately, I iterate through this process multiple times until I am satisfied w
 
 The recommended generation size is 920x920 pixels. However, the model does not always generate highly detailed results at the pixel level. As a result, details like the face and hands can appear blurry when they are too small. To overcome this, we can upscale the image, providing the model with more pixels to work with. The `SD Upscaler` script in the `img2img` tab is particularly effective for this purpose. You can refer to the guide [Upscale Images With Stable Diffusion](https://easywithai.com/guide/how-to-use-upscalers-in-stable-diffusion/) for more information.
 
+![](/images/ai-qrcode-upscale.png)
+
 ### 7. Post-processing
 
 Lastly, I use Photship and Lightroom for subtle color grading and post-processing, and we are done!
@@ -131,6 +137,8 @@ And using the similarly process, I made another one for Inès:
 ## Conclusion
 
 Creating this image took me a full day, with a total of 10 hours of learning, generating, and refining. The process was incredibly enjoyable for me, and I am thrilled with the end result! I hope this post can offer you some fundamental concepts or inspire you to embark on your own creative journey. There is undoubtedly much more to explore in this field, and I eager to see what's coming next!
+
+Join my [Discord Server](https://chat.antfu.me) and let's explore more together!
 
 ## References
 

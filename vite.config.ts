@@ -111,7 +111,11 @@ export default defineConfig({
           if (route === 'index' || frontmatter.image || !frontmatter.title)
             return
           const path = `og/${route}.png`
-          promises.push(genreateOg(frontmatter.title!.replace(/\s-\s.*$/, '').trim(), `public/${path}`))
+          promises.push(
+            fs.existsSync(`${id.slice(0, -3)}.png`)
+              ? fs.copy(`${id.slice(0, -3)}.png`, `public/${path}`)
+              : genreateOg(frontmatter.title!.replace(/\s-\s.*$/, '').trim(), `public/${path}`),
+          )
           frontmatter.image = `https://antfu.me/${path}`
         })()
         const head = defaults(frontmatter, options)
