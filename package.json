@@ -13,6 +13,7 @@
     "@vueuse/core": "^10.1.2",
     "@vueuse/head": "^1.1.26",
     "dayjs": "^1.11.8",
+    "floating-vue": "2.0.0-beta.24",
     "nprogress": "^0.2.0",
     "vue": "^3.3.4",
     "vue-router": "4.2.2",

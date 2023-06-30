@@ -11,7 +11,7 @@ Yesterday, I created this image using [Stable Diffusion](https://stability.ai/bl
 
 ![](/images/ai-qrcode-final.jpg)
 
-> This QR Code might not work with all scanners. On iPhone, it's better to use [the code scanner from Control Center](https://www.iphonelife.com/content/how-to-add-qr-code-scanner-to-control-center-iphone) instead of the Camera app.
+<QRNotScannable mt--2 />
 
 The process of creating it was super fun, and I'm quite satisfied with the outcome.
 

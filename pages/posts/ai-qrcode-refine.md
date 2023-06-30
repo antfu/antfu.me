@@ -1,6 +1,6 @@
 ---
 title: Refining AI Generated QR Code
-date: 2023-06-30T19:00:00.000+00:00
+date: 2023-06-30T17:00:00.000+00:00
 lang: en
 duration: 16min
 ---
@@ -83,6 +83,8 @@ After a few rounds of inpainting and adjustment, upscale to improve details, and
 <img src="/images/ai-qrcode-refine-final.jpg" class="max-w-120!" alt="Final result" />
 </p>
 
+<QRNotScannable mt--2 />
+
 Put it back to the toolkit, we see that the mismatched spots are now reduced a lot! Some of the mismatches are actually make on purpose, since QR Code has the error correction capability at some extend.
 
 ![Tge final result in the toolkit](/images/ai-qrcode-refine-compare-final-1.png)
@@ -110,6 +112,8 @@ So doing a same inpainting process again, we have the **final result** as:
 <p align="center">
 <img src="/images/ai-qrcode-refine-no-anchor.png" class="max-w-120!" alt="Final result" />
 </p>
+
+<QRNotScannable mt--2 />
 
 Even I made it step by step, it's still mind blowing to see the final result looks like this but still scannable! 🤯
 

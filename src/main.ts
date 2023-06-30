@@ -1,4 +1,5 @@
 import '@unocss/reset/tailwind.css'
+import 'floating-vue/dist/style.css'
 import './styles/main.css'
 import './styles/prose.css'
 import './styles/markdown.css'
@@ -10,6 +11,7 @@ import { ViteSSG } from 'vite-ssg'
 import dayjs from 'dayjs'
 import LocalizedFormat from 'dayjs/plugin/localizedFormat.js'
 import { setupRouterScroller } from 'vue-router-better-scroller'
+import FloatingVue from 'floating-vue'
 import App from './App.vue'
 
 const routes = autoRoutes.map((i) => {
@@ -26,7 +28,7 @@ export const createApp = ViteSSG(
   {
     routes,
   },
-  ({ router, isClient }) => {
+  ({ router, app, isClient }) => {
     dayjs.extend(LocalizedFormat)
 
     if (isClient) {
@@ -43,6 +45,8 @@ export const createApp = ViteSSG(
           },
         },
       })
+
+      app.use(FloatingVue)
 
       router.beforeEach(() => {
         NProgress.start()
