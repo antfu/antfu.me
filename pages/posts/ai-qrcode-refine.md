@@ -71,9 +71,9 @@ Now it's quite clear what's the problem. Then how can we fix it? You can then tr
 
 ![](/images/ai-qrcode-refine-compare-4.png)
 
-It will lighten the spots that are too dark, and darken the spots that are too bright. Then immediately you see this image **becomes scannable** now!
+It will lighten the spots that are too dark, and darken the spots that are too bright. Then you see this image immediately **becomes scannable** now!
 
-It's great but definitely not the final result we could end up with. We could download the correction overlay, or the mask from the toolkit, to use them doing **inpaint** or fine-grained adjustment in Photoshop.
+It's great but definitely not the final result we would end up with. We can download the correction overlay, or the mask from the toolkit, to use them on **inpaint** or fine-grained adjustment in Photoshop.
 
 ## Final
 
@@ -119,7 +119,7 @@ Even I made it step by step, it's still mind blowing to see the final result loo
 
 ## Conclusion
 
-I hope you enjoy the walkthrough. If you started doing AI QR Code, give a try to the tool and let me know if it helps. You can find the app and the source code below.
+I hope you enjoy the walkthrough. If you just started doing AI QR Code, give a try to the tool and let me know if it helps. You can find the app and the source code below.
 
 <div i-ri-qr-code-line /> <a href="https://qrcode.antfu.me/" target="_blank">Anthony's QR Code Toolkit</a><br>
 
@@ -127,6 +127,6 @@ I hope you enjoy the walkthrough. If you started doing AI QR Code, give a try to
 
 Join my [<span op75 i-simple-icons-discord /> Discord Server](https://chat.antfu.me), share what you are working on, and let's explore more together!
 
-If you are interested in how I make such tools, I'd recommand continue reading with another post of mine - [About Yak Shaving](/posts/about-yak-shaving) to see the philosophy I have when building tools. And if you like my work, consider sponsor on [<span i-carbon-favorite /> GitHub Sponsor](https://github.com/sponsors/antfu) or [<span i-carbon-lightning /> 爱发电](https://afdian.net/a/antfu) to support me coming up with more ideas and tools.
+If you are interested in how I make such tools, I'd recommand continue reading [About Yak Shaving](/posts/about-yak-shaving) to learn the philosophy I follow when building tools. And if you like my work, consider sponsor on [<span i-carbon-favorite /> GitHub Sponsor](https://github.com/sponsors/antfu) or [<span i-carbon-lightning /> 爱发电](https://afdian.net/a/antfu) to support me coming up with more ideas and tools.
 
 Thank you and happy hacking!
