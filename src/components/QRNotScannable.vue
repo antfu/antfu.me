@@ -1,7 +1,7 @@
 <template>
   <VDropdown>
     <div text-center op35 mt--2 italic text-sm>
-      <a cursor-pointer>Not scannable?</a>
+      <button>Not scannable?</button>
     </div>
     <template #popper>
       <div w-120 max-w-screen class="prose" p4>

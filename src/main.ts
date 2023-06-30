@@ -31,6 +31,8 @@ export const createApp = ViteSSG(
   ({ router, app, isClient }) => {
     dayjs.extend(LocalizedFormat)
 
+    app.use(FloatingVue)
+
     if (isClient) {
       const html = document.querySelector('html')!
       setupRouterScroller(router, {
@@ -45,8 +47,6 @@ export const createApp = ViteSSG(
           },
         },
       })
-
-      app.use(FloatingVue)
 
       router.beforeEach(() => {
         NProgress.start()
