@@ -107,7 +107,7 @@ So I implemented it in my generator, and it looks like this:
 
 As you can see, the marker looks much less distingushable from the other data points (be aware it also make the code less scannable). It might be worth to try as the control net input to see if it can generate better images. But since we already have pretty good one, let's using the new QR Code to redraw the markers.
 
-So doing a same inpainting process again, we have the **final result** as:
+So doing the inpainting process again using the new QR Code, a few more editing, we have the **final result** as:
 
 <p align="center">
 <img src="/images/ai-qrcode-refine-no-anchor.png" class="max-w-120!" alt="Final result" />
@@ -116,6 +116,7 @@ So doing a same inpainting process again, we have the **final result** as:
 <QRNotScannable mt--2 />
 
 Even I made it step by step, it's still mind blowing to see the final result looks like this but still scannable! 🤯
+[Check it on Civital](https://civitai.com/images/1350374)
 
 ## Conclusion
 
