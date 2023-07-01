@@ -114,6 +114,7 @@ So doing the inpainting process again using the new QR Code, a few more editing,
 <QRNotScannable mt--2 />
 
 Even I made it step by step, it's still mind blowing to see the final result looks like this but still scannable! 🤯
+
 [Check it on Civital](https://civitai.com/images/1350374)
 
 ## Conclusion
