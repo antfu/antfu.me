@@ -142,6 +142,8 @@ Creating this image took me a full day, with a total of 10 hours of learning, ge
 
 Join my [Discord Server](https://chat.antfu.me) and let's explore more together!
 
+If you want to learn more about the refining process, go check my new blog post: [**Refining AI Generated QR Code**](/posts/ai-qrcode-refine).
+
 ## References
 
 Here are the list of resources for easier reference.
