@@ -117,6 +117,28 @@ Even I made it step by step, it's still mind blowing to see the final result loo
 
 [Check it on Civital](https://civitai.com/images/1350374)
 
+## Bonus Tip: Distort the QR
+
+Since we found the QR Code input affects the output image quite significantly. In another way of thinking, instead of refining the genereated image in post, maybe we can actually also try to manipulate the QR Code itself before sending to the model.
+
+For example, we could use the generator to try different patterns and configuration, to generate better destribution of the data points. Adding some noise in the margin, making the position makers more randomized, and round up the hard edges to reduce the blocky feeling. We could have:
+
+![](/images/ai-qrcode-refine-distort-1.png)
+
+Then I started to thinking what more we could so. So I tried to play filter effects in Photoshop. I found that the `Distort > Ripple` and `Pixelate > Crystallize` filters have quite balanced distortion effect. So I reimplemented the **crystallize** effect in the toolkit, and we have:
+
+![](/images/ai-qrcode-refine-distort-2.png)
+
+This further blurs the distinction between data points in human eyes. Sending it to the model, surprisingly, it yield very good results:
+
+<p align="center">
+<img src="/images/ai-qrcode-refine-distort-result.png" class="max-w-120!" alt="Distorted QR Code" />
+</p>
+
+<QRNotScannable mt--2 />
+
+Since input has much more soft edges with some shades, it make the model being able to "guess" with items with more freedom. Hope you'll find this tip useful! I will try to implement more useful effects in the toolkit as we go.
+
 ## Conclusion
 
 I hope you enjoy the walkthrough. If you just started doing AI QR Code, give a try to the tool and let me know if it helps. You can find the app and the source code below.
