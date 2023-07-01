@@ -164,8 +164,12 @@ Here are the list of resources for easier reference.
 
 ### Models
 
-- [QR Pattern Controlnet Model](https://civitai.com/models/90940/controlnet-qr-pattern-qr-codes) - The key ControlNet model for QR Code
-- [Ghostmix Checkpoint](https://civitai.com/models/36520/ghostmix) - A very high quality checkpoint I use. You can use any other checkpoints you like
+- Control Net Models for QR Code (you can pick one of them)
+  - [QR Pattern Controlnet Model](https://civitai.com/models/90940/controlnet-qr-pattern-qr-codes)
+  - [Controlnet QR Code Monster](https://huggingface.co/monster-labs/control_v1p_sd15_qrcode_monster)
+  - [IoC Lab Control Net](https://huggingface.co/ioclab/ioc-controlnet/tree/main/models)
+- Checkpoint Model (you can use any checkpoints you like)
+  - [Ghostmix Checkpoint](https://civitai.com/models/36520/ghostmix) - A very high quality checkpoint I use. You can use any other checkpoints you like
 
 ### Tutorials
 
