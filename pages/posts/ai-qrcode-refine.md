@@ -129,7 +129,7 @@ Then I started to thinking what more we could so. So I tried to play filter effe
 
 ![](/images/ai-qrcode-refine-distort-2.png)
 
-This further blurs the distinction between data points in human eyes. Sending it to the model, surprisingly, it yield very good results:
+This further blurs the distinction between data points in human eyes. Sending it to the model, it yields surprisingly very good results! Here is one of the example:
 
 <p align="center">
 <img src="/images/ai-qrcode-refine-distort-result.png" class="max-w-120!" alt="Distorted QR Code" />
