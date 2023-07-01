@@ -7,6 +7,8 @@ duration: 15min
 
 [[toc]]
 
+> **Update**: New blog post [👉 **Refining AI Generated QR Code**](/posts/ai-qrcode-refine).
+
 Yesterday, I created this image using [Stable Diffusion](https://stability.ai/blog/stable-diffusion-public-release) and [ControlNet](https://github.com/lllyasviel/ControlNet), and shared on [Twitter](https://twitter.com/antfu7/status/1672671149698818048) and [Instagram](https://www.instagram.com/p/Ct4fpkgtc1W/) -- an illustration that also functions as a scannable QR code.
 
 ![](/images/ai-qrcode-final.jpg)
