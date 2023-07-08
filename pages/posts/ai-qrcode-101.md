@@ -84,21 +84,35 @@ If you goal is to make a more blended-in QR Code, and you are okay with the code
 
 // TODO: 
 
+<hr>
+
 ## Improving the QR Code
+
+Say that you already generated a bunch of QR Codes and find some of them you like. You want to improve them to make them more scannable, or more blended-in, or more artistic. Here are some tips we found useful.
 
 ### Tweak the Input QR Code
 
-The input QR Code is one of most important parts of the whole process to generate well-blended code.
+The **input QR Code is one of most important parts** of the whole process to generate well-blended code.
 
 You can refer to [this post](/posts/ai-qrcode-refine#generating-the-base-qr-code) to see a comparion of how different QR Code input affects the output.
 
-We recommend to use [Anthony's QR Toolkit](https://qrcode.antfu.me/) to generate the QR Code, which allows you to customize the QR Code and distort as needed.
+We recommend to use [Anthony's QR Toolkit](https://qrcode.antfu.me/) to generate the QR Code. It allows you to customize the QR Code and distort as needed.
 
-// TODO: generated a new grid for comparison
+Meanwhile, note that the margin of the QR Code also affects the output, for example:
+
+<div flex="~ col items-center gap-4" py4>
+<QRCodeCompare input="/images/ai-qrcode-101-input-edit1-i.png" output="/images/ai-qrcode-101-input-edit1-o.jpg" />
+<div><div i-ri-arrow-down-line/> Adding some noise to the margin</div>
+<QRCodeCompare input="/images/ai-qrcode-101-input-edit2-i.png" output="/images/ai-qrcode-101-input-edit2-o.jpg" />
+<div><div i-ri-arrow-down-line/> Manually connect some points in margin</div>
+<QRCodeCompare input="/images/ai-qrcode-101-input-edit6-i.png" output="/images/ai-qrcode-101-input-edit6-o.jpg" />
+</div>
+
+<hr>
 
 ### Improve the Prompts
 
-Theorically, you can use any models, any prompts you would like to generated those QR Codes.
+Theorically, you can use any prompts to generated those QR Codes.
 
 To help the QR codes more blend in, we find that it's helpful to include some fluidity or fragmented items into the prompts, such as:
 
@@ -123,7 +137,7 @@ To help the QR codes more blend in, we find that it's helpful to include some fl
     <figure important-my-0>
       <img src="/images/ai-qrcode-refine-distort-result.png" rounded-md shadow />
       <figcaption text-center>
-        <b text-lg>leaves</b>
+        <b text-lg>plants</b>
         <div text-xs mt1>by <a href="https://antfu.me" target="_blank">Anthony Fu</a></div>
       </figcaption>
     </figure>
@@ -149,6 +163,13 @@ To help the QR codes more blend in, we find that it's helpful to include some fl
       </figcaption>
     </figure>
     <figure important-my-0>
+      <img src="/og-icon.png" rounded-md shadow />
+      <figcaption text-center>
+        <b text-lg>leaves</b>
+        <div text-xs mt1>by <a href="https://antfu.me" target="_blank">-</a></div>
+      </figcaption>
+    </figure>
+    <figure important-my-0>
       <img src="/images/ai-qrcode-101-prompt-snow.jpg" rounded-md shadow />
       <figcaption text-center>
         <b text-lg>snow</b>
@@ -157,6 +178,8 @@ To help the QR codes more blend in, we find that it's helpful to include some fl
     </figure>
   </div>
 </div>
+
+<hr>
 
 ### Non-Square Image
 
@@ -190,6 +213,8 @@ To generate a non-square image, you can change the **Resize Mode** in ControlNet
 Or in the [Toolkit](https://qrcode.antfu.me/), you click the <span i-carbon-chevron-down/> button on **Margin** to expand the option and have different margins for each side.
 
 ![](/images/ai-qrcode-101-non-square-toolkit.png)
+
+<hr>
 
 ### Multiple ControlNet
 
