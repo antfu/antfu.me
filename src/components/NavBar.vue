@@ -1,5 +1,14 @@
 <script setup lang="ts">
 import { isDark } from '~/logics'
+
+function toTop() {
+  document.body.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  })
+}
+
+const { y: scroll } = useScroll(document.body)
 </script>
 
 <template>
@@ -12,6 +21,15 @@ import { isDark } from '~/logics'
       <img v-show="isDark" src="/logo-dark.svg?url" alt="logo">
       <img v-show="!isDark" src="/logo.svg?url" alt="logo">
     </RouterLink>
+    <button
+      title="Scroll to top"
+      fixed right-3 bottom-3 w-10 h-10 hover:op100 rounded-full
+      hover-bg-hex-8883 transition duration-300 z-100
+      :class="scroll > 300 ? 'op30' : 'op0! pointer-events-none'"
+      @click="toTop()"
+    >
+      <div i-ri-arrow-up-line />
+    </button>
     <nav class="nav">
       <div class="spacer" />
       <div class="right">
