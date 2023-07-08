@@ -9,7 +9,7 @@ draft: true
 [[toc]]
 
 <p>
-<div i-carbon-events mr1 /> Co-authored by <a href="https://antfu.me" target="_blank">Anthony Fu</a> and ...
+<span i-carbon-events mr1 /> Co-authored by <a href="https://antfu.me" target="_blank">Anthony Fu</a> and ...
 </p>
 
 > Work in progress. This is a live document, will be updated as we learn more.
@@ -37,9 +37,7 @@ As of July 8th 2023, [QRBTF](https://qrbtf.com/) haven't released their model no
 
 ## How to Generate?
 
-There are a few online services you can try, but this guide will focus doing it locally on our own.
-
-You will need the basics knowledge of Stable Diffusion and ControlNet, a computer with a GPU (or a cloud GPU instance) to start. 
+There are a few online services you can try, but this guide will focus doing it locally on our own. You will need the basics knowledge of Stable Diffusion and ControlNet, a computer with a GPU (or a cloud GPU instance) to start.
 
 There are two approaches to generate a stylized QR Code:
 
@@ -50,7 +48,7 @@ There are two approaches to generate a stylized QR Code:
 - **Image to Image** - Use a QR Code image as input, and let Stable Diffusion to redraw each part of the QR Code.
   - [How to make a QR code with Stable Diffusion](https://stable-diffusion-art.com/qr-code/) - by Andrew
 
-We found that the Text to Image approach produce much better results, and it's easier to control the output. We will focus on that approach in this guide.
+We found that the **Text to Image approach produce much better results**, and it's easier to control the output. We will focus on that approach in this guide.
 
 ## ControlNet Models
 
@@ -62,7 +60,7 @@ Here are a few ControlNet models we found useful:
 
 // TODO: add a compare table, and a bit of explanation for each model
 
-## It's not Scannable!
+## The Code is Not Scannable
 
 Before going into details, let's picture your goal of your QR Code first. Here are 3 typical approaches listed by [@1r00t](https://github.com/1r00t):
 
@@ -84,7 +82,7 @@ If you goal is to make a more blended-in QR Code, and you are okay with the code
 
 ### Compare with the Original QR Code
 
-// TODO:
+// TODO: 
 
 ## Improving the QR Code
 
@@ -98,7 +96,7 @@ We recommend to use [Anthony's QR Toolkit](https://qrcode.antfu.me/) to generate
 
 // TODO: generated a new grid for comparison
 
-### Prompts
+### Improve the Prompts
 
 Theorically, you can use any models, any prompts you would like to generated those QR Codes.
 
@@ -106,14 +104,92 @@ To help the QR codes more blend in, we find that it's helpful to include some fl
 
 > Listed contributed by [@代々木](https://discord.com/channels/1120565504545935404/1121837799054778460/1127208037048918107), [@soloshi](https://discord.com/channels/1120565504545935404/1121837799054778460/1127207924905820160), et al.
 
-- ribbon
-- tissue
-- wave
-- lace
-- feather
-- leaves
+<div py15>
+  <div grid="~ cols-3 gap-x-2 gap-y-4" lg:scale-110 md:scale-105>
+    <figure important-my-0>
+      <img src="/images/ai-qrcode-101-prompt-ribbon.jpg" rounded-md shadow />
+      <figcaption text-center>
+        <b text-lg>ribbon</b>
+        <div text-xs mt1>by <a href="https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f" target="_blank">代々木</a></div>
+      </figcaption>
+    </figure>
+    <figure important-my-0>
+      <img src="/images/ai-qrcode-101-prompt-feather.jpg" rounded-md shadow />
+      <figcaption text-center>
+        <b text-lg>feather</b>
+        <div text-xs mt1>by <a href="https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f" target="_blank">代々木</a></div>
+      </figcaption>
+    </figure>
+    <figure important-my-0>
+      <img src="/images/ai-qrcode-refine-distort-result.png" rounded-md shadow />
+      <figcaption text-center>
+        <b text-lg>leaves</b>
+        <div text-xs mt1>by <a href="https://antfu.me" target="_blank">Anthony Fu</a></div>
+      </figcaption>
+    </figure>
+    <figure important-my-0>
+      <img src="/images/ai-qrcode-101-prompt-lace.jpg" rounded-md shadow />
+      <figcaption text-center>
+        <b text-lg>lace</b>
+        <div text-xs mt1>by <a href="https://antfu.me" target="_blank">Anthony Fu</a></div>
+      </figcaption>
+    </figure>
+    <figure important-my-0>
+      <img src="/og-icon.png" rounded-md shadow />
+      <figcaption text-center>
+        <b text-lg>wave</b>
+        <div text-xs mt1>by <a href="https://antfu.me" target="_blank">-</a></div>
+      </figcaption>
+    </figure>
+    <figure important-my-0>
+      <img src="/og-icon.png" rounded-md shadow />
+      <figcaption text-center>
+        <b text-lg>tissue</b>
+        <div text-xs mt1>by <a href="https://antfu.me" target="_blank">-</a></div>
+      </figcaption>
+    </figure>
+    <figure important-my-0>
+      <img src="/images/ai-qrcode-101-prompt-snow.jpg" rounded-md shadow />
+      <figcaption text-center>
+        <b text-lg>snow</b>
+        <div text-xs mt1>by <a href="https://antfu.me" target="_blank">Anthony Fu</a></div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
 
-// TODO: add some example for each prompt?
+### Non-Square Image
+
+> Idea credits to [@whmc76](https://space.bilibili.com/339984/)
+
+To make the QR Code less obvious, you can try to generate a non-square image, leaving some extra space around the QR Code for the Stable Diffusion to be creative. With that, you can shift the focus of the viewers into the other parts of the image. 
+
+For examples:
+
+<figure>
+  <img src="/images/ai-qrcode-101-non-square-example1.jpg" rounded shadow />
+  <figcaption text-center>
+    by <a href="https://antfu.me/" target="_blank">Anthony Fu</a>
+  </figcaption>
+</figure>
+
+// TODO: add more examples
+
+<!--
+Ask for permissions: 
+- https://discord.com/channels/1120565504545935404/1120739793563832381/1126186859064729630
+- https://discord.com/channels/1120565504545935404/1120739793563832381/1125777899753066526
+- https://discord.com/channels/1120565504545935404/1120739793563832381/1125311132974981151
+- https://discord.com/channels/1120565504545935404/1121837799054778460/1127076655714811984
+-->
+
+To generate a non-square image, you can change the **Resize Mode** in ControlNet to `Resize and Fill` and change the Text to Image width or height.
+
+![](/images/ai-qrcode-101-non-square-resize.png)
+
+Or in the [Toolkit](https://qrcode.antfu.me/), you click the <span i-carbon-chevron-down/> button on **Margin** to expand the option and have different margins for each side.
+
+![](/images/ai-qrcode-101-non-square-toolkit.png)
 
 ### Multiple ControlNet
 
