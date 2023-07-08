@@ -1,5 +1,4 @@
 ---
-draft: false
 title: Make Libraries Working with Vue 2 and 3
 description: Try Vue Demi!
 date: 2020-07-01T14:00:00.000+00:00
@@ -54,7 +53,7 @@ When you are going to create a Vue plugin/library, simply install `vue-demi` as 
 ```
 
 ```ts
-import Vue, { ref, reactive } from 'vue-demi'
+import Vue, { reactive, ref } from 'vue-demi'
 ```
 
 Underhood, it utilized the [`postinstall` npm hook](https://docs.npmjs.com/misc/scripts). After all packages get installed, [the script](https://github.com/antfu/vue-demi/blob/main/scripts/postinstall.js) will start to check the installed Vue version and redirect the exports to based on the local Vue version. When working with Vue 2, it will also install `@vue/composition-api` automatically if it doesn't get installed.

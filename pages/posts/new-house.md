@@ -1,7 +1,6 @@
 ---
 title: New House
 date: 2020-06-12T16:00:00Z
-draft: false
 lang: en
 duration: 2min
 ---

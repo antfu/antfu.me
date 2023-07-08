@@ -1,5 +1,4 @@
 ---
-draft: false
 title: Type Inferencing in Vue
 date: 2020-06-28
 hero_image: ''
@@ -15,12 +14,12 @@ Forget about the `setup()` function and `Composition API` for now, let talk abou
 ```js
 export default {
   data: {
-    first_name: "Anthony",
-    last_name: "Fu",
+    first_name: 'Anthony',
+    last_name: 'Fu',
   },
   computed: {
     full_name() {
-      return this.first_name + " " + this.last_name
+      return `${this.first_name} ${this.last_name}`
     },
   },
   methods: {
@@ -50,7 +49,7 @@ function bar(this: Context, a: number) {
 The limitation of this approach is that we will lose the signature of the method when working with a dict of methods:
 
 ```ts
-type Methods = Record<string, (this: Context, ...args:any[]) => any>
+type Methods = Record<string, (this: Context, ...args: any[]) => any>
 
 const methods: Methods = {
   bar(a: number) {
@@ -73,7 +72,7 @@ After digging into Vue's code, I found an interesting TypeScirpt utility `ThisTy
 `ThisType` would affect all the nested functions. With it, we can have:
 
 ```ts
-type Methods = {
+interface Methods {
   double: (a: number) => number
   deep: {
     nested: {
@@ -108,7 +107,7 @@ We can do that with function inference:
 
 ```ts
 type Options<T> = {
-  methods?: T 
+  methods?: T
 } & ThisType<T & Context>
 
 function define<T>(options: Options<T>) {
@@ -142,7 +141,7 @@ type Options<D = {}, C = {}, M = {}> = {
   methods: M
   mounted: () => void
   // and other options
-} 
+}
 & ThisType<D & M & ExtractComputedReturns<C>> // merge them together
 
 function define<D, C, M>(options: Options<D, C, M>) {}
@@ -151,13 +150,13 @@ function define<D, C, M>(options: Options<D, C, M>) {}
 define({
   data() {
     return {
-      first_name: "Anthony",
-      last_name: "Fu",
+      first_name: 'Anthony',
+      last_name: 'Fu',
     }
   },
   computed: {
     fullname() {
-      return this.first_name + " " + this.last_name
+      return `${this.first_name} ${this.last_name}`
     },
   },
   methods: {
