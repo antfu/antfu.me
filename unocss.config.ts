@@ -34,4 +34,7 @@ export default defineConfig({
   transformers: [
     transformerDirectives(),
   ],
+  safelist: [
+    'i-ri-menu-2-fill',
+  ],
 })

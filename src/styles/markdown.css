@@ -142,29 +142,33 @@ h6:focus .header-anchor {
   content: none;
 }
 
-@media (max-width: 1200px) {
-  .table-of-contents {
-    display: none;
-  }
-}
-
 .table-of-contents {
   position: fixed;
-  top: 80px;
-  padding-top: 70px;
+  top: 90px;
   font-size: 0.8em;
-  right: 10px;
+  left: 20px;
   width: 200px;
-  bottom: 0;
+  z-index: 200;
   overflow-y: auto;
   overflow-x: hidden;
-  text-overflow: ellipsis;
-  opacity: 0;
-  transition: all .4s ease-out;
+  --uno: hidden lg:block;
 }
 
-.table-of-contents:hover {
-  opacity: 0.5;
+.table-of-contents-anchor {
+  --uno: mx2 w-7 h-7 text-lg flex items-center justify-center bg-base rounded text-hex-8884 border border-base shadow md:border-transparent md:shadow-none transition;
+}
+
+.table-of-contents > ul {
+  text-overflow: ellipsis;
+  --uno: bg-base rounded op0 mt-1 transition duration-500;
+}
+
+p:hover > .table-of-contents > .table-of-contents-anchor {
+  --uno: text-inherit;
+}
+
+p:hover > .table-of-contents > ul {
+  opacity: 0.75;
 }
 
 .table-of-contents ul > li::before {

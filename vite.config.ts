@@ -89,7 +89,6 @@ export default defineConfig({
           }),
         })
 
-        // @ts-expect-error anyway
         md.use(LinkAttributes, {
           matcher: (link: string) => /^https?:\/\//.test(link),
           attrs: {
@@ -99,8 +98,9 @@ export default defineConfig({
         })
 
         md.use(TOC, {
-          includeLevel: [1, 2, 3],
+          includeLevel: [1, 2, 3, 4],
           slugify,
+          containerHeaderHtml: '<div class="table-of-contents-anchor"><div class="i-ri-menu-2-fill" /></div>',
         })
       },
       frontmatterPreprocess(frontmatter, options, id, defaults) {
