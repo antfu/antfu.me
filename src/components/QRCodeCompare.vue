@@ -14,7 +14,9 @@ defineProps<{
     >
     <div
       class="group"
-      absolute left--20 bottom-0 top--0 right--0 z-10
+      absolute left--20 bottom-50 top-0 right-80 z-10
+      hover="right-0 bottom-0"
+      transition-all duration-300 ease-in-out
     >
       <img
         :src="input"
@@ -23,7 +25,7 @@ defineProps<{
         rotate--8 rounded-lg shadow important-w-25
         transition-all duration-300 ease-in-out
         important-m0
-        group-hover="left-20 bottom-0 right-0 top-0 rotate-0 important-w-90 op60"
+        group-hover="left-20 top-0 rotate-0 important-w-90 op60"
       >
     </div>
   </div>

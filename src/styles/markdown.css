@@ -155,12 +155,12 @@ h6:focus .header-anchor {
 }
 
 .table-of-contents-anchor {
-  --uno: mx2 w-7 h-7 text-lg flex items-center justify-center bg-base rounded text-hex-8884 border border-base shadow md:border-transparent md:shadow-none transition;
+  --uno: mx2 w-7 h-7 text-lg flex items-center justify-center bg-base rounded text-hex-8887 border border-base shadow md:border-transparent md:shadow-none transition duration-400;
 }
 
 .table-of-contents > ul {
   text-overflow: ellipsis;
-  --uno: bg-base rounded op0 mt-1 transition duration-500;
+  --uno: bg-base rounded op0 mt-1 transition duration-800;
 }
 
 p:hover > .table-of-contents > .table-of-contents-anchor {
