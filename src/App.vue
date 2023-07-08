@@ -15,6 +15,13 @@ useEventListener('click', (e) => {
 
   imageModel.value = first as HTMLImageElement
 })
+
+onKeyStroke('Escape', (e) => {
+  if (imageModel.value) {
+    imageModel.value = undefined
+    e.preventDefault()
+  }
+})
 </script>
 
 <template>
