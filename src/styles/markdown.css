@@ -147,11 +147,10 @@ h6:focus .header-anchor {
   top: 90px;
   font-size: 0.8em;
   left: 20px;
-  width: 200px;
   z-index: 200;
   overflow-y: auto;
   overflow-x: hidden;
-  --uno: hidden lg:block;
+  --uno: hidden lg:block w-200px lg:w-300px;
 }
 
 .table-of-contents-anchor {
@@ -177,4 +176,5 @@ p:hover > .table-of-contents > ul {
 
 .table-of-contents ul > li {
   padding-left: 0.8rem;
+  line-height: 1.5em;
 }

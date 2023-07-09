@@ -214,9 +214,28 @@ Or in the [Toolkit](https://qrcode.antfu.me/), you click the <span i-carbon-chev
 
 ![](/images/ai-qrcode-101-non-square-toolkit.png)
 
+
 <hr>
 
 ### Multiple ControlNet
 
 // TODO: any one can help to explain this?
 
+<hr>
+
+### Image to Image Enhancement
+
+When you find a generated image is hard to scan, you can try to send the image to `img2img`, enable ControlNet with your original QR Code input and:
+
+- Decrease the **Denoising strength** to retain more of the original image.
+- Increase the ControlNet guidance scale value for better readability. A typical workflow for "saving" a code would be: Max out the guidance scale and minimize the denoising strength, then bump the strength until the code scans.
+
+This tells the model to re-enhance the image by making dark areas darker and light areas lighter under the guidance of ControlNet.
+
+> Credits to [QR Code Monster's Tips](https://huggingface.co/monster-labs/control_v1p_sd15_qrcode_monster#tips)
+
+<hr>
+
+### Manually Editing and Inpainting
+
+The ultimate solutions is indeed to manually edit the output image. You can use editing tools like Photoshop combined with inpainting to fine tune every part of the imaged image. More details can be found in [this post](/posts/ai-qrcode-refine).
