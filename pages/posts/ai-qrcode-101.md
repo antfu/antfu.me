@@ -183,8 +183,6 @@ To help the QR codes more blend in, we find that it's helpful to include some fl
 
 ### Non-Square Image
 
-> Idea credits to [@whmc76](https://space.bilibili.com/339984/)
-
 To make the QR Code less obvious, you can try to generate a non-square image, leaving some extra space around the QR Code for the Stable Diffusion to be creative. With that, you can shift the focus of the viewers into the other parts of the image. 
 
 For examples:
@@ -214,6 +212,7 @@ Or in the [Toolkit](https://qrcode.antfu.me/), you click the <span i-carbon-chev
 
 ![](/images/ai-qrcode-101-non-square-toolkit.png)
 
+> Idea credits to [@whmc76](https://space.bilibili.com/339984/)
 
 <hr>
 
@@ -228,7 +227,8 @@ Or in the [Toolkit](https://qrcode.antfu.me/), you click the <span i-carbon-chev
 When you find a generated image is hard to scan, you can try to send the image to `img2img`, enable ControlNet with your original QR Code input and:
 
 - Decrease the **Denoising strength** to retain more of the original image.
-- Increase the ControlNet guidance scale value for better readability. A typical workflow for "saving" a code would be: Max out the guidance scale and minimize the denoising strength, then bump the strength until the code scans.
+- Increase the **Control weight** for better readability.
+- A typical workflow for "saving" a code would be: Max out the guidance scale and minimize the denoising strength, then bump the strength until the code scans.
 
 This tells the model to re-enhance the image by making dark areas darker and light areas lighter under the guidance of ControlNet.
 
