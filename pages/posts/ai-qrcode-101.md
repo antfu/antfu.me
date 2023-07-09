@@ -23,12 +23,12 @@ A summary of discussions made in [QRBTF's Discord server](https://discord.gg/V9C
 Images that generated with [Stable Diffusion](https://stability.ai/blog/stable-diffusion-public-release) and as QR Codes as [ControlNet](https://github.com/lllyasviel/ControlNet)'s input, to make the QR Code data points blend into the artwork while still being scannable by QR Code readers.
 
 <figure>
-  <div grid="~ cols-3 gap-1" lg:scale-120 md:scale-110>
-    <img src="/images/ai-qrcode-101-example2.jpg" rounded shadow />
-    <img src="/images/ai-qrcode-101-example1.jpg" rounded shadow />
-    <img src="/images/ai-qrcode-101-example3.jpg" rounded shadow />
+  <div grid="~ cols-1 md:cols-3 gap-1" lg:scale-120 md:scale-110>
+    <img src="/images/ai-qrcode-101-example2.jpg" rounded shadow important-m0 />
+    <img src="/images/ai-qrcode-101-example1.jpg" rounded shadow important-m0 />
+    <img src="/images/ai-qrcode-101-example3.jpg" rounded shadow important-m0 />
   </div>
-  <figcaption class="mt0!" text-center>Examples from <a href="https://qrbtf.com/">QRBTF.com</a></figcaption>
+  <figcaption important-mt8 text-center>Examples from <a href="https://qrbtf.com/">QRBTF.com</a></figcaption>
 </figure>
 
 The original idea was created by people behind [QRBTF](https://qrbtf.com/), and first revealed on [this reddit](https://www.reddit.com/r/StableDiffusion/comments/141hg9x/controlnet_for_qr_code/) by [nhciao](https://www.reddit.com/user/nhciao/).
@@ -101,11 +101,11 @@ We recommend to use [Anthony's QR Toolkit](https://qrcode.antfu.me/) to generate
 Meanwhile, note that the margin of the QR Code also affects the output, for example:
 
 <div flex="~ col items-center gap-4" py4>
-<QRCodeCompare input="/images/ai-qrcode-101-input-edit1-i.png" output="/images/ai-qrcode-101-input-edit1-o.jpg" />
+<QRCodeCompare scale-85 md:scale-100 input="/images/ai-qrcode-101-input-edit1-i.png" output="/images/ai-qrcode-101-input-edit1-o.jpg" />
 <div><div i-ri-arrow-down-line/> Adding some noise to the margin</div>
-<QRCodeCompare input="/images/ai-qrcode-101-input-edit2-i.png" output="/images/ai-qrcode-101-input-edit2-o.jpg" />
+<QRCodeCompare scale-85 md:scale-100 input="/images/ai-qrcode-101-input-edit2-i.png" output="/images/ai-qrcode-101-input-edit2-o.jpg" />
 <div><div i-ri-arrow-down-line/> Manually connect some points in margin</div>
-<QRCodeCompare input="/images/ai-qrcode-101-input-edit6-i.png" output="/images/ai-qrcode-101-input-edit6-o.jpg" />
+<QRCodeCompare scale-85 md:scale-100 input="/images/ai-qrcode-101-input-edit6-i.png" output="/images/ai-qrcode-101-input-edit6-o.jpg" />
 </div>
 
 <hr>
@@ -119,7 +119,7 @@ To help the QR codes more blend in, we find that it's helpful to include some fl
 > Listed contributed by [@代々木](https://discord.com/channels/1120565504545935404/1121837799054778460/1127208037048918107), [@soloshi](https://discord.com/channels/1120565504545935404/1121837799054778460/1127207924905820160), et al.
 
 <div py15>
-  <div grid="~ cols-3 gap-x-2 gap-y-4" lg:scale-110 md:scale-105>
+  <div grid="~ md:cols-3 cols-2 gap-x-2 gap-y-4" lg:scale-110 md:scale-105>
     <figure important-my-0>
       <img src="/images/ai-qrcode-101-prompt-ribbon.jpg" rounded-md shadow />
       <figcaption text-center>
