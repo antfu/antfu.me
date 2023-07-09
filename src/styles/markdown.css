@@ -178,3 +178,7 @@ p:hover > .table-of-contents > ul {
   padding-left: 0.8rem;
   line-height: 1.5em;
 }
+
+.code-wrap .line {
+  white-space: break-spaces;
+}
