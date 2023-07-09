@@ -20,7 +20,7 @@ A summary of discussions made in [QRBTF's Discord server](https://discord.gg/V9C
 
 ## What's a Stable Diffusion QR Code?
 
-Images generated with [Stable Diffusion](https://stability.ai/blog/stable-diffusion-public-release) with QR Codes as [ControlNet](https://github.com/lllyasviel/ControlNet)'s input, making the QR Code data points blend into the artwork while still being scannable by QR Code readers.
+Images that are generated with [Stable Diffusion](https://stability.ai/blog/stable-diffusion-public-release) with QR Codes as [ControlNet](https://github.com/lllyasviel/ControlNet)'s input, making the QR Code data points blend into the artwork while still being scannable by QR Code readers.
 
 <figure>
   <div grid="~ cols-1 md:cols-3 gap-1" lg:scale-120 md:scale-110>
@@ -45,7 +45,7 @@ There are two approaches to generating a stylized QR Code:
   - [Stylistic QR Code with Stable Diffusion](/posts/ai-qrcode) - by Anthony Fu
   - [Refining AI Generated QR Code](/posts/ai-qrcode-refine) - by Anthony Fu
   - [[Video] 二维码融合技术2.0](https://www.bilibili.com/video/BV1zF411R7xg/) - by 赛博迪克朗
-- **Image to Image** - Use a QR Code image as input, and let Stable Diffusion redraw each part of the QR Code.
+- **Image to Image** - Use a QR Code image as input, and let Stable Diffusion redraw each part of the QR Code. Doesn't require ControlNet.
   - [How to make a QR code with Stable Diffusion](https://stable-diffusion-art.com/qr-code/) - by Andrew
 
 We found that the **Text to Image approach produces much better results**, and it's easier to control the output. We will focus on that approach in this guide.
@@ -112,9 +112,20 @@ Meanwhile, note that the margin of the QR Code also affects the output, for exam
 
 Theoretically, you can use any prompts to generate those QR Codes.
 
-To help the QR codes more blend in, we find that it's helpful to include some fluidity or fragmented items into the prompts, such as:
+To help the QR codes more blend in, we find that it's helpful to include some fluidity or fragmented items in the prompts.
 
-> Listed contributed by [@代々木](https://discord.com/channels/1120565504545935404/1121837799054778460/1127208037048918107), [@soloshi](https://discord.com/channels/1120565504545935404/1121837799054778460/1127207924905820160), et al.
+#### Example Prompts
+
+- Ribbon
+  > (1 girl:1.6), full body, from side, ultra wide shot, (azure blue dress:1.3), (grey long hair:1.3), (white ribbon:1.6), (white lace:1.6), BREAK, (dark background:1.3)
+
+- Feather
+  > (1 girl:1.3), upper body, (grey long hair:1.3), (blue dress:1.3), zigzag patterns, graphic impact, (white feathers:1.6), BREAK, (dark background:1.3)
+
+- Bird
+  > (1 girl:1.3), upper body, rosemaling patterns, Norwegian folk art, decorative designs, vibrant colors, (white birds:1.6), BREAK, (dark background:1.3)
+
+#### Example Outputs
 
 <div py15>
   <div grid="~ md:cols-3 cols-2 gap-x-2 gap-y-4" lg:scale-110 md:scale-105>
@@ -129,6 +140,13 @@ To help the QR codes more blend in, we find that it's helpful to include some fl
       <img src="/images/ai-qrcode-101-prompt-feather.jpg" rounded-md shadow />
       <figcaption text-center>
         <b text-lg>feather</b>
+        <div text-xs mt1>by <a href="https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f" target="_blank">代々木</a></div>
+      </figcaption>
+    </figure>
+    <figure important-my-0>
+      <img src="/images/ai-qrcode-101-prompt-bird.jpg" rounded-md shadow />
+      <figcaption text-center>
+        <b text-lg>bird</b>
         <div text-xs mt1>by <a href="https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f" target="_blank">代々木</a></div>
       </figcaption>
     </figure>
@@ -176,6 +194,8 @@ To help the QR codes more blend in, we find that it's helpful to include some fl
     </figure>
   </div>
 </div>
+
+> Credits to [@代々木](https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f)
 
 <hr>
 
