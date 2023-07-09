@@ -31,24 +31,38 @@ Images that are generated with [Stable Diffusion](https://stability.ai/blog/stab
   <figcaption important-mt8 text-center>Examples from <a href="https://qrbtf.com/">QRBTF.com</a></figcaption>
 </figure>
 
-The original idea was created by the people behind [QRBTF](https://qrbtf.com/)](https://qrbtf.com/), and was first revealed on [this reddit](https://www.reddit.com/r/StableDiffusion/comments/141hg9x/controlnet_for_qr_code/) by [nhciao](https://www.reddit.com/user/nhciao/).
+The original idea was created by the people behind [QRBTF](https://qrbtf.com/), and was first revealed on [this reddit](https://www.reddit.com/r/StableDiffusion/comments/141hg9x/controlnet_for_qr_code/) by [nhciao](https://www.reddit.com/user/nhciao/).
 
 As of July 8th, 2023, [QRBTF](https://qrbtf.com/) haven't released their model or service yet, you can join their [Discord server](https://discord.gg/V9CNuqYfte) to get the latest news. The methods mentioned here are based on community research and experiments.
 
 ## How to Generate?
 
-There are a few online services you can try, but this guide will focus on doing it locally on our own. You will need the basic knowledge of Stable Diffusion and ControlNet, a computer with a GPU (or a cloud GPU instance) to start.
+There are a few online services you can try, but this guide will focus on doing it locally on our own. You will need the basic knowledge of Stable Diffusion and ControlNet, a computer with a GPU (or a cloud GPU instance) to start. 
 
-There are two approaches to generating a stylized QR Code:
+If you are new to Stable Diffusion, we recommend reading these guides to get started:
 
-- **Text to Image with ControlNet** - Generate an image with prompts, and use ControlNet with a QR Code input to intervention the generation process.
-  - [Stylistic QR Code with Stable Diffusion](/posts/ai-qrcode) - by Anthony Fu
-  - [Refining AI Generated QR Code](/posts/ai-qrcode-refine) - by Anthony Fu
-  - [[Video] 二维码融合技术2.0](https://www.bilibili.com/video/BV1zF411R7xg/) - by 赛博迪克朗
-- **Image to Image** - Use a QR Code image as input, and let Stable Diffusion redraw each part of the QR Code. Doesn't require ControlNet.
-  - [How to make a QR code with Stable Diffusion](https://stable-diffusion-art.com/qr-code/) - by Andrew
+- [Stable Diffusion Knowledge Hub](https://aituts.com/stable-diffusion/)
+- [Stable Diffusion LoRA Models](https://aituts.com/stable-diffusion-lora/)
 
-We found that the **Text to Image approach produces much better results**, and it's easier to control the output. We will focus on that approach in this guide.
+Once you set them up, there are two approaches to generating a stylized QR Code:
+
+### Method A: **Text to Image with ControlNet**
+
+Generate an image with prompts, and use ControlNet with a QR Code input to intervention the generation process.
+
+- [Stylistic QR Code with Stable Diffusion](/posts/ai-qrcode) - by Anthony Fu
+- [Refining AI Generated QR Code](/posts/ai-qrcode-refine) - by Anthony Fu
+- [[Video] 二维码融合技术2.0](https://www.bilibili.com/video/BV1zF411R7xg/) - by 赛博迪克朗
+
+### Method B: **Image to Image** 
+
+Use a QR Code image as input, and let Stable Diffusion redraw each part of the QR Code. Doesn't require ControlNet.
+
+- [How to make a QR code with Stable Diffusion](https://stable-diffusion-art.com/qr-code/) - by Andrew
+
+### Our Recommendation
+
+We found that Method A, **Text to Image approach produces much better results**, and it's easier to control the output. We will mostly focus on that approach in this guide.
 
 ## ControlNet Models
 
@@ -144,6 +158,10 @@ Meanwhile, note that the margin of the QR Code also affects the output, for exam
 </div>
 
 <hr>
+
+<div border="~ rounded-full base" px3 py1 inline text-sm float-right>
+<span i-ri-lightbulb-line /> Credits to <a href="https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f" target="_blank">代々木</a>
+</div>
 
 ### Improve the Prompts
 
@@ -252,9 +270,12 @@ Bird
 
 </p>
 
-> Credits to [@代々木](https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f)
 
 <hr>
+
+<div border="~ rounded-full base" px3 py1 inline text-sm float-right>
+<span i-ri-lightbulb-line /> Credits to <a href="https://space.bilibili.com/339984/" target="_blank">whmc76</a>
+</div>
 
 ### Non-Square Image
 
@@ -293,7 +314,31 @@ Or in the [Toolkit](https://qrcode.antfu.me/), you click the <span i-carbon-chev
 
 ![](/images/ai-qrcode-101-non-square-toolkit.png)
 
-> Idea credits to [@whmc76](https://space.bilibili.com/339984/)
+<hr>
+
+<div border="~ rounded-full base" px3 py1 inline text-sm float-right>
+<span i-ri-lightbulb-line /> Credits to <a href="TODO" target="_blank">lameguy</a>
+</div>
+
+### Perspective
+
+You can also try to apply some perspective transformation to the QR Code to make it more interesting.
+
+<div grid="~ cols-2 gap-2">
+  <figure>
+    <img src="/images/ai-qrcode-101-perspective-ep1.png" rounded shadow />
+    <figcaption text-center>
+      by <a href="TODO" target="_blank">lameguy</a>
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="/images/ai-qrcode-101-perspective-ep2.png" rounded shadow />
+    <figcaption text-center>
+      by <a href="TODO" target="_blank">lameguy</a>
+    </figcaption>
+  </figure>
+</div>
 
 <hr>
 
@@ -302,6 +347,10 @@ Or in the [Toolkit](https://qrcode.antfu.me/), you click the <span i-carbon-chev
 // TODO: anyone can help to explain this?
 
 <hr>
+
+<div border="~ rounded-full base" px3 py1 inline text-sm float-right>
+<span i-ri-lightbulb-line /> Credits to <a href="https://huggingface.co/monster-labs/control_v1p_sd15_qrcode_monster#tips" target="_blank">QR Code Monster</a>
+</div>
 
 ### Image to Image Enhancement
 
@@ -312,8 +361,6 @@ When you find a generated image is hard to scan, you can try to send the image t
 - A typical workflow for "saving" a code would be: Max out the guidance scale and minimize the denoising strength, then bump the strength until the code scans.
 
 This tells the model to re-enhance the image by making dark areas darker and light areas lighter under the guidance of ControlNet.
-
-> Credits to [QR Code Monster's Tips](https://huggingface.co/monster-labs/control_v1p_sd15_qrcode_monster#tips)
 
 <hr>
 
