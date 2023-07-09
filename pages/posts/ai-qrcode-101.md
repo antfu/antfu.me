@@ -131,7 +131,7 @@ The **input QR Code is one of the most important parts** of the whole process to
 
 You can refer to [this post](/posts/ai-qrcode-refine#generating-the-base-qr-code) to see a comparison of how different QR Code input affects the output.
 
-We recommend using [Anthony's](https://qrcode.antfu.me/) QR Toolkit](https://qrcode.antfu.me/) to generate the QR Code. It allows you to customize the QR Code and distort it as needed.
+We recommend using [Anthony's QR Toolkit](https://qrcode.antfu.me/) to generate the QR Code. It allows you to customize the QR Code and distort it as needed.
 
 Meanwhile, note that the margin of the QR Code also affects the output, for example:
 
