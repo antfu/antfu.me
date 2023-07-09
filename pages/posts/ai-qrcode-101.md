@@ -70,13 +70,50 @@ Before going into details, let's picture the goal of your QR Code first. Here ar
 
 All these approaches are viable. They are on a different balance between the art and the functionality. It's better to have such expectations so you can tune your models, parameters and prompts accordingly.
 
-### The Scanners
+<hr>
 
-If your goal is to make a more blended-in QR Code, and you are okay with the code not being scannable by all QR Code readers, we recommend to iPhone's code scanner from Control Center, or the scanner from [WeChat](https://www.wechat.com/en/) to verify your QR Code. They are the most tolerant ones we found so far.
+### Scanners
+
+When the images are generated, we will use a QR Code scanner to verify if the code is scannable. 
+
+If your goal is to make a more blended-in QR Code, and you are okay with the code not being scannable by all QR Code readers, it's better to use an error-tolerant scanner to verify. We recommend using iOS's code **scanner from the Control Center**, or the scanner from [WeChat](https://www.wechat.com/en/) to verify your QR Code. They are the most tolerant ones we found so far.
+
+<hr>
 
 ### Parameters
 
-// TODO:
+The parameters of the ControlNet affect when and how the control is applied to the generation process.
+
+- **Control weight** - The weight of the ControlNet. The higher the weight, the more the output will be affected by the ControlNet.
+- **Start control step** - The percentage of the generation process when the ControlNet starts to take effect.
+- **End control step** - The percentage of the generation process when the ControlNet stops taking effect.
+
+<div relative flex="~ col items-center" py3>
+  <div absolute top-0 left="1/12" translate-x="-1/2">prompts</div>
+  <div absolute top-0 left="5/12" translate-x="-1/2">prompts + control net</div>
+  <div absolute top-0 left="10/12" translate-x="-1/2">prompts</div>
+  <div w-full mt-1.5em h-1em rounded bg-gray:10 border="~ base" relative>
+    <div absolute left="1/6" bg-yellow op80 w="3/6" h-full/>
+  </div>
+  <div absolute top-2.7em flex="~ col items-center" left="1/6" translate-x="-1/2">
+    <div i-ri-arrow-up-s-fill text-lg/>
+    <div>Control Start</div>
+  </div>
+   <div absolute top-2.7em flex="~ col items-center" left="4/6" translate-x="-1/2">
+    <div i-ri-arrow-up-s-fill text-lg/>
+    <div>Control End</div>
+  </div>
+</div>
+
+<div mt-14 />
+
+The start control step will allow the prompts and the model to be creative before it knows the QR Code control exists. And the end control step will allow the model to try to blend the QR Code into the artwork more (but will make the code less scannable).
+
+It requires a few trials and errors to find the right balance so that the ControlNet has enough time to intervene, but not too much so the code can be artistic enough.
+
+Different models might have different strengths of the control, so you might need to adjust the parameters accordingly. It's better to read their instructions first.
+
+<hr>
 
 ### Compare with the Original QR Code
 
