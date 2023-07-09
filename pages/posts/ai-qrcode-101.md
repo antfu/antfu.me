@@ -151,27 +151,6 @@ Theoretically, you can use any prompts to generate those QR Codes.
 
 To help the QR codes more blend in, we find that it's helpful to include some fluidity or fragmented items in the prompts.
 
-#### Example Prompts
-
-<p class="code-wrap">
-
-- Ribbon
-  ```ruby
-  (1 girl:1.6), full body, from side, ultra wide shot, (azure blue dress:1.3), (grey long hair:1.3), (white ribbon:1.6), (white lace:1.6), BREAK, (dark background:1.3)
-  ```
-
-- Feather
-  ```ruby
-  (1 girl:1.3), upper body, (grey long hair:1.3), (blue dress:1.3), zigzag patterns, graphic impact, (white feathers:1.6), BREAK, (dark background:1.3)
-  ```
-
-- Bird
-  ```ruby
-  (1 girl:1.3), upper body, rosemaling patterns, Norwegian folk art, decorative designs, vibrant colors, (white birds:1.6), BREAK, (dark background:1.3)
-  ```
-
-</p>
-
 #### Example Outputs
 
 <div py15>
@@ -211,7 +190,7 @@ To help the QR codes more blend in, we find that it's helpful to include some fl
         <div text-xs mt1>by <a href="https://antfu.me" target="_blank">Anthony Fu</a></div>
       </figcaption>
     </figure>
-    <figure important-my-0>
+    <!-- <figure important-my-0>
       <img src="/og-icon.png" rounded-md shadow />
       <figcaption text-center>
         <b text-lg>wave</b>
@@ -231,7 +210,7 @@ To help the QR codes more blend in, we find that it's helpful to include some fl
         <b text-lg>leaves</b>
         <div text-xs mt1>by <a href="https://antfu.me" target="_blank">-</a></div>
       </figcaption>
-    </figure>
+    </figure> -->
     <figure important-my-0>
       <img src="/images/ai-qrcode-101-prompt-snow.jpg" rounded-md shadow />
       <figcaption text-center>
@@ -239,8 +218,39 @@ To help the QR codes more blend in, we find that it's helpful to include some fl
         <div text-xs mt1>by <a href="https://antfu.me" target="_blank">Anthony Fu</a></div>
       </figcaption>
     </figure>
+    <figure important-my-0>
+      <img src="/images/ai-qrcode-101-prompt-buildings.png" rounded-md shadow />
+      <figcaption text-center>
+        <b text-lg>buildings</b>
+        <div text-xs mt1>by <a href="https://space.bilibili.com/251938958" target="_blank">阿帝</a></div>
+      </figcaption>
+    </figure>
   </div>
 </div>
+
+#### Example Prompts
+
+<p class="code-wrap">
+
+Ribbon
+
+```ruby
+(1 girl:1.6), full body, from side, ultra wide shot, (azure blue dress:1.3), (grey long hair:1.3), (white ribbon:1.6), (white lace:1.6), BREAK, (dark background:1.3)
+```
+
+Feather
+
+```ruby
+(1 girl:1.3), upper body, (grey long hair:1.3), (blue dress:1.3), zigzag patterns, graphic impact, (white feathers:1.6), BREAK, (dark background:1.3)
+```
+
+Bird
+
+```ruby
+(1 girl:1.3), upper body, rosemaling patterns, Norwegian folk art, decorative designs, vibrant colors, (white birds:1.6), BREAK, (dark background:1.3)
+```
+
+</p>
 
 > Credits to [@代々木](https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f)
 
@@ -250,7 +260,12 @@ To help the QR codes more blend in, we find that it's helpful to include some fl
 
 To make the QR Code less obvious, you can try to generate a non-square image, leaving some extra space around the QR Code for the Stable Diffusion to be creative. With that, you can shift the focus of the viewers to the other parts of the image. 
 
-For examples:
+<figure>
+  <img src="/images/ai-qrcode-101-non-square-example3.jpg" rounded shadow />
+  <figcaption text-center>
+    by <a href="https://antfu.me/" target="_blank">Anthony Fu</a>
+  </figcaption>
+</figure>
 
 <figure>
   <img src="/images/ai-qrcode-101-non-square-example1.jpg" rounded shadow />
@@ -258,6 +273,7 @@ For examples:
     by <a href="https://antfu.me/" target="_blank">Anthony Fu</a>
   </figcaption>
 </figure>
+
 
 // TODO: add more examples
 
