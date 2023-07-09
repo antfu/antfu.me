@@ -85,6 +85,9 @@ onMounted(() => {
     >
       {{ frontmatter.subtitle }}
     </p>
+    <p v-if="frontmatter.draft" bg-orange-4:10 text-orange-4 border="l-3 orange-4" px4 py2>
+      This post is still in draft.
+    </p>
   </div>
   <article ref="content">
     <slot />

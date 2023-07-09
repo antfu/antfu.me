@@ -20,7 +20,7 @@ A summary of discussions made in [QRBTF's Discord server](https://discord.gg/V9C
 
 ## What's a Stable Diffusion QR Code?
 
-Images that generated with [Stable Diffusion](https://stability.ai/blog/stable-diffusion-public-release) and as QR Codes as [ControlNet](https://github.com/lllyasviel/ControlNet)'s input, to make the QR Code data points blend into the artwork while still being scannable by QR Code readers.
+Images generated with [Stable Diffusion](https://stability.ai/blog/stable-diffusion-public-release) with QR Codes as [ControlNet](https://github.com/lllyasviel/ControlNet)'s input, making the QR Code data points blend into the artwork while still being scannable by QR Code readers.
 
 <figure>
   <div grid="~ cols-1 md:cols-3 gap-1" lg:scale-120 md:scale-110>
@@ -31,24 +31,24 @@ Images that generated with [Stable Diffusion](https://stability.ai/blog/stable-d
   <figcaption important-mt8 text-center>Examples from <a href="https://qrbtf.com/">QRBTF.com</a></figcaption>
 </figure>
 
-The original idea was created by people behind [QRBTF](https://qrbtf.com/), and first revealed on [this reddit](https://www.reddit.com/r/StableDiffusion/comments/141hg9x/controlnet_for_qr_code/) by [nhciao](https://www.reddit.com/user/nhciao/).
+The original idea was created by the people behind [QRBTF](https://qrbtf.com/)](https://qrbtf.com/), and was first revealed on [this reddit](https://www.reddit.com/r/StableDiffusion/comments/141hg9x/controlnet_for_qr_code/) by [nhciao](https://www.reddit.com/user/nhciao/).
 
-As of July 8th 2023, [QRBTF](https://qrbtf.com/) haven't released their model nor service yet, you can join their [Discord server](https://discord.gg/V9CNuqYfte) to get the latest news. The methods mentioned here are based on community's research and experiments.
+As of July 8th, 2023, [QRBTF](https://qrbtf.com/) haven't released their model or service yet, you can join their [Discord server](https://discord.gg/V9CNuqYfte) to get the latest news. The methods mentioned here are based on community research and experiments.
 
 ## How to Generate?
 
-There are a few online services you can try, but this guide will focus doing it locally on our own. You will need the basics knowledge of Stable Diffusion and ControlNet, a computer with a GPU (or a cloud GPU instance) to start.
+There are a few online services you can try, but this guide will focus on doing it locally on our own. You will need the basic knowledge of Stable Diffusion and ControlNet, a computer with a GPU (or a cloud GPU instance) to start.
 
-There are two approaches to generate a stylized QR Code:
+There are two approaches to generating a stylized QR Code:
 
-- **Text to Image with ControlNet** - Generate a image with prompts, and using ControlNet with a QR Code input to intervention the generation process.
+- **Text to Image with ControlNet** - Generate an image with prompts, and use ControlNet with a QR Code input to intervention the generation process.
   - [Stylistic QR Code with Stable Diffusion](/posts/ai-qrcode) - by Anthony Fu
   - [Refining AI Generated QR Code](/posts/ai-qrcode-refine) - by Anthony Fu
   - [[Video] 二维码融合技术2.0](https://www.bilibili.com/video/BV1zF411R7xg/) - by 赛博迪克朗
-- **Image to Image** - Use a QR Code image as input, and let Stable Diffusion to redraw each part of the QR Code.
+- **Image to Image** - Use a QR Code image as input, and let Stable Diffusion redraw each part of the QR Code.
   - [How to make a QR code with Stable Diffusion](https://stable-diffusion-art.com/qr-code/) - by Andrew
 
-We found that the **Text to Image approach produce much better results**, and it's easier to control the output. We will focus on that approach in this guide.
+We found that the **Text to Image approach produces much better results**, and it's easier to control the output. We will focus on that approach in this guide.
 
 ## ControlNet Models
 
@@ -62,19 +62,17 @@ Here are a few ControlNet models we found useful:
 
 ## The Code is Not Scannable
 
-Before going into details, let's picture your goal of your QR Code first. Here are 3 typical approaches listed by [@1r00t](https://github.com/1r00t):
+Before going into details, let's picture the goal of your QR Code first. Here are 3 typical approaches listed by [@1r00t](https://github.com/1r00t):
 
 - Artistic code that scans 100% and is obvious but creative
 - Code that is kind of hidden but with a bit of fiddling you get it
-- Code that is completely hidden as sort of secret message
+- Code that is completely hidden as a sort of secret message
 
-All these approaches are viable. They are on the different balance between the art and the functionality. It's better to have such expectation so you can tune your models, parameters and prompts accordingly.
+All these approaches are viable. They are on a different balance between the art and the functionality. It's better to have such expectations so you can tune your models, parameters and prompts accordingly.
 
 ### The Scanners
 
-If you goal is to make a more blended-in QR Code, and you are okay with the code not being scannable by all QR Code readers, we recommend to iPhone's code scanner from Control Center, or the scanner from [WeChat](https://www.wechat.com/en/) to verify your QR Code. They are the most tolerant ones we found so far.
-
-// TODO:
+If your goal is to make a more blended-in QR Code, and you are okay with the code not being scannable by all QR Code readers, we recommend to iPhone's code scanner from Control Center, or the scanner from [WeChat](https://www.wechat.com/en/) to verify your QR Code. They are the most tolerant ones we found so far.
 
 ### Parameters
 
@@ -92,11 +90,11 @@ Say that you already generated a bunch of QR Codes and find some of them you lik
 
 ### Tweak the Input QR Code
 
-The **input QR Code is one of most important parts** of the whole process to generate well-blended code.
+The **input QR Code is one of the most important parts** of the whole process to generate well-blended code.
 
-You can refer to [this post](/posts/ai-qrcode-refine#generating-the-base-qr-code) to see a comparion of how different QR Code input affects the output.
+You can refer to [this post](/posts/ai-qrcode-refine#generating-the-base-qr-code) to see a comparison of how different QR Code input affects the output.
 
-We recommend to use [Anthony's QR Toolkit](https://qrcode.antfu.me/) to generate the QR Code. It allows you to customize the QR Code and distort as needed.
+We recommend using [Anthony's](https://qrcode.antfu.me/) QR Toolkit](https://qrcode.antfu.me/) to generate the QR Code. It allows you to customize the QR Code and distort it as needed.
 
 Meanwhile, note that the margin of the QR Code also affects the output, for example:
 
@@ -112,7 +110,7 @@ Meanwhile, note that the margin of the QR Code also affects the output, for exam
 
 ### Improve the Prompts
 
-Theorically, you can use any prompts to generated those QR Codes.
+Theoretically, you can use any prompts to generate those QR Codes.
 
 To help the QR codes more blend in, we find that it's helpful to include some fluidity or fragmented items into the prompts, such as:
 
@@ -183,7 +181,7 @@ To help the QR codes more blend in, we find that it's helpful to include some fl
 
 ### Non-Square Image
 
-To make the QR Code less obvious, you can try to generate a non-square image, leaving some extra space around the QR Code for the Stable Diffusion to be creative. With that, you can shift the focus of the viewers into the other parts of the image. 
+To make the QR Code less obvious, you can try to generate a non-square image, leaving some extra space around the QR Code for the Stable Diffusion to be creative. With that, you can shift the focus of the viewers to the other parts of the image. 
 
 For examples:
 
@@ -218,7 +216,7 @@ Or in the [Toolkit](https://qrcode.antfu.me/), you click the <span i-carbon-chev
 
 ### Multiple ControlNet
 
-// TODO: any one can help to explain this?
+// TODO: anyone can help to explain this?
 
 <hr>
 
@@ -238,4 +236,4 @@ This tells the model to re-enhance the image by making dark areas darker and lig
 
 ### Manually Editing and Inpainting
 
-The ultimate solutions is indeed to manually edit the output image. You can use editing tools like Photoshop combined with inpainting to fine tune every part of the imaged image. More details can be found in [this post](/posts/ai-qrcode-refine).
+The ultimate solution is indeed to manually edit the output image. You can use editing tools like Photoshop combined with inpainting to fine-tune every part of the imaged image. It might require a lot of effort, we'd generally recommend focusing on tweaking the generation first before going to this step. More details can be found in [this post](/posts/ai-qrcode-refine).

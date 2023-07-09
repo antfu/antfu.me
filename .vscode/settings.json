@@ -5,4 +5,10 @@
   "cSpell.words": [
     "inperson"
   ],
+  "grammarly.selectors": [
+    {
+      "language": "markdown",
+      "scheme": "file"
+    }
+  ],
 }
