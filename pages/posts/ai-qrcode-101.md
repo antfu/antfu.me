@@ -317,7 +317,7 @@ Or in the [Toolkit](https://qrcode.antfu.me/), you click the <span i-carbon-chev
 <hr>
 
 <div border="~ rounded-full base" px3 py1 inline text-sm float-right>
-<span i-ri-lightbulb-line /> Credits to <a href="TODO" target="_blank">lameguy</a>
+<span i-ri-lightbulb-line /> Credits to <a href="https://www.instagram.com/terryberrystudio" target="_blank">lameguy</a>
 </div>
 
 ### Perspective
@@ -328,14 +328,14 @@ You can also try to apply some perspective transformation to the QR Code to make
   <figure>
     <img src="/images/ai-qrcode-101-perspective-ep1.png" rounded shadow />
     <figcaption text-center>
-      by <a href="TODO" target="_blank">lameguy</a>
+      by <a href="https://www.instagram.com/terryberrystudio" target="_blank">lameguy</a>
     </figcaption>
   </figure>
 
   <figure>
     <img src="/images/ai-qrcode-101-perspective-ep2.png" rounded shadow />
     <figcaption text-center>
-      by <a href="TODO" target="_blank">lameguy</a>
+      by <a href="https://www.instagram.com/terryberrystudio" target="_blank">lameguy</a>
     </figcaption>
   </figure>
 </div>
