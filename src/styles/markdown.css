@@ -162,11 +162,11 @@ h6:focus .header-anchor {
   --uno: bg-base rounded op0 mt-1 transition duration-700;
 }
 
-p:hover > .table-of-contents > .table-of-contents-anchor {
+*:hover > .table-of-contents > .table-of-contents-anchor {
   --uno: text-inherit;
 }
 
-p:hover > .table-of-contents > ul {
+*:hover > .table-of-contents > ul {
   opacity: 0.75;
 }
 
@@ -177,6 +177,12 @@ p:hover > .table-of-contents > ul {
 .table-of-contents ul > li {
   padding-left: 0.8rem;
   line-height: 1.5em;
+  margin-top: 0.5em;
+}
+
+
+.table-of-contents ul > li > a {
+  --uno: op75 hover:op100 transition;
 }
 
 .code-wrap .line {
