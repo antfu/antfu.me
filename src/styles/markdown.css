@@ -150,7 +150,7 @@ h6:focus .header-anchor {
   z-index: 200;
   overflow-y: auto;
   overflow-x: hidden;
-  --uno: hidden lg:block w-200px lg:w-300px;
+  --uno: hidden lg:block w-100px lg:w-200px xl:w-300px;
 }
 
 .table-of-contents-anchor {

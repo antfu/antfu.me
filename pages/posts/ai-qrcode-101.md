@@ -146,9 +146,107 @@ Different models might have different strengths of the control, so you might nee
 <span i-ri-book-2-line /> Credits to <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a>
 </div>
 
-### Models Comparison
+### Model Comparison
 
-// TODO:
+Thanks a lot to [赛博迪克朗](https://space.bilibili.com/339984/) for running the following matrixes against each model.
+
+Here is the original image (without ControlNet) and the QR Code Input:
+
+<div grid="~ cols-2 gap-4">
+  <figure important-m0>
+    <img src="/images/ai-qrcode-101-multi-cn-original.png" rounded shadow  />
+    <figcaption text-center>
+      Original Image
+    </figcaption>
+  </figure>
+  <figure important-m0>
+    <img src="/images/ai-qrcode-101-multi-cn-qr.png" rounded shadow  />
+    <figcaption text-center>
+      QR Code
+    </figcaption>
+  </figure>
+</div>
+
+
+You can **drag the slider** to see the difference between the start and end control steps.
+
+#### [QR Pattern Model](https://civitai.com/models/90940/controlnet-qr-pattern-qr-codes)
+
+<div grid="~ cols-1 md:cols-2 gap-2">
+  <QRCodeMatrix
+    src="/images/ai-qrcode-101-matrix-pattern-start.webp"
+    xTitle="Weight"
+    :xScale="[0.7, 1.6, 0.1]"
+    yTitle="Start"
+    :yScale="[0.1, 0.5, 0.1]"
+    :aspectRatio="0.75"
+    :fixedRowsAfter="[['End', '0']]"
+    :fixedRowsBefore="[['Model', 'QR Pattern']]"
+  />
+  <QRCodeMatrix
+    src="/images/ai-qrcode-101-matrix-pattern-end.webp"
+    xTitle="Weight"
+    :xScale="[0.7, 1.6, 0.1]"
+    :xValue="2"
+    yTitle="End"
+    :yScale="[0.4, 1.0, 0.1]"
+    :aspectRatio="0.75"
+    :fixedRowsBetween="[['Start', '0']]"
+    :fixedRowsBefore="[['Model', 'QR Pattern']]"
+  />
+</div>
+
+#### [QR Code Monster Model](https://huggingface.co/monster-labs/control_v1p_sd15_qrcode_monster)
+
+<div grid="~ cols-1 md:cols-2 gap-2">
+  <QRCodeMatrix
+    src="/images/ai-qrcode-101-matrix-monster-start.webp"
+    xTitle="Weight"
+    :xScale="[0.7, 1.6, 0.1]"
+    yTitle="Start"
+    :yScale="[0.1, 0.5, 0.1]"
+    :aspectRatio="0.75"
+    :fixedRowsAfter="[['End', '1.0']]"
+    :fixedRowsBefore="[['Model', 'QR Code Monster']]"
+  />
+  <QRCodeMatrix
+    src="/images/ai-qrcode-101-matrix-monster-end.webp"
+    xTitle="Weight"
+    :xScale="[0.7, 1.6, 0.1]"
+    yTitle="End"
+    :yScale="[0.4, 1.0, 0.1]"
+    :aspectRatio="0.75"
+    :fixedRowsBetween="[['Start', '0']]"
+    :fixedRowsBefore="[['Model', 'QR Code Monster']]"
+  />
+</div>
+
+#### [IoC Lab Brightness Model](https://huggingface.co/ioclab/ioc-controlnet/tree/main/models)
+
+<div grid="~ cols-1 md:cols-2 gap-2">
+  <QRCodeMatrix
+    src="/images/ai-qrcode-101-matrix-brightness-start.webp"
+    xTitle="Weight"
+    :xScale="[0.1, 0.9, 0.1]"
+    :xValue="1"
+    yTitle="Start"
+    :yScale="[0, 0.5, 0.1]"
+    :aspectRatio="0.75"
+    :fixedRowsAfter="[['End', '0']]"
+    :fixedRowsBefore="[['Model', 'IoC Lab Brightness']]"
+  />
+  <QRCodeMatrix
+    src="/images/ai-qrcode-101-matrix-brightness-end.webp"
+    xTitle="Weight"
+    :xScale="[0.1, 0.9, 0.1]"
+    :xValue="2"
+    yTitle="End"
+    :yScale="[0.5, 1.0, 0.1]"
+    :aspectRatio="0.75"
+    :fixedRowsBetween="[['Start', '0']]"
+    :fixedRowsBefore="[['Model', 'IoC Lab Brightness']]"
+  />
+</div>
 
 <hr>
 
@@ -168,24 +266,7 @@ Usually, we use **QR Code Monster** or **QR Code Pattern** model as the main gui
 
 > <span i-ri-lightbulb-line text-yellow/> 赛博迪克朗: It's recommended to use the QR Monster model. The QR Pattern v2.0 still has too much interference, which may cause a great change in the style of the image.
 
-For example, here is the original image (without ControlNet) and the QR Code:
-
-<div grid="~ cols-2 gap-4">
-  <figure important-m0>
-    <img src="/images/ai-qrcode-101-multi-cn-original.png" rounded shadow  />
-    <figcaption text-center>
-      Original Image
-    </figcaption>
-  </figure>
-  <figure important-m0>
-    <img src="/images/ai-qrcode-101-multi-cn-qr.png" rounded shadow  />
-    <figcaption text-center>
-      QR Code
-    </figcaption>
-  </figure>
-</div>
-
-When using the **QR Code Monster** model alone (single model), with control steps 0.0 to 1.0, we got the following results with different weights:
+For example, running the same prompts as [the previous example](#model-comparison), when using the **QR Code Monster** model alone (single model), with control steps 0.0 to 1.0, we got the following results with different weights:
 
 <div grid="~ cols-2 md:cols-3 gap-2">
   <figure important-mb0 important-mt-2>
