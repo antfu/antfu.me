@@ -167,8 +167,34 @@ Here is the original image (without ControlNet) and the QR Code Input:
   </figure>
 </div>
 
+The comparison matrixes are generated with the exact same prompts and same seed as the original image, but only the parameters of the ControlNet are changed.
 
-You can **drag the slider** to see the difference between the start and end control steps.
+<details>
+<summary cursor-pointer select-none>Detailed prompts and paramaters</summary>
+
+<div class="code-wrap" border="~ base rounded" px4 pt3 mt2>
+
+```ruby
+best quality, masterpiece, depth of field, 1girl, dress, trees, flowers, sky, water
+```
+
+```ruby
+NSFW, nude, bad-hands-5, bad-picture-chill-75v, badhandv4, easynegative, ng_deepnegative_v1_75t, verybadimagenegative_v1.3, bhands-neg, watermark, character watermark, photo date watermark, Date watermarking
+```
+
+
+- Checkpoint: [PrimeMix](https://civitai.com/models/28779/primemix)
+- Steps: 50
+- Sampler: DPM++ 2M SDE Karras
+- CFG scale: 7
+- Seed: 1902542336
+- Size: 768x1024
+
+</div>
+
+</details>
+
+You can **drag the sliders** below to see the difference between the start and end control steps:
 
 #### [QR Pattern Model](https://civitai.com/models/90940/controlnet-qr-pattern-qr-codes)
 

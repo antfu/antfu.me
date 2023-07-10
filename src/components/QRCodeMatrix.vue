@@ -48,7 +48,7 @@ const y = ref(props.yValue || 0)
       </div>
     </div>
 
-    <div grid="~ cols-[max-content_1fr_max-content] gap-x-3 gap-y-1 items-center" p2 px4 mt-2>
+    <div grid="~ cols-[max-content_1fr_max-content] gap-x-3 gap-y-1 items-center" py3 px4>
       <template v-for="x, idx of fixedRowsBefore || []" :key="idx">
         <div font-mono text-sm op75 text-right>
           {{ x[0] }}
