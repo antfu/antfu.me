@@ -116,7 +116,7 @@ The parameters of the ControlNet affect when and how the control is applied to t
 - **End control step** - The percentage of the generation process when the ControlNet stops taking effect.
 
 <div relative flex="~ col items-center" py3>
-  <div absolute top-0 left="1/14" translate-x="-1/2">prompts</div>
+  <div absolute top-0 left="1/14" translate-x="-1/2" hidden md:block>prompts</div>
   <div absolute top-0 left="5/12" translate-x="-1/2">prompts + control net</div>
   <div absolute top-0 left="10/12" translate-x="-1/2">prompts</div>
   <div w-full mt-1.5em h-1em rounded bg-gray:10 border="~ base" relative>
@@ -187,7 +187,7 @@ For example, here is the original image (without ControlNet) and the QR Code:
 
 When using the **QR Code Monster** model alone (single model), with control steps 0.0 to 1.0, we got the following results with different weights:
 
-<div grid="~ cols-3 gap-2">
+<div grid="~ cols-2 md:cols-3 gap-2">
   <figure important-mb0 important-mt-2>
     <img src="/images/ai-qrcode-101-multi-cn-monster-w100.png" rounded shadow  />
     <figcaption text-center>
@@ -230,18 +230,18 @@ We notice that only Weight 1.5 and 1.7 are scannable (and do not have very good 
 
 So if we want to keep the original composition but still have good enough recognizability, we could add the **Brightness Model** as the second model.
 
-<div grid="~ cols-2 gap-4">
+<div grid="~ cols-1 md:cols-2 gap-4">
  <figure important-m0>
     <img src="/images/ai-qrcode-101-multi-cn-monster-w100-s00-e10-brightness-w015-s01-e10.png" rounded shadow  />
     <figcaption text-center font-mono important-text-xs>
-      Monster &nbsp;&nbsp;: Weight <b>1.00</b> Start <b>0.0</b> End <b>1.0</b>
+      Monster &nbsp;&nbsp;: Weight <b>1.00</b> Start <b>0.0</b> End <b>1.0</b><br>
       Brightness: Weight <b>0.15</b> Start <b>0.1</b> End <b>1.0</b>
     </figcaption>
   </figure>
   <figure important-m0>
     <img src="/images/ai-qrcode-101-multi-cn-monster-w100-s00-e10-brightness-w025-s04-e08.png" rounded shadow  />
     <figcaption text-center font-mono important-text-xs>
-      Monster &nbsp;&nbsp;: Weight <b>1.00</b> Start <b>0.0</b> End <b>1.0</b>
+      Monster &nbsp;&nbsp;: Weight <b>1.00</b> Start <b>0.0</b> End <b>1.0</b><br>
       Brightness: Weight <b>0.25</b> Start <b>0.4</b> End <b>0.8</b>
     </figcaption>
   </figure>
@@ -251,13 +251,13 @@ We can see that even if we reduce the weight of the **Monster Model** to 1.0, th
 
 If you want to go further, it's also possible to try more models. For example, here is the result of using **QR Code Monster** and **Brightness Model** together with **QR Pattern**:
 
-<div grid="~ cols-[1fr_2fr_1fr] gap-4 justify-center">
+<div grid="~ cols-1 md:cols-[1fr_2fr_1fr] gap-4 justify-center">
   <div />
   <figure important-m0>
     <img src="/images/ai-qrcode-101-multi-cn-monster-monster-w100-brightness-w010-s04-e08-pattern-w010-s04-e08.png" rounded shadow  />
     <figcaption text-center font-mono important-text-xs>
-      Monster &nbsp;&nbsp;: Weight <b>1.00</b> Start <b>0.0</b> End <b>1.0</b>
-      Brightness: Weight <b>0.10</b> Start <b>0.4</b> End <b>0.8</b>
+      Monster &nbsp;&nbsp;: Weight <b>1.00</b> Start <b>0.0</b> End <b>1.0</b><br>
+      Brightness: Weight <b>0.10</b> Start <b>0.4</b> End <b>0.8</b><br>
       QR Pattern: Weight <b>0.10</b> Start <b>0.4</b> End <b>0.8</b>
     </figcaption>
   </figure>
