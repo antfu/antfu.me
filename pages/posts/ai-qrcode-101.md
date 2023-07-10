@@ -22,7 +22,7 @@ A summary of discussions made in [QRBTF's Discord server](https://discord.gg/V9C
 
 Images that are generated with [Stable Diffusion](https://stability.ai/blog/stable-diffusion-public-release) with QR Codes as [ControlNet](https://github.com/lllyasviel/ControlNet)'s input, making the QR Code data points blend into the artwork while still being scannable by QR Code readers.
 
-<figure>
+<figure pt-5>
   <div grid="~ cols-1 md:cols-3 gap-1" lg:scale-120 md:scale-110>
     <img src="/images/ai-qrcode-101-example2.jpg" rounded shadow important-m0 />
     <img src="/images/ai-qrcode-101-example1.jpg" rounded shadow important-m0 />
@@ -103,7 +103,7 @@ The parameters of the ControlNet affect when and how the control is applied to t
 - **End control step** - The percentage of the generation process when the ControlNet stops taking effect.
 
 <div relative flex="~ col items-center" py3>
-  <div absolute top-0 left="1/12" translate-x="-1/2">prompts</div>
+  <div absolute top-0 left="1/14" translate-x="-1/2">prompts</div>
   <div absolute top-0 left="5/12" translate-x="-1/2">prompts + control net</div>
   <div absolute top-0 left="10/12" translate-x="-1/2">prompts</div>
   <div w-full mt-1.5em h-1em rounded bg-gray:10 border="~ base" relative>
@@ -208,32 +208,25 @@ To help the QR codes more blend in, we find that it's helpful to include some fl
         <div text-xs mt1>by <a href="https://antfu.me" target="_blank">Anthony Fu</a></div>
       </figcaption>
     </figure>
-    <!-- <figure important-my-0>
-      <img src="/og-icon.png" rounded-md shadow />
-      <figcaption text-center>
-        <b text-lg>wave</b>
-        <div text-xs mt1>by <a href="https://antfu.me" target="_blank">-</a></div>
-      </figcaption>
-    </figure>
-    <figure important-my-0>
-      <img src="/og-icon.png" rounded-md shadow />
-      <figcaption text-center>
-        <b text-lg>tissue</b>
-        <div text-xs mt1>by <a href="https://antfu.me" target="_blank">-</a></div>
-      </figcaption>
-    </figure>
-    <figure important-my-0>
-      <img src="/og-icon.png" rounded-md shadow />
-      <figcaption text-center>
-        <b text-lg>leaves</b>
-        <div text-xs mt1>by <a href="https://antfu.me" target="_blank">-</a></div>
-      </figcaption>
-    </figure> -->
     <figure important-my-0>
       <img src="/images/ai-qrcode-101-prompt-snow.jpg" rounded-md shadow />
       <figcaption text-center>
         <b text-lg>snow</b>
         <div text-xs mt1>by <a href="https://antfu.me" target="_blank">Anthony Fu</a></div>
+      </figcaption>
+    </figure>
+    <figure important-my-0>
+      <img src="/images/ai-qrcode-101-prompt-wave.png" rounded-md shadow />
+      <figcaption text-center>
+        <b text-lg>wave</b>
+        <div text-xs mt1>by <a href="https://v.douyin.com/iDLHquJ/" target="_blank">五倍速企鹅</a></div>
+      </figcaption>
+    </figure>
+    <figure important-my-0>
+      <img src="/images/ai-qrcode-101-prompt-leaf.png" rounded-md shadow />
+      <figcaption text-center>
+        <b text-lg>leaf</b>
+        <div text-xs mt1>by <a href="https://v.douyin.com/iDLHquJ/" target="_blank">五倍速企鹅</a></div>
       </figcaption>
     </figure>
     <figure important-my-0>
