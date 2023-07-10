@@ -92,7 +92,7 @@ onMounted(() => {
       This is a draft post, the content may be incomplete. Please check back later.
     </p>
   </div>
-  <article ref="content">
+  <article ref="content" :class="frontmatter.tocAlwaysOn ? 'toc-always-on' : ''">
     <slot />
   </article>
   <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-8 slide-enter animate-delay-500">

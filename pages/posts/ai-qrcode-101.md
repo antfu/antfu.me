@@ -4,12 +4,13 @@ date: 2023-07-08T05:00:00.000+00:00
 lang: en
 duration: 15min
 draft: true
+tocAlwaysOn: true
 ---
 
 [[toc]]
 
 <p>
-<span i-carbon-events mr1 /> Co-authored by <a href="https://antfu.me" target="_blank">Anthony Fu</a> and ...
+<span i-carbon-events mr1 /> Co-authored by <a href="https://antfu.me" target="_blank">Anthony Fu</a>, <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a> and <a href="https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f" target="_blank">代々木</a>
 </p>
 
 > Work in progress. This is a live document, will be updated as we learn more.
@@ -71,8 +72,8 @@ Here are a few ControlNet models we found useful:
 - [QR Pattern](https://civitai.com/models/90940/controlnet-qr-pattern-qr-codes)
 - [QR Code Monster](https://huggingface.co/monster-labs/control_v1p_sd15_qrcode_monster)
 - [IoC Lab Control Net](https://huggingface.co/ioclab/ioc-controlnet/tree/main/models)
-
-// TODO: add a compare table, and a bit of explanation for each model
+  - Brightness Model
+  - Illumination Model
 
 ## The Code is Not Scannable
 
@@ -94,7 +95,19 @@ If your goal is to make a more blended-in QR Code, and you are okay with the cod
 
 <hr>
 
-### Parameters
+### Compare with the Original QR Code
+
+You can use [Anthony's QR Toolkit](https://qrcode.antfu.me/) to compare the generated QR Code with the original one. It will show you the mismatches and help you to optimize the generation process.
+
+![](/images/ai-qrcode-refine-compare-2.png)
+
+Read more about it in [this post](/posts/ai-qrcode-refine).
+
+<hr>
+
+## Parameters
+
+### ControlNet
 
 The parameters of the ControlNet affect when and how the control is applied to the generation process.
 
@@ -129,25 +142,41 @@ Different models might have different strengths of the control, so you might nee
 
 <hr>
 
-### Compare with the Original QR Code
+<div border="~ rounded-full base" px3 py1 inline text-sm float-right>
+<span i-ri-lightbulb-line /> Credits to <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a>
+</div>
 
-// TODO: 
+### Models Comparison
+
+// TODO:
 
 <hr>
 
-## Improving the QR Code
+<div border="~ rounded-full base" px3 py1 inline text-sm float-right>
+<span i-ri-lightbulb-line /> Credits to <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a>
+</div>
+
+### Multiple ControlNet
+
+// TODO:
+
+<hr>
+
+## Improve the Result
 
 Say that you already generated a bunch of QR Codes and find some of them you like. You want to improve them to make them more scannable, or more blended-in, or more artistic. Here are some tips we found useful.
 
-### Tweak the Input QR Code
+### Tweak the Input
 
 The **input QR Code is one of the most important parts** of the whole process to generate well-blended code.
 
 You can refer to [this post](/posts/ai-qrcode-refine#generating-the-base-qr-code) to see a comparison of how different QR Code input affects the output.
 
+![Comparison grid between different styled QR Code as input](/images/ai-qrcode-refine-input-compare.jpg)
+
 We recommend using [Anthony's QR Toolkit](https://qrcode.antfu.me/) to generate the QR Code. It allows you to customize the QR Code and distort it as needed.
 
-Meanwhile, note that the margin of the QR Code also affects the output, for example:
+Meanwhile, that the margin area of the QR Code also affects the look and feel, for example:
 
 <div flex="~ col items-center gap-4" py4>
 <QRCodeCompare scale-85 md:scale-100 input="/images/ai-qrcode-101-input-edit1-i.png" output="/images/ai-qrcode-101-input-edit1-o.jpg" />
@@ -278,7 +307,7 @@ Leaf (by [五倍速企鹅](https://v.douyin.com/iDLHquJ/))
 <hr>
 
 <div border="~ rounded-full base" px3 py1 inline text-sm float-right>
-<span i-ri-lightbulb-line /> Credits to <a href="https://space.bilibili.com/339984/" target="_blank">whmc76</a>
+<span i-ri-lightbulb-line /> Credits to <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a>
 </div>
 
 ### Non-Square Image
@@ -346,12 +375,6 @@ You can also try to apply some perspective transformation to the QR Code to make
 
 <hr>
 
-### Multiple ControlNet
-
-// TODO: anyone can help to explain this?
-
-<hr>
-
 <div border="~ rounded-full base" px3 py1 inline text-sm float-right>
 <span i-ri-lightbulb-line /> Credits to <a href="https://huggingface.co/monster-labs/control_v1p_sd15_qrcode_monster#tips" target="_blank">QR Code Monster</a>
 </div>
@@ -371,3 +394,7 @@ This tells the model to re-enhance the image by making dark areas darker and lig
 ### Manually Editing and Inpainting
 
 The ultimate solution is indeed to manually edit the output image. You can use editing tools like Photoshop combined with inpainting to fine-tune every part of the imaged image. It might require a lot of effort, we'd generally recommend focusing on tweaking the generation first before going to this step. More details can be found in [this post](/posts/ai-qrcode-refine).
+
+## Contributing
+
+If you are interested in contributing to this post, fixing typos, or adding new ideas, you can [edit this page on GitHub](https://github.com/antfu/antfu.me/edit/main/pages/posts/ai-qrcode-101.md). Or if you are not familiar with Git, you can also go to [Anthony's Discord server](https://chat.antfu.me) and discuss with us.
