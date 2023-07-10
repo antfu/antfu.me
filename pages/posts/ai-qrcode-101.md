@@ -1,9 +1,8 @@
 ---
 title: Stable Diffusion QR Code 101
-date: 2023-07-08T05:00:00.000+00:00
+date: 2023-07-10T05:00:00.000+00:00
 lang: en
-duration: 15min
-draft: true
+duration: 23min
 tocAlwaysOn: true
 ---
 
@@ -13,9 +12,7 @@ tocAlwaysOn: true
 <span i-carbon-events mr1 /> Co-authored by <a href="https://antfu.me" target="_blank">Anthony Fu</a>, <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a> and <a href="https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f" target="_blank">代々木</a>
 </p>
 
-> Work in progress. This is a live document, will be updated as we learn more.
->
-> If you are interested in contributing, [edit this page on GitHub](https://github.com/antfu/antfu.me/edit/main/pages/posts/ai-qrcode-101.md).
+> **This is a live document**, will be updated as we learn more.
 
 A summary of discussions made in [QRBTF's Discord server](https://discord.gg/V9CNuqYfte) and [Anthony's Discord server](https://chat.antfu.me). Thanks to everyone who participated in those servers.
 
@@ -34,7 +31,7 @@ Images that are generated with [Stable Diffusion](https://stability.ai/blog/stab
 
 The original idea was created by the people behind [QRBTF](https://qrbtf.com/), and was first revealed on [this reddit](https://www.reddit.com/r/StableDiffusion/comments/141hg9x/controlnet_for_qr_code/) by [nhciao](https://www.reddit.com/user/nhciao/).
 
-As of July 8th, 2023, [QRBTF](https://qrbtf.com/) haven't released their model or service yet, you can join their [Discord server](https://discord.gg/V9CNuqYfte) to get the latest news. The methods mentioned here are based on community research and experiments.
+As of July 10th, 2023, [QRBTF](https://qrbtf.com/) haven't released their model or service yet, you can join their [Discord server](https://discord.gg/V9CNuqYfte) to keep tuned with the latest news. The methods mentioned in this guide are based on community research and experiments.
 
 ## How to Generate?
 
