@@ -112,16 +112,16 @@ const y = ref(props.yValue || 0)
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 5px;
+  width: 20px;
   height: 20px;
-  background: #fff;
   cursor: pointer;
+  --uno: dark:bg-white:80 bg-black:50 rounded;
 }
 
 .slider::-moz-range-thumb {
-  width: 5px;
+  width: 20px;
   height: 20px;
-  background: #fff;
   cursor: pointer;
+  --uno: dark:bg-white:80 bg-black:50 rounded;
 }
 </style>
