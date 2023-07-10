@@ -143,7 +143,7 @@ Different models might have different strengths of the control, so you might nee
 <hr>
 
 <div border="~ rounded-full base" px3 py1 inline text-sm float-right>
-<span i-ri-lightbulb-line /> Credits to <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a>
+<span i-ri-book-2-line /> Credits to <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a>
 </div>
 
 ### Models Comparison
@@ -153,12 +153,116 @@ Different models might have different strengths of the control, so you might nee
 <hr>
 
 <div border="~ rounded-full base" px3 py1 inline text-sm float-right>
-<span i-ri-lightbulb-line /> Credits to <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a>
+<span i-ri-book-2-line /> Credits to <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a>
 </div>
 
 ### Multiple ControlNet
 
-// TODO:
+Multiple ControlNet layers are mainly used to increase the recognizability of the image when the model control is insufficient. Try to avoid the result deviation caused by excessive changes in the picture, causing the ideal picture cannot be obtained.
+
+Difficulties in recognition may be due to changes in prompts or due to the characteristics of the SD model, resulting in too trivial details of the picture or too bright/dark overall tone to make it impossible to recognize.
+
+This method can effectively improve the automatic recognition success rate of scanning.
+
+Usually, we use **QR Code Monster** or **QR Code Pattern** model as the main guidance model, and use the **Brightness Model** from IoC Lab as the auxiliary model to improve the local contrast.
+
+> <span i-ri-lightbulb-line text-yellow/> 赛博迪克朗: It's recommended to use the QR Monster model. The QR Pattern v2.0 still has too much interference, which may cause a great change in the style of the image.
+
+For example, here is the original image (without ControlNet) and the QR Code:
+
+<div grid="~ cols-2 gap-4">
+  <figure important-m0>
+    <img src="/images/ai-qrcode-101-multi-cn-original.png" rounded shadow  />
+    <figcaption text-center>
+      Original Image
+    </figcaption>
+  </figure>
+  <figure important-m0>
+    <img src="/images/ai-qrcode-101-multi-cn-qr.png" rounded shadow  />
+    <figcaption text-center>
+      QR Code
+    </figcaption>
+  </figure>
+</div>
+
+When using the **QR Code Monster** model alone (single model), with control steps 0.0 to 1.0, we got the following results with different weights:
+
+<div grid="~ cols-3 gap-2">
+  <figure important-mb0 important-mt-2>
+    <img src="/images/ai-qrcode-101-multi-cn-monster-w100.png" rounded shadow  />
+    <figcaption text-center>
+      Weight: 1.0
+    </figcaption>
+  </figure>
+  <figure important-mb0 important-mt-2>
+    <img src="/images/ai-qrcode-101-multi-cn-monster-w125.png" rounded shadow  />
+    <figcaption text-center>
+      Weight: 1.25
+    </figcaption>
+  </figure>
+  <figure important-mb0 important-mt-2>
+    <img src="/images/ai-qrcode-101-multi-cn-monster-w140.png" rounded shadow  />
+    <figcaption text-center>
+      Weight: 1.4
+    </figcaption>
+  </figure>
+  <figure  important-mb0 important-mt-2>
+    <img src="/images/ai-qrcode-101-multi-cn-monster-w150.png" rounded shadow  />
+    <figcaption text-center>
+      Weight: 1.5
+    </figcaption>
+  </figure>
+  <figure important-mb0 important-mt-2>
+    <img src="/images/ai-qrcode-101-multi-cn-monster-w160.png" rounded shadow  />
+    <figcaption text-center>
+      Weight: 1.6
+    </figcaption>
+  </figure>
+  <figure important-mb0 important-mt-2>
+    <img src="/images/ai-qrcode-101-multi-cn-monster-w170.png" rounded shadow  />
+    <figcaption text-center>
+      Weight: 1.7
+    </figcaption>
+  </figure>
+</div>
+
+We notice that only Weight 1.5 and 1.7 are scannable (and do not have very good error tolerant), and we also see the compositions of them are changed a lot as the weight increases.
+
+So if we want to keep the original composition but still have good enough recognizability, we could add the **Brightness Model** as the second model.
+
+<div grid="~ cols-2 gap-4">
+ <figure important-m0>
+    <img src="/images/ai-qrcode-101-multi-cn-monster-w100-s00-e10-brightness-w015-s01-e10.png" rounded shadow  />
+    <figcaption text-center font-mono important-text-xs>
+      Monster &nbsp;&nbsp;: Weight <b>1.00</b> Start <b>0.0</b> End <b>1.0</b>
+      Brightness: Weight <b>0.15</b> Start <b>0.1</b> End <b>1.0</b>
+    </figcaption>
+  </figure>
+  <figure important-m0>
+    <img src="/images/ai-qrcode-101-multi-cn-monster-w100-s00-e10-brightness-w025-s04-e08.png" rounded shadow  />
+    <figcaption text-center font-mono important-text-xs>
+      Monster &nbsp;&nbsp;: Weight <b>1.00</b> Start <b>0.0</b> End <b>1.0</b>
+      Brightness: Weight <b>0.25</b> Start <b>0.4</b> End <b>0.8</b>
+    </figcaption>
+  </figure>
+</div>
+
+We can see that even if we reduce the weight of the **Monster Model** to 1.0, the recognizability is as good as the single model with the Weight 1.5, while the composition is closer to the original image.
+
+If you want to go further, it's also possible to try more models. For example, here is the result of using **QR Code Monster** and **Brightness Model** together with **QR Pattern**:
+
+<div grid="~ cols-[1fr_2fr_1fr] gap-4 justify-center">
+  <div />
+  <figure important-m0>
+    <img src="/images/ai-qrcode-101-multi-cn-monster-monster-w100-brightness-w010-s04-e08-pattern-w010-s04-e08.png" rounded shadow  />
+    <figcaption text-center font-mono important-text-xs>
+      Monster &nbsp;&nbsp;: Weight <b>1.00</b> Start <b>0.0</b> End <b>1.0</b>
+      Brightness: Weight <b>0.10</b> Start <b>0.4</b> End <b>0.8</b>
+      QR Pattern: Weight <b>0.10</b> Start <b>0.4</b> End <b>0.8</b>
+    </figcaption>
+  </figure>
+  <div />
+</div>
 
 <hr>
 
@@ -176,7 +280,7 @@ You can refer to [this post](/posts/ai-qrcode-refine#generating-the-base-qr-code
 
 We recommend using [Anthony's QR Toolkit](https://qrcode.antfu.me/) to generate the QR Code. It allows you to customize the QR Code and distort it as needed.
 
-Meanwhile, that the margin area of the QR Code also affects the look and feel, for example:
+Meanwhile, the margin area of the QR Code also affects the look and feel, for example:
 
 <div flex="~ col items-center gap-4" py4>
 <QRCodeCompare scale-85 md:scale-100 input="/images/ai-qrcode-101-input-edit1-i.png" output="/images/ai-qrcode-101-input-edit1-o.jpg" />
@@ -189,7 +293,7 @@ Meanwhile, that the margin area of the QR Code also affects the look and feel, f
 <hr>
 
 <div border="~ rounded-full base" px3 py1 inline text-sm float-right>
-<span i-ri-lightbulb-line /> Credits to <a href="https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f" target="_blank">代々木</a>
+<span i-ri-book-2-line /> Credits to <a href="https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f" target="_blank">代々木</a>
 </div>
 
 ### Improve the Prompts
@@ -307,7 +411,7 @@ Leaf (by [五倍速企鹅](https://v.douyin.com/iDLHquJ/))
 <hr>
 
 <div border="~ rounded-full base" px3 py1 inline text-sm float-right>
-<span i-ri-lightbulb-line /> Credits to <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a>
+<span i-ri-book-2-line /> Credits to <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a>
 </div>
 
 ### Non-Square Image
@@ -350,7 +454,7 @@ Or in the [Toolkit](https://qrcode.antfu.me/), you click the <span i-carbon-chev
 <hr>
 
 <div border="~ rounded-full base" px3 py1 inline text-sm float-right>
-<span i-ri-lightbulb-line /> Credits to <a href="https://www.instagram.com/terryberrystudio" target="_blank">lameguy</a>
+<span i-ri-book-2-line /> Credits to <a href="https://www.instagram.com/terryberrystudio" target="_blank">lameguy</a>
 </div>
 
 ### Perspective
@@ -376,7 +480,7 @@ You can also try to apply some perspective transformation to the QR Code to make
 <hr>
 
 <div border="~ rounded-full base" px3 py1 inline text-sm float-right>
-<span i-ri-lightbulb-line /> Credits to <a href="https://huggingface.co/monster-labs/control_v1p_sd15_qrcode_monster#tips" target="_blank">QR Code Monster</a>
+<span i-ri-book-2-line /> Credits to <a href="https://huggingface.co/monster-labs/control_v1p_sd15_qrcode_monster#tips" target="_blank">QR Code Monster</a>
 </div>
 
 ### Image to Image Enhancement
