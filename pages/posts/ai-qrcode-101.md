@@ -539,17 +539,6 @@ To make the QR Code less obvious, you can try to generate a non-square image, le
   </figcaption>
 </figure>
 
-
-// TODO: add more examples
-
-<!--
-Ask for permissions: 
-- https://discord.com/channels/1120565504545935404/1120739793563832381/1126186859064729630
-- https://discord.com/channels/1120565504545935404/1120739793563832381/1125777899753066526
-- https://discord.com/channels/1120565504545935404/1120739793563832381/1125311132974981151
-- https://discord.com/channels/1120565504545935404/1121837799054778460/1127076655714811984
--->
-
 To generate a non-square image, you can change the **Resize Mode** in ControlNet to `Resize and Fill` and change the Text to Image width or height.
 
 ![](/images/ai-qrcode-101-non-square-resize.png)
