@@ -199,25 +199,33 @@ You can **drag the sliders** below to see the difference between the start and e
   <QRCodeMatrix
     src="/images/ai-qrcode-101-matrix-pattern-start.webp"
     xTitle="Weight"
-    :xScale="[0.7, 1.6, 0.1]"
+    :xScale="{ min: 0.7, max: 1.6, step: 0.1}"
     :xValue="3"
     yTitle="Start"
-    :yScale="[0.1, 0.5, 0.1]"
+    :yScale="{ min: 0.1, max: 0.5, step: 0.1}"
     :aspectRatio="0.75"
     :fixedRowsAfter="[['End', '1.0']]"
     :fixedRowsBefore="[['Model', 'QR Pattern']]"
-  />
+  >
+    <template #post="{ xValue, yValue }">
+      <QRCodeControlNetScale :start="yValue" :end="1" :weight="xValue" />
+    </template>
+  </QRCodeMatrix>
   <QRCodeMatrix
     src="/images/ai-qrcode-101-matrix-pattern-end.webp"
     xTitle="Weight"
-    :xScale="[0.7, 1.6, 0.1]"
+    :xScale="{ min: 0.7, max: 1.6, step: 0.1 }"
     :xValue="3"
     yTitle="End"
-    :yScale="[0.4, 1.0, 0.1]"
+    :yScale="{ min: 0.4, max: 1.0, step: 0.1 }"
     :aspectRatio="0.75"
     :fixedRowsBetween="[['Start', '0']]"
     :fixedRowsBefore="[['Model', 'QR Pattern']]"
-  />
+  >
+    <template #post="{ xValue, yValue }">
+      <QRCodeControlNetScale :start="0" :end="yValue" :weight="xValue" />
+    </template>
+  </QRCodeMatrix>
 </div>
 
 #### [QR Code Monster Model](https://huggingface.co/monster-labs/control_v1p_sd15_qrcode_monster)
@@ -226,25 +234,33 @@ You can **drag the sliders** below to see the difference between the start and e
   <QRCodeMatrix
     src="/images/ai-qrcode-101-matrix-monster-start.webp"
     xTitle="Weight"
-    :xScale="[0.7, 1.6, 0.1]"
+    :xScale="{ min: 0.7, max: 1.6, step: 0.1 }"
     :xValue="3"
     yTitle="Start"
-    :yScale="[0.1, 0.5, 0.1]"
+    :yScale="{ min: 0.1, max: 0.5, step: 0.1 }"
     :aspectRatio="0.75"
     :fixedRowsAfter="[['End', '1.0']]"
     :fixedRowsBefore="[['Model', 'QR Code Monster']]"
-  />
+  >
+    <template #post="{ xValue, yValue }">
+      <QRCodeControlNetScale :start="yValue" :end="1" :weight="xValue" />
+    </template>
+  </QRCodeMatrix>
   <QRCodeMatrix
     src="/images/ai-qrcode-101-matrix-monster-end.webp"
     xTitle="Weight"
-    :xScale="[0.7, 1.6, 0.1]"
+    :xScale="{ min: 0.7, max: 1.6, step: 0.1 }"
     :xValue="3"
     yTitle="End"
-    :yScale="[0.4, 1.0, 0.1]"
+    :yScale="{ min: 0.4, max: 1.0, step: 0.1 }"
     :aspectRatio="0.75"
     :fixedRowsBetween="[['Start', '0']]"
     :fixedRowsBefore="[['Model', 'QR Code Monster']]"
-  />
+  >
+    <template #post="{ xValue, yValue }">
+      <QRCodeControlNetScale :start="0" :end="yValue" :weight="xValue" />
+    </template>
+  </QRCodeMatrix>
 </div>
 
 #### [IoC Lab Brightness Model](https://huggingface.co/ioclab/ioc-controlnet/tree/main/models)
@@ -253,25 +269,33 @@ You can **drag the sliders** below to see the difference between the start and e
   <QRCodeMatrix
     src="/images/ai-qrcode-101-matrix-brightness-start.webp"
     xTitle="Weight"
-    :xScale="[0.1, 0.9, 0.1]"
+    :xScale="{ min: 0.1, max: 0.9, step: 0.1 }"
     :xValue="1"
     yTitle="Start"
-    :yScale="[0, 0.5, 0.1]"
+    :yScale="{ min: 0, max: 0.5, step: 0.1 }"
     :aspectRatio="0.75"
     :fixedRowsAfter="[['End', '0']]"
     :fixedRowsBefore="[['Model', 'IoC Lab Brightness']]"
-  />
+  >
+    <template #post="{ xValue, yValue }">
+      <QRCodeControlNetScale :start="yValue" :end="1" :weight="xValue" />
+    </template>
+  </QRCodeMatrix>
   <QRCodeMatrix
     src="/images/ai-qrcode-101-matrix-brightness-end.webp"
     xTitle="Weight"
-    :xScale="[0.1, 0.9, 0.1]"
+    :xScale="{ min: 0.1, max: 0.9, step: 0.1 }"
     :xValue="2"
     yTitle="End"
-    :yScale="[0.5, 1.0, 0.1]"
+    :yScale="{ min: 0.5, max: 1.0, step: 0.1 }"
     :aspectRatio="0.75"
     :fixedRowsBetween="[['Start', '0']]"
     :fixedRowsBefore="[['Model', 'IoC Lab Brightness']]"
-  />
+  >
+    <template #post="{ xValue, yValue }">
+      <QRCodeControlNetScale :start="0" :end="yValue" :weight="xValue" />
+    </template>
+  </QRCodeMatrix>
 </div>
 
 <hr>
