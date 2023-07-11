@@ -7,6 +7,8 @@ duration: 16min
 
 [[toc]]
 
+> **Update**: New blog posts - [**Stable Diffusion QR Code 101**](/posts/ai-qrcode-101)
+
 Last week, I wrote a [blog post](/posts/ai-qrcode) about how I learned to generate scannable QR Codes. When doing so, I consider my goal is to find an image that looks like a QR Code as little as possible to humans, but still be recognizable by the machine.
 
 We need to find a balance, tweaking the weights to try and error. It's still quite hard to find a good composition that represents the black & white spots, while keeping the content meaningful to human. If you go too far, the QR Code will be unscannable, and if you don't go far enough, the image will just be like a boring QR Code.

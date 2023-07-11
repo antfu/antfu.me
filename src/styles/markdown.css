@@ -116,14 +116,13 @@ h6:focus .header-anchor {
 .prose blockquote {
   font-weight: normal;
   font-style: normal;
-  line-height: 1.5em;
+  line-height: 1.2em;
   padding: 0.5em 1em;
   margin-left: -1.1em;
-  font-style: italic;
 }
 
 .prose blockquote > * {
-  opacity: 0.65;
+  opacity: 0.70;
 }
 
 .prose blockquote > :first-child {

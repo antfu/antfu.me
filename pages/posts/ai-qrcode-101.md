@@ -12,7 +12,7 @@ tocAlwaysOn: true
 <span i-carbon-events mr1 /> Co-authored by <a href="https://antfu.me" target="_blank">Anthony Fu</a>, <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a> and <a href="https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f" target="_blank">代々木</a>
 </p>
 
-> **This is a live document**, will be updated as we learn more.
+> **This is a live document**, will be updated as we learn more. Check back occasionally.
 
 A summary of discussions made in [QRBTF's Discord server](https://discord.gg/V9CNuqYfte) and [Anthony's Discord server](https://chat.antfu.me). Thanks to everyone who participated in those servers.
 
