@@ -1,12 +1,13 @@
 <script setup lang="ts">
 defineProps<{
   input: string
+  input2: string
   output: string
 }>()
 </script>
 
 <template>
-  <div relative w-90 h-90 aspect-ratio-1>
+  <div relative w-100>
     <img
       :src="output"
       border="~ base"
@@ -14,8 +15,8 @@ defineProps<{
     >
     <div
       class="group"
-      absolute left--20 bottom-50 top-0 right-80 z-10
-      hover="right-0 bottom-0"
+      absolute left--20 h-35 top-0 right-90 z-10
+      hover="right-0"
       transition-all duration-300 ease-in-out
     >
       <img
@@ -25,7 +26,24 @@ defineProps<{
         rotate--8 rounded-lg shadow important-w-25
         transition-all duration-300 ease-in-out
         important-m0
-        group-hover="left-20 top-0 rotate-0 important-w-90 op60"
+        group-hover="left-20 top-0 rotate-0 important-w-100 op60"
+      >
+    </div>
+    <div
+      v-if="input2"
+      class="group"
+      absolute left--20 h-35 top-35 right-90 z-10
+      hover="right-0 z-9"
+      transition-all duration-300 ease-in-out
+    >
+      <img
+        :src="input2"
+        pos="absolute top-8 left--2"
+        border="~ base"
+        rotate--8 rounded-lg shadow important-w-25
+        transition-all duration-300 ease-in-out
+        important-m0
+        group-hover="left-20 top--35 rotate-0 important-w-100 op60"
       >
     </div>
   </div>

@@ -40,7 +40,7 @@ const prompts = [
 </script>
 
 <template>
-  <div border="~ base rounded-lg" flex="~ col md:row" w-100 md:w-auto mxa my2 of-hidden>
+  <div border="~ base rounded-lg" flex="~ col md:row" w-100 md:w-auto mxa my2 of-hidden md:mx--5>
     <ImageMatrix
       v-model:x="x"
       v-model:y="y"
@@ -48,7 +48,7 @@ const prompts = [
       mya
       md:w-90
       md:h-90
-      src="/images/ai-qrcode-xyz-prompts.webp"
+      src="/images/ai-qrcode-101-xyz-prompts.webp"
       :x-count="prompts.length"
       :y-count="checkpoints.length"
       :x-padding="[0.0644444444, 0]"

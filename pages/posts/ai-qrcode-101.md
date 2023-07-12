@@ -9,7 +9,7 @@ tocAlwaysOn: true
 [[toc]]
 
 <p>
-<span i-carbon-events mr1 /> Co-authored by <a href="https://antfu.me" target="_blank">Anthony Fu</a>, <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a> and <a href="https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f" target="_blank">代々木</a>
+<span i-carbon-events mr1 /> Co-authored by <a href="https://antfu.me" target="_blank">Anthony Fu</a>, <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a>, wangcai and <a href="https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f" target="_blank">代々木</a>
 </p>
 
 > **This is a live document**, will be updated as we learn more. Check back occasionally.
@@ -413,11 +413,11 @@ We recommend using [Anthony's QR Toolkit](https://qrcode.antfu.me/) to generate 
 Meanwhile, the margin area of the QR Code also affects the look and feel, for example:
 
 <div flex="~ col items-center gap-4" py4>
-<QRCodeCompare scale-85 md:scale-100 input="/images/ai-qrcode-101-input-edit1-i.png" output="/images/ai-qrcode-101-input-edit1-o.jpg" />
+<QRCodeCompare scale-85 md:scale-100 h-100 input="/images/ai-qrcode-101-input-edit1-i.png" output="/images/ai-qrcode-101-input-edit1-o.jpg" />
 <div><div i-ri-arrow-down-line/> Adding some noise to the margin</div>
-<QRCodeCompare scale-85 md:scale-100 input="/images/ai-qrcode-101-input-edit2-i.png" output="/images/ai-qrcode-101-input-edit2-o.jpg" />
+<QRCodeCompare scale-85 md:scale-100 h-100 input="/images/ai-qrcode-101-input-edit2-i.png" output="/images/ai-qrcode-101-input-edit2-o.jpg" />
 <div><div i-ri-arrow-down-line/> Manually connect some points in margin (Photoshop etc.)</div>
-<QRCodeCompare scale-85 md:scale-100 input="/images/ai-qrcode-101-input-edit6-i.png" output="/images/ai-qrcode-101-input-edit6-o.jpg" />
+<QRCodeCompare scale-85 md:scale-100 h-100 input="/images/ai-qrcode-101-input-edit6-i.png" output="/images/ai-qrcode-101-input-edit6-o.jpg" />
 </div>
 
 <hr>
@@ -593,6 +593,34 @@ To generate a non-square image, you can change the **Resize Mode** in ControlNet
 Or in the [Toolkit](https://qrcode.antfu.me/), you click the <span i-carbon-chevron-down/> button on **Margin** to expand the option and have different margins for each side.
 
 ![](/images/ai-qrcode-101-non-square-toolkit.png)
+
+<hr>
+
+<div border="~ rounded-full base" px3 py1 inline text-sm float-right>
+<span i-ri-book-2-line /> Credits to wangcai
+</div>
+
+### OpenPose
+
+To get more control over the composition, you can also use other ControlNet models like OpenPose to generate a human pose and use it as the input of the QR Code.
+
+For example, you can see the following image is generated with both QR Code and OpenPose as the input. With some tricks on the composition, you can shift the focus of the viewers to the other parts of the image and make the QR Code less obvious.
+
+<div flex="~ col items-center">
+  <QRCodeCompare scale-85 md:scale-100 h-80
+    input="/images/ai-qrcode-101-openpose-qr.png"
+    input2="/images/ai-qrcode-101-openpose-pose.png"
+    output="/images/ai-qrcode-101-openpose-output1.jpg" 
+  />
+
+  <QRCodeCompare scale-85 md:scale-100 h-80
+    input="/images/ai-qrcode-101-openpose-qr.png"
+    input2="/images/ai-qrcode-101-openpose-pose.png"
+    output="/images/ai-qrcode-101-openpose-output2.jpg" 
+  />
+</div>
+
+You can learn more about how to use OpenPose in [this tutorial](https://stable-diffusion-art.com/controlnet/).
 
 <hr>
 

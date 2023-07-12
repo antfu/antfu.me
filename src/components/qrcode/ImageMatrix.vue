@@ -36,7 +36,7 @@ const transform = computed(() => `translate(${-x.value * xPercent.value / props.
       target: '_blank',
       class: 'no-underline! border-0!',
     } : {}"
-    relative of-hidden block
+    relative of-hidden block bg-gray:30
     :style="{
       aspectRatio: props.aspectRatio,
     }"

@@ -35,7 +35,7 @@ const samplers = [
 </script>
 
 <template>
-  <div border="~ base rounded-lg" flex="~ col md:row" w-100 md:w-auto mxa my2 of-hidden>
+  <div border="~ base rounded-lg" flex="~ col md:row" w-100 md:w-auto mxa my2 of-hidden md:mx--5>
     <ImageMatrix
       v-model:x="x"
       v-model:y="y"
@@ -43,7 +43,7 @@ const samplers = [
       mya
       md:w-90
       md:h-90
-      src="/images/ai-qrcode-xyz-samplers.webp"
+      src="/images/ai-qrcode-101-xyz-samplers.webp"
       :x-count="samplers.length"
       :y-count="checkpoints.length"
       :x-padding="[(7000 - 6746) / 7000, 0]"

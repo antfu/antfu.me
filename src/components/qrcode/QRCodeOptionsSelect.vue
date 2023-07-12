@@ -14,7 +14,7 @@ const value = defineModel<string | number>('modelValue', {
   <fieldset flex="~ wrap gap-1 justify-center" of-hidden text-xs>
     <label
       v-for="i, idx of options" :key="i"
-      relative hover:bg-hex-8881 px-1 py-0.5
+      relative hover:bg-hex-8881 px-1.5 py-0.8
       border="~ base rounded"
       :class="[
         i === value ? 'bg-[#8883]' : '',
@@ -23,7 +23,7 @@ const value = defineModel<string | number>('modelValue', {
     >
       <div
         :class="[
-          i === value ? '' : 'op35',
+          i === value ? '' : 'op40',
           titles?.[idx] ? '' : 'capitalize',
           classes?.[idx] || '',
         ]"
