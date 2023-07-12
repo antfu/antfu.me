@@ -451,17 +451,17 @@ To help the QR codes more blend in, we find that it's helpful to include some fl
       </figcaption>
     </figure>
     <figure important-my-0>
-      <img src="/images/ai-qrcode-101-prompt-bird.jpg" rounded-md shadow />
-      <figcaption text-center>
-        <b text-lg>bird</b>
-        <div text-xs mt1>by <a href="https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f" target="_blank">代々木</a></div>
-      </figcaption>
-    </figure>
-    <figure important-my-0>
       <img src="/images/ai-qrcode-refine-distort-result.png" rounded-md shadow />
       <figcaption text-center>
         <b text-lg>plants</b>
         <div text-xs mt1>by <a href="https://antfu.me" target="_blank">Anthony Fu</a></div>
+      </figcaption>
+    </figure>
+    <figure important-my-0>
+      <img src="/images/ai-qrcode-101-prompt-bird.jpg" rounded-md shadow />
+      <figcaption text-center>
+        <b text-lg>bird</b>
+        <div text-xs mt1>by <a href="https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f" target="_blank">代々木</a></div>
       </figcaption>
     </figure>
     <figure important-my-0>
@@ -485,11 +485,18 @@ To help the QR codes more blend in, we find that it's helpful to include some fl
         <div text-xs mt1>by <a href="https://v.douyin.com/iDLHquJ/" target="_blank">五倍速企鹅</a></div>
       </figcaption>
     </figure>
-    <figure important-my-0>
-      <img src="/images/ai-qrcode-101-prompt-leaf.png" rounded-md shadow />
+     <figure important-my-0>
+      <img src="/images/ai-qrcode-101-prompt-katana-swords.jpg" rounded-md shadow />
       <figcaption text-center>
-        <b text-lg>leaf</b>
-        <div text-xs mt1>by <a href="https://v.douyin.com/iDLHquJ/" target="_blank">五倍速企鹅</a></div>
+        <b text-lg>katana swords</b>
+        <div text-xs mt1>by <a href="https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f" target="_blank">代々木</a></div>
+      </figcaption>
+    </figure>
+    <figure important-my-0>
+      <img src="/images/ai-qrcode-101-prompt-shibori-patterns.jpg" rounded-md shadow />
+      <figcaption text-center>
+        <b text-lg>shibori patterns</b>
+        <div text-xs mt1>by <a href="https://www.xiaohongshu.com/user/profile/5be8fb806b58b745447aab0f" target="_blank">代々木</a></div>
       </figcaption>
     </figure>
     <figure important-my-0>
@@ -497,6 +504,13 @@ To help the QR codes more blend in, we find that it's helpful to include some fl
       <figcaption text-center>
         <b text-lg>buildings</b>
         <div text-xs mt1>by <a href="https://space.bilibili.com/251938958" target="_blank">阿帝</a></div>
+      </figcaption>
+    </figure>
+    <figure important-my-0>
+      <img src="/images/ai-qrcode-101-prompt-leaf.png" rounded-md shadow />
+      <figcaption text-center>
+        <b text-lg>leaf</b>
+        <div text-xs mt1>by <a href="https://v.douyin.com/iDLHquJ/" target="_blank">五倍速企鹅</a></div>
       </figcaption>
     </figure>
   </div>
