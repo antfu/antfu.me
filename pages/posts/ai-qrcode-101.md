@@ -179,7 +179,6 @@ best quality, masterpiece, depth of field, 1girl, dress, trees, flowers, sky, wa
 NSFW, nude, bad-hands-5, bad-picture-chill-75v, badhandv4, easynegative, ng_deepnegative_v1_75t, verybadimagenegative_v1.3, bhands-neg, watermark, character watermark, photo date watermark, Date watermarking
 ```
 
-
 - Checkpoint: [PrimeMix](https://civitai.com/models/28779/primemix)
 - Steps: 50
 - Sampler: DPM++ 2M SDE Karras
@@ -208,7 +207,7 @@ You can **drag the sliders** below to see the difference between the start and e
     :fixedRowsBefore="[['Model', 'QR Pattern']]"
   >
     <template #post="{ xValue, yValue }">
-      <QRCodeControlNetScale :start="yValue" :end="1" :weight="xValue" />
+      <QRCodeControlNetScale :start="+yValue" :end="1" :weight="+xValue" />
     </template>
   </QRCodeMatrix>
   <QRCodeMatrix
@@ -223,7 +222,7 @@ You can **drag the sliders** below to see the difference between the start and e
     :fixedRowsBefore="[['Model', 'QR Pattern']]"
   >
     <template #post="{ xValue, yValue }">
-      <QRCodeControlNetScale :start="0" :end="yValue" :weight="xValue" />
+      <QRCodeControlNetScale :start="0" :end="+yValue" :weight="+xValue" />
     </template>
   </QRCodeMatrix>
 </div>
@@ -243,7 +242,7 @@ You can **drag the sliders** below to see the difference between the start and e
     :fixedRowsBefore="[['Model', 'QR Code Monster']]"
   >
     <template #post="{ xValue, yValue }">
-      <QRCodeControlNetScale :start="yValue" :end="1" :weight="xValue" />
+      <QRCodeControlNetScale :start="+yValue" :end="1" :weight="+xValue" />
     </template>
   </QRCodeMatrix>
   <QRCodeMatrix
@@ -258,7 +257,7 @@ You can **drag the sliders** below to see the difference between the start and e
     :fixedRowsBefore="[['Model', 'QR Code Monster']]"
   >
     <template #post="{ xValue, yValue }">
-      <QRCodeControlNetScale :start="0" :end="yValue" :weight="xValue" />
+      <QRCodeControlNetScale :start="0" :end="+yValue" :weight="+xValue" />
     </template>
   </QRCodeMatrix>
 </div>
@@ -278,7 +277,7 @@ You can **drag the sliders** below to see the difference between the start and e
     :fixedRowsBefore="[['Model', 'IoC Lab Brightness']]"
   >
     <template #post="{ xValue, yValue }">
-      <QRCodeControlNetScale :start="yValue" :end="1" :weight="xValue" />
+      <QRCodeControlNetScale :start="+yValue" :end="1" :weight="+xValue" />
     </template>
   </QRCodeMatrix>
   <QRCodeMatrix
@@ -293,7 +292,7 @@ You can **drag the sliders** below to see the difference between the start and e
     :fixedRowsBefore="[['Model', 'IoC Lab Brightness']]"
   >
     <template #post="{ xValue, yValue }">
-      <QRCodeControlNetScale :start="0" :end="yValue" :weight="xValue" />
+      <QRCodeControlNetScale :start="0" :end="+yValue" :weight="+xValue" />
     </template>
   </QRCodeMatrix>
 </div>
@@ -417,7 +416,7 @@ Meanwhile, the margin area of the QR Code also affects the look and feel, for ex
 <QRCodeCompare scale-85 md:scale-100 input="/images/ai-qrcode-101-input-edit1-i.png" output="/images/ai-qrcode-101-input-edit1-o.jpg" />
 <div><div i-ri-arrow-down-line/> Adding some noise to the margin</div>
 <QRCodeCompare scale-85 md:scale-100 input="/images/ai-qrcode-101-input-edit2-i.png" output="/images/ai-qrcode-101-input-edit2-o.jpg" />
-<div><div i-ri-arrow-down-line/> Manually connect some points in margin</div>
+<div><div i-ri-arrow-down-line/> Manually connect some points in margin (Photoshop etc.)</div>
 <QRCodeCompare scale-85 md:scale-100 input="/images/ai-qrcode-101-input-edit6-i.png" output="/images/ai-qrcode-101-input-edit6-o.jpg" />
 </div>
 
@@ -538,6 +537,30 @@ To help the QR codes more blend in, we find that it's helpful to include some fl
 ```
 
 </p>
+
+<hr>
+
+<div border="~ rounded-full base" px3 py1 inline text-sm float-right>
+<span i-ri-book-2-line /> Credits to wangcai
+</div>
+
+### XYZ Plot
+
+In case you are uncertain about which model or prompts to use, you can utilize the XYZ Plot script to generate a matrix of images with different prompts and models for easier comparison.
+
+![](/images/ai-qrcode-101-xyz.png)
+
+You can learn more about how to use XYZ plot in [this tutorial](https://gigazine.net/gsc_news/en/20220909-automatic1111-stable-diffusion-webui-prompt-matrix/).
+
+Below is an example of a matrix runned by `wangcai`, testing some popular checkpoint models and the prompts we mentioned above. You can click to select different combinations, or click the image to see the full matrix.
+
+<QRCodeMatrixModelPrompts />
+
+Similarly, this is a matrix testing samplers:
+
+<QRCodeMatrixModelSamplers />
+
+We encourage you to try different prompts and models to find the best combination for your use case.
 
 <hr>
 

@@ -45,6 +45,9 @@ export default defineConfig({
     Vue({
       include: [/\.vue$/, /\.md$/],
       reactivityTransform: true,
+      script: {
+        defineModel: true,
+      },
     }),
 
     Pages({
