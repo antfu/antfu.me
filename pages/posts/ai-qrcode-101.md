@@ -2,7 +2,7 @@
 title: Stable Diffusion QR Code 101
 date: 2023-07-10T05:00:00.000+00:00
 lang: en
-duration: 23min
+duration: 35min
 tocAlwaysOn: true
 ---
 
@@ -620,7 +620,7 @@ To get more control over the composition, you can also use other ControlNet mode
 
 For example, you can see the following image is generated with both QR Code and OpenPose as the input. With some tricks on the composition, you can shift the focus of the viewers to the other parts of the image and make the QR Code less obvious.
 
-<div flex="~ col items-center">
+<div flex="~ col items-center" py4>
   <QRCodeCompare scale-85 md:scale-100 h-80
     input="/images/ai-qrcode-101-openpose-qr.png"
     input2="/images/ai-qrcode-101-openpose-pose.png"
@@ -632,6 +632,12 @@ For example, you can see the following image is generated with both QR Code and 
     input2="/images/ai-qrcode-101-openpose-pose.png"
     output="/images/ai-qrcode-101-openpose-output2.jpg" 
   /> -->
+
+  <QRCodeCompare scale-85 md:scale-100 h-80 mt4
+    input="/images/ai-qrcode-101-openpose-qr3.png"
+    input2="/images/ai-qrcode-101-openpose-pose3.png"
+    output="/images/ai-qrcode-101-openpose-output4.png" 
+  />
 
   <QRCodeCompare scale-85 md:scale-100 h-80
     input="/images/ai-qrcode-101-openpose-qr2.png"
