@@ -1,7 +1,6 @@
 ---
 title: Type Inferencing in Vue
 date: 2020-06-28
-hero_image: ''
 lang: en
 ---
 

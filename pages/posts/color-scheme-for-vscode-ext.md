@@ -3,6 +3,7 @@ title: Color Scheme for VS Code
 date: 2021-03-01T16:00:00Z
 lang: en
 duration: 2min
+type: note
 ---
 
 There is currently no API to access colors of current theme in VS Code Extensions, nor the meta information of them. It frustrated me for a long while, until today I came up with a dirty but working solution.

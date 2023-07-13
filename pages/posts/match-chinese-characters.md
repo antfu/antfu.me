@@ -3,6 +3,7 @@ title: Match Chinese Characters
 date: 2021-02-25T16:00:00Z
 lang: en
 duration: 2min
+type: note
 ---
 
 When you need to detect if a string contains Chinese characters, you would commonly think about doing it will RegExp, or grab a ready-to-use package on npm.

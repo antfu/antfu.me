@@ -3,6 +3,7 @@ title: Types for Submodules
 date: 2021-02-29T16:00:00Z
 lang: en
 duration: 5min
+type: note
 ---
 
 When you build multiple entries in a single package, you exports them with `exports` syntax. Like

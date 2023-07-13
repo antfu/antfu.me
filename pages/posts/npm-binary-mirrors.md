@@ -3,6 +3,7 @@ title: NPM Binary 镜像配置
 date: 2022-02-18T16:00:00.000+00:00
 lang: zh
 duration: 1min
+type: note
 ---
 
 在 NPM 安装 Electron, Puppeteer 等包时，他们会通过 `postinstall` 脚本下载对应的二进制文件。因为一些不得而知的原因这个过程在某些网络下可能会很慢或不可用。你可以复制以下配置至 `.bashrc` 或 `.zshrc` 中，使用 npmmirror.com 提供的二进制镜像。数据来源于 [`binary-mirror-config`](https://github.com/cnpm/binary-mirror-config)。

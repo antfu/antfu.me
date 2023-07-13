@@ -3,6 +3,7 @@ title: Match Quotes in Pairs
 date: 2021-02-28T16:00:00Z
 lang: en
 duration: 5min
+type: note
 ---
 
 In JavaScript, single quotes('') and double quotes("") are interchangeable. With ES6, we now even have backticks(``) for template literals. When you want to write a quick script to find all the strings without introducing a heavy parser, you may think about using RegExp. For example, you can have:

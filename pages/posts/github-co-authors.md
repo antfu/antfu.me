@@ -3,6 +3,7 @@ title: GitHub Co-authors
 date: 2021-08-24T16:00:00Z
 lang: en
 duration: 2min
+type: note
 ---
 
 You might found GitHub sometimes shows you a commit with multiple authors. This is commonly happening in squashed pull requests when multiple people are involved with the reviewing and made suggestions or changes. In that situation, GitHub will automatically inject the [`Co-authored-by:`](https://docs.github.com/en/github/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors) to the commit message. This is a great way to give contributors credits while keeping the commit history clean.

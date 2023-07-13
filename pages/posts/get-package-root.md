@@ -3,6 +3,7 @@ title: Get Package Root
 date: 2021-07-14T16:00:00Z
 lang: en
 duration: 1min
+type: note
 ---
 
 When you want to get the real file path of a certain package, you could use `require.resolve` to fetch their main entry path.

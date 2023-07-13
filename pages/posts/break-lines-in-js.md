@@ -3,6 +3,7 @@ title: Break Lines in JS
 date: 2023-02-10T16:00:00.000+00:00
 lang: en
 duration: 2min
+type: note
 ---
 
 You probably don't need it usually, but in case you want to break lines programmatically in JavaScript, here is my lazy man's solution:

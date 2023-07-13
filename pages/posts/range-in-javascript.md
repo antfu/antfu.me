@@ -3,6 +3,7 @@ title: Range in JavaScript
 date: 2021-09-13T16:00:00Z
 lang: en
 duration: 1min
+type: note
 ---
 
 Credit to [GitHub Copilot](https://copilot.github.com/).

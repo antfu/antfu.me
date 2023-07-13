@@ -3,6 +3,7 @@ title: Optimize Await
 date: 2021-07-01T16:00:00Z
 lang: en
 duration: 8min
+type: note
 ---
 
 `async` / `await` in ES7 is truly a life-saver for the JavaScript world. It allows you to avoid [callback hell](http://callbackhell.com/) in your code and make it more readable. However, a common pitfall is that when you `await` a huge asynchronous task that takes very long time, it blocks the following code and could potentially make your app slow.
