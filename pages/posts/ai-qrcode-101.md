@@ -31,7 +31,9 @@ Images that are generated with [Stable Diffusion](https://stability.ai/blog/stab
 
 The original idea was created by the people behind [QRBTF](https://qrbtf.com/), and was first revealed on [this reddit](https://www.reddit.com/r/StableDiffusion/comments/141hg9x/controlnet_for_qr_code/) by [nhciao](https://www.reddit.com/user/nhciao/).
 
-As of July 10th, 2023, [QRBTF](https://qrbtf.com/) haven't released their model or service yet, you can join their [Discord server](https://discord.gg/V9CNuqYfte) to keep tuned with the latest news. The methods mentioned in this guide are based on community research and experiments.
+[QRBTF](https://qrbtf.com/) recently launched [their online generation service for open beta](https://qrbtf.com/ai). As of July 14th, 2023, they haven't released their model or methodology yet, you can join their [Discord server](https://discord.gg/V9CNuqYfte) to follow the latest news.
+
+The methods mentioned in this guide are **based on community research and experiments**.
 
 ## How to Generate?
 
@@ -488,6 +490,65 @@ We encourage you to try different prompts and models to find the best combinatio
 <span i-ri-book-2-line /> Credits to <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a>
 </div>
 
+### Non-Square Image
+
+To make the QR Code less obvious, you can try to generate a non-square image, leaving some extra space around the QR Code for the Stable Diffusion to be creative. With that, you can shift the focus of the viewers to the other parts of the image. 
+
+<figure>
+  <img src="/images/ai-qrcode-101-non-square-example3.jpg" rounded shadow />
+  <figcaption text-center>
+    by <a href="https://antfu.me/" target="_blank">Anthony Fu</a>
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="/images/ai-qrcode-101-non-square-example1.jpg" rounded shadow />
+  <figcaption text-center>
+    by <a href="https://antfu.me/" target="_blank">Anthony Fu</a>
+  </figcaption>
+</figure>
+
+To generate a non-square image, you can change the **Resize Mode** in ControlNet to `Resize and Fill` and change the Text to Image width or height.
+
+![](/images/ai-qrcode-101-non-square-resize.png)
+
+Or in the [Toolkit](https://qrcode.antfu.me/), you click the <span i-carbon-chevron-down/> button on **Margin** to expand the option and have different margins for each side.
+
+![](/images/ai-qrcode-101-non-square-toolkit.png)
+
+
+<hr>
+
+<div border="~ rounded-full base" px3 py1 inline text-sm float-right>
+<span i-ri-book-2-line /> Credits to <a href="https://www.instagram.com/terryberrystudio" target="_blank">lameguy</a>
+</div>
+
+### Perspective
+
+You can also try to apply some perspective transformation to the QR Code to make it more interesting.
+
+<div grid="~ cols-2 gap-2">
+  <figure>
+    <img src="/images/ai-qrcode-101-perspective-ep1.png" rounded shadow />
+    <figcaption text-center>
+      by <a href="https://www.instagram.com/terryberrystudio" target="_blank">lameguy</a>
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="/images/ai-qrcode-101-perspective-ep2.png" rounded shadow />
+    <figcaption text-center>
+      by <a href="https://www.instagram.com/terryberrystudio" target="_blank">lameguy</a>
+    </figcaption>
+  </figure>
+</div>
+
+<hr>
+
+<div border="~ rounded-full base" px3 py1 inline text-sm float-right>
+<span i-ri-book-2-line /> Credits to <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a>
+</div>
+
 ### Multiple ControlNet
 
 Multiple ControlNet layers are mainly used to increase the recognizability of the image when the model control is insufficient. Try to avoid the result deviation caused by excessive changes in the picture, causing the ideal picture cannot be obtained.
@@ -577,65 +638,6 @@ If you want to go further, it's also possible to try more models. For example, h
     </figcaption>
   </figure>
   <div />
-</div>
-
-<hr>
-
-<div border="~ rounded-full base" px3 py1 inline text-sm float-right>
-<span i-ri-book-2-line /> Credits to <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a>
-</div>
-
-### Non-Square Image
-
-To make the QR Code less obvious, you can try to generate a non-square image, leaving some extra space around the QR Code for the Stable Diffusion to be creative. With that, you can shift the focus of the viewers to the other parts of the image. 
-
-<figure>
-  <img src="/images/ai-qrcode-101-non-square-example3.jpg" rounded shadow />
-  <figcaption text-center>
-    by <a href="https://antfu.me/" target="_blank">Anthony Fu</a>
-  </figcaption>
-</figure>
-
-<figure>
-  <img src="/images/ai-qrcode-101-non-square-example1.jpg" rounded shadow />
-  <figcaption text-center>
-    by <a href="https://antfu.me/" target="_blank">Anthony Fu</a>
-  </figcaption>
-</figure>
-
-To generate a non-square image, you can change the **Resize Mode** in ControlNet to `Resize and Fill` and change the Text to Image width or height.
-
-![](/images/ai-qrcode-101-non-square-resize.png)
-
-Or in the [Toolkit](https://qrcode.antfu.me/), you click the <span i-carbon-chevron-down/> button on **Margin** to expand the option and have different margins for each side.
-
-![](/images/ai-qrcode-101-non-square-toolkit.png)
-
-
-<hr>
-
-<div border="~ rounded-full base" px3 py1 inline text-sm float-right>
-<span i-ri-book-2-line /> Credits to <a href="https://www.instagram.com/terryberrystudio" target="_blank">lameguy</a>
-</div>
-
-### Perspective
-
-You can also try to apply some perspective transformation to the QR Code to make it more interesting.
-
-<div grid="~ cols-2 gap-2">
-  <figure>
-    <img src="/images/ai-qrcode-101-perspective-ep1.png" rounded shadow />
-    <figcaption text-center>
-      by <a href="https://www.instagram.com/terryberrystudio" target="_blank">lameguy</a>
-    </figcaption>
-  </figure>
-
-  <figure>
-    <img src="/images/ai-qrcode-101-perspective-ep2.png" rounded shadow />
-    <figcaption text-center>
-      by <a href="https://www.instagram.com/terryberrystudio" target="_blank">lameguy</a>
-    </figcaption>
-  </figure>
 </div>
 
 <hr>
