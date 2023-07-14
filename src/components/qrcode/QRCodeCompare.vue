@@ -1,7 +1,7 @@
 <script setup lang="ts">
 defineProps<{
   input: string
-  input2: string
+  input2?: string
   output: string
 }>()
 </script>
@@ -23,10 +23,10 @@ defineProps<{
         :src="input"
         pos="absolute top-8 left--2"
         border="~ base"
-        rotate--8 rounded-lg shadow important-w-25
+        rotate--8 rounded-lg shadow-lg important-w-25
         transition-all duration-300 ease-in-out
         important-m0
-        group-hover="left-20 top-5 rotate-0 important-w-100 op60"
+        group-hover="left-20 top-5 rotate-0 important-w-100 op50 shadow-none"
       >
     </div>
     <div
@@ -40,10 +40,10 @@ defineProps<{
         :src="input2"
         pos="absolute top-2 left--2"
         border="~ base"
-        rotate--8 rounded-lg shadow important-w-25
+        rotate--8 rounded-lg shadow-lg important-w-25
         transition-all duration-300 ease-in-out
         important-m0
-        group-hover="left-20 top-0 rotate-0 important-w-100 op60"
+        group-hover="left-20 top-0 rotate-0 important-w-100 op50 shadow-none"
       >
     </div>
   </div>

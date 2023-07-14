@@ -72,6 +72,8 @@ Here are a few ControlNet models we found useful:
   - Brightness Model
   - Illumination Model
 
+See [model comparison](#model-comparison) section for more details.
+
 ## The Code is Not Scannable
 
 Before going into details, let's picture the goal of your QR Code first. Here are 3 typical approaches listed by [@1r00t](https://github.com/1r00t):
@@ -299,103 +301,6 @@ You can **drag the sliders** below to see the difference between the start and e
 
 <hr>
 
-<div border="~ rounded-full base" px3 py1 inline text-sm float-right>
-<span i-ri-book-2-line /> Credits to <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a>
-</div>
-
-### Multiple ControlNet
-
-Multiple ControlNet layers are mainly used to increase the recognizability of the image when the model control is insufficient. Try to avoid the result deviation caused by excessive changes in the picture, causing the ideal picture cannot be obtained.
-
-Difficulties in recognition may be due to changes in prompts or due to the characteristics of the SD model, resulting in too trivial details of the picture or too bright/dark overall tone to make it impossible to recognize.
-
-This method can effectively improve the automatic recognition success rate of scanning.
-
-Usually, we use **QR Code Monster** or **QR Code Pattern** model as the main guidance model, and use the **Brightness Model** from IoC Lab as the auxiliary model to improve the local contrast.
-
-> <span i-ri-lightbulb-line text-yellow/> 赛博迪克朗: It's recommended to use the QR Monster model. The QR Pattern v2.0 still has too much interference, which may cause a great change in the style of the image.
-
-For example, running the same prompts as [the previous example](#model-comparison), when using the **QR Code Monster** model alone (single model), with control steps 0.0 to 1.0, we got the following results with different weights:
-
-<div grid="~ cols-2 md:cols-3 gap-2">
-  <figure important-mb0 important-mt-2>
-    <img src="/images/ai-qrcode-101-multi-cn-monster-w100.png" rounded shadow  />
-    <figcaption text-center>
-      Weight: 1.0
-    </figcaption>
-  </figure>
-  <figure important-mb0 important-mt-2>
-    <img src="/images/ai-qrcode-101-multi-cn-monster-w125.png" rounded shadow  />
-    <figcaption text-center>
-      Weight: 1.25
-    </figcaption>
-  </figure>
-  <figure important-mb0 important-mt-2>
-    <img src="/images/ai-qrcode-101-multi-cn-monster-w140.png" rounded shadow  />
-    <figcaption text-center>
-      Weight: 1.4
-    </figcaption>
-  </figure>
-  <figure  important-mb0 important-mt-2>
-    <img src="/images/ai-qrcode-101-multi-cn-monster-w150.png" rounded shadow  />
-    <figcaption text-center>
-      Weight: 1.5
-    </figcaption>
-  </figure>
-  <figure important-mb0 important-mt-2>
-    <img src="/images/ai-qrcode-101-multi-cn-monster-w160.png" rounded shadow  />
-    <figcaption text-center>
-      Weight: 1.6
-    </figcaption>
-  </figure>
-  <figure important-mb0 important-mt-2>
-    <img src="/images/ai-qrcode-101-multi-cn-monster-w170.png" rounded shadow  />
-    <figcaption text-center>
-      Weight: 1.7
-    </figcaption>
-  </figure>
-</div>
-
-We notice that only Weight 1.5 and 1.7 are scannable (and do not have very good error tolerant), and we also see the compositions of them are changed a lot as the weight increases.
-
-So if we want to keep the original composition but still have good enough recognizability, we could add the **Brightness Model** as the second model.
-
-<div grid="~ cols-1 md:cols-2 gap-4">
- <figure important-m0>
-    <img src="/images/ai-qrcode-101-multi-cn-monster-w100-s00-e10-brightness-w015-s01-e10.png" rounded shadow  />
-    <figcaption text-center font-mono important-text-xs>
-      Monster &nbsp;&nbsp;: Weight <b>1.00</b> Start <b>0.0</b> End <b>1.0</b><br>
-      Brightness: Weight <b>0.15</b> Start <b>0.1</b> End <b>1.0</b>
-    </figcaption>
-  </figure>
-  <figure important-m0>
-    <img src="/images/ai-qrcode-101-multi-cn-monster-w100-s00-e10-brightness-w025-s04-e08.png" rounded shadow  />
-    <figcaption text-center font-mono important-text-xs>
-      Monster &nbsp;&nbsp;: Weight <b>1.00</b> Start <b>0.0</b> End <b>1.0</b><br>
-      Brightness: Weight <b>0.25</b> Start <b>0.4</b> End <b>0.8</b>
-    </figcaption>
-  </figure>
-</div>
-
-We can see that even if we reduce the weight of the **Monster Model** to 1.0, the recognizability is as good as the single model with the Weight 1.5, while the composition is closer to the original image.
-
-If you want to go further, it's also possible to try more models. For example, here is the result of using **QR Code Monster** and **Brightness Model** together with **QR Pattern**:
-
-<div grid="~ cols-1 md:cols-[1fr_2fr_1fr] gap-4 justify-center">
-  <div />
-  <figure important-m0>
-    <img src="/images/ai-qrcode-101-multi-cn-monster-monster-w100-brightness-w010-s04-e08-pattern-w010-s04-e08.png" rounded shadow  />
-    <figcaption text-center font-mono important-text-xs>
-      Monster &nbsp;&nbsp;: Weight <b>1.00</b> Start <b>0.0</b> End <b>1.0</b><br>
-      Brightness: Weight <b>0.10</b> Start <b>0.4</b> End <b>0.8</b><br>
-      QR Pattern: Weight <b>0.10</b> Start <b>0.4</b> End <b>0.8</b>
-    </figcaption>
-  </figure>
-  <div />
-</div>
-
-<hr>
-
 ## Improve the Result
 
 Say that you already generated a bunch of QR Codes and find some of them you like. You want to improve them to make them more scannable, or more blended-in, or more artistic. Here are some tips we found useful.
@@ -576,6 +481,104 @@ Similarly, this is a matrix testing samplers:
 
 We encourage you to try different prompts and models to find the best combination for your use case.
 
+
+<hr>
+
+<div border="~ rounded-full base" px3 py1 inline text-sm float-right>
+<span i-ri-book-2-line /> Credits to <a href="https://space.bilibili.com/339984/" target="_blank">赛博迪克朗</a>
+</div>
+
+### Multiple ControlNet
+
+Multiple ControlNet layers are mainly used to increase the recognizability of the image when the model control is insufficient. Try to avoid the result deviation caused by excessive changes in the picture, causing the ideal picture cannot be obtained.
+
+Difficulties in recognition may be due to changes in prompts or due to the characteristics of the SD model, resulting in too trivial details of the picture or too bright/dark overall tone to make it impossible to recognize.
+
+This method can effectively improve the automatic recognition success rate of scanning.
+
+Usually, we use **QR Code Monster** or **QR Code Pattern** model as the main guidance model, and use the **Brightness Model** from IoC Lab as the auxiliary model to improve the local contrast.
+
+> <span i-ri-lightbulb-line text-yellow/> 赛博迪克朗: It's recommended to use the QR Monster model. The QR Pattern v2.0 still has too much interference, which may cause a great change in the style of the image.
+
+For example, running the same prompts as [the previous example](#model-comparison), when using the **QR Code Monster** model alone (single model), with control steps 0.0 to 1.0, we got the following results with different weights:
+
+<div grid="~ cols-2 md:cols-3 gap-2">
+  <figure important-mb0 important-mt-2>
+    <img src="/images/ai-qrcode-101-multi-cn-monster-w100.png" rounded shadow  />
+    <figcaption text-center>
+      Weight: 1.0
+    </figcaption>
+  </figure>
+  <figure important-mb0 important-mt-2>
+    <img src="/images/ai-qrcode-101-multi-cn-monster-w125.png" rounded shadow  />
+    <figcaption text-center>
+      Weight: 1.25
+    </figcaption>
+  </figure>
+  <figure important-mb0 important-mt-2>
+    <img src="/images/ai-qrcode-101-multi-cn-monster-w140.png" rounded shadow  />
+    <figcaption text-center>
+      Weight: 1.4
+    </figcaption>
+  </figure>
+  <figure  important-mb0 important-mt-2>
+    <img src="/images/ai-qrcode-101-multi-cn-monster-w150.png" rounded shadow  />
+    <figcaption text-center>
+      Weight: 1.5
+    </figcaption>
+  </figure>
+  <figure important-mb0 important-mt-2>
+    <img src="/images/ai-qrcode-101-multi-cn-monster-w160.png" rounded shadow  />
+    <figcaption text-center>
+      Weight: 1.6
+    </figcaption>
+  </figure>
+  <figure important-mb0 important-mt-2>
+    <img src="/images/ai-qrcode-101-multi-cn-monster-w170.png" rounded shadow  />
+    <figcaption text-center>
+      Weight: 1.7
+    </figcaption>
+  </figure>
+</div>
+
+We notice that only Weight 1.5 and 1.7 are scannable (and do not have very good error tolerant), and we also see the compositions of them are changed a lot as the weight increases.
+
+So if we want to keep the original composition but still have good enough recognizability, we could add the **Brightness Model** as the second model.
+
+<div grid="~ cols-1 md:cols-2 gap-4">
+ <figure important-m0>
+    <img src="/images/ai-qrcode-101-multi-cn-monster-w100-s00-e10-brightness-w015-s01-e10.png" rounded shadow  />
+    <figcaption text-center font-mono important-text-xs>
+      Monster &nbsp;&nbsp;: Weight <b>1.00</b> Start <b>0.0</b> End <b>1.0</b><br>
+      Brightness: Weight <b>0.15</b> Start <b>0.1</b> End <b>1.0</b>
+    </figcaption>
+  </figure>
+  <figure important-m0>
+    <img src="/images/ai-qrcode-101-multi-cn-monster-w100-s00-e10-brightness-w025-s04-e08.png" rounded shadow  />
+    <figcaption text-center font-mono important-text-xs>
+      Monster &nbsp;&nbsp;: Weight <b>1.00</b> Start <b>0.0</b> End <b>1.0</b><br>
+      Brightness: Weight <b>0.25</b> Start <b>0.4</b> End <b>0.8</b>
+    </figcaption>
+  </figure>
+</div>
+
+We can see that even if we reduce the weight of the **Monster Model** to 1.0, the recognizability is as good as the single model with the Weight 1.5, while the composition is closer to the original image.
+
+If you want to go further, it's also possible to try more models. For example, here is the result of using **QR Code Monster** and **Brightness Model** together with **QR Pattern**:
+
+<div grid="~ cols-1 md:cols-[1fr_2fr_1fr] gap-4 justify-center">
+  <div />
+  <figure important-m0>
+    <img src="/images/ai-qrcode-101-multi-cn-monster-monster-w100-brightness-w010-s04-e08-pattern-w010-s04-e08.png" rounded shadow  />
+    <figcaption text-center font-mono important-text-xs>
+      Monster &nbsp;&nbsp;: Weight <b>1.00</b> Start <b>0.0</b> End <b>1.0</b><br>
+      Brightness: Weight <b>0.10</b> Start <b>0.4</b> End <b>0.8</b><br>
+      QR Pattern: Weight <b>0.10</b> Start <b>0.4</b> End <b>0.8</b>
+    </figcaption>
+  </figure>
+  <div />
+</div>
+
 <hr>
 
 <div border="~ rounded-full base" px3 py1 inline text-sm float-right>
@@ -607,6 +610,33 @@ To generate a non-square image, you can change the **Resize Mode** in ControlNet
 Or in the [Toolkit](https://qrcode.antfu.me/), you click the <span i-carbon-chevron-down/> button on **Margin** to expand the option and have different margins for each side.
 
 ![](/images/ai-qrcode-101-non-square-toolkit.png)
+
+
+<hr>
+
+<div border="~ rounded-full base" px3 py1 inline text-sm float-right>
+<span i-ri-book-2-line /> Credits to <a href="https://www.instagram.com/terryberrystudio" target="_blank">lameguy</a>
+</div>
+
+### Perspective
+
+You can also try to apply some perspective transformation to the QR Code to make it more interesting.
+
+<div grid="~ cols-2 gap-2">
+  <figure>
+    <img src="/images/ai-qrcode-101-perspective-ep1.png" rounded shadow />
+    <figcaption text-center>
+      by <a href="https://www.instagram.com/terryberrystudio" target="_blank">lameguy</a>
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="/images/ai-qrcode-101-perspective-ep2.png" rounded shadow />
+    <figcaption text-center>
+      by <a href="https://www.instagram.com/terryberrystudio" target="_blank">lameguy</a>
+    </figcaption>
+  </figure>
+</div>
 
 <hr>
 
@@ -651,27 +681,56 @@ You can learn more about OpenPose in [this tutorial](https://stable-diffusion-ar
 <hr>
 
 <div border="~ rounded-full base" px3 py1 inline text-sm float-right>
-<span i-ri-book-2-line /> Credits to <a href="https://www.instagram.com/terryberrystudio" target="_blank">lameguy</a>
+<span i-ri-book-2-line /> Credits to <a href="https://antfu.me" target="_blank">Anthony Fu</a>
 </div>
 
-### Perspective
+### Selective Multi-layer Control
 
-You can also try to apply some perspective transformation to the QR Code to make it more interesting.
+Look deep into the [QR Code specification](https://en.wikipedia.org/wiki/QR_code#Standards), you can see a QR Code is composed with different types of data and position patterns:
 
-<div grid="~ cols-2 gap-2">
-  <figure>
-    <img src="/images/ai-qrcode-101-perspective-ep1.png" rounded shadow />
-    <figcaption text-center>
-      by <a href="https://www.instagram.com/terryberrystudio" target="_blank">lameguy</a>
-    </figcaption>
-  </figure>
+![](/images/ai-qrcode-101-qr-struct.png)
 
-  <figure>
-    <img src="/images/ai-qrcode-101-perspective-ep2.png" rounded shadow />
-    <figcaption text-center>
-      by <a href="https://www.instagram.com/terryberrystudio" target="_blank">lameguy</a>
-    </figcaption>
-  </figure>
+Other than the position markers that are obvious to find, we can see there are also the **Version and Format information** around the position markers. Those information are quite important because it tells the scanner how to decode the QR Code properly. On the other hand, since the **Data area** has good error correction and duplications, it's actually fine for it to contain a few misalignment when needed. Now we realize that many QR Code that are not scannable are because those area are not distinguishable enough, causing the scanner to exit early before going into the actual data. 
+
+So, since the data points in a QR Code are **not equally important**, why would we control them equally? Maybe we could try to selective control different areas. Like increasing the control weight of the functional areas and decreasing the weight of the data area, to make the QR Code more scannable while being more artistic.
+
+In the recent update of [QR Toolkit](https://qrcode.antfu.me/), we added a new option **Render Type** to only generate some specific areas of the QR Code, combining with a grey background, we could have:
+
+> <span i-ri-lightbulb-line text-yellow/> Both **QR Pattern v2** and **QR Code Monster** models support having grey as the hint of arbitrary content (bypass the control). Thanks for the information from [Nacholmo](https://civitai.com/user/Nacholmo) and [Cyril Bareme](https://twitter.com/vyrilbareme).
+
+![](/images/ai-qrcode-101-render-type.png)
+
+With this, we could use two ControlNet layers:
+
+- Layer 1: Full QR Code, with medium control weight.
+- Layer 2: Selective parts of QR Code, with **strong weight** but shorter control steps.
+
+For example, here I have two ControlNet layers, both using the **QR Code Monster** model:
+
+<QRCodeSelectiveLayers />
+
+> <span i-ri-lightbulb-line text-yellow/> In the second layer of the example, I excluded the position markers as I was seeking for more blend-in image. You can also include them if you want to make the QR Code more scannable.
+
+After a few tweaks, the result are surprisingly good. It's able to retain the recognizability of the QR Code while being more artistic. Here are some of the results right from the generations:
+
+<div flex="~ col items-center gap-8" py6>
+  <QRCodeCompare scale-85 md:scale-100 h-100
+    input="/images/ai-qrcode-101-selective-qr1.png"
+    input2="/images/ai-qrcode-101-selective-qr2.png"
+    output="/images/ai-qrcode-101-selective-example1.jpg" 
+  />
+
+  <QRCodeCompare scale-85 md:scale-100 h-100
+    input="/images/ai-qrcode-101-selective-qr1.png"
+    input2="/images/ai-qrcode-101-selective-qr2.png"
+    output="/images/ai-qrcode-101-selective-example2.jpg" 
+  />
+
+  <QRCodeCompare scale-85 md:scale-100 h-100
+    input="/images/ai-qrcode-101-selective-qr1.png"
+    input2="/images/ai-qrcode-101-selective-qr2.png"
+    output="/images/ai-qrcode-101-selective-example3.jpg" 
+  />
 </div>
 
 <hr>

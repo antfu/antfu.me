@@ -43,7 +43,6 @@ const transform = computed(() => `translate(${-x.value * xPercent.value / props.
   >
     <div scale-101>
       <img
-        lazy
         :src="props.src"
         absolute
         :style="{
