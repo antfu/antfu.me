@@ -640,6 +640,9 @@ If you want to go further, it's also possible to try more models. For example, h
   <div />
 </div>
 
+> <span i-ri-lightbulb-line text-yellow/> If you didn't see the tabs for multiple layers of ControlNet, you can go to the settings page to enable it:
+> ![](/images/ai-qrcode-101-multi-cn-settings.png)
+
 <hr>
 
 <div border="~ rounded-full base" px3 py1 inline text-sm float-right>
