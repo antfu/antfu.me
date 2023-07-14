@@ -46,6 +46,7 @@ export const createApp = ViteSSG(
             return true
           },
         },
+        behavior: 'auto',
       })
 
       router.beforeEach(() => {

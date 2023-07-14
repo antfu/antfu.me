@@ -20,7 +20,7 @@ onMounted(() => {
   const navigate = () => {
     if (location.hash) {
       document.querySelector(decodeURIComponent(location.hash))
-        ?.scrollIntoView({ behavior: 'smooth' })
+        ?.scrollIntoView({ behavior: 'auto' })
     }
   }
 
