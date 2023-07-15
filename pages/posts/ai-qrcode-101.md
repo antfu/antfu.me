@@ -716,7 +716,7 @@ For example, here I have two ControlNet layers, both using the **QR Code Monster
 
 > <span i-ri-lightbulb-line text-yellow/> In the second layer of the example, I excluded the position markers as I was seeking for more blend-in image. You can also include them if you want to make the QR Code more scannable.
 
-After a few tweaks, the result are surprisingly good. It's able to retain the recognizability of the QR Code while being more artistic. Here are some of the results right from the generations:
+After a few tweaks, the result are surprisingly good. It's able to retain the recognizability of the QR Code while being more artistic. Here are some of the results:
 
 <div flex="~ col items-center gap-8" py6>
   <QRCodeCompare scale-85 md:scale-100 h-100
