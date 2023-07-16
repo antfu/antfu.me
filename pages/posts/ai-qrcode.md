@@ -49,7 +49,7 @@ I pretty much follows [Stable Diffusion LoRA Models: A Complete Guide](https://a
 
 In order to use ControlNet, you will also need to install the [Mikubill/sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet) extension for the web ui. 
 
-Then you can download the [QR Pattern Controlnet Model](https://civitai.com/models/90940/controlnet-qr-pattern-qr-codes), putt the two files (`.safetensors` and `.yaml`) under `stable-diffusion-webui/models/ControlNext` folder, and restart the web ui.
+Then you can download the [QR Pattern Controlnet Model](https://civitai.com/models/90940/controlnet-qr-pattern-qr-codes), putt the two files (`.safetensors` and `.yaml`) under `stable-diffusion-webui/models/ControlNet` folder, and restart the web ui.
 
 ### 2. Create a QR Code
 
