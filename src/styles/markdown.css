@@ -144,12 +144,12 @@ h6:focus .header-anchor {
 .table-of-contents {
   position: fixed;
   top: 90px;
+  bottom: 0;
   font-size: 0.8em;
   left: 20px;
   z-index: 200;
-  overflow-y: auto;
-  overflow-x: hidden;
-  --uno: hidden lg:block w-100px lg:w-200px xl:w-300px;
+  overflow: hidden;
+  --uno: hidden lg:flex flex-col w-100px lg:w-200px xl:w-300px;
 }
 
 .table-of-contents-anchor {
@@ -158,7 +158,9 @@ h6:focus .header-anchor {
 
 .table-of-contents > ul {
   text-overflow: ellipsis;
-  --uno: rounded op0 mt-1 transition duration-700;
+  height: 100%;
+  overflow-y: auto;
+  --uno: rounded op0 mt-1 pb-5 transition duration-700;
 }
 
 *:hover > .table-of-contents > .table-of-contents-anchor,
@@ -166,8 +168,11 @@ h6:focus .header-anchor {
   --uno: text-inherit;
 }
 
-*:hover > .table-of-contents > ul,
 .toc-always-on .table-of-contents > ul {
+  opacity: 0.6;
+}
+
+*:hover > .table-of-contents > ul {
   opacity: 0.75;
 }
 

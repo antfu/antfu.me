@@ -760,6 +760,37 @@ This tells the model to re-enhance the image by making dark areas darker and lig
 
 The ultimate solution is indeed to manually edit the output image. You can use editing tools like Photoshop combined with inpainting to fine-tune every part of the imaged image. It might require a lot of effort, we'd generally recommend focusing on tweaking the generation first before going to this step. More details can be found in [this post](/posts/ai-qrcode-refine).
 
+## Extra: Hidden Text in Image
+
+While the QR Code models are primarily designed for generating QR Codes, they are fundamentally brightness-contrast models. This means that they can be used to control and modify anything that exhibits distinct local contrast. So, in addition to generating QR Codes, we can utilize these models to hide text or any symbols inside the generated images. This opens up exciting possibilities for creative exploration beyond just QR Code generation.
+
+For example, we could have this using the exact same methods we learned for generating QR Code:
+
+![](/images/ai-qrcode-101-text-result1.jpg)
+
+<details mt--6>
+<summary op50 select-none>Input Image</summary>
+<p>
+<img src="/images/ai-qrcode-101-text-input1.png" rounded shadow important-mt0 />
+</p>
+</details>
+
+You can click the image to see the full size. When you zoom in on the QR Code image, it can become challenging to distinguish the text from the background. However, when you zoom out significantly, the text becomes much clearer and easier to scan. This observation highlights an interesting aspect of human vision—our eyes are indeed excellent scanners. 
+
+Similarly, we could combing with QR Code, or anything you can think of:
+
+![](/images/ai-qrcode-101-text-result2.png)
+
+<details mt--6>
+<summary op50 select-none>Input Image</summary>
+<p>
+<img src="/images/ai-qrcode-101-text-input2.png" rounded shadow important-mt0 />
+</p>
+</details>
+
+
 ## Contributing
+
+This guide is aimed to be a one-stop documentations and references for the community to learn about the QR Code models and how to use them.
 
 If you are interested in contributing to this post, fixing typos, or adding new ideas, you can [edit this page on GitHub](https://github.com/antfu/antfu.me/edit/main/pages/posts/ai-qrcode-101.md). Or if you are not familiar with Git, you can also go to [Anthony's Discord server](https://chat.antfu.me) and discuss with us.
