@@ -24,7 +24,7 @@ const parts = computed(() => {
 </script>
 
 <template>
-  <div flex="~ gap-4">
+  <div grid="~ cols-1 lg:cols-2 xl:cols-3 2xl:cols-4 gap-4">
     <div v-for="items, idx of parts" :key="idx" flex="~ col gap-4">
       <component
         :is="comp"
