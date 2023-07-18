@@ -5,8 +5,10 @@ image: https://antfu.me/og.png
 plum: true
 ---
 
-Hey, I am Anthony Fu, a fanatical open sourceror. Working at [<span i-simple-icons-nuxtdotjs /> NuxtLabs](https://nuxtlabs.com/).
+Hey, I am Anthony Fu, a fanatical open sourceror.
 
+I am:<br>
+Working at [<span i-simple-icons-nuxtdotjs /> NuxtLabs](https://nuxtlabs.com/).<br>
 Creator of [Vitest](https://github.com/vitest-dev/vitest), [Slidev](https://github.com/slidevjs/slidev), [VueUse](https://github.com/vueuse/vueuse), [UnoCSS](https://github.com/antfu/unocss), [Elk](https://github.com/elk-zone/elk), [Type Challenges](https://github.com/type-challenges/type-challenges) and [others](/projects).<br>
 Core team member of [Vue](https://vuejs.org/), [Nuxt](http://nuxtjs.org/) and [Vite](http://vitejs.dev/).<br>
 
