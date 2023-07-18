@@ -1,5 +1,6 @@
 {
   "private": true,
+  "type": "module",
   "packageManager": "pnpm@8.6.6",
   "scripts": {
     "build": "npm run static && cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts && cp _dist_redirects dist/_redirects",
@@ -7,7 +8,8 @@
     "preview": "vite preview",
     "static": "rimraf temp && degit antfu/static temp --force && esno scripts/copy-sponsors",
     "redirects": "esno scripts/redirects.ts",
-    "lint": "eslint . --ext .vue,.ts,.html --fix"
+    "lint": "eslint .",
+    "compress": "esno scripts/img-compress-staged.ts"
   },
   "dependencies": {
     "@vueuse/core": "^10.2.1",
@@ -29,6 +31,7 @@
     "@types/markdown-it": "^12.2.3",
     "@types/markdown-it-link-attributes": "^3.0.1",
     "@types/nprogress": "^0.2.0",
+    "@types/prompts": "^2.4.4",
     "@unhead/vue": "^1.1.29",
     "@unocss/reset": "^0.53.4",
     "@vitejs/plugin-vue": "^4.2.3",
@@ -41,14 +44,19 @@
     "feed": "^4.2.2",
     "fs-extra": "^11.1.1",
     "gray-matter": "^4.0.3",
+    "lint-staged": "^13.2.3",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-link-attributes": "^4.0.1",
     "markdown-it-shiki": "^0.9.0",
     "markdown-it-table-of-contents": "^0.6.0",
+    "picocolors": "^1.0.0",
     "pnpm": "^8.6.6",
+    "prompts": "^2.4.2",
     "rimraf": "^5.0.1",
     "sharp": "^0.32.1",
+    "simple-git": "^3.19.1",
+    "simple-git-hooks": "^2.8.1",
     "typescript": "^5.1.6",
     "unocss": "^0.53.4",
     "unplugin-auto-import": "^0.16.4",
@@ -67,5 +75,11 @@
     "rules": {
       "vue/no-v-text-v-html-on-component": "off"
     }
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
