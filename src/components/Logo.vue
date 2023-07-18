@@ -18,33 +18,33 @@
     stroke-dasharray: unset !important;
   }
 }
-
 @keyframes grow {
   0% {
+    stroke-dashoffset: 1px;
+    stroke-dasharray: 0 350px;
     opacity: 0;
   }
   10% {
     opacity: 1;
     transform: translate(0, 1%);
   }
-  40% {
+  20% {
     transform: translate(0, 0);
   }
-  50%,
-  to {
+  40% {
     stroke-dasharray: 350px 0;
   }
-  95% {
-    opacity: 1;
+  85% {
+    stroke-dasharray: 350px 0;
   }
-  100% {
-    opacity: 0;
+  95%, to {
+    stroke-dasharray: 0 350px;
   }
 }
 path {
   stroke-dashoffset: 1px;
-  stroke-dasharray: 0px 350px;
-  animation: grow 6s ease forwards infinite;
+  stroke-dasharray: 350px 0;
+  animation: grow 10s ease forwards infinite;
   transform-origin: center;
   stroke: #303030;
   animation-delay: 0s;
