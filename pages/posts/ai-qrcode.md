@@ -27,9 +27,9 @@ This year has witnessed an explosion of mind-boggling AI technologies, such as [
 
 So I started by trying Midjourney, it's super easy to use, very expressive, and the quality is actually pretty good. It would honestly be my recommendation for anyone who wants to get started with generative AI art.
 
-By the way, Inès has also delved into it and becomes quite good at it now, go check her work on her new instagram account <span op75 i-ri-arrow-right-line /> [@a.i.nes](https://instagram.com/a.i.nes/).
+By the way, Inès has also delved into it and become quite good at it now, go check her work on her new Instagram account <span op75 i-ri-arrow-right-line /> [@a.i.nes](https://instagram.com/a.i.nes/).
 
-On my end, being a programmer with strong preferences, I would naturally seek for greater controls over the process. This brought me to the realm of Stable Diffusion. I started with this guide: [*Stable Diffusion LoRA Models: A Complete Guide*](https://aituts.com/stable-diffusion-lora/). The benefit of being late to the party is that there are already a lot of tools and guides ready to use. Setting up the environment quite straightforward and luckily my M1 Max's GPU is supported.
+On my end, being a programmer with strong preferences, I would naturally seek for greater control over the process. This brought me to the realm of Stable Diffusion. I started with this guide: [*Stable Diffusion LoRA Models: A Complete Guide*](https://aituts.com/stable-diffusion-lora/). The benefit of being late to the party is that there are already a lot of tools and guides ready to use. Setting up the environment quite straightforward and luckily my M1 Max's GPU is supported.
 
 ## QR Code Image
 
