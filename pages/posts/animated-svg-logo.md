@@ -26,11 +26,11 @@ I searched a bit more and found these two interesting articles:
 - [Animated line drawing in SVG](https://jakearchibald.com/2013/animated-line-drawing-svg/) by Jake Archibald
 - [How SVG Line Animation Works](https://css-tricks.com/svg-line-animation-works/) by Chris Coyier
 
-They covered this technique very well, highly recommend reading them if you are interested. Basically, the animation is done by a **very long** dash moving, which you will see the dash as the drawing line and the gap as empty space. The length and position of the dash are controlled by `stroke-dasharray` and `stroke-dashoffset`, which are both animatable.
+They covered this technique very well, highly recommend reading them if you are interested. Basically, the animation is done by a **very long** dash moving, in which you will see the dash as the drawing line and the gap as empty space. The length and position of the dash are controlled by `stroke-dasharray` and `stroke-dashoffset`, which are both animatable.
 
 ## The Original Logo
 
-My original logo <a href="/logo.svg" target="_blank" important-border-none inline-block><img src="/logo.svg" h-1.5em dark:filter-invert important-m0 inline-block alt="My Logo in SVG" /></a> comes from around 8 years ago, when I was in my freshman year, I draw it with a pressure-sensitive pen on my Surface Pro 4. I was used as a temporary placeholder for the portfolio I was trying to build at that time. I later image-traced it with Adobe Illustrator to get the SVG version. Surprising to recall, it has been so long since then.
+My original logo <a href="/logo.svg" target="_blank" important-border-none inline-block><img src="/logo.svg" h-1.5em dark:filter-invert important-m0 inline-block alt="My Logo in SVG" /></a> comes from around 8 years ago, I draw it with a pressure-sensitive pen on my Surface Pro 4. It was used as a temporary placeholder for the portfolio I was trying to build at that time. I later image-traced it with Adobe Illustrator to get the SVG version. Surprising to recall, it has been so long since then.
 
 <div rounded shadow of-hidden border="~ base op20">
 <img src="/images/animated-svg-logo-vector.png" dark:invert-95 important-m0>
