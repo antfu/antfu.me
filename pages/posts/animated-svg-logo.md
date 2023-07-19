@@ -19,7 +19,7 @@ The first time I saw such stroke animations in SVG is the [Material Line Icons](
 
 ## Breakdown
 
-I downloaded Mu-An's SVG to read the code, cross-referencing the Material Line Icons. I found the trick is quite interesting, they animated `stroke-dasharray` to archive the effect. This feels quite unintuitive as when you check the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray), it looks like a pretty boring attribute.
+I downloaded Mu-An's SVG to read the code, cross-referencing the Material Line Icons. I found the trick is quite interesting, they animated `stroke-dasharray` to achieve the effect. This feels quite unintuitive as when you check the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray), it looks like a pretty boring attribute.
 
 I searched a bit more and found these two interesting articles:
 
