@@ -12,7 +12,7 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 </script>
 
-As you might noticed, I recently added a sliding enter effect to almost all the pages in my blog. And I quite like it. If you missed it, <a @click="router.go(0)">refresh the page</a> to see it in action.
+As you might notice, I recently added a sliding enter effect to almost all the pages in my blog. And I quite like it. If you missed it, <a @click="router.go(0)">refresh the page</a> to see it in action.
 
 This effect is inspired by [paco.me](https://paco.me/) - the portfolio of [Paco Coursey](https://twitter.com/pacocoursey), one of my favorite developer-designers.
 
@@ -64,11 +64,11 @@ It defines a keyframe animation `enter` that slides the element up by 10px and f
 
 ## Applying to Contents
 
-Now with it, we should be able to adding nice sliding enter animation to our layout and homepage, etc. Even though it can be a bit verbose to add the style to each element, it gives you the full control of what and when those animations take place.
+Now with it, we should be able to add nice sliding enter animation to our layout and homepage, etc. Even though it can be a bit verbose to add style to each element, it gives you full control of what and when those animations take place.
 
-However, when it comes to content like a Markdown page, it will not be that pleasant to wrap each paragraph with a `<p>` tag and add the `data-animate` attribute. So I begin to wondering if there is an easier way to apply to all my posts.
+However, when it comes to content like a Markdown page, it will not be that pleasant to wrap each paragraph with a `<p>` tag and add the `data-animate` attribute. So I begin to wonder if there is an easier way to apply to all my posts.
 
-I started mess up with the [CSS Counters](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), an interesting way allowing you to store some numeric variables inside of CSS.
+I started messing up with the [CSS Counters](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), an interesting way allowing you to store some numeric variables inside of CSS.
 
 So it should be something like this, where you can add `slide-enter-content` class wrapping the generated content of a Markdown page:
 
@@ -126,6 +126,6 @@ So as a workaround, which also been posted in the previous link, we can use the 
 .slide-enter-content > *:nth-child(20) { --stagger: 20; }
 ```
 
-Limitation is clear, that the animation only applies to the finite number of elements. You could add more CSS rules to support more, but in practice, I think 20 elements are already quite enough as we don't usually have that many paragraphs fit in one screen.
+The limitation is clear, that the animation only applies to a finite number of elements. You could add more CSS rules to support more, but in practice, I think 20 elements are already quite enough as we don't usually have that many paragraphs fit in one screen.
 
 So that's it, I have applied this effect to most of the pages as well as the blog posts. Let me know what do you think! And you can find the source code [here](https://github.com/antfu/antfu.me/blob/b9f54c9421ae94e37d4cd598c20e02c4f3ed8db4/src/styles/main.css#L87).

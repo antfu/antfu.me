@@ -19,8 +19,16 @@ const elkUrl = computed(() => `https://elk.zone/intent/post?text=${encodeURIComp
 onMounted(() => {
   const navigate = () => {
     if (location.hash) {
-      document.querySelector(decodeURIComponent(location.hash))
-        ?.scrollIntoView({ behavior: 'auto' })
+      const el = document.querySelector(decodeURIComponent(location.hash))
+      if (el) {
+        const rect = el.getBoundingClientRect()
+        const y = window.scrollY + rect.top - 40
+        window.scrollTo({
+          top: y,
+          behavior: 'smooth',
+        })
+        return true
+      }
     }
   }
 
@@ -60,8 +68,10 @@ onMounted(() => {
   useEventListener(window, 'hashchange', navigate)
   useEventListener(content.value!, 'click', handleAnchors, { passive: false })
 
-  navigate()
-  setTimeout(navigate, 500)
+  setTimeout(() => {
+    if (!navigate())
+      setTimeout(navigate, 1000)
+  }, 1)
 })
 </script>
 
@@ -69,13 +79,17 @@ onMounted(() => {
   <ClientOnly v-if="frontmatter.plum">
     <Plum />
   </ClientOnly>
-  <div v-if="frontmatter.display ?? frontmatter.title" class="prose m-auto mb-8" :class="frontmatter.wrapperClass">
-    <h1 class="mb-0 slide-enter">
+  <div
+    v-if="frontmatter.display ?? frontmatter.title"
+    class="prose m-auto mb-8"
+    :class="[frontmatter.wrapperClass]"
+  >
+    <h1 class="mb-0 slide-enter-50">
       {{ frontmatter.display ?? frontmatter.title }}
     </h1>
     <p
       v-if="frontmatter.date"
-      class="opacity-50 !-mt-2 slide-enter"
+      class="opacity-50 !-mt-6 slide-enter-50"
     >
       {{ formatDate(frontmatter.date, false) }} <span v-if="frontmatter.duration">· {{ frontmatter.duration }}</span>
     </p>
@@ -92,10 +106,10 @@ onMounted(() => {
       This is a draft post, the content may be incomplete. Please check back later.
     </p>
   </div>
-  <article ref="content" :class="frontmatter.tocAlwaysOn ? 'toc-always-on' : ''">
+  <article ref="content" :class="[frontmatter.tocAlwaysOn ? 'toc-always-on' : '', frontmatter.class]">
     <slot />
   </article>
-  <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-8 slide-enter animate-delay-500">
+  <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-8 slide-enter animate-delay-500 print:hidden">
     <template v-if="frontmatter.duration">
       <span font-mono op50>> </span>
       <span op50>comment on </span>

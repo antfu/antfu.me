@@ -37,7 +37,7 @@ export const createApp = ViteSSG(
       const html = document.querySelector('html')!
       setupRouterScroller(router, {
         selectors: {
-          body(ctx) {
+          html(ctx) {
             // only do the sliding transition when the scroll position is not 0
             if (ctx.savedPosition?.top)
               html.classList.add('no-sliding')

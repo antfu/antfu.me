@@ -1,18 +1,18 @@
 <script setup lang="ts">
 function toTop() {
-  document.body.scrollTo({
+  window.scrollTo({
     top: 0,
     behavior: 'smooth',
   })
 }
 
-const { y: scroll } = useScroll(document.body)
+const { y: scroll } = useWindowScroll()
 </script>
 
 <template>
   <header class="header z-40">
     <RouterLink
-      class="w-12 h-12 absolute lg:fixed m-5 select-none outline-none"
+      class="w-12 h-12 absolute xl:fixed m-5 select-none outline-none"
       to="/"
       focusable="false"
     >
@@ -21,7 +21,7 @@ const { y: scroll } = useScroll(document.body)
     <button
       title="Scroll to top"
       fixed right-3 bottom-3 w-10 h-10 hover:op100 rounded-full
-      hover-bg-hex-8883 transition duration-300 z-100
+      hover-bg-hex-8883 transition duration-300 z-100 print:hidden
       :class="scroll > 300 ? 'op30' : 'op0! pointer-events-none'"
       @click="toTop()"
     >
@@ -29,7 +29,7 @@ const { y: scroll } = useScroll(document.body)
     </button>
     <nav class="nav">
       <div class="spacer" />
-      <div class="right">
+      <div class="right" print:op0>
         <RouterLink to="/posts" title="Blog">
           <span class="lt-md:hidden">Blog</span>
           <div i-ri-article-line md:hidden />

@@ -7,7 +7,6 @@ plum: true
 
 Hey, I am Anthony Fu, a fanatical open sourceror.
 
-I am:<br>
 Working at [<span i-simple-icons-nuxtdotjs /> NuxtLabs](https://nuxtlabs.com/).<br>
 Creator of [Vitest](https://github.com/vitest-dev/vitest), [Slidev](https://github.com/slidevjs/slidev), [VueUse](https://github.com/vueuse/vueuse), [UnoCSS](https://github.com/antfu/unocss), [Elk](https://github.com/elk-zone/elk), [Type Challenges](https://github.com/type-challenges/type-challenges) and [others](/projects).<br>
 Core team member of [Vue](https://vuejs.org/), [Nuxt](http://nuxtjs.org/) and [Vite](http://vitejs.dev/).<br>
@@ -15,6 +14,8 @@ Core team member of [Vue](https://vuejs.org/), [Nuxt](http://nuxtjs.org/) and [V
 Dreaming up ideas and making them come true is where my passion lies. You can find my [full projects list here](/projects). I also do some generative-art, compform, interactivity experiments on [100.antfu.me](https://100.antfu.me/).
 
 Outside of programming, I enjoy doing photography and traveling. Some of my photos can be found on [Instagram](https://www.instagram.com/antfu7). If you happen to be in the same city I live (currently in Paris), maybe we can hang out and take some photos or code together.
+
+<div flex-auto />
 
 ***
 

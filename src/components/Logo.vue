@@ -24,6 +24,12 @@
     stroke-dasharray: unset !important;
   }
 }
+@media print {
+  .path1 {
+    animation: none !important;
+    stroke-dasharray: unset !important;
+  }
+}
 @keyframes grow {
   0% {
     stroke-dashoffset: 1px;
