@@ -5,8 +5,6 @@ import { demoItems } from '../../demo/data'
 const breakpoints = useBreakpoints(breakpointsTailwind)
 
 const cols = computed(() => {
-  if (breakpoints['2xl'].value)
-    return 4
   if (breakpoints.xl.value)
     return 3
   if (breakpoints.lg.value)
@@ -24,7 +22,7 @@ const parts = computed(() => {
 </script>
 
 <template>
-  <div grid="~ cols-1 lg:cols-2 xl:cols-3 2xl:cols-4 gap-4">
+  <div grid="~ cols-1 lg:cols-2 xl:cols-3 gap-4">
     <div v-for="items, idx of parts" :key="idx" flex="~ col gap-4">
       <component
         :is="comp"

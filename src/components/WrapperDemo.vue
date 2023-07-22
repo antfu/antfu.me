@@ -19,9 +19,9 @@ const { frontmatter, video, date } = defineProps({
 <template>
   <div>
     <a
-      border="~ base rounded" block of-hidden
+      border="~ base rounded-lg" block of-hidden
       class="group"
-      hover="scale-103 shadow-xl z-10" transition-all duration-900 bg-base relative
+      hover="scale-101 shadow-xl z-10" transition-all duration-500 bg-base relative
       :href="frontmatter.link"
       target="_blank"
     >
