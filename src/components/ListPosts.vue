@@ -14,13 +14,14 @@ const routes: Post[] = router.getRoutes()
   .filter(i => i.path.startsWith('/posts') && i.meta.frontmatter.date && !i.meta.frontmatter.draft)
   .filter(i => !i.path.endsWith('.html') && (i.meta.frontmatter.type || 'blog').split('+').includes(props.type))
   .map(i => ({
-    path: i.path,
+    path: i.meta.frontmatter.redirect || i.path,
     title: i.meta.frontmatter.title,
     date: i.meta.frontmatter.date,
     lang: i.meta.frontmatter.lang,
     duration: i.meta.frontmatter.duration,
     recording: i.meta.frontmatter.recording,
     upcoming: i.meta.frontmatter.upcoming,
+    redirect: i.meta.frontmatter.redirect,
   }))
 
 const posts = computed(() =>
@@ -94,6 +95,12 @@ function getGroupName(p: Post) {
 
             <div flex="~ gap-2 items-center">
               <span
+                v-if="route.redirect"
+                align-middle op50 flex-none text-xs ml--1 mt--1
+                i-carbon-arrow-up-right
+                title="External"
+              />
+              <span
                 v-if="route.inperson"
                 align-middle op50 flex-none
                 i-ri:group-2-line
@@ -111,6 +118,7 @@ function getGroupName(p: Post) {
                 i-ri:radio-line
                 title="Provided in radio"
               />
+
               <span text-sm op50 ws-nowrap>
                 {{ formatDate(route.date, true) }}
               </span>

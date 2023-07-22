@@ -10,4 +10,5 @@ export interface Post {
   radio?: boolean
   video?: boolean
   inperson?: boolean
+  redirect?: string
 }
