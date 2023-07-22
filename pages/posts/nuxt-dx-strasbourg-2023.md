@@ -1,5 +1,5 @@
 ---
-title: Development Experience with Nuxt DevTools - StrasbourgJS 2023
+title: DX with Nuxt DevTools - StrasbourgJS 2023
 description: Development Experience with DevTools - StrasbourgJS 2023
 date: 2023-05-25
 lang: en
