@@ -120,7 +120,7 @@ export default defineConfig({
           promises.push(
             fs.existsSync(`${id.slice(0, -3)}.png`)
               ? fs.copy(`${id.slice(0, -3)}.png`, `public/${path}`)
-              : genreateOg(frontmatter.title!.replace(/\s-\s.*$/, '').trim(), `public/${path}`),
+              : generateOg(frontmatter.title!.replace(/\s-\s.*$/, '').trim(), `public/${path}`),
           )
           frontmatter.image = `https://antfu.me/${path}`
         })()
@@ -186,7 +186,7 @@ export default defineConfig({
 
 const ogSVg = fs.readFileSync('./scripts/og-template.svg', 'utf-8')
 
-async function genreateOg(title: string, output: string) {
+async function generateOg(title: string, output: string) {
   if (fs.existsSync(output))
     return
 
