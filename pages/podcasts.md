@@ -84,6 +84,12 @@ items:
     path: 'https://www.youtube.com/watch?v=FFDMsoVG3R8'
     lang: 'zh'
     video: true
+  - title: 'TechniCality - Anthony Fu'
+    date: '2023-07-22'
+    path: 'https://fm.cali.so/64bb61a2d0844ea8123acc7f'
+    lang: 'zh'
+    video: true
+    radio: true
 ---
 
 <SubNav />
