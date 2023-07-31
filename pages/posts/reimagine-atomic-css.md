@@ -8,7 +8,7 @@ description: Let's take a step back and reimagine what's atomic CSS could be in 
 
 [[toc]]
 
-> This post will be a bit longer than usual. It's quite a big announcement to me, and there are many things I want to talk about. I'll be appreciated if you take the time to read through it. The table of contents is hidden on the right if you are on a desktop. Hope you enjoy :)
+> This post will be a bit longer than usual. It's quite a big announcement to me, and there are many things I want to talk about. I'll be appreciated if you take the time to read through it. The table of contents is hidden on the left if you are on a desktop. Hope you enjoy :)
 
 > [中文 Chinese Version](/posts/reimagine-atomic-css-zh)
 
@@ -94,7 +94,7 @@ By flipping the order of "generating" and "usage scanning", the "on-demand" appr
 To achieve this, both Windi CSS and Tailwind JIT take the approach of pre-scanning your source code. Here is a simple example of that:
 
 ```ts
-import { promises as fs } from 'fs'
+import { promises as fs } from 'node:fs'
 import glob from 'fast-glob'
 
 // this usually comes from user config
