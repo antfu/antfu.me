@@ -15,7 +15,7 @@ import anchor from 'markdown-it-anchor'
 import LinkAttributes from 'markdown-it-link-attributes'
 import UnoCSS from 'unocss/vite'
 import SVG from 'vite-svg-loader'
-import { getHighlighter, bundledLanguages } from 'shikiji'
+import { bundledLanguages, getHighlighter } from 'shikiji'
 
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
@@ -80,7 +80,7 @@ export default defineConfig({
       markdownItOptions: {
         quotes: '""\'\'',
       },
-     async  markdownItSetup(md) {
+      async markdownItSetup(md) {
         const shiki = await getHighlighter({
           themes: ['vitesse-dark', 'vitesse-light'],
           langs: Object.keys(bundledLanguages) as any,
@@ -88,13 +88,13 @@ export default defineConfig({
 
         md.use((markdown) => {
           markdown.options.highlight = (code, lang) => {
-            const themed = shiki.codeToHtmlDualThemes(code, {
-              lang: lang,
+            const themed = shiki.codeToHtmlThemes(code, {
+              lang,
               themes: {
                 light: 'vitesse-light',
-                dark: 'vitesse-dark'
+                dark: 'vitesse-dark',
               },
-              cssVariablePrefix: '--s-'
+              cssVariablePrefix: '--s-',
             })
             return `${themed}`
           }
