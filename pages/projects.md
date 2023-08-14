@@ -209,7 +209,7 @@ projects:
       desc: 'A nimble Mastodon web client'
       icon: 'elk'
     - name: 'Icônes'
-      link: 'https://icones.js.app/'
+      link: 'https://icones.js.org/'
       desc: 'Iconify Explorer with Instant searching'
       icon: 'i-carbon-type-pattern'
     - name: 'QR Toolkit'
