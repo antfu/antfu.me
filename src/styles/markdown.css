@@ -22,19 +22,14 @@
   margin: 2.6em 0;
 }
 
-.shiki-light {
-  background: #f8f8f8 !important;
-}
-.shiki-dark {
-  background: #0e0e0e !important;
+.shiki {
+  background-color: #f8f8f8 !important;
 }
 
-html.dark .vitesse-light {
-  display: none;
-}
-
-html:not(.dark) .vitesse-dark {
-  display: none;
+html.dark .shiki,
+html.dark .shiki span {
+  color: var(--s-dark) !important;
+  background-color: #0e0e0e !important;
 }
 
 .prose {
