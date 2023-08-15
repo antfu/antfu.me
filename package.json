@@ -62,10 +62,10 @@
     "unplugin-auto-import": "^0.16.6",
     "unplugin-icons": "^0.16.5",
     "unplugin-vue-components": "^0.25.1",
+    "unplugin-vue-markdown": "^0.24.1",
     "vite": "^4.4.9",
     "vite-plugin-inspect": "^0.7.38",
     "vite-plugin-pages": "^0.31.0",
-    "vite-plugin-vue-markdown": "^0.23.8",
     "vite-ssg": "^0.23.1",
     "vite-svg-loader": "^4.0.0"
   },
