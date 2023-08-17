@@ -88,7 +88,7 @@ export default defineConfig({
 
         md.use((markdown) => {
           markdown.options.highlight = (code, lang) => {
-            const themed = shiki.codeToHtmlThemes(code, {
+            return shiki.codeToHtml(code, {
               lang,
               themes: {
                 light: 'vitesse-light',
@@ -96,7 +96,6 @@ export default defineConfig({
               },
               cssVariablePrefix: '--s-',
             })
-            return `${themed}`
           }
         })
 
