@@ -17,8 +17,8 @@ function slug(name: string) {
       </h4>
       <div
         class="project-grid py-2 max-w-500 w-max mx-auto"
-        grid="~ cols-1 md:cols-2 lg:cols-3 gap-4"
-        :class="projects[key].length === 1 ? 'flex' : ''"
+        grid="~ cols-1 md:cols-2 gap-4"
+        :class="projects[key].length === 1 ? 'flex' : projects[key].length > 2 ? 'lg:grid-cols-3' : ''"
       >
         <a
           v-for="item, idx in projects[key]"

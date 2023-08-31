@@ -6,14 +6,14 @@ import Pages from 'vite-plugin-pages'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
-import Markdown from 'vite-plugin-vue-markdown'
+import Markdown from 'unplugin-vue-markdown/vite'
 import Vue from '@vitejs/plugin-vue'
-import Shiki from 'markdown-it-shiki'
 import matter from 'gray-matter'
 import anchor from 'markdown-it-anchor'
 import LinkAttributes from 'markdown-it-link-attributes'
 import UnoCSS from 'unocss/vite'
 import SVG from 'vite-svg-loader'
+import { bundledLanguages, getHighlighter } from 'shikiji'
 
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
@@ -78,13 +78,25 @@ export default defineConfig({
       markdownItOptions: {
         quotes: '""\'\'',
       },
-      markdownItSetup(md) {
-        md.use(Shiki, {
-          theme: {
-            light: 'vitesse-light',
-            dark: 'vitesse-dark',
-          },
+      async markdownItSetup(md) {
+        const shiki = await getHighlighter({
+          themes: ['vitesse-dark', 'vitesse-light'],
+          langs: Object.keys(bundledLanguages) as any,
         })
+
+        md.use((markdown) => {
+          markdown.options.highlight = (code, lang) => {
+            return shiki.codeToHtml(code, {
+              lang,
+              themes: {
+                light: 'vitesse-light',
+                dark: 'vitesse-dark',
+              },
+              cssVariablePrefix: '--s-',
+            })
+          }
+        })
+
         md.use(anchor, {
           slugify,
           permalink: anchor.permalink.linkInsideHeader({
