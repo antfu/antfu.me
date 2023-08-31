@@ -57,6 +57,7 @@
     "typescript": "^5.1.6",
     "unocss": "^0.53.5",
     "unplugin-icons": "^0.16.5",
+    "unplugin-vue-markdown": "^0.24.2",
     "unplugin-vue-components": "^0.25.1",
     "vite": "^4.4.6",
     "vite-plugin-pages": "^0.31.0",
