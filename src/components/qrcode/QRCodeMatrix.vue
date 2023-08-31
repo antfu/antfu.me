@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { computed, ref, reactive } from 'vue';
+
 const props = defineProps<{
   title?: string
   src: string
@@ -54,17 +56,9 @@ const binding = reactive({
     <div v-if="title" text-center op75 py2>
       {{ title }}
     </div>
-    <ImageMatrix
-      v-model:x="x"
-      v-model:y="y"
-      :src="props.src"
-      :x-count="xSize"
-      :y-count="ySize"
-      :x-padding="props.xPadding"
-      :y-padding="props.yPadding"
-      :aspect-ratio="props.aspectRatio"
-      :external-link="props.externalLink"
-    />
+    <ImageMatrix v-model:x="x" v-model:y="y" :src="props.src" :x-count="xSize" :y-count="ySize"
+      :x-padding="props.xPadding" :y-padding="props.yPadding" :aspect-ratio="props.aspectRatio"
+      :external-link="props.externalLink" />
     <slot name="pre" v-bind="binding" />
     <slot v-bind="binding">
       <div grid="~ cols-[max-content_1fr_max-content] gap-x-3 gap-y-1 items-center" py3 px4>

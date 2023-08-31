@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import { isDark } from '../logics'
 
 defineProps<{
@@ -13,11 +14,8 @@ onMounted(() => {
 
 <template>
   <div class="">
-    <blockquote
-      class="twitter-tweet"
-      :data-theme="isDark ? 'dark' : 'light'"
-      :data-conversation="conversation ? conversation : undefined"
-    >
+    <blockquote class="twitter-tweet" :data-theme="isDark ? 'dark' : 'light'"
+      :data-conversation="conversation ? conversation : undefined">
       <slot />
     </blockquote>
   </div>

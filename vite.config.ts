@@ -3,7 +3,6 @@ import { Buffer } from 'node:buffer'
 import { defineConfig } from 'vite'
 import fs from 'fs-extra'
 import Pages from 'vite-plugin-pages'
-import Inspect from 'vite-plugin-inspect'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
@@ -11,7 +10,6 @@ import Markdown from 'vite-plugin-vue-markdown'
 import Vue from '@vitejs/plugin-vue'
 import Shiki from 'markdown-it-shiki'
 import matter from 'gray-matter'
-import AutoImport from 'unplugin-auto-import/vite'
 import anchor from 'markdown-it-anchor'
 import LinkAttributes from 'markdown-it-link-attributes'
 import UnoCSS from 'unocss/vite'
@@ -128,16 +126,6 @@ export default defineConfig({
         return { head, frontmatter }
       },
     }),
-
-    AutoImport({
-      imports: [
-        'vue',
-        'vue-router',
-        '@vueuse/core',
-        '@vueuse/head',
-      ],
-    }),
-
     Components({
       extensions: ['vue', 'md'],
       dts: true,
@@ -148,9 +136,6 @@ export default defineConfig({
         }),
       ],
     }),
-
-    Inspect(),
-
     Icons({
       defaultClass: 'inline',
       defaultStyle: 'vertical-align: sub;',

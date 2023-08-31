@@ -1,5 +1,6 @@
 <script setup lang='ts'>
-import type { Fn } from '@vueuse/core'
+import { useRafFn, useWindowSize, type Fn } from '@vueuse/core'
+import { computed, onMounted, reactive, ref } from 'vue';
 
 const r180 = Math.PI
 const r90 = Math.PI / 2
@@ -11,7 +12,7 @@ const el = ref<HTMLCanvasElement | null>(null)
 const { random } = Math
 const size = reactive(useWindowSize())
 
-const start = ref<Fn>(() => {})
+const start = ref<Fn>(() => { })
 const MIN_BRANCH = 30
 const len = ref(6)
 const stopped = ref(false)
@@ -138,11 +139,8 @@ const mask = computed(() => 'radial-gradient(circle, transparent, black);')
 </script>
 
 <template>
-  <div
-    class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden"
-    style="z-index: -1"
-    :style="`mask-image: ${mask};--webkit-mask-image: ${mask};`"
-  >
+  <div class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden" style="z-index: -1"
+    :style="`mask-image: ${mask};--webkit-mask-image: ${mask};`">
     <canvas ref="el" width="400" height="400" />
   </div>
 </template>

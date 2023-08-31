@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { breakpointsTailwind } from '@vueuse/core'
+import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
 import { demoItems } from '../../demo/data'
+import { computed } from 'vue';
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
 
@@ -24,17 +25,10 @@ const parts = computed(() => {
 <template>
   <div grid="~ cols-1 lg:cols-2 xl:cols-3 gap-4">
     <div v-for="items, idx of parts" :key="idx" flex="~ col gap-4">
-      <component
-        :is="comp"
-        v-for="{ comp, date, video } of items"
-        :key="date"
-        :date="date"
-        :video="video"
-        class="slide-enter"
-        :style="{
+      <component :is="comp" v-for="{ comp, date, video } of items" :key="date" :date="date" :video="video"
+        class="slide-enter" :style="{
           '--enter-stage': idx + 1,
-        }"
-      />
+        }" />
     </div>
   </div>
 </template>

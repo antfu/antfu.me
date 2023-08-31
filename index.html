@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="author" content="Anthony Fu" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="revisit-after" content="7 days" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="alternate" type="application/rss+xml" title="Anthony Fu's Blog" href="/feed.xml" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <title>Anthony Fu</title>
-    <script>
-      (function () {
-        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-        const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
-        if (setting === 'dark' || (prefersDark && setting !== 'light'))
-          document.documentElement.classList.toggle('dark', true)
-      })()
-    </script>
-  </head>
-  <body class="font-sans text-gray-700 dark:text-gray-200 relative">
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Michelangelo De Francesco" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <title>Michelangelo De Francesco</title>
+  <script>
+    (function () {
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+  </script>
+</head>
+
+<body class="font-sans text-gray-700 dark:text-gray-200 relative">
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>

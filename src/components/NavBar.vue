@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useWindowScroll } from '@vueuse/core';
+
 function toTop() {
   window.scrollTo({
     top: 0,
@@ -11,20 +13,11 @@ const { y: scroll } = useWindowScroll()
 
 <template>
   <header class="header z-40">
-    <RouterLink
-      class="w-12 h-12 absolute xl:fixed m-5 select-none outline-none"
-      to="/"
-      focusable="false"
-    >
+    <RouterLink class="w-12 h-12 absolute xl:fixed m-5 select-none outline-none" to="/" focusable="false">
       <Logo />
     </RouterLink>
-    <button
-      title="Scroll to top"
-      fixed right-3 bottom-3 w-10 h-10 hover:op100 rounded-full
-      hover-bg-hex-8883 transition duration-300 z-100 print:hidden
-      :class="scroll > 300 ? 'op30' : 'op0! pointer-events-none'"
-      @click="toTop()"
-    >
+    <button title="Scroll to top" fixed right-3 bottom-3 w-10 h-10 hover:op100 rounded-full hover-bg-hex-8883 transition
+      duration-300 z-100 print:hidden :class="scroll > 300 ? 'op30' : 'op0! pointer-events-none'" @click="toTop()">
       <div i-ri-arrow-up-line />
     </button>
     <nav class="nav">
@@ -60,9 +53,6 @@ const { y: scroll } = useWindowScroll()
         <a href="https://github.com/antfu" target="_blank" title="GitHub" class="lt-md:hidden">
           <div i-uil-github-alt />
         </a>
-        <a href="/feed.xml" target="_blank" title="RSS" class="lt-md:hidden">
-          <div i-la-rss-square style="font-size:1.25rem; margin: 0 -0.125rem;" />
-        </a>
         <toggle-theme />
       </div>
     </nav>
@@ -88,7 +78,7 @@ const { y: scroll } = useWindowScroll()
   box-sizing: border-box;
 }
 
-.nav > * {
+.nav>* {
   margin: auto;
 }
 
@@ -116,7 +106,7 @@ const { y: scroll } = useWindowScroll()
   grid-auto-flow: column;
 }
 
-.nav .right > * {
+.nav .right>* {
   margin: auto;
 }
 </style>

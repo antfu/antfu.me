@@ -3,7 +3,7 @@
   "type": "module",
   "packageManager": "pnpm@8.6.9",
   "scripts": {
-    "build": "npm run static && cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts && cp _dist_redirects dist/_redirects",
+    "build": "npm run static && cross-env NODE_ENV=production vite-ssg build && cp _dist_redirects dist/_redirects",
     "dev": "vite --port 3333 --open",
     "preview": "vite preview",
     "static": "rimraf temp && degit antfu/static temp --force && esno scripts/copy-sponsors",
@@ -51,7 +51,6 @@
     "markdown-it-shiki": "^0.9.0",
     "markdown-it-table-of-contents": "^0.6.0",
     "picocolors": "^1.0.0",
-    "pnpm": "^8.6.9",
     "prompts": "^2.4.2",
     "rimraf": "^5.0.1",
     "sharp": "^0.32.1",
@@ -63,22 +62,9 @@
     "unplugin-icons": "^0.16.5",
     "unplugin-vue-components": "^0.25.1",
     "vite": "^4.4.6",
-    "vite-plugin-inspect": "^0.7.33",
     "vite-plugin-pages": "^0.31.0",
     "vite-plugin-vue-markdown": "^0.23.7",
     "vite-ssg": "^0.23.1",
     "vite-svg-loader": "^4.0.0"
-  },
-  "eslintConfig": {
-    "extends": "@antfu",
-    "rules": {
-      "vue/no-v-text-v-html-on-component": "off"
-    }
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
-  },
-  "lint-staged": {
-    "*": "eslint --fix"
   }
 }

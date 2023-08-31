@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { computed } from 'vue';
+
 const props = defineProps<{
   src: string
   x?: number
@@ -29,30 +31,21 @@ const transform = computed(() => `translate(${-x.value * xPercent.value / props.
 </script>
 
 <template>
-  <component
-    :is="externalLink ? 'a' : 'div'"
-    v-bind="externalLink ? {
-      href: props.src,
-      target: '_blank',
-      class: 'no-underline! border-0!',
-    } : {}"
-    relative of-hidden block bg-gray:30
-    :style="{
-      aspectRatio: props.aspectRatio,
-    }"
-  >
+  <component :is="externalLink ? 'a' : 'div'" v-bind="externalLink ? {
+    href: props.src,
+    target: '_blank',
+    class: 'no-underline! border-0!',
+  } : {}" relative of-hidden block bg-gray:30 :style="{
+  aspectRatio: props.aspectRatio,
+}">
     <div scale-101>
-      <img
-        :src="props.src"
-        absolute
-        :style="{
-          top: 0,
-          left: 0,
-          margin: 0,
-          transform,
-          minWidth: `${imageWidth}%`,
-        }"
-      >
+      <img :src="props.src" absolute :style="{
+        top: 0,
+        left: 0,
+        margin: 0,
+        transform,
+        minWidth: `${imageWidth}%`,
+      }">
     </div>
   </component>
 </template>
