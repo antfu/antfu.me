@@ -39,7 +39,7 @@ onKeyStroke('Escape', (e) => {
 
 <template>
   <NavBar />
-  <main class="px-7 py-10 of-x-hidden">
+  <main class="px-7 py-10 of-x-hidd en">
     <RouterView />
     <Footer :key="route.path" />
   </main>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import { isDark } from '~/logics'
 
 defineProps<{

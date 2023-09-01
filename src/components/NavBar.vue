@@ -31,11 +31,15 @@ const { y: scroll } = useWindowScroll()
           <span class="lt-md:hidden">Projects</span>
           <div i-ri-lightbulb-line class="md:hidden" />
         </RouterLink>
-        <RouterLink to="/talks" class="lt-md:hidden" title="Talks">
+        <!-- <RouterLink to="/talks" class="lt-md:hidden" title="Talks">
           Talks
         </RouterLink>
         <RouterLink to="/podcasts" class="lt-md:hidden" title="Podcasts">
           Podcasts
+        </RouterLink> -->
+        <RouterLink to="/experience" title="Experience">
+          <span class="lt-md:hidden">Experience</span>
+          <div i-ri-screenshot-line class="md:hidden" />
         </RouterLink>
         <RouterLink to="/demos" title="Demos">
           <span class="lt-md:hidden">Demos</span>
@@ -44,13 +48,10 @@ const { y: scroll } = useWindowScroll()
         <RouterLink to="/chat" title="Let's Chat">
           <div i-ri-chat-1-line />
         </RouterLink>
-        <RouterLink to="/sponsors-list" title="Sponsors">
-          <div i-ri-user-heart-line />
-        </RouterLink>
-        <a href="https://twitter.com/antfu7" target="_blank" title="Twitter" class="lt-md:hidden">
-          <feather-twitter />
+        <a href="https://www.linkedin.com/in/dfmichelangelo/" target="_blank" title="Linkedin" class="lt-md:hidden">
+          <div i-uil-linkedin-alt />
         </a>
-        <a href="https://github.com/antfu" target="_blank" title="GitHub" class="lt-md:hidden">
+        <a href="https://github.com/dfmichelangelo" target="_blank" title="GitHub" class="lt-md:hidden">
           <div i-uil-github-alt />
         </a>
         <toggle-theme />

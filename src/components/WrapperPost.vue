@@ -100,13 +100,17 @@ onMounted(() => {
     <slot />
   </article>
   <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-8 slide-enter animate-delay-500 print:hidden">
-    <template v-if="frontmatter.duration">
+
+    <!--
+       // INFO REMOVED 
+      -->
+    <!-- <template v-if="frontmatter.duration">
       <span font-mono op50>> </span>
       <span op50>comment on </span>
-      <a :href="elkUrl" target="_blank" op50>mastodon</a>
+      <a :href="ADD" target="_blank" op50>mastodon</a>
       <span op25> / </span>
-      <a :href="tweetUrl" target="_blank" op50>twitter</a>
-    </template>
+      <a :href="ADD" target="_blank" op50>twitter</a>
+    </template> -->
     <br>
     <span font-mono op50>> </span>
     <RouterLink :to="route.path.split('/').slice(0, -1).join('/') || '/'" class="font-mono op50 hover:op75"

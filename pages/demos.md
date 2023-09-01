@@ -1,8 +1,8 @@
 ---
-title: Demos - Anthony Fu
+title: Demos - Michelangelo De Francesco
 display: Demos
-subtitle: Demonstrations for projects I am working on from Tweets
-description: Demonstrations for projects I am working on from Tweets
+subtitle: Demonstrations for projects I am working on
+description: Demonstrations for projects I am working on
 ---
 
 <!-- @layout-full-width -->
