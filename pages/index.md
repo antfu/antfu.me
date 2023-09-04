@@ -1,7 +1,7 @@
 ---
 title: Michelangelo De Francesco
 description: Michelangelo De Francesco's Portfolio
-image: https://antfu.me/og.png
+image: https://DFMichelangelo.github.io/og.png
 plum: true
 ---
 

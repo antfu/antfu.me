@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 import { useEventListener } from '@vueuse/core';
-import { ref, computed, onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { formatDate } from '~/logics'
 
@@ -14,10 +14,6 @@ const { frontmatter } = defineProps({
 const router = useRouter()
 const route = useRoute()
 const content = ref<HTMLDivElement>()
-
-const base = 'https://antfu.me'
-const tweetUrl = computed(() => `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Reading @antfu7\'s ${base}${route.path}\n\nI think...`)}`)
-const elkUrl = computed(() => `https://elk.zone/intent/post?text=${encodeURIComponent(`Reading @antfu@m.webtoo.ls\'s ${base}${route.path}\n\nI think...`)}`)
 
 onMounted(() => {
   const navigate = () => {
@@ -100,7 +96,11 @@ onMounted(() => {
     <slot />
   </article>
   <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-8 slide-enter animate-delay-500 print:hidden">
-
+    <div v-if="route.path === '/expertise' || route.path === '/experience'" class="op50">See my
+      <a :href="'https://www.google.com/'" target="_blank" :title="'Resume'" class="  ">
+        Resume
+      </a>
+    </div>
     <!--
        // INFO REMOVED 
       -->

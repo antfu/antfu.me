@@ -28,7 +28,7 @@ const routes: Post[] = router.getRoutes()
 const posts = computed(() =>
   [...(props.posts || routes), ...props.extra || []]
     .sort((a, b) => +new Date(b.date) - +new Date(a.date))
-    .filter(i => !englishOnly.value || i.lang !== 'zh'),
+    .filter(i => !englishOnly.value || i.lang !== 'it'),
 )
 
 const getYear = (a: Date | string | number) => new Date(a).getFullYear()
@@ -49,7 +49,7 @@ function getGroupName(p: Post) {
   <ul>
     <template v-if="!posts.length">
       <div py2 op50>
-        { nothing here yet }
+        Nothing here yet
       </div>
     </template>
 
@@ -75,8 +75,8 @@ function getGroupName(p: Post) {
           " class="item block font-normal mb-6 mt-2 no-underline">
           <li class="no-underline" flex="~ col md:row gap-2 md:items-center">
             <div class="title text-lg leading-1.2em" flex="~ gap-2 wrap">
-              <span v-if="route.lang === 'zh'" align-middle flex-none
-                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--12 mr2 my-auto hidden md:block">中文</span>
+              <span v-if="route.lang === 'it'" align-middle flex-none
+                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--12 mr2 my-auto hidden md:block">ITA</span>
               <span align-middle>{{ route.title }}</span>
             </div>
 
@@ -93,8 +93,8 @@ function getGroupName(p: Post) {
               </span>
               <span v-if="route.duration" text-sm op40 ws-nowrap>· {{ route.duration }}</span>
               <span v-if="route.platform" text-sm op40 ws-nowrap>· {{ route.platform }}</span>
-              <span v-if="route.lang === 'zh'" align-middle flex-none
-                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 my-auto md:hidden">中文</span>
+              <span v-if="route.lang === 'it'" align-middle flex-none
+                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 my-auto md:hidden">ITA</span>
             </div>
           </li>
         </component>

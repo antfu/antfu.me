@@ -23,3 +23,6 @@ Thank you [antfu.me](https://antfu.me)
 Set used:
 1. [Simple Icons](https://icones.js.org/collection/simple-icons)
 1. [Carbon](https://icones.js.org/collection/carbon)
+
+# CSS
+Tailwind is used

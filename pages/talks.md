@@ -1,12 +1,12 @@
 ---
-title: Talks - Anthony Fu
+title: Talks - Michelangelo De Francesco
 display: ''
 plum: true
 items:
-  - title: 'Text for talk'
-    date: '2023-10-25'
-    inperson: true
-    path: 'https://vuefes.jp/2023/'
+  # - title: 'Text for talk'
+  #   date: '2023-10-25'
+  #   inperson: true
+  #   path: 'https://vuefes.jp/2023/'
 ---
 
 <SubNav />
