@@ -14,12 +14,11 @@ import LinkAttributes from 'markdown-it-link-attributes'
 import UnoCSS from 'unocss/vite'
 import SVG from 'vite-svg-loader'
 import { bundledLanguages, getHighlighter } from 'shikiji'
-
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
 import sharp from 'sharp'
 import { slugify } from './scripts/slugify'
-
+import markdownKatex from 'markdown-it-katex'
 const promises: Promise<any>[] = []
 
 export default defineConfig({
@@ -118,6 +117,7 @@ export default defineConfig({
           slugify,
           containerHeaderHtml: '<div class="table-of-contents-anchor"><div class="i-ri-menu-2-fill" /></div>',
         })
+        md.use(markdownKatex);
       },
       frontmatterPreprocess(frontmatter, options, id, defaults) {
         (() => {
