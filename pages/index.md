@@ -5,7 +5,7 @@ image: https://DFMichelangelo.github.io/og.png
 plum: true
 ---
 
-Hey, I am Michelangelo De Francesco, an eTrading Quantitative Researcher.
+I am Michelangelo De Francesco, an eTrading Quantitative Researcher.
 
 Working at [<span i-mdi:bank-outline/> The Bank](https://nuxtlabs.com/) in London.<br>
 
