@@ -47,7 +47,6 @@ jobs:
           # Upload dist repository
           path: "./dist"
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v1
       - name: Check for broken links
         run: npm run check-links
@@ -55,7 +54,6 @@ jobs:
       - name: Checkout previous commit
         run: git checkout HEAD~1
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v1
         # Only run this step if the links check is successful
         if: ${{ steps.check-links.outcome != 'failure' }}
@@ -75,6 +73,5 @@ jobs:
           # Upload dist repository
           path: "./dist"
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v1
         if: ${{ steps.check-links.outcome != 'failure' }}
