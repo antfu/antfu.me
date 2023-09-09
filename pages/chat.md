@@ -6,7 +6,7 @@ image: https://DFMichelangelo.github.io/og-chat.png
 
 <!-- [ITA Italian](/chat-it) -->
 
-So if you're curious about delving into electronic trading but feel uncertain about taking the first step, or if you're already involved and have questions about your journey, I would be delighted to chat with you and share my experiences and insights to help you find your way.
+If you're curious about delving into electronic trading but feel uncertain about taking the first step, or if you're already involved and have questions about your journey, I would be delighted to chat with you and share my experiences and insights to help you find your way.
 
 ### Quick Chat
 

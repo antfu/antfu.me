@@ -13,6 +13,7 @@
   "aliveStatusCodes": [
     200,
     206,
+    429,
     999
   ]
 }
