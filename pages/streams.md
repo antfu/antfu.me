@@ -5,7 +5,7 @@ plum: true
 items:
   # - title: '用 Vue 写个扫雷吧！'
   #   date: '2022-03-09'
-  #   path: 'https://www.bilibili.com/video/BV1ia411b7jY'
+  #   path: 'https://shapeshed.com/unix-ddxargs/'
   #   platform: Bilibili
   #   lang: 'zh'
 ---

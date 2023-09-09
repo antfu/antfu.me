@@ -9,7 +9,8 @@
     "static": "rimraf temp && degit antfu/static temp --force",
     "redirects": "esno scripts/redirects.ts",
     "lint": "eslint .",
-    "compress": "esno scripts/img-compress-staged.ts"
+    "compress": "esno scripts/img-compress-staged.ts",
+    "check-links": "find pages -name \\*.md -print0 | xargs -0 -n1 markdown-link-check --config ./markdownLinkCheckConfig.json --quiet"
   },
   "dependencies": {
     "@vueuse/core": "^10.3.0",
@@ -29,6 +30,7 @@
     "@types/fs-extra": "^11.0.1",
     "@types/katex": "^0.16.2",
     "@types/markdown-it": "^13.0.0",
+    "markdown-link-check": "^3.11.2",
     "@types/markdown-it-link-attributes": "^3.0.1",
     "@types/nprogress": "^0.2.0",
     "@types/prompts": "^2.4.4",

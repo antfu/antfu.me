@@ -1,0 +1,18 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^#"
+    }
+  ],
+  "replacementPatterns": [
+    {
+      "pattern": "^/images",
+      "replacement": "https://dfmichelangelo.github.io/images"
+    }
+  ],
+  "aliveStatusCodes": [
+    200,
+    206,
+    999
+  ]
+}
