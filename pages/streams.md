@@ -5,7 +5,7 @@ plum: true
 items:
   # - title: '用 Vue 写个扫雷吧！'
   #   date: '2022-03-09'
-  #   path: 'https://shapeshed.com/unix-ddxargs/'
+  #   path: 'https://isoflow.io/'
   #   platform: Bilibili
   #   lang: 'zh'
 ---

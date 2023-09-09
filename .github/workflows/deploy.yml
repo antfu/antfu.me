@@ -50,28 +50,3 @@ jobs:
         uses: actions/deploy-pages@v1
       - name: Check for broken links
         run: npm run check-links
-
-      - name: Checkout previous commit
-        run: git checkout HEAD~1
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
-        # Only run this step if the links check is successful
-        if: ${{ steps.check-links.outcome != 'failure' }}
-      - name: Install dependencies
-        run: npm install
-        if: ${{ steps.check-links.outcome != 'failure' }}
-      - name: Build
-        run: npm run build
-        if: ${{ steps.check-links.outcome != 'failure' }}
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-        if: ${{ steps.check-links.outcome != 'failure' }}
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        if: ${{ steps.check-links.outcome != 'failure' }}
-        with:
-          # Upload dist repository
-          path: "./dist"
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
-        if: ${{ steps.check-links.outcome != 'failure' }}
