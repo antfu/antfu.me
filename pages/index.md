@@ -6,7 +6,6 @@ plum: true
 ---
 
 <script setup lag="ts">
-console.log(window.location.pathname)
 const isBasePath= window.location.pathname === "/"
 </script>
 

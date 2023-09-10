@@ -28,7 +28,7 @@ projects:
       icon: "i-carbon:flow-stream"
     - name: 'SBE'
       link: 'https://github.com/real-logic/simple-binary-encoding'
-      desc: 'Encrypt and decrypt messages fast'
+      desc: 'Encrypt and decrypt messages without allocation'
       icon: "i-lucide:binary"
     - name: 'FIX'
       desc: 'Protocol for messages in the market'
