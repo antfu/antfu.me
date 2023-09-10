@@ -3,7 +3,7 @@
   "type": "module",
   "packageManager": "pnpm@8.6.12",
   "scripts": {
-    "build": "npm run static && cross-env NODE_ENV=production vite-ssg build && cp _dist_redirects dist/_redirects",
+    "build": "npm run static && cross-env NODE_ENV=production vite-ssg build && cp _dist_redirects dist/_redirects && cp 404.html dist/404.html",
     "dev": "vite --port 3333 --open",
     "preview": "vite preview",
     "static": "rimraf temp && degit antfu/static temp --force",
