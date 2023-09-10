@@ -1,6 +1,3 @@
-
-
-
 ---
 title: Mixed Element in Blog and Talk
 date: 2020-06-12T16:00:00Z
@@ -9,6 +6,7 @@ lang: en
 description: description
 recording: true
 type: talk+blog
+development: true
 ---
 [[toc]]
 > Note: This is my personal notes/tips for migrating to Vue 3 and will be updated overtime. Please refer to [the official docs](https://v3.vuejs.org) for the complete changelog.

@@ -11,4 +11,5 @@ export interface Post {
   video?: boolean
   inperson?: boolean
   redirect?: string
+  development?: boolean
 }

@@ -23,11 +23,13 @@ const routes: Post[] = router.getRoutes()
     recording: i.meta.frontmatter.recording,
     upcoming: i.meta.frontmatter.upcoming,
     redirect: i.meta.frontmatter.redirect,
+    development: i.meta.frontmatter.development,
   }))
 
 const posts = computed(() =>
   [...(props.posts || routes), ...props.extra || []]
     .sort((a, b) => +new Date(b.date) - +new Date(a.date))
+    .filter(i => !(process.env.NODE_ENV === 'production' && i.development))
     .filter(i => !englishOnly.value || i.lang !== 'it'),
 )
 
