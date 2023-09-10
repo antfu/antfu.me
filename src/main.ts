@@ -14,16 +14,13 @@ import { setupRouterScroller } from 'vue-router-better-scroller'
 import FloatingVue from 'floating-vue'
 import App from './App.vue'
 
-const routes = autoRoutes.map((i) => {
-  console.log(i)
-  return {
-    ...i,
-    alias: i.path.endsWith('/')
-      ? `${i.path}index.html`
-      : `${i.path}.html`,
-    path: i.name === '404' ? "/:404(.*)*" : i.path
-  }
+const routes = autoRoutes.map((i) => ({
+  ...i,
+  alias: i.path.endsWith('/')
+    ? `${i.path}index.html`
+    : `${i.path}.html`,
 })
+)
 
 export const createApp = ViteSSG(
   App,
