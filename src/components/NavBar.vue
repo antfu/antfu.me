@@ -35,7 +35,7 @@ const { y: scroll } = useWindowScroll()
 
         <RouterLink to="/experience" title="Experience">
           <span class="lt-md:hidden">Experience</span>
-          <div i-ri-screenshot-line class="md:hidden" />
+          <div i-material-symbols:work-outline class="md:hidden" />
         </RouterLink>
         <!-- <RouterLink to="/demos" title="Demos">
           <span class="lt-md:hidden">Demos</span>

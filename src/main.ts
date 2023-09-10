@@ -21,7 +21,7 @@ const routes = autoRoutes.map((i) => {
     alias: i.path.endsWith('/')
       ? `${i.path}index.html`
       : `${i.path}.html`,
-    path: i.name === "home" ? "/" : i.path
+
   }
 })
 
