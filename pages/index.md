@@ -10,7 +10,7 @@ I am Michelangelo De Francesco, an eTrading Quantitative Researcher.
 Working at [<span i-mdi:bank-outline/> The Bank](https://nuxtlabs.com/) in London.<br>
 
 
-Outside of programming and finance, I enjoy going to the gym.
+Outside of programming and finance, I enjoy going to the gym and cooking.
 
 <div flex-auto />
 
