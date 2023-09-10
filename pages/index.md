@@ -5,6 +5,13 @@ image: https://DFMichelangelo.github.io/og.png
 plum: true
 ---
 
+<script setup lag="ts">
+console.log(window.location.pathname)
+const isBasePath= window.location.pathname === "/"
+</script>
+
+
+<div v-if="isBasePath">
 I am Michelangelo De Francesco, an eTrading Quantitative Researcher.
 
 Working at [<span i-mdi:bank-outline/> The Bank](https://nuxtlabs.com/) in London.<br>
@@ -12,7 +19,7 @@ Working at [<span i-mdi:bank-outline/> The Bank](https://nuxtlabs.com/) in Londo
 
 Outside of programming and finance, I enjoy going to the gym and cooking.
 
-<div flex-auto />
+
 
 ***
 
@@ -22,3 +29,4 @@ Find me on
     <a href="https://www.linkedin.com/in/dfmichelangelo/" target="_blank"><span op75 i-simple-icons-linkedin /> Linkedin</a>
   <a href="https://github.com/dfmichelangelo" target="_blank"><span op75 i-simple-icons-github /> GitHub</a>
 </p>
+</div>

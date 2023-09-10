@@ -80,7 +80,12 @@ onMounted(() => {
   </ClientOnly>
   <div v-if="frontmatter.display ?? frontmatter.title" class="prose m-auto mb-8" :class="[frontmatter.wrapperClass]">
     <h1 class="mb-0 slide-enter-50">
-      {{ frontmatter.display ?? frontmatter.title }}
+      {{ frontmatter.display ?? (
+        frontmatter.title !== "Michelangelo De Francesco"
+          ? frontmatter.title
+          : (route.path === "/" ? frontmatter.title : "")
+      )
+      }}
     </h1>
     <p v-if="frontmatter.date" class="opacity-50 !-mt-6 slide-enter-50">
       {{ formatDate(frontmatter.date, false) }} <span v-if="frontmatter.duration">· {{ frontmatter.duration }}</span>
