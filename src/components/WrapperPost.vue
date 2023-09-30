@@ -102,7 +102,7 @@ onMounted(() => {
   </article>
   <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-8 slide-enter animate-delay-500 print:hidden">
     <div v-if="route.path === '/expertise' || route.path === '/experience'" class="op50">See my
-      <a :href="'https://drive.google.com/file/d/1ClRHrwI_TFPy4ze23X_JUJb5nw8lClDb/view?usp=drive_link'" target="_blank"
+      <a :href="'https://drive.google.com/file/d/1ExlLrpPGkBdw8Z2-5-8yqkllCk3Tkl7d/view?usp=sharing'" target="_blank"
         :title="'Resume'">
         Resume
       </a>

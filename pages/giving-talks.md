@@ -5,7 +5,7 @@ display: ''
 
 # Giving Talks
 
-My name is [Michelangelo De Francesco](/). I am an eTrading Quantitative Researcher living in London. I am focusing on many areas in electronic trading like Market Microstructure, Low Latency Development, Market Making, etc.
+My name is [Michelangelo De Francesco](/). I am a Quantitative Research Analyst living in London. I am focusing on many areas in electronic trading like Market Microstructure, Low Latency Development, Market Making, etc.
 
 <!-- [Here are the talks I have given](/talks). -->
 
@@ -29,13 +29,13 @@ You can use the following information to present me:
   <div><a href="https://DFMichelangelo.github.io/avatar.jpg" target="_blank">https://DFMichelangelo.github.io/avatar.jpg</a></div>
 
   <div text-right pr2 op50 font-bold>Introduction</div>
-  <TextCopy>eTrading Quantitative Researcher at The Bank.</TextCopy>
+  <TextCopy>Quantitative Research Analyst at Sumitomo Mitsui Banking Corporation.</TextCopy>
 
   <div text-right pr2 op50 font-bold>Location</div>
   <TextCopy>London, UK</TextCopy>
 
   <div text-right pr2 op50 font-bold>Company</div>
-  <TextCopy><a href="http://google.com/" target="_blank">The Bank</a></TextCopy>
+  <TextCopy><a href="http://google.com/" target="_blank">Sumitomo Mitsui Banking Corporation</a></TextCopy>
 
   <div text-right pr2 op50 font-bold>Website</div>
   <TextCopy><a href="http://DFMichelangelo.github.io" target="_blank">DFMichelangelo.github.io</a></TextCopy>
