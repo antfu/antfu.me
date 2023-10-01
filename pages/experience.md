@@ -7,7 +7,7 @@ wrapperClass: 'text-center'
 projects:
   Work Experience:
     - role: 'Quantitative Research Analyst'
-      link: 'https://www.smbcgroup.com/'
+      link: 'https://www.smbcnikko.co.jp/en/index.html'
       company: 'Sumitomo Mitsui Banking Corporation'
       roleLevel: 'AVP'
       icon: 'material-symbols:ssid-chart'
