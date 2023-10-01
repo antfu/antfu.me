@@ -10,7 +10,7 @@ projects:
       link: 'https://www.smbcnikko.co.jp/en/index.html'
       company: 'Sumitomo Mitsui Banking Corporation'
       roleLevel: 'AVP'
-      icon: 'material-symbols:ssid-chart'
+      icon: 'i-material-symbols:ssid-chart'
       timePeriod: 'Sept 2023 - Present'
       location: 'London, UK'
     - role: 'eFX Quantitative Developer'
