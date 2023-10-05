@@ -200,7 +200,7 @@ Second is the source map support. Since all the modules have been concatenated i
 So to address the drawbacks of the Dev Bundler, we need to have the "on-demand" philosophy in mind. Instead of transforming all the modules and then evaluating them, we'd better do it upon the module that has been requested. Then we could use the `vm` module from Node to this:
 
 ```ts
-import vm from 'vm'
+import vm from 'node:vm'
 import { createDevServer } from 'vite'
 
 const server = createDevServer()

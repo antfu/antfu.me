@@ -41,13 +41,13 @@ Instead of returning the getter and setter in React's `useState`, in Vue 3, a `r
 ```ts
 // React
 const [counter, setCounter] = useState(0)
-console.log(counter)        // get
-setCounter(counter + 1)     // set
+console.log(counter) // get
+setCounter(counter + 1) // set
 
 // Vue 3
 const counter = ref(0)
-console.log(counter.value)  // get
-counter.value++             // set
+console.log(counter.value) // get
+counter.value++ // set
 ```
 
 Since we don't need to rename the same thing twice for getter and setter like React does, in [VueUse](https://github.com/antfu/vueuse), I implemented most of the functions with object returns, like:
@@ -98,12 +98,12 @@ const data = {
 }
 
 let { foo, bar } = data
-let [ foo, bar ] = data // ERROR!
+let [foo, bar] = data // ERROR!
 ```
 
 But when we destructure it as an array, it will throw out this error:
 
-```ts
+```txt
 Uncaught TypeError: data is not iterable
 ```
 
@@ -118,17 +118,19 @@ const data = ['foo', 'bar']
 data.foo = 'foo'
 data.bar = 'bar'
 
-let [ foo, bar ] = data
+let [foo, bar] = data
 let { foo, bar } = data
 ```
 
 This works and we can call it a day now! However, if you are a perfectionist, you will find there is an edge case not be well covered. If we use the rest pattern to retrieve the remaining parts, the number indexes will unexpectedly be included in the rest object.
 
 ```ts
-let { foo, ...rest } = data
+const { foo, ...rest } = data
 ```
 
 `rest` will be:
+
+<!-- eslint-skip -->
 
 ```ts
 {
@@ -153,10 +155,12 @@ const data = {
 }
 
 let { foo, bar } = data
-let [ foo, bar ] = data
+let [foo, bar] = data
 ```
 
 It works well but the `Symbol.iterator` will still be included in the rest pattern.
+
+<!-- eslint-skip -->
 
 ```ts
 let { foo, ...rest } = data
@@ -178,7 +182,7 @@ const data = {
 
 Object.defineProperty(data, Symbol.iterator, {
   enumerable: false,
-  value: function*() {
+  *value() {
     yield 'foo'
     yield 'bar'
   },
@@ -188,7 +192,7 @@ Object.defineProperty(data, Symbol.iterator, {
 Now we are successfully hiding the extra properties!
 
 ```ts
-let { foo, ...rest } = data
+const { foo, ...rest } = data
 
 // rest
 {
@@ -205,7 +209,7 @@ Object.defineProperty(clone, Symbol.iterator, {
   enumerable: false,
   value() {
     let index = 0
-    let arr = [foo, bar]
+    const arr = [foo, bar]
     return {
       next: () => ({
         value: arr[index++],
@@ -221,7 +225,7 @@ Object.defineProperty(clone, Symbol.iterator, {
 To me, it's meaningless if we could not get proper TypeScript support on this. Surprisingly, TypeScript support such usage almost out-of-box. Just simply use the [`&` operator](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html#intersection-types) to make insertion of the object and array type. Destructuring will properly infer the types in both usages.
 
 ```ts
-type Magic = { foo: string, bar: string } & [ string, string ]
+type Magic = { foo: string; bar: string } & [ string, string ]
 ```
 
 ## Take Away
@@ -235,7 +239,6 @@ function createIsomorphicDestructurable<
   T extends Record<string, unknown>,
   A extends readonly any[]
 >(obj: T, arr: A): T & A {
-
   const clone = { ...obj }
 
   Object.defineProperty(clone, Symbol.iterator, {
@@ -263,9 +266,9 @@ const bar: number = 1024
 
 const obj = createIsomorphicDestructurable(
   { foo, bar } as const,
-  [ foo, bar ] as const
+  [foo, bar] as const
 )
 
 let { foo, bar } = obj
-let [ foo, bar ] = obj
+let [foo, bar] = obj
 ```

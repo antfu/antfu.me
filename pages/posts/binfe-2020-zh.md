@@ -78,7 +78,9 @@ export function trigger(target, key) {
 }
 
 export function effect(fn) {
-  const effect = function () { fn() }
+  const effect = function () {
+    fn()
+  }
   enableTracking()
   activeEffect = effect
   fn()
@@ -357,9 +359,9 @@ useDevtoolsInspector({ counter })
 
 然后再来就是我之前做的一个 Proof of Concept，叫做 [ReactiVue](https://github.com/antfu/reactivue)。在 React 中使用 Vue 的 Composition API。可以看到右边的这个例子，ReactiVue 是一个以 React Hooks 形式实现的，`useSetup` 提供一个和 Vue 等价的 `setup()` 函数。最后 return 的响应式数据会再传出来给 React 组件，当响应式数据更新时会触发 React 组件的重新渲染。ReactiVue 只依赖于 `@vue/reactivity`，同时又包装了 React 的生命周期，让他们以 Vue 的形式暴露出来。这样就可以去复用 Vue 的组件库，我们这边做了测试的有 VueUse 和 [pinia](https://github.com/posva/pinia)，通过包的重命名就可以直接导出使用。
 
-```ts
+```tsx
 import React from 'React'
-import { useSetup, ref, computed } from 'reactivue'
+import { computed, ref, useSetup } from 'reactivue'
 
 function MyCounter(props) {
   const { counter, doubled, inc } = useSetup(
@@ -381,7 +383,7 @@ function MyCounter(props) {
   )
 }
 
-ReactDOM.render(<MyCounter value={10}>, el)
+ReactDOM.render(<MyCounter value={10} />, el)
 ```
 
 #### @vue-reactivity

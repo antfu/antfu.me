@@ -27,16 +27,18 @@ I am also experimenting more possibility of Vue reactivity in other scenarios, f
 For a simplified example, 
 
 ```ts
-const reactive = (target) => new Proxy(target, {
-  get(target, prop, receiver) {
-    track(target, prop)
-    return Reflect.get(...arguments) // get the original data
-  },
-  set(target, key, value, receiver) {
-    trigger(target, key)
-    return Reflect.set(...arguments) // set the original data
-  }
-})
+function reactive(target) {
+  return new Proxy(target, {
+    get(target, prop, receiver) {
+      track(target, prop)
+      return Reflect.get(...arguments) // get the original data
+    },
+    set(target, key, value, receiver) {
+      trigger(target, key)
+      return Reflect.set(...arguments) // set the original data
+    }
+  })
+}
 
 const obj = reactive({
   hello: 'world'
@@ -80,17 +82,17 @@ To know how the `computed` work, we need to dig into the lower level API `effect
 So basically, you can write a simple `computed` on your own like:
 
 ```ts
-const computed = (getter) => {
+function computed(getter) {
   let value
   let dirty = true
-  
+
   const runner = effect(getter, {
     lazy: true,
     scheduler() {
       dirty = true // deps changed
     }
   })
-  
+
   // return should be a `Ref` in real world, simplified here
   return {
     get value() {
@@ -141,12 +143,12 @@ count.value = 2
 With the knowledge of `effect`, it's quite straight forward to implement
 
 ```ts
-const watch = (getter, fn) => {
+function watch(getter, fn) {
   const runner = effect(getter, {
     lazy: true,
     scheduler: fn
-  }
-  
+  })
+
   // a callback function is returned to stop the effect
   return () => stop(runner)
 }
@@ -168,7 +170,7 @@ watch(
 For that, just wrap it into a getter will do
 
 ```ts
-const watch = (source, fn) => {
+function watch(source, fn) {
   const getter = isRef(source)
     ? () => source.value
     : source
@@ -176,7 +178,7 @@ const watch = (source, fn) => {
   const runner = effect(getter, {
     lazy: true,
     scheduler: fn
-  }
+  })
 
   return () => stop(runner)
 }
@@ -193,7 +195,7 @@ const state = reactive({
   }
 })
 
-watch(state, () => { console.log('changed!') }, { deep: true })
+watch(state, () => console.log('changed!'), { deep: true })
 
 state.info.name = 'Anthony Fu'
 // changed!
@@ -206,7 +208,7 @@ function traverse(value, seen = new Set()) {
   if (!isObject(value) || seen.has(value))
     return value
 
-  seen.add(value) // prevent circular reference 
+  seen.add(value) // prevent circular reference
   if (isArray(value)) {
     for (let i = 0; i < value.length; i++)
       traverse(value[i], seen)
@@ -218,20 +220,20 @@ function traverse(value, seen = new Set()) {
   return value
 }
 
-const watch = (source, fn, { deep, lazy = true }) => {
+function watch(source, fn, { deep, lazy = true }) {
   let getter = isRef(source)
     ? () => source.value
-    : isReactive(source) 
+    : isReactive(source)
       ? () => source
       : source
-    
+
   if (deep)
     getter = () => traverse(getter())
-    
+
   const runner = effect(getter, {
     lazy,
     scheduler: fn
-  }
+  })
 
   return () => stop(runner)
 }

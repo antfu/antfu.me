@@ -47,8 +47,9 @@ Changed to this:
 
 ```ts
 declare module '*.vue' {
-  import { defineComponent } from 'vue';
-  const Component: ReturnType<typeof defineComponent>;
-  export default Component;
+  import { defineComponent } from 'vue'
+
+  const Component: ReturnType<typeof defineComponent>
+  export default Component
 }
 ```

@@ -37,7 +37,7 @@ Dark mode is supported as an experimental feature in Tailwind CSS v1.8 and shipp
 With the power of Vue's Composition API, I am able to combine the best parts of them - reactive to the system's preference while being able to override manually.
 
 ```ts
-import { useStorage, usePreferredDark } from '@vueuse/core'
+import { usePreferredDark, useStorage } from '@vueuse/core'
 
 const preferredDark = usePreferredDark()
 const colorSchema = useStorage('color-schema', 'auto')
@@ -167,7 +167,7 @@ import { renderToString } from '@vue/server-renderer'
 const createApp = required('dist-ssr/app.js')
 
 await Promise.all(
-  routes.map(async(route) => {
+  routes.map(async (route) => {
     const { app, router, head } = createApp(false)
 
     router.push(route)

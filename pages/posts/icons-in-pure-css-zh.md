@@ -60,7 +60,7 @@ description: 纯 CSS 中的图标解决方案
 再次感谢 [Iconify](https://iconify.design/)，它将 100 多个图标集与上万个图标统一为 [一致的 JSON 格式](https://github.com/iconify/collections-json)。它允许我们通过简单地提供集合和图标 ID 的方式来获取任意图标集中的 SVG，使用方式如下：
 
 ```ts
-import { iconToSVG, getIconData } from '@iconify/utils'
+import { getIconData, iconToSVG } from '@iconify/utils'
 
 const svg = iconToSVG(getIconData('mdi', 'alarm'))
 // (此处并非真实 API，仅供示意)

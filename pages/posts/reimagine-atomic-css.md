@@ -336,7 +336,7 @@ variants: [
       return entries
     },
   }
-],
+]
 ```
 
 The configurations of variants could be a bit advanced. Due to the length of the post, I will skip the detailed explanation here, you can refer to [the docs](https://github.com/antfu/unocss#custom-variants) for more details.
@@ -534,7 +534,6 @@ export default {
         // generated css is provide as a virtual module
         if (id === VIRTUAL_CSS_ID)
           return { code: await generate() }
-
       }
     }
   ]

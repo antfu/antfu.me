@@ -49,7 +49,6 @@ export default {
 
     if (user)
       console.log(user.name) // Anthony
-
   },
 }
 ```

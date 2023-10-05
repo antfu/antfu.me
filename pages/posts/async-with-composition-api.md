@@ -20,7 +20,7 @@ When using asynchronous `setup()`, **you have to use effects and lifecycle hooks
 For example:
 
 ```ts
-import { ref, watch, onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
 
 export default defineAsyncComponent({
   async setup() {
@@ -37,7 +37,7 @@ export default defineAsyncComponent({
     // does NOT work!
     onUnmounted(() => console.log('Unmounted'))
 
-    // still works, but does not auto-dispose 
+    // still works, but does not auto-dispose
     // after the component is destroyed (memory leak!)
     watch(counter, () => console.log(counter.value * 2))
   }
@@ -92,10 +92,10 @@ export function mountComponent(component) {
 
   // hooks called inside the `setup()` will have
   // the `currentInstance` as the context
-  component.setup() 
+  component.setup()
 
   // restore the previous instance
-  currentInstance = prev 
+  currentInstance = prev
 }
 ```
 
@@ -124,8 +124,8 @@ The implementation would work based on the fact that JavaScript is **single-thre
 
 ```ts
 currentInstance = instance
-component.setup() 
-currentInstance = prev 
+component.setup()
+currentInstance = prev
 ```
 
 The situation changes when the `setup()` is asynchronous. Whenever you `await` a promise, you can think the engine paused the works here and went to do another task. If we `await` the function, during the time period, multiple components creation will change the global variable unpredictably and end up with a mess.
@@ -133,7 +133,7 @@ The situation changes when the `setup()` is asynchronous. Whenever you `await` a
 ```ts
 currentInstance = instance
 await component.setup() // atomic lost
-currentInstance = prev 
+currentInstance = prev
 ```
 
 If we don't use `await` to check the instance, calling the `setup()` function will make it finish the tasks before the first `await` statement, and the rest will be executed whenever the `await` statement is resolved.
@@ -151,6 +151,8 @@ console.log(3)
 setup()
 console.log(4)
 ```
+
+<!-- eslint-skip -->
 
 ```ts
 // output:
@@ -288,9 +290,9 @@ export default {
   async setup() {
     let __temp, __restore
 
-    const post =
-      (([__temp, __restore] = withAsyncContext(() =>
-        fetch(`/api/post/1`).then((r) => r.json())
+    const post
+      = (([__temp, __restore] = withAsyncContext(() =>
+        fetch(`/api/post/1`).then(r => r.json())
       )),
       (__temp = await __temp),
       __restore(),

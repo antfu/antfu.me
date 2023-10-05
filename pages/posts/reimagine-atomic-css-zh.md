@@ -100,7 +100,7 @@ John Polacek 在 [文章 Let’s Define Exactly What Atomic CSS is](https://css-
 为了实现这一点，Windi CSS 和 Tailwind JIT 都采用了预先扫描源代码的方式。下面是一个简单示例：
 
 ```ts
-import { promises as fs } from 'fs'
+import { promises as fs } from 'node:fs'
 import glob from 'fast-glob'
 
 // 通常这个是可以配置的
@@ -340,7 +340,7 @@ variants: [
       return entries
     },
   }
-],
+]
 ```
 
 你可以参考 [文档](https://github.com/antfu/unocss#custom-variants) 了解更多细节。
@@ -534,7 +534,6 @@ export default {
         // 生成的 css 会作为一个虚拟模块供后续使用
         if (id === VIRTUAL_CSS_ID)
           return { code: await generate() }
-
       }
     }
   ]

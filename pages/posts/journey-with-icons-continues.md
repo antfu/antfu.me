@@ -234,7 +234,7 @@ export function MyComponent() {
   return (
     <div>
       <MdiAlarm />
-    <div/>
+    </div>
   )
 }
 ```
@@ -327,7 +327,7 @@ export default defineConfig({
 
 Here is your React component, and you are welcome :)
 
-```ts
+```tsx
 export function MyComponent() {
   return (
     <>

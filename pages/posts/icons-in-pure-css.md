@@ -60,7 +60,7 @@ It's indeed an interesting idea. However, this is more like an image instead of 
 Thanks again to [Iconify](https://iconify.design/), which unified 100+ icon sets with 10,000+ icons into [the consistent JSON format](https://github.com/iconify/collections-json). It allows us to get the SVG of any icon set by simply providing the collection and icon ids. The usage is like this:
 
 ```ts
-import { iconToSVG, getIconData } from '@iconify/utils'
+import { getIconData, iconToSVG } from '@iconify/utils'
 
 const svg = iconToSVG(getIconData('mdi', 'alarm'))
 // (this is not the exact API, simplified here for demo)
@@ -232,7 +232,7 @@ export default defineConfig({
     UnoCSS({
       // when `presets` is specified, the default preset will be disabled
       // so you could only use the pure CSS icons in addition to your
-      // existing app without polluting other CSS 
+      // existing app without polluting other CSS
       presets: [
         UnocssIcons({
           // options
