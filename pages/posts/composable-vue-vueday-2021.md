@@ -1,5 +1,6 @@
 ---
-title: Composable Vue - VueDay 2021
+title: Composable Vue 
+place: VueDay 2021
 description: Slides & transcript for my talk at VueDay 2021
 date: 2021-04-28T16:00:00.000+00:00
 lang: en

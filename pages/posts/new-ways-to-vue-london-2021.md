@@ -1,5 +1,6 @@
 ---
-title: New Ways to Vue - Vue London 2021
+title: New Ways to Vue
+place: Vue London 2021
 description: New Ways to Vue - Vue London 2021
 date: 2021-10-20T08:00:00.000+00:00
 lang: en

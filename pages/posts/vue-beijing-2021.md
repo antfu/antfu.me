@@ -1,5 +1,6 @@
 ---
-title: Develop with Vite - Vue Beijing
+title: Develop with Vite 
+place: Vue Beijing
 type: talk+blog
 date: 2021-03-28T16:00:00.000+00:00
 lang: en

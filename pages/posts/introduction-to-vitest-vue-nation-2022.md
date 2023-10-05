@@ -1,5 +1,6 @@
 ---
-title: Introduction to Vitest - Vue.js Nation 2022
+title: Introduction to Vitest
+place: Vue.js Nation 2022
 description: Introduction to Vitest - Vue.js Nation 2022
 date: 2022-01-26T08:00:00.000+00:00
 lang: en

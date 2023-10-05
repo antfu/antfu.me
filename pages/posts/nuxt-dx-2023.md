@@ -1,5 +1,6 @@
 ---
-title: Development Experience with Nuxt - Vue Amsterdam 2023
+title: Development Experience with Nuxt
+place: Vue Amsterdam 2023
 description: Development Experience with Nuxt - Vue Amsterdam 2023
 date: 2023-02-09
 lang: en

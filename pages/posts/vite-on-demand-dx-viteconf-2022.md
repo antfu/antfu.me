@@ -1,5 +1,6 @@
 ---
-title: Vite, the on-demand DX - ViteConf 2022
+title: Vite, the on-demand DX
+place: ViteConf 2022
 description: Vite, the on-demand DX - ViteConf 2022
 date: 2022-10-11T00:00:00.000+00:00
 lang: en

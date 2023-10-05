@@ -22,6 +22,7 @@ const routes: Post[] = router.getRoutes()
     recording: i.meta.frontmatter.recording,
     upcoming: i.meta.frontmatter.upcoming,
     redirect: i.meta.frontmatter.redirect,
+    place: i.meta.frontmatter.place,
   }))
 
 const posts = computed(() =>
@@ -124,6 +125,7 @@ function getGroupName(p: Post) {
               </span>
               <span v-if="route.duration" text-sm op40 ws-nowrap>· {{ route.duration }}</span>
               <span v-if="route.platform" text-sm op40 ws-nowrap>· {{ route.platform }}</span>
+              <span v-if="route.place" text-sm op40 ws-nowrap md:hidden>· {{ route.place }}</span>
               <span
                 v-if="route.lang === 'zh'"
                 align-middle flex-none
@@ -131,6 +133,9 @@ function getGroupName(p: Post) {
               >中文</span>
             </div>
           </li>
+          <div v-if="route.place" op50 text-sm hidden mt--2 md:block>
+            {{ route.place }}
+          </div>
         </component>
       </div>
     </template>

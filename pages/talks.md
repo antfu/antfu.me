@@ -3,9 +3,6 @@ title: Talks - Anthony Fu
 display: ''
 plum: true
 items:
-  - title: 'ViteConf 2023 / TBA'
-    date: '2023-10-05'
-    path: 'https://viteconf.org/23/'
   - title: 'Nuxt Nation 2023 / TBA'
     date: '2023-10-18'
     path: 'https://nuxtnation.com/'

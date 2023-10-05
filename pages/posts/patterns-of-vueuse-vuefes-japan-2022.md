@@ -1,5 +1,6 @@
 ---
-title: Patterns of VueUse - Vue Fes Japan 2022
+title: Patterns of VueUse
+place: Vue Fes Japan 2022
 description: Patterns of VueUse - Vue Fes Japan 2022
 date: 2022-10-16T00:00:00.000+00:00
 lang: en

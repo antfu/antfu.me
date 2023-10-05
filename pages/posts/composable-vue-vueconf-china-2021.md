@@ -1,5 +1,6 @@
 ---
-title: 可组合的 Vue - VueConf China 2021
+title: 可组合的 Vue
+place: VueConf China 2021
 description: Slides of my talk at VueConf China 2021
 date: 2021-05-22T08:00:00.000+00:00
 lang: zh

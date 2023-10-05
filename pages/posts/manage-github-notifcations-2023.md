@@ -1,5 +1,6 @@
 ---
 title: How I Manage GitHub Notifications
+place: GitHub Maintainer Summit 2023
 description: Manage GitHub Notifications - GitHub Maintainer Summit 2023
 date: 2023-05-17
 lang: en

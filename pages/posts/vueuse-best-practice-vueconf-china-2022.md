@@ -1,5 +1,6 @@
 ---
-title: VueUse 最佳实践 - VueConf China 2022
+title: VueUse 最佳实践
+place: VueConf China 2022
 description: VueUse 最佳实践 - VueConf China 2022
 date: 2022-12-10T00:00:00.000+00:00
 lang: zh
