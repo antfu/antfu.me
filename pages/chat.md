@@ -16,6 +16,6 @@ I want to keep the conversation easy, open, and accessible. Come prepared with s
 
 ## Consultancy
 
-If there is the need to tackle more complex questions or in-depth discussions that may require a longer time frame. If needed, I'm happy to do an hour consultancy call to help.
+If there is the need to tackle more complex questions or in-depth discussions that may require a longer time frame. If needed, I'm happy to do an hour consultancy call for free to help.
 
 <CalCom link="dfmichelangelo/consult" title="Schedule a consultation" />
