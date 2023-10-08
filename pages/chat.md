@@ -12,7 +12,7 @@ If you're curious about delving into electronic trading but feel uncertain about
 
 I want to keep the conversation easy, open, and accessible. Come prepared with some initial research and questions in mind. I am looking forward have a short while meaningful chat with you.
 
-<CalCom link="dfmichelangelo/quick-chat" title="Book a 10 minutes chat" />
+<CalCom link="dfmichelangelo/quick-chat" title="Book a 30 minutes chat" />
 
 ## Consultancy
 
