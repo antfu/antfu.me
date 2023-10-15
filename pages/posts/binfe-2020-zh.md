@@ -377,7 +377,7 @@ function MyCounter(props) {
 
   return (
     <div>
-      <div>{counter} x 2 = {doubled}</div>
+      <div>{`${counter} x 2 = ${doubled}`}</div>
       <button onClick={inc}>Increase</button>
     </div>
   )

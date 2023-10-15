@@ -140,11 +140,13 @@ import FaBeer from '~icons/fa/beer'
 import TearsOfJoy from '~/icons/twemoji/face-with-tears-of-joy'
 
 export function MyComponent() {
-  return (<>
-    <MdiAlarm />
-    <FaBeer style="color: orange"/>
-    <TearsOfJoy/>
-  </>)
+  return (
+    <>
+      <MdiAlarm />
+      <FaBeer style="color: orange" />
+      <TearsOfJoy />
+    </>
+  )
 }
 ```
 
@@ -332,7 +334,7 @@ export function MyComponent() {
   return (
     <>
       <IconMdiAlarm />
-      <IconFaBeer style="color: orange"/>
+      <IconFaBeer style="color: orange" />
     </>
   )
 }
