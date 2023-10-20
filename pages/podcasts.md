@@ -90,6 +90,11 @@ items:
     lang: 'zh'
     video: true
     radio: true
+  - title: 'Web Worker - 和 Anthony Fu 聊技术开源、共建协作和前端思考'
+    date: '2023-10-20'
+    path: 'https://podcast.webworker.tech/38'
+    lang: 'zh'
+    radio: true
 ---
 
 <SubNav />
