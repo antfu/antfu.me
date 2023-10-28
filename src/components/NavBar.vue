@@ -55,7 +55,7 @@ const { y: scroll } = useWindowScroll()
           <div i-ri-user-heart-line />
         </RouterLink>
         <a href="https://twitter.com/antfu7" target="_blank" title="Twitter" class="lt-md:hidden">
-          <feather-twitter />
+          <FeatherTwitter />
         </a>
         <a href="https://github.com/antfu" target="_blank" title="GitHub" class="lt-md:hidden">
           <div i-uil-github-alt />
@@ -63,7 +63,7 @@ const { y: scroll } = useWindowScroll()
         <a href="/feed.xml" target="_blank" title="RSS" class="lt-md:hidden">
           <div i-la-rss-square style="font-size:1.25rem; margin: 0 -0.125rem;" />
         </a>
-        <toggle-theme />
+        <ToggleTheme />
       </div>
     </nav>
   </header>
