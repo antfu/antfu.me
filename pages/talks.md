@@ -2,11 +2,11 @@
 title: Talks - Anthony Fu
 display: ''
 plum: true
-items:
-  - title: 'Vue Fes Japan 2023 / In Person / TBA'
-    date: '2023-10-25'
-    inperson: true
-    path: 'https://vuefes.jp/2023/'
+# items:
+#   - title: 'Vue Fes Japan 2023 / In Person / TBA'
+#     date: '2023-10-25'
+#     inperson: true
+#     path: 'https://vuefes.jp/2023/'
 ---
 
 <SubNav />
