@@ -114,6 +114,8 @@ We have done the most important APIs in `@vue/reactivity` now, which is `ref` `r
 
 Oh wait, we are missing the `watch` here!
 
+<!-- eslint-skip -->
+
 ```js
 import { watch } from '@vue/reactivity' // does NOT exist!
 ```

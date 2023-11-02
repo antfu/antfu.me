@@ -62,6 +62,8 @@ Inspired by [PurgeCSS](https://purgecss.com/), I made the tool called [PurgeIcon
 
 Along with [the Vite plugin](https://github.com/antfu/purge-icons/tree/main/packages/vite-plugin-purge-icons/README.md), you can simplify import this inline in your app's entry, and the icons you use will be bundled into your code and load them synchronously.
 
+<!-- eslint-skip -->
+
 ```ts
 import { createApp } from 'vue'
 import App from './App.vue'
