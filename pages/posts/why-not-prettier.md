@@ -86,14 +86,17 @@ It turns out, the setup configuration can also be very minimal:
 ```bash
 npm i -D @antfu/eslint-config
 ```
-```json
-// .eslintrc
-{
-  "extends": "@antfu"
-}
+
+```js
+// eslint.config.js
+import antfu from '@antfu/eslint-config'
+
+export default antfu({
+  // customizations
+})
 ```
 
-That's all you need. With the IDE extensions, it's also possible to trigger auto fixing on save. It works similarly to Prettier but respects your choices when to break the lines, with many best practices of linting. Oh, of course, it's also very opinionated towards my needs. But maybe, it could be a good reference for you to create your own version.
+That's all you need. With the IDE extensions, it's also possible to trigger auto fixing on save. It works similarly to Prettier but respects your choices when to break the lines, with many best practices of linting. It's also quite opinionated, but thanks to the [new Flat Config](https://eslint.org/docs/latest/use/configure/configuration-files-new), it gives you [the full control of customizations](https://github.com/antfu/eslint-config#customization) over every single bit that you want to change. Moreover, you can always fork it to make your own versions.
 
 > Sidenote: You might hear so voicing saying "Don't use ESLint for formatting" - [here are some discussions and a response from the ESLint team](https://github.com/eslint/eslint.org/issues/435), for you to make your own judgement.
 

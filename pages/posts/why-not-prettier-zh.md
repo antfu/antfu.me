@@ -94,14 +94,17 @@ Prettier 作为代码格式化程序，只关心代码风格而完全不关心�
 ```bash
 npm i -D @antfu/eslint-config
 ```
-```json
-// .eslintrc
-{
-  "extends": "@antfu"
-}
+
+```js
+// eslint.config.js
+import antfu from '@antfu/eslint-config'
+
+export default antfu({
+  // 自定义配置
+})
 ```
 
-这样就可以了。配合 IDE 扩展，还可以在保存时触发自动修复。它的工作方式与 Prettier 类似，但当你要换行的时候尊重你的选择，并提供了许多 lint 的最佳实践。哦！当然，这是基于我自己的需求的另一种 “固执己见的” 配置，但或许它可以成为一份很好的参考，方便你创建属于你自己的配置。
+这样就可以了。配合 IDE 扩展，还可以在保存时触发自动修复。它的工作方式与 Prettier 类似，但当你要换行的时候尊重你的选择，并提供了许多 lint 的最佳实践。当然，这是基于我自己的需求的另一种 “固执己见的” 配置，但得益于新的 [Flat Config](https://eslint.org/docs/latest/use/configure/configuration-files-new)，它可以让你拥有 [完全的控制权](https://github.com/antfu/eslint-config#customization) 来微调每个细节。此外，你也可以随时 fork 它来制作你自己的版本。
 
 > 注：你可能听到有人说 "不要使用 ESLint 进行格式化" - [这里有一些讨论和来自 ESLint 团队的回应](https://github.com/eslint/eslint.org/issues/435)，用于帮助你做出自己的判断。
 
