@@ -11,6 +11,8 @@ duration: 20min
 
 > Slides: [PDF](https://antfu.me/talks/2023-10-05) | [SPA](https://talks.antfu.me/2023/viteconf)
 >
+> Recording: [YouTube](https://www.youtube.com/watch?v=NJbCfAKtxUI)
+>
 > Made with <Slidev class="inline"/>  [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.
 
 
