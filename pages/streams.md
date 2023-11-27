@@ -98,6 +98,21 @@ items:
     path: 'https://www.bilibili.com/video/BV1eh4y1J75z'
     platform: Bilibili
     lang: 'zh'
+  - title: "Nuxt Playground 1 - Project Setup"
+    date: '2023-11-21'
+    path: 'https://www.youtube.com/watch?v=49WXr6kVBVI&list=PL4ETc_mXFfxUGiY852jH3ctljnI2e9Rax'
+    platform: YouTube
+    lang: 'en'
+  - title: "Nuxt Playground 2 - Nuxt Content & Resizable Panels"
+    date: '2023-11-21'
+    path: 'https://www.youtube.com/watch?v=mDjI1uR-s-M&list=PL4ETc_mXFfxUGiY852jH3ctljnI2e9Rax'
+    platform: YouTube
+    lang: 'en'
+  - title: "Nuxt Playground 3 - Pinia & Editor & Refactors"
+    date: '2023-11-21'
+    path: 'https://www.youtube.com/watch?v=B7JJP-vgImM&list=PL4ETc_mXFfxUGiY852jH3ctljnI2e9Rax'
+    platform: YouTube
+    lang: 'en'
 ---
 
 <SubNav />
