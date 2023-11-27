@@ -6,7 +6,7 @@ date: 2023-10-28T08:00:00.000+00:00
 lang: en
 inperson: true
 type: talk
-recording: true
+recording: false
 duration: 30min
 ---
 

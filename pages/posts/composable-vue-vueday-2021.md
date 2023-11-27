@@ -1,6 +1,7 @@
 ---
 title: Composable Vue 
 place: VueDay 2021
+placeLink: https://2021.vueday.it/
 description: Slides & transcript for my talk at VueDay 2021
 date: 2021-04-28T16:00:00.000+00:00
 lang: en
@@ -19,6 +20,9 @@ duration: 30min
 > 
 > Made with <Slidev class="inline"/>  [**Slidev**](https://github.com/slidevjs/slidev) - a slides maker for developers that I am working on recently.
 
+<YouTubeEmbed id="IMJjP6edHd0" />
+
+## Transcript
 
 My sharing today is Composable Vue, some pattens and tips that might be able to help you writing better composable logic in Vue.
 

@@ -1,6 +1,7 @@
 ---
 title: Development Experience with Nuxt
 place: Vue Amsterdam 2023
+placeLink: https://vuejs.amsterdam/
 description: Development Experience with Nuxt - Vue Amsterdam 2023
 date: 2023-02-09
 lang: en
@@ -9,14 +10,15 @@ recording: true
 duration: 25min
 ---
 
-> [**Vue Amsterdam 2023**](https://vuejs.amsterdam/)
-> 
 > Slides: [PDF](https://antfu.me/talks/2023-02-09) | [SPA](https://talks.antfu.me/2023/nuxt-devtools/)
 >
 > Recording: [YouTube](https://youtu.be/W6hhU-Ws2Rg) | [Bilibili (中文)](https://www.bilibili.com/video/BV1vx4y1V7VD)
 >
 > Made with <Slidev class="inline"/>  [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.
 
+<YouTubeEmbed id="W6hhU-Ws2Rg" />
+
+## Transcript
 
 Let's talk about Developer Experience. These years we have heard about Developer Experience more and more often. Frameworks have put a lot of effort into improving Developer Experience, to make our work more efficient and productive, and of course, a better experience. Here I'd like to divide the big concept into different parts and see what we have done to really make a difference from a framework's perspective.
 

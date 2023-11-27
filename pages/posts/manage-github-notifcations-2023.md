@@ -9,13 +9,13 @@ type: talk+blog
 duration: 20min
 ---
 
-> GitHub Maintainer Summit 2023
-> 
 > Slides: [PDF](https://antfu.me/talks/2023-05-17) | [SPA](https://talks.antfu.me/2023/github-notifications/)
 >
 > Recording: [YouTube](https://youtu.be/gu-0b6KCf80) | [哔哩哔哩](https://www.bilibili.com/video/BV1gz4y1b7kc/)
 >
 > Made with <Slidev class="inline"/>  [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.
+
+<YouTubeEmbed id="gu-0b6KCf80" />
 
 ## Transcript
 

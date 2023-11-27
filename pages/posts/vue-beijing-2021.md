@@ -15,8 +15,12 @@ duration: 18min
 > This is the transcript of my talk at [Vue Beijing](https://twitter.com/beijing_vue)
 >
 > Slides: [English ver.](https://antfu.me/talks/2021-03-28/en) | [中文 ver.](https://antfu.me/talks/2021-03-28/zh)
-> 
+>
 > Recording: [YouTube (English)](https://www.youtube.com/watch?v=xx8gEHet6n8)
+
+<YouTubeEmbed id="xx8gEHet6n8" />
+
+## Transcript
 
 I guess many of you have already heard about [Vite], as the next thing replacing other bundlers like Webpack. Well, it's actually not 100% true. While we are used to "Build with Webpack", and now, more precisely, we are **Developing with Vite**.
 

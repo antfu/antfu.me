@@ -93,6 +93,15 @@ onMounted(() => {
     >
       {{ formatDate(frontmatter.date, false) }} <span v-if="frontmatter.duration">· {{ frontmatter.duration }}</span>
     </p>
+    <p v-if="frontmatter.place" class="mt--4!">
+      <span op50>at </span>
+      <a v-if="frontmatter.placeLink" :href="frontmatter.placeLink" target="_blank">
+        {{ frontmatter.place }}
+      </a>
+      <span v-else font-bold>
+        {{ frontmatter.place }}
+      </span>
+    </p>
     <p
       v-if="frontmatter.subtitle"
       class="opacity-50 !-mt-6 italic slide-enter"

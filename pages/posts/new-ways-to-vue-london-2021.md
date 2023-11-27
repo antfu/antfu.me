@@ -1,7 +1,8 @@
 ---
 title: New Ways to Vue
-place: Vue London 2021
-description: New Ways to Vue - Vue London 2021
+place: Vue.js Live London 2021
+placeLink: https://vuejs.london/
+description: New Ways to Vue - Vue.js Live London 2021
 date: 2021-10-20T08:00:00.000+00:00
 lang: en
 type: talk
@@ -14,3 +15,5 @@ duration: 30min
 > Recording: [YouTube](https://youtu.be/CyaJLrqE9tc)
 >
 > Made with <Slidev class="inline"/>  [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.
+
+<YouTubeEmbed id="CyaJLrqE9tc" />
