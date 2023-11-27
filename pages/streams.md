@@ -124,4 +124,6 @@ items:
 
 </div>
 
+<StreamAnnouncement />
+
 <ListPosts :posts="frontmatter.items.reverse()" />

@@ -10,6 +10,8 @@ useEventListener('click', async (e) => {
     return
   if (first.tagName !== 'IMG')
     return
+  if (first.classList.contains('no-preview'))
+    return
   if (path.some(el => el instanceof HTMLElement && ['A', 'BUTTON'].includes(el.tagName)))
     return
   if (!path.some(el => el instanceof HTMLElement && el.classList.contains('prose')))
