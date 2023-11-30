@@ -68,5 +68,10 @@ export default defineConfig({
 
 Nuxt Content use [`remark`](https://github.com/remarkjs/remark) instead of `markdown-it`, so the plugin won't work yet. I will implement it later if there is demand.
 
+## Reference
+
+- [Commit of this blog post and setting it up](https://github.com/antfu/antfu.me/commit/72d8dc2fb70bf21582c42d9424337560a7edea6b)
+- [Proposal to VitePress for adding this by default](https://github.com/vuejs/vitepress/issues/3278)
+
 > [!IMPORTANT]
 > Thanks for reading! :)
