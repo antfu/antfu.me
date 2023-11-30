@@ -225,7 +225,7 @@ Object.defineProperty(clone, Symbol.iterator, {
 To me, it's meaningless if we could not get proper TypeScript support on this. Surprisingly, TypeScript support such usage almost out-of-box. Just simply use the [`&` operator](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html#intersection-types) to make insertion of the object and array type. Destructuring will properly infer the types in both usages.
 
 ```ts
-type Magic = { foo: string; bar: string } & [ string, string ]
+type Magic = { foo: string, bar: string } & [ string, string ]
 ```
 
 ## Take Away

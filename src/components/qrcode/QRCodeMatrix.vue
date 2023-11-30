@@ -3,10 +3,10 @@ const props = defineProps<{
   title?: string
   src: string
   xTitle: string
-  xScale: string[] | { min: number; max: number; step: number }
+  xScale: string[] | { min: number, max: number, step: number }
   xValue?: number
   yTitle: string
-  yScale: string[] | { min: number; max: number; step: number }
+  yScale: string[] | { min: number, max: number, step: number }
   yValue?: number
   xPadding?: [number, number]
   yPadding?: [number, number]
