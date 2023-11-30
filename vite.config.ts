@@ -13,6 +13,7 @@ import matter from 'gray-matter'
 import AutoImport from 'unplugin-auto-import/vite'
 import anchor from 'markdown-it-anchor'
 import LinkAttributes from 'markdown-it-link-attributes'
+import GitHubAlerts from 'markdown-it-github-alerts'
 import UnoCSS from 'unocss/vite'
 import SVG from 'vite-svg-loader'
 import { bundledLanguages, getHighlighter } from 'shikiji'
@@ -120,6 +121,8 @@ export default defineConfig({
           slugify,
           containerHeaderHtml: '<div class="table-of-contents-anchor"><div class="i-ri-menu-2-fill" /></div>',
         })
+
+        md.use(GitHubAlerts)
       },
       frontmatterPreprocess(frontmatter, options, id, defaults) {
         (() => {

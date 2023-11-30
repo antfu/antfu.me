@@ -103,6 +103,9 @@ devDependencies:
   markdown-it-anchor:
     specifier: ^8.6.7
     version: 8.6.7(@types/markdown-it@13.0.7)(markdown-it@13.0.2)
+  markdown-it-github-alerts:
+    specifier: ^0.1.0
+    version: 0.1.0(markdown-it@13.0.2)
   markdown-it-link-attributes:
     specifier: ^4.0.1
     version: 4.0.1
@@ -4650,6 +4653,14 @@ packages:
       markdown-it: '*'
     dependencies:
       '@types/markdown-it': 13.0.7
+      markdown-it: 13.0.2
+    dev: true
+
+  /markdown-it-github-alerts@0.1.0(markdown-it@13.0.2):
+    resolution: {integrity: sha512-dmk9xckHyM6zNbt9AaJDgbqCKzTspNJUOLSef6prMLwyiURRwqllyH9tGq+V5t9f/hLhLeCdMsr1P1uFOl8tWw==}
+    peerDependencies:
+      markdown-it: ^13.0.0
+    dependencies:
       markdown-it: 13.0.2
     dev: true
 

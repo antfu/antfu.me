@@ -46,6 +46,7 @@
     "lint-staged": "^15.1.0",
     "markdown-it": "^13.0.2",
     "markdown-it-anchor": "^8.6.7",
+    "markdown-it-github-alerts": "^0.1.0",
     "markdown-it-link-attributes": "^4.0.1",
     "markdown-it-table-of-contents": "^0.6.0",
     "picocolors": "^1.0.0",
