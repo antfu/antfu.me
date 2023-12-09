@@ -31,7 +31,7 @@ This solution works, but it only solves the problem partially. As the icons are 
 
 One of the core-concept of Vite is that everything is **on-demand**. Modules get transpiled only when they are being requested. In this way, the Vite server starts immediately without the need to bundle your entire app. Additionally, [Vite's plugin API](https://vitejs.dev/guide/api-plugin.html) is an extension on top of [Rollup's plugin system](https://rollupjs.org/guide/en/#plugin-development), which allows you to do some [custom transformations](https://rollupjs.org/guide/en/#transform) to the modules.
 
-So, if we think in Vite's way - maybe we could solve this at compile-time instead of client-side! By using [virtual modules](https://vitejs.dev/guide/api-plugin.html#importing-a-virtual-file), I was able to serve the icons as components **on-the-fly** and made it as 
+So, if we think in Vite's way - maybe we could solve this at compile-time instead of client-side! By using [virtual modules](https://vitejs.dev/guide/api-plugin.html#importing-a-virtual-file), I was able to serve the icons as components **on-the-fly** and made it as
 [`vite-plugin-icons`](https://github.com/antfu/unplugin-icons) (renamed to `unplugin-icons` later on).
 
 ```ts
@@ -69,7 +69,7 @@ function IconsPlugin() {
 
 And the usage will be like this:
 
-```html
+```vue
 <script setup>
 import MdiAlarm from '~icons/mdi/alarm'
 import FaBeer from '~icons/fa/beer'
@@ -78,8 +78,8 @@ import TearsOfJoy from '~/icons/twemoji/face-with-tears-of-joy'
 
 <template>
   <MdiAlarm />
-  <FaBeer style="color: orange"/>
-  <TearsOfJoy/>
+  <FaBeer style="color: orange" />
+  <TearsOfJoy />
 </template>
 ```
 
@@ -89,14 +89,13 @@ import TearsOfJoy from '~/icons/twemoji/face-with-tears-of-joy'
 <twemoji:face-with-tears-of-joy />
 </div>
 
-You might notice the usages are pretty similar to existing solutions like [React Icons](https://react-icons.github.io/react-icons/). However, most of them approaching this by compiling all the icons into multiple files and distribute them as npm packages. Not only does it ships additional bytes for every icon and increases the time for compilers to parsing them, that also means you are limited to what they have offered exclusively. 
+You might notice the usages are pretty similar to existing solutions like [React Icons](https://react-icons.github.io/react-icons/). However, most of them approaching this by compiling all the icons into multiple files and distribute them as npm packages. Not only does it ships additional bytes for every icon and increases the time for compilers to parsing them, that also means you are limited to what they have offered exclusively.
 
 With `unplugin-icons`, you can use any icons available in [Iconify](https://icones.js.org/) (which is 100+ icon sets with over 10,000 icons and continue growing) by the following convention:
 
 ```ts
 import Icon from '~icons/[collection]/[name]'
 ```
-
 
 You can learn more about the installation and usage on <GitHubLink repo="antfu/unplugin-icons" />
 
@@ -217,7 +216,7 @@ As you might notice, whenever you want to use an icon, you need to import it fir
 
 ###### Vue
 
-```html
+```vue
 <script setup>
 import MdiAlarm from '~icons/mdi/alarm'
 </script>
@@ -245,7 +244,7 @@ So yes, we might need a better way to do this.
 
 ### Auto-importing
 
-Inspired by <GitHubLink repo="nuxt/components" /> which registers components under your `./components` directory automatically, I made <GitHubLink repo="antfu/unplugin-vue-components" /> (yes, another unplugin!) do to compile-time components auto-importing on-demand. With the on-demand natural, we could even make the components resolving on-demand. What a perfect complement for our icon solution! 
+Inspired by <GitHubLink repo="nuxt/components" /> which registers components under your `./components` directory automatically, I made <GitHubLink repo="antfu/unplugin-vue-components" /> (yes, another unplugin!) do to compile-time components auto-importing on-demand. With the on-demand natural, we could even make the components resolving on-demand. What a perfect complement for our icon solution!
 
 `unplugin-vue-components` provide the options `resolvers` to provide custom functions to resolve where the components should be imported from.
 
@@ -277,15 +276,15 @@ export default defineConfig({
 
 Then we can use them directly in our templates, no more imports and repeats (and you can change the icons much easier as you don't need to update in three places):
 
-```html
+```vue
 <template>
   <!-- both PascalCase and dash-case are supported by Vue -->
   <IMdiAlarm />
-  <i-fa-beer style="color: orange"/>
+  <i-fa-beer style="color: orange" />
 </template>
 ```
 
-Isn't it perfect?! 
+Isn't it perfect?!
 
 Learn more: <GitHubLink repo="antfu/unplugin-vue-components" />
 
@@ -295,7 +294,7 @@ Learn more: <GitHubLink repo="antfu/unplugin-vue-components" />
 
 Oh, I almost forgot about it. Since JSX is more like plain JavaScript in some ways and JSX components are just functions or classes, the thing is actually a bit simpler. For that, we can use another unplugin I made - <GitHubLink repo="antfu/unplugin-auto-import" />.
 
-For some background here, `unplugin-auto-import` is a compile-time successor of <GitHubLink repo="antfu/vue-global-api" /> to improve DX of Vue Composition API (directly use of `ref`, `computed`, etc.). 
+For some background here, `unplugin-auto-import` is a compile-time successor of <GitHubLink repo="antfu/vue-global-api" /> to improve DX of Vue Composition API (directly use of `ref`, `computed`, etc.).
 
 With the expansion to a general auto-importing solution for any API sets, it's also possible to do auto-importing for JSX components. in `unplugin-auto-import`, we implement the same resolver interface for it.
 

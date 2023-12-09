@@ -66,6 +66,8 @@ The traditional way of making Atomic CSS is to provide all the CSS utilities you
 
 It will be compiled to:
 
+<!-- eslint-skip -->
+
 ```css
 .m-1 { margin: 0.25 rem; }
 .m-2 { margin: 0.5 rem; }
@@ -278,6 +280,8 @@ rules: [
 
 Whenever `m-1` is detected in users' codebase, the following CSS will be generated:
 
+<!-- eslint-skip -->
+
 ```css
 .m-1 { margin: 0.25rem; }
 ```
@@ -307,6 +311,8 @@ For example, with the usage:
 ```
 
 the corresponding CSS will be generated:
+
+<!-- eslint-skip -->
 
 ```css
 .m-100 { margin: 25rem; }
@@ -351,6 +357,8 @@ One thing worth mentioning is the default [`@unocss/preset-uno`](https://github.
 
 For example, both `ml-3` (Tailwind), `ms-2` (Bootstrap), `ma4` (Tachyons), `mt-10px` (Windi CSS) are valid.
 
+<!-- eslint-skip -->
+
 ```css
 .ma4 { margin: 1rem; }
 .ml-3 { margin-left: 0.75rem; }
@@ -372,6 +380,8 @@ Let's unleash the true power of UnoCSS:
 
 It turns your Tailwind code from this:
 
+<!-- eslint-skip -->
+
 ```html
 <button class="bg-blue-400 hover:bg-blue-500 text-sm text-white font-mono font-light py-2 px-4 rounded border-2 border-blue-200 dark:bg-blue-500 dark:hover:bg-blue-600">
   Button
@@ -381,7 +391,7 @@ It turns your Tailwind code from this:
 to:
 
 ```html
-<button 
+<button
   bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"
   text="sm white"
   font="mono light"
@@ -424,7 +434,9 @@ If you've ever read my previous post [Journey with Icons Continues](/posts/journ
 <!-- Sun in light mode, Moon in dark mode, from Carbon -->
 <button class="i-carbon-sun dark:i-carbon-moon" />
 <!-- Twemoji of laugh, turns to tear on hovering -->
-<div class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy" />
+<div
+  class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy"
+/>
 ```
 
 <div flex gap-2 text-4xl p-2 mt4>
@@ -437,7 +449,7 @@ If you've ever read my previous post [Journey with Icons Continues](/posts/journ
   <!-- Sun in light mode, Moon in dark mode, from Carbon -->
   <button class="i-carbon-sun dark:i-carbon-moon" @click="toggleDark()"/>
   <!-- Twemoji of laugh, turns to tear on hovering -->
-  <div class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy" /> 
+  <div class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy" />
   <div text-base my-auto flex><div i-carbon-arrow-left my-auto mr-1 /> Hover it</div>
 </div>
 
@@ -465,15 +477,21 @@ So UnoCSS took another aggressive step by not supporting preflights. Instead, it
 
 This also allows UnoCSS to have more possibilities on CSS Scoping. For example, we have an experimental `scoped-vue` mode on the Vite plugin to generate scoped styles for each component so you can safely ship them as a component library using atomic CSS without worry about conflicting with users' CSS. For example:
 
-```html
+```vue
 <template>
-  <div class="m-2 rounded"><slot></div>
-<template>
+  <div class="m-2 rounded">
+    <slot />
+  </div>
+</template>
 
 <!-- the following will be inject in the bundler -->
 <style scoped>
-.m-2{margin:0.5rem;}
-.rounded{border-radius:0.25rem;}
+.m-2 {
+  margin: 0.5rem;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
 </style>
 ```
 

@@ -139,10 +139,12 @@ function computed(getter) {
 
 那我们看一下我们怎么去实现这样一个功能。我们假设说 Dark Mode 已经在CSS层面上都做好了，也就是说我把 `dark` class 加上的时候，整个页面就会变成黑暗模式。那么我再提供一个按钮去给用户做切换。这个就是我们提供的模板的部分
 
-```html
+```vue
 <template>
-  <div :class='{dark}'>
-    <button @click='toggleDark'>Toggle</button>
+  <div :class="{ dark }">
+    <button @click="toggleDark">
+      Toggle
+    </button>
   </div>
 </template>
 ```
@@ -151,19 +153,19 @@ function computed(getter) {
 
 那么在 Options API 里面，非常的简单，我们可以这样实现：
 
-```html
+```vue
 <script>
 export default {
   data() {
     return {
-      dark: false
+      dark: false,
     }
   },
   methods: {
     toggleDark() {
       this.dark = !this.dark
-    }
-  }
+    },
+  },
 }
 </script>
 ```
@@ -176,15 +178,22 @@ export default {
 
 那么为了实现这样一个功能的话，在 Options API 里面我们需要在需要将 `media` 暴露在 Vue 实例上，然后在 `created` 中进行事件的绑定，同时在 `destroyed` 的时候再把这个事件监听注销。
 
-```html
+```vue
 <script>
 // Options API
 export default {
   data() {
     return {
       dark: false,
-      media: window.matchMedia('(prefers-color-scheme: dark)')
+      media: window.matchMedia('(prefers-color-scheme: dark)'),
     }
+  },
+  created() {
+    this.media.addEventListener('change', this.update)
+    this.update()
+  },
+  unmounted() {
+    this.media.removeEventListener('change', this.update)
   },
   methods: {
     toggleDark() {
@@ -192,15 +201,8 @@ export default {
     },
     update() {
       this.dark = this.media.matches
-    }
+    },
   },
-  created() {
-    this.media.addEventListener('change', this.update)
-    this.update()
-  },
-  destroyed() {
-    this.media.removeEventListener('change', this.update)
-  }
 }
 </script>
 ```
@@ -209,7 +211,7 @@ export default {
 
 然后因为在 Composition API 中，`setup()` 相当于 Options API 的 `created`，我们直接可以把 `addEventListener` 的直接写在 `setup()` 里面，对应的我们再通过一个生命周期的钩子 `OnUnmounted` 注销事件监听。
 
-```html
+```vue
 <script>
 // Composition API
 import { onUnmounted, ref } from 'vue'
@@ -219,8 +221,8 @@ export default {
     const media = window.matchMedia('(prefers-color-scheme: dark)')
     const dark = ref(media.matches)
 
-    const update = () => dark.value = media.matches
-    
+    const update = () => (dark.value = media.matches)
+
     media.addEventListener('change', update)
 
     onUnmounted(() => {
@@ -231,9 +233,9 @@ export default {
       dark,
       toggleDark() {
         dark.value = !dark.value
-      }
+      },
     }
-  }
+  },
 }
 </script>
 ```
@@ -347,7 +349,7 @@ useDevtoolsInspector({ counter })
 
 如果需要进行一些单元测试的话，大家可以去看看 @pikax 的这个关于 [单元测试同时兼容两个版本的文章](https://dev.to/pikax/how-to-test-your-library-for-vue-2-and-vue-next-42ao)。
 
-### Vue Reactivity 
+### Vue Reactivity
 
 我们聊一聊 `@vue/reactivity` 这个灵活的响应式的系统。这个包有一个非常大的卖点就是它是和 UI 或者说这个响应式系统是和 Vue 的组件模型结构的。那么这是尤大前段时间发的一篇推，它主要讲了就是说我们的响应式系统可以在不同的环境也在不同的框架上复用。也就是说你可以自己根据这个 Reactivity 写一套自己的框架，或者甚至你可以把它拿来用在 Node.js 或者是用在别的地方。
 

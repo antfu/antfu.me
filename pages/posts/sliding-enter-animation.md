@@ -26,12 +26,12 @@ If you go inspecting the source code of [paco.me](https://paco.me/), you will fi
 @keyframes enter {
   0% {
     opacity: 0;
-    transform: translateY(10px)
+    transform: translateY(10px);
   }
 
   to {
     opacity: 1;
-    transform: none
+    transform: none;
   }
 }
 
@@ -41,14 +41,14 @@ If you go inspecting the source code of [paco.me](https://paco.me/), you will fi
   --start: 0ms;
 }
 
-@media (prefers-reduced-motion:no-preference) {
+@media (prefers-reduced-motion: no-preference) {
   [data-animate] {
-    animation: enter .6s both;
+    animation: enter 0.6s both;
     animation-delay: calc(var(--stagger) * var(--delay) + var(--start));
   }
 }
 
-[data-animation-controller=false] [data-animate] {
+[data-animation-controller='false'] [data-animate] {
   animation: none;
 }
 ```
@@ -56,8 +56,8 @@ If you go inspecting the source code of [paco.me](https://paco.me/), you will fi
 And in the HTML usage, we have:
 
 ```html
-<p style="--stagger:1" data-animate>Block 1</p>
-<p style="--stagger:2" data-animate>Block 2</p>
+<p style="--stagger: 1" data-animate>Block 1</p>
+<p style="--stagger: 2" data-animate>Block 2</p>
 ```
 
 It defines a keyframe animation `enter` that slides the element up by 10px and fades, creating the gentle "floating" effect. The key point is the `animation-delay` property - assigning a different delay to each element/block, making them have the effect of enter one by one. Then, some CSS variables are used to make the the delay sequence easier to control.
@@ -94,6 +94,8 @@ So it should be something like this, where you can add `slide-enter-content` cla
 It all seems to make sense, but it actually **doesn't work**. The reason is that the `counter()` function returns a string instead of a number and currently there is no way to convert it to a number, in which the `calc()` function will fail to compute. There are some [discussions & proposals](https://github.com/w3c/csswg-drafts/issues/1026) about this, but it seems not going to happen very soon.
 
 So as a workaround, which also been posted in the previous link, we can use the `nth-child()` selector to achieve the same effect, manually:
+
+<!-- eslint-skip -->
 
 ```css
 .slide-enter-content > * {

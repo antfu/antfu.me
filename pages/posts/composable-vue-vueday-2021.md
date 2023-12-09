@@ -1,5 +1,5 @@
 ---
-title: Composable Vue 
+title: Composable Vue
 place: VueDay 2021
 placeLink: https://2021.vueday.it/
 description: Slides & transcript for my talk at VueDay 2021
@@ -15,10 +15,10 @@ duration: 30min
 > This is the transcript of my talk **Composable Vue** at [VueDay 2021](https://2021.vueday.it/)
 >
 > Slides: [PDF](https://antfu.me/talks/2021-04-29) | [SPA](https://talks.antfu.me/2021/composable-vue)
-> 
+>
 > Recording: [YouTube](https://youtu.be/IMJjP6edHd0)
-> 
-> Made with <Slidev class="inline"/>  [**Slidev**](https://github.com/slidevjs/slidev) - a slides maker for developers that I am working on recently.
+>
+> Made with <Slidev class="inline"/> [**Slidev**](https://github.com/slidevjs/slidev) - a slides maker for developers that I am working on recently.
 
 <YouTubeEmbed id="IMJjP6edHd0" />
 
@@ -34,17 +34,17 @@ It all started with me made this project called VueUse, which is a collection of
 
 In today's talk, I will share with you the patterns and tips that I have learned during developing VueUse and using it to make apps in Composition API.
 
-## Composition API 
+## Composition API
 
 Let's have a quick look at the Composition API itself. BTW, please note today's talk will be a little bit advanced, which I would assume you already have a basic knowledge of what the Vue Composition API is. But don't worry if you don't, I believe you will still get some basic images of the methodology and you can also find the slides and transcript on my site after the talk.
 
 ### Ref vs Reactive <MarkerCore/>
 
-Well, let's start with Ref and Reactive. I bet many of you have wondered the difference between them and which one should you choose. 
+Well, let's start with Ref and Reactive. I bet many of you have wondered the difference between them and which one should you choose.
 
 You can think refs as variables and reactives as objects. When you do the assignment, one is assigning "value" while the other one is assigning properties. While the usage of them can really dependents on what you gonna use them, but if we really need to pick one from them, I'd say go with `ref` whenever you can.
 
-With `ref`, you will need to use `.value` to access and assigning values, but this also gives you more explicit awareness of when you are tracking and triggering the reactivity system. 
+With `ref`, you will need to use `.value` to access and assigning values, but this also gives you more explicit awareness of when you are tracking and triggering the reactivity system.
 
 <!--eslint-skip-->
 
@@ -88,7 +88,7 @@ watch(counter, (count) => {
 
 The `watch` function accepts ref as the watch source directly, and it will return the unwrapped new value of the ref in the callback. So in this case, there is zero `.value` needed.
 
-```html
+```vue
 <template>
   <button @click="counter += 1">
     Counter is {\{ counter }}
@@ -110,7 +110,7 @@ And whenever you feel like to better work with objects, you can pass the ref int
 
 ### `unref` - Oppsite of Ref <MarkerCore />
 
-`unref` is another Composition API I would like to introduce. As the name `unref` sounds, it's kinda the opposite of ref. While the `ref()` function takes a value and turns it into a ref, `unref()` takes a ref and returns its value. 
+`unref` is another Composition API I would like to introduce. As the name `unref` sounds, it's kinda the opposite of ref. While the `ref()` function takes a value and turns it into a ref, `unref()` takes a ref and returns its value.
 
 ```ts
 function unref<T>(r: Ref<T> | T): T {
@@ -141,7 +141,6 @@ That's the tips for using ref and reactive. Here I'd like to share with you some
 So what's composable functions?
 
 It's actually kind of hard to give a proper definition, but I'd think it's like sets for reusable logic to make your code better organized, and separate the concerns.
-
 
 ```ts
 export function useDark(options: UseDarkOptions = {}) {
@@ -254,7 +253,6 @@ type MaybeRef<T> = Ref<T> | T
 
 Here is a simple TypeScript's type helper called `MaybeRef` that we have used a lot in VueUse. It's a union of generic `T` and `Ref<T>`.
 
-
 ```ts
 export function useTimeAgo(
   time: Date | number | string | Ref<Date | number | string>,
@@ -311,7 +309,6 @@ name.value = 'Hi' // Hi - World
 
 Here you can see, I constructed a computed with a ref, when I change the source ref, the computed get re-evaluated so as the page's title.
 
-
 ### `useTitle` <Marker class="text-blue-400">Case</Marker>
 
 You must be wondering how could this be implemented. Let's take a look at a simplified version of it.
@@ -348,7 +345,6 @@ Here, we utilized an interesting behavior of the ref function.
 
 Similar to `unref` - `ref` also checks whether the passed value is ref or not. If you passed a ref to it, it will it as-is - since it's already a ref, there is no need to make another.
 
-
 ```ts
 const foo = ref(1) // Ref<1>
 const bar = ref(foo) // Ref<1>
@@ -372,7 +368,7 @@ This could also be extremely useful in composable functions that take `MaybeRef`
 
 ### `ref` / `unref`
 
-Let's do a quick summary so far. 
+Let's do a quick summary so far.
 
 - `MaybeRef<T>` works well with `ref` and `unref`.
 - Use `ref()` when you want to normalized it as a Ref.
@@ -391,7 +387,7 @@ We can use `MaybeRef` in arguments to make the function flexible, and use `ref()
 
 ### Object of Refs <MarkerPattern />
 
-Another pattern today is to use objects of refs. When you need to return multiple data entries in a composable function, consider returns an object composed by refs. 
+Another pattern today is to use objects of refs. When you need to return multiple data entries in a composable function, consider returns an object composed by refs.
 
 ```ts
 import { reactive, ref } from 'vue'
@@ -437,7 +433,7 @@ This can make your apps take the time to handle other stuff while waiting for th
 
 ### `useFetch` <Marker class="text-blue-400">Case</Marker>
 
-The implementation can be simplified down to this, all you have to do is to assign the value to `ref` when the promise got resolved. 
+The implementation can be simplified down to this, all you have to do is to assign the value to `ref` when the promise got resolved.
 
 ```ts
 export function useFetch<R>(url: MaybeRef<string>) {
@@ -558,7 +554,7 @@ And in the child component, we can use the `inject` function with the key as wel
 
 ### Shared State <MarkerPattern />
 
-With the flexibility of Vue's Composition API, sharing state is actually quite simple. 
+With the flexibility of Vue's Composition API, sharing state is actually quite simple.
 
 ```ts
 // shared.ts
@@ -571,7 +567,6 @@ export const state = reactive({
 ```
 
 You can declare some ref or reactive state in a js module, and import them to your components. Since they are using the same instance, the state will be just in sync.
-
 
 ```ts
 // A.vue
@@ -635,7 +630,7 @@ If you have ever tried Vue Router v4, it actually uses a similar method to do th
 
 ### useVModel <MarkerTips />
 
-One last tip I'd like to share is a utility called `useVModel`. 
+One last tip I'd like to share is a utility called `useVModel`.
 
 ```ts
 export function useVModel(props, name) {
@@ -666,10 +661,9 @@ export default defineComponent({
 
 We can take a look at the code, you can see we used a writable computed. When accessing the value, we forward the value of props to it, and when writing, we emit out the update event automatically so you can use just like a normal ref.
 
-
-```html
+```vue
 <template>
-  <input v-model="value" />
+  <input v-model="value">
 </template>
 ```
 
@@ -682,7 +676,6 @@ Even more, we can actually bind into our children elements's `v-model` very easi
 That's all the tips and patterns I have for today.
 
 As you might think those are for Vue 3 only, but actually they also applies for Vue 2!
-
 
 ### `@vue/composition-api` <Marker class="text-teal-400">Lib</Marker>
 

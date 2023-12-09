@@ -60,7 +60,7 @@ methods.bar('foo', 'bar') // no error, the type of arguments becomes `any[]`
 ```
 
 We would not want to ask users to explicitly type `this` in every method in order to make the type checking works.
-So we will need another approach. 
+So we will need another approach.
 
 ### [`ThisType`](https://www.typescriptlang.org/docs/handbook/utility-types.html#thistypet)
 

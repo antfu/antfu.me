@@ -10,11 +10,11 @@ duration: 10min
 ---
 
 > [**ViteConf**](https://viteconf.org/)
-> 
+>
 > Slides: [PDF](https://antfu.me/talks/2022-10-11) | [SPA](https://talks.antfu.me/2022/vite-on-demand-dx/)
 >
 > Recording: [YouTube](https://youtu.be/qXZzXvyqPpc)
 >
-> Made with <Slidev class="inline"/>  [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.
+> Made with <Slidev class="inline"/> [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.
 
 <YouTubeEmbed id="qXZzXvyqPpc" />

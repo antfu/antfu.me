@@ -8,6 +8,7 @@ duration: 15min
 [[toc]]
 
 > **Update**: New blog posts
+>
 > - [👉 **Refining AI Generated QR Code**](/posts/ai-qrcode-refine)
 > - [📚 **Stable Diffusion QR Code 101**](/posts/ai-qrcode-101)
 
@@ -29,7 +30,7 @@ So I started by trying Midjourney, it's super easy to use, very expressive, and 
 
 By the way, Inès has also delved into it and become quite good at it now, go check her work on her new Instagram account <span op75 i-ri-arrow-right-line /> [@a.i.nes](https://instagram.com/a.i.nes/).
 
-On my end, being a programmer with strong preferences, I would naturally seek for greater control over the process. This brought me to the realm of Stable Diffusion. I started with this guide: [*Stable Diffusion LoRA Models: A Complete Guide*](https://aituts.com/stable-diffusion-lora/). The benefit of being late to the party is that there are already a lot of tools and guides ready to use. Setting up the environment quite straightforward and luckily my M1 Max's GPU is supported.
+On my end, being a programmer with strong preferences, I would naturally seek for greater control over the process. This brought me to the realm of Stable Diffusion. I started with this guide: [_Stable Diffusion LoRA Models: A Complete Guide_](https://aituts.com/stable-diffusion-lora/). The benefit of being late to the party is that there are already a lot of tools and guides ready to use. Setting up the environment quite straightforward and luckily my M1 Max's GPU is supported.
 
 ## QR Code Image
 
@@ -47,7 +48,7 @@ My goal was to generate a QR code image that directs to my website while element
 
 I pretty much follows [Stable Diffusion LoRA Models: A Complete Guide](https://aituts.com/stable-diffusion-lora/) to install the web ui [AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui), download models you are interested in from [CivitAI](https://civitai.com/models), etc. As a side note, I found that the user experience of the web ui is not super friendly, some of them I guess are a bit architectural issues that might not be easy to improve, but luckily I found a pretty nice theme [canisminor1990/sd-webui-kitchen-theme](https://github.com/canisminor1990/sd-webui-kitchen-theme) that improves a bunch of small things.
 
-In order to use ControlNet, you will also need to install the [Mikubill/sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet) extension for the web ui. 
+In order to use ControlNet, you will also need to install the [Mikubill/sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet) extension for the web ui.
 
 Then you can download the [QR Pattern Controlnet Model](https://civitai.com/models/90940/controlnet-qr-pattern-qr-codes), putt the two files (`.safetensors` and `.yaml`) under `stable-diffusion-webui/models/ControlNet` folder, and restart the web ui.
 
@@ -84,7 +85,7 @@ Then we need to go the ControlNet section, and upload the QR code image we gener
 
 ![](/images/ai-qrcode-controlnet-config.png)
 
-Then you can start to generate a few images  and see if it met your expectations. You will also need to check if the generated image is scannable, if not, you can tweak the **Start controling step** and **End controling step** to find a good balance between stylization and QRCode-likeness.
+Then you can start to generate a few images and see if it met your expectations. You will also need to check if the generated image is scannable, if not, you can tweak the **Start controling step** and **End controling step** to find a good balance between stylization and QRCode-likeness.
 
 ### 4. I'm feeling lucky!
 

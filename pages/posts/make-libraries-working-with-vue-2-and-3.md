@@ -12,11 +12,11 @@ Today, Evan has announced that the first RC of Vue 3 [will be released in mid-Ju
 
 The most simple way is to write universal code that works in both versions without any additional modification, just like people would do for [Python 2 and 3](https://python-future.org/compatible_idioms.html). Simple does not mean it's easy. Write such components requires you to avoid **things that newly introduced in Vue 3** and **things that deprecated from Vue 2**. In other words, you can't use:
 
-* Composition API
-* `.sync` `.native` modifiers
-* Filters
-* [3rd-parties vendor objects](/posts/vue-3-notes#-use-markraw-for-vendor-objects)
-* etc. (let me know if I missed anything and I will update the list)
+- Composition API
+- `.sync` `.native` modifiers
+- Filters
+- [3rd-parties vendor objects](/posts/vue-3-notes#-use-markraw-for-vendor-objects)
+- etc. (let me know if I missed anything and I will update the list)
 
 This just makes life harder and you can't benefit from the new awesome APIs in Vue 3.
 
@@ -30,7 +30,7 @@ The drawback of this is that you will need to maintain two codebases which doubl
 
 In [VueUse](https://github.com/antfu/vueuse), I wrote [some build scripts](https://github.com/antfu/vueuse/tree/main/scripts) to make the code imports from the target version's API while building. After that, I would need to publish two tags `vue2` `vue3` to distinguish different version supports. With this, I can wite the code once and make the library supports both Vue versions. The problem of it is that I need to build twice on each release and guide users to install with the corresponding plugin version (and manually install [`@vue/composition-api`](https://github.com/vuejs/composition-api) for Vue 2).
 
-***
+---
 
 It has been several months since I wrote VueUse. During this period, I am always trying to figure out a proper way to extract the logic from VueUse, so it can be reused and benefit other library authors. But after all, I still think it's just too complicated to be used in general.
 

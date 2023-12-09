@@ -17,7 +17,7 @@ Outside of programming, I enjoy doing photography and traveling. Some of my phot
 
 <div flex-auto />
 
-***
+---
 
 Find me on
 

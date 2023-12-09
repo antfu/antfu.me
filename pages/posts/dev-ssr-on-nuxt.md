@@ -56,7 +56,7 @@ If you are interested in learning more details about SSR and CSR, I recommend re
 
 ## SSR in Development
 
-In general, when talking about SSR, we commonly refer to a web server in production that can render the page into HTML upon every incoming request. While the performance gain from SSR seems to only matter to the end users, it's also vital to have SSR running in development.  
+In general, when talking about SSR, we commonly refer to a web server in production that can render the page into HTML upon every incoming request. While the performance gain from SSR seems to only matter to the end users, it's also vital to have SSR running in development.
 
 SSR improves the performance and UX and allows you to run server-specific logic, like fetching internal states or accessing databases. SSR in development ensures your app works consistently across development and production, helping identify bugs earlier.
 
@@ -296,6 +296,5 @@ In addition, `vite-node` powers [Histoire](https://histoire.dev/), a interactive
   </a>
   <div i-ri-question-line w-15 h-15 title="Yours?" op50 />
 </div>
-
 
 We are happy to see our work on Nuxt inspires and pushes the Vite ecosystem for more innovations and better tools. We are also eager to see what is comming next for the tools and integrations that built with "on-demand" philosophy in mind, providing better performance and developer experience.

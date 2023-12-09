@@ -71,14 +71,14 @@ Please note that this method may not always applicable. If the bug is not been a
 
 ### Reproducible Projects or Playgrounds
 
-> This section is ported from [*Please include a repro*](https://gist.github.com/Rich-Harris/88c5fc2ac6dc941b22e7996af05d70ff) by [Rich Harris](https://github.com/Rich-Harris). Also recommand watching [a more detailed explanation by Rich Harris](https://youtu.be/dB_YjuAMH3o?t=1376).
+> This section is ported from [_Please include a repro_](https://gist.github.com/Rich-Harris/88c5fc2ac6dc941b22e7996af05d70ff) by [Rich Harris](https://github.com/Rich-Harris). Also recommand watching [a more detailed explanation by Rich Harris](https://youtu.be/dB_YjuAMH3o?t=1376).
 
 In some cases, there will be a project-specific way to demonstrate problems – for example, [Rollup](http://rollupjs.org), [Svelte](https://svelte.technology/repl) and [Vue](https://sfc.vuejs.org/) all have dedicated REPLs. Use them!
 
 Often, it's not possible to illustrate the problem with a REPL. Here's what you do:
 
 1. Create a sample repo on GitHub or Stackblitz (or wherever)
-2. Demonstrate the problem, and nothing but the problem. Whittle it down to the *bare minimum* of code that reliably demonstrates the issue. Get rid of any dependencies that aren't *directly* related to the problem.
+2. Demonstrate the problem, and nothing but the problem. Whittle it down to the _bare minimum_ of code that reliably demonstrates the issue. Get rid of any dependencies that aren't _directly_ related to the problem.
 3. Install all your dependencies to `package.json`. If the maintainer can't clone the repo and do `npm install && npm run build` (or similar – see point 4) to see the problem, because the maintainer needs some globally installed CLI tool or whatever, that would make it harder to get to the bottom of the issue.
 4. Include instructions in the repo, along with a description of the expected and actual behaviour. Obviously the issue should include information about the bug as well, but it's really helpful if `README.md` includes that information, plus a link back to the issue. If there are any instructions beyond `npm install && npm run build`, they should go here.
 

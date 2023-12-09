@@ -24,7 +24,7 @@ I am also experimenting more possibility of Vue reactivity in other scenarios, f
 
 "reactive objects" returned by `ref()` or `reactive()` are actually [Proxies](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy). Those proxies will trigger some actions to track the changes on properties accessing or writing.
 
-For a simplified example, 
+For a simplified example,
 
 ```ts
 function reactive(target) {
@@ -255,6 +255,6 @@ Thanks for reading! And hope it is helpful for you to understand and better play
 
 <pre class="block language-bash">
 npm i <a href='https://github.com/antfu/vue-reactivity-watch' target='_blank'>@vue-reactivity/watch</a>
-</pre> 
+</pre>
 
 Have fun ;P

@@ -44,7 +44,7 @@ As we see, the animation is done by moving the dash on strokes, while my Logo is
 <img src="/images/animated-svg-logo-redraw.png" dark:invert-95 important-m0>
 </div>
 
-Manually adding the styles in the exported SVG, 
+Manually adding the styles in the exported SVG,
 
 ```css
 @media (prefers-reduced-motion) {
@@ -69,7 +69,8 @@ Manually adding the styles in the exported SVG,
   85% {
     stroke-dasharray: 350px 0;
   }
-  95%, to {
+  95%,
+  to {
     stroke-dasharray: 0 350px;
   }
 }

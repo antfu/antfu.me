@@ -44,7 +44,6 @@ However, I often found it hurting the readability and git diffing.
 
 Sometimes when you modify a string literal in JavaScript that may make the line a bit longer than the value of `printwidth`, Prettier will force wrapping the line. It breaks the inline diffing and make the changes hard to review. Imagine in another pull request, we might reduce the string a bit shorter, Prettier will then unwrap the lines back to one line. Back and forth, it creates a lot of unnecessary noises.
 
-
 The following image shows another example:
 
 <a href="https://prettier.io/playground/#N4Igxg9gdgLgprEAuc0DOMAEBXNcBOamAvJgNoA6UmmwOe+AkgCZKYCMANPQVAIYBbOGwogAggBsAZgEs4mAMJ98QiTJh9RmAL6cqNOrgIs2AJm5H8-ISJABxGf0wAlCGgAWfKFt37aPJlZMAGYLBmthTFEAZXdsAHNMADk+ACNsHz1qf0sTTAAWMN5BSNFnPncBL0wAMXw+Bky-QwY8gFYiqxLbABU3d3kAGQBPbFSEJuyW4yCANk6I22iCeJkIZJkJCCllSYBdAG4qEE4QCAAHGDWoNGRQZXwIAHcABWUEW5Q+CSe+YdvTql6mAANZwGDREqDRxwZA7CR4QHAsEQ858MCOeLIGD4bBwU5wATjZjMODMQZeeLYPjxOA1CAqPgwK5QLFfbAwCAnEDuGACCQAdXc6jgaDRYDgyxu6hkADd1MNkOA0ACQI4GDAXvV4lU4d9ESAAFZoAAe0UxEjgAEVsBB4HqEfiQGjCAQlak0nAJNzzvhHDABTJmDB3Mh8uZnY88AL6uclb7RQRZbDTgBHW3wLUXT4gBoAWigcDJZO5+Dg6ZkZa1NN1SHhBrwAhk2NxTrQFutGdhdf1To0qUDwdDSAjOL4m0xCggAlrIFFbW5Rh6aU+9adsrxjCgpNg0TAfsuYm30Rgw0tDrw2m0QA" target="_blank">
@@ -105,5 +104,3 @@ That's all you need. With the IDE extensions, it's also possible to trigger auto
 This post is only trying to explain my personal experience and opinions. Of course, you can have different views and don't need to agree with me at all. I am not blaming Prettier for this. Different tools have different purposes and focuses, and there is no better or worse. It's just about using the right tools for the right circumstances. I will still be a happy user of Prettier in usages that I don't need the maximum customizability, and using ESLint exclusively for my projects' source code.
 
 Hope this could make myself clear and maybe give you some insights. Cheers!
-
-

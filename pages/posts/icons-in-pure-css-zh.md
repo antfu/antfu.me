@@ -19,7 +19,7 @@ description: 纯 CSS 中的图标解决方案
 - 2020 年 8 月 - [图标探索之旅](/posts/journey-with-icons)
 - 2021 年 9 月 - [图标探索之旅后续](/posts/journey-with-icons-continues)
 - 2021 年 10 月 - [重新构想原子化 CSS](/posts/reimagine-atomic-css-zh)
-- 2021 年 11 月 - 聊聊纯 CSS 图标 - *你在这里！*
+- 2021 年 11 月 - 聊聊纯 CSS 图标 - _你在这里！_
 
 ## 现有方案
 
@@ -45,7 +45,7 @@ description: 纯 CSS 中的图标解决方案
 <div grid="~ cols-2">
 
 ```html
-<div class="my-icon"></div> 
+<div class="my-icon"></div>
 ```
 
 <div i-twemoji-grinning-face text-5xl my-auto mx-4 />

@@ -73,7 +73,7 @@ description: 关于最小重现之于开源的思考
 
 ### 可重现的项目
 
-> 这部分引用自 [Rich Harris](https://github.com/Rich-Harris) 的 [*Please include a repro*](https://gist.github.com/Rich-Harris/88c5fc2ac6dc941b22e7996af05d70ff)
+> 这部分引用自 [Rich Harris](https://github.com/Rich-Harris) 的 [_Please include a repro_](https://gist.github.com/Rich-Harris/88c5fc2ac6dc941b22e7996af05d70ff)
 
 在某些情况下，一些项目会提供专门的 REPL - 例如：[Rollup](http://rollupjs.org)、[Svelte](https://svelte.technology/repl) 和[Vue](https://sfc.vuejs.org/) 等，你可以使用它们提供重现。
 

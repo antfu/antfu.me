@@ -1,5 +1,5 @@
 ---
-title: Develop with Vite 
+title: Develop with Vite
 place: Vue Beijing
 type: talk+blog
 date: 2021-03-28T16:00:00.000+00:00
@@ -34,7 +34,7 @@ With the name of fast, it has to be fast. And it is.
 
 Let me show you a quick [demonstration of how fast it is](https://twitter.com/amasad/status/1355379680275128321). On the left-hand side, we have Create React App, and on the right we have Vite. And you can see during I am introducing to them, the Vite app is already ready and playable, while the other one just finishes installing its dependencies. In this demo, we can see we have over 4x faster boot-up speed improvement over Create React App, on the single component starter template. And actually, it's not even showing the full potential of Vite.
 
-So how could Vite be so fast? 
+So how could Vite be so fast?
 
 First, Vite is opinionated on providing better DX. It assumes that you are using modern browsers for development, so we don't need to have complex transpiling and polyfills involved. Also since your browser already understands Native ES module, we can even skip the bundling process and let the browser do it for us. We also involved with some optimizations to make it even faster, which I will go through them later.
 
@@ -52,7 +52,7 @@ With the support [esbuild], we are able to support JSX, TypeScript out-of-the-bo
 
 ### Dependencies Pre-bundling
 
-Another optimization of Vite is the dependencies pre-bundling. Normally, your dependencies do not change really often unless you are upgrading them, but on the other hand, your user code can change everyday. 
+Another optimization of Vite is the dependencies pre-bundling. Normally, your dependencies do not change really often unless you are upgrading them, but on the other hand, your user code can change everyday.
 
 So by treating the user code and dependencies differently, we pre bundles your dependencies into a single file standard ESM that can be understood by the browser. In this way, we ease out the difference of packages shipping different js formats like `cjs` or node favored modules. It also reduced HTTP request overhead and importing waterfall.
 
@@ -105,14 +105,14 @@ In Vue, writing the name of the component four times in order to import them is 
 
 From:
 
-```html
+```vue
 <script>
 import HelloWorld from './src/components/HelloWorld.vue'
 
 export default {
   components: {
-    HelloWorld
-  }
+    HelloWorld,
+  },
 }
 </script>
 
@@ -123,12 +123,11 @@ export default {
 
 To:
 
-```html
+```vue
 <template>
   <HelloWorld msg="Hello Vue 3.0 + Vite" />
 </template>
 ```
-
 
 ### [`vite-plugin-icons`](https://github.com/hannoeru/vite-plugin-icons) by [@antfu](https://github.com/antfu)
 
@@ -136,10 +135,10 @@ Another one is `vite-plugin-icons`. It allows you to use icons from any icon set
 
 It also works well with the component auto importing, and you can use them like magic.
 
-```html
+```vue
 <template>
-  <i-carbon-accessibility/>
-  <i-mdi-account-box style="font-size: 2em; color: red"/>
+  <i-carbon-accessibility />
+  <i-mdi-account-box style="font-size: 2em; color: red" />
 </template>
 ```
 
@@ -167,7 +166,7 @@ In the [awesome list], we have marked the compatibility for each plugin of the V
 
 Vite uses native ESM on both development and production, but if you want to enable legacy browsers that do not support ESM, no problem, we have it.
 
-There is an official plugin [`@vitejs/plugin-legacy`](https://github.com/vitejs/vite/tree/main/packages/plugin-legacy) that uses Babel and System JS to transform the modules for legacy support. 
+There is an official plugin [`@vitejs/plugin-legacy`](https://github.com/vitejs/vite/tree/main/packages/plugin-legacy) that uses Babel and System JS to transform the modules for legacy support.
 
 ```ts
 // vite.config.js
@@ -232,7 +231,7 @@ And [Storybook is also exploring the interchangeable engines for Vite and Snowpa
 
 ## Start Vite today!
 
-We are waiting for you to join our community and start playing with us! 
+We are waiting for you to join our community and start playing with us!
 
 Just firing up this command in your terminal to get the first impressions!
 

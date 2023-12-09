@@ -76,7 +76,6 @@ const isDark = useDark()
 const toggleDark = useToggle(isDark)
 ```
 
-
 ### Markdown
 
 After building Icônes, I started working on the [Codecember](http://codecember.ink/) project with [@octref](https://blog.matsu.io/about), an initiative of learning and creating generative arts in December. With the spirit of dogfooding, we chosen Vite for building the site. In Codecember we will need to have a prompt every day with some texts, code snippets, and demos. This comes with the problem that Vite does not have a plugin for handling markdown files at that moment, so of course, I made one myself.
@@ -96,7 +95,7 @@ Fight with them for a while you might be able to ease the misalignment eventuall
 Instead of dealing with the lengthy CSS theme, now you can have one in less than 20 lines of CSS variables. For example:
 
 ```css
-@import "prism-theme-vars/base.css";
+@import 'prism-theme-vars/base.css';
 
 :root {
   --prism-foreground: #393a34;
@@ -152,7 +151,6 @@ html.dark {
 
 That's all. You can also play with the themes in the [Playground](https://prism-theme-vars.netlify.app/) and make some your own within 5 mins. I created my first code theme in my life using it, which is also exactly what you are looking at :)
 
-
 ### Serve-Side Generatation (SSG)
 
 While Codecember is more like a site than an app, we would need to do some server-side generation to improve our [SEO](https://searchengineland.com/guide/what-is-seo). Read quite a lot of code from [VitePress](https://github.com/vuejs/vitepress), I came up with this plugin:
@@ -187,17 +185,17 @@ With the [@vueuse/head](https://github.com/vueuse/head) package made by [@egoist
 
 ```html
 <script setup>
-import { useHead } from '@vueuse/head'
+  import { useHead } from '@vueuse/head'
 
-useHead({
-  title: 'Website Title',
-  meta: [
-    {
-      name: 'description',
-      content: 'Website description',
-    },
-  ],
-})
+  useHead({
+    title: 'Website Title',
+    meta: [
+      {
+        name: 'description',
+        content: 'Website description',
+      },
+    ],
+  })
 </script>
 ```
 
@@ -233,5 +231,3 @@ Appreciation to my sponsors as well for supporting my works:
 And thank you for reading through!
 
 **This site is now open sourced at [antfu/antfu.me](https://github.com/antfu/antfu.me)**
-
-

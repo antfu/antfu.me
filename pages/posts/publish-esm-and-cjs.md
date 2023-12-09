@@ -135,7 +135,6 @@ Here is my go-to template of `package.json` using `tsup`:
 }
 ```
 
-
 ### unbuild
 
 If we say `tsup` is a minimal bundler for TypeScript, [`unbuild`](https://github.com/unjs/unbuild) by the [@unjs org](https://github.com/unjs) is a more generalized, customizable and yet powerful. `unbuild` is being used to bundle Nuxt 3 and it's sub packages.
@@ -192,7 +191,7 @@ Instead of the distribution of your code bundle, the dist files are now redirect
 
 Powered by [`mkdist`](https://github.com/unjs/mkdist) - another [@unjs](https://github.com/unjs) package - `unbuild` also handles static assets and file-to-file transpiling. Bundleless build allows you to keep the structure of your source code, made easy for importing submodules on-demand to optimizing performance and more.
 
-Config in `unbuild` will look like: 
+Config in `unbuild` will look like:
 
 ```ts
 // build.config.ts
@@ -218,11 +217,11 @@ One of the coolest features on this is that it handles `.vue` file out-of-box. F
 </template>
 
 <script lang="ts">
-const count: number | string = 0
+  const count: number | string = 0
 
-export default {
-  data: () => ({ count }),
-}
+  export default {
+    data: () => ({ count }),
+  }
 </script>
 ```
 
@@ -235,10 +234,10 @@ Notice that we are using TypeScript in the Vue file, when we do the build, the c
 </template>
 
 <script>
-const count = 0
-export default {
-  data: () => ({ count })
-}
+  const count = 0
+  export default {
+    data: () => ({ count }),
+  }
 </script>
 ```
 

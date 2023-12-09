@@ -12,7 +12,4 @@ duration: 30min
 
 > Slides: [PDF](https://antfu.me/talks/2023-10-28) | [SPA](https://talks.antfu.me/2023/vuefesjapan)
 >
-> Made with <Slidev class="inline"/>  [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.
-
-
-
+> Made with <Slidev class="inline"/> [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.

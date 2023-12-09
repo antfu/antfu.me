@@ -1,5 +1,5 @@
 ---
-title: Icons in Pure CSS 
+title: Icons in Pure CSS
 date: 2021-10-31T16:00:00Z
 lang: en
 duration: 10min
@@ -19,7 +19,7 @@ If you are interested in how I get here, there is an index of my previous post a
 - Aug. 2020 - [Journey with Icons](/posts/journey-with-icons)
 - Sep. 2021 - [Journey with Icons Continues](/posts/journey-with-icons-continues)
 - Oct. 2021 - [Reimagine Atomic CSS (The CSS Icons Preset)](/posts/reimagine-atomic-css#pure-css-icons)
-- Nov. 2021 - Icons in Pure CSS - *you are here!*
+- Nov. 2021 - Icons in Pure CSS - _you are here!_
 
 ## Prior Arts
 
@@ -45,7 +45,7 @@ With that, we could use any images inlined in CSS with a single class.
 <div grid="~ cols-2">
 
 ```html
-<div class="my-icon"></div> 
+<div class="my-icon"></div>
 ```
 
 <div i-twemoji-grinning-face text-5xl my-auto mx-4 />
@@ -250,4 +250,4 @@ export default defineConfig({
 
 And that's it for today. Hope you enjoy this icons solution from UnoCSS, or get some inspiration from it for your own projects.
 
-Thanks for reading, and see you :) 
+Thanks for reading, and see you :)

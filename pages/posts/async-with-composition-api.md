@@ -44,7 +44,7 @@ export default defineAsyncComponent({
 })
 ```
 
-After the `await` statement, 
+After the `await` statement,
 
 the following functions will be **limited** (no auto-dispose):
 
@@ -279,7 +279,7 @@ The way it works is to inject a script after each `await` statement for restorin
 
 ```html
 <script setup>
-const post = await fetch(`/api/post/1`).then((r) => r.json())
+  const post = await fetch(`/api/post/1`).then((r) => r.json())
 </script>
 ```
 

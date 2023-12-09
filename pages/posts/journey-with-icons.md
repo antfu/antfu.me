@@ -16,14 +16,14 @@ To solve the pain I faced in using icons for the web, I built the following tool
 
 #### Apps
 
-* [Icônes](https://github.com/antfu/icones) - Icon Explorer with Instant Fuzzy searching
-* [Iconify IntelliSense](https://github.com/antfu/vscode-iconify) - VS Code Extension for inline icon previewing
-* [Vitesse](https://github.com/antfu/vitesse) - An Opinionated Vite Starter Template
+- [Icônes](https://github.com/antfu/icones) - Icon Explorer with Instant Fuzzy searching
+- [Iconify IntelliSense](https://github.com/antfu/vscode-iconify) - VS Code Extension for inline icon previewing
+- [Vitesse](https://github.com/antfu/vitesse) - An Opinionated Vite Starter Template
 
 #### Tools
 
-* [PurgeIcons](https://github.com/antfu/purge-icons) - Bundles icons on demand
-* [SVG Packer](https://github.com/antfu/svg-packer) - Pack SVGs to Icon Fonts - In Browser
+- [PurgeIcons](https://github.com/antfu/purge-icons) - Bundles icons on demand
+- [SVG Packer](https://github.com/antfu/svg-packer) - Pack SVGs to Icon Fonts - In Browser
 
 Would be nice if you are willing to give them a try. As there are still a lot of works to be done, contributions are greatly welcome :)
 
@@ -95,7 +95,7 @@ By the power of Iconify, I can only ship with the icon IDs and leave the icon lo
 
 With Iconify's data collection, it can get access to all the 80+ icon sets within a single place.
 
-I also made a small utility called [SVG Packer](https://github.com/antfu/svg-packer) for Icônes. With it, you can select the icons you want and pack them into ready to used icon fonts. 
+I also made a small utility called [SVG Packer](https://github.com/antfu/svg-packer) for Icônes. With it, you can select the icons you want and pack them into ready to used icon fonts.
 
 ![](https://github.com/antfu/icones/raw/main/screenshots/5.png)
 
@@ -107,7 +107,7 @@ Try it out if you haven't. A fully-offline electron version is also coming soon.
 
 ## Editor Support
 
-Browsing and searching for icons are good to me now. Now comes to the editor integration. It's actually kinda hard to know what the icons look like from their IDs. Auto-completion for IDs is also a good feature I would love to have. 
+Browsing and searching for icons are good to me now. Now comes to the editor integration. It's actually kinda hard to know what the icons look like from their IDs. Auto-completion for IDs is also a good feature I would love to have.
 
 ### [Iconify IntelliSense](https://github.com/antfu/vscode-iconify) for VS Code
 
@@ -121,7 +121,7 @@ Auto-completion with icon preview is also available. By typing the icon set id a
 
 ### Journey is not ended
 
-These apps and tools solved my long pain with icons. I can focus on bringing ideas to life much more efficiently. I will call it a page for no. Howeverr, the journey is not yet ended. I am still passionate about exploring how the tooling for icons could go. And also, keep polishing these tools to make them easier to use and integrate. I wish they could benefit more developers and designers and make site building more simple and pleasant. 
+These apps and tools solved my long pain with icons. I can focus on bringing ideas to life much more efficiently. I will call it a page for no. However, the journey is not yet ended. I am still passionate about exploring how the tooling for icons could go. And also, keep polishing these tools to make them easier to use and integrate. I wish they could benefit more developers and designers and make site building more simple and pleasant.
 
 Glad if you found them useful to you as well. And thanks for reading XD.
 

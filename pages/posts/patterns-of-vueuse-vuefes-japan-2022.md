@@ -9,9 +9,7 @@ duration: 10min
 ---
 
 > [**Vue Fes Japan 2022**](https://vuefes.jp/2022/)
-> 
+>
 > Slides: [PDF](https://antfu.me/talks/2022-10-16) | [SPA](https://talks.antfu.me/2022/patterns-vueuse/)
 >
-> Made with <Slidev class="inline"/>  [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.
-
-
+> Made with <Slidev class="inline"/> [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.

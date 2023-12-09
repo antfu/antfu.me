@@ -23,25 +23,23 @@ this.codemirror = markRaw(CodeMirror.fromTextArea(el))
 
 I think this is a pretty tricky one. You won't see any warn or error on initialization, but the internal state of the vendor object might be messed up. You might face errors that comes from the libraries while couldn't find out why (the example above took me one hour of debugging to find out).
 
-
 ### 💫 `.sync` → `v-model:`
 
 `.sync` modifier is unified by `v-model:`
 
-```html
+```vue
 <!-- Vue 2 -->
-<Component name.sync="name"/>
+<Component name.sync="name" />
 
 <!-- Vue 3 -->
-<Component v-model:name="name"/>
+<Component v-model:name="name" />
 ```
 
 `v-model` on native element would be `value/input` while on custom components, it changed to `modelValue` and `update:modelValue`
 
-
 ### 💫 `shims-vue.d.ts`
 
-> Update: now you can use [`@vuedx/typescript-plugin-vue`](https://github.com/znck/vue-developer-experience/tree/main/packages/typescript-plugin-vue) for better type inference with SFC (no need for `shims-vue.d.ts` then) 
+> Update: now you can use [`@vuedx/typescript-plugin-vue`](https://github.com/znck/vue-developer-experience/tree/main/packages/typescript-plugin-vue) for better type inference with SFC (no need for `shims-vue.d.ts` then)
 
 Changed to this:
 

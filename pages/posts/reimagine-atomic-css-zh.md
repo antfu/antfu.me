@@ -72,6 +72,8 @@ John Polacek 在 [文章 Let’s Define Exactly What Atomic CSS is](https://css-
 
 编译结果为：
 
+<!-- eslint-skip -->
+
 ```css
 .m-1 { margin: 0.25 rem; }
 .m-2 { margin: 0.5 rem; }
@@ -282,6 +284,8 @@ rules: [
 
 当在用户代码库中检测到 `m-1` 时，就会生成如下 CSS：
 
+<!-- eslint-skip -->
+
 ```css
 .m-1 { margin: 0.25rem; }
 ```
@@ -311,6 +315,8 @@ rules: [
 ```
 
 就会生成相应的 CSS：
+
+<!-- eslint-skip -->
 
 ```css
 .m-100 { margin: 25rem; }
@@ -355,6 +361,8 @@ variants: [
 
 例如，`ml-3`（Tailwind），`ms-2`（Bootstrap），`ma4`（Tachyons），`mt-10px`（Windi CSS）均会生效。
 
+<!-- eslint-skip -->
+
 ```css
 .ma4 { margin: 1rem; }
 .ml-3 { margin-left: 0.75rem; }
@@ -376,6 +384,8 @@ variants: [
 
 它会把你的冗长的 Tailwind 代码（难以阅读与编辑）：
 
+<!-- eslint-skip -->
+
 ```html
 <button class="bg-blue-400 hover:bg-blue-500 text-sm text-white font-mono font-light py-2 px-4 rounded border-2 border-blue-200 dark:bg-blue-500 dark:hover:bg-blue-600">
   Button
@@ -385,7 +395,7 @@ variants: [
 变成：
 
 ```html
-<button 
+<button
   bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"
   text="sm white"
   font="mono light"
@@ -428,7 +438,9 @@ variants: [
 <!-- Sun in light mode, Moon in dark mode, from Carbon -->
 <button class="i-carbon-sun dark:i-carbon-moon" />
 <!-- Twemoji of laugh, turns to tear on hovering -->
-<div class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy" />
+<div
+  class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy"
+/>
 ```
 
 <div flex gap-2 text-4xl p-2 mt4>
@@ -441,7 +453,7 @@ variants: [
   <!-- Sun in light mode, Moon in dark mode, from Carbon -->
   <button class="i-carbon-sun dark:i-carbon-moon" @click="toggleDark()"/>
   <!-- Twemoji of laugh, turns to tear on hovering -->
-  <div class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy" /> 
+  <div class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy" />
   <div text-base my-auto flex><div i-carbon-arrow-left my-auto mr-1 /> 悬停在它上面</div>
 </div>
 
@@ -467,15 +479,21 @@ function toggleDark() {
 
 这也使得 UnoCSS 在 CSS 作用域上有了更多可能性。例如，我们在 Vite 插件上有一个实验性的 `scoped-vue` 模式，可以为每个组件生成作用域样式，你可以安全地使用原子化 CSS 作为组件库，而无需担心与用户的 CSS 发生冲突。比如：
 
-```html
+```vue
 <template>
-  <div class="m-2 rounded"><slot></div>
-<template>
+  <div class="m-2 rounded">
+    <slot />
+  </div>
+</template>
 
 <!-- 以下内容将被注入 bundler 中 -->
 <style scoped>
-.m-2{margin:0.5rem;}
-.rounded{border-radius:0.25rem;}
+.m-2 {
+  margin: 0.5rem;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
 </style>
 ```
 

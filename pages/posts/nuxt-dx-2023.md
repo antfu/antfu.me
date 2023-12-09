@@ -14,7 +14,7 @@ duration: 25min
 >
 > Recording: [YouTube](https://youtu.be/W6hhU-Ws2Rg) | [Bilibili (中文)](https://www.bilibili.com/video/BV1vx4y1V7VD)
 >
-> Made with <Slidev class="inline"/>  [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.
+> Made with <Slidev class="inline"/> [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.
 
 <YouTubeEmbed id="W6hhU-Ws2Rg" />
 
@@ -36,15 +36,15 @@ Combining all these tools, we are able to make your app reactive for any changes
 
 ---
 
-As a framework, Nuxt offers common practices built-in. 
+As a framework, Nuxt offers common practices built-in.
 
 TypeScript and ESM are supported out-of-box, thanks to Vite.
 
 Nuxt also makes it simple to build single-page application, server-side rendering, static site generation, or hybrid them per routes - using the same codebase isomorphically without any explicit setup.
 
-Then we provided the layout system, plugins, route middlewares, etc., to make the app creation easier and your codebase better organized. 
+Then we provided the layout system, plugins, route middlewares, etc., to make the app creation easier and your codebase better organized.
 
-On top of that, we also provided a few composable utilities like `useState` and `useAsyncData`, and SEO utilities like `useHead` and `useSeoMeta` to make states accessible across the server and client sides. 
+On top of that, we also provided a few composable utilities like `useState` and `useAsyncData`, and SEO utilities like `useHead` and `useSeoMeta` to make states accessible across the server and client sides.
 
 Not to mention we also have one of the best backend integrations. With Nitro, you can deploy your Nuxt app to any hosting service like Vercel, Netlify, Cloudflare, etc., with zero-config!
 
@@ -52,13 +52,13 @@ All of these features are trying to provide the common practice and sensible def
 
 ---
 
-And then to the cool part, we also introduced some conventions. 
+And then to the cool part, we also introduced some conventions.
 
-The first one is file-based routing, which allows you to have a multi-page app by simply creating the Vue component with the same structure in the filesystem. 
+The first one is file-based routing, which allows you to have a multi-page app by simply creating the Vue component with the same structure in the filesystem.
 
-Similarly, with the power of Nitro, we also have file-based server APIs, where you can create your serverless APIs in the same way as routing. 
+Similarly, with the power of Nitro, we also have file-based server APIs, where you can create your serverless APIs in the same way as routing.
 
-Then we add components auto-imports, components under the components folder will be directly available in any Vue file with the same name as their file name. And also, they will are code-splitted well. 
+Then we add components auto-imports, components under the components folder will be directly available in any Vue file with the same name as their file name. And also, they will are code-splitted well.
 
 And in Nuxt 3, we introduced compostables auto-import. It means you no longer need to type `import { ref } from 'vue'` in every component. APIs from Vue are directly available to you. 3rd party modules could also provide their custom composables to be auto-imported, and the same works for your local composables.
 
@@ -155,5 +155,3 @@ This is only something we have right now as a MVP. We see great potential on thi
 And so, the preview of Nuxt DevTools is open-sourced, right now! You can give it a star at <a href="https://github.com/nuxt/devtools" target="_blank"><span i-logos-nuxt-icon /> Nuxt Devtools</a> and find the instructions there for trying it in your Nuxt apps.
 
 That's all for my talk. Thank you!
-
-

@@ -14,6 +14,8 @@ The DNS forwarding feature just works the same, but it requires you to log in an
 
 The config is quite simple as usual, with just 3 DNS record:
 
+<!-- eslint-skip -->
+
 ```html
 MX   @  mx1.forwardemail.net  10
 MX   @  mx2.forwardemail.net  20

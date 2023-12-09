@@ -11,7 +11,6 @@ duration: 10min
 >
 > [知乎链接](https://zhuanlan.zhihu.com/p/373699761)
 
-
 最近偶尔逛逛知乎，看到不少提问关于如何开始做开源，亦或是如何把开源项目做得成功。我算是也是有过类似的疑惑很长一段时间，就想着，也许我可以来分享一些我在这个方面一些粗浅的看法。
 
 先是关于我，我是 Vue, Vite, wenyan-lang, WindiCSS, Intlify 的团队成员，也是 VueUse, Slidev, Type Challenges, i18n Ally 的作者，在个人的账号下也有一些零零碎碎的开源小工具，具体可以查看我的 [项目列表](https://antfu.me/projects)。从认真开始做开源到现在差不多两年多的时间，这些贡献虽然说不上多么了不起，但是却能够让我通过赞助，[全职进行开源的开发和维护](https://twitter.com/antfu7/status/1362676666221268995)。

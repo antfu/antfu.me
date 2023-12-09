@@ -37,7 +37,7 @@ The methods mentioned in this guide are **based on community research and experi
 
 ## How to Generate?
 
-There are a few online services you can try, but this guide will focus on doing it locally on our own. You will need the basic knowledge of Stable Diffusion and ControlNet, a computer with a GPU (or a cloud GPU instance) to start. 
+There are a few online services you can try, but this guide will focus on doing it locally on our own. You will need the basic knowledge of Stable Diffusion and ControlNet, a computer with a GPU (or a cloud GPU instance) to start.
 
 If you are new to Stable Diffusion, we recommend reading these guides to get started:
 
@@ -54,7 +54,7 @@ Generate an image with prompts, and use ControlNet with a QR Code input to inter
 - [Refining AI Generated QR Code](/posts/ai-qrcode-refine) - by Anthony Fu
 - [[Video] 二维码融合技术2.0](https://www.bilibili.com/video/BV1zF411R7xg/) - by 赛博迪克朗
 
-### Method B: **Image to Image** 
+### Method B: **Image to Image**
 
 Use a QR Code image as input, and let Stable Diffusion redraw each part of the QR Code. Doesn't require ControlNet.
 
@@ -90,7 +90,7 @@ All these approaches are viable. They are on a different balance between the art
 
 ### Scanners
 
-When the images are generated, we will use a QR Code scanner to verify if the code is scannable. 
+When the images are generated, we will use a QR Code scanner to verify if the code is scannable.
 
 If your goal is to make a more blended-in QR Code, and you are okay with the code not being scannable by all QR Code readers, it's better to use an error-tolerant scanner to verify. We recommend using iOS's code **scanner from the Control Center**, or the scanner from [WeChat](https://www.wechat.com/en/) to verify your QR Code. They are the most tolerant ones we found so far.
 
@@ -487,7 +487,6 @@ Similarly, this is a matrix testing samplers:
 
 We encourage you to try different prompts and models to find the best combination for your use case.
 
-
 <hr>
 
 <div border="~ rounded-full base" px3 py1 inline text-sm float-right>
@@ -496,7 +495,7 @@ We encourage you to try different prompts and models to find the best combinatio
 
 ### Non-Square Image
 
-To make the QR Code less obvious, you can try to generate a non-square image, leaving some extra space around the QR Code for the Stable Diffusion to be creative. With that, you can shift the focus of the viewers to the other parts of the image. 
+To make the QR Code less obvious, you can try to generate a non-square image, leaving some extra space around the QR Code for the Stable Diffusion to be creative. With that, you can shift the focus of the viewers to the other parts of the image.
 
 <figure>
   <img src="/images/ai-qrcode-101-non-square-example3.jpg" rounded shadow />
@@ -662,25 +661,17 @@ For example, you can see the following image is generated with both QR Code and 
   <QRCodeCompare scale-85 md:scale-100 h-80
     input="/images/ai-qrcode-101-openpose-qr.png"
     input2="/images/ai-qrcode-101-openpose-pose.png"
-    output="/images/ai-qrcode-101-openpose-output1.jpg" 
+    output="/images/ai-qrcode-101-openpose-output1.jpg"
   />
-<!-- 
-  <QRCodeCompare scale-85 md:scale-100 h-80
-    input="/images/ai-qrcode-101-openpose-qr.png"
-    input2="/images/ai-qrcode-101-openpose-pose.png"
-    output="/images/ai-qrcode-101-openpose-output2.jpg" 
-  /> -->
-
   <QRCodeCompare scale-85 md:scale-100 h-80 mt4
     input="/images/ai-qrcode-101-openpose-qr3.png"
     input2="/images/ai-qrcode-101-openpose-pose3.png"
-    output="/images/ai-qrcode-101-openpose-output4.png" 
+    output="/images/ai-qrcode-101-openpose-output4.png"
   />
-
   <QRCodeCompare scale-85 md:scale-100 h-80
     input="/images/ai-qrcode-101-openpose-qr2.png"
     input2="/images/ai-qrcode-101-openpose-pose2.png"
-    output="/images/ai-qrcode-101-openpose-output3.png" 
+    output="/images/ai-qrcode-101-openpose-output3.png"
   />
 </div>
 
@@ -698,7 +689,7 @@ Look deep into the [QR Code specification](https://en.wikipedia.org/wiki/QR_code
 
 ![](/images/ai-qrcode-101-qr-struct.png)
 
-Other than the position markers that are obvious to find, we can see there are also the **Version and Format information** around the position markers. Those information are quite important because it tells the scanner how to decode the QR Code properly. On the other hand, since the **Data area** has good error correction and duplications, it's actually fine for it to contain a few misalignment when needed. Now we realize that many QR Code that are not scannable are because those area are not distinguishable enough, causing the scanner to exit early before going into the actual data. 
+Other than the position markers that are obvious to find, we can see there are also the **Version and Format information** around the position markers. Those information are quite important because it tells the scanner how to decode the QR Code properly. On the other hand, since the **Data area** has good error correction and duplications, it's actually fine for it to contain a few misalignment when needed. Now we realize that many QR Code that are not scannable are because those area are not distinguishable enough, causing the scanner to exit early before going into the actual data.
 
 So, since the data points in a QR Code are **not equally important**, why would we control them equally? Maybe we could try to selective control different areas. Like increasing the control weight of the functional areas and decreasing the weight of the data area, to make the QR Code more scannable while being more artistic.
 
@@ -725,20 +716,21 @@ After a few tweaks, the result are surprisingly good. It's able to retain the re
   <QRCodeCompare scale-85 md:scale-100 h-100
     input="/images/ai-qrcode-101-selective-qr1.png"
     input2="/images/ai-qrcode-101-selective-qr2.png"
-    output="/images/ai-qrcode-101-selective-example1.jpg" 
+    output="/images/ai-qrcode-101-selective-example1.jpg"
   />
 
-  <QRCodeCompare scale-85 md:scale-100 h-100
+<QRCodeCompare scale-85 md:scale-100 h-100
     input="/images/ai-qrcode-101-selective-qr1.png"
     input2="/images/ai-qrcode-101-selective-qr2.png"
-    output="/images/ai-qrcode-101-selective-example2.jpg" 
+    output="/images/ai-qrcode-101-selective-example2.jpg"
   />
 
-  <QRCodeCompare scale-85 md:scale-100 h-100
+<QRCodeCompare scale-85 md:scale-100 h-100
     input="/images/ai-qrcode-101-selective-qr1.png"
     input2="/images/ai-qrcode-101-selective-qr2.png"
-    output="/images/ai-qrcode-101-selective-example3.jpg" 
+    output="/images/ai-qrcode-101-selective-example3.jpg"
   />
+
 </div>
 
 <hr>
@@ -778,7 +770,7 @@ For example, we could have this using the exact same methods we learned for gene
 </p>
 </details>
 
-You can click the image to see the full size. When you zoom in on the QR Code image, it can become challenging to distinguish the text from the background. However, when you zoom out significantly, the text becomes much clearer and easier to scan. This observation highlights an interesting aspect of human vision—our eyes are indeed excellent scanners. 
+You can click the image to see the full size. When you zoom in on the QR Code image, it can become challenging to distinguish the text from the background. However, when you zoom out significantly, the text becomes much clearer and easier to scan. This observation highlights an interesting aspect of human vision—our eyes are indeed excellent scanners.
 
 Similarly, we could combing with QR Code, or anything you can think of:
 
@@ -790,7 +782,6 @@ Similarly, we could combing with QR Code, or anything you can think of:
 <img src="/images/ai-qrcode-101-text-input2.png" rounded shadow important-mt0 />
 </p>
 </details>
-
 
 ## Contributing
 

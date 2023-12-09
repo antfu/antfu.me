@@ -21,7 +21,6 @@ So, I need to find a way to automate this, helping me to verify and refine the g
 
 <div i-ri-arrow-right-line /> <a href="https://qrcode.antfu.me/" target="_blank">Anthony's QR Code Toolkit</a>
 
-
 ## Generating the Base QR Code
 
 One thing I found quite important is that the generated QR Code we put in the ControlNet affects the image quite a lot. The basic square QR Code will lead to a more square-ish and blocky image. It's worth to try with dots, rounded, or other styled QR Codes to see if they can help to generate a better image.
@@ -36,7 +35,7 @@ So specifically for this need, I built a QR generator based on [QR Code Generato
 
 ![QR Code Generator](/images/ai-qrcode-refine-generate-1.png)
 
-It offers me the full capability of the generation process. You can change the error correction level, mask pattern, version of the QR Code, and rotation to **find** a good distribution of the black & white spots**. Also, it allows you to change the styles of the dots, or add some random noise to the border making the generated image more blended-in.
+It offers me the full capability of the generation process. You can change the error correction level, mask pattern, version of the QR Code, and rotation to **find** a good distribution of the black & white spots. Also, it allows you to change the styles of the dots, or add some random noise to the border making the generated image more blended-in.
 
 ![QR Code Generator with Custom Styles](/images/ai-qrcode-refine-generate-2.png)
 

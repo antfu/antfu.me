@@ -13,7 +13,7 @@ duration: 20min
 >
 > Recording: [YouTube](https://youtu.be/gu-0b6KCf80) | [哔哩哔哩](https://www.bilibili.com/video/BV1gz4y1b7kc/)
 >
-> Made with <Slidev class="inline"/>  [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.
+> Made with <Slidev class="inline"/> [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.
 
 <YouTubeEmbed id="gu-0b6KCf80" />
 
@@ -59,7 +59,7 @@ The second tip I would love to share is to group your notifications by repositor
 
 To do so, you will see there is a "Group by repository" button on the top right corner of the notifications inbox. Click it, it will now divide the notifications into different groups, and you can see the repository name on the top of each group.
 
-I found this is a huge time saver, as I can now focus on one repository at a time, and avoid doing context switching too often. You can then filter out the notifications for each repository easier.  
+I found this is a huge time saver, as I can now focus on one repository at a time, and avoid doing context switching too often. You can then filter out the notifications for each repository easier.
 
 ## 3. What to Focus
 

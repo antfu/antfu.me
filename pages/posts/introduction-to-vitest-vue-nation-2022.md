@@ -13,7 +13,6 @@ duration: 3min
 >
 > Recording: [YouTube](https://www.youtube.com/watch?v=CW9uTys0li0)
 >
-> Made with <Slidev class="inline"/>  [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.
-
+> Made with <Slidev class="inline"/> [**Slidev**](https://github.com/slidevjs/slidev) - presentation slides for developers.
 
 <YouTubeEmbed id="CW9uTys0li0" />

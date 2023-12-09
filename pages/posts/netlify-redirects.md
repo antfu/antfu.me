@@ -12,10 +12,10 @@ On [Netlify](https://netlify.com), you can setup multiple domains for a site. Wh
 
 ```toml
 [[redirects]]
-  from = "https://vueuse.netlify.app/*"
-  to = "https://vueuse.org/:splat"
-  status = 301
-  force = true
+from = "https://vueuse.netlify.app/*"
+to = "https://vueuse.org/:splat"
+status = 301
+force = true
 ```
 
 - `*` and `:splat` mean it will redirect all the sub routes as-is to the new domain.
@@ -31,10 +31,10 @@ A solution here is to create a new site with your original name `xxx` and upload
 
 ```toml
 [[redirects]]
-  from = "*"
-  to = "https://yyy.netlify.app/:splat"
-  status = 301
-  force = true
+from = "*"
+to = "https://yyy.netlify.app/:splat"
+status = 301
+force = true
 ```
 
 Note you don't have to link a repo to that, Netlify offers a great feature that [let you drag and drop for static files and serve as a site](https://app.netlify.com/drop). So you can just save `netlify.toml` and upload it, rename the site to your original name. The redirection is done!
