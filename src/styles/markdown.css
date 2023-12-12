@@ -148,7 +148,7 @@ h6:focus .header-anchor {
   left: 20px;
   z-index: 200;
   overflow: hidden;
-  --uno: hidden lg: flex flex-col w-100px lg: w-200px xl: w-300px;
+  --uno: hidden lg-flex flex-col w-100px lg-w-200px xl-w-300px;
 }
 
 .table-of-contents-anchor {
@@ -188,7 +188,7 @@ h6:focus .header-anchor {
 }
 
 .table-of-contents ul > li > a {
-  --uno: op75 hover: op100 transition;
+  --uno: op75 hover-op100 transition;
 }
 
 .code-wrap .line {

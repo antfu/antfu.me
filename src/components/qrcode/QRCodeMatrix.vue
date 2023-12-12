@@ -123,7 +123,7 @@ const binding = reactive({
   opacity: 0.7;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
-  --uno: border border-base rounded of-hidden bg-gray: 20;
+  --uno: border border-base rounded of-hidden bg-gray/20;
 }
 
 .slider:hover {
@@ -136,13 +136,13 @@ const binding = reactive({
   width: 20px;
   height: 20px;
   cursor: pointer;
-  --uno: dark: bg-white: 80 bg-black: 50 rounded;
+  --uno: dark: bg-white/80 bg-black/50 rounded;
 }
 
 .slider::-moz-range-thumb {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  --uno: dark: bg-white: 80 bg-black: 50 rounded;
+  --uno: dark: bg-white/80 bg-black/50 rounded;
 }
 </style>
