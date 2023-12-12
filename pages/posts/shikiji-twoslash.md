@@ -22,7 +22,7 @@ const todo: Readonly<Todo> = {
 todo.title = 'Hello'
 ```
 
-Try hovering on each token to see the type information. Shiki runs [`oniguruma`](https://github.com/microsoft/vscode-oniguruma) to give syntax highlighting, and TwoSlash runs `typescript` to give type information. Both are kinda "heavy" libraries, but this is don't ahead of time on building, so what you see here is completely static HTML and CSS!
+Try hovering on each token to see the type information. Shiki runs [`oniguruma`](https://github.com/microsoft/vscode-oniguruma) to give syntax highlighting, and TwoSlash runs `typescript` to give type information. Both are quite heavy libraries, but this is done **ahead of time on building**, it means that whatyou see here is completely static pure HTML and CSS!
 
 In addition to the original [`shiki-twoslash`](https://github.com/shikijs/twoslash) package, the `Shikiji` allows you to provide [custom renderer](https://github.com/antfu/shikiji/tree/main/packages/shikiji-twoslash#rendererrich) of how the HTML been generated based on AST. This allows us to have dual themes support, and also the syntax highlighting for the type information.
 
