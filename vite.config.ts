@@ -16,7 +16,8 @@ import LinkAttributes from 'markdown-it-link-attributes'
 import GitHubAlerts from 'markdown-it-github-alerts'
 import UnoCSS from 'unocss/vite'
 import SVG from 'vite-svg-loader'
-import { bundledLanguages, getHighlighter } from 'shikiji'
+import MarkdownItShikiji from 'markdown-it-shikiji'
+import { rendererRich, transformerTwoSlash } from 'shikiji-twoslash'
 
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
@@ -82,23 +83,20 @@ export default defineConfig({
         quotes: '""\'\'',
       },
       async markdownItSetup(md) {
-        const shiki = await getHighlighter({
-          themes: ['vitesse-dark', 'vitesse-light'],
-          langs: Object.keys(bundledLanguages) as any,
-        })
-
-        md.use((markdown) => {
-          markdown.options.highlight = (code, lang) => {
-            return shiki.codeToHtml(code, {
-              lang,
-              themes: {
-                light: 'vitesse-light',
-                dark: 'vitesse-dark',
-              },
-              cssVariablePrefix: '--s-',
-            })
-          }
-        })
+        md.use(await MarkdownItShikiji({
+          themes: {
+            dark: 'vitesse-dark',
+            light: 'vitesse-light',
+          },
+          defaultColor: false,
+          cssVariablePrefix: '--s-',
+          transformers: [
+            transformerTwoSlash({
+              explicitTrigger: true,
+              renderer: rendererRich,
+            }),
+          ],
+        }))
 
         md.use(anchor, {
           slugify,

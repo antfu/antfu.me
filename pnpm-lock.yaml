@@ -112,6 +112,9 @@ devDependencies:
   markdown-it-link-attributes:
     specifier: ^4.0.1
     version: 4.0.1
+  markdown-it-shikiji:
+    specifier: ^0.8.4
+    version: 0.8.4
   markdown-it-table-of-contents:
     specifier: ^0.6.0
     version: 0.6.0
@@ -131,8 +134,11 @@ devDependencies:
     specifier: 0.32.6
     version: 0.32.6
   shikiji:
-    specifier: ^0.8.0
-    version: 0.8.0
+    specifier: ^0.8.4
+    version: 0.8.4
+  shikiji-twoslash:
+    specifier: ^0.8.4
+    version: 0.8.4(typescript@5.3.3)
   simple-git:
     specifier: ^3.21.0
     version: 3.21.0
@@ -1596,6 +1602,13 @@ packages:
     resolution: {integrity: sha512-HZQYqbiFVWufzCwexrvh694SOim8z2d+xJl5UNamcvQFejLY/2YUtzXHYi3cHdI7PMlS8ejH2slRAOJQ32aNbA==}
     dev: true
 
+  /@types/lz-string@1.5.0:
+    resolution: {integrity: sha512-s84fKOrzqqNCAPljhVyC5TjAo6BH4jKHw9NRNFNiRUY5QSgZCmVm5XILlWbisiKl+0OcS7eWihmKGS5akc2iQw==}
+    deprecated: This is a stub types definition. lz-string provides its own type definitions, so you do not need this installed.
+    dependencies:
+      lz-string: 1.5.0
+    dev: true
+
   /@types/markdown-it-link-attributes@3.0.4:
     resolution: {integrity: sha512-Ky3wTFQurAF0wSfsYi+1J2yDvpZRtNBsd8CV0rwOSIgNmNX8q87FN9c9PBp+NljoQqWhJPy8eLrkQNcG86nbUQ==}
     dependencies:
@@ -1853,6 +1866,28 @@ packages:
     dependencies:
       '@typescript-eslint/types': 6.13.2
       eslint-visitor-keys: 3.4.3
+    dev: true
+
+  /@typescript/twoslash@3.2.4(typescript@5.3.3):
+    resolution: {integrity: sha512-/TCIOuPQaKltzUUT1qJo6mplYwjbAxkaSFvkeZD3FeFt3Ovt+HJi8xisu8rcLyDRmM3VJ0+jAx+AAICwn4Zlhw==}
+    peerDependencies:
+      typescript: '*'
+    dependencies:
+      '@types/lz-string': 1.5.0
+      '@typescript/vfs': 1.5.0
+      debug: 4.3.4
+      lz-string: 1.5.0
+      typescript: 5.3.3
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@typescript/vfs@1.5.0:
+    resolution: {integrity: sha512-AJS307bPgbsZZ9ggCT3wwpg3VbTKMFNHfaY/uF0ahSkYYrPF2dSSKDNIDIQAHm9qJqbLvCsSJH7yN4Vs/CsMMg==}
+    dependencies:
+      debug: 4.3.4
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@ungap/structured-clone@1.2.0:
@@ -4754,6 +4789,11 @@ packages:
     engines: {node: 14 || >=16.14}
     dev: true
 
+  /lz-string@1.5.0:
+    resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
+    hasBin: true
+    dev: true
+
   /magic-string@0.30.5:
     resolution: {integrity: sha512-7xlpfBaQaP/T6Vh8MO/EqXSW5En6INHEvEXQiuff7Gku0PWjU3uf6w/j9o7O+SpB5fOAkrI5HeoNgwjEO0pFsA==}
     engines: {node: '>=12'}
@@ -4780,6 +4820,13 @@ packages:
 
   /markdown-it-link-attributes@4.0.1:
     resolution: {integrity: sha512-pg5OK0jPLg62H4k7M9mRJLT61gUp9nvG0XveKYHMOOluASo9OEF13WlXrpAp2aj35LbedAy3QOCgQCw0tkLKAQ==}
+    dev: true
+
+  /markdown-it-shikiji@0.8.4:
+    resolution: {integrity: sha512-KbT8wZV6RVO7YFO8UCXkQDlPJQqyl5XUBguBO1dxrFYDN8qwhPKE13ElQkt7LFao6NcS56VpEY2sLsAXJiJxBw==}
+    dependencies:
+      markdown-it: 14.0.0
+      shikiji: 0.8.4
     dev: true
 
   /markdown-it-table-of-contents@0.6.0:
@@ -5699,8 +5746,18 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /shikiji@0.8.0:
-    resolution: {integrity: sha512-E0NkMzk+6111cxnrsQGNsIfXnTfJ2rqlaC1o4e1U1AcNYm6GVig8ZeLXn5g8PfzQZqMqSPO0yxJt3RURVW5D9A==}
+  /shikiji-twoslash@0.8.4(typescript@5.3.3):
+    resolution: {integrity: sha512-qAiULye8JdSIPzRnDzf+MHFLwpphRXcJeg88MFzD5afqy86OeN/wz3RXUe4CODdZTRh0uZP1XpLaal0qhbL27Q==}
+    dependencies:
+      '@typescript/twoslash': 3.2.4(typescript@5.3.3)
+      shikiji: 0.8.4
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+    dev: true
+
+  /shikiji@0.8.4:
+    resolution: {integrity: sha512-zYOY37WGcFj5vISRQBPsIeZY0GNr8TdCT0o9JwHxBjmsGymeKsxeQZgUHRgA48NIv9g9U/EUfbwqk0x01u1yaA==}
     dependencies:
       hast-util-to-html: 9.0.0
     dev: true
