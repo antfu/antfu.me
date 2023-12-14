@@ -15,6 +15,24 @@ html:not(.dark) .shiki span {
   --twoslash-popup-bg: #fafafa;
 }
 
+.twoslash ul {
+  font-size: 1em !important;
+}
+
+.twoslash ul > li::before {
+  display: none;
+}
+
+.twoslash ul > li {
+  padding: 1px;
+  margin: 0;
+}
+
+.twoslash-query-presisted .twoslash-popup-info {
+  transform: translate(0, 1.6em);
+}
+
+/* Prose */
 .prose pre:not(.shiki) {
   padding: 0;
   margin: 0;

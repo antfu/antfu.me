@@ -10,6 +10,9 @@ Here is an example of using [TwoSlash](https://github.com/microsoft/TypeScript-W
 
 ```ts twoslash
 // @errors: 2540
+console.log((1 + 2 + 3 + 4).toFixed(2))
+//                            ^|
+
 interface Todo {
   title: string
 }

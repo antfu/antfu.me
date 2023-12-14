@@ -93,7 +93,7 @@ export default defineConfig({
           transformers: [
             transformerTwoSlash({
               explicitTrigger: true,
-              renderer: rendererRich,
+              renderer: rendererRich(),
             }),
           ],
         }))
