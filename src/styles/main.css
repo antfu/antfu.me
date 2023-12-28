@@ -95,7 +95,7 @@ html:not(.dark) [img-dark] {
 
   to {
     transform: translateY(0);
-    opacity: 100;
+    opacity: 1;
   }
 }
 
