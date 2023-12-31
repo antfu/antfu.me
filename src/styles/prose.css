@@ -189,7 +189,7 @@
   color: var(--fg-deep);
   font-weight: 600;
   border-bottom-width: 1px;
-  border-bottom-color: #d1d5db;
+  border-bottom-color: #8882;
 }
 .prose thead th {
   vertical-align: bottom;
@@ -199,7 +199,7 @@
 }
 .prose tbody tr {
   border-bottom-width: 1px;
-  border-bottom-color: #e5e7eb;
+  border-bottom-color: #8882;
 }
 .prose tbody tr:last-child {
   border-bottom-width: 0;
