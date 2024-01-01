@@ -14,10 +14,12 @@
     "check-links": "find pages -name \\*.md -print0 | xargs -0 -n1 markdown-link-check --config ./markdownLinkCheckConfig.json --quiet"
   },
   "dependencies": {
+    "@types/markdown-it-footnote": "^3.0.2",
     "@vueuse/core": "^10.3.0",
     "@vueuse/head": "^1.3.1",
     "dayjs": "^1.11.9",
     "floating-vue": "2.0.0-beta.24",
+    "markdown-it-footnote": "^3.0.3",
     "nprogress": "^0.2.0",
     "vue": "^3.3.4",
     "vue-router": "4.2.4",
@@ -31,7 +33,6 @@
     "@types/fs-extra": "^11.0.1",
     "@types/katex": "^0.16.2",
     "@types/markdown-it": "^13.0.0",
-    "markdown-link-check": "^3.11.2",
     "@types/markdown-it-link-attributes": "^3.0.1",
     "@types/nprogress": "^0.2.0",
     "@types/prompts": "^2.4.4",
@@ -52,6 +53,7 @@
     "markdown-it-katex": "^2.0.3",
     "markdown-it-link-attributes": "^4.0.1",
     "markdown-it-table-of-contents": "^0.6.0",
+    "markdown-link-check": "^3.11.2",
     "picocolors": "^1.0.0",
     "prompts": "^2.4.2",
     "rimraf": "^5.0.1",

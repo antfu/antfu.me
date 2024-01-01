@@ -19,6 +19,8 @@ import TOC from 'markdown-it-table-of-contents'
 import sharp from 'sharp'
 import { slugify } from './scripts/slugify'
 import markdownKatex from 'markdown-it-katex'
+import markdownFootnote from 'markdown-it-footnote'
+
 const promises: Promise<any>[] = []
 
 export default defineConfig({
@@ -95,6 +97,8 @@ export default defineConfig({
             })
           }
         })
+
+        md.use(markdownFootnote);
 
         md.use(anchor, {
           slugify,

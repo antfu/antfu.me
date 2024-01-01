@@ -6,7 +6,7 @@ plum: true
 wrapperClass: 'text-center'
 projects:
   Work Experience:
-    - role: 'Quantitative Research Analyst'
+    - role: 'eRates Quantitative Research Analyst'
       link: 'https://www.smbcnikko.co.jp/en/index.html'
       company: 'Sumitomo Mitsui Banking Corporation'
       roleLevel: 'AVP'

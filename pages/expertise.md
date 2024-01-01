@@ -12,7 +12,7 @@ projects:
       icon: 'i-mdi:language-java'
     - name: 'Scala'
       link: 'https://scala-lang.org/'
-      desc: 'Functional Programming that enhances edge cases'
+      desc: 'Functional Programming that enhances defensive programming'
       icon: 'i-simple-icons:scala'
     - name: 'LMAX Disruptor'
       link: 'https://lmax-exchange.github.io/disruptor/'

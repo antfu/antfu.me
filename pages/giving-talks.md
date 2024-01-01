@@ -29,7 +29,7 @@ You can use the following information to present me:
   <div><a href="https://DFMichelangelo.github.io/avatar.jpg" target="_blank">https://DFMichelangelo.github.io/avatar.jpg</a></div>
 
   <div text-right pr2 op50 font-bold>Introduction</div>
-  <TextCopy>Quantitative Research Analyst at Sumitomo Mitsui Banking Corporation.</TextCopy>
+  <TextCopy>eRates Quantitative Research Analyst at Sumitomo Mitsui Banking Corporation.</TextCopy>
 
   <div text-right pr2 op50 font-bold>Location</div>
   <TextCopy>London, UK</TextCopy>
