@@ -42,7 +42,7 @@
 /tc https://github.com/type-challenges/type-challenges 302
 /elk https://github.com/elk-zone/elk 302
 
-/stars-rank	https://github.com/search?l=&o=desc&s=stars&type=Repositories&q=user%3Aantfu%20user%3Acodecember%20user%3Aknightly%20user%3Aslidevjs%20user%3Atype-challenges%20user%3Aunocss%20user%3Aelk-zone%20user%3Avueuse%20user%3Avitest-dev%20user%3Avue-reactivity%20user%3Avite-pwa%20repo%3Alokalise%2Fi18n-ally%20repo%3Anuxt%2Fnuxt%20repo%3Anuxt%2Fmodules%20repo%3Anuxt%2Fdevtools%20repo%3Aunjs%2Funplugin%20repo%3Aunjs%2Funimport%20repo%3Avitejs%2Fawesome-vite%20repo%3Avitejs%2Fvite%20repo%3Avuejs%2Fcomposition-api%20repo%3Awenyan-lang%2Fide%20repo%3Awenyan-lang%2Fwenyan%20repo%3Awenyan-lang%2Fwyg%20repo%3Awindicss%2Fvite-plugin-windicss	302
+/stars-rank	https://github.com/search?l=&o=desc&s=stars&type=Repositories&q=user%3Aantfu%20user%3Acodecember%20user%3Aknightly%20user%3Aslidevjs%20user%3Atype-challenges%20user%3Aunocss%20user%3Aelk-zone%20user%3Avueuse%20user%3Avitest-dev%20user%3Avue-reactivity%20user%3Avite-pwa%20user%3Aeslint-stylistic%20user%3Atwoslashes%20user%3Ashikijs%20repo%3Alokalise%2Fi18n-ally%20repo%3Anuxt%2Fnuxt%20repo%3Anuxt%2Fmodules%20repo%3Anuxt%2Fdevtools%20repo%3Aunjs%2Funplugin%20repo%3Aunjs%2Funimport%20repo%3Aunjs%2Fuqr%20repo%3Avitejs%2Fawesome-vite%20repo%3Avitejs%2Fvite%20repo%3Avuejs%2Fcomposition-api%20repo%3Awenyan-lang%2Fide%20repo%3Awenyan-lang%2Fwenyan%20repo%3Awenyan-lang%2Fwyg%20repo%3Awindicss%2Fvite-plugin-windicss	302
 /.github	https://github.com/antfu/.github	302
 /100	https://github.com/antfu/100	302
 /action-write-config	https://github.com/antfu/action-write-config	302
@@ -74,6 +74,13 @@
 /eslint-config	https://github.com/antfu/eslint-config	302
 /eslint-config-flat-gitignore	https://github.com/antfu/eslint-config-flat-gitignore	302
 /eslint-flat-config-viewer	https://github.com/antfu/eslint-flat-config-viewer	302
+/eslint-formatting-reporter	https://github.com/antfu/eslint-formatting-reporter	302
+/eslint-merge-processors	https://github.com/antfu/eslint-merge-processors	302
+/eslint-plugin-format	https://github.com/antfu/eslint-plugin-format	302
+/eslint-plugin-unimport	https://github.com/antfu/eslint-plugin-unimport	302
+/eslint-processor-vue-blocks	https://github.com/antfu/eslint-processor-vue-blocks	302
+/eslint-ts-patch	https://github.com/antfu/eslint-ts-patch	302
+/esno	https://github.com/antfu/esno	302
 /eurekam	https://github.com/antfu/eurekam	302
 /export-size	https://github.com/antfu/export-size	302
 /export-size-action	https://github.com/antfu/export-size-action	302
@@ -96,10 +103,12 @@
 /live-draw	https://github.com/antfu/live-draw	302
 /local-pkg	https://github.com/antfu/local-pkg	302
 /log-editor	https://github.com/antfu/log-editor	302
+/markdown-it-github-alerts	https://github.com/antfu/markdown-it-github-alerts	302
 /markdown-it-mdc	https://github.com/antfu/markdown-it-mdc	302
-/markdown-it-shiki	https://github.com/antfu/markdown-it-shiki	302
 /ni	https://github.com/antfu/ni	302
+/nitro-shikiji	https://github.com/antfu/nitro-shikiji	302
 /npm-ping	https://github.com/antfu/npm-ping	302
+/nuxt-module-eslint-config	https://github.com/antfu/nuxt-module-eslint-config	302
 /nuxt-server-fn	https://github.com/antfu/nuxt-server-fn	302
 /nuxt-tsconfig-stub	https://github.com/antfu/nuxt-tsconfig-stub	302
 /p5i	https://github.com/antfu/p5i	302
@@ -108,7 +117,6 @@
 /plum-demo	https://github.com/antfu/plum-demo	302
 /pnpm-patch-i	https://github.com/antfu/pnpm-patch-i	302
 /prism-theme-vars	https://github.com/antfu/prism-theme-vars	302
-/purge-icons	https://github.com/antfu/purge-icons	302
 /qr-scanner-wechat	https://github.com/antfu/qr-scanner-wechat	302
 /qr-verify	https://github.com/antfu/qr-verify	302
 /qrcode-toolkit	https://github.com/antfu/qrcode-toolkit	302
@@ -130,6 +138,3 @@
 /starter-ts	https://github.com/antfu/starter-ts	302
 /starter-vscode	https://github.com/antfu/starter-vscode	302
 /strip-literal	https://github.com/antfu/strip-literal	302
-/svg-packer	https://github.com/antfu/svg-packer	302
-/talks	https://github.com/antfu/talks	302
-/taze	https://github.com/antfu/taze	302

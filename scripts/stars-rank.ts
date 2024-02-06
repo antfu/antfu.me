@@ -11,6 +11,9 @@ export function getStarsRankingUrl() {
     'vitest-dev',
     'vue-reactivity',
     'vite-pwa',
+    'eslint-stylistic',
+    'twoslashes',
+    'shikijs',
   ]
   const repos = [
     'lokalise/i18n-ally',
@@ -19,6 +22,7 @@ export function getStarsRankingUrl() {
     'nuxt/devtools',
     'unjs/unplugin',
     'unjs/unimport',
+    'unjs/uqr',
     'vitejs/awesome-vite',
     'vitejs/vite',
     'vuejs/composition-api',
