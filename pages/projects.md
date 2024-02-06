@@ -312,10 +312,14 @@ projects:
       icon: 'i-carbon-map'
 
   Utility Libraries:
-    - name: 'shikiji'
-      link: 'https://github.com/antfu/shikiji'
-      desc: 'An ESM focused rewrite of shiki'
+    - name: 'shiki'
+      link: 'https://github.com/shikijs/shiki'
+      desc: 'A beautiful syntax highlighter (In collabration with @octref and @orta)'
       icon: 'i-carbon:code'
+    - name: 'twoslash'
+      link: 'https://github.com/twoslashes/twoslash'
+      desc: 'Markup for generating rich type information ahead of time (In collabration with @orta)'
+      icon: 'i-simple-icons:typescript'
     - name: 'uqr'
       link: 'https://github.com/unjs/uqr'
       desc: 'Generate QR Code universally'
