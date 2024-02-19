@@ -95,7 +95,7 @@ items:
     path: 'https://podcast.webworker.tech/38'
     lang: 'zh'
     radio: true
-  - title: 'Vitest with Anthony Fu - At Artem's'
+  - title: "Vitest with Anthony Fu - At Artem's"
     date: '2024-02-14'
     path: 'https://youtu.be/5y8pgwd4Des'
     video: true
