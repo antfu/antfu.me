@@ -2,11 +2,6 @@
 title: Talks - Anthony Fu
 display: ''
 plum: true
-# items:
-#   - title: 'Vue Fes Japan 2023 / In Person / TBA'
-#     date: '2023-10-25'
-#     inperson: true
-#     path: 'https://vuefes.jp/2023/'
 ---
 
 <SubNav />
@@ -22,6 +17,7 @@ plum: true
 | <TalkDate date="2024-06-06"/> | [**CityJS Athens**](https://greece.cityjsconf.org/)                                                  | Athens               | ESLint          |
 | <TalkDate date="2024-06-13"/> | [**JS Nation**](https://jsnation.com/)                                                               | Amsterdam            | ESLint          |
 | <TalkDate date="2024-06-14"/> | [**React Summit**](https://reactsummit.com/)                                                         | Amsterdam            | OSS, Vite       |
+| <TalkDate date="2024-12-19"/> | [**Vue Fes Japan**](https://vuefes.jp/)                                                              | Tokyo                | TBA             |
 
 <div slide-enter>
   <div i-ri:presentation-line mr-1 />
