@@ -57,21 +57,83 @@ While Vue's `<TransitionGroup>` should get the transition done automatically, it
 
 Ran into some limitations of `<TransitionGroup>` and also with the wish to have this a framework-agnostic solution, I ended up writing [a custom renderer](https://github.com/shikijs/shiki-magic-move/blob/5ec48554d87b4f4e2dd2e15f27ef9e51ef00074b/src/renderer.ts#L28) to do that, referencing a lot of the code from `<TransitionGroup>`.
 
-Because we are relying on the browsers' layout engine to calculate the position, we need to get the destination position of each token (the position of the final code) before the transition starts. I found this trick in Vue's code to [force layout reflow](https://github.com/vuejs/core/blob/f66a75ea75c8aece065b61e2126b4c5b2338aa6e/packages/runtime-dom/src/components/TransitionGroup.ts#L77-L78) combined with temproray setting [transition duration to 0](https://github.com/vuejs/core/blob/f66a75ea75c8aece065b61e2126b4c5b2338aa6e/packages/runtime-dom/src/components/TransitionGroup.ts#L186-L187) to get the new position immediately so we could start animating.
+Because we are relying on the browsers' layout engine to calculate the position, we need to get the destination position of each token (the position of the final code) before the transition starts. I found this trick in Vue's code to [force layout reflow](https://github.com/vuejs/core/blob/f66a75ea75c8aece065b61e2126b4c5b2338aa6e/packages/runtime-dom/src/components/TransitionGroup.ts#L77-L78) combined with temporary setting [transition duration to 0](https://github.com/vuejs/core/blob/f66a75ea75c8aece065b61e2126b4c5b2338aa6e/packages/runtime-dom/src/components/TransitionGroup.ts#L186-L187) to get the new position immediately so we could start animating.
 
 Then it comes to do the transitions for different types of tokens:
 
 ### Enter Transition
 
-The enter transition is the most straightforward one. Because the token will stay at the destination position after the transition, we don't need to do anything with the positioning. We usually just need to apply the opacity transition to make it appear.
+The enter transition is the most straightforward one. Because the token will stay at the destination position after the transition, we don't need to do anything with the positioning. We usually just need to apply the opacity transition to make it appear. Here we add/remove classes for users to apply the transition with CSS.
 
-[[source code]](https://github.com/shikijs/shiki-magic-move/blob/5ec48554d87b4f4e2dd2e15f27ef9e51ef00074b/src/renderer.ts#L233-L249)
+Pseudo-code below:
+
+```ts
+for (const el of enterElements) {
+  el.classList.add('transition-enter')
+  el.classList.add('transition-enter-from')
+}
+
+// Replace the children of the container with
+// elements from the new code
+container.replaceChildren(...newChildren)
+// Force layout reflow
+forceReflow()
+
+for (const el of enterElements) {
+  el.classList.remove('transition-enter-from')
+  el.classList.add('transition-enter-to')
+}
+
+// Here the transition starts
+// from `.transition-enter-from` to `.transition-enter-to`
+
+for (const el of enterElements) {
+  // Transition Finished
+  el.addEventListener('transitionend', () => {
+    el.classList.remove('transition-enter-to')
+  })
+}
+```
+
+[[actual source code]](https://github.com/shikijs/shiki-magic-move/blob/5ec48554d87b4f4e2dd2e15f27ef9e51ef00074b/src/renderer.ts#L233-L249)
 
 ### Leave Transition
 
 Since "Leave" tokens eventually disappear after the transition, we need to keep them in the DOM tree for a while for animations but we don't want them to participate in the layout. We can apply `position: absolute` to them and set the `top` and `left` to the original position to make them stay in place. Then we can apply the opacity transition to make them disappear.
 
-[[source code]](https://github.com/shikijs/shiki-magic-move/blob/5ec48554d87b4f4e2dd2e15f27ef9e51ef00074b/src/renderer.ts#L206-L229)
+Pseudo-code below:
+
+```ts
+for (const el of leaveElements) {
+  // Get the position of the token stored before
+  const pos = position.get(el)!
+  // Set absolute position
+  el.style.position = 'absolute'
+  el.style.top = `${pos.y}px`
+  el.style.left = `${pos.x}px`
+
+  el.classList.add('transition-leave')
+  el.classList.add('transition-leave-from')
+}
+
+// Replace the children of the container
+// Same as the enter transition
+container.replaceChildren(...newChildren)
+forceReflow()
+
+for (const el of enterElements) {
+  el.classList.remove('transition-leave-from')
+  el.classList.add('transition-leave-to')
+}
+
+for (const el of enterElements) {
+  el.addEventListener('transitionend', () => {
+    el.classList.remove('transition-leave-to')
+  })
+}
+```
+
+[[actual source code]](https://github.com/shikijs/shiki-magic-move/blob/5ec48554d87b4f4e2dd2e15f27ef9e51ef00074b/src/renderer.ts#L206-L229)
 
 ### Move Transition
 
@@ -79,7 +141,43 @@ To animate "Move" tokens requires a bit more work. We use a technique called ["F
 
 It's a bit unintuitive to understand at first, but luckily [David Khourshid](https://css-tricks.com/author/davidkpiano/) made a great explanation at [Animating Layouts with the FLIP Technique](https://css-tricks.com/animating-layouts-with-the-flip-technique/), definitely worth reading!
 
-[[source code]](https://github.com/shikijs/shiki-magic-move/blob/5ec48554d87b4f4e2dd2e15f27ef9e51ef00074b/src/renderer.ts#L254-L276)
+Pseudo-code below:
+
+```ts
+for (const el of moveElements) {
+  const newPos = el.getBoundingClientRect()
+  const oldPos = position.get(el)!
+  const dx = oldPos.x - newPos.x
+  const dy = oldPos.y - newPos.y
+
+  // Set duration to 0 to get the new position immediately
+  el.style.transitionDuration = '0ms'
+  el.style.transitionDelay = '0ms'
+  // Transform new elements to the old position
+  el.style.transform = `translate(${dx}px, ${dy}px)`
+}
+
+// Replace the children of the container
+container.replaceChildren(...newChildren)
+forceReflow()
+
+for (const el of moveElements) {
+  // Remove transform overrides,
+  // so it will start animating back to the new position
+  el.classList.add('transition-move')
+  el.style.transform = ''
+  el.style.transitionDuration = ''
+  el.style.transitionDelay = ''
+}
+
+for (const el of moveElements) {
+  el.addEventListener('transitionend', () => {
+    el.classList.remove('transition-move')
+  })
+}
+```
+
+[[actual source code]](https://github.com/shikijs/shiki-magic-move/blob/5ec48554d87b4f4e2dd2e15f27ef9e51ef00074b/src/renderer.ts#L254-L276)
 
 ## Integrations
 
