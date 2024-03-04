@@ -12,7 +12,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="">
+  <div class="flex items-center justify-center">
     <blockquote
       class="twitter-tweet"
       :data-theme="isDark ? 'dark' : 'light'"

@@ -36,5 +36,12 @@
     "json",
     "jsonc",
     "yaml"
+  ],
+  "grammarly.selectors": [
+    {
+      "language": "markdown",
+      "scheme": "file",
+      "pattern": "pages/posts/shiki-magic-move.md"
+    }
   ]
 }

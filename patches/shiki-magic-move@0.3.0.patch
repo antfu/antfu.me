@@ -1,0 +1,77 @@
+diff --git a/dist/core.mjs b/dist/core.mjs
+index ed8091ae615f1b4b59f5b313900fb12a7a61cabd..b002cfd9d855619e4346abbd9d191a873e69568c 100644
+--- a/dist/core.mjs
++++ b/dist/core.mjs
+@@ -145,11 +145,13 @@ function splitTokens(tokens, breakpoints) {
+ }
+ function syncTokenKeys(from, to, options = {}) {
+   const {
+-    splitTokens: shouldSplitTokens = false
++    splitTokens: shouldSplitTokens = false,
++    enhanceMatching = true
+   } = options;
+   const matches = findTextMatches(from.code, to.code, options);
+   const tokensFrom = shouldSplitTokens ? splitTokens(from.tokens, matches.flatMap((m) => m.from)) : from.tokens;
+   const tokensTo = shouldSplitTokens ? splitTokens(to.tokens, matches.flatMap((m) => m.to)) : to.tokens;
++  const matchedKeys = /* @__PURE__ */ new Set();
+   matches.forEach((match) => {
+     const tokensF = tokensFrom.filter((t) => t.offset >= match.from[0] && t.offset + t.content.length <= match.from[1]);
+     const tokensT = tokensTo.filter((t) => t.offset >= match.to[0] && t.offset + t.content.length <= match.to[1]);
+@@ -160,6 +162,7 @@ function syncTokenKeys(from, to, options = {}) {
+         break;
+       if (tokensF[idxF].content === tokensT[idxT].content) {
+         tokensT[idxT].key = tokensF[idxF].key;
++        matchedKeys.add(tokensF[idxF].key);
+         idxF++;
+         idxT++;
+       } else if (tokensF[idxF + 1]?.content === tokensT[idxT].content) {
+@@ -172,6 +175,19 @@ function syncTokenKeys(from, to, options = {}) {
+       }
+     }
+   });
++  if (enhanceMatching) {
++    for (const token of tokensFrom) {
++      if (matchedKeys.has(token.key))
++        continue;
++      if (token.content.length < 3 || !token.content.match(/^[\w\d_-]+$/))
++        continue;
++      const matched = tokensTo.find((t) => t.content === token.content && !matchedKeys.has(t.key));
++      if (matched) {
++        matched.key = token.key;
++        matchedKeys.add(token.key);
++      }
++    }
++  }
+   return {
+     from: tokensFrom.length === from.tokens.length ? from : { ...from, tokens: tokensFrom },
+     to: tokensTo.length === to.tokens.length ? to : { ...to, tokens: tokensTo }
+diff --git a/dist/types.d.mts b/dist/types.d.mts
+index fc4520741e34134ac17d4000a355c0590dd56416..68d2d80eaf8be094789b6b8f2ed390376aada9c0 100644
+--- a/dist/types.d.mts
++++ b/dist/types.d.mts
+@@ -75,6 +75,10 @@ interface MagicMoveDifferOptions {
+      * Algorithm to use to cleanup the diff
+      */
+     diffCleanup?: ((diffs: Diff[]) => Diff[] | void);
++    /**
++     * Enhance the matching algorithm to match tokens that has same content
++     */
++    enhanceMatching?: boolean;
+ }
+ 
+ export type { KeyedToken, KeyedTokensInfo, MagicMoveDifferOptions, MagicMoveRenderOptions, MatchedRanges, Range };
+diff --git a/dist/types.d.ts b/dist/types.d.ts
+index fc4520741e34134ac17d4000a355c0590dd56416..68d2d80eaf8be094789b6b8f2ed390376aada9c0 100644
+--- a/dist/types.d.ts
++++ b/dist/types.d.ts
+@@ -75,6 +75,10 @@ interface MagicMoveDifferOptions {
+      * Algorithm to use to cleanup the diff
+      */
+     diffCleanup?: ((diffs: Diff[]) => Diff[] | void);
++    /**
++     * Enhance the matching algorithm to match tokens that has same content
++     */
++    enhanceMatching?: boolean;
+ }
+ 
+ export type { KeyedToken, KeyedTokensInfo, MagicMoveDifferOptions, MagicMoveRenderOptions, MatchedRanges, Range };
