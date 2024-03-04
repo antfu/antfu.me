@@ -46,7 +46,6 @@ export default defineConfig({
 
     Vue({
       include: [/\.vue$/, /\.md$/],
-      reactivityTransform: true,
       script: {
         defineModel: true,
       },
@@ -192,7 +191,6 @@ export default defineConfig({
 
   ssgOptions: {
     formatting: 'minify',
-    format: 'cjs',
   },
 })
 
