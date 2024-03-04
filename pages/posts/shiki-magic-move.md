@@ -14,7 +14,7 @@ description: The methodology behind Shiki Magic Move.
 
 The only annoying part of this process is that Keynote does not support code highlighting - so you need to highlight the code somewhere and paste them manually **every** single time\*\*. This is one of the reasons I made [Slidev](https://sli.dev/) - to have first-class tooling for developers to make presentations easier. While moving to web technologies with Slidev opens up almost infinite possibilities, on the other hand, it also makes some nice cool features in Keynote and PowerPoint harder to achieve (you need to write quite some extra code) - for example, the Magic Move.
 
-Browsers' new [View [Transitions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API) makes morphing between elements a lot easier, only that it requires some manual work to assign keys to make the pairs. While it's rather ok to do for a few big elements, doing such manually for every single token in a code block is basically unacceptable.
+Browsers' new [View Transitions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API) makes morphing between elements a lot easier, only that it requires some manual work to assign keys to make the pairs. While it's rather ok to do for a few big elements, doing such manually for every single token in a code block is basically unacceptable.
 
 Roughly a year ago, [Eduardo @posva](https://github.com/posva) and I came up with the idea of using Shiki combined with Vue's [`<TransitionGroup>`](https://vuejs.org/guide/built-ins/transition-group) to achieve a similar effect for code blocks:
 
