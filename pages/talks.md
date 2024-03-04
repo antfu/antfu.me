@@ -8,14 +8,13 @@ plum: true
 
 ## Upcoming Talks
 
-| Date                          | Conference                                          | Location  | Topic           |
-| ----------------------------- | --------------------------------------------------- | --------- | --------------- |
-| <TalkDate date="2024-03-1"/>  | [**JSWorld**](https://jsworldconference.com/)       | Amsterdam | Framework Panel |
-| <TalkDate date="2024-03-22"/> | [**React Paris**](https://react.paris/)             | Paris     | OSS, Vite       |
-| <TalkDate date="2024-06-06"/> | [**CityJS Athens**](https://greece.cityjsconf.org/) | Athens    | ESLint          |
-| <TalkDate date="2024-06-13"/> | [**JS Nation**](https://jsnation.com/)              | Amsterdam | ESLint          |
-| <TalkDate date="2024-06-14"/> | [**React Summit**](https://reactsummit.com/)        | Amsterdam | OSS, Vite       |
-| <TalkDate date="2024-12-19"/> | [**Vue Fes Japan**](https://vuefes.jp/)             | Tokyo     | TBA             |
+| Date                          | Conference                                          | Location  | Topic     |
+| ----------------------------- | --------------------------------------------------- | --------- | --------- |
+| <TalkDate date="2024-03-22"/> | [**React Paris**](https://react.paris/)             | Paris     | OSS, Vite |
+| <TalkDate date="2024-06-06"/> | [**CityJS Athens**](https://greece.cityjsconf.org/) | Athens    | ESLint    |
+| <TalkDate date="2024-06-13"/> | [**JS Nation**](https://jsnation.com/)              | Amsterdam | ESLint    |
+| <TalkDate date="2024-06-14"/> | [**React Summit**](https://reactsummit.com/)        | Amsterdam | OSS, Vite |
+| <TalkDate date="2024-12-19"/> | [**Vue Fes Japan**](https://vuefes.jp/)             | Tokyo     | TBA       |
 
 <div slide-enter>
   <div i-ri:presentation-line mr-1 />
