@@ -27,6 +27,32 @@ onMounted(() => {
 
 <template>
   <div>
+    <div flex="~" py2 mb--2 mt--2>
+      <div
+        flex-1 border-b mb--1px
+        :class="index !== 1 ? 'border-base' : 'border-transparent'"
+      >
+        <button
+          w-full border-x border-t border-base rounded-t px2 py1 transition duration-300
+          :class="index === 1 ? 'bg-base' : 'bg-gray:5 op25 hover:op75'"
+          @click="index = 1; clearTimer()"
+        >
+          Options API
+        </button>
+      </div>
+      <div
+        flex-1 border-b mb--1px
+        :class="index !== 2 ? 'border-base' : 'border-transparent'"
+      >
+        <button
+          w-full border-x border-t border-base rounded-t px2 py1 transition duration-300
+          :class="index === 2 ? 'bg-base' : 'bg-gray:5 op25 hover:op75'"
+          @click="index = 2; clearTimer()"
+        >
+          Composition API
+        </button>
+      </div>
+    </div>
     <ShikiMagicMove
       v-if="shiki.highlighter"
       :highlighter="shiki.highlighter"
@@ -37,29 +63,13 @@ onMounted(() => {
         duration: 800,
         animateContainer: false,
       }"
-      class="font-mono h-95 important-p4 border border-base important-rounded-b-none important-bg-transparent"
+      class="font-mono h-95 important-p4 border-x border-b border-base important-rounded-t-none important-bg-transparent"
     />
     <div
       v-else
       class="font-mono h-95 important-p4 border border-base important-rounded-b-none important-bg-transparent flex items-center justify-center"
     >
       Loading...
-    </div>
-    <div flex="~ gap-2" py2 mt--2>
-      <button
-        flex-1 border-x border-b border-base rounded-b px2 py1 transition duration-300
-        :class="index === 1 ? 'bg-base' : 'bg-gray:5 op25 hover:op75'"
-        @click="index = 1; clearTimer()"
-      >
-        Options API
-      </button>
-      <button
-        flex-1 border-x border-b border-base rounded-b px2 py1 transition duration-300
-        :class="index === 2 ? 'bg-base' : 'bg-gray:5 op25 hover:op75'"
-        @click="index = 2; clearTimer()"
-      >
-        Composition API
-      </button>
     </div>
   </div>
 </template>

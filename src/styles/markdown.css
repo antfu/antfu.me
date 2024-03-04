@@ -8,10 +8,13 @@
   background-color: #0e0e0e;
 }
 
+html:not(.dark) .shiki {
+  background-color: #fafafa;
+}
+
 html:not(.dark) .shiki,
 html:not(.dark) .shiki span {
   color: var(--s-light, inherit);
-  background-color: #fafafa;
   --twoslash-popup-bg: #fafafa;
 }
 

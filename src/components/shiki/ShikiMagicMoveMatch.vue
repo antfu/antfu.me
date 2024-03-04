@@ -126,7 +126,7 @@ const TokenRenderer = defineComponent({
 
   <div v-if="tokens1 && tokens2">
     <div
-      grid="~ cols-[max-content_1fr] gap-1 gap-x-3" text-sm border="~ base rounded" p3
+      grid="~ cols-[max-content_1fr] gap-1 gap-x-3" text-sm border="x t base" rounded-t px4 py3 ws-nowrap
       @mouseenter="hoverAll = true"
       @mouseleave="hoverAll = false"
     >
@@ -139,7 +139,7 @@ const TokenRenderer = defineComponent({
         <span font-mono :class="hoverKey ? '' : 'op50'">{{ hoverKey || hoverAll ? '(showing all tokens)' : '(hover code to inspect)' }}</span>
       </div>
     </div>
-    <TokenRenderer :tokens="tokens1?.tokens" title="Before" />
-    <TokenRenderer :tokens="tokens2?.tokens" title="After" />
+    <TokenRenderer :tokens="tokens1?.tokens" title="Before" important-rounded-none important-my-0 important-bg-transparent />
+    <TokenRenderer :tokens="tokens2?.tokens" title="After" important-rounded-t-none important-mt-0 border-t-0 important-bg-transparent />
   </div>
 </template>
