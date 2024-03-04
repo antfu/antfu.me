@@ -16,7 +16,7 @@
     "dayjs": "^1.11.10",
     "floating-vue": "2.0.0-beta.24",
     "nprogress": "^0.2.0",
-    "shiki-magic-move": "^0.3.0",
+    "shiki-magic-move": "^0.3.1",
     "vue": "^3.4.21",
     "vue-router": "4.2.5",
     "vue-router-better-scroller": "^0.0.0"
@@ -73,11 +73,6 @@
     "vite-plugin-pages": "^0.32.0",
     "vite-ssg": "^0.23.6",
     "vite-svg-loader": "^5.1.0"
-  },
-  "pnpm": {
-    "patchedDependencies": {
-      "shiki-magic-move@0.3.0": "patches/shiki-magic-move@0.3.0.patch"
-    }
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"

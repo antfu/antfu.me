@@ -4,11 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-patchedDependencies:
-  shiki-magic-move@0.3.0:
-    hash: 6cs24ipdaedehm73po7ghq6hbe
-    path: patches/shiki-magic-move@0.3.0.patch
-
 dependencies:
   '@vueuse/core':
     specifier: ^10.9.0
@@ -23,8 +18,8 @@ dependencies:
     specifier: ^0.2.0
     version: 0.2.0
   shiki-magic-move:
-    specifier: ^0.3.0
-    version: 0.3.0(patch_hash=6cs24ipdaedehm73po7ghq6hbe)(shiki@1.1.7)(vue@3.4.21)
+    specifier: ^0.3.1
+    version: 0.3.1(shiki@1.1.7)(vue@3.4.21)
   vue:
     specifier: ^3.4.21
     version: 3.4.21(typescript@5.3.3)
@@ -5392,8 +5387,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /shiki-magic-move@0.3.0(patch_hash=6cs24ipdaedehm73po7ghq6hbe)(shiki@1.1.7)(vue@3.4.21):
-    resolution: {integrity: sha512-p0UlAAqUiwZ7LcNn0/VAIdk5UNBfhO/EkmDozX6iAa0uJofGTx143g0gxh71Q5C982jqVM9KMiP0TIPCvSxXCQ==}
+  /shiki-magic-move@0.3.1(shiki@1.1.7)(vue@3.4.21):
+    resolution: {integrity: sha512-LxNym0MoetHz3el/vI7tJCWDkH4k0Coizjfn/yPjfWvMlU+yss5eN/tD/KXaGNQ2voyrQHQyp+cLn2iiuXlRzg==}
     peerDependencies:
       shiki: ^1.1.6
       vue: ^3.4.0
@@ -5408,7 +5403,6 @@ packages:
       shiki: 1.1.7
       vue: 3.4.21(typescript@5.3.3)
     dev: false
-    patched: true
 
   /shiki@1.1.7:
     resolution: {integrity: sha512-9kUTMjZtcPH3i7vHunA6EraTPpPOITYTdA5uMrvsJRexktqP0s7P3s9HVK80b4pP42FRVe03D7fT3NmJv2yYhw==}
