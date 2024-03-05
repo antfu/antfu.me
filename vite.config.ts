@@ -201,8 +201,8 @@ async function generateOg(title: string, output: string) {
     return
 
   await fs.mkdir(dirname(output), { recursive: true })
-  // breakline every 25 chars
-  const lines = title.trim().split(/(.{0,25})(?:\s|$)/g).filter(Boolean)
+  // breakline every 30 chars
+  const lines = title.trim().split(/(.{0,30})(?:\s|$)/g).filter(Boolean)
 
   const data: Record<string, string> = {
     line1: lines[0],
