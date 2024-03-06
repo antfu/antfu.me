@@ -1,5 +1,4 @@
-export const code1 = `
-<script>
+export const code1 = `<script>
 import { defineComponent } from 'vue'
 
 export default defineComponent({
@@ -13,13 +12,32 @@ export default defineComponent({
   },
 })
 </script>
-`.trim()
 
-export const code2 = `
-<script setup>
+<template>
+  <p class="greeting">{{ count }} * 2 = {{ doubled }}</p>
+</template>
+
+<style>
+.greeting {
+  color: red;
+  font-weight: bold;
+}
+</style>`
+
+export const code2 = `<script setup>
 import { ref, computed } from 'vue'
 
 const count = ref(1)
 const double = computed(() => count.value * 2)
 </script>
-`.trim()
+
+<template>
+  <p class="greeting">{{ count }} = {{ doubled / 2 }}</p>
+</template>
+
+<style>
+.greeting {
+  color: red;
+  font-weight: bold;
+}
+</style>`

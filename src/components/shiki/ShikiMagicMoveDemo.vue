@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ShikiMagicMove } from 'shiki-magic-move/vue'
 import { code1, code2 } from './ShikiMagicMoveDemoCode'
-import 'shiki-magic-move/style.css'
 import { useShikiStore } from '~/store/shiki'
 
 const index = ref(1)
@@ -62,8 +61,10 @@ onMounted(() => {
       :options="{
         duration: 800,
         animateContainer: false,
+        stagger: 3,
       }"
-      class="font-mono h-95 important-p4 border-x border-b border-base important-rounded-t-none important-bg-transparent"
+      class="font-mono h-112 important-p4 border-x border-b border-base important-rounded-t-none important-bg-transparent"
+      style="scrollbar-gutter: stable"
     />
     <div
       v-else

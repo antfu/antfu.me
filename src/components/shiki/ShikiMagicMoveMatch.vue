@@ -6,8 +6,6 @@ import { h, renderList } from 'vue'
 import { code1, code2 } from './ShikiMagicMoveDemoCode'
 import { useShikiStore } from '~/store/shiki'
 
-import 'shiki-magic-move/style.css'
-
 const shiki = useShikiStore()
 const tokens1 = shallowRef<KeyedTokensInfo>()
 const tokens2 = shallowRef<KeyedTokensInfo>()
