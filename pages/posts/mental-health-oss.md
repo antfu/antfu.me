@@ -1,7 +1,7 @@
 ---
 title: Mental Health in Open Source
 description: Some of my thoughts on my mental health during my journey in Open Source
-date: 2024-03-16T16:00:00.000+00:00
+date: 2024-03-16T12:00:00.000+00:00
 lang: en
 duration: 25min
 ---
@@ -24,7 +24,7 @@ And so here, let me tell you some random stuff I have been thinking about recent
 
 In a way, Open Source is still very new to me, even today.
 
-Since I started to learn programming and knowing about open source, I have been dreaming about being a full-time open source developer. When I was in college, I was eager to get recognized by the open source community, trying hard to "figure out" some impactful work that I could accomplish. All of a sudden, you will reach a pivotal point, where your project might unexpectedly take off, or you have been invited to join a big project - in a moment you will start to feel all those excitements as well as the responsibilities suddenly come along. In a few days, when the initial excitement starts to fade away, you start to realize that it also means so much responsibility and other things that you have never thought about. Despite that I have been trying all my college years to get into open source, when I finally stepped into it, I realized how much I was unprepared.
+Since I started to learn programming and knowing about open source, I have been dreaming about being a full-time open source developer. When I was in college, I was eager to get recognized by the open source community, trying hard to "figure out" some impactful work that I could accomplish. All of a sudden, you will reach a pivotal point, where your project might unexpectedly take off, or you have been invited to join a big project - in a moment, you will start to feel all those excitements as well as the responsibilities suddenly come along. In a few days, when the initial excitement starts to fade away, you start to realize that it also means so much responsibility and other things that you have never thought about. Despite that I have been trying all my college years to get into open source, when I finally stepped into it, I realized how much I was unprepared.
 
 One interesting thing about Open Source is that **one is probably never prepared**. You might encounter tricky technical problems, or have to keep up with the new technologies, but there are also a bunch of things other than coding that you have to deal with. You have to be your _customer support_ to answer questions; be a _designer_, a _writer_ to prepare nice documentation; a _project manager_ to keep the project on track; a _team leader_ to onboard new contributors and keep the team motivated; _marketing_ your stuff; _speaking_ at conferences; and so on. Those are the "side-effects" of being an open source developer, many things come to you in a bundle, not only the code.
 
@@ -119,7 +119,7 @@ The amount of work required to maintain multiple high-traffic open source projec
 
 I want to keep those projects alive and keep them moving forward; I want to write more blog posts to share my thoughts; I want to do more talks, to travel and meet people; I want to do more live streams as I know many are waiting for it; I have to clean this thing up, to do that release; I also want to learn French; And spend more time with my family - I mean, this is probably just life. People have their own concerns and responsibilities, I ain't any more special or busier than others.
 
-> <span italic font-wisper font-bold op75 text-lg>"But somehow, there seems to be something, <br>something makes me hard to breathe."</span>
+> <span font-wisper font-bold op80 text-1.4rem leading-2.1rem>"But somehow, there seems to be something, <br>something makes me hard to breathe."</span>
 
 I am probably reluctant to admit my potential burnout. Not because I am afraid of it, but more like, I don't want to give up and handle it passively. I know to take rest when I need it, but calling myself "burnout" and giving up is an "easy way out" to escape from the responsibilities. I want to find out the "root cause" and try to improve the situation instead of just "workaround" it. As we talked about previously, the shift of "expectations", and the re-evaluation of my "unpreparedness" and "self-expectations" are my solutions to the moments when I was close to burnout for different reasons. By adjusting myself and adopting, I was usually able to recover from the low points in roughly a week and keep moving forward.
 

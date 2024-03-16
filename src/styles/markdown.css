@@ -171,9 +171,9 @@ h6:focus .header-anchor {
 }
 
 .prose em {
-  text-decoration: underline;
-  text-decoration-color: #aaa3;
-  text-underline-offset: 3px;
+  --uno: font-serif;
+  color: var(--fg-deep);
+  font-size: 1.05em;
 }
 
 .table-of-contents {

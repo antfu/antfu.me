@@ -29,7 +29,7 @@ export default defineConfig({
         sans: 'Inter:400,600,800',
         mono: 'DM Mono:400,600',
         condensed: 'Roboto Condensed',
-        wisper: 'Coming Soon',
+        wisper: 'Bad Script',
       },
     }),
   ],
