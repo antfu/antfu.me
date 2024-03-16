@@ -1,7 +1,7 @@
 ---
 title: Mental Health in Open Source
-description: So of my personal thoughts on the mental health of Open Source maintainers.
-date: 2024-03-14T16:00:00.000+00:00
+description: Some of my thoughts on my mental health during my journey in Open Source
+date: 2024-03-16T16:00:00.000+00:00
 lang: en
 duration: 25min
 ---
