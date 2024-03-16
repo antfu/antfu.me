@@ -18,6 +18,7 @@ import UnoCSS from 'unocss/vite'
 import SVG from 'vite-svg-loader'
 import MarkdownItShiki from '@shikijs/markdown-it'
 import { rendererRich, transformerTwoslash } from '@shikijs/twoslash'
+import MarkdownItMagicLink from 'markdown-it-magic-link'
 
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
@@ -118,6 +119,8 @@ export default defineConfig({
           slugify,
           containerHeaderHtml: '<div class="table-of-contents-anchor"><div class="i-ri-menu-2-fill" /></div>',
         })
+
+        md.use(MarkdownItMagicLink)
 
         md.use(GitHubAlerts)
       },

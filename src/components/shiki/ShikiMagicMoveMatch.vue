@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ShikiMagicMove } from 'shiki-magic-move/vue'
 import type { KeyedTokensInfo } from 'shiki-magic-move/types'
 import { codeToKeyedTokens, createMagicMoveMachine } from 'shiki-magic-move/core'
 import { h, renderList } from 'vue'

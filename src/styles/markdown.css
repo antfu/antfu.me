@@ -61,6 +61,7 @@ html:not(.dark) .shiki span {
 }
 
 .prose {
+  --fg-light: #888;
   --fg: #555;
   --fg-deep: #222;
   --fg-deeper: #000;
@@ -89,6 +90,7 @@ html:not(.dark) .shiki span {
 }
 
 html.dark .prose {
+  --fg-light: #888;
   --fg: #bbb;
   --fg-deep: #ddd;
   --fg-deeper: #fff;
@@ -164,6 +166,16 @@ h6:focus .header-anchor {
   content: none;
 }
 
+.prose s {
+  opacity: 0.5;
+}
+
+.prose em {
+  text-decoration: underline;
+  text-decoration-color: #aaa3;
+  text-underline-offset: 3px;
+}
+
 .table-of-contents {
   position: fixed;
   top: 90px;
@@ -217,4 +229,40 @@ h6:focus .header-anchor {
 
 .code-wrap .line {
   white-space: break-spaces;
+}
+
+.markdown-magic-link {
+  display: inline-flex;
+  align-items: center;
+  background: #8882;
+  transform: translateY(3px);
+  line-height: 100%;
+  color: var(--fg-light) !important;
+  --uno: gap-1 transition rounded px1.5 py1 important-border-0 font-condensed;
+}
+
+.markdown-magic-link:hover {
+  background: #8883;
+  color: var(--fg) !important;
+}
+
+.markdown-magic-link-image {
+  display: inline-block;
+  height: 1.1em;
+  width: 1.1em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 2px;
+}
+
+.markdown-magic-link.markdown-magic-link-github-at {
+  transform: translateY(6px);
+  --uno: pl-0 py-0 pr2 uppercase text-sm gap-1.2 rounded-full;
+}
+
+.markdown-magic-link.markdown-magic-link-github-at .markdown-magic-link-image {
+  height: 1.6em;
+  width: 1.6em;
+  border-radius: 50%;
 }

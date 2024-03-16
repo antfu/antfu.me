@@ -42,6 +42,11 @@
       "language": "markdown",
       "scheme": "file",
       "pattern": "pages/posts/shiki-magic-move.md"
+    },
+    {
+      "language": "markdown",
+      "scheme": "file",
+      "pattern": "pages/posts/mental-health-oss.md"
     }
   ]
 }
