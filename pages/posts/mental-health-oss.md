@@ -44,7 +44,7 @@ I was so excited when I started my first few open source projects. I would keep 
 
 Once you reach those goals, things start to become "usual". You will then start to expect more and set higher goals. At a certain point, I start to not care about those numbers of stars or downloads anymore. It's not necessarily a bad thing as they are not the metrics I should be focusing on anyway, but I sometimes miss the old days when I could get joy from those simple things.
 
-Then I started to realize, that the experience of so many things in our life has a direct relationship with our **expectations**. When we just get started, we have little expectations, which could be relatively easy to reach. As we go forward and stand on a higher ground, we start to expect much more, that might not scale linearly. Getting 100 more stars when you have 1000 does not sound as impressive as when you have nothing. When you have 1000 stars, you will look for another 1000, and only 100 can no longer satisfy you. That is odd to me, and I don't enjoy this "human nature" of mine.
+I gradually realized, that the experience of so many things in our life has a direct relationship with our **expectations**. When we just get started, we have little expectations, which could be relatively easy to reach. As we go forward and stand on a higher ground, we start to expect much more, that might not scale linearly. Getting 100 more stars when you have 1000 does not sound as impressive as when you have nothing. When you have 1000 stars, you will look for another 1000, and only 100 can no longer satisfy you. That is odd to me, and I don't enjoy this "human nature" of mine.
 
 I found that lowering my expectations and being grateful for what I have is a good way to keep me happy. When you start to realize you can't keep reaching your milestones one and another, it's a good way out to stop seeking higher, take a break and enjoy the view around you - maybe you have already reached high enough. Since I started to "not overly concerned about gains and losses", I found myself much happier trying different ideas even if they might not be successful - because I don't have high expectations of them, there is no such concept of "failure" to me. And if some of them later might turn out to be good ideas, it would be a nice "unexpected surprise".
 
@@ -66,7 +66,7 @@ Lowering the expectations of yourself - no one is perfect, and no one is a machi
 
 ### When Your Dream Becomes Your Job
 
-It awesome to live in your own dream, and honestly, a privilege. But also, to be honest, having a dream is quite different from living in it. Dreams are always idealized, excluding all the boring details. My dream is to be a full-time open source developer. Yes, it sounds great to be independent, to work on what you like, to have a flexible or no schedule at all, to work from anywhere, and to benefit the world, etc. But in reality, things are not that simple.
+It's awesome to live in your own dream, and honestly, a privilege. But also, to be realisistic, having a dream is quite different from living in it. Dreams are always idealized, excluding all the boring details. My dream is to be a full-time open source developer. Yes, it sounds great to be independent, to work on what you like, to have a flexible or no schedule at all, to work from anywhere, and to benefit the world, etc. But in reality, things are not that simple.
 
 It's quite similar to "Make your hobby your job". It indeed has a great amount of benefits, like you will be more enjoyable and productive, but it also comes with obligations and responsibilities. When a hobby becomes a job, you lose the freedom to choose when and what to. Before, you would do your hobbies as after-work relaxation, but now when you want to relax with your hobbies, they become work.
 
@@ -95,8 +95,8 @@ So, to say, I usually pick <b important-text-hex-80BEDF>Quality</b> and <b impor
 
 ### Scope
 
-I was "accidentally" able to keep that momentum and velocity for quite a long time. I started getting into Open Source with {i18n Ally|https://github.com/lokalise/i18n-ally} and {VueUse|https://github.com/vueuse/vueuse}, and since then I joined Vue and Vite teams, then **within 2021 alone**, I came up with {Slidev|https://github.com/slidevjs/slidev} <span op75 text-sm>(April 2021)</span>, {UnoCSS|https://github.com/unocss/unocss} <span op75 text-sm>(October 2021)</span> and {Vitest|https://github.com/vitest-dev/vitest} <span op75 text-sm>(December 2021)</span> -- Everything went almost too smoothly that I barely realized the capacity of having larger scope has a certain limit.
-I have been continuing to do this with such "velocity" _ignorantly_ since then. I am super lucky to meet the amazing teams and community, and get help from them:
+I was _"accidentally"_ able to keep that momentum and velocity for quite a long time. I started getting into Open Source with {i18n Ally|https://github.com/lokalise/i18n-ally} and {VueUse|https://github.com/vueuse/vueuse}, and since then, I joined Vue and Vite teams. **Within 2021 alone**, I came up with {Slidev|https://github.com/slidevjs/slidev} <span op75 text-sm>(April 2021)</span>, {UnoCSS|https://github.com/unocss/unocss} <span op75 text-sm>(October 2021)</span> and {Vitest|https://github.com/vitest-dev/vitest} <span op75 text-sm>(December 2021)</span> -- Everything went almost too smoothly that I barely realized the capacity of having larger scope will have a certain limit.
+I continued doing so with the "velocity" _ignorantly_ since then. I am super lucky to meet the amazing teams and community, and get help from them:
 
 - The awesome & super supportive {Nuxt|https://github.com/nuxt/nuxt} team {@Atinux} {@danielroe} {@pi0}
 - {@sheremet-va} {@AriPerkkio} and [the Vitest team](https://github.com/vitest-dev/vitest/graphs/contributors) for taking care of {Vitest|https://github.com/vitest-dev/vitest}
@@ -111,7 +111,7 @@ I have been continuing to do this with such "velocity" _ignorantly_ since then. 
 - {@yyx990803}, whom I learned a lot about OSS and decision-making from
 - ...and many of you who have contributed to Open Source or provided financial support via Sponsorships!
 
-It's a shame I couldn't list all of them, and many of them are actually overlapping across projects. What I am trying to say is that, I am not working alone, and I can't do all of these alone. I have **lent so much help** from the community and the teams to have all those projects. I am truly grateful for that. On top of <b important-text-hex-80BEDF>Quality</b> and <b important-text-hex-E3B65E>Velocity</b>, it seems that I also work on a wide <b important-text-hex-D777B1>Scope</b> of projects - looks like it broke the rule of the iron triangle - but actually, the awesome community behind the scenes is the "magic" that makes it possible.
+It's a shame I couldn't list all of them, and many of them are actually overlapping across projects. What I am trying to say is that, I am not working alone, and I can't do all of these alone. I have **lent so much help** from the community and the teams to have all those projects. I am truly grateful for that. On top of <b important-text-hex-80BEDF>Quality</b> and <b important-text-hex-E3B65E>Velocity</b>, it seems that I also work on a wide <b important-text-hex-D777B1>Scope</b> of projects - looks like it broke the rule of the iron triangle - but actually, the awesome community behind the scenes is the _"magic"_ that makes it possible.
 
 ### Capacity
 
@@ -121,7 +121,7 @@ I want to keep those projects alive and keep them moving forward; I want to writ
 
 > <span font-wisper font-bold op80 text-1.4rem leading-2.1rem>"But somehow, there seems to be something, <br>something makes me hard to breathe."</span>
 
-I am probably reluctant to admit my potential burnout. Not because I am afraid of it, but more like, I don't want to give up and handle it passively. I know to take rest when I need it, but calling myself "burnout" and giving up is an "easy way out" to escape from the responsibilities. I want to find out the "root cause" and try to improve the situation instead of just "workaround" it. As we talked about previously, the shift of "expectations", and the re-evaluation of my "unpreparedness" and "self-expectations" are my solutions to the moments when I was close to burnout for different reasons. By adjusting myself and adopting, I was usually able to recover from the low points in roughly a week and keep moving forward.
+I am probably reluctant to admit my potential burnout. Not because I am afraid of it, but more like, I don't want to give up and handle it passively. I know to take rest when I need it, but calling myself "burnout" and giving up is an "easy way out" to escape from the responsibilities. I want to find out the _"root cause"_ and try to improve the situation instead of just _"workaround"_ it. As we talked about previously, the shift of "expectations", and the re-evaluation of my "unpreparedness" and "self-expectations" are my solutions to the moments when I was close to burnout for different reasons. By adjusting myself and adopting, I was usually able to recover from the low points in roughly a week and keep moving forward.
 
 The case this time is a bit different, it's not about me being unmotivated, but rather, there are too many things I wanted to do but I am running out of capacity. I started to think, that maybe it was that I expected myself to keep delivering everything with the same <b important-text-hex-E3B65E>Velocity</b>, I was anxious about not doing enough and not doing fast. Getting quick feedback is awesome and quite productive, but I am probably growing some impatience because I am too used to being quick. Combined, they make me easy to get frustrated when working on something that requires mid-to-long-term effort.
 
@@ -137,7 +137,7 @@ Maintaining good mental health is one of the important tasks for every open sour
 
 **Thank you** for reading through my messy and verbose thoughts until the end!
 
-I know my opinions must be heavily biased. If it ever triggers any thoughts or feelings for you, I am **curious to hear what you think or what are your ways**. You can leave some comments under this [tweet](https://twitter.com/antfu7/status/1768973757681438909) or [mastodon](https://elk.zone/m.webtoo.ls/@antfu/112105304547243075), or send me an email at hi@antfu.me if you prefer a private conversation. Looking forward to hearing from you!
+I know my opinions must be heavily biased. If it ever triggers any thoughts or feelings for you, I am **curious to hear what you think or what are your ways**. You can leave some comments under this [tweet](https://twitter.com/antfu7/status/1768973757681438909) or [mastodon](https://elk.zone/m.webtoo.ls/@antfu/112105304547243075), or send me an email at hi@antfu.me if you prefer private conversations. Looking forward to hearing from you!
 
 ### Thanks
 
@@ -145,6 +145,6 @@ At the end, I want to give a huge thanks to my girlfriend [Inès](https://www.in
 
 Also, thanks to {@patak-dev} and {@posva} for our deep conversations around this topic, they really helped me a lot and provided great support.
 
-And **You**! As well as the great open source community! I am so grateful for all the help and support I have received from you.
+And **You**, as well as the great open source community! I am so grateful for all the help and support I have received from you.
 
 Till next time, take care!
