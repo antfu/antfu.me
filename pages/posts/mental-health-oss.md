@@ -137,7 +137,7 @@ Maintaining good mental health is one of the important tasks for every open sour
 
 **Thank you** for reading through my messy and verbose thoughts until the end!
 
-I know my opinions must be heavily biased. If it ever triggers any thoughts or feelings for you, I am **curious to hear what you think or what are your ways**. You can leave some comments under this tweet, or send me an email at hi@antfu.me if you prefer a private conversation. Looking forward to hearing from you!
+I know my opinions must be heavily biased. If it ever triggers any thoughts or feelings for you, I am **curious to hear what you think or what are your ways**. You can leave some comments under this [tweet](https://twitter.com/antfu7/status/1768973757681438909) or [mastodon](https://elk.zone/m.webtoo.ls/@antfu/112105304547243075), or send me an email at hi@antfu.me if you prefer a private conversation. Looking forward to hearing from you!
 
 ### Thanks
 
