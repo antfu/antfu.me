@@ -17,7 +17,7 @@ projects:
 
   Vue Ecosystem:
     - name: 'VueUse'
-      link: 'https://github.com/antfu/vueuse'
+      link: 'https://github.com/vueuse/vueuse'
       desc: 'Collection of Composition API utils for Vue 2 and 3'
       icon: 'vueuse'
     - name: 'Vue Demi'
