@@ -8,6 +8,8 @@ duration: 25min
 
 [[toc]]
 
+> [中文翻译 Chinese Version](/posts/mental-health-oss-zh)
+
 > **TL;DR**: I am doing great and not going anywhere. Having some pressure but still holding up and trying to improve. Thank you and don't worry!
 
 This is the 4th year since I have started doing Open Source. To be completely honest, I began to feel things were getting out of my capacity more and more often. I am still not sure if I have ever been through actual [burnout](https://www.darlingdowns.health.qld.gov.au/about-us/our-stories/feature-articles/signs-you-might-be-experiencing-a-burnout-and-how-to-regain-balance-in-your-life#:~:text=Burnout%20is%20a%20state%20of,an%20increasing%20sense%20of%20hopelessness) or not, but I surely have experienced the ups and downs of my productivity and motivation periodically.
