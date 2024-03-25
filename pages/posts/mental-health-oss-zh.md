@@ -85,7 +85,7 @@ duration: 25min
 让我们从这个 <b important-text-hex-E3B65E>速度（Velocity）</b>、<b important-text-hex-D777B1>规模（Scope）</b>和<b important-text-hex-80BEDF> 品质（Quality）</b>的[「铁三角」](https://en.wikipedia.org/wiki/Project_management_triangle)开始。 <br><span op50>(通常它们是品质/速度/成本，我在这里做了一些调整)</span>
 
 <figure>
-  <img src="/images/oss-mental-iron-triangle.svg" />
+  <img src="/images/oss-mental-iron-triangle-zh.svg" />
   <figcaption text-center>速度-规模-品质 铁三角</figcaption>
 </figure>
 
