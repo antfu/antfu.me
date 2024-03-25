@@ -60,8 +60,6 @@ duration: 25min
 
 正如我在[另一篇文章中提到的，维护者与用户的比例在开源项目中通常是不平衡的](/posts/why-reproductions-are-required-zh)。找到一个新的贡献者或团队成员非常困难，但由于开源天然免费，吸引更多用户却几乎没有门槛。
 
-<!-- antfu review until here -->
-
 开源软件通常是[**「以现状提供」**](/posts/why-reproductions-are-required-zh#open-source-software-is-served-as-is)的，这意味着维护者并**没有义务**为他人解决问题。我想这对维护者来说，也会是一个困难的思维转换，尤其是对于那些关心用户和社区的维护者。当我们收到新的 issue 时，很难置之不理。但从另一个角度来看，一个人的时间和精力是有限的。当工作量超出了一个人的能力时，设定优先级，优先关注最重要的事情是其实会更好的做法。
 
 我希望有人能在我最开始维护高流量的开源项目时告诉我这一点（在网上其实有不少很好的资源，比如[这篇文章](https://opensource.guide/best-practices-zh/#its-okay-to-hit-pause)）--- 我花了很长时间才意识到，我不必做多完美，很多事情做不到也没有关系，而我应该找到自己的做事节奏。与其接收通知被动地处理，更适合我的其实是关闭通知，在自己适合的时间再去主动查看和处理 issues 和 pull request。
