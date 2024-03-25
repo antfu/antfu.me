@@ -8,6 +8,8 @@ duration: 25min
 
 [[toc]]
 
+> [中文翻译 Chinese Version](/posts/mental-health-oss-zh)
+
 > **TL;DR**: I am doing great and not going anywhere. Having some pressure but still holding up and trying to improve. Thank you and don't worry!
 
 This is the 4th year since I have started doing Open Source. To be completely honest, I began to feel things were getting out of my capacity more and more often. I am still not sure if I have ever been through actual [burnout](https://www.darlingdowns.health.qld.gov.au/about-us/our-stories/feature-articles/signs-you-might-be-experiencing-a-burnout-and-how-to-regain-balance-in-your-life#:~:text=Burnout%20is%20a%20state%20of,an%20increasing%20sense%20of%20hopelessness) or not, but I surely have experienced the ups and downs of my productivity and motivation periodically.
@@ -56,7 +58,7 @@ Expectations apply not only to what we are doing, but also come to myself. When 
 
 As I mentioned in [another post, the ratio of maintainers to users is often unbalanced](/posts/why-reproductions-are-required) in open source projects. It's really hard to meet a new collaborator or team member, but there is basically no threshold to grow more users due to Open Source being naturally free.
 
-I think it's hard for maintainers to do the mind shift to think that they are not obligated to solve the issues for others because open-source software is usually [**served as-is**](/posts/why-reproductions-are-required#open-source-software-is-served-as-is). Especially for maintainers who care about their users and community, it's hard to ignore when we receive new issues. But in another perspective, one person's time and energy are limited. When the amount of work grows out of one's capacity, it's better to set priorities and focus on the most important things first.
+I think it's hard for maintainers to make the mind shift and consider that they are not obligated to solve the issues for others -- because open-source software is usually [**served as-is**](/posts/why-reproductions-are-required#open-source-software-is-served-as-is). Especially for maintainers who care about their users and community, it's hard to ignore when we receive new issues. But in another perspective, one person's time and energy are limited. When the amount of work grows out of one's capacity, it's better to set priorities and focus on the most important things first.
 
 I wish someone could tell me this when I started maintaining high-traffic open source projects (you have great resources online like [this](https://opensource.guide/best-practices/#its-okay-to-hit-pause)) - it took me a long time to realize that I don't have to be perfect, and it's okay to do things at my own pace. Instead of receiving notifications passively, it's better for me to turn off the push notifications, and to proactively check the issues and pull requests when I feel ready to do so.
 
