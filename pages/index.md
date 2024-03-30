@@ -7,13 +7,18 @@ plum: true
 
 Hey, I am Anthony Fu, a fanatical open sourceror.
 
-Working at [<span i-simple-icons-nuxtdotjs /> NuxtLabs](https://nuxtlabs.com/).<br>
-Creator of [Vitest](https://github.com/vitest-dev/vitest), [Slidev](https://github.com/slidevjs/slidev), [VueUse](https://github.com/vueuse/vueuse), [UnoCSS](https://github.com/antfu/unocss), [Elk](https://github.com/elk-zone/elk), [Type Challenges](https://github.com/type-challenges/type-challenges) and [others](/projects).<br>
-Core team member of [Vue](https://vuejs.org/), [Nuxt](http://nuxtjs.org/) and [Vite](http://vitejs.dev/).<br>
+Working at {NuxtLabs|https://github.com/nuxtlabs}<br>
+Creator of {Vitest|https://github.com/vitest-dev/vitest} {Slidev|https://github.com/slidevjs/slidev} {VueUse|https://github.com/vueuse/vueuse} {UnoCSS|https://github.com/unocss/unocss)} {Elk|https://github.com/elk-zone/elk} {Type Challenges|https://github.com/type-challenges/type-challenges}<br>
+Core team of {Nuxt|https://github.com/vuejs/core} {Nuxt|https://github.com/nuxt/nuxt} {Vite|https://github.com/vitejs/vite}<br>
+Maintaining {Shiki|https://github.com/shikijs/shiki} {Twoslash|https://github.com/twoslashes/twoslash} {ESLint Stylistic|https://github.com/eslint-stylistic/eslint-stylistic}
 
 Dreaming up ideas and making them come true is where my passion lies. You can find my [full projects list here](/projects). I also do some generative-art, compform, interactivity experiments on [100.antfu.me](https://100.antfu.me/).
 
-Outside of programming, I enjoy doing photography and traveling. Some of my photos can be found on [Instagram](https://www.instagram.com/antfu7). If you happen to be in the same city I live (currently in Paris), maybe we can hang out and take some photos or code together.
+I give [talks](/talks) and write [blog posts](/posts) about open source, coding, tutorials, etc. Occasionally, I also do some coding live streams on [YouTube](https://www.youtube.com/anthonyfu7) and [哔哩哔哩](https://space.bilibili.com/668380).
+
+Outside of programming, I enjoy doing photography and traveling. Some of my photos can be found on [Instagram](https://www.instagram.com/antfu7).
+
+I live in Paris. If you are around, feel free to reach me out for coffee or a walk.
 
 <div flex-auto />
 
