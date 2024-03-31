@@ -9,7 +9,7 @@ Hey, I am Anthony Fu, a fanatical open sourceror.
 
 Working at {NuxtLabs|https://github.com/nuxtlabs}<br>
 Creator of {Vitest|https://github.com/vitest-dev/vitest} {Slidev|https://github.com/slidevjs/slidev} {VueUse|https://github.com/vueuse/vueuse} {UnoCSS|https://github.com/unocss/unocss)} {Elk|https://github.com/elk-zone/elk} {Type Challenges|https://github.com/type-challenges/type-challenges}<br>
-Core team of {Nuxt|https://github.com/vuejs/core} {Nuxt|https://github.com/nuxt/nuxt} {Vite|https://github.com/vitejs/vite}<br>
+Core team of {Vue|https://github.com/vuejs/core} {Nuxt|https://github.com/nuxt/nuxt} {Vite|https://github.com/vitejs/vite}<br>
 Maintaining {Shiki|https://github.com/shikijs/shiki} {Twoslash|https://github.com/twoslashes/twoslash} {ESLint Stylistic|https://github.com/eslint-stylistic/eslint-stylistic}
 
 Dreaming up ideas and making them come true is where my passion lies. You can find my [full projects list here](/projects). I also do some generative-art, compform, interactivity experiments on [100.antfu.me](https://100.antfu.me/).
