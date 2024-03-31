@@ -16,9 +16,7 @@ Dreaming up ideas and making them come true is where my passion lies. You can fi
 
 I give [talks](/talks) and write [blog posts](/posts) about open source, coding, tutorials, etc. Occasionally, I also do some coding live streams on [YouTube](https://www.youtube.com/anthonyfu7) and [哔哩哔哩](https://space.bilibili.com/668380).
 
-Outside of programming, I enjoy doing photography and traveling. Some of my photos can be found on [Instagram](https://www.instagram.com/antfu7).
-
-I live in Paris. If you are around, feel free to reach me out for coffee or a walk.
+Outside of programming, I enjoy doing photography and traveling. Some of my photos can be found on [Instagram](https://www.instagram.com/antfu7). Right now I live in Paris. If you are around, feel free to reach me out, we could have some coffee or work together.
 
 <div flex-auto />
 
@@ -26,7 +24,7 @@ I live in Paris. If you are around, feel free to reach me out for coffee or a wa
 
 Find me on
 
-<p flex="~ gap-3 wrap" class="mt--2!">
+<p flex="~ gap-2 wrap" class="mt--2!">
   <a href="https://github.com/antfu" target="_blank"><span op75 i-simple-icons-github /> GitHub</a>
   <a href="https://elk.zone/m.webtoo.ls/@antfu" target="_blank"><span op75 i-simple-icons-mastodon/> Mastodon</a>
   <a href="https://www.twitter.com/antfu7" target="_blank"><span op75 i-ri-twitter-x-fill /> Twitter</a>
@@ -37,5 +35,7 @@ Find me on
   <a href="https://www.zhihu.com/people/antfu" target="_blank"><span op75 i-simple-icons-zhihu /> 知乎</a>
   <a href="https://weibo.com/u/7485197193" target="_blank"><span op75 i-simple-icons-sinaweibo /> 微博</a>
 </p>
+
+Or mail me at <span font-mono>hi<span i-carbon-at/>antfu.me</span>
 
 If you enjoy my works, consider sponsoring me on [<span i-carbon-favorite /> GitHub Sponsor](https://github.com/sponsors/antfu) or [<span i-carbon-lightning /> 爱发电](https://afdian.net/a/antfu) to keep them sustainable.
