@@ -2,10 +2,13 @@
 title: Projects - Anthony Fu
 display: Projects
 description: List of projects that I am proud of
-plum: true
 wrapperClass: 'text-center'
 projects:
   Current Focus:
+    - name: 'Nuxt ESLint'
+      link: 'https://github.com/nuxt/eslint'
+      desc: 'All-in-one ESLint module for Nuxt'
+      icon: 'i-simple-icons-eslint'
     - name: 'Nuxt Playground'
       link: 'https://github.com/nuxt/learn.nuxt.com'
       desc: 'Interactive Playground for learning Nuxt'
@@ -32,6 +35,10 @@ projects:
       link: 'https://github.com/antfu/vue-starport'
       desc: 'Shared component across routes with animations.'
       icon: 'i-carbon-plane-sea'
+    - name: '@vue/composition-api'
+      link: 'https://github.com/vuejs/composition-api'
+      desc: 'Vue 2 Composition API plugin'
+      icon: 'i-uim-vuejs'
     - name: 'Vue Reactivity'
       link: 'https://github.com/vue-reactivity'
       desc: 'Reactivity utils set for @vue/reactivity'
@@ -62,6 +69,10 @@ projects:
       link: 'https://github.com/nuxt/devtools'
       desc: 'Unleash Nuxt Developer Experience'
       icon: 'i-logos-nuxt-icon saturate-0'
+    - name: 'Nuxt ESLint'
+      link: 'https://github.com/nuxt/eslint'
+      desc: 'All-in-one ESLint module for Nuxt'
+      icon: 'i-simple-icons-eslint'
     - name: 'Nuxt Test Utils'
       link: 'https://github.com/nuxt/test-utils'
       desc: 'Testing utilities for Nuxt powered by Vitest. (In collabration with @danielroe)'
@@ -98,6 +109,10 @@ projects:
       icon: 'i-teenyicons-markdown-outline'
 
   Vite Ecosystem:
+    - name: 'Vite'
+      link: 'https://github.com/vitejs/vite'
+      desc: 'Native-ESM powered web dev build tool'
+      icon: 'i-system-uicons-lightning'
     - name: 'Vitest'
       link: 'https://vitest.dev'
       desc: 'A blazing fast unit-test framework powered by Vite'
@@ -156,6 +171,10 @@ projects:
       link: 'https://github.com/unjs/magicast'
       desc: 'Programmatically modify JavaScript and TypeScript source codes like JSON.'
       icon: 'i-carbon-ibm-watsonx-code-assistant'
+    - name: 'uqr'
+      link: 'https://github.com/unjs/uqr'
+      desc: 'Generate QR Code universally'
+      icon: 'i-carbon:qr-code'
 
   ESLint Ecosystem:
     - name: 'eslint-config'
@@ -166,10 +185,18 @@ projects:
       link: 'https://github.com/eslint-stylistic/eslint-stylistic'
       desc: 'Collection of stylistic/formatting ESLint rules for JavaScript and TypeScript'
       icon: 'i-simple-icons:eslint'
-    - name: 'ESLint Flat Config Viewer'
-      link: 'https://github.com/antfu/eslint-flat-config-viewer'
-      desc: 'A visual tool to help you view and understand your ESLint Flat config.'
+    - name: 'ESLint Config Inspector'
+      link: 'https://github.com/eslint/config-inspector'
+      desc: 'A visual tool for inspecting and understanding your ESLint flat configs.'
       icon: 'i-carbon-search-locate-mirror'
+    - name: 'eslint-typegen'
+      link: 'https://github.com/antfu/eslint-typegen'
+      desc: 'Generate types for ESLint rules, auto-completion and type-checking for rule options'
+      icon: 'i-carbon-settings-check'
+    - name: 'eslint-flat-config-utils'
+      link: 'https://github.com/antfu/eslint-flat-config-utils'
+      desc: 'Utilities for ESLint Flat Config'
+      icon: 'i-carbon-tools-alt'
     - name: 'eslint-config-flat-gitignore'
       link: 'https://github.com/antfu/eslint-config-flat-gitignore'
       desc: '.gitignore support for ESLint Flat Config'
@@ -229,16 +256,6 @@ projects:
       desc: 'A Raycast extension that translates text to multiple languages at once'
       icon: 'i-carbon-ibm-watson-language-translator'
 
-  User Scripts:
-    - name: 'Refined GitHub Notification'
-      link: 'https://github.com/antfu/refined-github-notifications'
-      desc: 'Enhances the GitHub Notifications, more productive and less noisy.'
-      icon: 'i-carbon:box'
-    - name: 'Clean Twitter'
-      link: 'https://github.com/antfu/userscript-clean-twitter'
-      desc: 'Bring back the peace on Twitter'
-      icon: 'i-ion-logo-twitter'
-
   Games:
     - name: 'Handle 汉兜'
       link: 'https://handle.antfu.me'
@@ -269,7 +286,7 @@ projects:
       desc: 'TypeScript / ESNext node runtime powered by ESBuild'
       icon: 'i-mdi-hexagon-slice-4'
 
-  VS Code Extensions:
+  VS Code:
     - name: 'Iconify IntelliSense'
       link: 'https://github.com/antfu/vscode-iconify'
       desc: 'Iconify IntelliSense for VS Code'
@@ -311,19 +328,15 @@ projects:
       desc: "Don't get lost even you have multiple VS Code opened"
       icon: 'i-carbon-map'
 
-  Utility Libraries:
+  Utilities:
     - name: 'shiki'
       link: 'https://github.com/shikijs/shiki'
-      desc: 'A beautiful syntax highlighter (In collabration with @octref and @orta)'
+      desc: 'A beautiful syntax highlighter<br>(In collabration with @octref and @orta)'
       icon: 'i-carbon:code'
     - name: 'twoslash'
       link: 'https://github.com/twoslashes/twoslash'
-      desc: 'Markup for generating rich type information ahead of time (In collabration with @orta)'
+      desc: 'Markup for generating rich type information ahead of time<br>(In collabration with @orta)'
       icon: 'i-simple-icons:typescript'
-    - name: 'uqr'
-      link: 'https://github.com/unjs/uqr'
-      desc: 'Generate QR Code universally'
-      icon: 'i-carbon:qr-code'
     - name: 'qr-scanner-wechat'
       link: 'https://github.com/antfu/qr-scanner-wechat'
       desc: 'QR Code scanner in JS with OpenCV and WeChat Algorithm'
@@ -453,19 +466,21 @@ projects:
       desc: 'Windi CSS for any site with one-line of code'
       icon: 'i-carbon-run'
 
-  Maintaining:
-    - name: 'Vite'
-      link: 'https://github.com/vitejs/vite'
-      desc: 'Native-ESM powered web dev build tool'
-      icon: 'i-system-uicons-lightning'
-    - name: '@vue/composition-api'
-      link: 'https://github.com/vuejs/composition-api'
-      desc: 'Vue 2 Composition API plugin'
-      icon: 'i-uim-vuejs'
+  Programming Languages:
     - name: '文言 wenyan-lang'
       link: 'https://github.com/wenyan-lang/wenyan'
       desc: 'A programming language for the ancient Chinese'
       icon: 'i-carbon-translate'
+
+  User Scripts:
+    - name: 'Refined GitHub Notification'
+      link: 'https://github.com/antfu/refined-github-notifications'
+      desc: 'Enhances the GitHub Notifications, more productive and less noisy.'
+      icon: 'i-carbon:box'
+    - name: 'Clean Twitter'
+      link: 'https://github.com/antfu/userscript-clean-twitter'
+      desc: 'Bring back the peace on Twitter'
+      icon: 'i-ion-logo-twitter'
 
   Toys:
     - name: '1990 Script'
