@@ -111,7 +111,7 @@ duration: 25min
 - {@arashsheyda} 在 {Nuxt DevTools|https://github.com/nuxt/devtools} 上提供了很多帮助
 - {@shuuji3} {@Shinigami92} 为 {Elk|https://github.com/elk-zone/elk} 做出了贡献
 - {@patak-dev} {@sapphi-red} {@bluwy} 与出色的社区一起推动 Vite 前进
-- {@userquin} 维护 {Vite PWA|https://github.com/vite-pwa} 并几乎在所以项目中提供了帮助
+- {@userquin} 维护 {Vite PWA|https://github.com/vite-pwa} 并几乎在所有项目中提供了帮助
 - {@yyx990803}，我从他那学到了很多关于开源和决策的智慧
 - ...以及许多为开源做出贡献或通过赞助提供财务支持的人！
 
