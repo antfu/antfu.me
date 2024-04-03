@@ -118,7 +118,7 @@ const dataUri = `data:image/svg+xml;utf8,${encodeSvg(svg)}`
 
 在内联的 SVG 中，我们可以使用 [`fill="currentColor"`](https://www.w3.org/TR/css-color-3/#currentcolor) 来为 SVG 着色。但是，当我们将其作为背景图时，它就变成了一个图片。SVG 的动态性消失了，`currentColor` 的效果也随之消失（这和你无法覆盖 PNG 的颜色一样）。
 
-如果你 Google 一下，你会发现大多数人都告诉你告诉你，这个就是个限制没有办法。少部分人会给你提供一个解决方案 -- 在转换为 DataURI 前在 SVG 中设置颜色，这可以解决对于特定图标着色的问题，但是没有从根本上解决上下文着色的问题。
+如果你 Google 一下，你会发现大多数人都告诉你，这个就是个限制没有办法。少部分人会给你提供一个解决方案 -- 在转换为 DataURI 前在 SVG 中设置颜色，这可以解决对于特定图标着色的问题，但是没有从根本上解决上下文着色的问题。
 
 此时，可能会有小伙伴想到使用 [CSS filters](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)，就像 Una Kravets 在 [使用 CSS 给 SVG 背景上色](https://css-tricks.com/solved-with-css-colorizing-svg-backgrounds/) 一文中提到的那样。听起来还不错，也许引入一些运行时的 JavaScript 去计算如何将颜色转化为最终所需的颜色矩阵便可以做到。但这就违背了我们在探索纯 CSS 中图标的目的。
 
