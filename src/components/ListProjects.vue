@@ -23,7 +23,7 @@ function slug(name: string) {
           '--enter-step': '60ms',
         }"
       >
-        <span text-5em color-transparent absolute left--1rem top-0rem font-bold text-stroke-1.5 text-stroke-hex-aaa op20>{{ key }}</span>
+        <span text-5em color-transparent absolute left--1rem top-0rem font-bold leading-1em text-stroke-1.5 text-stroke-hex-aaa op35 dark:op20>{{ key }}</span>
       </div>
       <div
         class="project-grid py-2 max-w-500 w-max mx-auto"
