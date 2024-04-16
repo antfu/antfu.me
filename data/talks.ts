@@ -28,6 +28,7 @@ export const talks: Talk[] = [
         location: 'Paris, France',
         conference: 'React Paris',
         conferenceUrl: 'https://react.paris',
+        recording: 'https://youtu.be/7JRa9S4aEEI',
         pdf: 'https://antfu.me/talks/2024-03-22',
         spa: 'https://talks.antfu.me/2024/reactparis',
       },
