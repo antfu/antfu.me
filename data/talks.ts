@@ -20,6 +20,7 @@ export const talks: Talk[] = [
         location: 'Tokyo, Japan',
         conference: 'Vue Fes Japan',
         conferenceUrl: 'https://vuefes.jp/2023/en',
+        recording: 'https://www.youtube.com/watch?v=8z2ZZFEsnQk',
         pdf: 'https://antfu.me/talks/2023-10-28',
         spa: 'https://talks.antfu.me/2023/vuefesjapan',
       },
