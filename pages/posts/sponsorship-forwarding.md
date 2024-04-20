@@ -143,7 +143,7 @@ For a related example, inspired by [this tweet](https://x.com/patak_dev/status/1
 
 There are quite a few other platforms for open-source funding that also bring exciting solutions to this problem.
 
-This collective would be the only solution - feel free to explore other platforms and initiatives you think are making sense. The main difference between this collective and the others is that it has me working behind it, instead of just metrics and algorithms. The human factor also made it possible to reduce sponsorships waterflow, where on some platforms the sub-dependencies are harder to get enough funds. With this collective, I can reach the critical dependencies and contributors directly to support them. I will spend time doing the research and communications every month to find important dependencies to support.
+This collective is only one more idea, an attempt to help our ecosystem become more sustainable - feel free to explore other platforms and initiatives you think are making sense. The main difference between this collective and the others is that it has me working behind it, instead of just metrics and algorithms. The human factor also made it possible to reduce sponsorships waterflow, where on some platforms the sub-dependencies are harder to get enough funds. With this collective, I can reach the critical dependencies and contributors directly to support them. I will spend time doing the research and communications every month to find important dependencies to support.
 
 ## Sponsor Now
 
@@ -153,6 +153,6 @@ If I have convinced you this initiative is interesting, sponsor it now to suppor
 
 ## Feedback
 
-I am eager to hear your feedback on this initiative. If you have any thoughts, concerns, or suggestions, please feel free to reach out to leave me a comment under [this tweet]() or [this toot](). You can also mail me at hi@antfu.me.
+I am eager to hear your feedback on this initiative. If you have any thoughts, concerns, or suggestions, please feel free to reach out to leave me a comment under [this tweet](https://twitter.com/antfu7/status/1781749305230885140) or [this toot](https://elk.zone/m.webtoo.ls/@antfu/112305352609322422). You can also mail me at hi@antfu.me.
 
 Thank you for reading this long post. I hope we can take this initiative as a small step and make open-source better and more sustainable together. 💚
