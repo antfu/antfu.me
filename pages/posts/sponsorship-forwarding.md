@@ -147,7 +147,9 @@ This collective is only one more idea, an attempt to help our ecosystem become m
 
 ## Sponsor Now
 
-If I have convinced you this initiative is interesting, sponsor it now to support the ecosystem and open-source sustainability with the following link! Thank you!
+This initiative is something I couldn't do alone. I would need your support to make it happen.
+
+If I have convinced you this initiative is meaningful, use the buttons below to help me support the open-source ecosystem and make it more sustainable. Thank you!
 
 <SponsorButtonCollective />
 
