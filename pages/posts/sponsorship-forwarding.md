@@ -2,7 +2,7 @@
 title: Initiative on Sponsorship Forwarding
 date: 2024-04-20
 lang: en
-duration: 20min
+duration: 10min
 description: An initiative to support open-source ecosystem by Anthony Fu.
 ---
 
