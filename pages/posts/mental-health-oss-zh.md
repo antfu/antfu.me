@@ -99,19 +99,19 @@ duration: 25min
 
 ### 范围
 
-我「出乎意料地」保持了这种势头和速度相当长一段时间。我从 {i18n Ally|https://github.com/lokalise/i18n-ally} 和 {VueUse|https://github.com/vueuse/vueuse} 开始接触开源，自那以后，我加入了 Vue 和 Vite 团队。**在 2021 年一年之中**，我做出了 {Slidev|https://github.com/slidevjs/slidev} <span op75 text-sm>(2021 年 4 月)</span>、{UnoCSS|https://github.com/unocss/unocss} <span op75 text-sm>(2021 年 10 月)</span> 和 {Vitest|https://github.com/vitest-dev/vitest} <span op75 text-sm>(2021 年 12 月)</span> --- 一切都进行得太顺利了，以至于我几乎没有意识到拥有更大规模的项目也是会有上限的。
+我「出乎意料地」保持了这种势头和速度相当长一段时间。我从 {i18n Ally} 和 {VueUse} 开始接触开源，自那以后，我加入了 Vue 和 Vite 团队。**在 2021 年一年之中**，我做出了 {Slidev} <span op75 text-sm>(2021 年 4 月)</span>、{UnoCSS} <span op75 text-sm>(2021 年 10 月)</span> 和 {Vitest} <span op75 text-sm>(2021 年 12 月)</span> --- 一切都进行得太顺利了，以至于我几乎没有意识到拥有更大规模的项目也是会有上限的。
 从那时起，我继续「无知地」保持着这样的速度。我非常幸运能够遇到这些了不起的团队和社区，并从他们那里得到帮助：
 
-- 非常厉害的 {Nuxt|https://github.com/nuxt/nuxt} 团队 {@Atinux} {@danielroe} {@pi0}
-- {@sheremet-va} {@AriPerkkio} 和 [Vitest 团队](https://github.com/vitest-dev/vitest/graphs/contributors) 持续维护 {Vitest|https://github.com/vitest-dev/vitest}
-- {@chu121su12} {@zyyv} 和 [UnoCSS 团队](https://github.com/unocss/unocss/graphs/contributors) 推动 {UnoCSS|https://github.com/unocss/unocss} 的很多改进
-- {@okxiaoliang4} {@wheatjs} {@Alfred-Skyblue} {@Tahul} 和 [VueUse 团队](https://vueuse.org/) 协助维护 {VueUse|https://github.com/vueuse/vueuse}
-- {@sxzz} 管理 {Unplugin|https://github.com/unplugin}
-- {@KermanX} {@tonai} 在 {Slidev|https://github.com/slidevjs/slidev} 上推动了很多功能
-- {@arashsheyda} 在 {Nuxt DevTools|https://github.com/nuxt/devtools} 上提供了很多帮助
-- {@shuuji3} {@Shinigami92} 为 {Elk|https://github.com/elk-zone/elk} 做出了贡献
+- 非常厉害的 {Nuxt} 团队 {@Atinux} {@danielroe} {@pi0}
+- {@sheremet-va} {@AriPerkkio} 和 [Vitest 团队](https://github.com/vitest-dev/vitest/graphs/contributors) 持续维护 {Vitest}
+- {@chu121su12} {@zyyv} 和 [UnoCSS 团队](https://github.com/unocss/unocss/graphs/contributors) 推动 {UnoCSS} 的很多改进
+- {@okxiaoliang4} {@wheatjs} {@Alfred-Skyblue} {@Tahul} 和 [VueUse 团队](https://vueuse.org/) 协助维护 {VueUse}
+- {@sxzz} 管理 {Unplugin}
+- {@KermanX} {@tonai} 在 {Slidev} 上推动了很多功能
+- {@arashsheyda} 在 {Nuxt DevTools} 上提供了很多帮助
+- {@shuuji3} {@Shinigami92} 为 {Elk} 做出了贡献
 - {@patak-dev} {@sapphi-red} {@bluwy} 与出色的社区一起推动 Vite 前进
-- {@userquin} 维护 {Vite PWA|https://github.com/vite-pwa} 并几乎在所有项目中提供了帮助
+- {@userquin} 维护 {Vite PWA} 并几乎在所有项目中提供了帮助
 - {@yyx990803}，我从他那学到了很多关于开源和决策的智慧
 - ...以及许多为开源做出贡献或通过赞助提供财务支持的人！
 

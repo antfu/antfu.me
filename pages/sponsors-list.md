@@ -7,22 +7,22 @@ description: Sponsors of Anthony Fu
 
 <!-- @layout-full-width -->
 
-<div slide-enter slide-enter-2>
+<div class="prose pb5 mx-auto" slide-enter slide-enter-2>
+  <SponsorButtons />
 
-<div class="prose mx-auto">
-  Sponsor me keep them sustainable and get early access to new projects.
-</div>
-
-<div text-center p6>
-  <SponsorButton />
-</div>
-
+  <hr>
 </div>
 
 <script setup>
 import Sponsors from '../public/sponsors.svg?component'
 </script>
 
-<div slide-enter slide-enter-3>
-<Sponsors h-auto max-w-250 w-full mx-auto />
+<div class="prose mx-auto text-center" slide-enter slide-enter-3>
+  <p op50>
+    All Sponsors
+  </p>
+</div>
+
+<div slide-enter slide-enter-4>
+  <Sponsors h-auto max-w-250 w-full mx-auto />
 </div>

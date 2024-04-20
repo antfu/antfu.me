@@ -97,23 +97,23 @@ So, to say, I usually pick <b important-text-hex-80BEDF>Quality</b> and <b impor
 
 ### Scope
 
-I was _"accidentally"_ able to keep that momentum and velocity for quite a long time. I started getting into Open Source with {i18n Ally|https://github.com/lokalise/i18n-ally} and {VueUse|https://github.com/vueuse/vueuse}, and since then, I joined Vue and Vite teams. **Within 2021 alone**, I came up with {Slidev|https://github.com/slidevjs/slidev} <span op75 text-sm>(April 2021)</span>, {UnoCSS|https://github.com/unocss/unocss} <span op75 text-sm>(October 2021)</span> and {Vitest|https://github.com/vitest-dev/vitest} <span op75 text-sm>(December 2021)</span> -- Everything went almost too smoothly that I barely realized the capacity of having larger scope will have a certain limit.
+I was _"accidentally"_ able to keep that momentum and velocity for quite a long time. I started getting into Open Source with {i18n Ally} and {VueUse}, and since then, I joined Vue and Vite teams. **Within 2021 alone**, I came up with {Slidev} <span op75 text-sm>(April 2021)</span>, {UnoCSS} <span op75 text-sm>(October 2021)</span> and {Vitest} <span op75 text-sm>(December 2021)</span> -- Everything went almost too smoothly that I barely realized the capacity of having larger scope will have a certain limit.
 I continued doing so with the "velocity" _ignorantly_ since then. I am super lucky to meet the amazing teams and community, and get help from them:
 
-- The awesome & super supportive {Nuxt|https://github.com/nuxt/nuxt} team {@Atinux} {@danielroe} {@pi0}
-- {@sheremet-va} {@AriPerkkio} and [the Vitest team](https://github.com/vitest-dev/vitest/graphs/contributors) for taking care of {Vitest|https://github.com/vitest-dev/vitest}
-- {@chu121su12} {@zyyv} and [the UnoCSS team](https://github.com/unocss/unocss/graphs/contributors) for polishing {UnoCSS|https://github.com/unocss/unocss} a lot
-- {@okxiaoliang4} {@wheatjs} {@Alfred-Skyblue} {@Tahul} and [the VueUse team](https://vueuse.org/) for {VueUse|https://github.com/vueuse/vueuse}
-- {@sxzz} for managing {Unplugin|https://github.com/unplugin}
-- {@KermanX} {@tonai} for pushing many features on {Slidev|https://github.com/slidevjs/slidev}
-- {@arashsheyda} for helping a lot on {Nuxt DevTools|https://github.com/nuxt/devtools}
-- {@shuuji3} {@Shinigami92} for contributing to {Elk|https://github.com/elk-zone/elk}
+- The awesome & super supportive {Nuxt} team {@Atinux} {@danielroe} {@pi0}
+- {@sheremet-va} {@AriPerkkio} and [the Vitest team](https://github.com/vitest-dev/vitest/graphs/contributors) for taking care of {Vitest}
+- {@chu121su12} {@zyyv} and [the UnoCSS team](https://github.com/unocss/unocss/graphs/contributors) for polishing {UnoCSS} a lot
+- {@okxiaoliang4} {@wheatjs} {@Alfred-Skyblue} {@Tahul} and [the VueUse team](https://vueuse.org/) for {VueUse}
+- {@sxzz} for managing {Unplugin}
+- {@KermanX} {@tonai} for pushing many features on {Slidev}
+- {@arashsheyda} for helping a lot on {Nuxt DevTools}
+- {@shuuji3} {@Shinigami92} for contributing to {Elk}
 - {@patak-dev} {@sapphi-red} {@bluwy} for keep pushing Vite forward with the awesome community
-- {@userquin} for maintaining {Vite PWA|https://github.com/vite-pwa} and helping basically everything everywhere
+- {@userquin} for maintaining {Vite PWA} and helping basically everything everywhere
 - {@yyx990803}, whom I learned a lot about OSS and decision-making from
 - ...and many of you who have contributed to Open Source or provided financial support via Sponsorships!
 
-It's a shame I couldn't list all of them, and many of them are actually overlapping across projects. What I am trying to say is that, I am not working alone, and I can't do all of these alone. I have **lent so much help** from the community and the teams to have all those projects. I am truly grateful for that. On top of <b important-text-hex-80BEDF>Quality</b> and <b important-text-hex-E3B65E>Velocity</b>, it seems that I also work on a wide <b important-text-hex-D777B1>Scope</b> of projects - looks like it broke the rule of the iron triangle - but actually, the awesome community behind the scenes is the _"magic"_ that makes it possible.
+It's a shame I couldn't list all of them, and many of them are actually overlapping across projects. What I am trying to say is that, I am not working alone, and I can't do all of these alone. I have **borrowed so much help** from the community and the teams to have all those projects. I am truly grateful for that. On top of <b important-text-hex-80BEDF>Quality</b> and <b important-text-hex-E3B65E>Velocity</b>, it seems that I also work on a wide <b important-text-hex-D777B1>Scope</b> of projects - looks like it broke the rule of the iron triangle - but actually, the awesome community behind the scenes is the _"magic"_ that makes it possible.
 
 ### Capacity
 
