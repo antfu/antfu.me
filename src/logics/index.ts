@@ -3,11 +3,28 @@ import dayjs from 'dayjs'
 export const isDark = useDark()
 export const englishOnly = useStorage('antfu-english-only', false)
 
+// Get scrollbar width
+function getScrollbarWidth() {
+  const scrollDiv = document.createElement('div')
+  scrollDiv.style.position = 'absolute'
+  scrollDiv.style.top = '-9999px'
+  scrollDiv.style.width = '100px'
+  scrollDiv.style.height = '100px'
+  scrollDiv.style.overflow = 'scroll'
+  document.body.appendChild(scrollDiv)
+  const scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth
+  document.body.removeChild(scrollDiv)
+  return scrollbarWidth
+}
+
 /**
  * Credit to [@hooray](https://github.com/hooray)
  * @see https://github.com/vuejs/vitepress/pull/2347
  */
 export function toggleDark(event: MouseEvent) {
+  const htmlElement = document.querySelector('html')!
+  htmlElement.style.overflow = 'hidden'
+  htmlElement.style.width = `calc(100vw - ${getScrollbarWidth()}px)`
   // @ts-expect-error experimental API
   const isAppearanceTransition = document.startViewTransition
     && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -48,6 +65,9 @@ export function toggleDark(event: MouseEvent) {
             : '::view-transition-new(root)',
         },
       )
+      setTimeout(() => {
+        htmlElement.style.overflow = 'auto'
+      }, 400)
     })
 }
 
