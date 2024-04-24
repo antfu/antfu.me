@@ -13,16 +13,6 @@ description: Sponsors of Anthony Fu
   <hr>
 </div>
 
-<script setup>
-import Sponsors from '../public/sponsors.svg?component'
-</script>
-
-<div class="prose mx-auto text-center" slide-enter slide-enter-3>
-  <p op50>
-    All Sponsors
-  </p>
-</div>
-
 <div slide-enter slide-enter-4>
-  <Sponsors h-auto max-w-250 w-full mx-auto />
+  <SponsorsView />
 </div>

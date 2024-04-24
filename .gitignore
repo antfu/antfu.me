@@ -11,3 +11,4 @@ temp
 sponsors.*
 drafts
 *.log
+src/data/sponsors-circles.json
