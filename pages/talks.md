@@ -26,6 +26,7 @@ plum: true
 | <TalkDate date="2024-06-08"/> | [**CityJS Athens**](https://greece.cityjsconf.org/)                                                  | Athens               | ESLint One for All Made Easy                                        |
 | <TalkDate date="2024-06-13"/> | [**JS Nation**](https://jsnation.com/)                                                               | Amsterdam            | ESLint One for All Made Easy                                        |
 | <TalkDate date="2024-06-14"/> | [**React Summit**](https://reactsummit.com/)                                                         | Amsterdam            | The Set Theory                                                      |
+| <TalkDate date="2024-07-06"/> | [**VueConf Shenzhen**](https://vue.w3ctech.com/)                                                     | Shenzhen, China      | TBA                                                                 |
 | <TalkDate date="2024-10-19"/> | [**Vue Fes Japan**](https://vuefes.jp/)                                                              | Tokyo                | TBD                                                                 |
 
 <h1 important="mb--4 mt-15">Latest Talks</h1>
