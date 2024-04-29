@@ -5,6 +5,15 @@ import { englishOnly, formatDate } from '../logics'
 function getSlug(title: string) {
   return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-')
 }
+
+function isFuture(date: string) {
+  return +new Date(date) > +new Date()
+}
+
+function daysLeft(date: string) {
+  const diff = +new Date(date) - +new Date()
+  return Math.ceil(diff / (1000 * 60 * 60 * 24))
+}
 </script>
 
 <template>
@@ -14,7 +23,7 @@ function getSlug(title: string) {
         <hr>
       </div>
       <h2 :id="getSlug(talk.title)" tabindex="-1" important-mb-0>
-        <span v-if="talk.series" text-xl font-400 op50>
+        <span v-if="talk.series" text-lg font-400 op45 italic mb1>
           {{ talk.series }}
           <br>
         </span>
@@ -45,7 +54,7 @@ function getSlug(title: string) {
                 {{ formatDate(p.date, false) }} · {{ p.location }}
               </div>
             </div>
-            <div flex="~ gap-3 justify-end items-start">
+            <div flex="~ gap-3 justify-end items-center">
               <a v-if="p.recording" :href="p.recording" target="_blank" rel="noopener noreferrer" op50 hover:op100 important-transition-opacity duration-500 important-border-0>
                 <div i-ri-play-large-line />
                 Watch
@@ -61,6 +70,15 @@ function getSlug(title: string) {
               <a v-if="p.pdf" :href="p.pdf" target="_blank" rel="noopener noreferrer" op50 hover:op100 important-transition-opacity duration-500 important-border-0>
                 <div i-ri-download-2-line />
                 PDF
+              </a>
+              <a
+                v-if="isFuture(p.date)" :href="p.conferenceUrl" target="_blank"
+                rel="noopener noreferrer"
+                op50 hover:op100 important-transition-opacity duration-500 important-border-0
+                font-serif bg-gray:15 px2 rounded font-bold mr--2
+              >
+                <div i-ri-time-line />
+                in {{ daysLeft(p.date) }} days
               </a>
             </div>
           </template>

@@ -2,6 +2,24 @@ import type { Talk } from '~/types'
 
 export const talks: Talk[] = [
   {
+    title: 'ESLint One for All Made Easy',
+    description: 'Introduction to ESLint\'s new flat config format and see how it can bring new possibilities and enhancements to your development workflow and experience.',
+    presentations: [
+      {
+        date: '2024-06-13',
+        location: 'Amsterdam, Netherlands',
+        conference: 'JS Nation',
+        conferenceUrl: 'https://jsnation.com/',
+      },
+      {
+        date: '2024-06-08',
+        location: 'Athens, Greece',
+        conference: 'CityJS Athens',
+        conferenceUrl: 'https://greece.cityjsconf.org/',
+      },
+    ],
+  },
+  {
     series: 'Anthony\'s Road to Open Source - Part 1',
     title: 'The Set Theory',
     description: 'Lessons I learned on my journey to working full time on open source. With tips and thinking for making open source projects more successful.',
@@ -32,6 +50,12 @@ export const talks: Talk[] = [
         recording: 'https://youtu.be/7JRa9S4aEEI',
         pdf: 'https://antfu.me/talks/2024-03-22',
         spa: 'https://talks.antfu.me/2024/reactparis',
+      },
+      {
+        date: '2024-06-14',
+        location: 'Amsterdam, Netherlands',
+        conference: 'React Summit',
+        conferenceUrl: 'https://reactsummit.com/',
       },
     ],
   },
