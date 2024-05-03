@@ -37,8 +37,7 @@ onMounted(() => {
       :style="{
         'flex-shrink': 0,
         'transform': `scale(${scale})`,
-        'height': `${500 * scale}px`,
-        'transformOrigin': 'top center',
+        'transformOrigin': 'center center',
       }"
     >
       <a

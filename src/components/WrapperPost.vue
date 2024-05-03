@@ -73,11 +73,20 @@ onMounted(() => {
       setTimeout(navigate, 1000)
   }, 1)
 })
+
+const art = computed(() => {
+  if (frontmatter.art === 'random')
+    return Math.random() > 0.5 ? 'plum' : 'dots'
+  return frontmatter.art
+})
 </script>
 
 <template>
-  <ClientOnly v-if="frontmatter.plum">
-    <Plum />
+  <ClientOnly v-if="art === 'plum'">
+    <ArtPlum />
+  </ClientOnly>
+  <ClientOnly v-else-if="art === 'dots'">
+    <ArtDots />
   </ClientOnly>
   <div
     v-if="frontmatter.display ?? frontmatter.title"

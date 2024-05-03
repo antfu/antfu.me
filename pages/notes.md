@@ -1,6 +1,6 @@
 ---
 title: Notes - Anthony Fu
-plum: true
+art: plum
 display: ''
 ---
 

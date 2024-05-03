@@ -58,6 +58,7 @@
     "markdown-it-link-attributes": "^4.0.1",
     "markdown-it-magic-link": "^0.1.4",
     "markdown-it-table-of-contents": "^0.6.0",
+    "p5i": "^0.4.2",
     "picocolors": "^1.0.0",
     "pinia": "^2.1.7",
     "pnpm": "^8.15.6",

@@ -6,15 +6,6 @@ const amountMax = Math.max(..._sponsors.map(sponsor => sponsor.amount))
 const RADIUS_MIN = 8
 const RADIUS_MAX = 300
 
-_sponsors.unshift({
-  name: 'NuxtLabs',
-  login: 'nuxtlabs',
-  avatar: 'https://github.com/nuxtlabs.png',
-  link: 'https://nuxtlabs.com',
-  amount: 2000,
-  org: true,
-})
-
 const sponsors = _sponsors
   .filter(sponsor => sponsor.amount > 0)
   .map((sponsor, idx) => ({

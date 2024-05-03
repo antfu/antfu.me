@@ -3,6 +3,7 @@ title: Projects - Anthony Fu
 display: Projects
 description: List of projects that I am proud of
 wrapperClass: 'text-center'
+art: dots
 projects:
   Current Focus:
     - name: 'Nuxt ESLint'

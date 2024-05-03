@@ -1,7 +1,7 @@
 ---
 title: Podcasts - Anthony Fu
 display: ''
-plum: true
+art: plum
 items:
   - title: 'Views on Vue #144 - Exploring Vitesse with Anthony Fu'
     date: '2021-03-02'

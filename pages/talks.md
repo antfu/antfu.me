@@ -1,7 +1,7 @@
 ---
 title: Talks - Anthony Fu
 display: ''
-plum: true
+art: plum
 ---
 
 <SubNav />
