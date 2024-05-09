@@ -68,7 +68,13 @@ onMounted(() => {
         :title="c.name || c.login"
         @mouseenter="push(c.id)"
       >
-        <img :src="c.avatar" w-full h-full bg-base>
+        <img v-if="c.avatar" :src="c.avatar" w-full h-full bg-base>
+        <div
+          v-else
+          class="w-full h-full bg-gray:50 flex"
+        >
+          <div i-ph-user ma op75 class="w-50% h-50%" />
+        </div>
       </a>
     </div>
   </div>
