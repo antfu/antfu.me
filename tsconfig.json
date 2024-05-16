@@ -5,12 +5,12 @@
     "lib": ["DOM", "ESNext"],
     "baseUrl": ".",
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "paths": {
       "~/*": ["src/*"]
     },
     "resolveJsonModule": true,
-    "types": ["vite/client", "vite-plugin-pages/client"],
+    "types": ["vite/client", "unplugin-vue-router/client"],
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
