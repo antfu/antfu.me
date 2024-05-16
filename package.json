@@ -1,7 +1,7 @@
 {
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@9.1.0",
+  "packageManager": "pnpm@9.1.1",
   "scripts": {
     "build": "npm run static && cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts && cp _dist_redirects dist/_redirects",
     "dev": "vite --port 3333 --open",
@@ -74,9 +74,9 @@
     "unplugin-icons": "^0.19.0",
     "unplugin-vue-components": "^0.27.0",
     "unplugin-vue-markdown": "^0.26.2",
+    "unplugin-vue-router": "^0.8.6",
     "vite": "^5.2.11",
     "vite-plugin-inspect": "^0.8.4",
-    "vite-plugin-pages": "^0.32.1",
     "vite-ssg": "^0.23.7",
     "vite-svg-loader": "^5.1.0"
   },

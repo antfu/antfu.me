@@ -11,7 +11,7 @@ import './styles/markdown.css'
 
 import 'uno.css'
 
-import autoRoutes from 'pages-generated'
+import { routes } from 'vue-router/auto-routes'
 import NProgress from 'nprogress'
 import { ViteSSG } from 'vite-ssg'
 import dayjs from 'dayjs'
@@ -20,15 +20,6 @@ import { setupRouterScroller } from 'vue-router-better-scroller'
 import FloatingVue from 'floating-vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
-
-const routes = autoRoutes.map((i) => {
-  return {
-    ...i,
-    alias: i.path.endsWith('/')
-      ? `${i.path}index.html`
-      : `${i.path}.html`,
-  }
-})
 
 export const createApp = ViteSSG(
   App,
