@@ -56,8 +56,9 @@ export default defineConfig({
           return
 
         if (!path.includes('projects.md') && path.endsWith('.md')) {
+          const { data } = matter(fs.readFileSync(path, 'utf-8'))
           route.addToMeta({
-            frontmatter: matter(fs.readFileSync(path, 'utf-8')),
+            frontmatter: data,
           })
         }
       },
