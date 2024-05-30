@@ -15,8 +15,8 @@ importers:
         specifier: ^1.11.11
         version: 1.11.11
       floating-vue:
-        specifier: 2.0.0-beta.24
-        version: 2.0.0-beta.24(vue@3.4.27(typescript@5.4.5))
+        specifier: ^5.2.2
+        version: 5.2.2(vue@3.4.27(typescript@5.4.5))
       matter-attractors:
         specifier: ^0.1.6
         version: 0.1.6
@@ -2135,8 +2135,8 @@ packages:
   flatted@3.3.1:
     resolution: {integrity: sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw==}
 
-  floating-vue@2.0.0-beta.24:
-    resolution: {integrity: sha512-URSzP6YXaF4u1oZ9XGL8Sn8puuM7ivp5jkOUrpy5Q1mfo9BfGppJOn+ierTmsSUfJEeHBae8KT7r5DeI3vQIEw==}
+  floating-vue@5.2.2:
+    resolution: {integrity: sha512-afW+h2CFafo+7Y9Lvw/xsqjaQlKLdJV7h1fCHfcYQ1C4SVMlu7OAekqWgu5d4SgvkBVU0pVpLlVsrSTBURFRkg==}
     peerDependencies:
       '@nuxt/kit': ^3.2.0
       vue: ^3.2.0
@@ -5848,7 +5848,7 @@ snapshots:
 
   flatted@3.3.1: {}
 
-  floating-vue@2.0.0-beta.24(vue@3.4.27(typescript@5.4.5)):
+  floating-vue@5.2.2(vue@3.4.27(typescript@5.4.5)):
     dependencies:
       '@floating-ui/dom': 1.1.1
       vue: 3.4.27(typescript@5.4.5)
