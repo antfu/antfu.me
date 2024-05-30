@@ -1,9 +1,16 @@
 <script setup lang="ts">
+const props = defineProps<{
+  text?: string
+  slice?: [number, number]
+}>()
+
 const { copy: _copy, copied } = useClipboard()
 const el = ref<HTMLElement | null>(null)
 
 function copy() {
-  _copy((el.value?.textContent || '').trim())
+  _copy(
+    props.text ?? (el.value?.textContent || '').trim().slice(...(props.slice || [0])),
+  )
 }
 </script>
 
