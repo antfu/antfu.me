@@ -16,6 +16,8 @@ export const talks: Talk[] = [
         location: 'Athens, Greece',
         conference: 'CityJS Athens',
         conferenceUrl: 'https://greece.cityjsconf.org/',
+        pdf: 'https://talks.antfu.me/2024-06-08/pdf',
+        spa: 'https://talks.antfu.me/2024/cityjs-athens',
       },
     ],
   },
