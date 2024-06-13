@@ -10,6 +10,8 @@ export const talks: Talk[] = [
         location: 'Amsterdam, Netherlands',
         conference: 'JS Nation',
         conferenceUrl: 'https://jsnation.com/',
+        pdf: 'https://talks.antfu.me/2024-06-13/pdf',
+        spa: 'https://talks.antfu.me/2024/jsnation',
       },
       {
         date: '2024-06-08',
@@ -58,6 +60,8 @@ export const talks: Talk[] = [
         location: 'Amsterdam, Netherlands',
         conference: 'React Summit',
         conferenceUrl: 'https://reactsummit.com/',
+        pdf: 'https://antfu.me/talks/2024-06-14',
+        spa: 'https://talks.antfu.me/2024/react-summit',
       },
     ],
   },
