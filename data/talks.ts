@@ -264,7 +264,7 @@ export const talks: Talk[] = [
         conferenceUrl: 'https://twitter.com/beijing_vue',
         recording: 'https://www.youtube.com/watch?v=xx8gEHet6n8',
         pdf: 'https://antfu.me/talks/2021-03-28/zh',
-        transcript: 'http://localhost:3333/posts/vue-beijing-2021',
+        transcript: '/posts/vue-beijing-2021',
       },
     ],
   },
