@@ -2,6 +2,25 @@ import type { Talk } from '~/types'
 
 export const talks: Talk[] = [
   {
+    series: 'Anthony\'s Road to Open Source - Part 3',
+    title: 'Yak Shaving',
+    description: 'The art of yak shaving and how it can help you to build better open source projects.',
+    presentations: [
+      {
+        date: '2024-07-06',
+        location: 'Shenzhen, China',
+        conference: 'VueConf Shenzhen',
+        conferenceUrl: 'https://vue.w3ctech.com/',
+      },
+      {
+        date: '2024-10-19',
+        location: 'Tokyo, Japan',
+        conference: 'Vue Fes Japan',
+        conferenceUrl: 'https://vuefes.jp/2024/en/',
+      },
+    ],
+  },
+  {
     title: 'ESLint One for All Made Easy',
     description: 'Introduction to ESLint\'s new flat config format and see how it can bring new possibilities and enhancements to your development workflow and experience.',
     presentations: [
