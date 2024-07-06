@@ -35,6 +35,7 @@
 /talks/2024-06-08 https://talks.antfu.me/2024-06-08/pdf 302
 /talks/2024-06-13 https://talks.antfu.me/2024-06-13/pdf 302
 /talks/2024-06-14 https://talks.antfu.me/2024-06-14/pdf 302
+/talks/2024-07-06 https://talks.antfu.me/2024-07-06/pdf 302
 
 /vueuse https://github.com/vueuse/vueuse 302
 /vue-demi https://github.com/vueuse/vue-demi 302
@@ -93,6 +94,7 @@
 /export-size	https://github.com/antfu/export-size	302
 /export-size-action	https://github.com/antfu/export-size-action	302
 /FaceOnly	https://github.com/antfu/FaceOnly	302
+/fast-npm-meta	https://github.com/antfu/fast-npm-meta	302
 /foto-rehearse	https://github.com/antfu/foto-rehearse	302
 /fs-spy	https://github.com/antfu/fs-spy	302
 /fsxx	https://github.com/antfu/fsxx	302
@@ -102,14 +104,12 @@
 /hex-game	https://github.com/antfu/hex-game	302
 /hjdict	https://github.com/antfu/hjdict	302
 /i18n-ally-redirect	https://github.com/antfu/i18n-ally-redirect	302
-/importx	https://github.com/antfu/importx	302
 /input-remote	https://github.com/antfu/input-remote	302
 /install-pkg	https://github.com/antfu/install-pkg	302
 /iroiro	https://github.com/antfu/iroiro	302
 /kaomo	https://github.com/antfu/kaomo	302
 /lightroom-camera-lock-plugin	https://github.com/antfu/lightroom-camera-lock-plugin	302
 /live-draw	https://github.com/antfu/live-draw	302
-/local-pkg	https://github.com/antfu/local-pkg	302
 /log-editor	https://github.com/antfu/log-editor	302
 /magic-string-stack	https://github.com/antfu/magic-string-stack	302
 /markdown-it-github-alerts	https://github.com/antfu/markdown-it-github-alerts	302
