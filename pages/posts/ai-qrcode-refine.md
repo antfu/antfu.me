@@ -149,6 +149,6 @@ I hope you enjoy the walkthrough. If you just started doing AI QR Code, give a t
 
 Join my [<span op75 i-simple-icons-discord /> Discord Server](https://chat.antfu.me), share what you are working on, and let's explore more together!
 
-If you are interested in how I make such tools, I'd recommend continuing reading [About Yak Shaving](/posts/about-yak-shaving) to learn the philosophy I follow when building tools. And if you like my work, consider sponsoring on [<span i-carbon-favorite /> GitHub Sponsor](https://github.com/sponsors/antfu) or [<span i-carbon-lightning /> 爱发电](https://afdian.net/a/antfu) to support me in coming up with more ideas and tools.
+If you are interested in how I make such tools, I'd recommend continuing reading [About Yak Shaving](/posts/about-yak-shaving) to learn the philosophy I follow when building tools. And if you like my work, consider sponsoring on [<span i-carbon-favorite /> GitHub Sponsor](https://github.com/sponsors/antfu) to support me in coming up with more ideas and tools.
 
 Thank you and happy hacking!

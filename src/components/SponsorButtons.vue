@@ -23,7 +23,7 @@
       />
       Sponsor to support Anthony
     </a>
-    <a
+    <!-- <a
       href="https://afdian.net/a/antfu"
       target="_blank"
       class="group btn-yellow inline-block"
@@ -34,6 +34,6 @@
         transition-all duration-200 ease-out
       />
       在爱发电上支持我
-    </a>
+    </a> -->
   </p>
 </template>
