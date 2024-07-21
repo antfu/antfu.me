@@ -11,6 +11,7 @@ export const talks: Talk[] = [
         location: 'Shenzhen, China',
         conference: 'VueConf Shenzhen',
         conferenceUrl: 'https://vue.w3ctech.com/',
+        recording: 'https://www.bilibili.com/video/BV1XT421r7xy',
         pdf: 'https://talks.antfu.me/2024-07-06/pdf',
         spa: 'https://talks.antfu.me/2024/vueconf-shenzhen',
       },

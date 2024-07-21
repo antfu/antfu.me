@@ -20,6 +20,7 @@ import { rendererRich, transformerTwoslash } from '@shikijs/twoslash'
 import MarkdownItMagicLink from 'markdown-it-magic-link'
 import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
+import Exclude from 'vite-plugin-optimize-exclude'
 
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
@@ -215,6 +216,8 @@ export default defineConfig({
       defaultImport: 'url',
     }),
 
+    Exclude(),
+
     {
       name: 'await',
       async closeBundle() {
@@ -252,7 +255,7 @@ async function generateOg(title: string, output: string) {
     line2: lines[1],
     line3: lines[2],
   }
-  const svg = ogSVg.replace(/\{\{([^}]+)}}/g, (_, name) => data[name] || '')
+  const svg = ogSVg.replace(/\{\{([^}]+)\}\}/g, (_, name) => data[name] || '')
 
   // eslint-disable-next-line no-console
   console.log(`Generating ${output}`)
