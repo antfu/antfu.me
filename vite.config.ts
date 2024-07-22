@@ -67,9 +67,6 @@ export default defineConfig({
 
     Vue({
       include: [/\.vue$/, /\.md$/],
-      script: {
-        defineModel: true,
-      },
     }),
 
     Markdown({
