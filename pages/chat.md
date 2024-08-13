@@ -2,6 +2,7 @@
 title: Let's Chat - Anthony Fu
 display: Let's Chat!
 image: https://antfu.me/og-chat.png
+art: dots
 ---
 
 [中文 Chinese](/chat-zh)
@@ -15,6 +16,8 @@ So if you're curious about delving into open source but feel uncertain about tak
 I want to keep the conversation easy, open, and accessible. You can you use the link below to book a 10min chat with me. I deeply value my time, and I'm sure you do too, so I would appreciate it if you come prepared with some initial research and questions in mind. I am looking forward have a short while meaningful chat with you!
 
 <CalCom link="antfu7/quick-chat" title="Book a chat" />
+
+> Note that I might not always be able to respond immediately and can possibly miss some inquiries. Do check back if the booking becomes **accepted**, otherwise I might not have seen it yet. If I missed your inquiry, feel free to book again in another time slot.
 
 ### Consultancy
 

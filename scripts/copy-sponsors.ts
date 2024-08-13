@@ -10,3 +10,5 @@ async function run() {
 }
 
 run()
+
+await import('./sponsors-circles')

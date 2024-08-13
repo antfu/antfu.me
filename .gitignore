@@ -10,5 +10,5 @@ auto-imports.d.ts
 temp
 sponsors.*
 drafts
-public/og
 *.log
+src/data/sponsors-circles.json

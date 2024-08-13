@@ -22,10 +22,6 @@ image: https://antfu.me/og-chat.png
 
 <CalCom link="antfu7/consult" title="预约咨询" />
 
-如果你没有办法使用 Stripe 支付，你也可以通过 [爱发电](https://afdian.net/a/antfu) 选择「一对一开源咨询」的方案赞助后，通过下面的链接预约咨询。
-
-<CalCom link="antfu7/consult-prepaid" title="预约咨询（其他平台付款）" />
-
 ## Credits
 
 此计划深受 [Daniel Roe 的 Open invitation](https://roe.dev/blog/open-invitation) 的启发与鼓舞。

@@ -1,7 +1,7 @@
 ---
 title: Blog - Anthony Fu
 display: ''
-plum: true
+art: plum
 ---
 
 <SubNav />

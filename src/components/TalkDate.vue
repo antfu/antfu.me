@@ -12,7 +12,8 @@ const daysLeft = computed(() => {
 </script>
 
 <template>
-  <time :date="date" :title="date">
-    {{ formatDate(props.date) }} <span v-if="daysLeft > 0" op50 text-xs>(in {{ daysLeft }} days)</span>
+  <time :date="date" :title="date" flex="~ col">
+    {{ formatDate(props.date) }}
+    <span v-if="daysLeft > 0" op50 text-xs mt--0.5 inline-block>in {{ daysLeft }} days</span>
   </time>
 </template>

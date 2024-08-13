@@ -7,7 +7,7 @@ description: Adding an elegant sliding enter animation to your blog.
 ---
 
 <script setup lag="ts">
-import { useRouter } from 'vue-router'
+import { useRouter } from 'vue-router/auto'
 
 const router = useRouter()
 </script>

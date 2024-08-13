@@ -2,7 +2,6 @@ import { basename, dirname, resolve } from 'node:path'
 import { Buffer } from 'node:buffer'
 import { defineConfig } from 'vite'
 import fs from 'fs-extra'
-import Pages from 'vite-plugin-pages'
 import Inspect from 'vite-plugin-inspect'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
@@ -19,6 +18,9 @@ import SVG from 'vite-svg-loader'
 import MarkdownItShiki from '@shikijs/markdown-it'
 import { rendererRich, transformerTwoslash } from '@shikijs/twoslash'
 import MarkdownItMagicLink from 'markdown-it-magic-link'
+import VueRouter from 'unplugin-vue-router/vite'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
+import Exclude from 'vite-plugin-optimize-exclude'
 
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
@@ -45,27 +47,26 @@ export default defineConfig({
   plugins: [
     UnoCSS(),
 
-    Vue({
-      include: [/\.vue$/, /\.md$/],
-      script: {
-        defineModel: true,
+    VueRouter({
+      extensions: ['.vue', '.md'],
+      routesFolder: 'pages',
+      logs: true,
+      extendRoute(route) {
+        const path = route.components.get('default')
+        if (!path)
+          return
+
+        if (!path.includes('projects.md') && path.endsWith('.md')) {
+          const { data } = matter(fs.readFileSync(path, 'utf-8'))
+          route.addToMeta({
+            frontmatter: data,
+          })
+        }
       },
     }),
 
-    Pages({
-      extensions: ['vue', 'md'],
-      dirs: 'pages',
-      extendRoute(route) {
-        const path = resolve(__dirname, route.component.slice(1))
-
-        if (!path.includes('projects.md') && path.endsWith('.md')) {
-          const md = fs.readFileSync(path, 'utf-8')
-          const { data } = matter(md)
-          route.meta = Object.assign(route.meta || {}, { frontmatter: data })
-        }
-
-        return route
-      },
+    Vue({
+      include: [/\.vue$/, /\.md$/],
     }),
 
     Markdown({
@@ -120,7 +121,44 @@ export default defineConfig({
           containerHeaderHtml: '<div class="table-of-contents-anchor"><div class="i-ri-menu-2-fill" /></div>',
         })
 
-        md.use(MarkdownItMagicLink)
+        md.use(MarkdownItMagicLink, {
+          linksMap: {
+            'NuxtLabs': 'https://nuxtlabs.com',
+            'Vitest': 'https://github.com/vitest-dev/vitest',
+            'Slidev': 'https://github.com/slidevjs/slidev',
+            'VueUse': 'https://github.com/vueuse/vueuse',
+            'UnoCSS': 'https://github.com/unocss/unocss',
+            'Elk': 'https://github.com/elk-zone/elk',
+            'Type Challenges': 'https://github.com/type-challenges/type-challenges',
+            'Vue': 'https://github.com/vuejs/core',
+            'Nuxt': 'https://github.com/nuxt/nuxt',
+            'Vite': 'https://github.com/vitejs/vite',
+            'Shiki': 'https://github.com/shikijs/shiki',
+            'Twoslash': 'https://github.com/twoslashes/twoslash',
+            'ESLint Stylistic': 'https://github.com/eslint-stylistic/eslint-stylistic',
+            'Unplugin': 'https://github.com/unplugin',
+            'Nuxt DevTools': 'https://github.com/nuxt/devtools',
+            'Vite PWA': 'https://github.com/vite-pwa',
+            'i18n Ally': 'https://github.com/lokalise/i18n-ally',
+            'ESLint': 'https://github.com/eslint/eslint',
+            'Astro': 'https://github.com/withastro/astro',
+            'TwoSlash': 'https://github.com/twoslashes/twoslash',
+            'Anthony Fu Collective': { link: 'https://opencollective.com/antfu', imageUrl: 'https://github.com/antfu-collective.png' },
+            'Netlify': { link: 'https://netlify.com', imageUrl: 'https://github.com/netlify.png' },
+            'Stackblitz': { link: 'https://stackblitz.com', imageUrl: 'https://github.com/stackblitz.png' },
+            'Vercel': { link: 'https://vercel.com', imageUrl: 'https://github.com/vercel.png' },
+          },
+          imageOverrides: [
+            ['https://github.com/vuejs/core', 'https://vuejs.org/logo.svg'],
+            ['https://github.com/nuxt/nuxt', 'https://nuxt.com/assets/design-kit/icon-green.svg'],
+            ['https://github.com/vitejs/vite', 'https://vitejs.dev/logo.svg'],
+            ['https://github.com/sponsors', 'https://github.com/github.png'],
+            ['https://github.com/sponsors/antfu', 'https://github.com/github.png'],
+            ['https://nuxtlabs.com', 'https://github.com/nuxtlabs.png'],
+            [/opencollective\.com\/vite/, 'https://github.com/vitejs.png'],
+            [/opencollective\.com\/elk/, 'https://github.com/elk-zone.png'],
+          ],
+        })
 
         md.use(GitHubAlerts)
       },
@@ -147,7 +185,7 @@ export default defineConfig({
     AutoImport({
       imports: [
         'vue',
-        'vue-router',
+        VueRouterAutoImports,
         '@vueuse/core',
       ],
     }),
@@ -174,6 +212,8 @@ export default defineConfig({
       svgo: false,
       defaultImport: 'url',
     }),
+
+    Exclude(),
 
     {
       name: 'await',
@@ -212,7 +252,7 @@ async function generateOg(title: string, output: string) {
     line2: lines[1],
     line3: lines[2],
   }
-  const svg = ogSVg.replace(/\{\{([^}]+)}}/g, (_, name) => data[name] || '')
+  const svg = ogSVg.replace(/\{\{([^}]+)\}\}/g, (_, name) => data[name] || '')
 
   // eslint-disable-next-line no-console
   console.log(`Generating ${output}`)

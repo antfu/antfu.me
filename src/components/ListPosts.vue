@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
+import { useRouter } from 'vue-router/auto'
 import { englishOnly, formatDate } from '~/logics'
 import type { Post } from '~/types'
 
@@ -92,15 +92,15 @@ function getGroupName(p: Post) {
                 class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--12 mr2 my-auto hidden md:block"
               >中文</span>
               <span align-middle>{{ route.title }}</span>
-            </div>
-
-            <div flex="~ gap-2 items-center">
               <span
                 v-if="route.redirect"
-                align-middle op50 flex-none text-xs ml--1 mt--1
+                align-middle op50 flex-none text-xs ml--1.5
                 i-carbon-arrow-up-right
                 title="External"
               />
+            </div>
+
+            <div flex="~ gap-2 items-center">
               <span
                 v-if="route.inperson"
                 align-middle op50 flex-none

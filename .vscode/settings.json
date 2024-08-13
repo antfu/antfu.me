@@ -47,6 +47,11 @@
       "language": "markdown",
       "scheme": "file",
       "pattern": "pages/posts/mental-health-oss.md"
+    },
+    {
+      "language": "markdown",
+      "scheme": "file",
+      "pattern": "pages/posts/sponsorship-forwarding.md"
     }
   ]
 }

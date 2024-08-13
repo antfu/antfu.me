@@ -1,7 +1,7 @@
 ---
 title: Podcasts - Anthony Fu
 display: ''
-plum: true
+art: plum
 items:
   - title: 'Views on Vue #144 - Exploring Vitesse with Anthony Fu'
     date: '2021-03-02'
@@ -99,6 +99,10 @@ items:
     date: '2024-02-14'
     path: 'https://youtu.be/5y8pgwd4Des'
     video: true
+  - title: 'Nuxt JS with Anthony Fu - Software Engineering Daily'
+    date: '2024-05-08'
+    path: 'https://softwareengineeringdaily.com/2024/05/08/nuxt-js-with-anthony-fu/'
+    radio: true
 ---
 
 <SubNav />

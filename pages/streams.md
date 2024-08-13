@@ -1,7 +1,7 @@
 ---
 title: Streams - Anthony Fu
 display: ''
-plum: true
+art: plum
 items:
   - title: '用 Vue 写个扫雷吧！'
     date: '2022-03-09'

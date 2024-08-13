@@ -73,11 +73,24 @@ onMounted(() => {
       setTimeout(navigate, 1000)
   }, 1)
 })
+
+const ArtComponent = computed(() => {
+  let art = frontmatter.art
+  if (art === 'random')
+    art = Math.random() > 0.5 ? 'plum' : 'dots'
+  if (typeof window !== 'undefined') {
+    if (art === 'plum')
+      return defineAsyncComponent(() => import('./ArtPlum.vue'))
+    else if (art === 'dots')
+      return defineAsyncComponent(() => import('./ArtDots.vue'))
+  }
+  return undefined
+})
 </script>
 
 <template>
-  <ClientOnly v-if="frontmatter.plum">
-    <Plum />
+  <ClientOnly v-if="ArtComponent">
+    <component :is="ArtComponent" />
   </ClientOnly>
   <div
     v-if="frontmatter.display ?? frontmatter.title"
