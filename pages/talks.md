@@ -27,8 +27,10 @@ art: plum
 | <TalkDate date="2024-06-13"/> | [**JS Nation**](https://jsnation.com/)                                                               | Amsterdam            | ESLint One for All Made Easy                                        |
 | <TalkDate date="2024-06-14"/> | [**React Summit**](https://reactsummit.com/)                                                         | Amsterdam            | The Set Theory                                                      |
 | <TalkDate date="2024-07-06"/> | [**VueConf Shenzhen**](https://vue.w3ctech.com/)                                                     | Shenzhen, China      | Yak Shaving                                                         |
+| <TalkDate date="2024-10-03"/> | [**ViteConf**](https://viteconf.org/)                                                                | Online; Free         | The Progressive Path                                                |
 | <TalkDate date="2024-10-19"/> | [**Vue Fes Japan**](https://vuefes.jp/)                                                              | Tokyo                | Yak Shaving                                                         |
-| <TalkDate date="2024-12-13"/> | [**React Day Berlin**](https://reactday.berlin/)                                                     | Berlin               | TBD                                                                 |
+| <TalkDate date="2024-12-07"/> | FEDAY                                                                                                | Xiamen, China        | ESLint One for All Made Easy                                        |
+| <TalkDate date="2024-12-13"/> | [**React Day Berlin**](https://reactday.berlin/)                                                     | Berlin (Remote)      | TBD                                                                 |
 
 <h1 important="mb--4 mt-15">Latest Talks</h1>
 

@@ -43,6 +43,12 @@ export const talks: Talk[] = [
         pdf: 'https://talks.antfu.me/2024-06-08/pdf',
         spa: 'https://talks.antfu.me/2024/cityjs-athens',
       },
+      {
+        date: '2024-12-07',
+        location: 'Xiamen, China',
+        conference: 'FEDAY',
+        conferenceUrl: 'https://x.com/lovevfp/status/1814950202538868865',
+      },
     ],
   },
   {
@@ -105,6 +111,12 @@ export const talks: Talk[] = [
         location: 'Online',
         conference: 'Frontend Nation',
         conferenceUrl: 'https://frontendnation.com',
+      },
+      {
+        date: '2024-10-03',
+        location: 'Online',
+        conference: 'ViteConf',
+        conferenceUrl: 'https://viteconf.org',
       },
     ],
   },
