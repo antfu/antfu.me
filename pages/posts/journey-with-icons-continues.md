@@ -71,8 +71,8 @@ And the usage will be like this:
 
 ```vue
 <script setup>
-import MdiAlarm from '~icons/mdi/alarm'
 import FaBeer from '~icons/fa/beer'
+import MdiAlarm from '~icons/mdi/alarm'
 import TearsOfJoy from '~/icons/twemoji/face-with-tears-of-joy'
 </script>
 
@@ -134,8 +134,8 @@ function IconsPlugin({ compiler }) {
 With this, you can have it working in React like:
 
 ```jsx
-import MdiAlarm from '~icons/mdi/alarm'
 import FaBeer from '~icons/fa/beer'
+import MdiAlarm from '~icons/mdi/alarm'
 import TearsOfJoy from '~/icons/twemoji/face-with-tears-of-joy'
 
 export function MyComponent() {
@@ -251,11 +251,11 @@ Inspired by <GitHubLink repo="nuxt/components" /> which registers components und
 Here is an example configuration for Vite (since both of them are unplugins, you can also use them for Webpack and Rollup):
 
 ```ts
-// vite.config.js
-import { defineConfig } from 'vite'
+import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
-import IconsResolver from 'unplugin-icons/resolver'
+// vite.config.js
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [
@@ -299,11 +299,11 @@ For some background here, `unplugin-auto-import` is a compile-time successor of 
 With the expansion to a general auto-importing solution for any API sets, it's also possible to do auto-importing for JSX components. in `unplugin-auto-import`, we implement the same resolver interface for it.
 
 ```ts
-// vite.config.js
-import { defineConfig } from 'vite'
-import Icons from 'unplugin-icons/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import Icons from 'unplugin-icons/vite'
+// vite.config.js
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [

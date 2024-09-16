@@ -233,15 +233,15 @@ UnoCSS is an **engine** instead of a **framework** because there are **no core u
 We are imagining UnoCSS being able to simulate the functionalities of most of the existing atomic CSS frameworks. And possibly have been used as the engine to create some new atomic CSS frameworks! For example:
 
 ```ts
-import UnocssPlugin from '@unocss/vite'
+import PresetAntfu from '@antfu/oh-my-cool-unocss-preset'
 
+import PresetBootstrap from '@unocss/preset-bootstrap'
+import UnocssPlugin from '@unocss/vite'
 // the following presets do not exist at this moment,
 // contribution welcome!
 import PresetTachyons from '@unocss/preset-tachyons'
-import PresetBootstrap from '@unocss/preset-bootstrap'
 import PresetTailwind from '@unocss/preset-tailwind'
 import PresetWindi from '@unocss/preset-windi'
-import PresetAntfu from '@antfu/oh-my-cool-unocss-preset'
 
 export default {
   plugins: [
@@ -434,9 +434,7 @@ If you've ever read my previous post [Journey with Icons Continues](/posts/journ
 <!-- Sun in light mode, Moon in dark mode, from Carbon -->
 <button class="i-carbon-sun dark:i-carbon-moon" />
 <!-- Twemoji of laugh, turns to tear on hovering -->
-<div
-  class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy"
-/>
+<div class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy" />
 ```
 
 <div flex gap-2 text-4xl p-2 mt4>

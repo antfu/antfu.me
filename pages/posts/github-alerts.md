@@ -31,9 +31,9 @@ And in case you like it, and wanted to use it in your own website, I wrote a qui
 If you are using [`unplugin-vue-markdown`](https://github.com/unplugin/unplugin-vue-markdown):
 
 ```ts
+import MarkdownItGitHubAlerts from 'markdown-it-github-alerts'
 // vite.config.ts
 import Markdown from 'unplugin-vue-markdown/vite'
-import MarkdownItGitHubAlerts from 'markdown-it-github-alerts'
 import { defineConfig } from 'vite'
 
 export default defineConfig({

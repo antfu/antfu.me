@@ -1,5 +1,5 @@
-import fs from 'fs-extra'
 import { Octokit } from '@octokit/rest'
+import fs from 'fs-extra'
 import { getStarsRankingUrl } from './stars-rank'
 
 const pages = 2

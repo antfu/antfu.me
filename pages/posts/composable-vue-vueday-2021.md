@@ -294,8 +294,8 @@ Here we take `useTitle` function from VueUse as an example. Basically when you c
 Looks good, right? But It creates a new ref whenever you call it. To make it more flexible, we can actually bind an existing ref, even computed!
 
 ```ts
-import { computed, ref } from 'vue'
 import { useTitle } from '@vueuse/core'
+import { computed, ref } from 'vue'
 
 const name = ref('Hello')
 const title = computed(() => {
@@ -314,8 +314,8 @@ Here you can see, I constructed a computed with a ref, when I change the source 
 You must be wondering how could this be implemented. Let's take a look at a simplified version of it.
 
 ```ts
-import { ref, watch } from 'vue'
 import type { MaybeRef } from '@vueuse/core'
+import { ref, watch } from 'vue'
 
 export function useTitle(
   newTitle: MaybeRef<string | null | undefined>
@@ -684,8 +684,8 @@ In case you didn't know that, if you are still on Vue 2 but want to start using 
 <carbon-logo-github class="inline-block"/> <a href="https://github.com/vuejs/composition-api" target="_blank">vuejs/composition-api</a>
 
 ```ts
-import Vue from 'vue'
 import VueCompositionAPI from '@vue/composition-api'
+import Vue from 'vue'
 
 Vue.use(VueCompositionAPI)
 ```

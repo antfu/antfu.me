@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises'
-import sharp from 'sharp'
 import c from 'picocolors'
+import sharp from 'sharp'
 
 const maxSize = 1440
 

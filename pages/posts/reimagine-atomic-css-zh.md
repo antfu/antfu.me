@@ -239,15 +239,15 @@ UnoCSS 是一个**引擎**，而非一款**框架**，因为它**并未提供核
 我们设想 UnoCSS 能够通过预设模拟大多数已有原子化 CSS 框架的功能。也有可能会被用作创建一些新的原子化 CSS 框架的引擎。例如：
 
 ```ts
-import UnocssPlugin from '@unocss/vite'
+import PresetAntfu from '@antfu/oh-my-cool-unocss-preset'
 
+import PresetBootstrap from '@unocss/preset-bootstrap'
+import UnocssPlugin from '@unocss/vite'
 // 以下预设目前还不存在，
 // 欢迎大家踊跃贡献！
 import PresetTachyons from '@unocss/preset-tachyons'
-import PresetBootstrap from '@unocss/preset-bootstrap'
 import PresetTailwind from '@unocss/preset-tailwind'
 import PresetWindi from '@unocss/preset-windi'
-import PresetAntfu from '@antfu/oh-my-cool-unocss-preset'
 
 export default {
   plugins: [
@@ -438,9 +438,7 @@ variants: [
 <!-- Sun in light mode, Moon in dark mode, from Carbon -->
 <button class="i-carbon-sun dark:i-carbon-moon" />
 <!-- Twemoji of laugh, turns to tear on hovering -->
-<div
-  class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy"
-/>
+<div class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy" />
 ```
 
 <div flex gap-2 text-4xl p-2 mt4>

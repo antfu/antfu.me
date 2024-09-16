@@ -91,8 +91,8 @@ It provides Nuxt.js-like file base routing, with dynamic routes support that can
 Only with 3 lines of code, you can set up this feature and use it immediately.
 
 ```ts
-import { createRouter } from 'vue-router'
 import routes from 'virtual:generated-pages'
+import { createRouter } from 'vue-router'
 
 const router = createRouter({ routes })
 ```
