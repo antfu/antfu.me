@@ -2,6 +2,18 @@ import type { Talk } from '~/types'
 
 export const talks: Talk[] = [
   {
+    title: 'Journey to Nuxt Icon',
+    description: 'Introductions of various Icon solutions with their Pros and Cons. And how we take the lessons we learned and make the refreshed Nuxt Icon v1.0',
+    presentations: [
+      {
+        date: '2024-11-12',
+        location: 'Online',
+        conference: 'Nuxt Nation',
+        conferenceUrl: 'https://nuxtnation.com/',
+      },
+    ],
+  },
+  {
     series: 'Anthony\'s Road to Open Source - Part 3',
     title: 'Yak Shaving',
     description: 'The art of yak shaving and how it can help you to build better open source projects.',
@@ -47,7 +59,7 @@ export const talks: Talk[] = [
         date: '2024-12-07',
         location: 'Xiamen, China',
         conference: 'FEDAY',
-        conferenceUrl: 'https://x.com/lovevfp/status/1814950202538868865',
+        conferenceUrl: 'https://fequan.com/2024/',
       },
     ],
   },
