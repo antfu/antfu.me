@@ -61,6 +61,12 @@ export const talks: Talk[] = [
         conference: 'FEDAY',
         conferenceUrl: 'https://fequan.com/2024/',
       },
+      {
+        date: '2024-12-27',
+        location: 'Taipei, Taiwan',
+        conference: 'WebConf Taiwan',
+        conferenceUrl: 'https://webconf.tw/',
+      },
     ],
   },
   {
