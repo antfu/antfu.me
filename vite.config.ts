@@ -254,7 +254,6 @@ async function generateOg(title: string, output: string) {
   }
   const svg = ogSVg.replace(/\{\{([^}]+)\}\}/g, (_, name) => data[name] || '')
 
-  // eslint-disable-next-line no-console
   console.log(`Generating ${output}`)
   try {
     await sharp(Buffer.from(svg))
