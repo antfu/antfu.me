@@ -62,7 +62,7 @@ I think it's hard for maintainers to make the mind shift and consider that they 
 
 I wish someone could tell me this when I started maintaining high-traffic open source projects (you have great resources online like [this](https://opensource.guide/best-practices/#its-okay-to-hit-pause)) - it took me a long time to realize that I don't have to be perfect, and it's okay to do things at my own pace. Instead of receiving notifications passively, it's better for me to turn off the push notifications, and to proactively check the issues and pull requests when I feel ready to do so.
 
-> I made a talk about [How I Manage GitHub Notifications](/posts/manage-github-notifcations-2023), if you are interested in more about the methodology.
+> I made a talk about [How I Manage GitHub Notifications](/posts/manage-github-notifications-2023), if you are interested in more about the methodology.
 
 Lowering the expectations of yourself - no one is perfect, and no one is a machine. Don't let them become a burden to you. It's more important to maintain a healthy and sustainable pace, and to keep yourself happy and motivated to have more positive impacts in the long run.
 
