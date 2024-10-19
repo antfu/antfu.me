@@ -32,6 +32,8 @@ export const talks: Talk[] = [
         location: 'Tokyo, Japan',
         conference: 'Vue Fes Japan',
         conferenceUrl: 'https://vuefes.jp/2024/en/',
+        pdf: 'https://talks.antfu.me/2024-10-19/pdf',
+        spa: 'https://talks.antfu.me/2024/vue-fes-japan',
       },
     ],
   },
