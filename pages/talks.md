@@ -10,10 +10,12 @@ art: plum
 
 # Talk Schedule 2024
 
+<!--
 <div slide-enter>
   <div i-ri:presentation-line mr-1 />
   <RouterLink to="/giving-talks" op50>Available for giving talks!</RouterLink>
 </div>
+-->
 
 | Date                          | Conference                                                                                           | Location             | Topic                                                               |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------- |
