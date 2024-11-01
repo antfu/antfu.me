@@ -28,9 +28,9 @@ Find me on
   <a href="https://github.com/antfu" target="_blank"><span op75 i-simple-icons-github /> GitHub</a>
   <a href="https://bsky.app/profile/antfu.me" target="_blank"><span op75 i-ri-bluesky-fill /> Bluesky</a>
   <a href="https://elk.zone/m.webtoo.ls/@antfu" target="_blank"><span op75 i-simple-icons-mastodon/> Mastodon</a>
-  <a href="https://www.twitter.com/antfu7" target="_blank"><span op75 i-ri-twitter-x-fill /> Twitter</a>
-  <a href="https://www.twitter.com/antfuzh" target="_blank"><span op75 i-ri-twitter-x-fill /> 中文推</a>
-  <a href="https://www.twitter.com/antfujp" target="_blank"><span op75 i-ri-twitter-x-fill /> 日本語</a>
+  <a href="https://x.com/antfu7" target="_blank"><span op75 i-ri-twitter-x-fill /> Twitter</a>
+  <a href="https://x.com/antfuzh" target="_blank"><span op75 i-ri-twitter-x-fill /> 中文推</a>
+  <a href="https://x.com/antfujp" target="_blank"><span op75 i-ri-twitter-x-fill /> 日本語</a>
   <a href="https://www.threads.net/@antfu7" target="_blank"><span op75 i-ri-threads-line /> Threads</a>
   <a href="https://chat.antfu.me" target="_blank"><span op75 i-simple-icons-discord /> Discord Server</a>
   <a href="https://www.youtube.com/anthonyfu7" target="_blank"><span op75 i-simple-icons-youtube /> YouTube</a>
