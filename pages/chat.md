@@ -5,6 +5,9 @@ image: https://antfu.me/og-chat.png
 art: dots
 ---
 
+> [!IMPORTANT]
+> I am sorry I am currently busy on my personal changes and **NOT available for chat**. Feel free to interact with me on [Bluesky](https://bsky.app/profile/antfu.me) instead. I will be back soon! Thank you for your understanding.
+
 [中文 Chinese](/chat-zh)
 
 I consider myself incredibly fortunate to be involved in the open-source community, creating tools and resources that others find beneficial. I enjoy a lot doing open source, working and learning together with the fantastic community. I realize that many of you, like myself, are enthusiastic about contributing to open source projects but may be unsure where to begin. That I actually also struggled with along the way.

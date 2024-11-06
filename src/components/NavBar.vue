@@ -51,9 +51,9 @@ const { y: scroll } = useWindowScroll()
         <RouterLink to="/demos" title="Demos">
           <div i-ri-screenshot-line />
         </RouterLink>
-        <RouterLink to="/chat" title="Let's Chat">
+        <!-- <RouterLink to="/chat" title="Let's Chat">
           <div i-ri-chat-1-line />
-        </RouterLink>
+        </RouterLink> -->
         <a href="https://twitter.com/antfu7" target="_blank" title="Twitter" class="lt-md:hidden">
           <div i-ri-twitter-x-fill />
         </a>
