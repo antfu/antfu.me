@@ -72,6 +72,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/nuxt-devtools-v1': RouteRecordInfo<'/posts/nuxt-devtools-v1', '/posts/nuxt-devtools-v1', Record<never, never>, Record<never, never>>,
     '/posts/nuxt-dx-2023': RouteRecordInfo<'/posts/nuxt-dx-2023', '/posts/nuxt-dx-2023', Record<never, never>, Record<never, never>>,
     '/posts/nuxt-dx-strasbourg-2023': RouteRecordInfo<'/posts/nuxt-dx-strasbourg-2023', '/posts/nuxt-dx-strasbourg-2023', Record<never, never>, Record<never, never>>,
+    '/posts/nuxt-icon-v1': RouteRecordInfo<'/posts/nuxt-icon-v1', '/posts/nuxt-icon-v1', Record<never, never>, Record<never, never>>,
     '/posts/optimize-await': RouteRecordInfo<'/posts/optimize-await', '/posts/optimize-await', Record<never, never>, Record<never, never>>,
     '/posts/patterns-of-vueuse-vuefes-japan-2022': RouteRecordInfo<'/posts/patterns-of-vueuse-vuefes-japan-2022', '/posts/patterns-of-vueuse-vuefes-japan-2022', Record<never, never>, Record<never, never>>,
     '/posts/pnpm-external-disk': RouteRecordInfo<'/posts/pnpm-external-disk', '/posts/pnpm-external-disk', Record<never, never>, Record<never, never>>,
