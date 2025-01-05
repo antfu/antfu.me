@@ -141,7 +141,7 @@ Maintaining good mental health is one of the important tasks for every open sour
 
 I know my opinions must be heavily biased. If it ever triggers any thoughts or feelings for you, I am **curious to hear what you think or what are your ways**. You can leave some comments under this [tweet](https://twitter.com/antfu7/status/1768973757681438909) or [mastodon](https://elk.zone/m.webtoo.ls/@antfu/112105304547243075), or send me an email at hi@antfu.me if you prefer private conversations. Looking forward to hearing from you!
 
-Meanwhile, there are actually many other things about open source I didn't get to talk about in this post. [Artem Zakharchenko](https://twitter.com/kettanaito) wrote a great article [The Dark Side of [Open Source](https://kettanaito.com/blog/the-dark-side-of-open-source), from different perspectives and points that I also resonate a lot with. Highly recommended to give it a read as well.
+Meanwhile, there are actually many other things about open source I didn't get to talk about in this post. [Artem Zakharchenko](https://twitter.com/kettanaito) wrote a great article [The Dark Side of Open Source](https://kettanaito.com/blog/the-dark-side-of-open-source), from different perspectives and points that I also resonate a lot with. Highly recommended to give it a read as well.
 
 ### Thanks
 
