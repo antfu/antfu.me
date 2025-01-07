@@ -36,7 +36,7 @@ This convention works well technically. If a package releases a new major versio
 
 Hovever, humans perceive numbers on a logarithmic scale. We tend to see `v2.0` to `v3.0` as a huge, groundbreaking change, while `v125.0` to `v126.0` seems a lot more trivial, even though both indicate incompatible API changes in SemVer. This perception can make maintainers hesitant to bump the major version for minor breaking changes, leading to the accumulation of many breaking changes in a single major release, making upgrades harder for users. Conversely, with something like `v125.0`, it becomes difficult to convey the significance of a major change, as the jump to `v126.0` appears minor.
 
-> {@TkDodo|Dominik Dorfmeister} had [a great talk about API Design](https://tkdodo.eu/blog/react-query-api-design-lessons-learned), which mentions ["Breaking Changes !== Marketing Event"](https://tkdodo.eu/blog/react-query-api-design-lessons-learned?page=30)
+> {@TkDodo|Dominik Dorfmeister} had [a great talk about API Design](https://tkdodo.eu/blog/react-query-api-design-lessons-learned), which mentions an interesting inequality that descripting this: ["Breaking Changes !== Marketing Event"](https://tkdodo.eu/blog/react-query-api-design-lessons-learned?page=30)
 
 ## Progressive
 
