@@ -9,6 +9,9 @@ import anchor from 'markdown-it-anchor'
 import GitHubAlerts from 'markdown-it-github-alerts'
 import LinkAttributes from 'markdown-it-link-attributes'
 import MarkdownItMagicLink from 'markdown-it-magic-link'
+// @ts-expect-error missing types
+import TOC from 'markdown-it-table-of-contents'
+import sharp from 'sharp'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
@@ -21,10 +24,6 @@ import { defineConfig } from 'vite'
 import Inspect from 'vite-plugin-inspect'
 import Exclude from 'vite-plugin-optimize-exclude'
 import SVG from 'vite-svg-loader'
-
-// @ts-expect-error missing types
-import TOC from 'markdown-it-table-of-contents'
-import sharp from 'sharp'
 import { slugify } from './scripts/slugify'
 
 const promises: Promise<any>[] = []
@@ -50,7 +49,7 @@ export default defineConfig({
     VueRouter({
       extensions: ['.vue', '.md'],
       routesFolder: 'pages',
-      logs: true,
+      // logs: true,
       extendRoute(route) {
         const path = route.components.get('default')
         if (!path)

@@ -136,12 +136,18 @@
   color: var(--fg-deep);
   font-weight: 600;
   font-size: 0.875em;
+  background-color: #8881;
+  border-radius: 0.25rem;
+  padding: 0.2em 0.2em;
+  margin: -0.2em 0;
 }
 .prose code::before {
   content: '`';
+  opacity: 0.5;
 }
 .prose code::after {
   content: '`';
+  opacity: 0.5;
 }
 .prose a code {
   color: #111827;
