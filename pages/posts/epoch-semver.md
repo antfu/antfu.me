@@ -26,9 +26,9 @@ Since versioning is only a contract, and could be interpreted differently to eac
 
 In the JavaScript ecosystem, especially for packages published on npm, we follow a convention known as [Semantic Versioning](https://semver.org/), or SemVer for short. A SemVer version number consists of three parts: `MAJOR.MINOR.PATCH`. The rules are straightforward:
 
-- **MAJOR**: Increment when you make incompatible API changes.
-- **MINOR**: Increment when you add functionality in a backwards-compatible manner.
-- **PATCH**: Increment when you make backwards-compatible bug fixes.
+- <span font-bold font-mono text-amber>MAJOR</span>: Increment when you make incompatible API changes.
+- <span font-bold font-mono text-lime>MINOR</span>: Increment when you add functionality in a backwards-compatible manner.
+- <span font-bold font-mono text-blue>PATCH</span>: Increment when you make backwards-compatible bug fixes.
 
 Package managers we use, like `npm`, `pnpm`, and `yarn`, all operate under the assumption that every package on npm adheres to SemVer. When you or a package specifies a dependency with a version range, such as `^1.2.3`, it indicates that you are comfortable with upgrading to any version that shares the same major version (`1.x.x`). In these scenarios, package managers will automatically determine the best version to install based on what is most suitable for your specific project.
 
@@ -56,11 +56,15 @@ I believe we should apply the same principle to versioning. Instead of treating 
 
 ## Leading Zero Major Versioning
 
-The reason I've stuck with `v0.x.x` is my own unconventional approach to versioning. I prefer to introduce necessary and minor breaking changes early on, making upgrades easier, without causing alarm that typically comes with major version jumps like `v2` to `v3`. Some changes might be "technically" breaking but don't impact 99.9% of users in practice. Breaking changes are relative; even a bug fix can be breaking for those relying on the previous behavior (but that's another topic for discussion :P). There's a special rule in SemVer that states **when the leading major version is `0`, every minor version bump is considered breaking**. I've been leveraging this rule to navigate the system more flexibly. I kinda abuse that rule to workaround the limitation of SemVer.
+The reason I've stuck with `v0.x.x` is my own unconventional approach to versioning. I prefer to introduce necessary and minor breaking changes early on, making upgrades easier, without causing alarm that typically comes with major version jumps like `v2` to `v3`. Some changes might be "technically" breaking but don't impact 99.9% of users in practice. Breaking changes are relative; even a bug fix can be breaking for those relying on the previous behavior (but that's another topic for discussion :P). There's a special rule in SemVer that states **when the leading major version is `0`, every minor version bump is considered breaking**. I am kind of **abusing** that rule to workaround the limitation of SemVer. With zero-major versioning, we are effectively abandoning the first number, and merge `MINOR` and `PATCH` into a single number (thanks to [David Blass](https://x.com/ssalbdivad/status/1876614090623431116) for pointing this out):
 
-Of course, zero-major versioning is not the only solution to be progressive. We can see that tools like [Node.js](https://nodejs.org/en), [Vite](https://vite.dev/), [Vitest](https://vitest.dev/) are rolling out major versions in consistent intervals, with a minimal set of breaking changes in each release that are easy to adopt.
+<div py4>
+  <code important="text-xl text-gray"><span line-through>ZERO</span>.<span font-bold text-amber>MAJOR</span>.{<span font-bold text-lime>MINOR</span> + <span font-bold text-blue>PATCH</span>}</code>
+</div>
 
-I have to admit that sticking to zero-major versioning isn't the best practice. While I aimed for more granular versioning to improve communication, using zero-major versioning has actually limited my ability to convey changes effectively. In reality, I've been wasting a valuable part of the versioning scheme due to my peculiar insistence.
+> Of course, zero-major versioning is not the only solution to be progressive. We can see that tools like [Node.js](https://nodejs.org/en), [Vite](https://vite.dev/), [Vitest](https://vitest.dev/) are rolling out major versions in consistent intervals, with a minimal set of breaking changes in each release that are easy to adopt.
+
+I have to admit that sticking to **zero-major versioning isn't the best practice.** While I aimed for more granular versioning to improve communication, using zero-major versioning has actually limited my ability to convey changes effectively. In reality, I've been wasting a valuable part of the versioning scheme due to my peculiar insistence.
 
 Thus here, I am proposing to change.
 
@@ -79,7 +83,7 @@ The format is as follows:
 </div>
 
 - <span font-bold font-mono text-violet>EPOCH</span>: Increment when you make significant or groundbreaking changes.
-- <span font-bold font-mono text-amber>MAJOR</span>: Increment when you make incompatible API changes.
+- <span font-bold font-mono text-amber>MAJOR</span>: Increment when you make minor incompatible API changes.
 - <span font-bold font-mono text-lime>MINOR</span>: Increment when you add functionality in a backwards-compatible manner.
 - <span font-bold font-mono text-blue>PATCH</span>: Increment when you make backwards-compatible bug fixes.
 
