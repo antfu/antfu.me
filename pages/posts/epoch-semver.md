@@ -1,6 +1,6 @@
 ---
 title: Epoch Semantic Versioning
-date: 2025-01-07T16:00:00.000+00:00
+date: 2025-01-07T12:00:00.000+00:00
 lang: en
 duration: 8min
 description: Proposal for an extended Semantic Versioning called Epoch SemVer to provide more granular versioning information to users.
@@ -16,11 +16,11 @@ People often assume that a zero-major version indicates that the software is not
 
 Version numbers act as snapshots of our codebase, helping us communicate changes effectively. For instance, we can say "it works in v1.3.2, but not in v1.3.3, there might be a regression." This makes it easier for maintainers to locate bugs by comparing the differences between these versions. A version is essentially a marker, a seal of the codebase at a specific point in time.
 
-However, code is complex, and every change involves trade-offs. Describing how a change affects the code can be tricky, even with natural language. A version number alone can't capture all the nuances of a release. That's why we have changelogs, release notes, and commit messages to provide more context.
+However, code is complex, and every change involves trade-offs. Describing how a change affects the code can be tricky even with natural language. A version number alone can't capture all the nuances of a release. That's why we have changelogs, release notes, and commit messages to provide more context.
 
-I see versioning as a way to communicate changes to users — a **contract** between the library and its users to ensure compatibility and stability during upgrades. As a user, you can't always tell what's changed between `v2.3.4` and `v2.3.5` without checking the changelog. But by looking at the numbers, you can infer that it's a patch release meant to fix bugs, which should be safe to upgrade. This ability to understand changes just by looking at the version number is possible because both the library maintainer and the users agree on the versioning scheme.
+I see versioning as a way to communicate changes to users — a **contract** between the library maintainers and the users to ensure compatibility and stability during upgrades. As a user, you can't always tell what's changed between `v2.3.4` and `v2.3.5` without checking the changelog. But by looking at the numbers, you can infer that it's a patch release meant to fix bugs, which **should** be safe to upgrade. This ability to understand changes just by looking at the version number is possible because both the library maintainer and the users agree on the versioning scheme.
 
-Since versioning is only a contract, you shouldn't blindly trust it. It serves as an indication to help you decide when to take a closer look at the changelog and be cautious about upgrading. But it's not a guarantee that everything will work as expected, every change might introduce behavior changes whether it's intended or not.
+Since versioning is only a contract, and could be interpreted differently to each specific project, you shouldn't blindly trust it. It serves as an indication to help you decide when to take a closer look at the changelog and be cautious about upgrading. But it's not a guarantee that everything will work as expected, as every change might introduce behavior changes, whether it's intended or not.
 
 ## Semantic Versioning
 
@@ -34,7 +34,9 @@ Package managers we use, like `npm`, `pnpm`, and `yarn`, all operate under the a
 
 This convention works well technically. If a package releases a new major version `v2.0.0`, your package manager won't install it if your specified range is `^1.2.3`. This prevents unexpected breaking changes from affecting your project until you manually update the version range.
 
-Humans perceive numbers on a logarithmic scale. We tend to see `v2.0` to `v3.0` as a huge, groundbreaking change, while `v125.0` to `v126.0` seems trivial, even though both indicate incompatible API changes in SemVer. This perception can make maintainers hesitant to bump the major version for minor breaking changes, leading to the accumulation of many breaking changes in a single major release, making upgrades harder for users. Conversely, with something like `v125.0`, it becomes difficult to convey the significance of a major change, as the jump to `v126.0` appears minor.
+Hovever, humans perceive numbers on a logarithmic scale. We tend to see `v2.0` to `v3.0` as a huge, groundbreaking change, while `v125.0` to `v126.0` seems a lot more trivial, even though both indicate incompatible API changes in SemVer. This perception can make maintainers hesitant to bump the major version for minor breaking changes, leading to the accumulation of many breaking changes in a single major release, making upgrades harder for users. Conversely, with something like `v125.0`, it becomes difficult to convey the significance of a major change, as the jump to `v126.0` appears minor.
+
+> {@TkDodo|Dominik Dorfmeister} had [a great talk about API Design](https://tkdodo.eu/blog/react-query-api-design-lessons-learned), which mentions ["Breaking Changes !== Marketing Event"](https://tkdodo.eu/blog/react-query-api-design-lessons-learned?page=30)
 
 ## Progressive
 
@@ -64,11 +66,13 @@ Thus here, I am proposing to change.
 
 ## Epoch Semantic Versioning
 
-[In an ideal world, I would wish SemVer to have four numbers: `EPOCH.MAJOR.MINOR.PATCH`](https://x.com/antfu7/status/1679184417930059777). The `EPOCH` version is for those big announcements, while `MAJOR` is for technical incompatible API changes that might not be significant. This way, we can have a more granular way to communicate changes. Similar we also have [Romantic Versioning that propose `HUMAN.MAJOR.MINOR`](https://github.com/romversioning/romver). But of course, it's too late for the entire ecosystem to adopt a new versioning scheme.
+[In an ideal world, I would wish SemVer to have 4 numbers: `EPOCH.MAJOR.MINOR.PATCH`](https://x.com/antfu7/status/1679184417930059777). The `EPOCH` version is for those big announcements, while `MAJOR` is for technical incompatible API changes that might not be significant. This way, we can have a more granular way to communicate changes. Similar we also have [Romantic Versioning that propose `HUMAN.MAJOR.MINOR`](https://github.com/romversioning/romver). But, of course, it's too late for the entire ecosystem to adopt a new versioning scheme.
 
-If we can't change SemVer, maybe we can at least extend it. I am proposing a new versioning scheme called **Epoch Semantic Versioning** (Epoch SemVer for short). Build on top of the structure of `MAJOR.MINOR.PATCH`, extend the first number to be the combination of `EPOCH` and `MAJOR`. To put a difference between them, we use a third digit to represent `EPOCH`, which gives `MAJOR` a range from 0 to 99. This way, it follows the exact same rules as SemVer **without requiring any existing tools to change, but provides more granular information to users**.
+If we can't change SemVer, maybe we can at least extend it. I am proposing a new versioning scheme called **🗿 Epoch Semantic Versioning**, Epoch SemVer for short. Build on top of the structure of `MAJOR.MINOR.PATCH`, extend the first number to be the combination of `EPOCH` and `MAJOR`. To put a difference between them, we use a third digit to represent `EPOCH`, which gives `MAJOR` a range from 0 to 99. This way, it follows the exact same rules as SemVer **without requiring any existing tools to change, but provides more granular information to users**.
 
-The format is simple:
+> The name "Epoch" is inspired by [Debian's versioning scheme](https://manpages.debian.org/stretch/dpkg-dev/deb-version.5.en.html).
+
+The format is as follows:
 
 <div py4>
   <code important="text-xl text-gray">{<span font-bold text-violet>EPOCH</span> * 100 + <span font-bold text-amber>MAJOR</span>}.<span font-bold text-lime>MINOR</span>.<span font-bold text-blue>PATCH</span></code>
