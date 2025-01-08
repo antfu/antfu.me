@@ -34,7 +34,7 @@ Package managers we use, like `npm`, `pnpm`, and `yarn`, all operate under the a
 
 This convention works well technically. If a package releases a new major version `v2.0.0`, your package manager won't install it if your specified range is `^1.2.3`. This prevents unexpected breaking changes from affecting your project until you manually update the version range.
 
-Hovever, humans perceive numbers on a logarithmic scale. We tend to see `v2.0` to `v3.0` as a huge, groundbreaking change, while `v125.0` to `v126.0` seems a lot more trivial, even though both indicate incompatible API changes in SemVer. This perception can make maintainers hesitant to bump the major version for minor breaking changes, leading to the accumulation of many breaking changes in a single major release, making upgrades harder for users. Conversely, with something like `v125.0`, it becomes difficult to convey the significance of a major change, as the jump to `v126.0` appears minor.
+However, humans perceive numbers on a logarithmic scale. We tend to see `v2.0` to `v3.0` as a huge, groundbreaking change, while `v125.0` to `v126.0` seems a lot more trivial, even though both indicate incompatible API changes in SemVer. This perception can make maintainers hesitant to bump the major version for minor breaking changes, leading to the accumulation of many breaking changes in a single major release, making upgrades harder for users. Conversely, with something like `v125.0`, it becomes difficult to convey the significance of a major change, as the jump to `v126.0` appears minor.
 
 > {@TkDodo|Dominik Dorfmeister} had [a great talk about API Design](https://tkdodo.eu/blog/react-query-api-design-lessons-learned), which mentions an interesting inequality that descripting this: ["Breaking Changes !== Marketing Event"](https://tkdodo.eu/blog/react-query-api-design-lessons-learned?page=30)
 
@@ -89,7 +89,7 @@ The format is as follows:
 - <span font-bold font-mono text-lime>MINOR</span>: Increment when you add functionality in a backwards-compatible manner.
 - <span font-bold font-mono text-blue>PATCH</span>: Increment when you make backwards-compatible bug fixes.
 
-For example, UnoCSS would transition from `v0.65.3` to `v65.3.0` (in the case `EPOCH` is `0`). Following SemVer, a patch release would become `v65.3.1`, and a feature release would be `v65.4.0`. If we introduced some minor incompatible changes affecting an edge case, we could bump it to `v66.0.0` to alert users of potential impacts. In the event of a significant overhaul to the core, we could jump directly to `v100.0.0` to signal a new era and make a big announcement. I'd suggest to assign a code name to each non-zero `EPOCH` to make it more memorable and easier to refer to. This approach provides maintainers with more flexibility to communicate the scale of changes to users effectively.
+For example, UnoCSS would transition from `v0.65.3` to `v65.3.0` (in the case `EPOCH` is `0`). Following SemVer, a patch release would become `v65.3.1`, and a feature release would be `v65.4.0`. If we introduced some minor incompatible changes affecting an edge case, we could bump it to `v66.0.0` to alert users of potential impacts. In the event of a significant overhaul to the core, we could jump directly to `v100.0.0` to signal a new era and make a big announcement. I'd suggest assigning a code name to each non-zero `EPOCH` to make it more memorable and easier to refer to. This approach provides maintainers with more flexibility to communicate the scale of changes to users effectively.
 
 > We shouldn't need to bump `EPOCH` often. And it's mostly useful for high-level, end-user-facing libraries or frameworks. For low-level libraries, they might never need to bump `EPOCH` at all (`ZERO-EPOCH` is essentially the same as SemVer).
 
@@ -97,6 +97,6 @@ Of course, I'm not suggesting that everyone should adopt this approach. It's sim
 
 ## Moving Forward
 
-I plan to adopt Epoch Semantic Versioning in my projects, including UnoCSS, Slidev, and all the plugins I maintain, and ultimately abadon zero-major versioning for stable packages. I hope this new versioning approach will help communicate changes more effectively and provide users with better context when upgrading.
+I plan to adopt Epoch Semantic Versioning in my projects, including UnoCSS, Slidev, and all the plugins I maintain, and ultimately abandon zero-major versioning for stable packages. I hope this new versioning approach will help communicate changes more effectively and provide users with better context when upgrading.
 
 I'd love to hear your thoughts and feedback on this idea. Feel free to share your comments using the links below!
