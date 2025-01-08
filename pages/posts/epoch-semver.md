@@ -91,10 +91,12 @@ The format is as follows:
 
 For example, UnoCSS would transition from `v0.65.3` to `v65.3.0` (in the case `EPOCH` is `0`). Following SemVer, a patch release would become `v65.3.1`, and a feature release would be `v65.4.0`. If we introduced some minor incompatible changes affecting an edge case, we could bump it to `v66.0.0` to alert users of potential impacts. In the event of a significant overhaul to the core, we could jump directly to `v100.0.0` to signal a new era and make a big announcement. I'd suggest to assign a code name to each non-zero `EPOCH` to make it more memorable and easier to refer to. This approach provides maintainers with more flexibility to communicate the scale of changes to users effectively.
 
-Of course, I'm not suggesting that everyone should adopt this approach. It's simply an idea to work around the existing system. It will be interesting to see how it performs in practice.
+> We shouldn't need to bump `EPOCH` often. And it's mostly useful for high-level, end-user-facing libraries or frameworks. For low-level libraries, they might never need to bump `EPOCH` at all (`ZERO-EPOCH` is essentially the same as SemVer).
+
+Of course, I'm not suggesting that everyone should adopt this approach. It's simply an idea to work around the existing system, and only for those packages with this need. It will be interesting to see how it performs in practice.
 
 ## Moving Forward
 
-I plan to adopt Epoch Semantic Versioning in my projects, including UnoCSS, Slidev, and all the plugins I maintain. I hope this new versioning approach will help communicate changes more effectively and provide users with better context when upgrading.
+I plan to adopt Epoch Semantic Versioning in my projects, including UnoCSS, Slidev, and all the plugins I maintain, and ultimately abadon zero-major versioning for stable packages. I hope this new versioning approach will help communicate changes more effectively and provide users with better context when upgrading.
 
 I'd love to hear your thoughts and feedback on this idea. Feel free to share your comments using the links below!
