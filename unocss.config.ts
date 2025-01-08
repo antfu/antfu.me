@@ -1,4 +1,14 @@
-import { defineConfig, presetAttributify, presetIcons, presetUno, presetWebFonts, transformerDirectives } from 'unocss'
+import {
+  createLocalFontProcessor,
+} from '@unocss/preset-web-fonts/local'
+import {
+  defineConfig,
+  presetAttributify,
+  presetIcons,
+  presetUno,
+  presetWebFonts,
+  transformerDirectives,
+} from 'unocss'
 
 export default defineConfig({
   shortcuts: [
@@ -32,6 +42,7 @@ export default defineConfig({
         condensed: 'Roboto Condensed',
         wisper: 'Bad Script',
       },
+      processors: createLocalFontProcessor(),
     }),
   ],
   transformers: [
