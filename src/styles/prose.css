@@ -133,21 +133,14 @@
   margin-top: 0.8571429em;
 }
 .prose code {
+  --uno: font-mono;
   color: var(--fg-deep);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.875em;
-  background-color: #8881;
+  background-color: #aaa1;
   border-radius: 0.25rem;
-  padding: 0.2em 0.2em;
+  padding: 0.2em 0.3em;
   margin: -0.2em 0;
-}
-.prose code::before {
-  content: '`';
-  opacity: 0.5;
-}
-.prose code::after {
-  content: '`';
-  opacity: 0.5;
 }
 .prose a code {
   color: #111827;

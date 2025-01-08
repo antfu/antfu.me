@@ -40,7 +40,7 @@ Hovever, humans perceive numbers on a logarithmic scale. We tend to see `v2.0` t
 
 ## Progressive
 
-I strongly believe in the principle of progressiveness. Rather than making a giant leap to a significantly higher stage all at once, progressiveness allows users to adopt changes gradually at their own pace. It provides opportunities to pause and assess, making it easier to understand the impact of each change.
+I am a strong believer in the principle of progressiveness. Rather than making a giant leap to a significantly higher stage all at once, progressiveness allows users to adopt changes gradually at their own pace. It provides opportunities to pause and assess, making it easier to understand the impact of each change.
 
 <figure text-center>
   <img src="/images/epoch-semver-progressive-1.png" alt="Progressive as Stairs" border="~ base rounded-xl">
@@ -56,23 +56,25 @@ I believe we should apply the same principle to versioning. Instead of treating 
 
 ## Leading Zero Major Versioning
 
-The reason I've stuck with `v0.x.x` is my own unconventional approach to versioning. I prefer to introduce necessary and minor breaking changes early on, making upgrades easier, without causing alarm that typically comes with major version jumps like `v2` to `v3`. Some changes might be "technically" breaking but don't impact 99.9% of users in practice. Breaking changes are relative; even a bug fix can be breaking for those relying on the previous behavior (but that's another topic for discussion :P). There's a special rule in SemVer that states **when the leading major version is `0`, every minor version bump is considered breaking**. I am kind of **abusing** that rule to workaround the limitation of SemVer. With zero-major versioning, we are effectively abandoning the first number, and merge `MINOR` and `PATCH` into a single number (thanks to [David Blass](https://x.com/ssalbdivad/status/1876614090623431116) for pointing this out):
+The reason I've stuck with `v0.x.x` is my own unconventional approach to versioning. I prefer to introduce necessary and minor breaking changes early on, making upgrades easier, without causing alarm that typically comes with major version jumps like `v2` to `v3`. Some changes might be "technically" breaking but don't impact 99.9% of users in practice. (Breaking changes are relative. Even a bug fix can be breaking for those relying on the previous behavior, but that's another topic for discussion :P).
+
+There's a special rule in SemVer that states **when the leading major version is `0`, every minor version bump is considered breaking**. I am kind of **abusing** that rule to workaround the limitation of SemVer. With zero-major versioning, we are effectively abandoning the first number, and merge `MINOR` and `PATCH` into a single number (thanks to [David Blass](https://x.com/ssalbdivad/status/1876614090623431116) for pointing this out):
 
 <div py4>
   <code important="text-xl text-gray"><span line-through>ZERO</span>.<span font-bold text-amber>MAJOR</span>.{<span font-bold text-lime>MINOR</span> + <span font-bold text-blue>PATCH</span>}</code>
 </div>
 
-> Of course, zero-major versioning is not the only solution to be progressive. We can see that tools like [Node.js](https://nodejs.org/en), [Vite](https://vite.dev/), [Vitest](https://vitest.dev/) are rolling out major versions in consistent intervals, with a minimal set of breaking changes in each release that are easy to adopt.
+> Of course, zero-major versioning is not the only solution to be progressive. We can see that tools like [Node.js](https://nodejs.org/en), [Vite](https://vite.dev/), [Vitest](https://vitest.dev/) are rolling out major versions in consistent intervals, with a minimal set of breaking changes in each release that are easy to adopt. It would require a lot of effort and extra attentions. Kudos to them!
 
-I have to admit that sticking to **zero-major versioning isn't the best practice.** While I aimed for more granular versioning to improve communication, using zero-major versioning has actually limited my ability to convey changes effectively. In reality, I've been wasting a valuable part of the versioning scheme due to my peculiar insistence.
+I have to admit that sticking to **zero-major versioning isn't the best practice.** While I aimed for more granular versioning to improve communication, using zero-major versioning has actually limited the ability to convey changes effectively. In reality, I've been wasting a valuable part of the versioning scheme due to my peculiar insistence.
 
-Thus here, I am proposing to change.
+Thus, here, I am proposing to change.
 
 ## Epoch Semantic Versioning
 
 [In an ideal world, I would wish SemVer to have 4 numbers: `EPOCH.MAJOR.MINOR.PATCH`](https://x.com/antfu7/status/1679184417930059777). The `EPOCH` version is for those big announcements, while `MAJOR` is for technical incompatible API changes that might not be significant. This way, we can have a more granular way to communicate changes. Similar we also have [Romantic Versioning that propose `HUMAN.MAJOR.MINOR`](https://github.com/romversioning/romver). But, of course, it's too late for the entire ecosystem to adopt a new versioning scheme.
 
-If we can't change SemVer, maybe we can at least extend it. I am proposing a new versioning scheme called **🗿 Epoch Semantic Versioning**, Epoch SemVer for short. Build on top of the structure of `MAJOR.MINOR.PATCH`, extend the first number to be the combination of `EPOCH` and `MAJOR`. To put a difference between them, we use a third digit to represent `EPOCH`, which gives `MAJOR` a range from 0 to 99. This way, it follows the exact same rules as SemVer **without requiring any existing tools to change, but provides more granular information to users**.
+If we can't change SemVer, maybe we can at least extend it. I am proposing a new versioning scheme called **🗿 Epoch Semantic Versioning**, or Epoch SemVer for short. It's built on top of the structure of `MAJOR.MINOR.PATCH`, extend the first number to be the combination of `EPOCH` and `MAJOR`. To put a difference between them, we use a third digit to represent `EPOCH`, which gives `MAJOR` a range from 0 to 99. This way, it follows the exact same rules as SemVer **without requiring any existing tools to change, but provides more granular information to users**.
 
 > The name "Epoch" is inspired by [Debian's versioning scheme](https://manpages.debian.org/stretch/dpkg-dev/deb-version.5.en.html).
 
@@ -87,7 +89,7 @@ The format is as follows:
 - <span font-bold font-mono text-lime>MINOR</span>: Increment when you add functionality in a backwards-compatible manner.
 - <span font-bold font-mono text-blue>PATCH</span>: Increment when you make backwards-compatible bug fixes.
 
-For example, UnoCSS would transition from `v0.65.3` to `v65.3.0`. Following SemVer, a patch release would become `v65.3.1`, and a feature release would be `v65.4.0`. If we introduced some minor incompatible changes affecting an edge case, we could bump it to `v66.0.0` to alert users of potential impacts. In the event of a significant overhaul to the core, we could jump directly to `v100.0.0` to signal a new era and make a big announcement. This approach provides maintainers with more flexibility to communicate the scale of changes to users effectively.
+For example, UnoCSS would transition from `v0.65.3` to `v65.3.0` (in the case `EPOCH` is `0`). Following SemVer, a patch release would become `v65.3.1`, and a feature release would be `v65.4.0`. If we introduced some minor incompatible changes affecting an edge case, we could bump it to `v66.0.0` to alert users of potential impacts. In the event of a significant overhaul to the core, we could jump directly to `v100.0.0` to signal a new era and make a big announcement. I'd suggest to assign a code name to each non-zero `EPOCH` to make it more memorable and easier to refer to. This approach provides maintainers with more flexibility to communicate the scale of changes to users effectively.
 
 Of course, I'm not suggesting that everyone should adopt this approach. It's simply an idea to work around the existing system. It will be interesting to see how it performs in practice.
 
