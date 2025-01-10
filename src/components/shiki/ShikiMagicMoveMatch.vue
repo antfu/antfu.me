@@ -2,8 +2,8 @@
 import type { KeyedTokensInfo } from 'shiki-magic-move/types'
 import { codeToKeyedTokens, createMagicMoveMachine } from 'shiki-magic-move/core'
 import { h, renderList } from 'vue'
-import { code1, code2 } from './ShikiMagicMoveDemoCode'
 import { useShikiStore } from '~/store/shiki'
+import { code1, code2 } from './ShikiMagicMoveDemoCode'
 
 const shiki = useShikiStore()
 const tokens1 = shallowRef<KeyedTokensInfo>()

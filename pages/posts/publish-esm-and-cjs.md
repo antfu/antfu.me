@@ -64,9 +64,9 @@ Since dynamic import will return a Promise, meaning all the sub-sequential calle
 On the other hand, if you are able to go with ESM directly, it would be much easier as `import` supports both ESM and CJS.
 
 ```ts
+import cjs from 'cjs-package'
 // in ESM
 import { named } from 'esm-package'
-import cjs from 'cjs-package'
 ```
 
 Some packages now ship [pure-ESM packages](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c) advocating the ecosystem to move from CJS to ESM. While this might be the "right thing to do", however, giving the fact that that majority of the ecosystem are still on CJS and the migration is not that easy, I found myself more lean to ship both CJS and ESM formats to make the transition smoother.

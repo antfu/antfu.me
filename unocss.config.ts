@@ -1,4 +1,14 @@
-import { defineConfig, presetAttributify, presetIcons, presetUno, presetWebFonts, transformerDirectives } from 'unocss'
+import {
+  createLocalFontProcessor,
+} from '@unocss/preset-web-fonts/local'
+import {
+  defineConfig,
+  presetAttributify,
+  presetIcons,
+  presetUno,
+  presetWebFonts,
+  transformerDirectives,
+} from 'unocss'
 
 export default defineConfig({
   shortcuts: [
@@ -27,11 +37,12 @@ export default defineConfig({
     presetUno(),
     presetWebFonts({
       fonts: {
-        sans: 'Inter:400,600,800',
-        mono: 'DM Mono:400,600',
+        sans: 'Inter',
+        mono: 'DM Mono',
         condensed: 'Roboto Condensed',
         wisper: 'Bad Script',
       },
+      processors: createLocalFontProcessor(),
     }),
   ],
   transformers: [

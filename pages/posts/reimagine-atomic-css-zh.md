@@ -239,15 +239,15 @@ UnoCSS 是一个**引擎**，而非一款**框架**，因为它**并未提供核
 我们设想 UnoCSS 能够通过预设模拟大多数已有原子化 CSS 框架的功能。也有可能会被用作创建一些新的原子化 CSS 框架的引擎。例如：
 
 ```ts
-import UnocssPlugin from '@unocss/vite'
+import PresetAntfu from '@antfu/oh-my-cool-unocss-preset'
 
+import PresetBootstrap from '@unocss/preset-bootstrap'
+import UnocssPlugin from '@unocss/vite'
 // 以下预设目前还不存在，
 // 欢迎大家踊跃贡献！
 import PresetTachyons from '@unocss/preset-tachyons'
-import PresetBootstrap from '@unocss/preset-bootstrap'
 import PresetTailwind from '@unocss/preset-tailwind'
 import PresetWindi from '@unocss/preset-windi'
-import PresetAntfu from '@antfu/oh-my-cool-unocss-preset'
 
 export default {
   plugins: [
@@ -438,9 +438,7 @@ variants: [
 <!-- Sun in light mode, Moon in dark mode, from Carbon -->
 <button class="i-carbon-sun dark:i-carbon-moon" />
 <!-- Twemoji of laugh, turns to tear on hovering -->
-<div
-  class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy"
-/>
+<div class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy" />
 ```
 
 <div flex gap-2 text-4xl p-2 mt4>
@@ -576,6 +574,6 @@ UnoCSS 仍处于实验阶段，但由于其精简的设计，生成的结果已�
 
 ## 结束语
 
-非常感谢你的阅读！如果你对它感兴趣，请记得查看 [`antfu/unocss`](https://github.com/antfu/unocss) 仓库以了解更多细节，也可以通过 [**在线 Playground**](https://unocss.antfu.me/) 进行尝试。
+非常感谢你的阅读！如果你对它感兴趣，请记得查看 [`unocss/unocss`](https://github.com/unocss/unocss) 仓库以了解更多细节，也可以通过 [**在线 Playground**](https://unocss.antfu.me/) 进行尝试。
 
 欢迎评论或转发 [此推文](https://twitter.com/antfu7/status/1452802545118711812)，让我知道你的想法！🙌

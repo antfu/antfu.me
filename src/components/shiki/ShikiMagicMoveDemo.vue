@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ShikiMagicMove } from 'shiki-magic-move/vue'
-import { code1, code2 } from './ShikiMagicMoveDemoCode'
 import { useShikiStore } from '~/store/shiki'
+import { code1, code2 } from './ShikiMagicMoveDemoCode'
 
 const index = ref(1)
 const code = computed(() => index.value === 1 ? code1 : code2)

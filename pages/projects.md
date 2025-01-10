@@ -491,5 +491,4 @@ projects:
 ---
 
 <!-- @layout-full-width -->
-
 <ListProjects :projects="frontmatter.projects" />

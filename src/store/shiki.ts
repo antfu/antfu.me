@@ -1,6 +1,6 @@
+import type { HighlighterCore } from 'shiki/core'
 import { defineStore } from 'pinia'
 import { getHighlighterCore } from 'shiki/core'
-import type { HighlighterCore } from 'shiki/core'
 import { isDark } from '../logics'
 
 export const useShikiStore = defineStore('pinia', () => {

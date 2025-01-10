@@ -188,9 +188,7 @@ h6:focus .header-anchor {
 }
 
 .table-of-contents-anchor {
-  --uno: mx2 w-7 h-7 text-lg flex items-center justify-center bg-base rounded
-    text-hex-8887 border border-base shadow md: border-transparent md:
-    shadow-none transition duration-400;
+  --uno: 'mx2 w-7 h-7 text-lg flex items-center justify-center bg-base rounded text-hex-8887 border border-base shadow md:border-transparent md:shadow-none transition duration-400';
 }
 
 .table-of-contents > ul {

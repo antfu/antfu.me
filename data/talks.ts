@@ -2,6 +2,20 @@ import type { Talk } from '~/types'
 
 export const talks: Talk[] = [
   {
+    title: 'Journey to Nuxt Icon',
+    description: 'Introductions of various Icon solutions with their Pros and Cons. And how we take the lessons we learned and make the refreshed Nuxt Icon v1.0',
+    presentations: [
+      {
+        date: '2024-11-12',
+        location: 'Online',
+        conference: 'Nuxt Nation',
+        conferenceUrl: 'https://nuxtnation.com/',
+        pdf: 'https://talks.antfu.me/2024-11-12/pdf',
+        spa: 'https://talks.antfu.me/2024/nuxt-nation/',
+      },
+    ],
+  },
+  {
     series: 'Anthony\'s Road to Open Source - Part 3',
     title: 'Yak Shaving',
     description: 'The art of yak shaving and how it can help you to build better open source projects.',
@@ -20,6 +34,8 @@ export const talks: Talk[] = [
         location: 'Tokyo, Japan',
         conference: 'Vue Fes Japan',
         conferenceUrl: 'https://vuefes.jp/2024/en/',
+        pdf: 'https://talks.antfu.me/2024-10-19/pdf',
+        spa: 'https://talks.antfu.me/2024/vue-fes-japan',
       },
     ],
   },
@@ -42,6 +58,24 @@ export const talks: Talk[] = [
         conferenceUrl: 'https://greece.cityjsconf.org/',
         pdf: 'https://talks.antfu.me/2024-06-08/pdf',
         spa: 'https://talks.antfu.me/2024/cityjs-athens',
+      },
+      {
+        date: '2024-12-07',
+        location: 'Xiamen, China',
+        lang: 'zh',
+        conference: 'FEDAY',
+        conferenceUrl: 'https://fequan.com/2024/',
+        pdf: 'https://talks.antfu.me/2024-12-07/pdf',
+        spa: 'https://talks.antfu.me/2024/feday',
+      },
+      {
+        date: '2024-12-28',
+        lang: 'zh',
+        location: 'Taipei, Taiwan',
+        conference: 'WebConf Taiwan',
+        conferenceUrl: 'https://webconf.tw/',
+        pdf: 'https://talks.antfu.me/2024-12-28/pdf',
+        spa: 'https://talks.antfu.me/2024/webconf-tw',
       },
     ],
   },
@@ -105,6 +139,12 @@ export const talks: Talk[] = [
         location: 'Online',
         conference: 'Frontend Nation',
         conferenceUrl: 'https://frontendnation.com',
+      },
+      {
+        date: '2024-10-03',
+        location: 'Online',
+        conference: 'ViteConf',
+        conferenceUrl: 'https://viteconf.org',
       },
     ],
   },

@@ -1,10 +1,10 @@
+import type { FeedOptions, Item } from 'feed'
 import { dirname } from 'node:path'
 import fg from 'fast-glob'
+import { Feed } from 'feed'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
 import MarkdownIt from 'markdown-it'
-import type { FeedOptions, Item } from 'feed'
-import { Feed } from 'feed'
 
 const DOMAIN = 'https://antfu.me'
 const AUTHOR = {

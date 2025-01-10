@@ -83,8 +83,8 @@ function encodeSvg(svg: string) {
     .replace(/"/g, '\'')
     .replace(/%/g, '%25')
     .replace(/#/g, '%23')
-    .replace(/{/g, '%7B')
-    .replace(/}/g, '%7D')
+    .replace(/\{/g, '%7B')
+    .replace(/\}/g, '%7D')
     .replace(/</g, '%3C')
     .replace(/>/g, '%3E')
 }
@@ -223,9 +223,9 @@ npm i -D unocss @unocss/preset-icons @iconify/json
 接着配置你的 `vite.config.js`：
 
 ```ts
-import { defineConfig } from 'vite'
-import UnoCSS from 'unocss'
 import UnocssIcons from '@unocss/preset-icons'
+import UnoCSS from 'unocss'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [

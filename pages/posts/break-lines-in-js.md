@@ -19,7 +19,7 @@ A quick example:
 
 ```js
 const text = 'A quick brown fox jumps over the lazy dog.'
-const lines = text.split(/(.{0,16})(?:\s|$)/g).filter(Boolean)
+const lines = text.split(/(.{0,16})(?:\s|$)/).filter(Boolean)
 
 console.log(lines)
 // ['A quick brown', 'fox jumps over', 'the lazy dog.']

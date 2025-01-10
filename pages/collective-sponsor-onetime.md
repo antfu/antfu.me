@@ -24,7 +24,7 @@ This is {@antfu|Anthony Fu}
 
 I'd like to represent our ecosystem to say **THANK YOU** for your open source work!
 
-To show our appreciation,<br>**we'd like to offer you a one-time sponsorship of <span>${{route.query.amount}}</span> from our [Open Collective](https://opencollective.com/antfu)**.
+To show our appreciation,<br>**we'd like to offer you a one-time sponsorship of <span>${{route.query.amount}} USD</span> from our [Open Collective](https://opencollective.com/antfu)**.
 
 You can learn more about the context in this post: [Initiative on Sponsorship Forwarding](/posts/sponsorship-forwarding).
 
@@ -41,7 +41,7 @@ Create an expense on our Open Collective, it usually take a few seconds to fill 
 1. Got to https://opencollective.com/antfu/expenses/new, select "Invoice"
 2. Fill in your payment information
 3. For expense title, put <TextCopy inline font-bold :slice="[1, -1]">"One-time Sponsorship, {{month}} {{route.query.year}}"</TextCopy>
-4. For the description field, put <TextCopy inline font-bold :slice="[1, -1]">"One-time sponsorship"</TextCopy> with **a link to your recent work** in the description, and fill in the amount **${{route.query.amount}}**.
+4. For the description field, put <TextCopy inline font-bold :slice="[1, -1]">"One-time sponsorship"</TextCopy> with **a link to your recent work** in the description, and fill in the amount **${{route.query.amount}} USD**.
 5. Click "Next" and then "Submit Expense"
 
 That's it! Feel free to reach out to me if you have any questions.

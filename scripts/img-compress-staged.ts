@@ -1,5 +1,5 @@
-import Git from 'simple-git'
 import prompts from 'prompts'
+import Git from 'simple-git'
 import { compressImages } from './img-compress'
 
 const git = Git()
