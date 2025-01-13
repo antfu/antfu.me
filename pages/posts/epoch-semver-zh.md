@@ -76,11 +76,11 @@ SemVer 中有一个特殊规则，规定**当主版本号为 `0` 时，每个次
 
 [在理想情况下，我希望 SemVer 有 4 个数字: `EPOCH.MAJOR.MINOR.PATCH`](https://x.com/antfu7/status/1679184417930059777)。`EPOCH` 版本用于那些重大公告，而 `MAJOR` 则用于可能不那么重要的技术性不兼容 API 变更。这样，我们就能有更细粒度的方式来传达变更。类似地，我们也有[提出 `HUMAN.MAJOR.MINOR` 的 romver 版本控制](https://github.com/romversioning/romver)。但是，当然现在让整个生态系统采用新的版本控制方案为时已晚。
 
-如果我们不能改变 SemVer，也许我们至少可以扩展它。我提出一个新的版本控制方案，称为**🗿 Epoch语义化版本控制**，简称Epoch SemVer。它建立在 `MAJOR.MINOR.PATCH` 的结构之上，将第一个数字扩展为 `EPOCH` 和 `MAJOR` 的组合。为了区分它们，我们使用第三位数字来表示 `EPOCH`，这使得 `MAJOR` 的范围从 0 到 99。这样，它完全遵循 SemVer 的规则**而不需要任何现有工具改变，但为用户提供更细粒度的信息**。
+如果我们不能改变 SemVer，也许我们至少可以扩展它。我提出一个新的版本控制方案，称为**🗿 Epoch SemVer 版本控制规范**，简称 Epoch SemVer。它建立在 `MAJOR.MINOR.PATCH` 的结构之上，将第一个数字扩展为 `EPOCH` 和 `MAJOR` 的组合。为了区分它们，我们使用第三位数字来表示 `EPOCH`，这使得 `MAJOR` 的范围从 0 到 99。这样，它完全遵循 SemVer 的规则**而不需要任何现有工具改变，但为用户提供更细粒度的信息**。
 
 > "Epoch" 这个名字的灵感来自 [Debian 的版本控制方案](https://manpages.debian.org/stretch/dpkg-dev/deb-version.5.en.html)。
 
-在Epoch SemVer 中，版本号格式如下:
+在 Epoch SemVer 中，版本号格式如下:
 
 <div py4>
   <code important="text-xl text-gray">{<span font-bold text-violet>EPOCH</span> * 100 + <span font-bold text-amber>MAJOR</span>}.<span font-bold text-lime>MINOR</span>.<span font-bold text-blue>PATCH</span></code>
@@ -99,6 +99,6 @@ SemVer 中有一个特殊规则，规定**当主版本号为 `0` 时，每个次
 
 ## 展望未来
 
-我计划在我的项目中采用 Epoch 语义化版本控制，包括 UnoCSS、Slidev 和我维护的所有插件，并最终放弃稳定包的零主版本控制。我希望这种新的版本控制方法能够帮助更有效地传达变更，并在升级时为用户提供更好的上下文。
+我计划在我的项目中采用 Epoch SemVer 版本控制规范，包括 UnoCSS、Slidev 和我维护的所有插件，并最终放弃稳定包的零主版本控制。我希望这种新的版本控制方法能够帮助更有效地传达变更，并在升级时为用户提供更好的上下文。
 
 我很想听听你对这个想法的看法和反馈。欢迎使用下方的链接分享你的评论！
