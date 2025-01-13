@@ -3,7 +3,7 @@ title: Epoch SemVer 版本控制规范
 date: 2025-01-07T12:00:00.000+00:00
 lang: zh
 duration: 8min
-description: 提出一个扩展的语义化版本控制方案 Epoch SemVer，为用户提供更细粒度的版本信息。
+description: 提出一个扩展的语义化版本控制规范 Epoch SemVer，为用户提供更细粒度的版本信息。
 ---
 
 如果你一直关注我的开源工作，你可能注意到我倾向于使用 0 作为主版本号,比如 `v0.x.x`。例如,在写这篇文章时,UnoCSS 的最新版本是 [`v0.65.3`](https://github.com/unocss/unocss/releases/tag/v0.65.3), Slidev 是 [`v0.50.0`](https://github.com/slidevjs/slidev/releases/tag/v0.50.0), 而 `unplugin-vue-components` 是 [`v0.28.0`](https://github.com/unplugin/unplugin-vue-components/releases/tag/v0.28.0)。其他项目, 如 React Native 现在是 [`v0.76.5`](https://github.com/facebook/react-native/releases/tag/v0.76.5), sharp 是 [`v0.33.5`](https://github.com/lovell/sharp/releases/tag/v0.33.5), 也遵循这种模式。
