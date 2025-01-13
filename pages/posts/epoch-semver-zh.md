@@ -58,7 +58,7 @@ description: 提出一个扩展的语义化版本控制规范 Epoch SemVer，为
 
 我之所以坚持使用 `v0.x.x`,是因为我对版本控制有自己特殊的理解。我倾向于尽早引入必要的和小的破坏性变更,使升级更容易,而不会引起像 `v2` 到 `v3` 这样的主版本跳跃通常带来的恐慌。有些变更可能在"技术上"是破坏性的,但实际上并不影响 99.9% 的用户。(破坏性变更是相对的。即使是修复 bug 也可能对那些依赖先前行为的用户造成破坏,但这是另一个讨论话题 :P)。
 
-SemVer 中有一个特殊规则,规定**当主版本号为 `0` 时,每个次版本号的增加都被视为破坏性的**。我某种程度上在**滥用**这个规则来绕过 SemVer 的限制。使用零主版本控制时,我实际上放弃了第一个数字,并将 `MINOR` 和 `PATCH` 合并为一个数字(感谢 [David Blass](https://x.com/ssalbdivad/status/1876614090623431116) 指出这一点):
+SemVer 中有一个特殊规则,规定**当主版本号为 `0` 时,每个次版本号的增加都被视为破坏性的**。我某种程度上在**谬用**这个规则来绕过 SemVer 的限制。使用零主版本时,我实际上放弃了第一个数字,并将 `MINOR` 和 `PATCH` 合并为一个数字(感谢 [David Blass](https://x.com/ssalbdivad/status/1876614090623431116) 指出这一点):
 
 <div py4>
   <code important="text-xl text-gray"><span line-through>ZERO</span>.<span font-bold text-amber>MAJOR</span>.{<span font-bold text-lime>MINOR</span> + <span font-bold text-blue>PATCH</span>}</code>
