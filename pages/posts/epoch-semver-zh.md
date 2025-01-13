@@ -1,5 +1,5 @@
 ---
-title: Epoch 语义化版本控制
+title: Epoch SemVer 版本控制规范
 date: 2025-01-07T12:00:00.000+00:00
 lang: zh
 duration: 8min
