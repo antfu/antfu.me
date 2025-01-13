@@ -36,7 +36,7 @@ description: 提出一个扩展的语义化版本控制规范 Epoch SemVer，为
 
 然而,人们潜意识会有尺度来感知数字。我们往往会将 `v2.0` 到 `v3.0` 视为一个巨大的、破坏性的变化,而 `v125.0` 到 `v126.0` 看起来则要微不足道得多,尽管在 SemVer 中它们都表示不兼容的 API 变更。这种认知可能会使维护者在进行小的破坏性更改时犹豫是否要增加主版本号,导致在单个主版本发布中积累了许多破坏性更改,使用户升级变得更加困难。相反,对于类似 `v125.0` 这样的版本,由于升级到 `v126.0` 看起来变化很小,很难传达主要变更的重要性。
 
-> {@TkDodo|Dominik Dorfmeister} 做过[一个关于 API 设计的精彩演讲](https://tkdodo.eu/blog/react-query-api-design-lessons-learned),其中提到了一个有趣的不等式来描述这一点: ["破坏性变更 !== 营销活动"](https://tkdodo.eu/blog/react-query-api-design-lessons-learned?page=30)
+> {@TkDodo|Dominik Dorfmeister} 做过[一个关于 API 设计的精彩演讲](https://tkdodo.eu/blog/react-query-api-design-lessons-learned),其中提到了一个有趣的不等式来描述这一点: ["破坏性变更 !== 营销事件"](https://tkdodo.eu/blog/react-query-api-design-lessons-learned?page=30)
 
 ## 渐进式
 
