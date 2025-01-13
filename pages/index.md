@@ -40,7 +40,7 @@ Find me on
   <a href="https://weibo.com/u/7485197193" target="_blank"><span op75 i-simple-icons-sinaweibo /> 微博</a>
 </p>
 
-Or mail me at <a href="mailto:hi@antfu.me"><span font-mono>hi<span i-carbon-at/>antfu.me</span></a>
+Or mail me at <span font-mono>hi<span i-carbon-at/>antfu.me</span>
 
 ---
 
