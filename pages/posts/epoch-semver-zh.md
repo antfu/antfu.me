@@ -1,9 +1,9 @@
 ---
-title: Epoch 语义化版本控制
+title: Epoch SemVer 版本控制规范
 date: 2025-01-07T12:00:00.000+00:00
 lang: zh
 duration: 8min
-description: 提出一个扩展的语义化版本控制方案 Epoch SemVer，为用户提供更细粒度的版本信息。
+description: 提出一个扩展的语义化版本控制规范 Epoch SemVer，为用户提供更细粒度的版本信息。
 ---
 
 > [English Version](/posts/epoch-semver)
@@ -38,7 +38,7 @@ description: 提出一个扩展的语义化版本控制方案 Epoch SemVer，为
 
 然而，人们潜意识会有尺度来感知数字。我们往往会将 `v2.0` 到 `v3.0` 视为一个巨大的、破坏性的变化，而 `v125.0` 到 `v126.0` 看起来则要微不足道得多，尽管在 SemVer 中它们都表示不兼容的 API 变更。这种认知可能会使维护者在进行小的破坏性更改时犹豫是否要增加主版本号，导致在单个主版本发布中积累了许多破坏性更改，使用户升级变得更加困难。相反，对于类似 `v125.0` 这样的版本，由于升级到 `v126.0` 看起来变化很小，很难传达主要变更的重要性。
 
-> {@TkDodo|Dominik Dorfmeister} 做过[一个关于 API 设计的精彩演讲](https://tkdodo.eu/blog/react-query-api-design-lessons-learned)，其中提到了一个有趣的不等式来描述这一点: ["破坏性变更 !== 营销活动"](https://tkdodo.eu/blog/react-query-api-design-lessons-learned?page=30)
+> {@TkDodo|Dominik Dorfmeister} 做过[一个关于 API 设计的精彩演讲](https://tkdodo.eu/blog/react-query-api-design-lessons-learned)，其中提到了一个有趣的不等式来描述这一点: ["破坏性变更 !== 营销事件"](https://tkdodo.eu/blog/react-query-api-design-lessons-learned?page=30)
 
 ## 渐进式
 
@@ -60,7 +60,7 @@ description: 提出一个扩展的语义化版本控制方案 Epoch SemVer，为
 
 我之所以坚持使用 `v0.x.x`，是因为我对版本控制有自己特殊的理解。我倾向于尽早引入必要的和小的破坏性变更，使升级更容易，而不会引起像 `v2` 到 `v3` 这样的主版本跳跃通常带来的恐慌。有些变更可能在"技术上"是破坏性的，但实际上并不影响 99.9% 的用户。(破坏性变更是相对的。即使是修复 bug 也可能对那些依赖先前行为的用户造成破坏，但这是另一个讨论话题 :P)。
 
-SemVer 中有一个特殊规则，规定**当主版本号为 `0` 时，每个次版本号的增加都被视为破坏性的**。我某种程度上在**滥用**这个规则来绕过 SemVer 的限制。使用零主版本控制时，我实际上放弃了第一个数字，并将 `MINOR` 和 `PATCH` 合并为一个数字(感谢 [David Blass](https://x.com/ssalbdivad/status/1876614090623431116) 指出这一点):
+SemVer 中有一个特殊规则，规定**当主版本号为 `0` 时，每个次版本号的增加都被视为破坏性的**。我某种程度上在**谬用**这个规则来绕过 SemVer 的限制。使用零主版本时，我实际上放弃了第一个数字，并将 `MINOR` 和 `PATCH` 合并为一个数字(感谢 [David Blass](https://x.com/ssalbdivad/status/1876614090623431116) 指出这一点):
 
 <div py4>
   <code important="text-xl text-gray"><span line-through>ZERO</span>.<span font-bold text-amber>MAJOR</span>.{<span font-bold text-lime>MINOR</span> + <span font-bold text-blue>PATCH</span>}</code>
