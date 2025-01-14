@@ -6,6 +6,8 @@ duration: 8min
 description: Proposal for an extended Semantic Versioning called Epoch SemVer to provide more granular versioning information to users.
 ---
 
+> [中文翻译 Chinese Version](/posts/epoch-semver-zh)
+
 If you've been following my work in open source, you might have noticed that I have a tendency to stick with zero-major versioning, like `v0.x.x`. For instance, as of writing this post, the latest version of UnoCSS is [`v0.65.3`](https://github.com/unocss/unocss/releases/tag/v0.65.3), Slidev is [`v0.50.0`](https://github.com/slidevjs/slidev/releases/tag/v0.50.0), and `unplugin-vue-components` is [`v0.28.0`](https://github.com/unplugin/unplugin-vue-components/releases/tag/v0.28.0). Other projects, such as React Native is on [`v0.76.5`](https://github.com/facebook/react-native/releases/tag/v0.76.5), and sharp is on [`v0.33.5`](https://github.com/lovell/sharp/releases/tag/v0.33.5), also follow this pattern.
 
 People often assume that a zero-major version indicates that the software is not ready for production. However, all of the projects mentioned here are quite stable and production-ready, used by millions of projects.
