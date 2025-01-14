@@ -58,7 +58,7 @@ I believe we should apply the same principle to versioning. Instead of treating 
 
 The reason I've stuck with `v0.x.x` is my own unconventional approach to versioning. I prefer to introduce necessary and minor breaking changes early on, making upgrades easier, without causing alarm that typically comes with major version jumps like `v2` to `v3`. Some changes might be "technically" breaking but don't impact 99.9% of users in practice. (Breaking changes are relative. Even a bug fix can be breaking for those relying on the previous behavior, but that's another topic for discussion :P).
 
-There's a special rule in SemVer that states **when the leading major version is `0`, every minor version bump is considered breaking**. I am kind of **abusing** that rule to workaround the limitation of SemVer. With zero-major versioning, we are effectively abandoning the first number, and merge `MINOR` and `PATCH` into a single number (thanks to [David Blass](https://x.com/ssalbdivad/status/1876614090623431116) for pointing this out):
+There's a special rule in SemVer that states **when the leading major version is `0`, every minor version bump is considered breaking**. I am kind of **abusing** that rule to workaround the limitation of SemVer. With zero-major versioning, we are effectively abandoning the first number, and merge `MINOR` and `PATCH` into a single number (thanks to [David Blass](https://x.com/ssalbdivad) for pointing [this](https://x.com/ssalbdivad/status/1876614090623431116) out):
 
 <div py4>
   <code important="text-xl text-gray"><span line-through>ZERO</span>.<span font-bold text-amber>MAJOR</span>.{<span font-bold text-lime>MINOR</span> + <span font-bold text-blue>PATCH</span>}</code>
@@ -72,7 +72,9 @@ Thus, here, I am proposing to change.
 
 ## Epoch Semantic Versioning
 
-[In an ideal world, I would wish SemVer to have 4 numbers: `EPOCH.MAJOR.MINOR.PATCH`](https://x.com/antfu7/status/1679184417930059777). The `EPOCH` version is for those big announcements, while `MAJOR` is for technical incompatible API changes that might not be significant. This way, we can have a more granular way to communicate changes. Similar we also have [Romantic Versioning that propose `HUMAN.MAJOR.MINOR`](https://github.com/romversioning/romver). But, of course, it's too late for the entire ecosystem to adopt a new versioning scheme.
+[In an ideal world, I would wish SemVer to have 4 numbers: `EPOCH.MAJOR.MINOR.PATCH`](https://x.com/antfu7/status/1679184417930059777). The `EPOCH` version is for those big announcements, while `MAJOR` is for technical incompatible API changes that might not be significant. This way, we can have a more granular way to communicate changes. Similarly, we also have [Romantic Versioning that propose `HUMAN.MAJOR.MINOR`](https://github.com/romversioning/romver). The creator of SemVer, [Tom Preston-Werner](https://tom.preston-werner.com/) also [mentioned similar concerns and solutions in this blog post](https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred). (thanks to [Sébastien Lorber](https://x.com/sebastienlorber) for pointing [this](https://x.com/sebastienlorber/status/1879127128530460856) out).
+
+But, of course, it's too late for the entire ecosystem to adopt a new versioning scheme.
 
 If we can't change SemVer, maybe we can at least extend it. I am proposing a new versioning scheme called **🗿 Epoch Semantic Versioning**, or Epoch SemVer for short. It's built on top of the structure of `MAJOR.MINOR.PATCH`, extend the first number to be the combination of `EPOCH` and `MAJOR`. To put a difference between them, we use a third digit to represent `EPOCH`, which gives `MAJOR` a range from 0 to 99. This way, it follows the exact same rules as SemVer **without requiring any existing tools to change, but provides more granular information to users**.
 
@@ -91,7 +93,7 @@ The format is as follows:
 
 For example, UnoCSS would transition from `v0.65.3` to `v65.3.0` (in the case `EPOCH` is `0`). Following SemVer, a patch release would become `v65.3.1`, and a feature release would be `v65.4.0`. If we introduced some minor incompatible changes affecting an edge case, we could bump it to `v66.0.0` to alert users of potential impacts. In the event of a significant overhaul to the core, we could jump directly to `v100.0.0` to signal a new era and make a big announcement. I'd suggest assigning a code name to each non-zero `EPOCH` to make it more memorable and easier to refer to. This approach provides maintainers with more flexibility to communicate the scale of changes to users effectively.
 
-> We shouldn't need to bump `EPOCH` often. And it's mostly useful for high-level, end-user-facing libraries or frameworks. For low-level libraries, they might never need to bump `EPOCH` at all (`ZERO-EPOCH` is essentially the same as SemVer).
+> We shouldn't need to bump `EPOCH` often. It's mostly useful for high-level, end-user-facing libraries or frameworks. For low-level libraries, they might **never** need to bump `EPOCH` at all (`ZERO-EPOCH` is essentially the same as SemVer).
 
 Of course, I'm not suggesting that everyone should adopt this approach. It's simply an idea to work around the existing system, and only for those packages with this need. It will be interesting to see how it performs in practice.
 
