@@ -189,7 +189,7 @@ export const talks: Talk[] = [
     ],
   },
   {
-    title: 'How I Mangage GitHub Notifications',
+    title: 'How I Manage GitHub Notifications',
     description: 'My workflow for managing GitHub notifications effectively.',
     presentations: [
       {
