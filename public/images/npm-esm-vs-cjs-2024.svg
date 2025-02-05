@@ -10,15 +10,6 @@ text { font-size: 24px; font-weight: bolder; font-family: -apple-system,BlinkMac
 text { fill: #0d1117; stroke: white; stroke-width: 3px; }
 pattern line { stroke: #0d1117; stroke-width: 2px }
 pattern rect { fill: #0d1117 }
-
-@media (prefers-color-scheme: dark) {
-  .b { fill: #0d1117; }
-  .cjs, .dual, .esm, .faux { stroke: white; }
-  .esm { fill: #0d1117; }
-  text { fill: white; stroke: #0d1117; }
-  pattern line { stroke: white; }
-  pattern rect { fill: white }
-}
 </style>
 <defs>
 <pattern id="a" height="6" patternUnits="userSpaceOnUse" width="6" x="0" y="0"><line x1="0" y1="0" x2="0" y2="6"></line></pattern>

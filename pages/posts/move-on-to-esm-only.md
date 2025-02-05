@@ -8,9 +8,9 @@ description: Let's move on to ESM-only
 
 [[toc]]
 
-Three years ago, I wrote a post about [shipping ESM & CJS in a single package](/posts/publish-esm-and-cjs), advocating for dual CJS/ESM formats to ease user migration and trying to make the best of both worlds. Back then, I didn't fully agree with [aggressively shipping ESM-only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c), as the ecosystem wasn't ready, especially since the push was mostly from low-level libraries. Over time, as tools and the ecosystem have evolved, my perspective has shifted towards more on adopting ESM-only.
+Three years ago, I wrote a post about [shipping ESM & CJS in a single package](/posts/publish-esm-and-cjs), advocating for dual CJS/ESM formats to ease user migration and trying to make the best of both worlds. Back then, I didn't fully agree with [aggressively shipping ESM-only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c), as I considered the ecosystem wasn't ready, especially since the push was mostly from low-level libraries. Over time, as tools and the ecosystem have evolved, my perspective has gradually shifted towards more and more on adopting ESM-only.
 
-As of 2025, a decade has passed since ESM was first introduced. Modern tools and libraries have increasingly adopted ESM as the primary module format. According to {@wooorm}'s [script](https://github.com/wooorm/npm-esm-vs-cjs), the packages that ships ESM on npm was **7.8%** in 2021, but by the end of 2024, it had reached [**25.8%**](https://github.com/wooorm/npm-esm-vs-cjs). Although a significant portion of packages still use CJS, the trend clearly shows a shift towards ESM.
+As of 2025, a decade has passed since ESM was first introduced in 2015. Modern tools and libraries have increasingly adopted ESM as the primary module format. According to {@wooorm}'s [script](https://github.com/wooorm/npm-esm-vs-cjs), the packages that ships ESM on npm in 2021 was **7.8%**, and by the end of 2024, it had reached [**25.8%**](https://github.com/wooorm/npm-esm-vs-cjs). Although a significant portion of packages still use CJS, the trend clearly shows a good shift towards ESM.
 
 <figure>
   <img src="/images/npm-esm-vs-cjs-2024.svg" dark:filter-invert />
@@ -23,23 +23,23 @@ Here in this post, I'd like to share my thoughts on the current state of the eco
 
 ### Modern Tools
 
-With the rise of [Vite](https://vite.dev) as a popular modern frontend build tool, many meta-frameworks like [Nuxt](https://nuxtjs.org), [SvelteKit](https://kit.svelte.dev), [Astro](https://astro.build), [SolidStart](https://solidstart.dev), [Remix](https://remix.run), [Storybook](https://storybook.js.org), [Redwood](https://redwoodjs.com), and many others are all built on top of Vite now, that **treating ESM as a first-class citizen**.
+With the rise of [Vite](https://vite.dev) as a popular modern frontend build tool, many meta-frameworks like [Nuxt](https://nuxtjs.org), [SvelteKit](https://kit.svelte.dev), [Astro](https://astro.build), [SolidStart](https://solidstart.dev), [Remix](https://remix.run), [Storybook](https://storybook.js.org), [Redwood](https://redwoodjs.com), and many others are all built on top of Vite nowadays, that **treating ESM as a first-class citizen**.
 
-In addition, we have testing tools [Vitest](https://vitest.dev) which was designed for ESM from the day one with powerful mocking and HMR support.
+As a complement, we have also testing library [Vitest](https://vitest.dev), which was designed for ESM from the day one with powerful module mocking capability and efficient fine-grain caching support.
 
-Tools like [`tsx`](https://github.com/privatenumber/tsx) and [`jiti`](https://github.com/unjs/jiti) offer a seamless experience for running TypeScript and ESM code without requiring additional configuration. This simplifies the development process and reduces the overhead associated with setting up a project to use ESM.
+CLI tools like [`tsx`](https://github.com/privatenumber/tsx) and [`jiti`](https://github.com/unjs/jiti) offer a seamless experience for running TypeScript and ESM code without requiring additional configuration. This simplifies the development process and reduces the overhead associated with setting up a project to use ESM.
 
-Moreover, [ESLint](https://eslint.org) v9 introduced a new flat config system that enables native ESM support with `eslint.config.mjs`, even in CJS projects.
+Other tools, for example, [ESLint](https://eslint.org), in the recent v9.0, introduced a new flat config system that enables native ESM support with `eslint.config.mjs`, even in CJS projects.
 
 ### Top-Down & Bottom-Up
 
-Back in 2021, when {@sindresorhus} first started migrating all his packages to ESM-only, for example, `find-up` and `execa`, it was a bold move. I consider this move as a **bottom-up** approach, as the packages that rather low-level and many their dependents are not ready for ESM yet. I was worried that this would force those dependents to stay on the old version of the packages, which might result in the ecosystem being fragmented. (at this point, I actually appreciate that move bringing us quite a lot of high-quality ESM packages, regardless that the process wasn't super smooth).
+Back in 2021, when {@sindresorhus} first started migrating all his packages to ESM-only, for example, `find-up` and `execa`, it was a bold move. I consider this move as a **bottom-up** approach, as the packages that rather low-level and many their dependents are not ready for ESM yet. I was worried that this would force those dependents to stay on the old version of the packages, which might result in the ecosystem being fragmented. (As of today, I actually appreciate that move bringing us quite a lot of high-quality ESM packages, regardless that the process wasn't super smooth).
 
 It's way easier for an ESM or Dual formats package to depend on CJS packages, but not the other way around. In terms of smooth adoption, I believe the **top-down** approach is more effective in pushing the ecosystem forward. With the support of high-level frameworks and tools from top-down, it's no longer a significant obstacle to use ESM-only packages. The remaining challenges in terms of ESM adoption primarily lie with package authors needing to migrate and ship their code in ESM format.
 
 ### Requiring ESM in Node.js
 
-The [capability to `require()` ESM modules](https://github.com/nodejs/node/pull/51977) in Node.js, initiated by {@joyeecheung}, marks an **incredible milestone**. This feature allows packages to be published as ESM-only while still being consumable by CJS codebases with minimal modifications. It helps avoid the async infection (also known as [Red Functions](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/)), which can be pretty hard, if not impossible in some cases, to migrate and adapt.
+The [capability to `require()` ESM modules](https://github.com/nodejs/node/pull/51977) in Node.js, initiated by {@joyeecheung}, marks an **incredible milestone**. This feature allows packages to be published as ESM-only while still being consumable by CJS codebases with minimal modifications. It helps avoid the async infection (also known as [Red Functions](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/)) introduced by dynamic `import()` ESM, which can be pretty hard, if not impossible in some cases, to migrate and adapt.
 
 This feature was recently [unflagged](https://github.com/nodejs/node/pull/55085) and [backported to Node.js v22](https://github.com/nodejs/node/pull/55217), which means it should be available to many developers already. Consider the [top-down or bottom-up](#top-down--bottom-up) metaphor, this feature actually makes it possible to start ESM migration also from **middle-out**, as it allows import chains like `ESM → CJS → ESM → CJS` to work seamlessly.
 
@@ -47,7 +47,7 @@ For more details on the progress and discussions around this feature, keep track
 
 ## The Troubles with Dual Formats
 
-While dual CJS/ESM packages have been a helpful transition mechanism, they come with their own set of challenges. Maintaining two separate formats can be cumbersome and error-prone, especially when dealing with complex codebases. Here are some of the issues that arise when maintaining dual formats:
+While dual CJS/ESM packages have been a quite helpful transition mechanism, they come with their own set of challenges. Maintaining two separate formats can be cumbersome and error-prone, especially when dealing with complex codebases. Here are some of the issues that arise when maintaining dual formats:
 
 ### Interop Issues
 
