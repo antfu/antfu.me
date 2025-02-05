@@ -64,6 +64,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/match-quotes-in-pairs': RouteRecordInfo<'/posts/match-quotes-in-pairs', '/posts/match-quotes-in-pairs', Record<never, never>, Record<never, never>>,
     '/posts/mental-health-oss': RouteRecordInfo<'/posts/mental-health-oss', '/posts/mental-health-oss', Record<never, never>, Record<never, never>>,
     '/posts/mental-health-oss-zh': RouteRecordInfo<'/posts/mental-health-oss-zh', '/posts/mental-health-oss-zh', Record<never, never>, Record<never, never>>,
+    '/posts/move-on-to-esm-only': RouteRecordInfo<'/posts/move-on-to-esm-only', '/posts/move-on-to-esm-only', Record<never, never>, Record<never, never>>,
     '/posts/netlify-redirects': RouteRecordInfo<'/posts/netlify-redirects', '/posts/netlify-redirects', Record<never, never>, Record<never, never>>,
     '/posts/new-house': RouteRecordInfo<'/posts/new-house', '/posts/new-house', Record<never, never>, Record<never, never>>,
     '/posts/new-ways-to-vue-london-2021': RouteRecordInfo<'/posts/new-ways-to-vue-london-2021', '/posts/new-ways-to-vue-london-2021', Record<never, never>, Record<never, never>>,
