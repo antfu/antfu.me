@@ -15,12 +15,6 @@ art: plum
 </div>
 -->
 
-# Talk Schedule 2025
-
-| Date                          | Conference                                         | Location              | Topic |
-| ----------------------------- | -------------------------------------------------- | --------------------- | ----- |
-| <TalkDate date="2025-09-18"/> | [**SquiggleConf**](https://2024.squiggleconf.com/) | Boston, United States | TBD   |
-
 <details>
 <summary><span text-lg>Talk Schedule 2024</span></summary>
 
