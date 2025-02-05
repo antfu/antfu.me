@@ -8,14 +8,21 @@ art: plum
 
 <div pt-5 />
 
-# Talk Schedule 2024
-
 <!--
 <div slide-enter>
   <div i-ri:presentation-line mr-1 />
   <RouterLink to="/giving-talks" op50>Available for giving talks!</RouterLink>
 </div>
 -->
+
+# Talk Schedule 2025
+
+| Date                          | Conference                                         | Location              | Topic |
+| ----------------------------- | -------------------------------------------------- | --------------------- | ----- |
+| <TalkDate date="2025-09-18"/> | [**SquiggleConf**](https://2024.squiggleconf.com/) | Boston, United States | TBD   |
+
+<details>
+<summary><span text-lg>Talk Schedule 2024</span></summary>
 
 | Date                          | Conference                                                                                           | Location             | Topic                                                               |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------- |
@@ -35,6 +42,8 @@ art: plum
 | <TalkDate date="2024-12-07"/> | [**FEDAY**](https://fequan.com/2024/)                                                                | Xiamen               | ESLint One for All Made Easy                                        |
 | <TalkDate date="2024-12-13"/> | [**React Day Berlin**](https://reactday.berlin/)                                                     | Berlin (Remote)      | ESLint One for All Made Easy                                        |
 | <TalkDate date="2024-12-27"/> | [**WebConf Taiwan**](https://webconf.tw/)                                                            | Taipei               | ESLint One for All Made Easy                                        |
+
+</details>
 
 <h1 important="mb--4 mt-15">Latest Talks</h1>
 

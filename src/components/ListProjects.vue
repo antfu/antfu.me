@@ -55,7 +55,7 @@ function slug(name: string) {
     >
       <div
         :id="slug(key)"
-        select-none relative h20 pointer-events-none slide-enter
+        select-none relative h18 mt5 pointer-events-none slide-enter
         :style="{
           '--enter-stage': cidx - 2,
           '--enter-step': '60ms',
