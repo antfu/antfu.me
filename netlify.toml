@@ -1,6 +1,6 @@
 [build]
 publish = "dist"
-command = "npm run build"
+command = "npm i -g corepack@latest && corepack enable && pnpm install && pnpm run build"
 
 [build.environment]
 NODE_VERSION = "22"
