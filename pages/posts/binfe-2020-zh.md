@@ -393,8 +393,8 @@ ReactDOM.render(<MyCounter value={10} />, el)
 [`@vue-reactivity`](https://github.com/vue-reactivity) 是一个我对于 `@vue/reactivity` 一些可能性的探索。我希望它会个一系列的工具包。我们现在有的两个已经发布了的工具。其中一个是 [`@vue-reactivity/watch`](https://github.com/vue-reactivity/watch)，在 Vue 中 `watch` 是实现在 `@vue/runtime-core` 里的，因为 `watch` 和 Vue 的组件模型有一些生命周期上的强绑定。那么我们在这里把 Vue 的 `watch` 提取出来做了一些简化之后，你就可以直接在 `@vue/reactivity` 使用 `watch`。
 
 ```ts
-import { computed, reactive, ref } from '@vue/reactivity'
 import { watch, watchEffect } from '@vue-reactivity/watch'
+import { computed, reactive, ref } from '@vue/reactivity'
 
 const count = ref(1)
 
@@ -438,8 +438,8 @@ stop()
 然后再来一些实验性的想法，一个是 `/lifecycle`，希望可以有一个生命周期钩子的实现可以去复用，更容易让我们在 Vue 响应式的基础上做出自己的框架。另外一个有趣的就是这个 filesystem, 一个响应式的文件系统。这边有一个简单的例子，我们可以从 `@vue-reactivity/fs` 里面去引入一个叫做 `useJSON` 的一个钩子, 我们给他传一个 `data.json` 作为文件路径。它会去读取这个文件后解析成 JSON 对象暴露在 `data` 上，我们可以监听`data` 就可以知道数据的改变，那么同时也可以通过这样的API，去修改 `data` 的值，然后可以把数据写回对应的 JSON 文件。
 
 ```ts
-import { effect } from '@vue/reactivity'
 import { useJSON } from '@vue-reactivity/fs'
+import { effect } from '@vue/reactivity'
 
 const data = useJSON('data.json')
 

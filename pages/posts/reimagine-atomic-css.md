@@ -236,12 +236,12 @@ We are imagining UnoCSS being able to simulate the functionalities of most of th
 import PresetAntfu from '@antfu/oh-my-cool-unocss-preset'
 
 import PresetBootstrap from '@unocss/preset-bootstrap'
-import UnocssPlugin from '@unocss/vite'
 // the following presets do not exist at this moment,
 // contribution welcome!
 import PresetTachyons from '@unocss/preset-tachyons'
 import PresetTailwind from '@unocss/preset-tailwind'
 import PresetWindi from '@unocss/preset-windi'
+import UnocssPlugin from '@unocss/vite'
 
 export default {
   plugins: [

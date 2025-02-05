@@ -242,12 +242,12 @@ UnoCSS 是一个**引擎**，而非一款**框架**，因为它**并未提供核
 import PresetAntfu from '@antfu/oh-my-cool-unocss-preset'
 
 import PresetBootstrap from '@unocss/preset-bootstrap'
-import UnocssPlugin from '@unocss/vite'
 // 以下预设目前还不存在，
 // 欢迎大家踊跃贡献！
 import PresetTachyons from '@unocss/preset-tachyons'
 import PresetTailwind from '@unocss/preset-tailwind'
 import PresetWindi from '@unocss/preset-windi'
+import UnocssPlugin from '@unocss/vite'
 
 export default {
   plugins: [
