@@ -1,7 +1,7 @@
 {
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.2.0",
+  "packageManager": "pnpm@9.15.4",
   "scripts": {
     "build": "npm run static && cross-env NODE_ENV=production vite-ssg build && esno ./scripts/copy-fonts.ts && esno ./scripts/rss.ts && cp _dist_redirects dist/_redirects",
     "dev": "vite --port 3333 --open",
@@ -64,7 +64,7 @@
     "p5i": "^0.5.0",
     "picocolors": "^1.1.1",
     "pinia": "^2.3.1",
-    "pnpm": "^10.2.0",
+    "pnpm": "^9.15.4",
     "prompts": "^2.4.2",
     "rimraf": "^6.0.1",
     "sharp": "0.32.6",
