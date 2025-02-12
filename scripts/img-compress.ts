@@ -1,5 +1,5 @@
 import fs from 'node:fs/promises'
-import c from 'picocolors'
+import c from 'ansis'
 import sharp from 'sharp'
 
 const maxSize = 1440
@@ -30,11 +30,11 @@ export async function compressImages(files: string[]) {
 
     const percent = (outSize - size) / size
     if (percent > -0.10) {
-      console.log(c.dim(`[SKIP] ${bytesToHuman(size)} -> ${bytesToHuman(outSize)} ${(percent * 100).toFixed(1).padStart(5, ' ')}%  ${file}`))
+      console.log(c.dim`[SKIP] ${bytesToHuman(size)} -> ${bytesToHuman(outSize)} ${(percent * 100).toFixed(1).padStart(5, ' ')}%  ${file}`)
     }
     else {
       await fs.writeFile(file, outBuffer)
-      console.log(`[COMP] ${bytesToHuman(size)} -> ${bytesToHuman(outSize)} ${c.green(`${(percent * 100).toFixed(1).padStart(5, ' ')}%`)}  ${file}`)
+      console.log(`[COMP] ${bytesToHuman(size)} -> ${bytesToHuman(outSize)} ${c.green`${(percent * 100).toFixed(1).padStart(5, ' ')}%`}  ${file}`)
     }
   }))
 }
