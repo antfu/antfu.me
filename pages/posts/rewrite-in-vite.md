@@ -67,7 +67,7 @@ Click it to try 👇🏼
 
 <ToggleTheme class="text-2xl pb-2 pt-1"/>
 
-If you would like to use it in your own apps, I also extract the logic above into [`useDark()` in VueUse](https://vueuse.js.org/core/usedark/). Where you can simply use like this:
+If you would like to use it in your own apps, I also extract the logic above into [`useDark()` in VueUse](https://vueuse.org/core/useDark/). Where you can simply use like this:
 
 ```ts
 import { useDark, useToggle } from '@vueuse/core'
