@@ -76,14 +76,14 @@ Thus, here, I am proposing to change.
 
 But, of course, it's too late for the entire ecosystem to adopt a new versioning scheme.
 
-If we can't change SemVer, maybe we can at least extend it. I am proposing a new versioning scheme called **🗿 Epoch Semantic Versioning**, or Epoch SemVer for short. It's built on top of the structure of `MAJOR.MINOR.PATCH`, extend the first number to be the combination of `EPOCH` and `MAJOR`. To put a difference between them, we use a third digit to represent `EPOCH`, which gives `MAJOR` a range from 0 to 99. This way, it follows the exact same rules as SemVer **without requiring any existing tools to change, but provides more granular information to users**.
+If we can't change SemVer, maybe we can at least extend it. I am proposing a new versioning scheme called **🗿 Epoch Semantic Versioning**, or Epoch SemVer for short. It's built on top of the structure of `MAJOR.MINOR.PATCH`, extend the first number to be the combination of `EPOCH` and `MAJOR`. To put a difference between them, we use a fourth digit to represent `EPOCH`, which gives `MAJOR` a range from 0 to 999. This way, it follows the exact same rules as SemVer **without requiring any existing tools to change, but provides more granular information to users**.
 
 > The name "Epoch" is inspired by [Debian's versioning scheme](https://manpages.debian.org/stretch/dpkg-dev/deb-version.5.en.html).
 
 The format is as follows:
 
 <div py4>
-  <code important="text-xl text-gray">{<span font-bold text-violet>EPOCH</span> * 100 + <span font-bold text-amber>MAJOR</span>}.<span font-bold text-lime>MINOR</span>.<span font-bold text-blue>PATCH</span></code>
+  <code important="text-xl text-gray">{<span font-bold text-violet>EPOCH</span> * 1000 + <span font-bold text-amber>MAJOR</span>}.<span font-bold text-lime>MINOR</span>.<span font-bold text-blue>PATCH</span></code>
 </div>
 
 - <span font-bold font-mono text-violet>EPOCH</span>: Increment when you make significant or groundbreaking changes.
@@ -91,8 +91,11 @@ The format is as follows:
 - <span font-bold font-mono text-lime>MINOR</span>: Increment when you add functionality in a backwards-compatible manner.
 - <span font-bold font-mono text-blue>PATCH</span>: Increment when you make backwards-compatible bug fixes.
 
-For example, UnoCSS would transition from `v0.65.3` to `v65.3.0` (in the case `EPOCH` is `0`). Following SemVer, a patch release would become `v65.3.1`, and a feature release would be `v65.4.0`. If we introduced some minor incompatible changes affecting an edge case, we could bump it to `v66.0.0` to alert users of potential impacts. In the event of a significant overhaul to the core, we could jump directly to `v100.0.0` to signal a new era and make a big announcement. I'd suggest assigning a code name to each non-zero `EPOCH` to make it more memorable and easier to refer to. This approach provides maintainers with more flexibility to communicate the scale of changes to users effectively.
+> I previously proposed to have the EPOCH multiplier to be `100`, but according to the community feedback, it seems that `1000` is a more popular choices as it give more room for the `MAJOR` version and a bit more distinguision between the numbers. The multiplier is not a strict rule, feel free to adjust it based on your needs.
 
+For example, UnoCSS would transition from `v0.65.3` to `v65.3.0` (in the case `EPOCH` is `0`). Following SemVer, a patch release would become `v65.3.1`, and a feature release would be `v65.4.0`. If we introduced some minor incompatible changes affecting an edge case, we could bump it to `v66.0.0` to alert users of potential impacts. In the event of a significant overhaul to the core, we could jump directly to `v1000.0.0` to signal a new era and make a big announcement. I'd suggest assigning a code name to each non-zero `EPOCH` to make it more memorable and easier to refer to. This approach provides maintainers with more flexibility to communicate the scale of changes to users effectively.
+
+> [!TIP]
 > We shouldn't need to bump `EPOCH` often. It's mostly useful for high-level, end-user-facing libraries or frameworks. For low-level libraries, they might **never** need to bump `EPOCH` at all (`ZERO-EPOCH` is essentially the same as SemVer).
 
 Of course, I'm not suggesting that everyone should adopt this approach. It's simply an idea to work around the existing system, and only for those packages with this need. It will be interesting to see how it performs in practice.
