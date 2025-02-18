@@ -1,6 +1,7 @@
 import type { HighlighterCore } from 'shiki/core'
 import { defineStore } from 'pinia'
-import { getHighlighterCore } from 'shiki/core'
+import { createHighlighterCore } from 'shiki/core'
+import { createJavaScriptRegexEngine } from 'shiki/engine/javascript'
 import { isDark } from '../logics'
 
 export const useShikiStore = defineStore('pinia', () => {
@@ -8,7 +9,7 @@ export const useShikiStore = defineStore('pinia', () => {
   const theme = computed(() => isDark.value ? 'vitesse-dark' : 'vitesse-light')
 
   if (typeof window !== 'undefined') {
-    getHighlighterCore({
+    createHighlighterCore({
       themes: [
         import('shiki/themes/vitesse-dark.mjs'),
         import('shiki/themes/vitesse-light.mjs'),
@@ -16,7 +17,7 @@ export const useShikiStore = defineStore('pinia', () => {
       langs: [
         import('shiki/langs/vue.mjs'),
       ],
-      loadWasm: import('shiki/wasm'),
+      engine: createJavaScriptRegexEngine(),
     })
       .then((h) => {
         highlighter.value = h
