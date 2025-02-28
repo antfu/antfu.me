@@ -103,6 +103,12 @@ items:
     date: '2024-05-08'
     path: 'https://softwareengineeringdaily.com/2024/05/08/nuxt-js-with-anthony-fu/'
     radio: true
+  - title: '代码之外 Beyond Code'
+    date: '2025-02-19'
+    lang: 'zh'
+    path: 'https://beyondcodefm.com/'
+    radio: true
+    video: true
 ---
 
 <SubNav />
