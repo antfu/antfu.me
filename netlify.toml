@@ -12,6 +12,11 @@ for = "/assets/*"
 Cache-Control = "public, max-age=31536000, immutable"
 
 [[redirects]]
+from = "https://antfu.dev/*"
+to = "https://antfu.me/:splat"
+status = 302
+
+[[redirects]]
 from = "/*"
 to = "/index.html"
 status = 200
