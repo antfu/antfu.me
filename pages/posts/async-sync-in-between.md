@@ -210,13 +210,15 @@ If the `function*` and `yield*` syntax scares you a bit, {@sxzz} also made a bui
 // [!code word:quansync/macro]
 import { quansync } from 'quansync/macro'
 
+// Use async/await syntax
+// They will be transformed to `function*` and `yield*` at build time
 export const readJSON = quansync(async (filepath) => {
   const content = await readFile(filepath)
   return JSON.parse(content)
 })
 
-// Expose the classical sync API.
-export const readJSONSync = quansync.sync
+// Expose the classical sync API
+export const readJSONSync = readJSON.sync
 ```
 
 Thanks to [`unplugin`](https://github.com/unjs/unplugin), it can work in almost any build tool, like compiling with `unbuild` or testing with `vitest`. Please refer to [the docs](https://github.com/quansync-dev/unplugin-quansync) for more detailed setup.
