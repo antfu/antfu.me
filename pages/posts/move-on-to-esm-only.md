@@ -39,9 +39,11 @@ It's way easier for an ESM or Dual formats package to depend on CJS packages, bu
 
 ### Requiring ESM in Node.js
 
-The [capability to `require()` ESM modules](https://github.com/nodejs/node/pull/51977) in Node.js, initiated by {@joyeecheung}, marks an **incredible milestone**. This feature allows packages to be published as ESM-only while still being consumable by CJS codebases with minimal modifications. It helps avoid the async infection (also known as [Red Functions](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/)) introduced by dynamic `import()` ESM, which can be pretty hard, if not impossible in some cases, to migrate and adapt.
+The [capability to `require()` ESM modules](https://joyeecheung.github.io/blog/2024/03/18/require-esm-in-node-js/) in Node.js, [initiated](https://github.com/nodejs/node/pull/51977) by {@joyeecheung}, marks an **incredible milestone**. This feature allows packages to be published as ESM-only while still being consumable by CJS codebases with minimal modifications. It helps avoid the [async infection](/posts/async-sync-in-between) (also known as [Red Functions](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/)) introduced by dynamic `import()` ESM, which can be pretty hard, if not impossible in some cases, to migrate and adapt.
 
 This feature was recently [unflagged](https://github.com/nodejs/node/pull/55085) and [backported to Node.js v22](https://github.com/nodejs/node/pull/55217) ([and soon v20](https://github.com/nodejs/node/pull/56927)), which means it should be available to many developers already. Consider the [top-down or bottom-up](#top-down--bottom-up) metaphor, this feature actually makes it possible to start ESM migration also from **middle-out**, as it allows import chains like `ESM → CJS → ESM → CJS` to work seamlessly.
+
+To solve the interop issue between CJS and ESM in this case, [Node.js also introduced](https://nodejs.org/api/modules.html#loading-ecmascript-modules-using-require) a new `export { Foo as 'module.exports' }` syntax in ESM to export CJS-compatible exports (by [this PR](https://github.com/nodejs/node/pull/54563)). This allows package authors to publish ESM-only packages while still supporting CJS consumers, without even introducing breaking changes (expcet for changing the required Node.js version).
 
 For more details on the progress and discussions around this feature, keep track on [this issue](https://github.com/nodejs/node/issues/52697).
 
