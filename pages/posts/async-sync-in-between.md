@@ -190,7 +190,7 @@ export const readJSON = quansync(function* (filepath) {
   // and use `yield*` to get the result.
   // Upon usage, it will auto select the implementation
   // [!code word:yield*:1]
-  const content = yield * readFile(filepath)
+  const content = yield* readFile(filepath)
   return JSON.parse(content)
 })
 ```

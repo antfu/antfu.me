@@ -148,7 +148,7 @@ Let's go back to our first approach to see if we can make an object iterable. An
 const data = {
   foo: 'foo',
   bar: 'bar',
-  *[Symbol.iterator]() {
+  * [Symbol.iterator]() {
     yield 'foo'
     yield 'bar'
   },
@@ -182,7 +182,7 @@ const data = {
 
 Object.defineProperty(data, Symbol.iterator, {
   enumerable: false,
-  *value() {
+  * value() {
     yield 'foo'
     yield 'bar'
   },

@@ -25,7 +25,7 @@
     "vue-router-better-scroller": "^0.0.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.3.0",
+    "@antfu/eslint-config": "^4.4.0",
     "@iconify/json": "^2.2.312",
     "@octokit/core": "^6.1.4",
     "@octokit/rest": "^21.1.1",
