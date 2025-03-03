@@ -35,6 +35,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/ai-qrcode-101': RouteRecordInfo<'/posts/ai-qrcode-101', '/posts/ai-qrcode-101', Record<never, never>, Record<never, never>>,
     '/posts/ai-qrcode-refine': RouteRecordInfo<'/posts/ai-qrcode-refine', '/posts/ai-qrcode-refine', Record<never, never>, Record<never, never>>,
     '/posts/animated-svg-logo': RouteRecordInfo<'/posts/animated-svg-logo', '/posts/animated-svg-logo', Record<never, never>, Record<never, never>>,
+    '/posts/async-sync-in-between': RouteRecordInfo<'/posts/async-sync-in-between', '/posts/async-sync-in-between', Record<never, never>, Record<never, never>>,
     '/posts/async-with-composition-api': RouteRecordInfo<'/posts/async-with-composition-api', '/posts/async-with-composition-api', Record<never, never>, Record<never, never>>,
     '/posts/binfe-2020-zh': RouteRecordInfo<'/posts/binfe-2020-zh', '/posts/binfe-2020-zh', Record<never, never>, Record<never, never>>,
     '/posts/bonjour-paris': RouteRecordInfo<'/posts/bonjour-paris', '/posts/bonjour-paris', Record<never, never>, Record<never, never>>,

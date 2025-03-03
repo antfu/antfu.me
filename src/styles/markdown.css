@@ -264,3 +264,25 @@ h6:focus .header-anchor {
   width: 1.6em;
   border-radius: 50%;
 }
+
+/* Shiki Transformers */
+.prose code .highlighted {
+  background-color: #8881;
+  width: calc(100% + 48px);
+  display: inline-block;
+  transition: background-color 0.5s;
+  margin: 0px -24px;
+  padding: 0px 24px;
+}
+
+.prose .shiki.has-highlighted .line:not(.highlighted) {
+  opacity: 0.75;
+}
+
+.prose .highlighted-word {
+  background-color: #8881;
+  border: 1px solid #8885;
+  padding: 1px 3px;
+  margin: -1px -3px;
+  border-radius: 4px;
+}

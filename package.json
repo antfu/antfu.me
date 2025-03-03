@@ -26,12 +26,14 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.3.0",
-    "@iconify/json": "^2.2.311",
+    "@iconify/json": "^2.2.312",
     "@octokit/core": "^6.1.4",
     "@octokit/rest": "^21.1.1",
     "@shikijs/markdown-it": "^3.1.0",
+    "@shikijs/transformers": "^3.1.0",
     "@shikijs/twoslash": "^3.1.0",
     "@types/d3-hierarchy": "^3.1.7",
+    "@types/d3-shape": "^3.1.7",
     "@types/degit": "^2.8.6",
     "@types/diacritics": "^1.3.3",
     "@types/fs-extra": "^11.0.4",
@@ -43,9 +45,10 @@
     "@unocss/preset-web-fonts": "^66.0.0",
     "@unocss/reset": "^66.0.0",
     "@vitejs/plugin-vue": "^5.2.1",
-    "ansis": "^3.16.0",
+    "ansis": "^3.17.0",
     "cross-env": "^7.0.3",
     "d3-hierarchy": "^3.1.2",
+    "d3-shape": "^3.2.0",
     "degit": "^2.8.4",
     "diacritics": "^1.3.0",
     "eslint": "^9.21.0",
@@ -71,7 +74,7 @@
     "shiki": "^3.1.0",
     "simple-git": "^3.27.0",
     "simple-git-hooks": "^2.11.1",
-    "typescript": "^5.7.3",
+    "typescript": "~5.7.3",
     "unocss": "^66.0.0",
     "unplugin-auto-import": "^19.1.1",
     "unplugin-icons": "^22.1.0",
@@ -86,6 +89,7 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "sharp",
       "esbuild"
     ]
   },
