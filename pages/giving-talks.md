@@ -29,7 +29,7 @@ You can use the following information to present me:
   <div><a href="https://antfu.me/avatar.png" target="_blank">https://antfu.me/avatar.png</a></div>
 
   <div text-right pr2 op50 font-bold>Introduction</div>
-  <TextCopy>A fanatical open sourceror. Core team member of Vue, Nuxt and Vite. Creator of Vitest, Slidev, VueUse, UnoCSS and Elk. Working at NuxtLabs.</TextCopy>
+  <TextCopy>A fanatical open sourceror. Core team member of Vue, Nuxt and Vite. Creator of Vitest, Slidev, VueUse, UnoCSS. Working at NuxtLabs. Passionate about DX, tooling, and the OSS ecosystem.</TextCopy>
 
   <div text-right pr2 op50 font-bold>Location</div>
   <TextCopy>Paris, France</TextCopy>

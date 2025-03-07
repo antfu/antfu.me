@@ -8,12 +8,10 @@ art: plum
 
 <div pt-5 />
 
-<!--
 <div slide-enter>
   <div i-ri:presentation-line mr-1 />
-  <RouterLink to="/giving-talks" op50>Available for giving talks!</RouterLink>
+  <RouterLink to="/giving-talks" op50>Speaker Info</RouterLink>
 </div>
--->
 
 <details>
 <summary><span text-lg>Talk Schedule 2024</span></summary>
