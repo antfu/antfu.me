@@ -2,10 +2,22 @@
 const route = useRoute()
 
 const imageModel = ref<HTMLImageElement>()
+const imageAlt = ref<string>()
+
+function setImageModel(img: HTMLImageElement) {
+  imageModel.value = img
+  imageAlt.value = img.alt
+  const figure = img.closest('figure')
+  if (figure) {
+    const caption = figure.querySelector('figcaption')
+    if (caption?.textContent)
+      imageAlt.value ||= caption.textContent
+  }
+}
 
 useEventListener('click', async (e) => {
   const path = Array.from(e.composedPath())
-  const first = path[0]
+  const first = path[0] as HTMLImageElement
   if (!(first instanceof HTMLElement))
     return
   if (first.tagName !== 'IMG')
@@ -14,7 +26,7 @@ useEventListener('click', async (e) => {
     return
   if (path.some(el => el instanceof HTMLElement && ['A', 'BUTTON'].includes(el.tagName)))
     return
-  if (!path.some(el => el instanceof HTMLElement && el.classList.contains('prose')))
+  if (!path.some(el => el instanceof HTMLElement && (el.classList.contains('prose') || el.classList.contains('photos'))))
     return
 
   // Do not open image when they are moving. Mainly for mobile to avoid conflict with hovering behavior.
@@ -24,7 +36,33 @@ useEventListener('click', async (e) => {
   if (pos.left !== newPos.left || pos.top !== newPos.top)
     return
 
-  imageModel.value = first as HTMLImageElement
+  setImageModel(first)
+})
+
+onKeyStroke('ArrowRight', (e) => {
+  if (!imageModel.value || imageModel.value.dataset.photoIndex == null)
+    return
+
+  const index = Number.parseInt(imageModel.value.dataset.photoIndex)
+  const nextIndex = index + 1
+  const nextImg = document.querySelector(`img[data-photo-index="${nextIndex}"]`) as HTMLImageElement | null
+  if (nextImg) {
+    setImageModel(nextImg)
+    e.preventDefault()
+  }
+})
+
+onKeyStroke('ArrowLeft', (e) => {
+  if (!imageModel.value || imageModel.value.dataset.photoIndex == null)
+    return
+
+  const index = Number.parseInt(imageModel.value.dataset.photoIndex)
+  const prevIndex = index - 1
+  const prevImg = document.querySelector(`img[data-photo-index="${prevIndex}"]`) as HTMLImageElement | null
+  if (prevImg) {
+    setImageModel(prevImg)
+    e.preventDefault()
+  }
 })
 
 onKeyStroke('Escape', (e) => {
@@ -45,6 +83,9 @@ onKeyStroke('Escape', (e) => {
     <div v-if="imageModel" fixed top-0 left-0 right-0 bottom-0 z-500 backdrop-blur-7 @click="imageModel = undefined">
       <div absolute top-0 left-0 right-0 bottom-0 bg-black:30 z--1 />
       <img :src="imageModel.src" :alt="imageModel.alt" :class="imageModel.className" max-w-screen max-h-screen w-full h-full object-contain>
+      <div v-if="imageAlt" bg-black:50 absolute right-5 bottom-5 px2 py1 flex justify-center items-center>
+        {{ imageAlt }}
+      </div>
     </div>
   </Transition>
 </template>

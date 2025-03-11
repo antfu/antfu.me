@@ -1,19 +1,20 @@
 {
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.5.2",
+  "packageManager": "pnpm@10.6.2",
   "scripts": {
-    "build": "npm run static && cross-env NODE_ENV=production vite-ssg build && esno ./scripts/copy-fonts.ts && esno ./scripts/rss.ts && cp _dist_redirects dist/_redirects",
+    "build": "npm run static && cross-env NODE_ENV=production vite-ssg build && tsx ./scripts/copy-fonts.ts && tsx ./scripts/rss.ts && cp _dist_redirects dist/_redirects",
     "dev": "vite --port 3333 --open",
     "preview": "vite preview",
-    "static": "rimraf temp && degit antfu/static temp --force && esno scripts/copy-sponsors",
-    "redirects": "esno scripts/redirects.ts",
+    "static": "rimraf temp && degit antfu/static temp --force && tsx scripts/copy-sponsors",
+    "redirects": "tsx scripts/redirects.ts",
     "lint": "eslint .",
-    "compress": "esno scripts/img-compress-staged.ts",
+    "compress": "tsx scripts/img-compress-staged.ts",
+    "photos": "tsx scripts/photos-manage.ts",
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "@vueuse/core": "^12.7.0",
+    "@vueuse/core": "^13.0.0",
     "dayjs": "^1.11.13",
     "floating-vue": "^5.2.2",
     "matter-attractors": "^0.1.6",
@@ -25,13 +26,13 @@
     "vue-router-better-scroller": "^0.0.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.4.0",
-    "@iconify/json": "^2.2.312",
+    "@antfu/eslint-config": "^4.8.1",
+    "@iconify/json": "^2.2.315",
     "@octokit/core": "^6.1.4",
     "@octokit/rest": "^21.1.1",
     "@shikijs/markdown-it": "^3.1.0",
-    "@shikijs/transformers": "^3.1.0",
-    "@shikijs/twoslash": "^3.1.0",
+    "@shikijs/transformers": "^3.2.0",
+    "@shikijs/twoslash": "^3.2.0",
     "@types/d3-hierarchy": "^3.1.7",
     "@types/d3-shape": "^3.1.7",
     "@types/degit": "^2.8.6",
@@ -39,6 +40,7 @@
     "@types/fs-extra": "^11.0.4",
     "@types/markdown-it": "^14.1.2",
     "@types/markdown-it-link-attributes": "^3.0.5",
+    "@types/node": "^22.13.10",
     "@types/nprogress": "^0.2.3",
     "@types/prompts": "^2.4.9",
     "@unhead/vue": "^1.11.20",
@@ -51,9 +53,10 @@
     "d3-shape": "^3.2.0",
     "degit": "^2.8.4",
     "diacritics": "^1.3.0",
-    "eslint": "^9.21.0",
+    "eslint": "^9.22.0",
     "eslint-plugin-format": "^1.0.1",
-    "esno": "^4.8.0",
+    "exif-parser": "^0.1.12",
+    "exifreader": "^4.26.2",
     "fast-glob": "^3.3.3",
     "feed": "^4.2.2",
     "fs-extra": "^11.3.0",
@@ -67,21 +70,22 @@
     "markdown-it-table-of-contents": "^0.9.0",
     "p5i": "^0.6.0",
     "pinia": "^3.0.1",
-    "pnpm": "^10.5.2",
+    "pnpm": "^10.6.2",
     "prompts": "^2.4.2",
     "rimraf": "^6.0.1",
     "sharp": "0.32.6",
-    "shiki": "^3.1.0",
+    "shiki": "^3.2.0",
     "simple-git": "^3.27.0",
     "simple-git-hooks": "^2.11.1",
-    "typescript": "~5.7.3",
+    "tsx": "^4.19.3",
+    "typescript": "~5.8.2",
     "unocss": "^66.0.0",
     "unplugin-auto-import": "^19.1.1",
     "unplugin-icons": "^22.1.0",
     "unplugin-vue-components": "^28.4.1",
     "unplugin-vue-markdown": "^28.3.1",
-    "unplugin-vue-router": "^0.11.2",
-    "vite": "^6.2.0",
+    "unplugin-vue-router": "^0.12.0",
+    "vite": "^6.2.1",
     "vite-plugin-inspect": "^11.0.0",
     "vite-plugin-optimize-exclude": "^0.0.1",
     "vite-ssg": "^25.2.0",
@@ -89,12 +93,13 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "esbuild",
       "sharp",
-      "esbuild"
+      "simple-git-hooks"
     ]
   },
   "resolutions": {
-    "vite": "^6.2.0"
+    "vite": "^6.2.1"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
