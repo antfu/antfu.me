@@ -40,6 +40,7 @@ const photos = Object.entries(
         :src="photo.url"
         :alt="photo.text"
         :data-photo-index="idx"
+        loading="lazy"
         w-full aspect-square object-cover
       >
     </div>
