@@ -6,7 +6,7 @@ display: ''
 
 <!-- @layout-full-width -->
 
-<PhotoGrid />
+<PhotoGrid mt--10 />
 
 <div class="prose mx-auto mt-10">
   <div>
