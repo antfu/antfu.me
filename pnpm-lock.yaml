@@ -118,6 +118,9 @@ catalogs:
     lint-staged:
       specifier: ^15.4.3
       version: 15.4.3
+    pathe:
+      specifier: ^2.0.3
+      version: 2.0.3
     pnpm:
       specifier: ^10.6.2
       version: 10.6.2
@@ -397,7 +400,7 @@ importers:
         specifier: catalog:build
         version: 0.9.0
       pathe:
-        specifier: ^2.0.3
+        specifier: catalog:dev
         version: 2.0.3
       pnpm:
         specifier: catalog:dev

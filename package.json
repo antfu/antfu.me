@@ -70,7 +70,7 @@
     "markdown-it-link-attributes": "catalog:build",
     "markdown-it-magic-link": "catalog:build",
     "markdown-it-table-of-contents": "catalog:build",
-    "pathe": "^2.0.3",
+    "pathe": "catalog:dev",
     "pnpm": "catalog:dev",
     "prompts": "catalog:dev",
     "rimraf": "catalog:dev",
