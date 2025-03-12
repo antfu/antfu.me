@@ -80,6 +80,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/nuxt-icon-v1': RouteRecordInfo<'/posts/nuxt-icon-v1', '/posts/nuxt-icon-v1', Record<never, never>, Record<never, never>>,
     '/posts/optimize-await': RouteRecordInfo<'/posts/optimize-await', '/posts/optimize-await', Record<never, never>, Record<never, never>>,
     '/posts/patterns-of-vueuse-vuefes-japan-2022': RouteRecordInfo<'/posts/patterns-of-vueuse-vuefes-japan-2022', '/posts/patterns-of-vueuse-vuefes-japan-2022', Record<never, never>, Record<never, never>>,
+    '/posts/photos-page': RouteRecordInfo<'/posts/photos-page', '/posts/photos-page', Record<never, never>, Record<never, never>>,
     '/posts/pnpm-external-disk': RouteRecordInfo<'/posts/pnpm-external-disk', '/posts/pnpm-external-disk', Record<never, never>, Record<never, never>>,
     '/posts/publish-esm-and-cjs': RouteRecordInfo<'/posts/publish-esm-and-cjs', '/posts/publish-esm-and-cjs', Record<never, never>, Record<never, never>>,
     '/posts/range-in-javascript': RouteRecordInfo<'/posts/range-in-javascript', '/posts/range-in-javascript', Record<never, never>, Record<never, never>>,

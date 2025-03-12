@@ -1,15 +1,15 @@
 import { existsSync } from 'node:fs'
 import fs from 'node:fs/promises'
-import { basename, join, parse } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import ExifReader from 'exifreader'
 import fg from 'fast-glob'
+import { basename, join, parse } from 'pathe'
 import sharp from 'sharp'
 import { compressSharp } from './img-compress'
 
 const folder = fileURLToPath(new URL('../photos', import.meta.url))
 
-const files = (await fg('*.{jpg,png,jpeg}', {
+const files = (await fg('**/*.{jpg,png,jpeg}', {
   caseSensitiveMatch: false,
   absolute: true,
   cwd: fileURLToPath(new URL('../photos', import.meta.url)),
@@ -28,7 +28,10 @@ for (const filepath of files) {
   const img = await sharp(buffer)
   const exif = await ExifReader.load(buffer)
 
-  let dateRaw = exif.DateTimeOriginal?.value || exif.DateTime?.value || exif.DateCreated?.value || (await fs.stat(filepath).then(stat => stat.birthtime || stat.mtime))
+  let title: string | undefined
+
+  let dateRaw = exif.DateTimeOriginal?.value || exif.DateTime?.value || exif.DateCreated?.value
+  dateRaw ||= new Date(await fs.stat(filepath).then(stat => stat.birthtime || stat.mtime)).toISOString()
   if (Array.isArray(dateRaw))
     dateRaw = dateRaw[0] as string
   dateRaw = String(dateRaw)
@@ -39,6 +42,13 @@ for (const filepath of files) {
       return '-'
     return x
   }))
+
+  const timeDiff = Date.now() - +date
+  // 1 hour
+  if (timeDiff < 1000 * 60 * 60) {
+    console.warn(`Date of ${filepath} is too recent: ${dateRaw}`)
+    continue
+  }
 
   const base = `p-${date.toISOString().replace(/[:.a-z]+/gi, '-')}`
   let index = 1
@@ -51,4 +61,8 @@ for (const filepath of files) {
     await fs.writeFile(outFile, outBuffer)
   if (outFile !== filepath)
     await fs.unlink(filepath)
+
+  if (title) {
+    await fs.writeFile(outFile.replace(/\.\w+$/, '.json'), JSON.stringify({ text: title }, null, 2))
+  }
 }

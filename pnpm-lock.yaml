@@ -21,6 +21,9 @@ catalogs:
     '@vitejs/plugin-vue':
       specifier: ^5.2.1
       version: 5.2.1
+    gray-matter:
+      specifier: ^4.0.3
+      version: 4.0.3
     markdown-it:
       specifier: ^14.1.0
       version: 14.1.0
@@ -112,9 +115,6 @@ catalogs:
     fs-extra:
       specifier: ^11.3.0
       version: 11.3.0
-    gray-matter:
-      specifier: ^4.0.3
-      version: 4.0.3
     lint-staged:
       specifier: ^15.4.3
       version: 15.4.3
@@ -373,7 +373,7 @@ importers:
         specifier: catalog:dev
         version: 11.3.0
       gray-matter:
-        specifier: catalog:dev
+        specifier: catalog:build
         version: 4.0.3
       lint-staged:
         specifier: catalog:dev
@@ -396,6 +396,9 @@ importers:
       markdown-it-table-of-contents:
         specifier: catalog:build
         version: 0.9.0
+      pathe:
+        specifier: ^2.0.3
+        version: 2.0.3
       pnpm:
         specifier: catalog:dev
         version: 10.6.2

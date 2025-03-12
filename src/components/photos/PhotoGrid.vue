@@ -1,36 +1,15 @@
 <script setup lang="ts">
-/// <reference types="vite/client" />
+import raw from '../../../photos/data'
 
-interface PhotoMate {
-  text?: string
-}
+const props = defineProps<{
+  limit?: number
+}>()
 
-const metaInfo = Object.entries(
-  import.meta.glob<PhotoMate>('../../../photos/**/*.json', {
-    eager: true,
-    import: 'default',
-  }),
-).map(([name, data]) => {
-  return {
-    name: name.replace('../../../photos/', '').replace(/\.\w+$/, ''),
-    data,
-  }
+const photos = computed(() => {
+  if (props.limit)
+    return raw.slice(0, props.limit)
+  return raw
 })
-const photos = Object.entries(
-  import.meta.glob<string>('../../../photos/**/*.{jpg,png,JPG,PNG}', {
-    eager: true,
-    query: '?url',
-    import: 'default',
-  }),
-)
-  .map(([name, url]) => {
-    return {
-      ...metaInfo.find(info => info.name === name)?.data,
-      name: name.replace('../../../photos/', '').replace(/\.\w+$/, ''),
-      url,
-    }
-  })
-  .sort((a, b) => b.name.localeCompare(a.name))
 </script>
 
 <template>
