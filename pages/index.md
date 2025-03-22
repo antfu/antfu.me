@@ -18,7 +18,7 @@ I give [talks](/talks) and write [blog posts](/posts) about open source, coding,
 Occasionally, I also do coding live streams on [YouTube](https://www.youtube.com/anthonyfu7) and [哔哩哔哩](https://space.bilibili.com/668380).
 From time to time, I also make some generative-art, interactivity experiments on [100.antfu.me](https://100.antfu.me/).
 
-Outside of programming, I enjoy doing photography and traveling. Some of my photos can be found on [this page](/photos). I live in Paris, if you are around, please reach me out let's have some coffee or work together.
+Outside of programming, I enjoy doing photography and traveling. Some of my photos can be found on [this page](/photos). I live in Tokyo, if you are around, please reach me out let's have some coffee or work together.
 
 <div flex-auto />
 
