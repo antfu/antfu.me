@@ -109,6 +109,31 @@ items:
     path: 'https://beyondcodefm.com/'
     radio: true
     video: true
+  - title: 'S1E0 今天不想寫Code了 - 尖不想寫扣'
+    date: '2025-03-03'
+    lang: 'zh'
+    path: 'https://youtu.be/Yd1v_ZxhLoI'
+    radio: true
+  - title: 'S1E1 學校應該要有一堂課教你如何參與開源 - 尖不想寫扣'
+    date: '2025-03-03'
+    path: 'https://youtu.be/K_ugUt2Airg'
+    lang: 'zh'
+    radio: true
+  - title: 'S1E2 絕對不會錯的面試指南 - 尖不想寫扣'
+    path: 'https://youtu.be/u6BYW2SBEHg'
+    date: '2025-03-11'
+    lang: 'zh'
+    radio: true
+  - title: 'S1E3 不要再更新了 !!! - 尖不想寫扣'
+    path: 'https://youtu.be/k1JJu0St7JM'
+    date: '2025-03-17'
+    lang: 'zh'
+    radio: true
+  - title: 'S1E4 每個工程師都有個創業夢 !? ft. 林沅霖 - 尖不想寫扣'
+    path: 'https://youtu.be/0aX1r2g3x4E'
+    date: '2025-03-24'
+    lang: 'zh'
+    radio: true
 ---
 
 <SubNav />
