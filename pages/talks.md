@@ -13,6 +13,8 @@ art: plum
   <RouterLink to="/giving-talks" op50>Speaker Info</RouterLink>
 </div>
 
+<div pt-5 />
+
 <details>
 <summary><span text-lg>Talk Schedule 2024</span></summary>
 
