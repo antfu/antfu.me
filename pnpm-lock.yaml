@@ -146,6 +146,9 @@ catalogs:
       specifier: ~5.8.2
       version: 5.8.2
   frontend:
+    '@antfu/utils':
+      specifier: ^9.2.0
+      version: 9.2.0
     '@unhead/vue':
       specifier: ^2.0.3
       version: 2.0.3
@@ -291,6 +294,9 @@ importers:
       '@antfu/eslint-config':
         specifier: catalog:dev
         version: 4.11.0(@typescript-eslint/utils@8.28.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.23.0(jiti@2.4.2)))(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2)
+      '@antfu/utils':
+        specifier: catalog:frontend
+        version: 9.2.0
       '@iconify/json':
         specifier: catalog:dev
         version: 2.2.323
@@ -524,6 +530,9 @@ packages:
 
   '@antfu/utils@8.1.0':
     resolution: {integrity: sha512-XPR7Jfwp0FFl/dFYPX8ZjpmU4/1mIXTjnZ1ba48BLMyKOV62/tiRjdsFcPs2hsYcSud4tzk7w3a3LjX8Fu3huA==}
+
+  '@antfu/utils@9.2.0':
+    resolution: {integrity: sha512-Oq1d9BGZakE/FyoEtcNeSwM7MpDO2vUBi11RWBZXf75zPsbUVWmUs03EqkRFrcgbXyKTas0BdZWC1wcuSoqSAw==}
 
   '@asamuzakjp/css-color@2.8.2':
     resolution: {integrity: sha512-RtWv9jFN2/bLExuZgFFZ0I3pWWeezAHGgrmjqGGWclATl1aDe3yhCUaI0Ilkp6OCk9zX7+FjvDasEX8Q9Rxc5w==}
@@ -4082,6 +4091,8 @@ snapshots:
       tinyexec: 0.3.2
 
   '@antfu/utils@8.1.0': {}
+
+  '@antfu/utils@9.2.0': {}
 
   '@asamuzakjp/css-color@2.8.2':
     dependencies:

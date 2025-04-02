@@ -50,6 +50,7 @@ catalogs:
     tsx: ^4.19.3
     typescript: ~5.8.2
   frontend:
+    '@antfu/utils': ^9.2.0
     '@unhead/vue': ^2.0.3
     '@unocss/reset': ^66.0.0
     '@vueuse/core': ^13.0.0
@@ -82,4 +83,4 @@ onlyBuiltDependencies:
   - esbuild
   - exifreader
   - sharp
-  - simple-git-hooks
+  - simple-git-hooks\

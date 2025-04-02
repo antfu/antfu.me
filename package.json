@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:dev",
+    "@antfu/utils": "catalog:frontend",
     "@iconify/json": "catalog:dev",
     "@octokit/core": "catalog:dev",
     "@octokit/rest": "catalog:dev",
