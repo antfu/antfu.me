@@ -1,7 +1,7 @@
 {
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.6.2",
+  "packageManager": "pnpm@10.7.1",
   "scripts": {
     "build": "npm run static && cross-env NODE_ENV=production vite-ssg build && tsx ./scripts/copy-fonts.ts && tsx ./scripts/rss.ts && cp _dist_redirects dist/_redirects",
     "dev": "vite --port 3333 --open",
