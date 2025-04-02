@@ -28,8 +28,12 @@ const type = computed<MediaType>(() => route.query.type as MediaType || 'anime')
           <template v-for="m of media[type]" :key="m.name">
             <tr v-if="!m.state" v-bind="m.lang ? { lang: m.lang } : {}">
               <td>{{ m.name }}</td>
-              <td>{{ m.creator }}</td>
-              <td>{{ m.date }}</td>
+              <td text-right>
+                {{ m.creator }}
+              </td>
+              <td lt-sm:hidden>
+                {{ m.date }}
+              </td>
               <td>{{ m.note }}</td>
             </tr>
           </template>
