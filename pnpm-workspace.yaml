@@ -83,4 +83,4 @@ onlyBuiltDependencies:
   - esbuild
   - exifreader
   - sharp
-  - simple-git-hooks\
+  - simple-git-hooks
