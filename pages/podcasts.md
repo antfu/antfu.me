@@ -3,38 +3,38 @@ title: Podcasts - Anthony Fu
 display: ''
 art: plum
 items:
-  - title: 'Views on Vue #144 - Exploring Vitesse with Anthony Fu'
+  - title: 'Exploring Vitesse with Anthony Fu - Views on Vue #144'
     date: '2021-03-02'
     path: 'https://viewsonvue.com/144'
     radio: true
-  - title: 'Enjoy the Vue #62 - Shaving Yaks with Anthony Fu'
+  - title: 'Shaving Yaks with Anthony Fu - Enjoy the Vue #62'
     date: '2021-05-24'
     path: 'https://enjoythevue.io/episodes/62'
     radio: true
-  - title: 'Vue Shenzhen Meetup - Anthony Fu 线上访谈'
+  - title: 'Anthony Fu 线上访谈 - Vue Shenzhen Meetup '
     date: '2021-11-02'
     path: 'https://www.bilibili.com/video/BV1jL4y1q76J'
     lang: 'zh'
     video: true
-  - title: 'ByteTalk #6 - 跟 Anthony Fu 聊聊全职开源和他的故事'
+  - title: '跟 Anthony Fu 聊聊全职开源和他的故事 - ByteTalk #6'
     date: '2021-12-09'
     path: 'https://bytetalk.fm/posts/episode-6/'
     lang: 'zh'
     radio: true
-  - title: 'JS Party #214 - Vitest && Slidev'
+  - title: 'Vitest && Slidev - JS Party #214'
     date: '2022-02-17'
     path: 'https://changelog.com/jsparty/214'
     radio: true
-  - title: 'React Wednesdays - Vite and Its Ecosystem'
+  - title: 'Vite and Its Ecosystem - React Wednesdays'
     date: '2022-02-25'
     path: 'https://www.youtube.com/watch?v=ivmuJ9L_NnQ'
     video: true
-  - title: 'devtools.fm #25 - Vue, Vite, Vitest, UnoCSS'
+  - title: 'Vue, Vite, Vitest, UnoCSS - devtools.fm #25'
     date: '2022-03-04'
     path: 'https://devtools.fm/episode/25'
     video: true
     radio: true
-  - title: 'funnyCoder #4 - Vue 和 NuxtLabs 核心成员 Anthony Fu 的开源人生'
+  - title: 'Vue 和 NuxtLabs 核心成员 Anthony Fu 的开源人生 - funnyCoder #4'
     date: '2022-03-07'
     path: 'https://www.bilibili.com/video/BV1eS4y1S7zB'
     lang: 'zh'
@@ -54,43 +54,43 @@ items:
     path: 'https://www.youtube.com/watch?v=6tSqIW2ds1Y'
     lang: 'en'
     video: true
-  - title: 'PodRocket - Vitest and VueUse with Anthony Fu'
+  - title: 'Vitest and VueUse with Anthony Fu - PodRocket'
     date: '2022-09-09'
     path: 'https://podrocket.logrocket.com/vitest-and-vueuse'
     lang: 'en'
     radio: true
-  - title: 'Akamai Developers Edge S3 - Sharing Code with Open Source'
+  - title: 'Sharing Code with Open Source - Akamai Developers Edge S3'
     date: '2022-10-06'
     path: 'https://www.youtube.com/watch?v=lhyjPYodG4s'
     lang: 'en'
     video: true
-  - title: 'Learn with Jason - Fast Unit Testing With Vitest'
+  - title: 'Fast Unit Testing With Vitest - Learn with Jason'
     date: '2023-02-02'
     path: 'https://www.learnwithjason.dev/fast-unit-testing-with-vitest'
     lang: 'en'
     video: true
-  - title: 'PodRocket - Developer Experience with Nuxt'
+  - title: 'Developer Experience with Nuxt - PodRocket'
     date: '2023-03-22'
     path: 'https://podrocket.logrocket.com/dev-experience-in-nuxt'
     lang: 'en'
     radio: true
-  - title: 'Teach Kelvin Your Thing - WTF is UnoCSS'
+  - title: 'WTF is UnoCSS - Teach Kelvin Your Thing'
     date: '2023-04-10'
     path: 'https://youtu.be/nHag_UhwORY'
     lang: 'en'
     video: true
-  - title: 'Mike Cheng - 從剛畢業到開源專案的辛酸血淚史'
+  - title: '從剛畢業到開源專案的辛酸血淚史 - Mike Cheng'
     date: '2023-05-07'
     path: 'https://www.youtube.com/watch?v=FFDMsoVG3R8'
     lang: 'zh'
     video: true
-  - title: 'TechniCality - Anthony Fu'
+  - title: 'Anthony Fu - TechniCality'
     date: '2023-07-22'
     path: 'https://fm.cali.so/64bb61a2d0844ea8123acc7f'
     lang: 'zh'
     video: true
     radio: true
-  - title: 'Web Worker - 和 Anthony Fu 聊技术开源、共建协作和前端思考'
+  - title: '和 Anthony Fu 聊技术开源、共建协作和前端思考 - Web Worker'
     date: '2023-10-20'
     path: 'https://podcast.webworker.tech/38'
     lang: 'zh'
@@ -103,35 +103,50 @@ items:
     date: '2024-05-08'
     path: 'https://softwareengineeringdaily.com/2024/05/08/nuxt-js-with-anthony-fu/'
     radio: true
-  - title: '代码之外 Beyond Code'
+  - title: '六年级还认不全26个字母 - 代码之外 Beyond Code'
     date: '2025-02-19'
     lang: 'zh'
     path: 'https://beyondcodefm.com/'
     radio: true
     video: true
-  - title: 'S1E0 今天不想寫Code了 - 尖不想寫扣'
+  - title: '今天不想寫Code了 - 尖不想寫扣 S1E0'
     date: '2025-03-03'
     lang: 'zh'
     path: 'https://youtu.be/Yd1v_ZxhLoI'
     radio: true
-  - title: 'S1E1 學校應該要有一堂課教你如何參與開源 - 尖不想寫扣'
+  - title: '學校應該要有一堂課教你如何參與開源 - 尖不想寫扣 S1E1'
     date: '2025-03-03'
     path: 'https://youtu.be/K_ugUt2Airg'
     lang: 'zh'
     radio: true
-  - title: 'S1E2 絕對不會錯的面試指南 - 尖不想寫扣'
+  - title: '絕對不會錯的面試指南 - 尖不想寫扣 S1E2'
     path: 'https://youtu.be/u6BYW2SBEHg'
     date: '2025-03-11'
     lang: 'zh'
     radio: true
-  - title: 'S1E3 不要再更新了 !!! - 尖不想寫扣'
+  - title: '不要再更新了 !!! - 尖不想寫扣 S1E3'
     path: 'https://youtu.be/k1JJu0St7JM'
     date: '2025-03-17'
     lang: 'zh'
     radio: true
-  - title: 'S1E4 每個工程師都有個創業夢 !? ft. 林沅霖 - 尖不想寫扣'
-    path: 'https://youtu.be/0aX1r2g3x4E'
+  - title: 'Moving to ESM from CJS with Anthony Fu - PodRocket'
+    path: 'https://podrocket.logrocket.com/moving-to-esm-from-cjs-anthony-fu'
+    date: '2025-03-20'
+    lang: 'en'
+    radio: true
+  - title: '每個工程師都有個創業夢!? ft. 林沅霖 - 尖不想寫扣 S1E4'
+    path: 'https://youtu.be/80Ty0NDcOAE'
     date: '2025-03-24'
+    lang: 'zh'
+    radio: true
+  - title: '人人都可以 Vibe coding! 到底是良藥還是毒藥? - 尖不想寫扣 S1E5'
+    path: 'https://youtu.be/R8vdn3ALt50'
+    date: '2025-03-30'
+    lang: 'zh'
+    radio: true
+  - title: '开源甄选的"带货"哲学：Anthony Fu Fund与前端江湖 - Web Worker'
+    path: 'https://www.xiaoyuzhoufm.com/episode/67ed46f0f9578163d6a247ac'
+    date: '2025-04-03'
     lang: 'zh'
     radio: true
 ---
