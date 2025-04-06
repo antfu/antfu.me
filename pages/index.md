@@ -18,7 +18,7 @@ I give [talks](/talks) and write [blog posts](/posts) about open source, coding,
 Occasionally, I also do coding live streams on [YouTube](https://www.youtube.com/anthonyfu7) and [哔哩哔哩](https://space.bilibili.com/668380).
 From time to time, I also make some generative-art, interactivity experiments on [100.antfu.me](https://100.antfu.me/).
 
-Outside of programming, I enjoy doing photography and traveling. Some of my photos can be found on [this page](/photos). I live in Tokyo, if you are around, please reach me out let's have some coffee or work together.
+Outside of programming, I enjoy doing photography and traveling. Some of my photos can be found on [this page](/photos). I also love animate, movies and dramas, my media consumption can be found [here](/media). I live in Tokyo, if you are around, please reach me out let's have some coffee or work together.
 
 <div flex-auto />
 
@@ -40,9 +40,9 @@ Find me on
 
 Or mail me at <span font-mono>hi<span i-carbon-at/>antfu.me</span>
 
-Inactive on <div flex="~ inline gap-2 wrap"><a href="https://elk.zone/m.webtoo.ls/@antfu" target="_blank"><span op75 i-simple-icons-mastodon/> Mastodon</a> <a href="https://x.com/antfu7" target="_blank"><span op75 i-ri-twitter-x-fill /> Twitter</a>
+Inactive on <span flex="~ inline gap-2 wrap"><a href="https://elk.zone/m.webtoo.ls/@antfu" target="_blank"><span op75 i-simple-icons-mastodon/> Mastodon</a> <a href="https://x.com/antfu7" target="_blank"><span op75 i-ri-twitter-x-fill /> Twitter</a>
 <a href="https://www.zhihu.com/people/antfu" target="_blank"><span op75 i-simple-icons-zhihu /> 知乎</a>
-<a href="https://weibo.com/u/7485197193" target="_blank"><span op75 i-simple-icons-sinaweibo /> 微博</a></div>
+<a href="https://weibo.com/u/7485197193" target="_blank"><span op75 i-simple-icons-sinaweibo /> 微博</a></span>
 
 ---
 
