@@ -37,14 +37,14 @@ export const anime: MediaRecord[] = [
     date: '2011',
   },
   {
-    name: '咒術廻戦',
-    creator: '芥見下々',
-    date: '2018',
-  },
-  {
     name: 'ID:INVADED イド：インヴェイデッド',
     creator: '舞城王太郎',
     date: '2020',
+  },
+  {
+    name: '咒術廻戦',
+    creator: '芥見下々',
+    date: '2018',
   },
   {
     name: 'Arcane',
@@ -52,18 +52,18 @@ export const anime: MediaRecord[] = [
     date: '2021',
   },
   {
-    name: 'デス・パレード Death Parade',
-    creator: '立川讓',
-    date: '2015',
-  },
-  {
     name: '青春ブタ野郎シリーズ',
     creator: '鴨志田一',
     date: '2013',
   },
   {
-    name: '食戟のソーマ',
-    creator: '附田祐斗',
+    name: 'PSYCHO-PASS サイコパス',
+    creator: '虚淵玄',
+    date: '2012',
+  },
+  {
+    name: 'デス・パレード Death Parade',
+    creator: '立川讓',
     date: '2015',
   },
   {
@@ -72,15 +72,11 @@ export const anime: MediaRecord[] = [
     date: '2014',
   },
   {
-    name: 'チェンソーマン ChainSaw Man',
-    creator: '藤本タツキ',
-    date: '2018',
+    name: '寄生獣',
+    creator: '岩明均',
+    date: '2010',
   },
-  {
-    name: '進撃の巨人',
-    creator: '諫山創',
-    date: '2013',
-  },
+
   {
     name: 'デュラララ!!',
     creator: '成田良悟',
@@ -102,19 +98,14 @@ export const anime: MediaRecord[] = [
     date: '2015',
   },
   {
-    name: '寄生獣',
-    creator: '岩明均',
-    date: '2010',
-  },
-  {
-    name: 'PSYCHO-PASS サイコパス',
-    creator: '虚淵玄',
-    date: '2012',
-  },
-  {
     name: 'Steins;Gate',
     creator: '林直孝',
     date: '2009',
+  },
+  {
+    name: '蟲師',
+    creator: '漆原友紀',
+    date: '2005',
   },
   {
     name: 'ダンダダン Dan Da Dan',
@@ -122,9 +113,24 @@ export const anime: MediaRecord[] = [
     date: '2018',
   },
   {
+    name: '四月は君の嘘',
+    creator: '新川直司',
+    date: '2014',
+  },
+  {
     name: 'やはり俺の青春ラブコメはまちがっている',
     creator: '渡航',
     date: '2013',
+  },
+  {
+    name: '食戟のソーマ',
+    creator: '附田祐斗',
+    date: '2015',
+  },
+  {
+    name: 'チェンソーマン Chainsaw Man',
+    creator: '藤本タツキ',
+    date: '2018',
   },
   {
     name: '賭ケグルイ',
@@ -142,19 +148,24 @@ export const anime: MediaRecord[] = [
     date: '2012',
   },
   {
-    name: 'Re:ゼロから始める異世界生活',
-    creator: '長月達平',
-    date: '2014',
-  },
-  {
     name: 'かぐや様は告らせたい',
     creator: '赤坂アカ',
     date: '2015',
   },
   {
+    name: 'Re:ゼロから始める異世界生活',
+    creator: '長月達平',
+    date: '2014',
+  },
+  {
     name: 'ソードアート・オンライン Sword Art Online',
     creator: '川原礫',
     date: '2012',
+  },
+  {
+    name: '進撃の巨人',
+    creator: '諫山創',
+    date: '2013',
   },
   {
     name: '一週間フレンズ',
@@ -201,6 +212,91 @@ export const anime: MediaRecord[] = [
     name: '富豪刑事 Balance:UNLIMITED',
     creator: '筒井康隆',
     date: '2020',
+  },
+  {
+    name: 'ダンジョン飯',
+    creator: '九井諒子',
+    date: '2024',
+  },
+  {
+    name: 'Dr.STONE',
+    creator: '稻垣理一郎',
+    date: '2017',
+  },
+  {
+    name: '無職転生',
+    creator: '理不尽な孫の手',
+    date: '2021',
+  },
+  {
+    name: '映像研には手を出すな!',
+    creator: '大童澄瞳',
+    date: '2021',
+  },
+  {
+    name: 'サマータイムレンダ Summer Time Rendering',
+    creator: '田中靖規',
+    date: '2022',
+  },
+  {
+    name: 'アンデッドアンラック Undead Unluck',
+    creator: '戸塚慶文',
+    date: '2023',
+  },
+  {
+    name: 'メイドインアビス Made in Abyss',
+    creator: 'つくしあきひと',
+    date: '2019',
+  },
+  {
+    name: '推しの子',
+    creator: '赤坂アカ',
+    date: '2023',
+  },
+  {
+    name: 'アカメが斬る!',
+    creator: 'タカヒロ',
+    date: '2014',
+  },
+  {
+    name: '夏目友人帳',
+    creator: '緑川ゆき',
+    date: '2008',
+  },
+  {
+    name: '3月のライオン',
+    creator: '羽海野チカ',
+    date: '2016',
+  },
+  {
+    name: 'ゆるキャン△',
+    creator: 'あfろ',
+    date: '2018',
+  },
+  {
+    name: '宝石の国',
+    creator: '市川春子',
+    date: '2017',
+  },
+  {
+    name: 'バクマン BAKUMAN',
+    creator: '大場つぐみ',
+    date: '2010',
+  },
+  {
+    name: '未来日記',
+    creator: 'えすのサカエ',
+    date: '2011',
+  },
+  {
+    name: '転生したらスライムだった件',
+    creator: '伏瀬',
+    date: '2018',
+  },
+  {
+    name: '나 혼자만 레벨업 - 俺だけレベルアップな件',
+    creator: '추공',
+    date: '2024',
   },
 ]
 
@@ -287,6 +383,11 @@ export const movie: MediaRecord[] = [
     date: '2010',
   },
   {
+    name: 'Spider-Man: Across the Spider-Verse',
+    creator: 'Joaquim Santos, Kemp Powers, Justin Thompson',
+    date: '2023',
+  },
+  {
     name: 'Interstellar',
     creator: 'Christopher Nolan',
     date: '2014',
@@ -297,6 +398,11 @@ export const movie: MediaRecord[] = [
     date: '2020',
   },
   {
+    name: '知らないカノジョ',
+    creator: '三木孝浩',
+    date: '2025',
+  },
+  {
     name: 'Dune',
     creator: 'Denis Villeneuve',
     date: '2021',
@@ -305,11 +411,6 @@ export const movie: MediaRecord[] = [
     name: 'No Time to Die',
     creator: 'Cary Joji Fukunaga',
     date: '2021',
-  },
-  {
-    name: 'Spider-Man: Across the Spider-Verse',
-    creator: 'Joaquim Santos, Kemp Powers, Justin Thompson',
-    date: '2023',
   },
   {
     name: 'Everything Everywhere All at Once',
