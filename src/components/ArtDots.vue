@@ -7,7 +7,6 @@ const el = useTemplateRef('el')
 
 let w = window.innerWidth
 let h = window.innerHeight
-const offsetY = window.scrollY
 
 const SCALE = 200
 const LENGTH = 10
@@ -31,7 +30,7 @@ function createDotTexture(app: Application) {
 
 function addPoints({ dotTexture, particleContainer }: { dotTexture: Texture, particleContainer: ParticleContainer }) {
   for (let x = -SPACING / 2; x < w + SPACING; x += SPACING) {
-    for (let y = -SPACING / 2; y < h + offsetY + SPACING; y += SPACING) {
+    for (let y = -SPACING / 2; y < h + SPACING; y += SPACING) {
       const id = `${x}-${y}`
       if (existingPoints.has(id))
         continue
@@ -79,7 +78,7 @@ async function setup() {
       const ny = y + Math.sin(rad) * len
 
       particle.x = nx
-      particle.y = ny - offsetY
+      particle.y = ny
       particle.alpha = (Math.abs(Math.cos(rad)) * 0.8 + 0.2) * opacity
     }
   })
