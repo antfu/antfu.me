@@ -9,7 +9,7 @@ let w = window.innerWidth
 let h = window.innerHeight
 
 const SCALE = 200
-const LENGTH = 10
+const LENGTH = 5
 const SPACING = 15
 
 const noise3d = createNoise3D()
