@@ -24,10 +24,11 @@
     "matter-attractors": "catalog:frontend",
     "matter-js": "catalog:frontend",
     "nprogress": "catalog:frontend",
-    "p5i": "catalog:frontend",
     "pinia": "catalog:frontend",
+    "pixi.js": "catalog:frontend",
     "shiki": "catalog:frontend",
     "shiki-magic-move": "catalog:frontend",
+    "simplex-noise": "catalog:frontend",
     "vue": "catalog:frontend",
     "vue-router": "catalog:frontend",
     "vue-router-better-scroller": "catalog:frontend"

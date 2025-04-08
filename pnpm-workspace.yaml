@@ -61,10 +61,11 @@ catalogs:
     matter-attractors: ^0.1.6
     matter-js: ^0.20.0
     nprogress: ^0.2.0
-    p5i: ^0.6.0
     pinia: ^3.0.1
+    pixi.js: ^8.9.1
     shiki: ^3.2.1
     shiki-magic-move: ^1.1.0
+    simplex-noise: ^4.0.3
     vue: ^3.5.13
     vue-router: ^4.5.0
     vue-router-better-scroller: ^0.0.0
