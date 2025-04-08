@@ -93,6 +93,11 @@ export const anime: MediaRecord[] = [
     date: '2021',
   },
   {
+    name: 'ゾンビになるまでにしたい100のこと～',
+    creator: '麻生羽吕',
+    date: '2023',
+  },
+  {
     name: 'ヴァイオレット・エヴァーガーデン Violet Evergarden',
     creator: '暁佳奈',
     date: '2015',
@@ -264,6 +269,21 @@ export const anime: MediaRecord[] = [
     date: '2008',
   },
   {
+    name: 'とある科学の超電磁砲',
+    creator: '鎌池和馬',
+    date: '2008',
+  },
+  {
+    name: 'とらドラ!',
+    creator: '竹宮ゆゆこ',
+    date: '2008',
+  },
+  {
+    name: 'とある魔術の禁書目録',
+    creator: '鎌池和馬',
+    date: '2008',
+  },
+  {
     name: '3月のライオン',
     creator: '羽海野チカ',
     date: '2016',
@@ -282,6 +302,21 @@ export const anime: MediaRecord[] = [
     name: 'バクマン BAKUMAN',
     creator: '大場つぐみ',
     date: '2010',
+  },
+  {
+    name: 'はたらく細胞',
+    creator: '清水茜',
+    date: '2018',
+  },
+  {
+    name: '幼女戦記',
+    creator: 'ルロ・ゼン',
+    date: '2016',
+  },
+  {
+    name: 'Overlord',
+    creator: '丸山くがね',
+    date: '2018',
   },
   {
     name: '未来日記',
