@@ -1,107 +1,109 @@
 <script setup lang="ts">
-import type { P5I } from 'p5i'
-import { p5i } from 'p5i'
-import { onMounted, onUnmounted, ref } from 'vue'
+import type { Texture } from 'pixi.js'
+import { Application, Graphics, Particle, ParticleContainer } from 'pixi.js'
+import { createNoise3D } from 'simplex-noise'
 
-const el = ref<HTMLCanvasElement | null>(null)
-
-const {
-  mount,
-  unmount,
-  createCanvas,
-  background,
-  noFill,
-  stroke,
-  noise,
-  noiseSeed,
-  resizeCanvas,
-  cos,
-  sin,
-  TWO_PI,
-} = p5i()
+const el = useTemplateRef('el')
 
 let w = window.innerWidth
 let h = window.innerHeight
-const offsetY = window.scrollY
 
 const SCALE = 200
-const LENGTH = 10
+const LENGTH = 5
 const SPACING = 15
 
-function getForceOnPoint(x: number, y: number, z: number) {
-  // https://p5js.org/reference/#/p5/noise
-  return (noise(x / SCALE, y / SCALE, z) - 0.5) * 2 * TWO_PI
-}
+const noise3d = createNoise3D()
 
 const existingPoints = new Set<string>()
-const points: { x: number, y: number, opacity: number }[] = []
+const points: { x: number, y: number, opacity: number, particle: Particle }[] = []
 
-function addPoints() {
+function getForceOnPoint(x: number, y: number, z: number) {
+  return (noise3d(x / SCALE, y / SCALE, z) - 0.5) * 2 * Math.PI
+}
+
+const mountedScope = effectScope()
+
+function createDotTexture(app: Application) {
+  const g = new Graphics().circle(0, 0, 1).fill(0xCCCCCC)
+  return app.renderer.generateTexture(g)
+}
+
+function addPoints({ dotTexture, particleContainer }: { dotTexture: Texture, particleContainer: ParticleContainer }) {
   for (let x = -SPACING / 2; x < w + SPACING; x += SPACING) {
-    for (let y = -SPACING / 2; y < h + offsetY + SPACING; y += SPACING) {
+    for (let y = -SPACING / 2; y < h + SPACING; y += SPACING) {
       const id = `${x}-${y}`
       if (existingPoints.has(id))
         continue
       existingPoints.add(id)
-      points.push({ x, y, opacity: Math.random() * 0.5 + 0.5 })
+
+      const particle = new Particle(dotTexture)
+      particle.anchorX = 0.5
+      particle.anchorY = 0.5
+      particleContainer.addParticle(particle)
+
+      const opacity = Math.random() * 0.5 + 0.5
+      points.push({ x, y, opacity, particle })
     }
   }
 }
 
-function setup() {
-  createCanvas(w, h)
-  background('#ffffff')
-  stroke('#ccc')
-  noFill()
+async function setup() {
+  if (el.value == null)
+    return
+  const app = new Application()
+  await app.init({
+    background: '#ffffff',
+    antialias: true,
+    resolution: window.devicePixelRatio,
+    resizeTo: el.value,
+    eventMode: 'none',
+    autoDensity: true,
+  })
+  el.value.appendChild(app.canvas)
 
-  noiseSeed(+new Date())
+  const particleContainer = new ParticleContainer({ dynamicProperties: { position: true, alpha: true } })
+  app.stage.addChild(particleContainer)
 
-  addPoints()
-}
+  const dotTexture = createDotTexture(app)
+  addPoints({ dotTexture, particleContainer })
 
-function draw({ circle }: P5I) {
-  background('#ffffff')
-  const t = +new Date() / 10000
+  app.ticker.add(() => {
+    const t = Date.now() / 10000
 
-  for (const p of points) {
-    const { x, y } = p
-    const rad = getForceOnPoint(x, y, t)
-    const length = (noise(x / SCALE, y / SCALE, t * 2) + 0.5) * LENGTH
-    const nx = x + cos(rad) * length
-    const ny = y + sin(rad) * length
-    stroke(200, 200, 200, (Math.abs(cos(rad)) * 0.8 + 0.2) * p.opacity * 255)
-    circle(nx, ny - offsetY, 1)
-  }
-}
+    for (const p of points) {
+      const { x, y, opacity, particle } = p
+      const rad = getForceOnPoint(x, y, t)
+      const len = (noise3d(x / SCALE, y / SCALE, t * 2) + 0.5) * LENGTH
+      const nx = x + Math.cos(rad) * len
+      const ny = y + Math.sin(rad) * len
 
-function restart() {
-  if (el.value)
-    mount(el.value, { setup, draw })
-}
-
-onMounted(() => {
-  restart()
-
-  useEventListener('resize', () => {
-    w = window.innerWidth
-    h = window.innerHeight
-    resizeCanvas(w, h)
-    addPoints()
+      particle.x = nx
+      particle.y = ny
+      particle.alpha = (Math.abs(Math.cos(rad)) * 0.8 + 0.2) * opacity
+    }
   })
 
-  // Uncomment to enable scroll-based animation
-  // Tho there is some lag when scrolling, not sure if it's solvable
-  // useEventListener('scroll', () => {
-  //   offsetY = window.scrollY
-  //   addPoints()
-  // }, { passive: true })
+  mountedScope.run(() => {
+    useEventListener('resize', () => {
+      w = window.innerWidth
+      h = window.innerHeight
+      addPoints({ dotTexture, particleContainer })
+    })
+    onScopeDispose(() => {
+      app?.destroy(true, { children: true, texture: true, textureSource: true })
+    })
+  })
+}
+
+onMounted(async () => {
+  await setup()
 })
 
 onUnmounted(() => {
-  unmount()
+  mountedScope.stop()
 })
 </script>
 
 <template>
-  <div ref="el" z--1 fixed left-0 right-0 top-0 bottom-0 pointer-events-none dark:invert />
+  <div ref="el" z--1 fixed size-screen left-0 right-0 top-0 bottom-0 pointer-events-none dark:invert />
 </template>
