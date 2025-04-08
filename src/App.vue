@@ -83,7 +83,7 @@ onKeyStroke('Escape', (e) => {
     <div v-if="imageModel" fixed top-0 left-0 right-0 bottom-0 z-500 backdrop-blur-7 @click="imageModel = undefined">
       <div absolute top-0 left-0 right-0 bottom-0 bg-black:50 z--1 />
       <img :src="imageModel.src" :alt="imageModel.alt" :class="imageModel.className" max-w-screen max-h-screen w-full h-full object-contain>
-      <div v-if="imageAlt" bg-black:50 absolute right-5 bottom-5 px2 py1 flex justify-center items-center>
+      <div v-if="imageAlt" text-white bg-black:50 absolute right-5 bottom-5 px2 py1 flex justify-center items-center>
         {{ imageAlt }}
       </div>
     </div>
