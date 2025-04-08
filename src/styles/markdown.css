@@ -256,7 +256,7 @@ h6:focus .header-anchor {
 
 .markdown-magic-link.markdown-magic-link-github-at {
   transform: translateY(6px);
-  --uno: pl-0 py-0 pr2 text-sm gap-1.2 rounded-full;
+  --uno: pl0 py0 pr2 ml0.5 text-sm gap-1.2 rounded-full;
 }
 
 .markdown-magic-link.markdown-magic-link-github-at .markdown-magic-link-image {

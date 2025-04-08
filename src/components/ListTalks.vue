@@ -18,7 +18,7 @@ function daysLeft(date: string) {
 
 <template>
   <template v-for="talk, idx of talks" :key="idx">
-    <div v-if="!englishOnly || talk.lang !== 'zh'">
+    <div v-if="!englishOnly || !talk.lang || talk.lang === 'en'">
       <div v-if="idx !== 0" pt4>
         <hr>
       </div>
@@ -40,7 +40,7 @@ function daysLeft(date: string) {
       </div>
       <div grid="~ cols-1 md:cols-[1fr_max-content] gap-4" pt6>
         <template v-for="p, idx2 in talk.presentations" :key="idx2">
-          <template v-if="!englishOnly || p.lang !== 'zh'">
+          <template v-if="!englishOnly || !p.lang || p.lang === 'en'">
             <div>
               <a :href="p.conferenceUrl" target="_blank" rel="noopener noreferrer">
                 {{ p.conference }}

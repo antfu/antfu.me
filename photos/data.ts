@@ -1,5 +1,6 @@
 export interface PhotoMate {
   text?: string
+  lang?: string
 }
 
 export interface Photo extends PhotoMate {
@@ -13,8 +14,9 @@ const metaInfo = Object.entries(
     import: 'default',
   }),
 ).map(([name, data]) => {
+  name = name.replace(/\.\w+$/, '').replace(/^\.\//, '')
   return {
-    name: name.replace(/\.\w+$/, ''),
+    name,
     data,
   }
 })
@@ -27,9 +29,10 @@ const photos = Object.entries(
   }),
 )
   .map(([name, url]): Photo => {
+    name = name.replace(/\.\w+$/, '').replace(/^\.\//, '')
     return {
       ...metaInfo.find(info => info.name === name)?.data,
-      name: name.replace(/\.\w+$/, ''),
+      name,
       url,
     }
   })

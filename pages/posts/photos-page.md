@@ -18,7 +18,7 @@ Looking through these old photos brings back so many memories. While some may no
 Here are some of [my recent photos](/photos):
 
 <div mb-8>
-  <PhotoGrid :limit="12" class="gap-1!" />
+  <PhotoGalleryAll :limit="12" class="gap-1!" />
 </div>
 
 It's a shame that the image quality from Instagram isn't great, since they compress photos heavily upon posting. I might replace some of them with higher quality originals in the future, but for now, I think it's a good start.

@@ -28,7 +28,7 @@ const routes: Post[] = router.getRoutes()
 const posts = computed(() =>
   [...(props.posts || routes), ...props.extra || []]
     .sort((a, b) => +new Date(b.date) - +new Date(a.date))
-    .filter(i => !englishOnly.value || i.lang !== 'zh'),
+    .filter(i => !englishOnly.value || !i.lang || i.lang === 'en'),
 )
 
 const getYear = (a: Date | string | number) => new Date(a).getFullYear()
@@ -91,6 +91,11 @@ function getGroupName(p: Post) {
                 align-middle flex-none
                 class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--12 mr2 my-auto hidden md:block"
               >中文</span>
+              <span
+                v-if="route.lang === 'ja'"
+                align-middle flex-none
+                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--15 mr2 my-auto hidden md:block"
+              >日本語</span>
               <span align-middle>{{ route.title }}</span>
               <span
                 v-if="route.redirect"
@@ -131,6 +136,11 @@ function getGroupName(p: Post) {
                 align-middle flex-none
                 class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 my-auto md:hidden"
               >中文</span>
+              <span
+                v-if="route.lang === 'ja'"
+                align-middle flex-none
+                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 my-auto md:hidden"
+              >日本語</span>
             </div>
           </li>
           <div v-if="route.place" op50 text-sm hidden mt--2 md:block>

@@ -96,6 +96,7 @@ const ArtComponent = computed(() => {
   <div
     v-if="frontmatter.display ?? frontmatter.title"
     class="prose m-auto mb-8"
+    :lang="frontmatter.lang"
     :class="[frontmatter.wrapperClass]"
   >
     <h1 class="mb-0 slide-enter-50">
@@ -129,7 +130,11 @@ const ArtComponent = computed(() => {
       This is a draft post, the content may be incomplete. Please check back later.
     </p>
   </div>
-  <article ref="content" :class="[frontmatter.tocAlwaysOn ? 'toc-always-on' : '', frontmatter.class]">
+  <article
+    ref="content"
+    :lang="frontmatter.lang"
+    :class="[frontmatter.tocAlwaysOn ? 'toc-always-on' : '', frontmatter.class]"
+  >
     <slot />
   </article>
   <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-8 slide-enter animate-delay-500 print:hidden">
