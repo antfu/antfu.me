@@ -118,6 +118,16 @@ export const anime: MediaRecord[] = [
     date: '2018',
   },
   {
+    name: '冰菓',
+    creator: '米澤穗信',
+    date: '2008',
+  },
+  {
+    name: 'Evangelion',
+    creator: '庵野秀明',
+    date: '1995',
+  },
+  {
     name: '四月は君の嘘',
     creator: '新川直司',
     date: '2014',
@@ -314,6 +324,11 @@ export const anime: MediaRecord[] = [
     date: '2016',
   },
   {
+    name: '化物語',
+    creator: '西尾維新',
+    date: '2009',
+  },
+  {
     name: 'Overlord',
     creator: '丸山くがね',
     date: '2018',
@@ -327,6 +342,11 @@ export const anime: MediaRecord[] = [
     name: '転生したらスライムだった件',
     creator: '伏瀬',
     date: '2018',
+  },
+  {
+    name: '僕らはみんな河合荘',
+    creator: '宮原るり',
+    date: '2014',
   },
   {
     name: '나 혼자만 레벨업 - 俺だけレベルアップな件',
