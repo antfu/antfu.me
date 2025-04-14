@@ -118,5 +118,6 @@ declare module 'vue-router/auto-routes' {
     '/sponsors-list': RouteRecordInfo<'/sponsors-list', '/sponsors-list', Record<never, never>, Record<never, never>>,
     '/streams': RouteRecordInfo<'/streams', '/streams', Record<never, never>, Record<never, never>>,
     '/talks': RouteRecordInfo<'/talks', '/talks', Record<never, never>, Record<never, never>>,
+    '/use': RouteRecordInfo<'/use', '/use', Record<never, never>, Record<never, never>>,
   }
 }
