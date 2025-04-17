@@ -46,7 +46,7 @@ subtitle: Some of my favorite websites/tools with excellent design and UX that I
 
 - [Tailwind Gradient Designer](https://tailwind-gradient-designer.csspost.com/)
 - [Open UI](https://open-ui.org/) - Comparison between different component frameworks
-- [Isoflow](https://isoflow.io/
+- [Isoflow](https://isoflow.io/)
 - [Hemingway](http://www.hemingwayapp.com/) - Text Editor
 - [Reactive Resume](https://rxresu.me/)
 - [Timebuddy](https://www.worldtimebuddy.com/)
