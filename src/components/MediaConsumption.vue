@@ -31,10 +31,9 @@ const type = computed<MediaType>(() => route.query.type as MediaType || 'anime')
               <td text-right>
                 {{ m.creator }}
               </td>
-              <td lt-sm:hidden>
-                {{ m.date }}
+              <td v-if="m.note" lt-sm:hidden>
+                {{ m.note }}
               </td>
-              <td>{{ m.note }}</td>
             </tr>
           </template>
         </tbody>
