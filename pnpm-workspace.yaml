@@ -1,9 +1,10 @@
 packages: []
+
 catalogs:
   build:
-    '@shikijs/markdown-it': ^3.2.1
-    '@shikijs/transformers': ^3.2.1
-    '@shikijs/twoslash': ^3.2.1
+    '@shikijs/markdown-it': ^3.3.0
+    '@shikijs/transformers': ^3.3.0
+    '@shikijs/twoslash': ^3.3.0
     '@unocss/preset-web-fonts': ^66.0.0
     '@vitejs/plugin-vue': ^5.2.3
     gray-matter: ^4.0.3
@@ -16,44 +17,44 @@ catalogs:
     unocss: ^66.0.0
     unplugin-auto-import: ^19.1.2
     unplugin-icons: ^22.1.0
-    unplugin-vue-components: ^28.4.1
+    unplugin-vue-components: ^28.5.0
     unplugin-vue-markdown: ^28.3.1
     unplugin-vue-router: ^0.12.0
-    vite: ^6.2.4
-    vite-plugin-inspect: ^11.0.0
+    vite: ^6.3.3
+    vite-plugin-inspect: ^11.0.1
     vite-plugin-optimize-exclude: ^0.0.1
     vite-ssg: ^26.1.1
     vite-svg-loader: ^5.1.0
   dev:
-    '@antfu/eslint-config': ^4.11.0
-    '@iconify/json': ^2.2.323
-    '@octokit/core': ^6.1.4
+    '@antfu/eslint-config': ^4.12.0
+    '@iconify/json': ^2.2.331
+    '@octokit/core': ^6.1.5
     '@octokit/rest': ^21.1.1
     ansis: ^3.17.0
     cross-env: ^7.0.3
     degit: ^2.8.4
     diacritics: ^1.3.0
-    eslint: ^9.23.0
+    eslint: ^9.25.1
     eslint-plugin-format: ^1.0.1
-    exifreader: ^4.27.0
+    exifreader: ^4.29.0
     fast-glob: ^3.3.3
     feed: ^4.2.2
     fs-extra: ^11.3.0
-    lint-staged: ^15.5.0
+    lint-staged: ^15.5.1
     pathe: ^2.0.3
-    pnpm: ^10.7.1
+    pnpm: ^10.9.0
     prompts: ^2.4.2
     rimraf: ^6.0.1
     sharp: 0.32.6
     simple-git: ^3.27.0
-    simple-git-hooks: ^2.12.1
+    simple-git-hooks: ^2.13.0
     tsx: ^4.19.3
-    typescript: ~5.8.2
+    typescript: ~5.8.3
   frontend:
     '@antfu/utils': ^9.2.0
-    '@unhead/vue': ^2.0.3
+    '@unhead/vue': ^2.0.8
     '@unocss/reset': ^66.0.0
-    '@vueuse/core': ^13.0.0
+    '@vueuse/core': ^13.1.0
     d3-hierarchy: ^3.1.2
     d3-shape: ^3.2.0
     dayjs: ^1.11.13
@@ -61,9 +62,9 @@ catalogs:
     matter-attractors: ^0.1.6
     matter-js: ^0.20.0
     nprogress: ^0.2.0
-    pinia: ^3.0.1
+    pinia: ^3.0.2
     pixi.js: ^8.9.1
-    shiki: ^3.2.1
+    shiki: ^3.3.0
     shiki-magic-move: ^1.1.0
     simplex-noise: ^4.0.3
     vue: ^3.5.13
@@ -77,11 +78,13 @@ catalogs:
     '@types/fs-extra': ^11.0.4
     '@types/markdown-it': ^14.1.2
     '@types/markdown-it-link-attributes': ^3.0.5
-    '@types/node': ^22.13.17
+    '@types/node': ^22.14.1
     '@types/nprogress': ^0.2.3
     '@types/prompts': ^2.4.9
+
 onlyBuiltDependencies:
   - esbuild
   - exifreader
   - sharp
   - simple-git-hooks
+  - unrs-resolver
