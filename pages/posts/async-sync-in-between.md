@@ -243,7 +243,7 @@ While `quansync` doesn't completely solve the coloring problem, it provides a ne
 
 ## Conclusion
 
-This is a new approach to tackling the coloring problem we are still exploring. We will slowly roll out `quansync` in our libraries and see how it improves our experience and the ecosystem. We are alo
+This is a new approach to tackling the coloring problem we are still exploring. We will slowly roll out `quansync` in our libraries and see how it improves our experience and the ecosystem. We are also
 looking for feedback and contributions, so feel free to join us in the [Discord](https://chat.antfu.me) or [GitHub Discussions](https://github.com/quansync-dev/quansync/discussions) to share your thoughts.
 
 - <GitHubLink repo="quansync-dev/quansync" />
