@@ -42,6 +42,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/binfe-2020-zh': RouteRecordInfo<'/posts/binfe-2020-zh', '/posts/binfe-2020-zh', Record<never, never>, Record<never, never>>,
     '/posts/bonjour-paris': RouteRecordInfo<'/posts/bonjour-paris', '/posts/bonjour-paris', Record<never, never>, Record<never, never>>,
     '/posts/break-lines-in-js': RouteRecordInfo<'/posts/break-lines-in-js', '/posts/break-lines-in-js', Record<never, never>, Record<never, never>>,
+    '/posts/categorize-deps': RouteRecordInfo<'/posts/categorize-deps', '/posts/categorize-deps', Record<never, never>, Record<never, never>>,
     '/posts/color-scheme-for-vscode-ext': RouteRecordInfo<'/posts/color-scheme-for-vscode-ext', '/posts/color-scheme-for-vscode-ext', Record<never, never>, Record<never, never>>,
     '/posts/composable-vue-vueconf-china-2021': RouteRecordInfo<'/posts/composable-vue-vueconf-china-2021', '/posts/composable-vue-vueconf-china-2021', Record<never, never>, Record<never, never>>,
     '/posts/composable-vue-vueday-2021': RouteRecordInfo<'/posts/composable-vue-vueday-2021', '/posts/composable-vue-vueday-2021', Record<never, never>, Record<never, never>>,
