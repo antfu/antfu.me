@@ -15,6 +15,18 @@ art: plum
 
 <div pt-5 />
 
+### Talk Schedule 2025
+
+| Date                          | Conference                                         | Location  | Topic                                  | Lang    |
+| ----------------------------- | -------------------------------------------------- | --------- | -------------------------------------- | ------- |
+| <TalkDate date="2025-05-23"/> | [**TSKaigi**](https://2025.tskaigi.org/)           | Tokyo     | The New ESLint Config with Type Safety | English |
+| <TalkDate date="2025-07-12"/> | [**VueConf China**](https://vueconf.cn/)           | Shenzhen  | Sneak Peek of Vite DevTools            | 中文    |
+| <TalkDate date="2025-09-18"/> | [**SquiggleConf**](https://2025.squiggleconf.com/) | Boston    | TBD                                    | English |
+| <TalkDate date="2025-10-09"/> | [**ViteConf**](https://viteconf.amsterdam/)        | Amsterdam | Vite DevTools                          | English |
+| <TalkDate date="2025-10-25"/> | [**VueFes**](https://vuefes.jp/2025/)              | Tokyo     | Vite DevTools                          | 日本語  |
+
+<div pt-5 />
+
 <details>
 <summary><span text-lg>Talk Schedule 2024</span></summary>
 
