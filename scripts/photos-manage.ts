@@ -37,11 +37,14 @@ for (const filepath of files) {
   dateRaw = String(dateRaw)
 
   // convert 2025:02:02 10:07:10 to date object
-  const date = new Date(dateRaw.replace(/:/g, (x, idx) => {
+  let date = new Date(dateRaw.replace(/:/g, (x, idx) => {
     if (idx < 10)
       return '-'
     return x
   }))
+  if (Number.isNaN(+date)) {
+    date = new Date()
+  }
 
   const timeDiff = Date.now() - +date
   // 1 hour
