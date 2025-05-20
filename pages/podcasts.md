@@ -149,6 +149,36 @@ items:
     date: '2025-04-03'
     lang: 'zh'
     radio: true
+  - title: '十年磨一劍，錢端變前端 ft. @AlexOtakuWhat - 尖不想寫扣 S1E6'
+    path: 'https://youtu.be/sy3VnIJiy3M'
+    date: '2025-04-07'
+    lang: 'zh'
+    radio: true
+  - title: '友情、努力、勝利 ! - 尖不想寫扣 S1E7'
+    path: 'https://youtu.be/RIzLdWT75c8'
+    date: '2025-04-14'
+    lang: 'zh'
+    radio: true
+  - title: '去 Conf 是追新 ? 還是追星? ft. 高見龍 - 尖不想寫扣 S1E8'
+    path: 'https://youtu.be/UJOyd4N6WeU'
+    date: '2025-04-21'
+    lang: 'zh'
+    radio: true
+  - title: '關於搬去日本的那些事! ft. Han - 尖不想寫扣 S1E9'
+    path: 'https://youtu.be/27iVR4ebFfo'
+    date: '2025-05-05'
+    lang: 'zh'
+    radio: true
+  - title: '有時候離職與被開除就像分手一樣 ! - 尖不想寫扣 S1E10'
+    path: 'https://youtu.be/LO_lq7xOcu4'
+    date: '2025-05-12'
+    lang: 'zh'
+    radio: true
+  - title: '和 Anthony Fu 讨论 Vite, Vitest, Vue, 法国经历。以及 React 大战 - AsyncTalk EP45'
+    path: 'https://asynctalk.com/posts/ep45'
+    date: '2025-05-18'
+    lang: 'zh'
+    radio: true
 ---
 
 <SubNav />
