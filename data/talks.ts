@@ -45,20 +45,20 @@ export const talks: Talk[] = [
     description: 'Introduction to ESLint\'s new flat config format and see how it can bring new possibilities and enhancements to your development workflow and experience.',
     presentations: [
       {
-        date: '2024-06-13',
-        location: 'Amsterdam, Netherlands',
-        conference: 'JS Nation',
-        conferenceUrl: 'https://jsnation.com/',
-        pdf: 'https://talks.antfu.me/2024-06-13/pdf',
-        spa: 'https://talks.antfu.me/2024/jsnation',
-      },
-      {
         date: '2024-06-08',
         location: 'Athens, Greece',
         conference: 'CityJS Athens',
         conferenceUrl: 'https://greece.cityjsconf.org/',
         pdf: 'https://talks.antfu.me/2024-06-08/pdf',
         spa: 'https://talks.antfu.me/2024/cityjs-athens',
+      },
+      {
+        date: '2024-06-13',
+        location: 'Amsterdam, Netherlands',
+        conference: 'JS Nation',
+        conferenceUrl: 'https://jsnation.com/',
+        pdf: 'https://talks.antfu.me/2024-06-13/pdf',
+        spa: 'https://talks.antfu.me/2024/jsnation',
       },
       {
         date: '2024-12-07',
@@ -77,6 +77,14 @@ export const talks: Talk[] = [
         conferenceUrl: 'https://webconf.tw/',
         pdf: 'https://talks.antfu.me/2024-12-28/pdf',
         spa: 'https://talks.antfu.me/2024/webconf-tw',
+      },
+      {
+        date: '2025-05-23',
+        location: 'Tokyo, Japan',
+        conference: 'TSKaigi',
+        conferenceUrl: 'https://2025.tskaigi.org/',
+        pdf: 'https://talks.antfu.me/2025-05-23/pdf',
+        spa: 'https://talks.antfu.me/2025/tskaigi',
       },
     ],
   },
