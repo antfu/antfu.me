@@ -26,7 +26,7 @@ art: plum
 | <TalkDate date="2025-09-18"/> | [**SquiggleConf**](https://2025.squiggleconf.com/) | Boston    | TBD                                    | English |
 | <TalkDate date="2025-10-09"/> | [**ViteConf**](https://viteconf.amsterdam/)        | Amsterdam | Vite DevTools                          | English |
 | <TalkDate date="2025-10-25"/> | [**VueFes**](https://vuefes.jp/2025/)              | Tokyo     | Vite DevTools                          | 日本語  |
-| <TalkDate date="2025-13-12"/> | [**WebConf**](https://webconf.tw/)                 | Taipei    | Vite DevTools                          | 日本語  |
+| <TalkDate date="2025-13-12"/> | [**WebConf**](https://webconf.tw/)                 | Taipei    | Vite DevTools                          | 中文    |
 
 <div pt-5 />
 
