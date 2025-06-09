@@ -10,8 +10,8 @@ art: dots
 
 ## Hardware
 
-- Camera: RICOH GR IIIx / ~~Nikon Z6 II~~ / ~~Nikon D750~~ / ~~Canon 600D~~
-- Laptop: MacBook Pro 16' M1 Max 64GB / ~~MacBook Air Intel~~ / ~~Dell XPS 15~~
+- Camera: RICOH GR IIIx / Nikon Z50 + Nikkor 85mm f1.8 / ~~Nikon Z6 II~~ / ~~Nikon D750~~ / ~~Canon 600D~~
+- Laptop: MacBook Pro 16' M1 Max 64GB / MacBook Air 13' M4 / ~~MacBook Air Intel~~ / ~~Dell XPS 15~~
 - Mouse: Logitech MX Ergo S
 - Keyboard: HHKB Studio + XPPen Wireless Shortcut Remote
 - Monitor: Studio Display / ~~LG 27UL850-W~~
@@ -63,6 +63,7 @@ Switched to [Brave](https://brave.com/) as Chrome is pushing hard on [Manifest V
   - [NotchNook](https://lo.cafe/notchnook) - Supercharge your Notch
   - [Bartender](https://www.macbartender.com/) - Manage your menu bar
   - [CleanShot X](https://cleanshot.com/) - Screenshot tool
+  - [PixelSnap](https://getpixelsnap.com/) - Screenshot tool
   - [AlDente](https://apphousekitchen.com/) - Charge limiter
 - [Picsee](https://picsee.chitaner.com/) - File-based photo Management
 - [Kap](https://getkap.co/) - GIF Recorder
@@ -84,18 +85,19 @@ Switched to [Brave](https://brave.com/) as Chrome is pushing hard on [Manifest V
 - [`ni`](https://github.com/antfu/ni) - Aliasing package managers
 - [`taze`](https://github.com/antfu/taze) - Upgrade dependencies
 - [`bumpp`](https://github.com/antfu/bumpp) - Bump package version version for new release
-- [`esno`](https://github.com/esbuild-kit/esno) - Run TypeScript files without compilation
+- [`tsx`](https://github.com/privatenumber/tsx) - Run TypeScript files without compilation
 - [`eslint`](https://eslint.org/) - Linter & Formatter
   - Config: [antfu/eslint-config](https://github.com/antfu/eslint-config)
   - [Why I don't use Prettier](https://antfu.me/posts/why-not-prettier)
 - Build Tools for Libraries
+  - [`tsdown`](https://github.com/rolldown/tsdown) - Easy to use
   - [`unbuild`](https://github.com/unjs/unbuild) - Most of the time
-  - [`tsup`](https://github.com/egoist/tsup) - Easy to use
   - [`rollup`](https://rollupjs.org/) - For very fine-grained control
 
 ### Starter Templates
 
-- [`vitesse`](https://github.com/antfu/vitesse) - Opinionated Vite + Vue starter template
-- [`vitesse-lite`](https://github.com/antfu/vitesse-lite) - Lite version of Vitesse
 - [`starter-ts`](https://github.com/antfu/starter-ts) - TypeScript starter template
+- [`vitesse-nuxt`](https://github.com/antfu/vitesse-nuxt) - Opinionated Nuxt starter template
+- [`vitesse-lite`](https://github.com/antfu/vitesse-lite) - Lite version of Vitesse
+- [`vitesse`](https://github.com/antfu/vitesse) - Opinionated Vite + Vue starter template
 - [`starter-vscode`](https://github.com/antfu/starter-vscode) - VS Code Extension starter template

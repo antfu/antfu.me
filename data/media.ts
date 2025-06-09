@@ -63,7 +63,6 @@ export const anime: MediaRecord[] = [
     name: '寄生獣',
     creator: '岩明均',
   },
-
   {
     name: 'デュラララ!!',
     creator: '成田良悟',
@@ -89,12 +88,20 @@ export const anime: MediaRecord[] = [
     creator: '林直孝',
   },
   {
+    name: '薬屋のひとりごと',
+    creator: '日向夏',
+  },
+  {
     name: '蟲師',
     creator: '漆原友紀',
   },
   {
     name: 'ダンダダン Dan Da Dan',
     creator: '龍幸伸',
+  },
+  {
+    name: 'ぼっち・ざ・ろっく!',
+    creator: 'はまじあき',
   },
   {
     name: '冰菓',
@@ -161,10 +168,6 @@ export const anime: MediaRecord[] = [
     creator: '石田スイ',
   },
   {
-    name: '僕のヒーローアカデミア',
-    creator: '堀越耕平',
-  },
-  {
     name: 'ワンパンマン One-Punch Man',
     creator: 'ONE',
   },
@@ -178,10 +181,6 @@ export const anime: MediaRecord[] = [
     creator: '松本直也',
   },
   {
-    name: '虚構推理',
-    creator: '城平京',
-  },
-  {
     name: '富豪刑事 Balance:UNLIMITED',
     creator: '筒井康隆',
   },
@@ -190,12 +189,20 @@ export const anime: MediaRecord[] = [
     creator: '九井諒子',
   },
   {
+    name: '無職転生',
+    creator: '理不尽な孫の手',
+  },
+  {
     name: 'Dr.STONE',
     creator: '稻垣理一郎',
   },
   {
-    name: '無職転生',
-    creator: '理不尽な孫の手',
+    name: '僕のヒーローアカデミア',
+    creator: '堀越耕平',
+  },
+  {
+    name: '異世界スーサイド・スクワッド',
+    creator: 'DCコミックス',
   },
   {
     name: '映像研には手を出すな!',
@@ -216,6 +223,10 @@ export const anime: MediaRecord[] = [
   {
     name: '推しの子',
     creator: '赤坂アカ',
+  },
+  {
+    name: '虚構推理',
+    creator: '城平京',
   },
   {
     name: 'アカメが斬る!',
@@ -400,6 +411,10 @@ export const movie: MediaRecord[] = [
   {
     name: 'HER',
     creator: 'Spike Jonze',
+  },
+  {
+    name: 'BLUE GIANT',
+    creator: '石塚真一',
   },
   {
     name: 'The King\'s Speech',
