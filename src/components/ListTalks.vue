@@ -22,12 +22,17 @@ function daysLeft(date: string) {
       <div v-if="idx !== 0" pt4>
         <hr>
       </div>
-      <h2 :id="getSlug(talk.title)" tabindex="-1" important-mb-0>
+      <h2 :id="getSlug(talk.title)" tabindex="-1" important-mb-0 :lang="talk.lang">
         <span v-if="talk.series" text-lg font-400 op45 italic mb1>
           {{ talk.series }}
           <br>
         </span>
         {{ talk.title }}
+        <span
+          v-if="talk.lang === 'ja'"
+          align-top flex-none ml2
+          class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 my-auto"
+        >日本語</span>
         <span
           v-if="talk.lang === 'zh'"
           align-top flex-none
@@ -35,13 +40,13 @@ function daysLeft(date: string) {
         >中文</span>
         <a class="header-anchor" :href="`#${getSlug(talk.title)}`" aria-hidden="true">#</a>
       </h2>
-      <div v-if="talk.description" op75 pt2>
+      <div v-if="talk.description" op75 pt2 :lang="talk.lang">
         {{ talk.description }}
       </div>
       <div grid="~ cols-1 md:cols-[1fr_max-content] gap-4" pt6>
         <template v-for="p, idx2 in talk.presentations" :key="idx2">
           <template v-if="!englishOnly || !p.lang || p.lang === 'en'">
-            <div>
+            <div :lang="p.lang">
               <a :href="p.conferenceUrl" target="_blank" rel="noopener noreferrer">
                 {{ p.conference }}
               </a>
@@ -50,6 +55,11 @@ function daysLeft(date: string) {
                 align-top flex-none ml2
                 class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 my-auto"
               >中文</span>
+              <span
+                v-if="p.lang === 'ja'"
+                align-top flex-none ml2
+                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 my-auto"
+              >日本語</span>
               <div text-sm op50>
                 {{ formatDate(p.date, false) }} · {{ p.location }}
               </div>

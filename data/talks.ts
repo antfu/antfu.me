@@ -2,6 +2,22 @@ import type { Talk } from '~/types'
 
 export const talks: Talk[] = [
   {
+    title: 'Vue と WebComponents で作る Agnostic UI',
+    description: 'VueとWebComponentsを使って、UnoCSSによるスタイリングで、Agnosticなコンポーネントライブラリや埋め込み可能なUIをnpmパッケージとして簡単に作成できます',
+    lang: 'ja',
+    presentations: [
+      {
+        date: '2025-06-13',
+        location: 'Tokyo, Japan',
+        lang: 'ja',
+        conference: 'v-tokyo',
+        conferenceUrl: 'https://vuejs-meetup.connpass.com/event/355473/',
+        pdf: 'https://talks.antfu.me/2025-06-13/pdf',
+        spa: 'https://talks.antfu.me/2025/v-tokyo',
+      },
+    ],
+  },
+  {
     title: 'Journey to Nuxt Icon',
     description: 'Introductions of various Icon solutions with their Pros and Cons. And how we take the lessons we learned and make the refreshed Nuxt Icon v1.0',
     presentations: [
