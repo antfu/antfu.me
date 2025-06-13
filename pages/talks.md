@@ -23,7 +23,7 @@ art: plum
 | <TalkDate date="2025-06-13"/> | [**v-tokyo**](https://vuejs-meetup.connpass.com/)  | Tokyo     | VueとWebComponentsで作るAgnostic UI    | 日本語  |
 | <TalkDate date="2025-07-12"/> | [**VueConf China**](https://vueconf.cn/)           | Shenzhen  | Sneak Peek of Vite DevTools            | 中文    |
 | <TalkDate date="2025-08-10"/> | [**COSCUP**](https://coscup.org/2025/)             | Taipei    | Yak Shaving                            | 中文    |
-| <TalkDate date="2025-09-18"/> | [**SquiggleConf**](https://2025.squiggleconf.com/) | Boston    | TBD                                    | English |
+| <TalkDate date="2025-09-18"/> | [**SquiggleConf**](https://2025.squiggleconf.com/) | Boston    | Make Tools People Love                 | English |
 | <TalkDate date="2025-10-09"/> | [**ViteConf**](https://viteconf.amsterdam/)        | Amsterdam | Vite DevTools                          | English |
 | <TalkDate date="2025-10-25"/> | [**VueFes**](https://vuefes.jp/2025/)              | Tokyo     | Vite DevTools                          | 日本語  |
 | <TalkDate date="2025-13-12"/> | [**WebConf**](https://webconf.tw/)                 | Taipei    | Vite DevTools                          | 中文    |
