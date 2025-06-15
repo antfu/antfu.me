@@ -3,6 +3,7 @@ import type { Photo } from '../../../photos/data'
 
 defineProps<{
   photos: Photo[]
+  view?: 'cover' | 'contain'
 }>()
 </script>
 
@@ -14,7 +15,8 @@ defineProps<{
         :alt="photo.text"
         :data-photo-index="idx"
         loading="lazy"
-        w-full aspect-square object-cover
+        w-full
+        :class="view === 'contain' ? 'object-contain sm:aspect-square' : 'object-cover aspect-square'"
       >
     </div>
   </div>
