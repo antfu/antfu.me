@@ -142,7 +142,7 @@ Since versions move to `pnpm-workspace.yaml`, CLI tools would need to make some 
 
 ### Looking into the Future
 
-Currently, I see the value of categorize dependencies is mainly forbetter communication and easier version upgrade reviews. However, as this convention gains wider adoption and tooling support improves, we could integrate this information more deeply with our tools.
+Currently, I see the value of categorize dependencies is mainly for better communication and easier version upgrade reviews. However, as this convention gains wider adoption and tooling support improves, we could integrate this information more deeply with our tools.
 
 For example, in Vite, we could gain more explicit control over dependency optimization, decoupling it from the `dependencies` and `devDependencies` fields:
 
