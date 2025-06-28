@@ -308,16 +308,24 @@ export const book: MediaRecord[] = [
     creator: 'Shane Parrish',
   },
   {
-    name: 'The Pathless Path',
-    creator: 'Paul Millerd',
+    name: 'L\'étranger',
+    creator: 'Albert Camus',
   },
   {
     name: 'Outliers',
     creator: 'Malcolm Gladwel',
   },
   {
+    name: '夜は短し歩けよ乙女',
+    creator: '森見登美彦',
+  },
+  {
     name: 'Working in Public',
     creator: 'Nadia Eghbal',
+  },
+  {
+    name: 'The Pathless Path',
+    creator: 'Paul Millerd',
   },
   {
     name: 'The Psychology of Money',
