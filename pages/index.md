@@ -7,7 +7,7 @@ art: random
 
 Hey! I'm Anthony Fu, a fanatical open sourceror and design engineer.
 
-Working at {NuxtLabs}<br>
+Working at {NuxtLabs} / {Vercel}<br>
 Creator of {Vitest} {Slidev} {VueUse} {UnoCSS} {Elk} {Type Challenges}<br>
 Core team of {Vue} {Nuxt} {Vite}<br>
 Maintaining {Shiki} {Twoslash} {ESLint Stylistic}
@@ -42,9 +42,9 @@ Find me on
 
 Or mail me at <span font-mono>hi<span i-carbon-at/>antfu.me</span>
 
-Inactive on <span flex="~ inline gap-2 wrap"><a href="https://elk.zone/m.webtoo.ls/@antfu" target="_blank"><span op75 i-simple-icons-mastodon/> Mastodon</a> <a href="https://x.com/antfu7" target="_blank"><span op75 i-ri-twitter-x-fill /> Twitter</a>
+<span op50>(</span> Inactive on <span flex="~ inline gap-2 wrap"><a href="https://elk.zone/m.webtoo.ls/@antfu" target="_blank"><span op75 i-simple-icons-mastodon/> Mastodon</a> <a href="https://x.com/antfu7" target="_blank"><span op75 i-ri-twitter-x-fill /> Twitter</a>
 <a href="https://www.zhihu.com/people/antfu" target="_blank"><span op75 i-simple-icons-zhihu /> 知乎</a>
-<a href="https://weibo.com/u/7485197193" target="_blank"><span op75 i-simple-icons-sinaweibo /> 微博</a></span>
+<a href="https://weibo.com/u/7485197193" target="_blank"><span op75 i-simple-icons-sinaweibo /> 微博</a></span> <span op50>)</span>
 
 ---
 

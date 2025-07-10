@@ -126,7 +126,7 @@ export default defineConfig({
 
         md.use(MarkdownItMagicLink, {
           linksMap: {
-            'NuxtLabs': 'https://nuxtlabs.com',
+            'NuxtLabs': { link: 'https://nuxtlabs.com', imageUrl: 'https://nuxtlabs.com/nuxt.png' },
             'Vitest': 'https://github.com/vitest-dev/vitest',
             'Slidev': 'https://github.com/slidevjs/slidev',
             'VueUse': 'https://github.com/vueuse/vueuse',
