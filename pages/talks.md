@@ -21,7 +21,7 @@ art: plum
 | ----------------------------- | -------------------------------------------------- | --------- | -------------------------------------- | ------- |
 | <TalkDate date="2025-05-23"/> | [**TSKaigi**](https://2025.tskaigi.org/)           | Tokyo     | The New ESLint Config with Type Safety | English |
 | <TalkDate date="2025-06-13"/> | [**v-tokyo**](https://vuejs-meetup.connpass.com/)  | Tokyo     | VueとWebComponentsで作るAgnostic UI    | 日本語  |
-| <TalkDate date="2025-07-12"/> | [**VueConf China**](https://vueconf.cn/)           | Shenzhen  | Sneak Peek of Vite DevTools            | 中文    |
+| <TalkDate date="2025-07-12"/> | [**VueConf China**](https://vueconf.cn/)           | Shenzhen  | Vite DevTools 前瞻介绍                 | 中文    |
 | <TalkDate date="2025-08-10"/> | [**COSCUP**](https://coscup.org/2025/)             | Taipei    | Yak Shaving                            | 中文    |
 | <TalkDate date="2025-09-18"/> | [**SquiggleConf**](https://2025.squiggleconf.com/) | Boston    | Make Tools People Love                 | English |
 | <TalkDate date="2025-10-09"/> | [**ViteConf**](https://viteconf.amsterdam/)        | Amsterdam | Vite DevTools                          | English |

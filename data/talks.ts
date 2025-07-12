@@ -2,6 +2,21 @@ import type { Talk } from '~/types'
 
 export const talks: Talk[] = [
   {
+    title: 'Vite DevTools 前瞻介绍',
+    description: '提前预览 Vite DevTools 将会提供的能力，了解开发者工具的设计哲学，以及我们可以期待一些什么',
+    lang: 'zh',
+    presentations: [
+      {
+        date: '2025-07-12',
+        location: 'Shenzhen, China',
+        conference: 'VueConf China',
+        conferenceUrl: 'https://vueconf.cn/',
+        pdf: 'https://talks.antfu.me/2025-07-12/pdf',
+        spa: 'https://talks.antfu.me/2025/vueconf-china',
+      },
+    ],
+  },
+  {
     title: 'Vue と WebComponents で作る Agnostic UI',
     description: 'VueとWebComponentsを使って、UnoCSSによるスタイリングで、Agnosticなコンポーネントライブラリや埋め込み可能なUIをnpmパッケージとして簡単に作成できます',
     lang: 'ja',
