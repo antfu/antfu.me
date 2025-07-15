@@ -7,7 +7,7 @@ art: dots
 projects:
   Current Focus:
     - name: 'Vite DevTools'
-      link: 'https://github.com/antfu/vite-devtools'
+      link: 'https://github.com/vitejs/devtools'
       desc: 'Inspect the intermediate state of Vite bundle and pipeline'
       icon: 'i-simple-icons-vite'
     - name: 'Nuxt DevTools'
