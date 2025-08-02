@@ -11,15 +11,20 @@ const photos = computed(() => {
     return raw.slice(0, props.limit)
   return raw
 })
+
+function toggleView() {
+  gallaryView.value = gallaryView.value === 'cover' ? 'contain' : 'cover'
+}
 </script>
 
 <template>
-  <div flex="~ gap-1 col items-center justify-center" absolute sm:fixed left-6 top-24>
-    <button title="Switch to cover view" rounded-full p2 hover="op100 bg-#8881" :class="gallaryView === 'cover' ? 'op40' : 'op20'" @click="gallaryView = 'cover'">
-      <div i-ri-grid-line />
-    </button>
-    <button title="Switch to contain view" rounded-full p2 hover="op100 bg-#8881" :class="gallaryView === 'contain' ? 'op40' : 'op20'" @click="gallaryView = 'contain'">
-      <div i-ri-layout-masonry-line />
+  <div flex="~ gap-1 col items-center justify-center" absolute sm:fixed left-6 top-20>
+    <button
+      title="Switch view"
+      rounded-full p2 op20 hover="op100 bg-#8881"
+      @click="toggleView"
+    >
+      <div :class="gallaryView === 'cover' ? 'i-ri-grid-line' : 'i-ri-layout-masonry-line'" />
     </button>
   </div>
   <PhotoGrid :photos="photos" :view="gallaryView" />
