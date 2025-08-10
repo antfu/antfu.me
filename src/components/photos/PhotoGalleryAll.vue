@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import raw from '../../../photos/data'
-import { gallaryView } from '../../logics'
+import { galleryView } from '../../logics'
 
 const props = defineProps<{
   limit?: number
@@ -13,7 +13,7 @@ const photos = computed(() => {
 })
 
 function toggleView() {
-  gallaryView.value = gallaryView.value === 'cover' ? 'contain' : 'cover'
+  galleryView.value = galleryView.value === 'cover' ? 'contain' : 'cover'
 }
 </script>
 
@@ -24,8 +24,8 @@ function toggleView() {
       rounded-full p2 op20 hover="op100 bg-#8881"
       @click="toggleView"
     >
-      <div :class="gallaryView === 'cover' ? 'i-ri-grid-line' : 'i-ri-layout-masonry-line'" />
+      <div :class="galleryView === 'cover' ? 'i-ri-grid-line' : 'i-ri-layout-masonry-line'" />
     </button>
   </div>
-  <PhotoGrid :photos="photos" :view="gallaryView" />
+  <PhotoGrid :photos="photos" :view="galleryView" />
 </template>
