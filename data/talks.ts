@@ -70,6 +70,15 @@ export const talks: Talk[] = [
         pdf: 'https://talks.antfu.me/2024-10-19/pdf',
         spa: 'https://talks.antfu.me/2024/vue-fes-japan',
       },
+      {
+        date: '2025-08-10',
+        location: 'Taipei, Taiwan',
+        conference: 'COSCUP',
+        conferenceUrl: 'https://coscup.org/2025/',
+        recording: 'https://www.youtube.com/watch?v=Hx4ubZxxQJg',
+        pdf: 'https://talks.antfu.me/2025-08-10/pdf',
+        spa: 'https://talks.antfu.me/2025/coscup',
+      },
     ],
   },
   {
