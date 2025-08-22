@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Photo } from '../../../photos/data'
+import { blurhashToGradientCssObject } from '@unpic/placeholder'
 
 defineProps<{
   photos: Photo[]
@@ -14,6 +15,7 @@ defineProps<{
         :src="photo.url"
         :alt="photo.text"
         :data-photo-index="idx"
+        :style="photo.blurhash && view !== 'contain' ? blurhashToGradientCssObject(photo.blurhash) as any : ''"
         loading="lazy"
         w-full
         :class="view === 'contain' ? 'object-contain sm:aspect-square' : 'object-cover aspect-square'"
