@@ -103,3 +103,13 @@ for (const filepath of files) {
   config.blurhash = blurhash
   await fs.writeFile(configFile, JSON.stringify(config, null, 2))
 }
+
+// Clean up json files that don't have a corresponding image
+for (const json of await fg('**/*.json', {
+  caseSensitiveMatch: false,
+  absolute: true,
+  cwd: fileURLToPath(new URL('../photos', import.meta.url)),
+})) {
+  if (!existsSync(json.replace(/\.json$/, '.jpg')))
+    await fs.unlink(json)
+}

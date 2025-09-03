@@ -122,4 +122,440 @@ declare module 'vue-router/auto-routes' {
     '/talks': RouteRecordInfo<'/talks', '/talks', Record<never, never>, Record<never, never>>,
     '/use': RouteRecordInfo<'/use', '/use', Record<never, never>, Record<never, never>>,
   }
+
+  /**
+   * Route file to route info map by unplugin-vue-router.
+   * Used by the volar plugin to automatically type useRoute()
+   *
+   * Each key is a file path relative to the project root with 2 properties:
+   * - routes: union of route names of the possible routes when in this page (passed to useRoute<...>())
+   * - views: names of nested views (can be passed to <RouterView name="...">)
+   *
+   * @internal
+   */
+  export interface _RouteFileInfoMap {
+    'pages/index.md': {
+      routes: '/'
+      views: never
+    }
+    'pages/[...404].md': {
+      routes: '/[...404]'
+      views: never
+    }
+    'pages/bar.md': {
+      routes: '/bar'
+      views: never
+    }
+    'pages/bookmarks.md': {
+      routes: '/bookmarks'
+      views: never
+    }
+    'pages/chat.md': {
+      routes: '/chat'
+      views: never
+    }
+    'pages/chat-zh.md': {
+      routes: '/chat-zh'
+      views: never
+    }
+    'pages/collective-sponsor-onetime.md': {
+      routes: '/collective-sponsor-onetime'
+      views: never
+    }
+    'pages/demos.md': {
+      routes: '/demos'
+      views: never
+    }
+    'pages/giving-talks.md': {
+      routes: '/giving-talks'
+      views: never
+    }
+    'pages/media.md': {
+      routes: '/media'
+      views: never
+    }
+    'pages/notes.md': {
+      routes: '/notes'
+      views: never
+    }
+    'pages/photos.md': {
+      routes: '/photos'
+      views: never
+    }
+    'pages/podcasts.md': {
+      routes: '/podcasts'
+      views: never
+    }
+    'pages/posts/index.md': {
+      routes: '/posts/'
+      views: never
+    }
+    'pages/posts/about-yak-shaving.md': {
+      routes: '/posts/about-yak-shaving'
+      views: never
+    }
+    'pages/posts/about-yak-shaving-zh.md': {
+      routes: '/posts/about-yak-shaving-zh'
+      views: never
+    }
+    'pages/posts/ai-qrcode.md': {
+      routes: '/posts/ai-qrcode'
+      views: never
+    }
+    'pages/posts/ai-qrcode-101.md': {
+      routes: '/posts/ai-qrcode-101'
+      views: never
+    }
+    'pages/posts/ai-qrcode-refine.md': {
+      routes: '/posts/ai-qrcode-refine'
+      views: never
+    }
+    'pages/posts/animated-svg-logo.md': {
+      routes: '/posts/animated-svg-logo'
+      views: never
+    }
+    'pages/posts/async-sync-in-between.md': {
+      routes: '/posts/async-sync-in-between'
+      views: never
+    }
+    'pages/posts/async-with-composition-api.md': {
+      routes: '/posts/async-with-composition-api'
+      views: never
+    }
+    'pages/posts/binfe-2020-zh.md': {
+      routes: '/posts/binfe-2020-zh'
+      views: never
+    }
+    'pages/posts/bonjour-paris.md': {
+      routes: '/posts/bonjour-paris'
+      views: never
+    }
+    'pages/posts/break-lines-in-js.md': {
+      routes: '/posts/break-lines-in-js'
+      views: never
+    }
+    'pages/posts/categorize-deps.md': {
+      routes: '/posts/categorize-deps'
+      views: never
+    }
+    'pages/posts/color-scheme-for-vscode-ext.md': {
+      routes: '/posts/color-scheme-for-vscode-ext'
+      views: never
+    }
+    'pages/posts/composable-vue-vueconf-china-2021.md': {
+      routes: '/posts/composable-vue-vueconf-china-2021'
+      views: never
+    }
+    'pages/posts/composable-vue-vueday-2021.md': {
+      routes: '/posts/composable-vue-vueday-2021'
+      views: never
+    }
+    'pages/posts/destructuring-with-object-or-array.md': {
+      routes: '/posts/destructuring-with-object-or-array'
+      views: never
+    }
+    'pages/posts/dev-ssr-on-nuxt.md': {
+      routes: '/posts/dev-ssr-on-nuxt'
+      views: never
+    }
+    'pages/posts/domain-email.md': {
+      routes: '/posts/domain-email'
+      views: never
+    }
+    'pages/posts/epoch-semver.md': {
+      routes: '/posts/epoch-semver'
+      views: never
+    }
+    'pages/posts/eslint-config-inspector.md': {
+      routes: '/posts/eslint-config-inspector'
+      views: never
+    }
+    'pages/posts/evolution-of-shiki-v1.md': {
+      routes: '/posts/evolution-of-shiki-v1'
+      views: never
+    }
+    'pages/posts/get-package-root.md': {
+      routes: '/posts/get-package-root'
+      views: never
+    }
+    'pages/posts/github-alerts.md': {
+      routes: '/posts/github-alerts'
+      views: never
+    }
+    'pages/posts/github-co-authors.md': {
+      routes: '/posts/github-co-authors'
+      views: never
+    }
+    'pages/posts/hello-tokyo.md': {
+      routes: '/posts/hello-tokyo'
+      views: never
+    }
+    'pages/posts/icons-in-pure-css.md': {
+      routes: '/posts/icons-in-pure-css'
+      views: never
+    }
+    'pages/posts/icons-in-pure-css-zh.md': {
+      routes: '/posts/icons-in-pure-css-zh'
+      views: never
+    }
+    'pages/posts/introducing-nuxt-devtools.md': {
+      routes: '/posts/introducing-nuxt-devtools'
+      views: never
+    }
+    'pages/posts/introduction-to-vitest-vue-nation-2022.md': {
+      routes: '/posts/introduction-to-vitest-vue-nation-2022'
+      views: never
+    }
+    'pages/posts/isomorphic-dirname.md': {
+      routes: '/posts/isomorphic-dirname'
+      views: never
+    }
+    'pages/posts/journey-with-icons.md': {
+      routes: '/posts/journey-with-icons'
+      views: never
+    }
+    'pages/posts/journey-with-icons-continues.md': {
+      routes: '/posts/journey-with-icons-continues'
+      views: never
+    }
+    'pages/posts/make-libraries-working-with-vue-2-and-3.md': {
+      routes: '/posts/make-libraries-working-with-vue-2-and-3'
+      views: never
+    }
+    'pages/posts/manage-github-notifications-2023.md': {
+      routes: '/posts/manage-github-notifications-2023'
+      views: never
+    }
+    'pages/posts/match-chinese-characters.md': {
+      routes: '/posts/match-chinese-characters'
+      views: never
+    }
+    'pages/posts/match-quotes-in-pairs.md': {
+      routes: '/posts/match-quotes-in-pairs'
+      views: never
+    }
+    'pages/posts/mental-health-oss.md': {
+      routes: '/posts/mental-health-oss'
+      views: never
+    }
+    'pages/posts/mental-health-oss-zh.md': {
+      routes: '/posts/mental-health-oss-zh'
+      views: never
+    }
+    'pages/posts/move-on-to-esm-only.md': {
+      routes: '/posts/move-on-to-esm-only'
+      views: never
+    }
+    'pages/posts/netlify-redirects.md': {
+      routes: '/posts/netlify-redirects'
+      views: never
+    }
+    'pages/posts/new-house.md': {
+      routes: '/posts/new-house'
+      views: never
+    }
+    'pages/posts/new-ways-to-vue-london-2021.md': {
+      routes: '/posts/new-ways-to-vue-london-2021'
+      views: never
+    }
+    'pages/posts/new-ways-to-vue-taiwan-2021.md': {
+      routes: '/posts/new-ways-to-vue-taiwan-2021'
+      views: never
+    }
+    'pages/posts/now-and-future-devtools-nuxt-nation-2023.md': {
+      routes: '/posts/now-and-future-devtools-nuxt-nation-2023'
+      views: never
+    }
+    'pages/posts/npm-binary-mirrors.md': {
+      routes: '/posts/npm-binary-mirrors'
+      views: never
+    }
+    'pages/posts/nuxt-cpuprofile.md': {
+      routes: '/posts/nuxt-cpuprofile'
+      views: never
+    }
+    'pages/posts/nuxt-devtools-v1.md': {
+      routes: '/posts/nuxt-devtools-v1'
+      views: never
+    }
+    'pages/posts/nuxt-dx-2023.md': {
+      routes: '/posts/nuxt-dx-2023'
+      views: never
+    }
+    'pages/posts/nuxt-dx-strasbourg-2023.md': {
+      routes: '/posts/nuxt-dx-strasbourg-2023'
+      views: never
+    }
+    'pages/posts/nuxt-icon-v1.md': {
+      routes: '/posts/nuxt-icon-v1'
+      views: never
+    }
+    'pages/posts/ohayo-tokyo.md': {
+      routes: '/posts/ohayo-tokyo'
+      views: never
+    }
+    'pages/posts/optimize-await.md': {
+      routes: '/posts/optimize-await'
+      views: never
+    }
+    'pages/posts/patterns-of-vueuse-vuefes-japan-2022.md': {
+      routes: '/posts/patterns-of-vueuse-vuefes-japan-2022'
+      views: never
+    }
+    'pages/posts/photos-page.md': {
+      routes: '/posts/photos-page'
+      views: never
+    }
+    'pages/posts/pnpm-external-disk.md': {
+      routes: '/posts/pnpm-external-disk'
+      views: never
+    }
+    'pages/posts/publish-esm-and-cjs.md': {
+      routes: '/posts/publish-esm-and-cjs'
+      views: never
+    }
+    'pages/posts/range-in-javascript.md': {
+      routes: '/posts/range-in-javascript'
+      views: never
+    }
+    'pages/posts/reflection-of-speaking-in-public.md': {
+      routes: '/posts/reflection-of-speaking-in-public'
+      views: never
+    }
+    'pages/posts/refreshed-nuxt-eslint.md': {
+      routes: '/posts/refreshed-nuxt-eslint'
+      views: never
+    }
+    'pages/posts/reimagine-atomic-css.md': {
+      routes: '/posts/reimagine-atomic-css'
+      views: never
+    }
+    'pages/posts/reimagine-atomic-css-zh.md': {
+      routes: '/posts/reimagine-atomic-css-zh'
+      views: never
+    }
+    'pages/posts/rewrite-in-vite.md': {
+      routes: '/posts/rewrite-in-vite'
+      views: never
+    }
+    'pages/posts/roads-to-oss-progressive-vueams-2024.md': {
+      routes: '/posts/roads-to-oss-progressive-vueams-2024'
+      views: never
+    }
+    'pages/posts/roads-to-oss-set-theory-react-paris-2024.md': {
+      routes: '/posts/roads-to-oss-set-theory-react-paris-2024'
+      views: never
+    }
+    'pages/posts/roads-to-oss-set-theory-viteconf-2023.md': {
+      routes: '/posts/roads-to-oss-set-theory-viteconf-2023'
+      views: never
+    }
+    'pages/posts/roads-to-oss-set-theory-vuefesjapan-2023.md': {
+      routes: '/posts/roads-to-oss-set-theory-vuefesjapan-2023'
+      views: never
+    }
+    'pages/posts/shiki-magic-move.md': {
+      routes: '/posts/shiki-magic-move'
+      views: never
+    }
+    'pages/posts/shikiji-twoslash.md': {
+      routes: '/posts/shikiji-twoslash'
+      views: never
+    }
+    'pages/posts/sliding-enter-animation.md': {
+      routes: '/posts/sliding-enter-animation'
+      views: never
+    }
+    'pages/posts/sponsorship-forwarding.md': {
+      routes: '/posts/sponsorship-forwarding'
+      views: never
+    }
+    'pages/posts/type-inferencing-in-vue.md': {
+      routes: '/posts/type-inferencing-in-vue'
+      views: never
+    }
+    'pages/posts/type-your-config.md': {
+      routes: '/posts/type-your-config'
+      views: never
+    }
+    'pages/posts/typed-provide-and-inject-in-vue.md': {
+      routes: '/posts/typed-provide-and-inject-in-vue'
+      views: never
+    }
+    'pages/posts/types-for-sub-modules.md': {
+      routes: '/posts/types-for-sub-modules'
+      views: never
+    }
+    'pages/posts/vite-on-demand-dx-viteconf-2022.md': {
+      routes: '/posts/vite-on-demand-dx-viteconf-2022'
+      views: never
+    }
+    'pages/posts/vue-3-notes.md': {
+      routes: '/posts/vue-3-notes'
+      views: never
+    }
+    'pages/posts/vue-beijing-2021.md': {
+      routes: '/posts/vue-beijing-2021'
+      views: never
+    }
+    'pages/posts/vueuse-best-practice-vueconf-china-2022.md': {
+      routes: '/posts/vueuse-best-practice-vueconf-china-2022'
+      views: never
+    }
+    'pages/posts/watch-with-reactivity.md': {
+      routes: '/posts/watch-with-reactivity'
+      views: never
+    }
+    'pages/posts/why-not-prettier.md': {
+      routes: '/posts/why-not-prettier'
+      views: never
+    }
+    'pages/posts/why-not-prettier-zh.md': {
+      routes: '/posts/why-not-prettier-zh'
+      views: never
+    }
+    'pages/posts/why-reproductions-are-required.md': {
+      routes: '/posts/why-reproductions-are-required'
+      views: never
+    }
+    'pages/posts/why-reproductions-are-required-zh.md': {
+      routes: '/posts/why-reproductions-are-required-zh'
+      views: never
+    }
+    'pages/posts/windicss-and-tailwind-jit.md': {
+      routes: '/posts/windicss-and-tailwind-jit'
+      views: never
+    }
+    'pages/projects.md': {
+      routes: '/projects'
+      views: never
+    }
+    'pages/sponsors-list.md': {
+      routes: '/sponsors-list'
+      views: never
+    }
+    'pages/streams.md': {
+      routes: '/streams'
+      views: never
+    }
+    'pages/talks.md': {
+      routes: '/talks'
+      views: never
+    }
+    'pages/use.md': {
+      routes: '/use'
+      views: never
+    }
+  }
+
+  /**
+   * Get a union of possible route names in a certain route component file.
+   * Used by the volar plugin to automatically type useRoute()
+   *
+   * @internal
+   */
+  export type _RouteNamesForFilePath<FilePath extends string> =
+    _RouteFileInfoMap extends Record<FilePath, infer Info>
+      ? Info['routes']
+      : keyof RouteNamedMap
 }
