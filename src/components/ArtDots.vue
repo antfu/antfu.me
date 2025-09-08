@@ -90,7 +90,13 @@ async function setup() {
       addPoints({ dotTexture, particleContainer })
     })
     onScopeDispose(() => {
-      app?.destroy(true, { children: true, texture: true, textureSource: true })
+      // For some reason this throws an error, maybe something wrong with pixi.js
+      try {
+        app?.destroy(true, { children: true, texture: true, textureSource: true })
+      }
+      catch (error) {
+        console.error(error)
+      }
     })
   })
 }
