@@ -115,11 +115,14 @@
 /markdown-it-github-alerts	https://github.com/antfu/markdown-it-github-alerts	302
 /markdown-it-magic-link	https://github.com/antfu/markdown-it-magic-link	302
 /markdown-it-mdc	https://github.com/antfu/markdown-it-mdc	302
+/nanovis	https://github.com/antfu/nanovis	302
+/nip	https://github.com/antfu/nip	302
 /nitro-shikiji	https://github.com/antfu/nitro-shikiji	302
 /node-modules-inspector	https://github.com/antfu/node-modules-inspector	302
 /npm-ping	https://github.com/antfu/npm-ping	302
 /nuxt-content-twoslash	https://github.com/antfu/nuxt-content-twoslash	302
 /nuxt-eslint-auto-explicit-import	https://github.com/antfu/nuxt-eslint-auto-explicit-import	302
+/nuxt-mcp	https://github.com/antfu/nuxt-mcp	302
 /nuxt-server-fn	https://github.com/antfu/nuxt-server-fn	302
 /nuxt-tsconfig-stub	https://github.com/antfu/nuxt-tsconfig-stub	302
 /p5i	https://github.com/antfu/p5i	302
@@ -127,6 +130,7 @@
 /pkg-exports	https://github.com/antfu/pkg-exports	302
 /plum-demo	https://github.com/antfu/plum-demo	302
 /pnpm-patch-i	https://github.com/antfu/pnpm-patch-i	302
+/pnpm-workspace-utils	https://github.com/antfu/pnpm-workspace-utils	302
 /prism-theme-vars	https://github.com/antfu/prism-theme-vars	302
 /qr-scanner-wechat	https://github.com/antfu/qr-scanner-wechat	302
 /qr-verify	https://github.com/antfu/qr-verify	302
