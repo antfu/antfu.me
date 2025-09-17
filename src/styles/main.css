@@ -2,6 +2,7 @@
   --c-bg: #fff;
   --c-scrollbar: #eee;
   --c-scrollbar-hover: #bbb;
+  color-scheme: light dark;
 }
 
 html {
@@ -14,6 +15,7 @@ html.dark {
   --c-bg: #050505;
   --c-scrollbar: #111;
   --c-scrollbar-hover: #222;
+  color-scheme: dark;
 }
 
 ::selection {
