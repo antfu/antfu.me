@@ -2,6 +2,31 @@ import type { Talk } from '~/types'
 
 export const talks: Talk[] = [
   {
+    title: 'Introducing Vite DevTools',
+    description: 'Introduction to Vite DevTools',
+    presentations: [
+      {
+        lang: 'zh',
+        date: '2025-07-12',
+        location: 'Shenzhen, China',
+        conference: 'VueConf China',
+        conferenceUrl: 'https://vueconf.cn/',
+        recording: 'https://www.bilibili.com/video/BV1Nqb1zoENu/',
+        pdf: 'https://talks.antfu.me/2025-07-12/pdf',
+        spa: 'https://talks.antfu.me/2025/vueconf-china',
+      },
+      {
+        lang: 'en',
+        date: '2025-10-09',
+        location: 'Amsterdam, Netherlands',
+        conference: 'ViteConf',
+        conferenceUrl: 'https://viteconf.amsterdam/',
+        pdf: 'https://talks.antfu.me/2025-10-09/pdf',
+        spa: 'https://talks.antfu.me/2025/viteconf',
+      },
+    ],
+  },
+  {
     title: 'Make Tools People Love',
     description: 'What I\'ve learned about building tools that delight developers',
     presentations: [
@@ -12,22 +37,6 @@ export const talks: Talk[] = [
         conferenceUrl: 'https://2025.squiggleconf.com/',
         pdf: 'https://talks.antfu.me/2025-09-18/pdf',
         spa: 'https://talks.antfu.me/2025/squiggleconf',
-      },
-    ],
-  },
-  {
-    title: 'Vite DevTools 前瞻介绍',
-    description: '提前预览 Vite DevTools 将会提供的能力，了解开发者工具的设计哲学，以及我们可以期待一些什么',
-    lang: 'zh',
-    presentations: [
-      {
-        date: '2025-07-12',
-        location: 'Shenzhen, China',
-        conference: 'VueConf China',
-        conferenceUrl: 'https://vueconf.cn/',
-        recording: 'https://www.bilibili.com/video/BV1Nqb1zoENu/',
-        pdf: 'https://talks.antfu.me/2025-07-12/pdf',
-        spa: 'https://talks.antfu.me/2025/vueconf-china',
       },
     ],
   },
