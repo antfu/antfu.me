@@ -2,10 +2,10 @@ packages: []
 
 catalogs:
   build:
-    '@shikijs/markdown-it': ^3.12.2
-    '@shikijs/transformers': ^3.12.2
-    '@shikijs/twoslash': ^3.12.2
-    '@unocss/preset-web-fonts': ^66.5.1
+    '@shikijs/markdown-it': ^3.13.0
+    '@shikijs/transformers': ^3.13.0
+    '@shikijs/twoslash': ^3.13.0
+    '@unocss/preset-web-fonts': ^66.5.4
     '@vitejs/plugin-vue': ^6.0.1
     gray-matter: ^4.0.3
     markdown-it: ^14.1.0
@@ -13,48 +13,48 @@ catalogs:
     markdown-it-github-alerts: ^1.0.0
     markdown-it-link-attributes: ^4.0.1
     markdown-it-magic-link: ^0.1.4
-    markdown-it-table-of-contents: ^1.0.0
-    unocss: ^66.5.1
-    unplugin-auto-import: ^20.1.0
-    unplugin-icons: ^22.3.0
-    unplugin-vue-components: ^29.0.0
-    unplugin-vue-markdown: ^29.1.0
-    unplugin-vue-router: ^0.15.0
-    vite: ^7.1.5
+    markdown-it-table-of-contents: ^1.1.0
+    unocss: ^66.5.4
+    unplugin-auto-import: ^20.2.0
+    unplugin-icons: ^22.5.0
+    unplugin-vue-components: ^30.0.0
+    unplugin-vue-markdown: ^29.2.0
+    unplugin-vue-router: ^0.16.0
+    vite: ^7.1.11
     vite-plugin-inspect: ^11.3.3
     vite-plugin-optimize-exclude: ^0.0.1
-    vite-ssg: ^28.1.0
+    vite-ssg: ^28.2.2
     vite-svg-loader: ^5.1.0
   dev:
-    '@antfu/eslint-config': ^5.3.0
-    '@iconify/json': ^2.2.384
-    '@octokit/core': ^7.0.4
+    '@antfu/eslint-config': ^6.0.0
+    '@iconify/json': ^2.2.398
+    '@octokit/core': ^7.0.5
     '@octokit/rest': ^22.0.0
-    ansis: ^4.1.0
+    ansis: ^4.2.0
     blurhash: ^2.0.5
-    cross-env: ^10.0.0
+    cross-env: ^10.1.0
     degit: ^2.8.4
     diacritics: ^1.3.0
-    eslint: ^9.35.0
-    eslint-plugin-format: ^1.0.1
-    exifreader: ^4.31.2
+    eslint: ^9.38.0
+    eslint-plugin-format: ^1.0.2
+    exifreader: ^4.32.0
     fast-glob: ^3.3.3
     feed: ^5.1.0
     fs-extra: ^11.3.2
-    lint-staged: ^16.1.6
+    lint-staged: ^16.2.5
     pathe: ^2.0.3
-    pnpm: ^10.16.1
+    pnpm: ^10.19.0
     prompts: ^2.4.2
     rimraf: ^6.0.1
     sharp: 0.32.6
     simple-git: ^3.28.0
     simple-git-hooks: ^2.13.1
-    tsx: ^4.20.5
-    typescript: ~5.9.2
+    tsx: ^4.20.6
+    typescript: ~5.9.3
   frontend:
-    '@antfu/utils': ^9.2.0
-    '@unhead/vue': ^2.0.14
-    '@unocss/reset': ^66.5.1
+    '@antfu/utils': ^9.3.0
+    '@unhead/vue': ^2.0.19
+    '@unocss/reset': ^66.5.4
     '@unpic/placeholder': ^0.1.2
     '@vueuse/core': ^13.9.0
     d3-hierarchy: ^3.1.2
@@ -65,12 +65,12 @@ catalogs:
     matter-js: ^0.20.0
     nprogress: ^0.2.0
     pinia: ^3.0.3
-    pixi.js: ^8.13.2
-    shiki: ^3.12.2
-    shiki-magic-move: ^1.1.0
+    pixi.js: ^8.14.0
+    shiki: ^3.13.0
+    shiki-magic-move: ^1.2.0
     simplex-noise: ^4.0.3
-    vue: ^3.5.21
-    vue-router: ^4.5.1
+    vue: ^3.5.22
+    vue-router: ^4.6.3
     vue-router-better-scroller: ^0.0.0
   types:
     '@types/d3-hierarchy': ^3.1.7
@@ -80,7 +80,7 @@ catalogs:
     '@types/fs-extra': ^11.0.4
     '@types/markdown-it': ^14.1.2
     '@types/markdown-it-link-attributes': ^3.0.5
-    '@types/node': ^24.5.0
+    '@types/node': ^24.9.1
     '@types/nprogress': ^0.2.3
     '@types/prompts': ^2.4.9
 
