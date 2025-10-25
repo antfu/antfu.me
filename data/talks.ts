@@ -24,6 +24,15 @@ export const talks: Talk[] = [
         pdf: 'https://talks.antfu.me/2025-10-09/pdf',
         spa: 'https://talks.antfu.me/2025/viteconf',
       },
+      {
+        lang: 'ja',
+        date: '2025-10-25',
+        location: 'Tokyo, Japan',
+        conference: 'Vue Fes Japan',
+        conferenceUrl: 'https://vuefes.jp/2025/en/',
+        pdf: 'https://talks.antfu.me/2025-10-25/pdf',
+        spa: 'https://talks.antfu.me/2025/vuefes',
+      },
     ],
   },
   {
