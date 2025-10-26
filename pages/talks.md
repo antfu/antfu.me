@@ -13,9 +13,11 @@ art: plum
   <RouterLink to="/giving-talks" op50>Speaker Info</RouterLink>
 </div>
 
+<!--
 <div pt-5 />
 
-### Talk Schedule 2025
+<details>
+<summary><span text-lg>Talk Schedule 2025</span></summary>
 
 | Date                          | Conference                                         | Location  | Topic                                  | Lang    |
 | ----------------------------- | -------------------------------------------------- | --------- | -------------------------------------- | ------- |
@@ -26,6 +28,8 @@ art: plum
 | <TalkDate date="2025-09-18"/> | [**SquiggleConf**](https://2025.squiggleconf.com/) | Boston    | Make Tools People Love                 | English |
 | <TalkDate date="2025-10-09"/> | [**ViteConf**](https://viteconf.amsterdam/)        | Amsterdam | Vite DevTools                          | English |
 | <TalkDate date="2025-10-25"/> | [**VueFes**](https://vuefes.jp/2025/)              | Tokyo     | Vite DevTools                          | 日本語  |
+
+</details>
 
 <div pt-5 />
 
@@ -52,7 +56,8 @@ art: plum
 | <TalkDate date="2024-12-27"/> | [**WebConf Taiwan**](https://webconf.tw/)                                                            | Taipei               | ESLint One for All Made Easy                                        |
 
 </details>
+-->
 
-<h1 important="mb--4 mt-15">Latest Talks</h1>
+<h1 important="mb--4 mt-15">Talks</h1>
 
 <ListTalks />

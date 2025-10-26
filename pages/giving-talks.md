@@ -7,7 +7,7 @@ display: ''
 
 Hey! My name is [Anthony Fu](/). I am a fanatical open sourceror living in Tokyo. I am focusing on many areas in frontend like Vite, Vue, Nuxt, DX, CSS, etc.
 
-[The talks I have given](/talks).
+[Talks I have given](/talks).
 
 <!--
 If you are organizing a frontend related conference or meetup, I'd be happy to give a talk!
@@ -19,7 +19,8 @@ If you are organizing a frontend related conference or meetup, I'd be happy to g
 You can reach me out at [talks@antfu.me](mailto:talks@antfu.me). Looking forward to it!
 -->
 
-> ℹ️ I am currently taking a **break** on giving talks.
+> [!NOTE]
+> I am currently taking a **break** on giving talks.
 
 ## Information
 
