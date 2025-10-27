@@ -51,6 +51,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/dev-ssr-on-nuxt': RouteRecordInfo<'/posts/dev-ssr-on-nuxt', '/posts/dev-ssr-on-nuxt', Record<never, never>, Record<never, never>>,
     '/posts/domain-email': RouteRecordInfo<'/posts/domain-email', '/posts/domain-email', Record<never, never>, Record<never, never>>,
     '/posts/epoch-semver': RouteRecordInfo<'/posts/epoch-semver', '/posts/epoch-semver', Record<never, never>, Record<never, never>>,
+    '/posts/epoch-semver-zh': RouteRecordInfo<'/posts/epoch-semver-zh', '/posts/epoch-semver-zh', Record<never, never>, Record<never, never>>,
     '/posts/eslint-config-inspector': RouteRecordInfo<'/posts/eslint-config-inspector', '/posts/eslint-config-inspector', Record<never, never>, Record<never, never>>,
     '/posts/evolution-of-shiki-v1': RouteRecordInfo<'/posts/evolution-of-shiki-v1', '/posts/evolution-of-shiki-v1', Record<never, never>, Record<never, never>>,
     '/posts/get-package-root': RouteRecordInfo<'/posts/get-package-root', '/posts/get-package-root', Record<never, never>, Record<never, never>>,
