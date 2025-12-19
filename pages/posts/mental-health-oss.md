@@ -145,9 +145,7 @@ Meanwhile, there are actually many other things about open source I didn't get t
 
 ### Thanks
 
-At the end, I want to give a huge thanks to my girlfriend [Inès](https://www.instagram.com/iiiiiiines__/), who has been supporting me and helping me to get through those tough times since the very beginning. Without her great support, I probably wouldn't be in open source today.
-
-Also, thanks to {@patak-dev} and {@posva} for our deep conversations around this topic, they really helped me a lot and provided great support.
+Thanks to {@patak-dev} and {@posva} for our deep conversations around this topic, they really helped me a lot and provided great support.
 
 And **You**, as well as the great open source community! I am so grateful for all the help and support I have received from you.
 
