@@ -4,6 +4,7 @@ date: 2024-11-14T16:39:42
 lang: zh-CN
 type: blog
 duration: 2h
+description: 详细介绍如何创建 Babel 插件，涵盖抽象语法树（AST）、插件编写技巧、测试方法等 Babel 插件开发的核心知识
 ---
 
 [[toc]]

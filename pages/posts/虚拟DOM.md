@@ -4,6 +4,7 @@ date: 2024-12-01T14:16:51
 lang: zh-CN
 type: blog
 duration: 30min
+description: 深入理解虚拟 DOM 的概念、原理及其优势，探讨为何虚拟 DOM 能提升渲染性能以及其在多平台渲染中的作用
 ---
 
 [[toc]]

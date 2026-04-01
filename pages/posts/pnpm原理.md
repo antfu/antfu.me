@@ -4,6 +4,7 @@ date: 2022-11-14T16:25:20
 lang: zh-CN
 type: blog
 duration: 10min
+description: 深入理解 pnpm 的核心原理，包括硬链接、符号链接在 node_modules 目录结构中的应用，以及如何实现高效的包管理
 ---
 
 [[toc]]

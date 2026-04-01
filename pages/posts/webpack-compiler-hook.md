@@ -4,6 +4,7 @@ date: 2022-11-14T14:47:01
 lang: zh-CN
 type: daily
 duration: 12min
+description: 深入理解 Webpack 的 tapable 钩子机制，通过代码模拟实现 SyncHook、SyncBailHook、SyncWaterfallHook 等常用同步钩子
 ---
 
 [[toc]]
