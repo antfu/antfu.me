@@ -4,6 +4,7 @@ date: 2024-12-06T09:13:09
 lang: zh-CN
 type: blog
 duration: 15min
+description: 深入理解 React 的两大核心阶段——Reconciler 协调阶段和 Renderer 渲染阶段，以及 render 阶段和 commit 阶段的工作流程
 ---
 
 [[toc]]

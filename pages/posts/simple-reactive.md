@@ -4,6 +4,7 @@ date: 2023-03-27T16:00:00
 lang: en
 type: daily
 duration: 12min
+description: 通过 Dep 类和 Object.defineProperty 实现一个简易的响应式数据系统，理解 Vue 等框架中数据响应式的核心原理
 ---
 
 [[toc]]

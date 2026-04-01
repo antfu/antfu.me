@@ -4,6 +4,7 @@ date: 2020-11-14T14:49:49
 lang: zh-CN
 type: daily
 duration: 10min
+description: 记录日常开发中遇到的 CSS 样式问题及解决方案，包括标点符号换行、多行文字处理、文字超出显示省略号等常见样式技巧
 ---
 
 [[toc]]

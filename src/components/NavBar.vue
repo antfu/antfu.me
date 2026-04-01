@@ -1,87 +1,99 @@
 <script setup lang="ts">
-function toTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  })
-}
+import BackToTop from './BackToTop.vue'
+import Search from './Search.vue'
 
-const { y: scroll } = useWindowScroll()
+const searchOpen = ref(false)
 </script>
 
 <template>
-  <header class="header z-40">
-    <RouterLink
-      class="w-20 h-20 absolute xl:fixed m-5 select-none outline-none"
-      to="/"
-      focusable="false"
-    >
-      <text class="rainbow">
-        韩海Tempest
-      </text>
-    </RouterLink>
-    <button
-      title="Scroll to top"
-      fixed right-3 bottom-3 w-10 h-10 hover:op100 rounded-full
-      hover-bg-hex-8883 transition duration-300 z-100 print:hidden
-      :class="scroll > 300 ? 'op30' : 'op0! pointer-events-none'"
-      @click="toTop()"
-    >
-      <div i-ri-arrow-up-line />
-    </button>
+  <header class="header fixed top-0 left-0 right-0 z-40">
+    <div class="header-left">
+      <RouterLink
+        class="logo select-none outline-none"
+        to="/"
+        focusable="false"
+      >
+        <text class="rainbow">
+          Rex Wang
+        </text>
+      </RouterLink>
+    </div>
     <nav class="nav">
       <div class="spacer" />
       <div class="right" print:op0>
-        <RouterLink to="/posts" title="Blog">
-          <span class="lt-md:hidden">Blog</span>
+        <button title="搜索" class="search-btn mr-2" @click="searchOpen = true">
+          <div i-ri-search-line />
+        </button>
+        <RouterLink to="/posts" title="博客">
+          <span class="lt-md:hidden">博客</span>
           <div i-ri-article-line md:hidden />
         </RouterLink>
-        <RouterLink to="/daily" title="Daily">
-          <span class="lt-md:hidden">Daily</span>
+        <RouterLink to="/daily" title="碎记">
+          <span class="lt-md:hidden">碎记</span>
           <div i-ri-article-line md:hidden />
         </RouterLink>
-        <RouterLink to="/thinking" title="Thinking">
-          <span class="lt-md:hidden">Thinking</span>
-          <div i-ri-article-line md:hidden />
-        </RouterLink>
-        <!-- <RouterLink to="/design" title="Design">
-          <span class="lt-md:hidden">Design</span>
+        <!-- <RouterLink to="/thinking" title="思考">
+          <span class="lt-md:hidden">思考</span>
           <div i-ri-article-line md:hidden />
         </RouterLink> -->
-        <RouterLink to="/interest" title="Interest">
-          <span class="lt-md:hidden">Interest</span>
+        <!-- <RouterLink to="/design" title="设计">
+          <span class="lt-md:hidden">设计</span>
+          <div i-ri-article-line md:hidden />
+        </RouterLink> -->
+        <RouterLink to="/product" title="产品">
+          <span class="lt-md:hidden">产品</span>
+          <div i-ri-article-line md:hidden />
+        </RouterLink>
+        <RouterLink to="/interest" title="兴趣">
+          <span class="lt-md:hidden">兴趣</span>
           <div i-ri-article-line md:hidden />
         </RouterLink>
         <a href="https://github.com/OnlyProbie" target="_blank" title="GitHub" class="lt-md:hidden">
           <div i-uil-github-alt />
         </a>
-        <ToggleTheme />
+        <div class="theme-btn">
+          <ToggleTheme />
+        </div>
       </div>
     </nav>
   </header>
+  <Search v-model="searchOpen" />
+  <BackToTop />
 </template>
 
 <style scoped>
-.header h1 {
-  margin-bottom: 0;
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  height: 4rem;
+  background: linear-gradient(to right, var(--c-bg), transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.dark .header {
+  background: linear-gradient(to right, var(--c-bg), transparent);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .logo {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav {
-  padding: 2rem;
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto max-content;
-  box-sizing: border-box;
-}
-
-.nav > * {
-  margin: auto;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 1rem;
 }
 
 .nav img {
@@ -92,9 +104,19 @@ const { y: scroll } = useWindowScroll()
   cursor: pointer;
   text-decoration: none;
   color: inherit;
-  transition: opacity 0.2s ease;
+  transition:
+    opacity 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
   opacity: 0.6;
   outline: none;
+  text-align: center;
+  width: 3.5rem;
+  height: 2rem;
+  line-height: 2rem;
+  display: inline-block;
+  position: relative;
 }
 
 .nav a:hover {
@@ -102,13 +124,61 @@ const { y: scroll } = useWindowScroll()
   text-decoration-color: inherit;
 }
 
-.nav .right {
-  display: grid;
-  grid-gap: 1.2rem;
-  grid-auto-flow: column;
+.nav a.router-link-active {
+  opacity: 1;
+  color: var(--c-text);
+  background: rgba(128, 128, 128, 0.15);
+  border-radius: 0.5rem;
+  transform: scale(1.05);
+  animation: activePulse 0.3s ease;
 }
 
-.nav .right > * {
+@keyframes activePulse {
+  0% {
+    background: rgba(128, 128, 128, 0);
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    background: rgba(128, 128, 128, 0.15);
+    transform: scale(1.05);
+  }
+}
+
+.nav a.router-link-active .lt-md\:hidden {
+  background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.nav .right {
+  display: grid;
+  grid-gap: 0;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+.nav .right > *:not(.search-btn):not(a[href^='http']):not(.theme-btn) {
   margin: auto;
+}
+
+.search-btn {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.search-btn:hover {
+  opacity: 1;
 }
 </style>

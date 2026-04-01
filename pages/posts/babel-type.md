@@ -4,6 +4,7 @@ date: 2024-11-14T16:43:27
 lang: zh-CN
 type: blog
 duration: 10min
+description: 深入解析 Babel 核心工具库，包括 @babel/core、@babel/cli、@babel/preset-env、@babel/plugin-transform-runtime 等常用包的作用与用法
 ---
 
 [[toc]]
