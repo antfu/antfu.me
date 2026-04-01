@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router/auto'
-import { type ProductData, productsData } from '~/data/productsAuto'
+import { productsData } from '~/data/productsAuto'
 
 const router = useRouter()
 

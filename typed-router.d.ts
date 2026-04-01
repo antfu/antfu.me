@@ -30,6 +30,7 @@ declare module 'vue-router/auto-routes' {
     '/content/product/vite-plugin': RouteRecordInfo<'/content/product/vite-plugin', '/content/product/vite-plugin', Record<never, never>, Record<never, never>>,
     '/content/product/vue-components': RouteRecordInfo<'/content/product/vue-components', '/content/product/vue-components', Record<never, never>, Record<never, never>>,
     '/content/product/vue-components-copy': RouteRecordInfo<'/content/product/vue-components-copy', '/content/product/vue-components-copy', Record<never, never>, Record<never, never>>,
+    '/create/': RouteRecordInfo<'/create/', '/create', Record<never, never>, Record<never, never>>,
     '/daily/': RouteRecordInfo<'/daily/', '/daily', Record<never, never>, Record<never, never>>,
     '/daily/[date]': RouteRecordInfo<'/daily/[date]', '/daily/:date', { date: ParamValue<true> }, { date: ParamValue<false> }>,
     '/design/': RouteRecordInfo<'/design/', '/design', Record<never, never>, Record<never, never>>,

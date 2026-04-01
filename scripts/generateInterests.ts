@@ -1,8 +1,8 @@
+import path from 'node:path'
 import fg from 'fast-glob'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
 import MarkdownIt from 'markdown-it'
-import path from 'path'
 
 const md = new MarkdownIt()
 
@@ -22,7 +22,7 @@ interface InterestData {
   images: InterestImage[]
 }
 
-function parseFilename(filename: string): { city: string; spot: string; date: string } {
+function parseFilename(filename: string): { city: string, spot: string, date: string } {
   const nameWithoutExt = path.basename(filename, path.extname(filename))
   const parts = nameWithoutExt.split('-')
 

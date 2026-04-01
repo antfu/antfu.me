@@ -14,7 +14,7 @@ const router = useRouter()
 const searchQuery = ref('')
 const isOpen = computed({
   get: () => props.modelValue,
-  set: (val) => emit('update:modelValue', val),
+  set: val => emit('update:modelValue', val),
 })
 
 const allPosts = computed(() => {
@@ -95,7 +95,9 @@ onMounted(() => {
               class="search-item"
               @click="navigate(post.path)"
             >
-              <div class="search-item-title">{{ post.title }}</div>
+              <div class="search-item-title">
+                {{ post.title }}
+              </div>
               <div class="search-item-meta">
                 <span>{{ formatDate(post.date, true) }}</span>
                 <span v-if="post.duration">{{ post.duration }}</span>
