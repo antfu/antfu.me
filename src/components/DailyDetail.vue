@@ -2,18 +2,17 @@
 import MarkdownIt from 'markdown-it'
 import { dailyRecords } from '../data/dailiesAuto'
 
-const props = defineProps<{
-  date: string
-}>()
+const route = useRoute()
+const date = computed(() => route.params.date as string)
 
 const md = new MarkdownIt()
 
-const record = computed(() => dailyRecords.find(r => r.date === props.date))
+const record = computed(() => dailyRecords.find(r => r.date === date.value))
 
 const formattedDate = computed(() => {
-  if (!props.date)
+  if (!date.value)
     return ''
-  const [year, month, day] = props.date.split('-')
+  const [year, month, day] = date.value.split('-')
   return `${year}年${month}月${day}日`
 })
 
