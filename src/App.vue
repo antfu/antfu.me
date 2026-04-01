@@ -45,7 +45,7 @@ onKeyStroke('Escape', (e) => {
 
 <template>
   <NavBar />
-  <main class="px-7 mt-30 mb-5 of-x-hidden">
+  <main class="px-7 mt-28 mb-5 of-x-hidden">
     <RouterView />
     <ClientOnly>
       <ParticleNetwork v-if="route.path === '/'" />

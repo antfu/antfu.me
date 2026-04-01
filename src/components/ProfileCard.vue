@@ -2,7 +2,8 @@
 const profile = {
   name: 'Rex Wang',
   title: '前端开发 | 产品经理',
-  description: '不会设计的前端开发不是好产品经理，乐于主动探索各类新技术；崇尚极简主义，专注从 0 到 1 的创造过程；业余深耕明史，以历史逻辑沉淀思考，反哺技术与产品决策。',
+  flag: '懂设计的前端，才是合格的产品经理 | 极简主义者 | 明史爱好者',
+  description: '乐于主动探索AI新技术；崇尚极简主义，专注从 0 到 1 的创造过程；业余明史爱好者，以历史逻辑沉淀思考，反哺技术与产品决策。',
   work: {
     company: '某互联网公司',
     position: '资深前端开发工程师 | 产品经理',
@@ -13,6 +14,11 @@ const profile = {
     '产品设计',
     '用户体验',
     '项目管理',
+  ],
+  hobbys: [
+    '架子鼓',
+    '策略游戏',
+    '神经网络',
   ],
   social: {
     github: 'https://github.com/OnlyProbie',
@@ -38,6 +44,12 @@ const profile = {
             {{ profile.title }}
           </p>
         </div>
+      </div>
+
+      <div class="profile-section">
+        <h3 class="description">
+          {{ profile.flag }}
+        </h3>
       </div>
 
       <div class="profile-section">
@@ -74,6 +86,21 @@ const profile = {
 
       <div class="profile-section">
         <h3 class="section-title">
+          兴趣爱好
+        </h3>
+        <div class="hobbys">
+          <span
+            v-for="hobby in profile.hobbys"
+            :key="hobby"
+            class="hobby-tag"
+          >
+            {{ hobby }}
+          </span>
+        </div>
+      </div>
+
+      <div class="profile-section">
+        <h3 class="section-title">
           联系方式
         </h3>
         <div class="contact">
@@ -103,7 +130,7 @@ const profile = {
 .profile-card {
   position: relative;
   width: 100%;
-  max-width: 600px;
+  /* max-width: 600px; */
   padding: 2rem 0;
   border-radius: 1rem;
   border: 1px solid var(--c-border);
@@ -181,13 +208,15 @@ const profile = {
   opacity: 0.5;
 }
 
-.skills {
+.skills,
+.hobbys {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.skill-tag {
+.skill-tag,
+.hobby-tag {
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   background: var(--c-bg);
