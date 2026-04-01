@@ -4,7 +4,7 @@
   "packageManager": "pnpm@9.12.3",
   "scripts": {
     "build": "esno ./scripts/generateInterests.ts && esno ./scripts/generateProducts.ts && cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts",
-    "dev": "esno ./scripts/generateInterests.ts && esno ./scripts/generateProducts.ts && vite --port 3333 --open",
+    "dev": "esno ./scripts/generateDailies.ts && esno ./scripts/generateInterests.ts && esno ./scripts/generateProducts.ts && vite --port 3333 --open",
     "preview": "vite preview",
     "lint": "eslint .",
     "prepare": "simple-git-hooks",
@@ -13,9 +13,13 @@
     "generate:products": "esno ./scripts/generateProducts.ts"
   },
   "dependencies": {
+    "@swjs/chinese-holidays": "^1.2.0",
     "@vueuse/core": "^11.1.0",
+    "chinese-holidays": "^1.8.0",
+    "d3": "^7.9.0",
     "dayjs": "^1.11.13",
     "floating-vue": "^5.2.2",
+    "lunar": "^2.0.0",
     "matter-attractors": "^0.1.6",
     "matter-js": "^0.20.0",
     "nprogress": "^0.2.0",
@@ -30,6 +34,7 @@
     "@octokit/rest": "^21.0.2",
     "@shikijs/markdown-it": "^1.22.2",
     "@shikijs/twoslash": "^1.22.2",
+    "@types/d3": "^7.4.3",
     "@types/d3-hierarchy": "^3.1.7",
     "@types/degit": "^2.8.6",
     "@types/diacritics": "^1.3.3",
