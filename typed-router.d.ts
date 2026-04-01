@@ -20,6 +20,7 @@ declare module 'vue-router/auto-routes' {
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/[...404]': RouteRecordInfo<'/[...404]', '/:404(.*)', { 404: ParamValue<true> }, { 404: ParamValue<false> }>,
+    '/content/daily/2026-04-01': RouteRecordInfo<'/content/daily/2026-04-01', '/content/daily/2026-04-01', Record<never, never>, Record<never, never>>,
     '/content/interest/photo': RouteRecordInfo<'/content/interest/photo', '/content/interest/photo', Record<never, never>, Record<never, never>>,
     '/content/interest/travel': RouteRecordInfo<'/content/interest/travel', '/content/interest/travel', Record<never, never>, Record<never, never>>,
     '/content/interest/xian': RouteRecordInfo<'/content/interest/xian', '/content/interest/xian', Record<never, never>, Record<never, never>>,
@@ -29,7 +30,9 @@ declare module 'vue-router/auto-routes' {
     '/content/product/vite-plugin': RouteRecordInfo<'/content/product/vite-plugin', '/content/product/vite-plugin', Record<never, never>, Record<never, never>>,
     '/content/product/vue-components': RouteRecordInfo<'/content/product/vue-components', '/content/product/vue-components', Record<never, never>, Record<never, never>>,
     '/content/product/vue-components-copy': RouteRecordInfo<'/content/product/vue-components-copy', '/content/product/vue-components-copy', Record<never, never>, Record<never, never>>,
+    '/create/': RouteRecordInfo<'/create/', '/create', Record<never, never>, Record<never, never>>,
     '/daily/': RouteRecordInfo<'/daily/', '/daily', Record<never, never>, Record<never, never>>,
+    '/daily/[date]': RouteRecordInfo<'/daily/[date]', '/daily/:date', { date: ParamValue<true> }, { date: ParamValue<false> }>,
     '/design/': RouteRecordInfo<'/design/', '/design', Record<never, never>, Record<never, never>>,
     '/interest/': RouteRecordInfo<'/interest/', '/interest', Record<never, never>, Record<never, never>>,
     '/interest/[slug]': RouteRecordInfo<'/interest/[slug]', '/interest/:slug', { slug: ParamValue<true> }, { slug: ParamValue<false> }>,
