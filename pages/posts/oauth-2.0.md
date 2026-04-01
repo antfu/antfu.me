@@ -4,6 +4,7 @@ date: 2023-11-14T14:45:48
 lang: zh-CN
 type: blog
 duration: 20min
+description: 详解 OAuth 2.0 授权协议的基本概念、工作流程、四种授权模式以及令牌访问机制，理解第三方应用如何获取用户授权
 ---
 
 [[toc]]

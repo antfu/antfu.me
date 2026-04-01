@@ -3,12 +3,14 @@
   "private": true,
   "packageManager": "pnpm@9.12.3",
   "scripts": {
-    "build": "cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts",
-    "dev": "vite --port 3333 --open",
+    "build": "esno ./scripts/generateInterests.ts && esno ./scripts/generateProducts.ts && cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts",
+    "dev": "esno ./scripts/generateInterests.ts && esno ./scripts/generateProducts.ts && vite --port 3333 --open",
     "preview": "vite preview",
     "lint": "eslint .",
     "prepare": "simple-git-hooks",
-    "create": "sh create-post.sh"
+    "create": "sh create-post.sh",
+    "generate:interests": "esno ./scripts/generateInterests.ts",
+    "generate:products": "esno ./scripts/generateProducts.ts"
   },
   "dependencies": {
     "@vueuse/core": "^11.1.0",

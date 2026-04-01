@@ -1,6 +1,4 @@
 ---
-title: 一些思考
+title: 思考
 art: plum
 ---
-
-<ListPosts only-date type="thinking" />

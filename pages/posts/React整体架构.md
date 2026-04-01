@@ -4,6 +4,7 @@ date: 2024-12-01T14:06:04
 lang: zh-CN
 type: blog
 duration: 50min
+description: 深入分析 React 从 Stack 架构到 Fiber 架构的演进，理解时间切片、优先级调度、可中断渲染等核心概念的实现原理
 ---
 
 [[toc]]

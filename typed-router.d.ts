@@ -20,9 +20,19 @@ declare module 'vue-router/auto-routes' {
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/[...404]': RouteRecordInfo<'/[...404]', '/:404(.*)', { 404: ParamValue<true> }, { 404: ParamValue<false> }>,
+    '/content/interest/photo': RouteRecordInfo<'/content/interest/photo', '/content/interest/photo', Record<never, never>, Record<never, never>>,
+    '/content/interest/travel': RouteRecordInfo<'/content/interest/travel', '/content/interest/travel', Record<never, never>, Record<never, never>>,
+    '/content/interest/xian': RouteRecordInfo<'/content/interest/xian', '/content/interest/xian', Record<never, never>, Record<never, never>>,
+    '/content/product/cli-tool': RouteRecordInfo<'/content/product/cli-tool', '/content/product/cli-tool', Record<never, never>, Record<never, never>>,
+    '/content/product/design-system': RouteRecordInfo<'/content/product/design-system', '/content/product/design-system', Record<never, never>, Record<never, never>>,
+    '/content/product/node-framework': RouteRecordInfo<'/content/product/node-framework', '/content/product/node-framework', Record<never, never>, Record<never, never>>,
+    '/content/product/vite-plugin': RouteRecordInfo<'/content/product/vite-plugin', '/content/product/vite-plugin', Record<never, never>, Record<never, never>>,
+    '/content/product/vue-components': RouteRecordInfo<'/content/product/vue-components', '/content/product/vue-components', Record<never, never>, Record<never, never>>,
+    '/content/product/vue-components-copy': RouteRecordInfo<'/content/product/vue-components-copy', '/content/product/vue-components-copy', Record<never, never>, Record<never, never>>,
     '/daily/': RouteRecordInfo<'/daily/', '/daily', Record<never, never>, Record<never, never>>,
     '/design/': RouteRecordInfo<'/design/', '/design', Record<never, never>, Record<never, never>>,
     '/interest/': RouteRecordInfo<'/interest/', '/interest', Record<never, never>, Record<never, never>>,
+    '/interest/[slug]': RouteRecordInfo<'/interest/[slug]', '/interest/:slug', { slug: ParamValue<true> }, { slug: ParamValue<false> }>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
     '/posts/babel-handbook': RouteRecordInfo<'/posts/babel-handbook', '/posts/babel-handbook', Record<never, never>, Record<never, never>>,
     '/posts/babel-type': RouteRecordInfo<'/posts/babel-type', '/posts/babel-type', Record<never, never>, Record<never, never>>,
@@ -45,6 +55,8 @@ declare module 'vue-router/auto-routes' {
     '/posts/webpack-compiler-hook': RouteRecordInfo<'/posts/webpack-compiler-hook', '/posts/webpack-compiler-hook', Record<never, never>, Record<never, never>>,
     '/posts/虚拟DOM': RouteRecordInfo<'/posts/虚拟DOM', '/posts/虚拟DOM', Record<never, never>, Record<never, never>>,
     '/posts/解构是使用对象还是数组': RouteRecordInfo<'/posts/解构是使用对象还是数组', '/posts/解构是使用对象还是数组', Record<never, never>, Record<never, never>>,
+    '/product/': RouteRecordInfo<'/product/', '/product', Record<never, never>, Record<never, never>>,
+    '/product/[slug]': RouteRecordInfo<'/product/[slug]', '/product/:slug', { slug: ParamValue<true> }, { slug: ParamValue<false> }>,
     '/thinking/': RouteRecordInfo<'/thinking/', '/thinking', Record<never, never>, Record<never, never>>,
   }
 }

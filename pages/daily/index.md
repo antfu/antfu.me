@@ -1,7 +1,7 @@
 ---
-title: 日常随记
-description: 日常随记、不限内容
+tabTitle: 碎记
+description: 日常琐碎记、不限内容
 art: plum
 ---
 
-<ListPosts only-date type="daily" />
+<ListPosts only-date />

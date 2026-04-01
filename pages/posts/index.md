@@ -1,8 +1,8 @@
 ---
-title: Blog
-description: 韩海Tempest's Portfolio
+tabTitle: 博客
+description: Rex Wang's Portfolio
 image: https://antfu.me/og.png
 art: plum
 ---
 
-<ListPosts only-date type="blog" />
+<ListPosts only-date />

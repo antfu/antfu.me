@@ -1,6 +1,6 @@
 ---
-title: 一些兴趣
+tabTitle: 兴趣
 art: plum
 ---
 
-<ListPosts only-date type="interest" />
+<InterestCard />

@@ -15,7 +15,7 @@ html {
 } */
 
 html.dark {
-  --c-bg: #050505;
+  --c-bg: #080808;
   --c-scrollbar: #111;
   --c-scrollbar-hover: #222;
 }

@@ -1,5 +1,13 @@
 <script setup lang="ts">
+import { useHead } from '@unhead/vue'
+
 const route = useRoute()
+
+const frontmatter = computed(() => (route.meta.frontmatter as Record<string, any>) || {})
+
+useHead({
+  title: () => frontmatter.value.tabTitle || frontmatter.value.title || 'Rex Wang',
+})
 
 const imageModel = ref<HTMLImageElement>()
 
@@ -37,8 +45,11 @@ onKeyStroke('Escape', (e) => {
 
 <template>
   <NavBar />
-  <main class="px-7 py-10 of-x-hidden">
+  <main class="px-7 mt-30 mb-5 of-x-hidden">
     <RouterView />
+    <ClientOnly>
+      <ParticleNetwork v-if="route.path === '/'" />
+    </ClientOnly>
     <Footer :key="route.path" />
   </main>
   <Transition name="fade">
