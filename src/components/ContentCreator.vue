@@ -151,8 +151,8 @@ async function copyToClipboard() {
       copied.value = false
     }, 2000)
   }
-  catch (err) {
-    console.error('Failed to copy:', err)
+  catch {
+    // silent fail
   }
 }
 
