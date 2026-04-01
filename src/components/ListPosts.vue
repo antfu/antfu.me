@@ -112,6 +112,7 @@ function getGroupName(p: Post) {
 
 <style scoped>
 .card-grid {
+  padding-top: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.5rem;
@@ -124,12 +125,14 @@ function getGroupName(p: Post) {
   border-radius: 0.75rem;
   border: 1px solid transparent;
   background: transparent;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card:hover {
   border-color: var(--c-border);
   background: var(--c-bg-soft);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {

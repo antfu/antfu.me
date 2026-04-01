@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BackToTop from './BackToTop.vue'
 import Search from './Search.vue'
 
 const searchOpen = ref(false)
@@ -57,6 +58,7 @@ const searchOpen = ref(false)
     </nav>
   </header>
   <Search v-model="searchOpen" />
+  <BackToTop />
 </template>
 
 <style scoped>
@@ -103,9 +105,10 @@ const searchOpen = ref(false)
   text-decoration: none;
   color: inherit;
   transition:
-    opacity 0.2s ease,
-    background 0.2s ease,
-    color 0.2s ease;
+    opacity 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
   opacity: 0.6;
   outline: none;
   text-align: center;
@@ -113,6 +116,7 @@ const searchOpen = ref(false)
   height: 2rem;
   line-height: 2rem;
   display: inline-block;
+  position: relative;
 }
 
 .nav a:hover {
@@ -123,8 +127,24 @@ const searchOpen = ref(false)
 .nav a.router-link-active {
   opacity: 1;
   color: var(--c-text);
-  background: rgba(128, 128, 128, 0.2);
+  background: rgba(128, 128, 128, 0.15);
   border-radius: 0.5rem;
+  transform: scale(1.05);
+  animation: activePulse 0.3s ease;
+}
+
+@keyframes activePulse {
+  0% {
+    background: rgba(128, 128, 128, 0);
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    background: rgba(128, 128, 128, 0.15);
+    transform: scale(1.05);
+  }
 }
 
 .nav a.router-link-active .lt-md\:hidden {
