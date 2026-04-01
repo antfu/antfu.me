@@ -8,12 +8,14 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "prepare": "simple-git-hooks",
-    "create": "sh create-post.sh"
+    "create": "sh create-post.sh",
+    "create:content": "esno ./scripts/createContent.ts"
   },
   "dependencies": {
     "@vueuse/core": "^11.1.0",
     "dayjs": "^1.11.13",
     "floating-vue": "^5.2.2",
+    "gray-matter": "^4.0.3",
     "matter-attractors": "^0.1.6",
     "matter-js": "^0.20.0",
     "nprogress": "^0.2.0",
@@ -49,7 +51,6 @@
     "fast-glob": "^3.3.2",
     "feed": "^4.2.2",
     "fs-extra": "^11.2.0",
-    "gray-matter": "^4.0.3",
     "lint-staged": "^15.2.10",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
