@@ -2,19 +2,17 @@
 import type { ECharts } from 'echarts'
 import * as echarts from 'echarts'
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
-import { type InterestImage, interestsData } from '~/data/interestsAuto'
+import { type InterestImage, travelImages } from '~/data/interestsAuto'
 
-// 从兴趣数据中提取照片并按城市分组
+// 从旅行照片数据中提取照片并按城市分组
 const photosByCity = computed(() => {
   const cityPhotos: Record<string, InterestImage[]> = {}
 
-  Object.values(interestsData).forEach((interest) => {
-    interest.images.forEach((img) => {
-      if (!cityPhotos[img.city]) {
-        cityPhotos[img.city] = []
-      }
-      cityPhotos[img.city].push(img)
-    })
+  travelImages.forEach((img) => {
+    if (!cityPhotos[img.city]) {
+      cityPhotos[img.city] = []
+    }
+    cityPhotos[img.city].push(img)
   })
 
   return cityPhotos
@@ -405,7 +403,7 @@ onUnmounted(() => {
 .china-map-album {
   width: 100%;
   max-width: 1400px;
-  height: 80vh;
+  height: 800px;
   min-height: 600px;
   background: transparent;
 }
@@ -418,11 +416,11 @@ onUnmounted(() => {
 /* 城市照片面板 */
 .city-panel {
   position: fixed;
-  right: 5%;
+  right: -60%;
   top: 50%;
   transform: translateY(-50%);
   width: 400px;
-  max-height: 80vh;
+  max-height: 800px;
   background: var(--c-bg-soft, rgba(255, 255, 255, 0.98));
   border-radius: 1rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);

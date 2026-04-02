@@ -1,25 +1,13 @@
 import path from 'node:path'
 import fg from 'fast-glob'
 import fs from 'fs-extra'
-import matter from 'gray-matter'
-import MarkdownIt from 'markdown-it'
 
-const md = new MarkdownIt()
-
-interface InterestImage {
+export interface InterestImage {
   filename: string
   url: string
   city: string
   spot: string
   date: string
-}
-
-interface InterestData {
-  title: string
-  cover: string
-  intro: string
-  content: string
-  images: InterestImage[]
 }
 
 function parseFilename(filename: string): { city: string, spot: string, date: string } {
@@ -52,8 +40,8 @@ function parseFilename(filename: string): { city: string, spot: string, date: st
   return { city, spot, date }
 }
 
-async function getImagesFromDir(slug: string): Promise<InterestImage[]> {
-  const imageDir = path.resolve(`./public/images/interests/${slug}`)
+async function getTravelImages(): Promise<InterestImage[]> {
+  const imageDir = path.resolve('./public/images/interests/travel')
 
   const exist = await fs.pathExists(imageDir)
   if (!exist)
@@ -74,7 +62,7 @@ async function getImagesFromDir(slug: string): Promise<InterestImage[]> {
     const { city, spot, date } = parseFilename(file)
     return {
       filename: file,
-      url: `/images/interests/${slug}/${file}`,
+      url: `/images/interests/travel/${file}`,
       city,
       spot,
       date,
@@ -85,30 +73,10 @@ async function getImagesFromDir(slug: string): Promise<InterestImage[]> {
 }
 
 export async function generateInterestsData() {
-  const interestDir = path.resolve('./pages/interest')
   const outputFile = path.resolve('./src/data/interestsAuto.ts')
 
-  const files = await fg('*.md', { cwd: interestDir, absolute: false })
-
-  const interestsData: Record<string, InterestData> = {}
-
-  for (const file of files) {
-    const filePath = path.join(interestDir, file)
-    const { data, content } = matter(fs.readFileSync(filePath, 'utf-8'))
-
-    // Use slug from frontmatter or derive from filename
-    const slug = data.slug || path.basename(file, path.extname(file))
-
-    const images = await getImagesFromDir(slug)
-
-    interestsData[slug] = {
-      title: data.title || '',
-      cover: data.cover || (images[0]?.url || ''),
-      intro: data.intro || '',
-      content: content.trim() ? md.render(content.trim()) : '',
-      images,
-    }
-  }
+  // 只读取 /images/interests/travel/ 目录
+  const images = await getTravelImages()
 
   const output = `// Auto-generated file - DO NOT EDIT
 export interface InterestImage {
@@ -119,15 +87,7 @@ export interface InterestImage {
   date: string
 }
 
-export interface InterestData {
-  title: string
-  cover: string
-  intro: string
-  content: string
-  images: InterestImage[]
-}
-
-export const interestsData: Record<string, InterestData> = ${JSON.stringify(interestsData, null, 2)}
+export const travelImages: InterestImage[] = ${JSON.stringify(images, null, 2)}
 `
 
   await fs.ensureDir(path.dirname(outputFile))
