@@ -136,7 +136,7 @@ function goToDetail(slug: string) {
 .product-carousel {
   position: relative;
   width: 100%;
-  height: calc(100vh - 20rem);
+  height: calc(100vh - 30rem);
   display: flex;
   flex-direction: column;
   perspective: 1200px;
@@ -264,7 +264,7 @@ function goToDetail(slug: string) {
 }
 
 .dots {
-  padding: 1rem;
+  padding: 1rem 1rem 3rem 1rem;
   display: flex;
   justify-content: center;
   gap: 0.5rem;

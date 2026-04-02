@@ -29,8 +29,7 @@ declare module 'vue-router/auto-routes' {
     '/content/product/node-framework': RouteRecordInfo<'/content/product/node-framework', '/content/product/node-framework', Record<never, never>, Record<never, never>>,
     '/content/product/vite-plugin': RouteRecordInfo<'/content/product/vite-plugin', '/content/product/vite-plugin', Record<never, never>, Record<never, never>>,
     '/content/product/vue-components': RouteRecordInfo<'/content/product/vue-components', '/content/product/vue-components', Record<never, never>, Record<never, never>>,
-    '/content/product/vue-components-copy': RouteRecordInfo<'/content/product/vue-components-copy', '/content/product/vue-components-copy', Record<never, never>, Record<never, never>>,
-    '/create-suiji-page/': RouteRecordInfo<'/create-suiji-page/', '/create-suiji-page', Record<never, never>, Record<never, never>>,
+    '/create/': RouteRecordInfo<'/create/', '/create', Record<never, never>, Record<never, never>>,
     '/daily/': RouteRecordInfo<'/daily/', '/daily', Record<never, never>, Record<never, never>>,
     '/daily/[date]': RouteRecordInfo<'/daily/[date]', '/daily/:date', { date: ParamValue<true> }, { date: ParamValue<false> }>,
     '/design/': RouteRecordInfo<'/design/', '/design', Record<never, never>, Record<never, never>>,
@@ -60,6 +59,10 @@ declare module 'vue-router/auto-routes' {
     '/posts/解构是使用对象还是数组': RouteRecordInfo<'/posts/解构是使用对象还是数组', '/posts/解构是使用对象还是数组', Record<never, never>, Record<never, never>>,
     '/product/': RouteRecordInfo<'/product/', '/product', Record<never, never>, Record<never, never>>,
     '/product/[slug]': RouteRecordInfo<'/product/[slug]', '/product/:slug', { slug: ParamValue<true> }, { slug: ParamValue<false> }>,
+    '/product/产品经理的学习网站和常用工具': RouteRecordInfo<'/product/产品经理的学习网站和常用工具', '/product/产品经理的学习网站和常用工具', Record<never, never>, Record<never, never>>,
+    '/product/常见数据报告来源': RouteRecordInfo<'/product/常见数据报告来源', '/product/常见数据报告来源', Record<never, never>, Record<never, never>>,
+    '/product/幕后产品': RouteRecordInfo<'/product/幕后产品', '/product/幕后产品', Record<never, never>, Record<never, never>>,
+    '/product/新人需要掌握的产品专业词汇': RouteRecordInfo<'/product/新人需要掌握的产品专业词汇', '/product/新人需要掌握的产品专业词汇', Record<never, never>, Record<never, never>>,
     '/thinking/': RouteRecordInfo<'/thinking/', '/thinking', Record<never, never>, Record<never, never>>,
   }
 }

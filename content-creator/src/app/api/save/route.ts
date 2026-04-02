@@ -1,0 +1,85 @@
+import type { NextRequest } from 'next/server'
+import fs from 'node:fs/promises'
+import path from 'node:path'
+import { contentConfigs, type ContentType, generateFilename, generateMarkdown } from '@/lib/config'
+import { NextResponse } from 'next/server'
+
+export async function POST(request: NextRequest) {
+  try {
+    const { type, fields, content } = await request.json() as {
+      type: ContentType
+      fields: Record<string, string | string[]>
+      content: string
+    }
+
+    if (!contentConfigs[type]) {
+      return NextResponse.json({ success: false, error: 'Invalid content type' }, { status: 400 })
+    }
+
+    const config = contentConfigs[type]
+    const filename = generateFilename(type, fields as Record<string, string>)
+    const baseName = filename.replace(/\.md$/, '')
+    // Root is parent directory of content-creator
+    const rootDir = path.join(process.cwd(), '..')
+    const contentDir = path.join(rootDir, config.directory)
+
+    let coverImagePath: string | undefined
+
+    // Process single cover image
+    const imageField = config.fields.find(f => f.type === 'image')
+    if (imageField && fields.image && typeof fields.image === 'string' && fields.image.startsWith('data:image/')) {
+      const match = fields.image.match(/^data:image\/(\w+);base64,(.+)$/)
+      if (match) {
+        const ext = match[1]
+        const base64Data = match[2]
+        const imageFilename = `${baseName}.${ext}`
+        const imagePath = path.join(contentDir, imageFilename)
+
+        await fs.mkdir(contentDir, { recursive: true })
+        const imageBuffer = Buffer.from(base64Data, 'base64')
+        await fs.writeFile(imagePath, imageBuffer)
+
+        coverImagePath = `/${imagePath}`
+      }
+    }
+
+    // Process multiple images
+    const imagesField = config.fields.find(f => f.type === 'images')
+    if (imagesField && fields.images) {
+      const images = Array.isArray(fields.images) ? fields.images : [fields.images]
+      await fs.mkdir(contentDir, { recursive: true })
+
+      for (let i = 0; i < images.length; i++) {
+        const img = images[i]
+        if (typeof img === 'string' && img.startsWith('data:image/')) {
+          const match = img.match(/^data:image\/(\w+);base64,(.+)$/)
+          if (match) {
+            const ext = match[1]
+            const base64Data = match[2]
+            // Use index to avoid name collisions
+            const imageFilename = `${baseName}-${i + 1}.${ext}`
+            const imagePath = path.join(contentDir, imageFilename)
+            const imageBuffer = Buffer.from(base64Data, 'base64')
+            await fs.writeFile(imagePath, imageBuffer)
+          }
+        }
+      }
+    }
+
+    // Ensure content directory exists
+    await fs.mkdir(contentDir, { recursive: true })
+
+    // Generate markdown with cover image
+    const markdown = generateMarkdown(type, fields as Record<string, string>, content, coverImagePath)
+    const filepath = path.join(contentDir, filename)
+
+    // Write file
+    await fs.writeFile(filepath, markdown, 'utf-8')
+
+    return NextResponse.json({ success: true, path: filepath, filename })
+  }
+  catch (error) {
+    console.error('Save failed:', error)
+    return NextResponse.json({ success: false, error: String(error) }, { status: 500 })
+  }
+}

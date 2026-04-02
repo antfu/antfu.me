@@ -8,10 +8,10 @@ const props = defineProps<{
   posts?: Post[]
   extra?: Post[]
 }>()
-
+const startPath = props.type ? `/${props.type}` : '/posts'
 const router = useRouter()
 const routes: Post[] = router.getRoutes()
-  .filter(i => i.path.startsWith('/posts') && i.meta.frontmatter.date && !i.meta.frontmatter.draft)
+  .filter(i => i.path.startsWith(startPath) && i.meta.frontmatter.date && !i.meta.frontmatter.draft)
   .filter(i => !i.path.endsWith('.html'))
   .map(i => ({
     path: i.meta.frontmatter.redirect || i.path,

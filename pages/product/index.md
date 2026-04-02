@@ -4,3 +4,5 @@ art: plum
 ---
 
 <ProductCard />
+
+<ListPosts only-date type="product" />
