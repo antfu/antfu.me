@@ -299,8 +299,43 @@ function buildRegions(data: any): any[] {
 // 生命周期
 onMounted(() => {
   // 注册中国地图（仅中国大陆）
-  fetch('https://geo.datav.aliyun.com/areas_v3/bound/100000_full.json')
-    .then(res => res.json())
+  loadMapData()
+  window.addEventListener('resize', handleResize)
+})
+
+async function loadMapData() {
+  try {
+    const response = await fetch('https://geo.datav.aliyun.com/areas_v3/bound/100000_full.json')
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`)
+    }
+    const contentType = response.headers.get('content-type')
+    if (!contentType || !contentType.includes('application/json')) {
+      throw new Error(`Unexpected content type: ${contentType}`)
+    }
+    const data = await response.json()
+    mapData = filterMainlandChina(data)
+    regionsData = buildRegions(mapData)
+    echarts.registerMap('china', mapData)
+    initChart()
+  }
+  catch (err) {
+    console.error('Failed to load China map:', err)
+    // Retry with alternative URL after 1 second
+    setTimeout(() => {
+      fetchAlternativeMap()
+    }, 1000)
+  }
+}
+
+function fetchAlternativeMap() {
+  // Fallback to different CDN
+  fetch('https://cdn.jsdelivr.net/npm/echarts@5.4.3/map/json/china.json')
+    .then((res) => {
+      if (!res.ok)
+        throw new Error('Alternative map fetch failed')
+      return res.json()
+    })
     .then((data) => {
       mapData = filterMainlandChina(data)
       regionsData = buildRegions(mapData)
@@ -308,11 +343,9 @@ onMounted(() => {
       initChart()
     })
     .catch((err) => {
-      console.error('Failed to load China map:', err)
+      console.error('Failed to load alternative China map:', err)
     })
-
-  window.addEventListener('resize', handleResize)
-})
+}
 
 onUnmounted(() => {
   chart?.dispose()

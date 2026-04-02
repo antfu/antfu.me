@@ -85,7 +85,7 @@ async function getImagesFromDir(slug: string): Promise<InterestImage[]> {
 }
 
 export async function generateInterestsData() {
-  const interestDir = path.resolve('./pages/content/interest')
+  const interestDir = path.resolve('./pages/interest')
   const outputFile = path.resolve('./src/data/interestsAuto.ts')
 
   const files = await fg('*.md', { cwd: interestDir, absolute: false })
@@ -96,12 +96,12 @@ export async function generateInterestsData() {
     const filePath = path.join(interestDir, file)
     const { data, content } = matter(fs.readFileSync(filePath, 'utf-8'))
 
-    if (!data.slug)
-      continue
+    // Use slug from frontmatter or derive from filename
+    const slug = data.slug || path.basename(file, path.extname(file))
 
-    const images = await getImagesFromDir(data.slug)
+    const images = await getImagesFromDir(slug)
 
-    interestsData[data.slug] = {
+    interestsData[slug] = {
       title: data.title || '',
       cover: data.cover || (images[0]?.url || ''),
       intro: data.intro || '',
