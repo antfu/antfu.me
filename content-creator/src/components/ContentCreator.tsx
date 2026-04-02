@@ -265,7 +265,6 @@ export default function ContentCreator() {
                   {config.label}
                 </button>
               ))}
-              <span className="ml-auto text-sm text-gray-500 self-center">{currentConfig.directory}</span>
             </div>
 
             {/* Form */}
@@ -389,6 +388,10 @@ export default function ContentCreator() {
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 focus:outline-none focus:border-purple-500 resize-y font-mono text-sm"
                 />
               </div>
+              <span className="ml-auto text-sm text-gray-500 self-center">
+                保存路径：
+                {currentConfig.directory}
+              </span>
             </div>
           </div>
         </div>

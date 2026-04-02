@@ -35,7 +35,7 @@ export const contentConfigs: Record<ContentType, ContentConfig> = {
   },
   'daily': {
     type: 'daily',
-    label: '碎记',
+    label: '每日碎记',
     directory: 'pages/content/daily',
     extension: '.md',
     fields: [
@@ -77,7 +77,7 @@ export const contentConfigs: Record<ContentType, ContentConfig> = {
   },
   'interest': {
     type: 'interest',
-    label: '兴趣',
+    label: '兴趣爱好',
     directory: 'pages/content/interest',
     extension: '.md',
     fields: [
