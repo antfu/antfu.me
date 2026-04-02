@@ -26,10 +26,9 @@ export const contentConfigs: Record<ContentType, ContentConfig> = {
     fields: [
       { key: 'title', label: '标题', type: 'text', required: true },
       { key: 'date', label: '日期', type: 'date', required: true },
-      { key: 'lang', label: '语言', type: 'select', required: false, options: ['zh', 'en'], default: 'zh' },
-      { key: 'duration', label: '阅读时长', type: 'text', required: false },
+      { key: 'lang', label: '语言', type: 'select', required: true, options: ['zh', 'en'], default: 'zh' },
+      { key: 'duration', label: '阅读时长', type: 'text', required: true },
       { key: 'description', label: '描述', type: 'textarea', required: false },
-      { key: 'image', label: '头图', type: 'image', required: false },
       { key: 'images', label: '配图', type: 'images', required: false },
     ],
   },
@@ -39,8 +38,11 @@ export const contentConfigs: Record<ContentType, ContentConfig> = {
     directory: 'pages/content/daily',
     extension: '.md',
     fields: [
+      { key: 'title', label: '标题', type: 'text', required: false },
       { key: 'date', label: '日期', type: 'date', required: true },
-      { key: 'image', label: '头图', type: 'image', required: false },
+      { key: 'lang', label: '语言', type: 'select', required: true, options: ['zh', 'en'], default: 'zh' },
+      { key: 'duration', label: '阅读时长', type: 'text', required: true },
+      { key: 'description', label: '描述', type: 'textarea', required: false },
       { key: 'images', label: '配图', type: 'images', required: false },
     ],
   },
@@ -52,8 +54,9 @@ export const contentConfigs: Record<ContentType, ContentConfig> = {
     fields: [
       { key: 'title', label: '标题', type: 'text', required: true },
       { key: 'date', label: '日期', type: 'date', required: true },
-      { key: 'duration', label: '阅读时长', type: 'text', required: false },
-      { key: 'image', label: '头图', type: 'image', required: false },
+      { key: 'lang', label: '语言', type: 'select', required: true, options: ['zh', 'en'], default: 'zh' },
+      { key: 'duration', label: '阅读时长', type: 'text', required: true },
+      { key: 'description', label: '描述', type: 'textarea', required: false },
       { key: 'images', label: '配图', type: 'images', required: false },
     ],
   },
@@ -66,7 +69,7 @@ export const contentConfigs: Record<ContentType, ContentConfig> = {
       { key: 'title', label: '标题', type: 'text', required: true },
       { key: 'date', label: '日期', type: 'date', required: true },
       { key: 'slug', label: '唯一标识', type: 'text', required: true },
-      { key: 'image', label: '头图', type: 'image', required: false },
+      { key: 'image', label: '头图', type: 'image', required: true },
       { key: 'description', label: '描述', type: 'textarea', required: false },
       { key: 'techStack', label: '技术栈', type: 'textarea', required: false },
       { key: 'features', label: '核心功能', type: 'textarea', required: false },
@@ -78,14 +81,16 @@ export const contentConfigs: Record<ContentType, ContentConfig> = {
   'interest': {
     type: 'interest',
     label: '兴趣爱好',
-    directory: 'pages/content/interest',
+    directory: 'pages/interest',
     extension: '.md',
     fields: [
       { key: 'title', label: '标题', type: 'text', required: true },
       { key: 'date', label: '日期', type: 'date', required: false },
+      { key: 'lang', label: '语言', type: 'select', required: true, options: ['zh', 'en'], default: 'zh' },
+      { key: 'duration', label: '阅读时长', type: 'text', required: true },
       { key: 'description', label: '描述', type: 'textarea', required: false },
-      { key: 'category', label: '分类', type: 'text', required: false },
-      { key: 'image', label: '头图', type: 'image', required: false },
+      { key: 'image', label: '头图', type: 'image', required: true },
+      { key: 'images', label: '配图', type: 'images', required: false },
     ],
   },
 }
@@ -143,7 +148,9 @@ export function generateMarkdown(type: ContentType, fields: Record<string, strin
   })
 
   // Add cover image to frontmatter if present (from API response path)
-  if (coverImage) {
+  // Only add if the content type has an image field
+  const hasImageField = config.fields.some(f => f.type === 'image')
+  if (coverImage && hasImageField) {
     frontmatter.image = coverImage
   }
 
