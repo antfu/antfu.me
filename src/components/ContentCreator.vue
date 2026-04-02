@@ -74,6 +74,8 @@ const selectedType = ref<ContentType>('post')
 const formData = ref<Record<string, string>>({})
 const content = ref('')
 const generatedMd = ref('')
+const showModal = ref(false)
+const previewFilename = ref('')
 const showPreview = ref(false)
 const copied = ref(false)
 
@@ -131,6 +133,8 @@ function generateMarkdown() {
   }
 
   generatedMd.value = md
+  previewFilename.value = filename
+  showModal.value = true
   return { filename, md }
 }
 
@@ -281,14 +285,30 @@ onMounted(() => {
       </div>
     </div>
 
-    <!-- 预览面板 -->
-    <div v-if="generatedMd" class="preview-section">
-      <div class="preview-header">
-        <h3>预览</h3>
-        <span class="preview-path">{{ currentConfig.directory }}/xxx.md</span>
+    <!-- 预览模态框 -->
+    <Teleport to="body">
+      <div v-if="showModal" class="modal-overlay" @click.self="showModal = false">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>预览 - {{ currentConfig.directory }}/{{ previewFilename }}</h3>
+            <button class="modal-close" @click="showModal = false">
+              <div i-ri-close-line />
+            </button>
+          </div>
+          <pre class="modal-preview"><code>{{ generatedMd }}</code></pre>
+          <div class="modal-actions">
+            <button class="btn-secondary" @click="copyToClipboard">
+              <div :class="copied ? 'i-ri-check-line' : 'i-ri-clipboard-line'" />
+              {{ copied ? '已复制' : '复制' }}
+            </button>
+            <button class="btn-primary" @click="downloadFile">
+              <div i-ri-download-line />
+              下载
+            </button>
+          </div>
+        </div>
       </div>
-      <pre class="preview-content"><code>{{ generatedMd }}</code></pre>
-    </div>
+    </Teleport>
   </div>
 </template>
 
@@ -333,7 +353,7 @@ onMounted(() => {
 .form-section {
   background: var(--c-bg-soft);
   border-radius: 1rem;
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
 }
 
 .form-grid {
@@ -362,12 +382,13 @@ onMounted(() => {
 .form-field input,
 .form-field select,
 .form-field textarea {
-  padding: 0.75rem;
-  border: 1px solid var(--c-border);
+  padding: 0.8rem;
+  border: 1px solid #d1d5db;
   border-radius: 0.5rem;
   background: var(--c-bg);
   font-size: 0.875rem;
   transition: border-color 0.2s;
+  line-height: 1;
 }
 
 .form-field input:focus,
@@ -443,14 +464,33 @@ onMounted(() => {
   border-color: var(--c-text);
 }
 
-.preview-section {
-  margin-top: 1.5rem;
-  background: var(--c-bg-soft);
-  border-radius: 1rem;
-  overflow: hidden;
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
 }
 
-.preview-header {
+.modal-content {
+  background: var(--c-bg);
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 800px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -458,23 +498,40 @@ onMounted(() => {
   border-bottom: 1px solid var(--c-border);
 }
 
-.preview-header h3 {
+.modal-header h3 {
   font-weight: 600;
+  font-size: 0.875rem;
 }
 
-.preview-path {
-  font-size: 0.75rem;
+.modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
   opacity: 0.6;
-  font-family: monospace;
+  transition: opacity 0.2s;
 }
 
-.preview-content {
+.modal-close:hover {
+  opacity: 1;
+}
+
+.modal-preview {
+  flex: 1;
+  overflow: auto;
   padding: 1.5rem;
-  overflow-x: auto;
+  margin: 0;
   font-size: 0.875rem;
   line-height: 1.6;
-  margin: 0;
   white-space: pre-wrap;
   word-break: break-all;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--c-border);
 }
 </style>
