@@ -8,8 +8,6 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "prepare": "simple-git-hooks",
-    "create": "sh create-post.sh",
-    "create:content": "esno ./scripts/createContent.ts",
     "generate:interests": "esno ./scripts/generateInterests.ts",
     "generate:products": "esno ./scripts/generateProducts.ts"
   },
