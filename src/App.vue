@@ -48,7 +48,7 @@ onKeyStroke('Escape', (e) => {
   <main class="px-7 mt-28 mb-5 of-x-hidden">
     <RouterView />
     <ClientOnly>
-      <ParticleNetwork v-if="route.path === '/'" />
+      <ParticleNetwork v-if="route.path === '/' || route.path === '/daily'" />
     </ClientOnly>
     <Footer :key="route.path" />
   </main>

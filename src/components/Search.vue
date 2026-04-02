@@ -19,8 +19,15 @@ const isOpen = computed({
 
 const allPosts = computed(() => {
   return router.getRoutes()
-    .filter(i => i.path.startsWith('/posts') && i.meta.frontmatter.date && !i.meta.frontmatter.draft)
-    .filter(i => !i.path.endsWith('.html'))
+    .filter((i) => {
+      const hasDate = i.meta.frontmatter.date && !i.meta.frontmatter.draft
+      const validPath = !i.path.endsWith('.html')
+      const isMainContent = i.path.startsWith('/posts')
+        || i.path.startsWith('/product')
+        || i.path.startsWith('/interest')
+        || i.path.startsWith('/daily')
+      return hasDate && validPath && isMainContent
+    })
     .map(i => ({
       path: i.meta.frontmatter.redirect || i.path,
       title: i.meta.frontmatter.title,
@@ -28,6 +35,7 @@ const allPosts = computed(() => {
       lang: i.meta.frontmatter.lang,
       duration: i.meta.frontmatter.duration,
       desc: i.meta.frontmatter.description,
+      type: i.path.split('/')[1], // 提取类型：posts, product, interest, daily
     }))
 })
 
@@ -53,6 +61,16 @@ function navigate(path: string) {
   close()
 }
 
+function getTypeLabel(type: string) {
+  const labels: Record<string, string> = {
+    posts: '博客',
+    product: '产品',
+    interest: '兴趣',
+    daily: '日常',
+  }
+  return labels[type] || type
+}
+
 // Close on escape
 onMounted(() => {
   const handleEscape = (e: KeyboardEvent) => {
@@ -74,7 +92,7 @@ onMounted(() => {
             v-model="searchQuery"
             type="text"
             class="search-input"
-            placeholder="搜索文章..."
+            placeholder="搜索..."
             autofocus
           >
           <button class="search-close" @click="close">
@@ -95,8 +113,11 @@ onMounted(() => {
               class="search-item"
               @click="navigate(post.path)"
             >
-              <div class="search-item-title">
-                {{ post.title }}
+              <div class="search-item-header">
+                <span class="search-item-type">{{ getTypeLabel(post.type) }}</span>
+                <div class="search-item-title">
+                  {{ post.title }}
+                </div>
               </div>
               <div class="search-item-meta">
                 <span>{{ formatDate(post.date, true) }}</span>
@@ -106,7 +127,7 @@ onMounted(() => {
           </template>
           <template v-else>
             <div class="search-hint">
-              输入关键词搜索文章
+              输入关键词搜索
             </div>
           </template>
         </div>
@@ -194,6 +215,22 @@ onMounted(() => {
 
 .search-item:hover {
   background: var(--c-bg-soft);
+}
+
+.search-item-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-item-type {
+  font-size: 0.65rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  background: var(--c-bg-soft);
+  color: var(--c-text);
+  opacity: 0.7;
+  flex-shrink: 0;
 }
 
 .search-item-title {
