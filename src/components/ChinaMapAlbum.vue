@@ -474,20 +474,11 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  scrollbar-width: thin;
+  scrollbar-width: none;
 }
 
 .city-panel-content::-webkit-scrollbar {
-  width: 6px;
-}
-
-.city-panel-content::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.city-panel-content::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+  display: none;
 }
 
 .photo-item {
