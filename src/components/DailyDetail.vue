@@ -1,22 +1,22 @@
 <script setup lang="ts">
 import MarkdownIt from 'markdown-it'
+import { useRoute } from 'vue-router'
 import { dailyRecords } from '../data/dailiesAuto'
 
-const props = defineProps<{
-  date: string
-}>()
+const route = useRoute()
+const date = computed(() => route.params.date as string)
 
 const md = new MarkdownIt()
 
-const record = computed(() => dailyRecords.find(r => r.date === props.date))
+const record = computed(() => dailyRecords.find(r => r.date === date.value))
 const isEditing = ref(false)
 const editContent = ref('')
 const saveStatus = ref<'idle' | 'saving' | 'success' | 'error'>('idle')
 
 const formattedDate = computed(() => {
-  if (!props.date)
+  if (!date.value)
     return ''
-  const [year, month, day] = props.date.split('-')
+  const [year, month, day] = date.value.split('-')
   return `${year}年${month}月${day}日`
 })
 
@@ -41,7 +41,7 @@ async function saveContent() {
 
   try {
     const content = editContent.value
-    const filename = `${props.date}.md`
+    const filename = `${date.value}.md`
 
     // Try using File System Access API
     if ('showSaveFilePicker' in window) {
@@ -58,7 +58,7 @@ async function saveContent() {
       await writable.close()
 
       // Update local data
-      const idx = dailyRecords.findIndex(r => r.date === props.date)
+      const idx = dailyRecords.findIndex(r => r.date === date.value)
       if (idx !== -1) {
         dailyRecords[idx].content = editContent.value
       }

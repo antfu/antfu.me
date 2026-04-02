@@ -264,7 +264,7 @@ function goToDetail(slug: string) {
 }
 
 .dots {
-  padding: 1rem 1rem 3rem 1rem;
+  padding: 3rem 1rem;
   display: flex;
   justify-content: center;
   gap: 0.5rem;

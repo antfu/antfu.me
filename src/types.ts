@@ -12,6 +12,8 @@ export interface Post {
   video?: boolean
   inperson?: boolean
   redirect?: string
+  image?: string
+  imageType?: 'top' | 'left' | 'cover'
 }
 
 export interface Talk {

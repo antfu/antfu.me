@@ -8,6 +8,7 @@ const props = defineProps<{
   posts?: Post[]
   extra?: Post[]
 }>()
+
 const startPath = props.type ? `/${props.type}` : '/posts'
 const router = useRouter()
 const routes: Post[] = router.getRoutes()
@@ -24,6 +25,8 @@ const routes: Post[] = router.getRoutes()
     redirect: i.meta.frontmatter.redirect,
     place: i.meta.frontmatter.place,
     desc: i.meta.frontmatter.description,
+    image: i.meta.frontmatter.image,
+    imageType: i.meta.frontmatter.imageType || 'top',
   }))
 
 const posts = computed(() =>
@@ -43,6 +46,16 @@ function getGroupName(p: Post) {
   if (isFuture(p.date))
     return 'Upcoming'
   return getYear(p.date)
+}
+
+function getCardBorderClass() {
+  switch (props.type) {
+    case 'interest':
+    case 'product':
+      return 'card-border-none'
+    default:
+      return 'card-border-default'
+  }
 }
 </script>
 
@@ -77,33 +90,40 @@ function getGroupName(p: Post) {
           }
         "
         class="card slide-enter no-underline"
+        :class="[getCardBorderClass(), { 'has-image': route.image }]"
         :style="{
           '--enter-stage': idx,
           '--enter-step': '60ms',
         }"
       >
-        <div class="card-header" flex="~ gap-2 items-center">
-          <span
-            v-if="route.lang === 'zh'"
-            class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5"
-          >中文</span>
-          <span class="title text-xl leading-1.2em font-bold">{{ route.title }}</span>
-          <span
-            v-if="route.redirect"
-            op50 flex-none text-xs ml--1.5
-            i-carbon-arrow-up-right
-            title="External"
-          />
+        <div v-if="route.image && props.type === 'interest'" class="card-image">
+          <img :src="route.image" :alt="route.title">
         </div>
 
-        <p v-if="route.desc" class="card-desc text-sm op70 mt-2 line-clamp-3">
-          {{ route.desc }}
-        </p>
+        <div class="card-body">
+          <div class="card-header" flex="~ gap-2 items-center">
+            <span
+              v-if="route.lang === 'zh'"
+              class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5"
+            >中文</span>
+            <span class="title text-xl leading-1.2em font-bold">{{ route.title }}</span>
+            <span
+              v-if="route.redirect"
+              op50 flex-none text-xs ml--1.5
+              i-carbon-arrow-up-right
+              title="External"
+            />
+          </div>
 
-        <div class="card-meta flex items-center gap-3 mt-3 text-xs op50">
-          <span>{{ formatDate(route.date, true) }}</span>
-          <span v-if="route.duration">{{ route.duration }}</span>
-          <span v-if="route.place" class="hidden md:block">{{ route.place }}</span>
+          <p v-if="route.desc" class="card-desc text-sm op70 mt-2 line-clamp-3">
+            {{ route.desc }}
+          </p>
+
+          <div class="card-meta flex items-center gap-3 mt-3 text-xs op50">
+            <span>{{ formatDate(route.date, true) }}</span>
+            <span v-if="route.duration">{{ route.duration }}</span>
+            <span v-if="route.place" class="hidden md:block">{{ route.place }}</span>
+          </div>
         </div>
       </component>
     </template>
@@ -121,18 +141,71 @@ function getGroupName(p: Post) {
 .card {
   display: flex;
   flex-direction: column;
-  padding: 1.25rem;
+  padding: 0;
   border-radius: 0.75rem;
-  border: 1px solid transparent;
   background: transparent;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
 }
 
-.card:hover {
+.card-border-default {
+  border: 1px solid transparent;
+}
+
+.card-border-default:hover {
   border-color: var(--c-border);
   background: var(--c-bg-soft);
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-border-none {
+  border: none !important;
+  background: var(--c-bg-soft);
+}
+
+.card-border-none:hover {
+  border: none !important;
+  background: var(--c-bg);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-border-soft {
+  border: 1px solid var(--c-border);
+  background: var(--c-bg-soft);
+}
+
+.card-border-soft:hover {
+  border-color: var(--c-border);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card.has-image {
+  flex-direction: column;
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+  margin: 0;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 1.25rem;
 }
 
 .card-header {

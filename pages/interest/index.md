@@ -3,4 +3,6 @@ tabTitle: 兴趣
 art: plum
 ---
 
-<InterestCard />
+<ChinaMapAlbum />
+
+<ListPosts type="interest" />

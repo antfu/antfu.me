@@ -17,6 +17,8 @@
     "chinese-holidays": "^1.8.0",
     "d3": "^7.9.0",
     "dayjs": "^1.11.13",
+    "echarts": "^5.6.0",
+    "echarts-gl": "^2.0.9",
     "floating-vue": "^5.2.2",
     "gray-matter": "^4.0.3",
     "lunar": "^2.0.0",
