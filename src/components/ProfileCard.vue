@@ -16,9 +16,12 @@ const profile = {
     '项目管理',
   ],
   hobbys: [
+    '读书',
+    '明史',
     '架子鼓',
-    '策略游戏',
-    '神经网络',
+    '旅行',
+    '动漫',
+    '策略',
   ],
   social: {
     github: 'https://github.com/OnlyProbie',

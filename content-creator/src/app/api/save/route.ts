@@ -1,10 +1,13 @@
 import type { NextRequest } from 'next/server'
+import crypto from 'node:crypto'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { contentConfigs, type ContentType, generateFilename, generateMarkdown } from '@/lib/config'
 import { NextResponse } from 'next/server'
 
 export async function POST(request: NextRequest) {
+  const uploadedFiles: string[] = []
+
   try {
     const { type, fields, content } = await request.json() as {
       type: ContentType
@@ -16,6 +19,12 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: 'Invalid content type' }, { status: 400 })
     }
 
+    // For non-travel-album types, set default date if not provided
+    if (type !== 'travel-album' && !fields.date) {
+      const dateStr = new Date().toISOString().split('T')[0]
+      fields.date = dateStr
+    }
+
     const config = contentConfigs[type]
     const filename = generateFilename(type, fields as Record<string, string>)
     const baseName = filename.replace(/\.md$/, '')
@@ -23,10 +32,11 @@ export async function POST(request: NextRequest) {
     const rootDir = path.join(process.cwd(), '..')
     const contentDir = path.join(rootDir, config.directory)
 
+    // Only compute coverImagePath for types that have an image field
     let coverImagePath: string | undefined
-
-    // Process single cover image
     const imageField = config.fields.find(f => f.type === 'image')
+
+    // Process single cover image (only if type has image field)
     if (imageField && fields.image && typeof fields.image === 'string' && fields.image.startsWith('data:image/')) {
       const match = fields.image.match(/^data:image\/(\w+);base64,(.+)$/)
       if (match) {
@@ -38,6 +48,7 @@ export async function POST(request: NextRequest) {
         await fs.mkdir(contentDir, { recursive: true })
         const imageBuffer = Buffer.from(base64Data, 'base64')
         await fs.writeFile(imagePath, imageBuffer)
+        uploadedFiles.push(imagePath)
 
         coverImagePath = `/${imagePath}`
       }
@@ -56,14 +67,34 @@ export async function POST(request: NextRequest) {
           if (match) {
             const ext = match[1]
             const base64Data = match[2]
-            // Use index to avoid name collisions
-            const imageFilename = `${baseName}-${i + 1}.${ext}`
+
+            // For travel-album, use city-spot-date-hash format for filename
+            let imageFilename: string
+            if (type === 'travel-album') {
+              const city = String(fields.city || '')
+              const spot = String(fields.spot || '')
+              const date = fields.date ? String(fields.date).replace(/-/g, '') : ''
+              // Generate short hash from image data
+              const hash = crypto.createHash('md5').update(base64Data).digest('hex').slice(0, 6)
+              // Format: 城市-景点-日期-hash or 城市-日期-hash
+              imageFilename = spot ? `${city}-${spot}-${date}-${hash}.${ext}` : `${city}-${date}-${hash}.${ext}`
+            }
+            else {
+              imageFilename = `${baseName}-${i + 1}.${ext}`
+            }
+
             const imagePath = path.join(contentDir, imageFilename)
             const imageBuffer = Buffer.from(base64Data, 'base64')
             await fs.writeFile(imagePath, imageBuffer)
+            uploadedFiles.push(imagePath)
           }
         }
       }
+    }
+
+    // Skip markdown file generation for travel-album
+    if (type === 'travel-album') {
+      return NextResponse.json({ success: true, message: 'Photos uploaded successfully' })
     }
 
     // Ensure content directory exists
@@ -79,7 +110,16 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: true, path: filepath, filename })
   }
   catch (error) {
+    // Cleanup uploaded files on failure
+    for (const file of uploadedFiles) {
+      try {
+        await fs.unlink(file)
+      }
+      catch {
+        // Ignore cleanup errors
+      }
+    }
     console.error('Save failed:', error)
-    return NextResponse.json({ success: false, error: String(error) }, { status: 500 })
+    return NextResponse.json({ success: false, error: '保存失败，请重试' }, { status: 500 })
   }
 }

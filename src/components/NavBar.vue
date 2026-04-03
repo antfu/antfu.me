@@ -106,7 +106,6 @@ const searchOpen = ref(false)
   color: inherit;
   transition:
     opacity 0.3s ease,
-    background 0.3s ease,
     color 0.3s ease,
     transform 0.3s ease;
   opacity: 0.6;

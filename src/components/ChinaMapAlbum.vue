@@ -355,7 +355,7 @@ onUnmounted(() => {
           >
             <img :src="photo.url" :alt="photo.spot">
             <div class="photo-info">
-              <span class="photo-spot">{{ photo.spot }}</span>
+              <span class="photo-spot">{{ photo.spot || photo.city }}</span>
               <span class="photo-date">{{ photo.date }}</span>
             </div>
           </div>
@@ -468,7 +468,7 @@ onUnmounted(() => {
 
 .photo-item img {
   margin-bottom: 0;
-  margin-top: 1rem;
+  margin-top: 0;
   width: 100%;
   height: 200px;
   min-height: 160px;
