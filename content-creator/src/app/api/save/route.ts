@@ -6,6 +6,8 @@ import { contentConfigs, type ContentType, generateFilename, generateMarkdown } 
 import { NextResponse } from 'next/server'
 
 export async function POST(request: NextRequest) {
+  const uploadedFiles: string[] = []
+
   try {
     const { type, fields, content } = await request.json() as {
       type: ContentType
@@ -19,7 +21,8 @@ export async function POST(request: NextRequest) {
 
     // For non-travel-album types, set default date if not provided
     if (type !== 'travel-album' && !fields.date) {
-      fields.date = new Date().toISOString().split('T')[0]
+      const dateStr = new Date().toISOString().split('T')[0]
+      fields.date = dateStr
     }
 
     const config = contentConfigs[type]
@@ -29,10 +32,11 @@ export async function POST(request: NextRequest) {
     const rootDir = path.join(process.cwd(), '..')
     const contentDir = path.join(rootDir, config.directory)
 
+    // Only compute coverImagePath for types that have an image field
     let coverImagePath: string | undefined
-
-    // Process single cover image
     const imageField = config.fields.find(f => f.type === 'image')
+
+    // Process single cover image (only if type has image field)
     if (imageField && fields.image && typeof fields.image === 'string' && fields.image.startsWith('data:image/')) {
       const match = fields.image.match(/^data:image\/(\w+);base64,(.+)$/)
       if (match) {
@@ -44,6 +48,7 @@ export async function POST(request: NextRequest) {
         await fs.mkdir(contentDir, { recursive: true })
         const imageBuffer = Buffer.from(base64Data, 'base64')
         await fs.writeFile(imagePath, imageBuffer)
+        uploadedFiles.push(imagePath)
 
         coverImagePath = `/${imagePath}`
       }
@@ -66,12 +71,12 @@ export async function POST(request: NextRequest) {
             // For travel-album, use city-spot-date-hash format for filename
             let imageFilename: string
             if (type === 'travel-album') {
-              const city = fields.city || ''
-              const spot = fields.spot || ''
+              const city = String(fields.city || '')
+              const spot = String(fields.spot || '')
               const date = fields.date ? String(fields.date).replace(/-/g, '') : ''
               // Generate short hash from image data
               const hash = crypto.createHash('md5').update(base64Data).digest('hex').slice(0, 6)
-              // Format: 城市-景点-日期-hash (hash at the end for proper parsing)
+              // Format: 城市-景点-日期-hash or 城市-日期-hash
               imageFilename = spot ? `${city}-${spot}-${date}-${hash}.${ext}` : `${city}-${date}-${hash}.${ext}`
             }
             else {
@@ -81,6 +86,7 @@ export async function POST(request: NextRequest) {
             const imagePath = path.join(contentDir, imageFilename)
             const imageBuffer = Buffer.from(base64Data, 'base64')
             await fs.writeFile(imagePath, imageBuffer)
+            uploadedFiles.push(imagePath)
           }
         }
       }
@@ -104,7 +110,16 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: true, path: filepath, filename })
   }
   catch (error) {
+    // Cleanup uploaded files on failure
+    for (const file of uploadedFiles) {
+      try {
+        await fs.unlink(file)
+      }
+      catch {
+        // Ignore cleanup errors
+      }
+    }
     console.error('Save failed:', error)
-    return NextResponse.json({ success: false, error: String(error) }, { status: 500 })
+    return NextResponse.json({ success: false, error: '保存失败，请重试' }, { status: 500 })
   }
 }

@@ -1,7 +1,7 @@
 'use client'
 
 import { contentConfigs, type ContentType, generateFilename, generateMarkdown } from '@/lib/config'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function ContentCreator() {
   const [selectedType, setSelectedType] = useState<ContentType>('post')
@@ -9,9 +9,13 @@ export default function ContentCreator() {
   const [content, setContent] = useState('')
   const [copied, setCopied] = useState(false)
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'success' | 'error'>('idle')
-  const [toast, setToast] = useState<string | null>(null)
+  const [toast, setToast] = useState<{ message: string, type: 'success' | 'error' } | null>(null)
   const [previewMd, setPreviewMd] = useState('')
   const [showPreview, setShowPreview] = useState(false)
+  const [isUploading, setIsUploading] = useState(false)
+  const [imageUrls, setImageUrls] = useState<Record<string, string>>({})
+  const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const isTravelAlbum = selectedType === 'travel-album'
 
   const currentConfig = contentConfigs[selectedType]
 
@@ -61,7 +65,14 @@ export default function ContentCreator() {
     return html
   }
 
-  // Set defaults when type changes (component remounts due to key)
+  // Cleanup object URLs on unmount
+  useEffect(() => {
+    return () => {
+      Object.values(imageUrls).forEach(url => URL.revokeObjectURL(url))
+    }
+  }, [imageUrls])
+
+  // Set defaults when type changes
   useEffect(() => {
     const defaults: Record<string, string> = {}
     currentConfig.fields.forEach((field) => {
@@ -82,11 +93,10 @@ export default function ContentCreator() {
     if (!file)
       return
 
-    const reader = new FileReader()
-    reader.onload = (e) => {
-      setFormData(prev => ({ ...prev, [key]: e.target?.result as string }))
-    }
-    reader.readAsDataURL(file)
+    // Use object URL instead of base64 to save memory
+    const objectUrl = URL.createObjectURL(file)
+    setImageUrls(prev => ({ ...prev, [key]: objectUrl }))
+    setFormData(prev => ({ ...prev, [key]: objectUrl }))
   }
 
   function handleMultipleImageUpload(event: React.ChangeEvent<HTMLInputElement>, key: string) {
@@ -94,20 +104,25 @@ export default function ContentCreator() {
     if (files.length === 0)
       return
 
-    const readers = files.map((file) => {
-      return new Promise<string>((resolve) => {
-        const reader = new FileReader()
-        reader.onload = e => resolve(e.target?.result as string)
-        reader.readAsDataURL(file)
-      })
-    })
+    setIsUploading(true)
 
-    Promise.all(readers).then((results) => {
-      setFormData((prev) => {
-        const existing = prev[key]
-        const existingArray = Array.isArray(existing) ? existing : existing ? [existing] : []
-        return { ...prev, [key]: [...existingArray, ...results] }
-      })
+    const newUrls: string[] = []
+    let processed = 0
+
+    files.forEach((file, index) => {
+      const objectUrl = URL.createObjectURL(file)
+      newUrls[index] = objectUrl
+
+      processed++
+      if (processed === files.length) {
+        setImageUrls(prev => ({ ...prev, [key]: newUrls[0] })) // Keep first URL reference
+        setFormData((prev) => {
+          const existing = prev[key]
+          const existingArray = Array.isArray(existing) ? existing : existing ? [existing] : []
+          return { ...prev, [key]: [...existingArray, ...newUrls] }
+        })
+        setIsUploading(false)
+      }
     })
   }
 
@@ -133,13 +148,18 @@ export default function ContentCreator() {
   }
 
   async function saveFile() {
+    // Prevent duplicate submissions
+    if (saveTimeoutRef.current) {
+      clearTimeout(saveTimeoutRef.current)
+    }
+
     // Validate required fields
     const missingFields = currentConfig.fields
       .filter(field => field.required && !formData[field.key])
       .map(field => field.label)
 
     if (missingFields.length > 0) {
-      setToast(`请填写必填字段: ${missingFields.join(', ')}`)
+      setToast({ message: `请填写必填字段: ${missingFields.join(', ')}`, type: 'error' })
       setTimeout(() => setToast(null), 3000)
       return
     }
@@ -157,8 +177,8 @@ export default function ContentCreator() {
 
       if (result.success) {
         setSaveStatus('success')
-        setToast('保存成功')
-        setTimeout(() => {
+        setToast({ message: '保存成功', type: 'success' })
+        saveTimeoutRef.current = setTimeout(() => {
           setSaveStatus('idle')
           setToast(null)
         }, 2000)
@@ -169,8 +189,8 @@ export default function ContentCreator() {
     }
     catch {
       setSaveStatus('error')
-      setToast('保存失败')
-      setTimeout(() => {
+      setToast({ message: '保存失败，请重试', type: 'error' })
+      saveTimeoutRef.current = setTimeout(() => {
         setSaveStatus('idle')
         setToast(null)
       }, 3000)
@@ -180,6 +200,8 @@ export default function ContentCreator() {
   function downloadFile() {
     const md = generateMarkdown(selectedType, formData, content)
     const filename = generateFilename(selectedType, formData)
+    if (!filename)
+      return // Skip for travel-album
     const blob = new Blob([md], { type: 'text/markdown' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
@@ -201,41 +223,50 @@ export default function ContentCreator() {
 
         {/* Action buttons in navbar */}
         <div className="flex-1 flex justify-end gap-2">
-          <button
-            onClick={() => setShowPreview(prev => !prev)}
-            className={`w-20 py-1.5 rounded-lg transition-colors flex items-center justify-center gap-1 text-sm ${
-              showPreview ? 'bg-purple-100 dark:bg-purple-900 text-purple-600' : 'hover:bg-gray-200 dark:hover:bg-gray-700'
-            }`}
-          >
-            <span>👁️</span>
-            {' '}
-            {showPreview ? '关闭' : '预览'}
-          </button>
+          {/* 预览按钮 - 旅行相册不显示 */}
+          {!isTravelAlbum && (
+            <button
+              onClick={() => setShowPreview(prev => !prev)}
+              className={`w-20 py-1.5 rounded-lg transition-colors flex items-center justify-center gap-1 text-sm ${
+                showPreview ? 'bg-purple-100 dark:bg-purple-900 text-purple-600' : 'hover:bg-gray-200 dark:hover:bg-gray-700'
+              }`}
+            >
+              <span>👁️</span>
+              {' '}
+              {showPreview ? '关闭' : '预览'}
+            </button>
+          )}
           <button
             onClick={saveFile}
-            disabled={saveStatus === 'saving'}
+            disabled={saveStatus === 'saving' || isUploading}
             className="w-20 py-1.5 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center gap-1 text-sm disabled:opacity-60"
           >
-            <span>💾</span>
+            <span>{saveStatus === 'saving' ? '⏳' : '💾'}</span>
             {' '}
-            保存
+            {saveStatus === 'saving' ? '保存中' : '保存'}
           </button>
-          <button
-            onClick={downloadFile}
-            className="w-20 py-1.5 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center gap-1 text-sm"
-          >
-            <span>📥</span>
-            {' '}
-            下载
-          </button>
-          <button
-            onClick={copyToClipboard}
-            className="w-20 py-1.5 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center gap-1 text-sm"
-          >
-            <span>{copied ? '✅' : '📋'}</span>
-            {' '}
-            {copied ? '已复制' : '复制'}
-          </button>
+          {/* 下载按钮 - 旅行相册不显示 */}
+          {!isTravelAlbum && (
+            <button
+              onClick={downloadFile}
+              className="w-20 py-1.5 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center gap-1 text-sm"
+            >
+              <span>📥</span>
+              {' '}
+              下载
+            </button>
+          )}
+          {/* 复制按钮 - 旅行相册不显示 */}
+          {!isTravelAlbum && (
+            <button
+              onClick={copyToClipboard}
+              className="w-20 py-1.5 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center gap-1 text-sm"
+            >
+              <span>{copied ? '✅' : '📋'}</span>
+              {' '}
+              {copied ? '已复制' : '复制'}
+            </button>
+          )}
         </div>
 
         <nav className="flex items-center gap-1 ml-4">
@@ -273,7 +304,7 @@ export default function ContentCreator() {
                 {currentConfig.fields
                   .filter((field) => {
                     // 旅行相册以外的其他类型，隐藏 date 字段（使用默认日期）
-                    if (selectedType !== 'travel-album' && field.key === 'date') {
+                    if (!isTravelAlbum && field.key === 'date') {
                       return false
                     }
                     return true
@@ -359,6 +390,11 @@ export default function ContentCreator() {
                                         </button>
                                       </div>
                                     ))}
+                                    {isUploading && (
+                                      <div className="w-24 h-20 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-lg">
+                                        <span>上传中...</span>
+                                      </div>
+                                    )}
                                     <label className="cursor-pointer inline-flex w-24 h-20 items-center justify-center bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg hover:border-purple-500 transition-colors">
                                       <span>📤</span>
                                       <input
@@ -384,7 +420,7 @@ export default function ContentCreator() {
               </div>
 
               {/* Content input - hidden for travel-album */}
-              {selectedType !== 'travel-album' && (
+              {!isTravelAlbum && (
                 <div className="mb-6">
                   <label className="text-sm font-medium block mb-2">
                     {selectedType === 'daily' ? '碎记内容' : '正文内容 (Markdown)'}
@@ -398,7 +434,7 @@ export default function ContentCreator() {
                   />
                 </div>
               )}
-              {selectedType !== 'travel-album' && (
+              {!isTravelAlbum && (
                 <span className="ml-auto text-sm text-gray-500 self-center">
                   保存路径：
                   {currentConfig.directory}
@@ -409,23 +445,29 @@ export default function ContentCreator() {
         </div>
       </div>
 
-      {/* Real-time Preview Panel */}
-      <div
-        className={`fixed top-16 right-0 w-100 h-[calc(100vh-4rem)] overflow-auto border-l border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-4 transition-transform duration-300 ease-in-out ${
-          showPreview ? 'translate-x-0' : 'translate-x-full'
-        }`}
-      >
-        <h3 className="font-semibold text-sm text-gray-500 dark:text-gray-400 mb-3">实时预览</h3>
+      {/* Real-time Preview Panel - hidden for travel-album */}
+      {!isTravelAlbum && (
         <div
-          className="text-sm text-gray-800 dark:text-gray-200"
-          dangerouslySetInnerHTML={{ __html: markdownToHtml(previewMd) }}
-        />
-      </div>
+          className={`fixed top-16 right-0 w-100 h-[calc(100vh-4rem)] overflow-auto border-l border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-4 transition-transform duration-300 ease-in-out ${
+            showPreview ? 'translate-x-0' : 'translate-x-full'
+          }`}
+        >
+          <h3 className="font-semibold text-sm text-gray-500 dark:text-gray-400 mb-3">实时预览</h3>
+          <div
+            className="text-sm text-gray-800 dark:text-gray-200"
+            dangerouslySetInnerHTML={{ __html: markdownToHtml(previewMd) }}
+          />
+        </div>
+      )}
 
-      {/* Toast Notification */}
+      {/* Toast Notification - with different styles for success/error */}
       {toast && (
-        <div className="fixed top-20 left-1/2 -translate-x-1/2 z-50 px-6 py-3 bg-orange-500 text-white rounded-lg shadow-lg text-sm">
-          {toast}
+        <div
+          className={`fixed top-20 left-1/2 -translate-x-1/2 z-50 px-6 py-3 rounded-lg shadow-lg text-sm text-white ${
+            toast.type === 'success' ? 'bg-green-500' : 'bg-red-500'
+          }`}
+        >
+          {toast.message}
         </div>
       )}
     </div>

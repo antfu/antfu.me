@@ -39,7 +39,7 @@ export const contentConfigs: Record<ContentType, ContentConfig> = {
     extension: '.md',
     fields: [
       { key: 'title', label: '标题', type: 'text', required: false },
-      { key: 'date', label: '日期', type: 'date', required: true },
+      { key: 'date', label: '日期', type: 'date', required: false },
       { key: 'lang', label: '语言', type: 'select', required: true, options: ['zh', 'en'], default: 'zh' },
       { key: 'duration', label: '阅读时长', type: 'text', required: true },
       { key: 'description', label: '描述', type: 'textarea', required: false },
@@ -135,7 +135,7 @@ export function generateMarkdown(type: ContentType, fields: Record<string, strin
   }
 
   const config = contentConfigs[type]
-  const frontmatter: Record<string, any> = {}
+  const frontmatter: Record<string, string | string[]> = {}
 
   // Parse list-like content from textarea fields
   function parseListContent(text: string): string[] {
