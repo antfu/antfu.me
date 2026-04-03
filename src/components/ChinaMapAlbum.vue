@@ -468,7 +468,7 @@ onUnmounted(() => {
 
 .photo-item img {
   margin-bottom: 0;
-  margin-top: 1rem;
+  margin-top: 0;
   width: 100%;
   height: 200px;
   min-height: 160px;

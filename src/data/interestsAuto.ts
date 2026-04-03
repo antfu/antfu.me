@@ -30,20 +30,6 @@ export const travelImages: InterestImage[] = [
     date: '2025-09-01',
   },
   {
-    filename: '北京-20250810-1fc325.jpeg',
-    url: '/images/interests/travel/北京-20250810-1fc325.jpeg',
-    city: '北京',
-    spot: '',
-    date: '2025-08-10',
-  },
-  {
-    filename: '北京-20250810-748a5c.jpeg',
-    url: '/images/interests/travel/北京-20250810-748a5c.jpeg',
-    city: '北京',
-    spot: '',
-    date: '2025-08-10',
-  },
-  {
     filename: '北京-20250810-9bbef6.jpeg',
     url: '/images/interests/travel/北京-20250810-9bbef6.jpeg',
     city: '北京',
