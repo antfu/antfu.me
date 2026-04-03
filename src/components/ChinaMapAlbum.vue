@@ -355,7 +355,7 @@ onUnmounted(() => {
           >
             <img :src="photo.url" :alt="photo.spot">
             <div class="photo-info">
-              <span class="photo-spot">{{ photo.spot }}</span>
+              <span class="photo-spot">{{ photo.spot || photo.city }}</span>
               <span class="photo-date">{{ photo.date }}</span>
             </div>
           </div>

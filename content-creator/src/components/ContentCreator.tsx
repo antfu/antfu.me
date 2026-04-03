@@ -256,7 +256,7 @@ export default function ContentCreator() {
                 <button
                   key={type}
                   onClick={() => setSelectedType(type as ContentType)}
-                  className={`w-28 py-2 rounded-lg border font-medium transition-all text-sm ${
+                  className={`w-25 py-2 rounded-lg border font-medium transition-all text-sm ${
                     selectedType === type
                       ? 'bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 bg-[length:200%_100%] animate-gradient text-white border-transparent'
                       : 'bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 hover:border-purple-500'
@@ -270,128 +270,140 @@ export default function ContentCreator() {
             {/* Form */}
             <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 mb-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                {currentConfig.fields.map(field => (
-                  <div key={field.key} className={`flex flex-col gap-2 ${field.type === 'textarea' || field.type === 'image' || field.type === 'images' ? 'md:col-span-2' : ''}`}>
-                    <label className="text-sm font-medium">
-                      {field.label}
-                      {field.required && <span className="text-red-500 ml-1">*</span>}
-                    </label>
+                {currentConfig.fields
+                  .filter((field) => {
+                    // 旅行相册以外的其他类型，隐藏 date 字段（使用默认日期）
+                    if (selectedType !== 'travel-album' && field.key === 'date') {
+                      return false
+                    }
+                    return true
+                  })
+                  .map(field => (
+                    <div key={field.key} className={`flex flex-col gap-2 ${field.type === 'textarea' || field.type === 'image' || field.type === 'images' ? 'md:col-span-2' : ''}`}>
+                      <label className="text-sm font-medium">
+                        {field.label}
+                        {field.required && <span className="text-red-500 ml-1">*</span>}
+                      </label>
 
-                    {field.type === 'select'
-                      ? (
-                          <select
-                            value={formData[field.key] || ''}
-                            onChange={e => handleFieldChange(field.key, e.target.value)}
-                            className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 focus:outline-none focus:border-purple-500"
-                          >
-                            <option value="">请选择</option>
-                            {field.options?.map(opt => (
-                              <option key={opt} value={opt}>{opt}</option>
-                            ))}
-                          </select>
-                        )
-                      : field.type === 'textarea'
+                      {field.type === 'select'
                         ? (
-                            <textarea
+                            <select
                               value={formData[field.key] || ''}
                               onChange={e => handleFieldChange(field.key, e.target.value)}
-                              rows={3}
-                              className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 focus:outline-none focus:border-purple-500 resize-none"
-                            />
+                              className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 focus:outline-none focus:border-purple-500"
+                            >
+                              <option value="">请选择</option>
+                              {field.options?.map(opt => (
+                                <option key={opt} value={opt}>{opt}</option>
+                              ))}
+                            </select>
                           )
-                        : field.type === 'image'
+                        : field.type === 'textarea'
                           ? (
-                              <div className="flex flex-wrap gap-2 items-center">
-                                {formData[field.key] && typeof formData[field.key] === 'string'
-                                  ? (
-                                      <div className="relative w-24 h-20">
+                              <textarea
+                                value={formData[field.key] || ''}
+                                onChange={e => handleFieldChange(field.key, e.target.value)}
+                                rows={3}
+                                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 focus:outline-none focus:border-purple-500 resize-none"
+                              />
+                            )
+                          : field.type === 'image'
+                            ? (
+                                <div className="flex flex-wrap gap-2 items-center">
+                                  {formData[field.key] && typeof formData[field.key] === 'string'
+                                    ? (
+                                        <div className="relative w-24 h-20">
+                                          <img
+                                            src={formData[field.key] as string}
+                                            alt="Preview"
+                                            className="w-full h-full object-cover rounded-lg border"
+                                          />
+                                          <button
+                                            type="button"
+                                            onClick={() => setFormData(prev => ({ ...prev, [field.key]: '' }))}
+                                            className="absolute -top-2 -right-2 w-5 h-5 bg-red-500 text-white rounded-full text-xs flex items-center justify-center hover:bg-red-600"
+                                          >
+                                            ×
+                                          </button>
+                                        </div>
+                                      )
+                                    : (
+                                        <label className="cursor-pointer inline-flex w-24 h-20 items-center justify-center bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg hover:border-purple-500 transition-colors">
+                                          <span>📤</span>
+                                          <input
+                                            type="file"
+                                            accept="image/*"
+                                            onChange={e => handleImageUpload(e, field.key)}
+                                            className="hidden"
+                                          />
+                                        </label>
+                                      )}
+                                </div>
+                              )
+                            : field.type === 'images'
+                              ? (
+                                  <div className="flex flex-wrap gap-2 items-center">
+                                    {Array.isArray(formData[field.key]) && (formData[field.key] as string[]).map((src, idx) => (
+                                      <div key={idx} className="relative w-24 h-20">
                                         <img
-                                          src={formData[field.key] as string}
-                                          alt="Preview"
+                                          src={src}
+                                          alt={`Preview ${idx + 1}`}
                                           className="w-full h-full object-cover rounded-lg border"
                                         />
                                         <button
                                           type="button"
-                                          onClick={() => setFormData(prev => ({ ...prev, [field.key]: '' }))}
+                                          onClick={() => removeImage(field.key, idx)}
                                           className="absolute -top-2 -right-2 w-5 h-5 bg-red-500 text-white rounded-full text-xs flex items-center justify-center hover:bg-red-600"
                                         >
                                           ×
                                         </button>
                                       </div>
-                                    )
-                                  : (
-                                      <label className="cursor-pointer inline-flex w-24 h-20 items-center justify-center bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg hover:border-purple-500 transition-colors">
-                                        <span>📤</span>
-                                        <input
-                                          type="file"
-                                          accept="image/*"
-                                          onChange={e => handleImageUpload(e, field.key)}
-                                          className="hidden"
-                                        />
-                                      </label>
-                                    )}
-                              </div>
-                            )
-                          : field.type === 'images'
-                            ? (
-                                <div className="flex flex-wrap gap-2 items-center">
-                                  {Array.isArray(formData[field.key]) && (formData[field.key] as string[]).map((src, idx) => (
-                                    <div key={idx} className="relative w-24 h-20">
-                                      <img
-                                        src={src}
-                                        alt={`Preview ${idx + 1}`}
-                                        className="w-full h-full object-cover rounded-lg border"
+                                    ))}
+                                    <label className="cursor-pointer inline-flex w-24 h-20 items-center justify-center bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg hover:border-purple-500 transition-colors">
+                                      <span>📤</span>
+                                      <input
+                                        type="file"
+                                        accept="image/*"
+                                        multiple
+                                        onChange={e => handleMultipleImageUpload(e, field.key)}
+                                        className="hidden"
                                       />
-                                      <button
-                                        type="button"
-                                        onClick={() => removeImage(field.key, idx)}
-                                        className="absolute -top-2 -right-2 w-5 h-5 bg-red-500 text-white rounded-full text-xs flex items-center justify-center hover:bg-red-600"
-                                      >
-                                        ×
-                                      </button>
-                                    </div>
-                                  ))}
-                                  <label className="cursor-pointer inline-flex w-24 h-20 items-center justify-center bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg hover:border-purple-500 transition-colors">
-                                    <span>📤</span>
-                                    <input
-                                      type="file"
-                                      accept="image/*"
-                                      multiple
-                                      onChange={e => handleMultipleImageUpload(e, field.key)}
-                                      className="hidden"
-                                    />
-                                  </label>
-                                </div>
-                              )
-                            : (
-                                <input
-                                  type={field.type}
-                                  value={formData[field.key] || ''}
-                                  onChange={e => handleFieldChange(field.key, e.target.value)}
-                                  className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 focus:outline-none focus:border-purple-500"
-                                />
-                              )}
-                  </div>
-                ))}
+                                    </label>
+                                  </div>
+                                )
+                              : (
+                                  <input
+                                    type={field.type}
+                                    value={formData[field.key] || ''}
+                                    onChange={e => handleFieldChange(field.key, e.target.value)}
+                                    className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 focus:outline-none focus:border-purple-500"
+                                  />
+                                )}
+                    </div>
+                  ))}
               </div>
 
-              {/* Content input */}
-              <div className="mb-6">
-                <label className="text-sm font-medium block mb-2">
-                  {selectedType === 'daily' ? '碎记内容' : '正文内容 (Markdown)'}
-                </label>
-                <textarea
-                  value={content}
-                  onChange={e => setContent(e.target.value)}
-                  rows={12}
-                  placeholder={selectedType === 'daily' ? '输入碎记内容...' : '输入正文内容，支持 Markdown 格式...'}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 focus:outline-none focus:border-purple-500 resize-y font-mono text-sm"
-                />
-              </div>
-              <span className="ml-auto text-sm text-gray-500 self-center">
-                保存路径：
-                {currentConfig.directory}
-              </span>
+              {/* Content input - hidden for travel-album */}
+              {selectedType !== 'travel-album' && (
+                <div className="mb-6">
+                  <label className="text-sm font-medium block mb-2">
+                    {selectedType === 'daily' ? '碎记内容' : '正文内容 (Markdown)'}
+                  </label>
+                  <textarea
+                    value={content}
+                    onChange={e => setContent(e.target.value)}
+                    rows={12}
+                    placeholder={selectedType === 'daily' ? '输入碎记内容，支持 Markdown 格式...' : '输入正文内容，支持 Markdown 格式...'}
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 focus:outline-none focus:border-purple-500 resize-y font-mono text-sm"
+                  />
+                </div>
+              )}
+              {selectedType !== 'travel-album' && (
+                <span className="ml-auto text-sm text-gray-500 self-center">
+                  保存路径：
+                  {currentConfig.directory}
+                </span>
+              )}
             </div>
           </div>
         </div>

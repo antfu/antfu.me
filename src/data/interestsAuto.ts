@@ -19,7 +19,7 @@ export const travelImages: InterestImage[] = [
     filename: '乌鲁木齐-2025-09.JPG',
     url: '/images/interests/travel/乌鲁木齐-2025-09.JPG',
     city: '乌鲁木齐',
-    spot: '乌鲁木齐',
+    spot: '',
     date: '2025-09-01',
   },
   {
@@ -28,6 +28,27 @@ export const travelImages: InterestImage[] = [
     city: '昆明',
     spot: '坝口',
     date: '2025-09-01',
+  },
+  {
+    filename: '北京-20250810-1fc325.jpeg',
+    url: '/images/interests/travel/北京-20250810-1fc325.jpeg',
+    city: '北京',
+    spot: '',
+    date: '2025-08-10',
+  },
+  {
+    filename: '北京-20250810-748a5c.jpeg',
+    url: '/images/interests/travel/北京-20250810-748a5c.jpeg',
+    city: '北京',
+    spot: '',
+    date: '2025-08-10',
+  },
+  {
+    filename: '北京-20250810-9bbef6.jpeg',
+    url: '/images/interests/travel/北京-20250810-9bbef6.jpeg',
+    city: '北京',
+    spot: '',
+    date: '2025-08-10',
   },
   {
     filename: '昆明-坝口-2025-08.JPG',
@@ -82,7 +103,7 @@ export const travelImages: InterestImage[] = [
     filename: '哈尔滨-2025-01.JPG',
     url: '/images/interests/travel/哈尔滨-2025-01.JPG',
     city: '哈尔滨',
-    spot: '哈尔滨',
+    spot: '',
     date: '2025-01-01',
   },
   {

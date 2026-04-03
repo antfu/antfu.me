@@ -1,4 +1,4 @@
-export type ContentType = 'post' | 'daily' | 'product-daily' | 'product-new' | 'interest'
+export type ContentType = 'post' | 'daily' | 'product-daily' | 'product-new' | 'interest' | 'travel-album'
 
 export interface Field {
   key: string
@@ -93,6 +93,18 @@ export const contentConfigs: Record<ContentType, ContentConfig> = {
       { key: 'images', label: '配图', type: 'images', required: false },
     ],
   },
+  'travel-album': {
+    type: 'travel-album',
+    label: '旅行相册',
+    directory: 'public/images/interests/travel',
+    extension: '',
+    fields: [
+      { key: 'city', label: '城市', type: 'text', required: true },
+      { key: 'spot', label: '景点', type: 'text', required: false },
+      { key: 'date', label: '日期', type: 'date', required: true },
+      { key: 'images', label: '照片', type: 'images', required: true },
+    ],
+  },
 }
 
 export function slugify(text: string): string {
@@ -108,11 +120,20 @@ export function generateFilename(type: ContentType, data: Record<string, string 
     const date = Array.isArray(data.date) ? data.date[0] : data.date
     return `${date || new Date().toISOString().split('T')[0]}.md`
   }
+  if (type === 'travel-album') {
+    // 旅行相册不需要生成 md 文件，照片由 API 直接上传
+    return ''
+  }
   const title = Array.isArray(data.title) ? data.title[0] : data.title
   return `${slugify(title || 'untitled')}.md`
 }
 
 export function generateMarkdown(type: ContentType, fields: Record<string, string | string[]>, content: string, coverImage?: string): string {
+  // 旅行相册不需要生成 markdown 文件
+  if (type === 'travel-album') {
+    return ''
+  }
+
   const config = contentConfigs[type]
   const frontmatter: Record<string, any> = {}
 

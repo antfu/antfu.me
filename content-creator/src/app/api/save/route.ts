@@ -1,4 +1,5 @@
 import type { NextRequest } from 'next/server'
+import crypto from 'node:crypto'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { contentConfigs, type ContentType, generateFilename, generateMarkdown } from '@/lib/config'
@@ -14,6 +15,11 @@ export async function POST(request: NextRequest) {
 
     if (!contentConfigs[type]) {
       return NextResponse.json({ success: false, error: 'Invalid content type' }, { status: 400 })
+    }
+
+    // For non-travel-album types, set default date if not provided
+    if (type !== 'travel-album' && !fields.date) {
+      fields.date = new Date().toISOString().split('T')[0]
     }
 
     const config = contentConfigs[type]
@@ -56,14 +62,33 @@ export async function POST(request: NextRequest) {
           if (match) {
             const ext = match[1]
             const base64Data = match[2]
-            // Use index to avoid name collisions
-            const imageFilename = `${baseName}-${i + 1}.${ext}`
+
+            // For travel-album, use city-spot-date-hash format for filename
+            let imageFilename: string
+            if (type === 'travel-album') {
+              const city = fields.city || ''
+              const spot = fields.spot || ''
+              const date = fields.date ? String(fields.date).replace(/-/g, '') : ''
+              // Generate short hash from image data
+              const hash = crypto.createHash('md5').update(base64Data).digest('hex').slice(0, 6)
+              // Format: 城市-景点-日期-hash (hash at the end for proper parsing)
+              imageFilename = spot ? `${city}-${spot}-${date}-${hash}.${ext}` : `${city}-${date}-${hash}.${ext}`
+            }
+            else {
+              imageFilename = `${baseName}-${i + 1}.${ext}`
+            }
+
             const imagePath = path.join(contentDir, imageFilename)
             const imageBuffer = Buffer.from(base64Data, 'base64')
             await fs.writeFile(imagePath, imageBuffer)
           }
         }
       }
+    }
+
+    // Skip markdown file generation for travel-album
+    if (type === 'travel-album') {
+      return NextResponse.json({ success: true, message: 'Photos uploaded successfully' })
     }
 
     // Ensure content directory exists
