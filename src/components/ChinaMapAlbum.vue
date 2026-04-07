@@ -348,15 +348,17 @@ onUnmounted(() => {
           </button>
         </div>
         <div class="city-panel-content">
-          <div
-            v-for="photo in selectedCityPhotos"
-            :key="photo.filename"
-            class="photo-item"
-          >
-            <img :src="photo.url" :alt="photo.spot">
-            <div class="photo-info">
-              <span class="photo-spot">{{ photo.spot || photo.city }}</span>
-              <span class="photo-date">{{ photo.date }}</span>
+          <div class="city-panel-content-wrapper">
+            <div
+              v-for="photo in selectedCityPhotos"
+              :key="photo.filename"
+              class="photo-item"
+            >
+              <img :src="photo.url" :alt="photo.spot">
+              <div class="photo-info">
+                <span class="photo-spot">{{ photo.spot || photo.city }}</span>
+                <span class="photo-date">{{ photo.date }}</span>
+              </div>
             </div>
           </div>
         </div>
@@ -393,6 +395,8 @@ onUnmounted(() => {
   right: -60%;
   top: 50%;
   transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
   width: 400px;
   max-height: 800px;
   background: var(--c-bg-soft, rgba(255, 255, 255, 0.98));
@@ -442,13 +446,16 @@ onUnmounted(() => {
 }
 
 .city-panel-content {
+  flex: 1;
   padding: 1rem;
-  max-height: calc(80vh - 60px);
   overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.city-panel-content-wrapper {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  scrollbar-width: none;
 }
 
 .city-panel-content::-webkit-scrollbar {
