@@ -108,7 +108,7 @@ I continued doing so with the "velocity" _ignorantly_ since then. I am super luc
 - {@KermanX} {@tonai} for pushing many features on {Slidev}
 - {@arashsheyda} for helping a lot on {Nuxt DevTools}
 - {@shuuji3} {@Shinigami92} for contributing to {Elk}
-- {@patak-dev} {@sapphi-red} {@bluwy} for keep pushing Vite forward with the awesome community
+- {@patak-cat} {@sapphi-red} {@bluwy} for keep pushing Vite forward with the awesome community
 - {@userquin} for maintaining {Vite PWA} and helping basically everything everywhere
 - {@yyx990803}, whom I learned a lot about OSS and decision-making from
 - ...and many of you who have contributed to Open Source or provided financial support via Sponsorships!
@@ -145,7 +145,7 @@ Meanwhile, there are actually many other things about open source I didn't get t
 
 ### Thanks
 
-Thanks to {@patak-dev} and {@posva} for our deep conversations around this topic, they really helped me a lot and provided great support.
+Thanks to {@patak-cat} and {@posva} for our deep conversations around this topic, they really helped me a lot and provided great support.
 
 And **You**, as well as the great open source community! I am so grateful for all the help and support I have received from you.
 
