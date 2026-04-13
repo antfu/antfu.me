@@ -110,7 +110,7 @@ duration: 25min
 - {@KermanX} {@tonai} 在 {Slidev} 上推动了很多功能
 - {@arashsheyda} 在 {Nuxt DevTools} 上提供了很多帮助
 - {@shuuji3} {@Shinigami92} 为 {Elk} 做出了贡献
-- {@patak-dev} {@sapphi-red} {@bluwy} 与出色的社区一起推动 Vite 前进
+- {@patak-cat} {@sapphi-red} {@bluwy} 与出色的社区一起推动 Vite 前进
 - {@userquin} 维护 {Vite PWA} 并几乎在所有项目中提供了帮助
 - {@yyx990803}，我从他那学到了很多关于开源和决策的智慧
 - ...以及许多为开源做出贡献或通过赞助提供财务支持的人！
@@ -147,7 +147,7 @@ duration: 25min
 
 ### 致谢
 
-感谢 {@patak-dev} 和 {@posva} 对这个话题的深入交流，他们真的帮了我很多，提供了很大的支持。
+感谢 {@patak-cat} 和 {@posva} 对这个话题的深入交流，他们真的帮了我很多，提供了很大的支持。
 
 还有正在阅读这篇文章的**你**，以及整个开源社区！我非常感激你们给我的所有帮助和支持。
 

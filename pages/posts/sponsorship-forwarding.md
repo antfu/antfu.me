@@ -58,7 +58,7 @@ I am honestly super lucky to have the opportunity to work on numerous front-faci
 
 ## Sponsorships Forwarding on GitHub
 
-I am already [sponsoring a number of maintainers](https://github.com/antfu?tab=sponsoring) who I benefit a lot from. {GitHub Sponsors|https://github.com/sponsors} is a great platform. It [covers the transaction fees](https://docs.github.com/en/sponsors/getting-started-with-github-sponsors/about-github-sponsors#about-github-sponsors), and provides great connections with sponsors, maintainers, and projects, making the discovery and sponsorship process smooth. However, while it is great for individual sponsors, it lacks the ability to forward sponsorships to other projects or maintainers. {@patak-dev} [raised this feature request for GitHub](https://github.com/orgs/community/discussions/10177) two years ago, which is currently the top-upvoted request from the community, but unfortunately, it has not been resolved yet.
+I am already [sponsoring a number of maintainers](https://github.com/antfu?tab=sponsoring) who I benefit a lot from. {GitHub Sponsors|https://github.com/sponsors} is a great platform. It [covers the transaction fees](https://docs.github.com/en/sponsors/getting-started-with-github-sponsors/about-github-sponsors#about-github-sponsors), and provides great connections with sponsors, maintainers, and projects, making the discovery and sponsorship process smooth. However, while it is great for individual sponsors, it lacks the ability to forward sponsorships to other projects or maintainers. {@patak-cat} [raised this feature request for GitHub](https://github.com/orgs/community/discussions/10177) two years ago, which is currently the top-upvoted request from the community, but unfortunately, it has not been resolved yet.
 
 Here, let's do some simple math to see why this feature is essential:
 
@@ -73,7 +73,7 @@ For example, the tax I have to pay here in France is roughly 41%. Assume both ma
 
 of the original amount, plus two months of delay in between <span op75>(on top of the case that GitHub already covers the transaction fees)</span>. Sometimes, we even have circular sponsorships because we both want to show appreciation to the others. Ultimately, this is a significant loss, especially when there is not enough funding for open source already (it's also worth mentioning that GitHub Sponsors is [not yet available in all countries](https://docs.github.com/en/sponsors/getting-started-with-github-sponsors/about-github-sponsors#supported-regions-for-github-sponsors)).
 
-Despite GitHub Sponsors limitations, a lot of maintainers are still forwarding part of their funds to others ({@danielroe|Danielroe's Sponsoring|https://github.com/danielroe?tab=sponsoring}, {@patak-dev|Matias' Sponsoring|https://github.com/patak-dev?tab=sponsoring}, {@kazupon|Kazupon's Sponsoring|https://github.com/kazupon?tab=sponsoring} and many more). While we really wanted to support more dependencies and maintainers, the current situation on GitHub is not very feasible in the long run.
+Despite GitHub Sponsors limitations, a lot of maintainers are still forwarding part of their funds to others ({@danielroe|Danielroe's Sponsoring|https://github.com/danielroe?tab=sponsoring}, {@patak-cat|Matias' Sponsoring|https://github.com/patak-cat?tab=sponsoring}, {@kazupon|Kazupon's Sponsoring|https://github.com/kazupon?tab=sponsoring} and many more). While we really wanted to support more dependencies and maintainers, the current situation on GitHub is not very feasible in the long run.
 
 ## Open Collective
 
