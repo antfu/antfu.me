@@ -7,11 +7,11 @@ function getSlug(title: string) {
 }
 
 function isFuture(date: string) {
-  return +new Date(date) > +new Date()
+  return +new Date(date) > Date.now()
 }
 
 function daysLeft(date: string) {
-  const diff = +new Date(date) - +new Date()
+  const diff = +new Date(date) - Date.now()
   return Math.ceil(diff / (1000 * 60 * 60 * 24))
 }
 </script>

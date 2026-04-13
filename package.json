@@ -1,7 +1,7 @@
 {
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.26.1",
+  "packageManager": "pnpm@10.33.0",
   "scripts": {
     "build": "npm run static && cross-env NODE_ENV=production vite-ssg build && tsx ./scripts/copy-fonts.ts && tsx ./scripts/rss.ts && cp _dist_redirects dist/_redirects",
     "dev": "vite --port 3333 --open",
@@ -88,7 +88,6 @@
     "unplugin-icons": "catalog:build",
     "unplugin-vue-components": "catalog:build",
     "unplugin-vue-markdown": "catalog:build",
-    "unplugin-vue-router": "catalog:build",
     "vite": "catalog:build",
     "vite-plugin-inspect": "catalog:build",
     "vite-plugin-optimize-exclude": "catalog:build",

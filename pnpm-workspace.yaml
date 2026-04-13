@@ -6,32 +6,31 @@ packages: []
 
 catalogs:
   build:
-    '@shikijs/markdown-it': ^3.20.0
-    '@shikijs/transformers': ^3.20.0
-    '@shikijs/twoslash': ^3.20.0
-    '@unocss/preset-web-fonts': ^66.5.10
-    '@vitejs/plugin-vue': ^6.0.3
+    '@shikijs/markdown-it': ^4.0.2
+    '@shikijs/transformers': ^4.0.2
+    '@shikijs/twoslash': ^4.0.2
+    '@unocss/preset-web-fonts': ^66.6.8
+    '@vitejs/plugin-vue': ^6.0.5
     gray-matter: ^4.0.3
-    markdown-it: ^14.1.0
+    markdown-it: ^14.1.1
     markdown-it-anchor: ^9.2.0
-    markdown-it-github-alerts: ^1.0.0
+    markdown-it-github-alerts: ^1.0.1
     markdown-it-link-attributes: ^4.0.1
     markdown-it-magic-link: ^0.1.4
-    markdown-it-table-of-contents: ^1.1.0
-    unocss: ^66.5.10
-    unplugin-auto-import: ^20.3.0
-    unplugin-icons: ^22.5.0
-    unplugin-vue-components: ^30.0.0
-    unplugin-vue-markdown: ^29.2.0
-    unplugin-vue-router: ^0.19.1
-    vite: ^7.3.0
+    markdown-it-table-of-contents: ^1.2.0
+    unocss: ^66.6.8
+    unplugin-auto-import: ^21.0.0
+    unplugin-icons: ^23.0.1
+    unplugin-vue-components: ^32.0.0
+    unplugin-vue-markdown: ^30.0.0
+    vite: ^8.0.8
     vite-plugin-inspect: ^11.3.3
     vite-plugin-optimize-exclude: ^0.0.1
-    vite-ssg: ^28.2.2
-    vite-svg-loader: ^5.1.0
+    vite-ssg: ^28.3.0
+    vite-svg-loader: ^5.1.1
   dev:
-    '@antfu/eslint-config': ^6.7.2
-    '@iconify/json': ^2.2.420
+    '@antfu/eslint-config': ^8.1.1
+    '@iconify/json': ^2.2.461
     '@octokit/core': ^7.0.6
     '@octokit/rest': ^22.0.1
     ansis: ^4.2.0
@@ -39,52 +38,52 @@ catalogs:
     cross-env: ^10.1.0
     degit: ^2.8.4
     diacritics: ^1.3.0
-    eslint: ^9.39.2
-    eslint-plugin-format: ^1.1.0
-    exifreader: ^4.33.1
+    eslint: ^10.2.0
+    eslint-plugin-format: ^2.0.1
+    exifreader: ^4.38.1
     fast-glob: ^3.3.3
-    feed: ^5.1.0
-    fs-extra: ^11.3.3
-    lint-staged: ^16.2.7
+    feed: ^5.2.0
+    fs-extra: ^11.3.4
+    lint-staged: ^16.4.0
     pathe: ^2.0.3
-    pnpm: ^10.26.1
+    pnpm: ^10.33.0
     prompts: ^2.4.2
-    rimraf: ^6.1.2
+    rimraf: ^6.1.3
     sharp: 0.32.6
-    simple-git: ^3.30.0
+    simple-git: ^3.36.0
     simple-git-hooks: ^2.13.1
     tsx: ^4.21.0
-    typescript: ~5.9.3
+    typescript: ~6.0.2
   frontend:
     '@antfu/utils': ^9.3.0
-    '@unhead/vue': ^2.0.19
-    '@unocss/reset': ^66.5.10
+    '@unhead/vue': ^3.0.3
+    '@unocss/reset': ^66.6.8
     '@unpic/placeholder': ^0.1.2
-    '@vueuse/core': ^14.1.0
+    '@vueuse/core': ^14.2.1
     d3-hierarchy: ^3.1.2
     d3-shape: ^3.2.0
-    dayjs: ^1.11.19
+    dayjs: ^1.11.20
     floating-vue: ^5.2.2
     matter-attractors: ^0.1.6
     matter-js: ^0.20.0
     nprogress: ^0.2.0
     pinia: ^3.0.4
-    pixi.js: ^8.14.3
-    shiki: ^3.20.0
-    shiki-magic-move: ^1.2.1
+    pixi.js: ^8.17.1
+    shiki: ^4.0.2
+    shiki-magic-move: ^1.3.0
     simplex-noise: ^4.0.3
-    vue: ^3.5.26
-    vue-router: ^4.6.4
+    vue: ^3.5.32
+    vue-router: ^5.0.4
     vue-router-better-scroller: ^0.0.0
   types:
     '@types/d3-hierarchy': ^3.1.7
-    '@types/d3-shape': ^3.1.7
+    '@types/d3-shape': ^3.1.8
     '@types/degit': ^2.8.6
     '@types/diacritics': ^1.3.3
     '@types/fs-extra': ^11.0.4
     '@types/markdown-it': ^14.1.2
     '@types/markdown-it-link-attributes': ^3.0.5
-    '@types/node': ^25.0.3
+    '@types/node': ^25.6.0
     '@types/nprogress': ^0.2.3
     '@types/prompts': ^2.4.9
 

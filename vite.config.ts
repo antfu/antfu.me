@@ -19,12 +19,12 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
 import Markdown from 'unplugin-vue-markdown/vite'
-import { VueRouterAutoImports } from 'unplugin-vue-router'
-import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
 import Inspect from 'vite-plugin-inspect'
 import Exclude from 'vite-plugin-optimize-exclude'
 import SVG from 'vite-svg-loader'
+import { VueRouterAutoImports } from 'vue-router/unplugin'
+import VueRouter from 'vue-router/vite'
 import { slugify } from './scripts/slugify'
 
 const promises: Promise<any>[] = []
@@ -154,7 +154,7 @@ export default defineConfig({
           imageOverrides: [
             ['https://github.com/vuejs/core', 'https://vuejs.org/logo.svg'],
             ['https://github.com/nuxt/nuxt', 'https://nuxt.com/assets/design-kit/icon-green.svg'],
-            ['https://github.com/vitejs/vite', 'https://vitejs.dev/logo.svg'],
+            ['https://github.com/vitejs/vite', 'https://github.com/vitejs.png'],
             ['https://github.com/sponsors', 'https://github.com/github.png'],
             ['https://github.com/sponsors/antfu', 'https://github.com/github.png'],
             ['https://nuxtlabs.com', 'https://github.com/nuxtlabs.png'],

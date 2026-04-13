@@ -79,7 +79,7 @@ const dataUri = `data:image/svg+xml;base64,${Buffer.from(svg).toString('base64')
 ```ts
 // https://bl.ocks.org/jennyknuth/222825e315d45a738ed9d6e04c7a88d0
 function encodeSvg(svg: string) {
-  return svg.replace('<svg', (~svg.indexOf('xmlns') ? '<svg' : '<svg xmlns="http://www.w3.org/2000/svg"'))
+  return svg.replace('<svg', (svg.includes('xmlns') ? '<svg' : '<svg xmlns="http://www.w3.org/2000/svg"'))
     .replace(/"/g, '\'')
     .replace(/%/g, '%25')
     .replace(/#/g, '%23')

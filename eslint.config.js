@@ -25,4 +25,7 @@ export default antfu(
   'ts/no-unnecessary-type-constraint',
   'vue/no-template-shadow',
   'vue/no-v-text-v-html-on-component',
+  'e18e/prefer-static-regex',
+  'markdown/heading-increment',
+  'markdown/require-alt-text',
 )
