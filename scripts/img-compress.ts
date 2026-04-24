@@ -13,6 +13,9 @@ export async function compressSharp(image: sharp.Sharp, inBuffer: Buffer, inFile
   if (format !== 'jpeg' && format !== 'png' && format !== 'webp')
     throw new Error(`Unsupported format ${format} of ${inFile}`)
 
+  // Bake EXIF orientation into pixel data so we can safely strip all metadata below
+  image = image.rotate()
+
   if (width > maxSize || height > maxSize)
     image = image.resize(maxSize)
 
@@ -21,7 +24,7 @@ export async function compressSharp(image: sharp.Sharp, inBuffer: Buffer, inFile
     compressionLevel: 9,
   })
 
-  const outBuffer = await image.withMetadata().toBuffer()
+  const outBuffer = await image.toBuffer()
   const size = inBuffer.byteLength
   const outSize = outBuffer.byteLength
 
