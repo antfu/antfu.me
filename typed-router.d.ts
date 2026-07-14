@@ -20,9 +20,9 @@ import type {
 
 declare module 'vue-router' {
   interface TypesConfig {
-    ParamParsers:
-      | never
+    _ParamParsers: {}
     RouteNamedMap: import('vue-router/auto-routes').RouteNamedMap
+    _RouteFileInfoMap: import('vue-router/auto-routes')._RouteFileInfoMap
   }
 }
 
@@ -619,6 +619,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/posts/the-way-i-see-tools': RouteRecordInfo<
+      '/posts/the-way-i-see-tools',
+      '/posts/the-way-i-see-tools',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/posts/type-inferencing-in-vue': RouteRecordInfo<
       '/posts/type-inferencing-in-vue',
       '/posts/type-inferencing-in-vue',
@@ -770,17 +777,23 @@ declare module 'vue-router/auto-routes' {
         | '/'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/[...404].md': {
       routes:
         | '/[...404]'
       views:
         | never
+      pathParamNames:
+        | '404'
     }
     'pages/bar.md': {
       routes:
         | '/bar'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/bookmarks.md': {
@@ -788,11 +801,15 @@ declare module 'vue-router/auto-routes' {
         | '/bookmarks'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/chat.md': {
       routes:
         | '/chat'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/chat-zh.md': {
@@ -800,11 +817,15 @@ declare module 'vue-router/auto-routes' {
         | '/chat-zh'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/collective-sponsor-onetime.md': {
       routes:
         | '/collective-sponsor-onetime'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/demos.md': {
@@ -812,11 +833,15 @@ declare module 'vue-router/auto-routes' {
         | '/demos'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/giving-talks.md': {
       routes:
         | '/giving-talks'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/media.md': {
@@ -824,11 +849,15 @@ declare module 'vue-router/auto-routes' {
         | '/media'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/notes.md': {
       routes:
         | '/notes'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/photos.md': {
@@ -836,11 +865,15 @@ declare module 'vue-router/auto-routes' {
         | '/photos'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/podcasts.md': {
       routes:
         | '/podcasts'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/index.md': {
@@ -848,11 +881,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/about-yak-shaving.md': {
       routes:
         | '/posts/about-yak-shaving'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/about-yak-shaving-zh.md': {
@@ -860,11 +897,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/about-yak-shaving-zh'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/ai-qrcode.md': {
       routes:
         | '/posts/ai-qrcode'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/ai-qrcode-101.md': {
@@ -872,11 +913,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/ai-qrcode-101'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/ai-qrcode-refine.md': {
       routes:
         | '/posts/ai-qrcode-refine'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/animated-svg-logo.md': {
@@ -884,11 +929,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/animated-svg-logo'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/async-sync-in-between.md': {
       routes:
         | '/posts/async-sync-in-between'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/async-with-composition-api.md': {
@@ -896,11 +945,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/async-with-composition-api'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/binfe-2020-zh.md': {
       routes:
         | '/posts/binfe-2020-zh'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/bonjour-paris.md': {
@@ -908,11 +961,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/bonjour-paris'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/break-lines-in-js.md': {
       routes:
         | '/posts/break-lines-in-js'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/categorize-deps.md': {
@@ -920,11 +977,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/categorize-deps'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/color-scheme-for-vscode-ext.md': {
       routes:
         | '/posts/color-scheme-for-vscode-ext'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/composable-vue-vueconf-china-2021.md': {
@@ -932,11 +993,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/composable-vue-vueconf-china-2021'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/composable-vue-vueday-2021.md': {
       routes:
         | '/posts/composable-vue-vueday-2021'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/destructuring-with-object-or-array.md': {
@@ -944,11 +1009,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/destructuring-with-object-or-array'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/dev-ssr-on-nuxt.md': {
       routes:
         | '/posts/dev-ssr-on-nuxt'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/domain-email.md': {
@@ -956,11 +1025,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/domain-email'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/epoch-semver.md': {
       routes:
         | '/posts/epoch-semver'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/eslint-config-inspector.md': {
@@ -968,11 +1041,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/eslint-config-inspector'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/evolution-of-shiki-v1.md': {
       routes:
         | '/posts/evolution-of-shiki-v1'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/get-package-root.md': {
@@ -980,11 +1057,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/get-package-root'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/github-alerts.md': {
       routes:
         | '/posts/github-alerts'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/github-co-authors.md': {
@@ -992,11 +1073,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/github-co-authors'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/hello-tokyo.md': {
       routes:
         | '/posts/hello-tokyo'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/icons-in-pure-css.md': {
@@ -1004,11 +1089,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/icons-in-pure-css'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/icons-in-pure-css-zh.md': {
       routes:
         | '/posts/icons-in-pure-css-zh'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/introducing-nuxt-devtools.md': {
@@ -1016,11 +1105,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/introducing-nuxt-devtools'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/introduction-to-vitest-vue-nation-2022.md': {
       routes:
         | '/posts/introduction-to-vitest-vue-nation-2022'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/isomorphic-dirname.md': {
@@ -1028,11 +1121,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/isomorphic-dirname'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/journey-with-icons.md': {
       routes:
         | '/posts/journey-with-icons'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/journey-with-icons-continues.md': {
@@ -1040,11 +1137,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/journey-with-icons-continues'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/make-libraries-working-with-vue-2-and-3.md': {
       routes:
         | '/posts/make-libraries-working-with-vue-2-and-3'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/manage-github-notifications-2023.md': {
@@ -1052,11 +1153,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/manage-github-notifications-2023'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/match-chinese-characters.md': {
       routes:
         | '/posts/match-chinese-characters'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/match-quotes-in-pairs.md': {
@@ -1064,11 +1169,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/match-quotes-in-pairs'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/mental-health-oss.md': {
       routes:
         | '/posts/mental-health-oss'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/mental-health-oss-zh.md': {
@@ -1076,11 +1185,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/mental-health-oss-zh'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/move-on-to-esm-only.md': {
       routes:
         | '/posts/move-on-to-esm-only'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/netlify-redirects.md': {
@@ -1088,11 +1201,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/netlify-redirects'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/new-house.md': {
       routes:
         | '/posts/new-house'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/new-ways-to-vue-london-2021.md': {
@@ -1100,11 +1217,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/new-ways-to-vue-london-2021'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/new-ways-to-vue-taiwan-2021.md': {
       routes:
         | '/posts/new-ways-to-vue-taiwan-2021'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/now-and-future-devtools-nuxt-nation-2023.md': {
@@ -1112,11 +1233,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/now-and-future-devtools-nuxt-nation-2023'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/npm-binary-mirrors.md': {
       routes:
         | '/posts/npm-binary-mirrors'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/nuxt-cpuprofile.md': {
@@ -1124,11 +1249,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/nuxt-cpuprofile'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/nuxt-devtools-v1.md': {
       routes:
         | '/posts/nuxt-devtools-v1'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/nuxt-dx-2023.md': {
@@ -1136,11 +1265,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/nuxt-dx-2023'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/nuxt-dx-strasbourg-2023.md': {
       routes:
         | '/posts/nuxt-dx-strasbourg-2023'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/nuxt-icon-v1.md': {
@@ -1148,11 +1281,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/nuxt-icon-v1'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/ohayo-tokyo.md': {
       routes:
         | '/posts/ohayo-tokyo'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/optimize-await.md': {
@@ -1160,11 +1297,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/optimize-await'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/patterns-of-vueuse-vuefes-japan-2022.md': {
       routes:
         | '/posts/patterns-of-vueuse-vuefes-japan-2022'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/photos-page.md': {
@@ -1172,11 +1313,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/photos-page'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/pnpm-external-disk.md': {
       routes:
         | '/posts/pnpm-external-disk'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/publish-esm-and-cjs.md': {
@@ -1184,11 +1329,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/publish-esm-and-cjs'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/range-in-javascript.md': {
       routes:
         | '/posts/range-in-javascript'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/reflection-of-speaking-in-public.md': {
@@ -1196,11 +1345,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/reflection-of-speaking-in-public'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/refreshed-nuxt-eslint.md': {
       routes:
         | '/posts/refreshed-nuxt-eslint'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/reimagine-atomic-css.md': {
@@ -1208,11 +1361,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/reimagine-atomic-css'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/reimagine-atomic-css-zh.md': {
       routes:
         | '/posts/reimagine-atomic-css-zh'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/rewrite-in-vite.md': {
@@ -1220,11 +1377,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/rewrite-in-vite'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/roads-to-oss-progressive-vueams-2024.md': {
       routes:
         | '/posts/roads-to-oss-progressive-vueams-2024'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/roads-to-oss-set-theory-react-paris-2024.md': {
@@ -1232,11 +1393,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/roads-to-oss-set-theory-react-paris-2024'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/roads-to-oss-set-theory-viteconf-2023.md': {
       routes:
         | '/posts/roads-to-oss-set-theory-viteconf-2023'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/roads-to-oss-set-theory-vuefesjapan-2023.md': {
@@ -1244,11 +1409,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/roads-to-oss-set-theory-vuefesjapan-2023'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/shiki-magic-move.md': {
       routes:
         | '/posts/shiki-magic-move'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/shikiji-twoslash.md': {
@@ -1256,11 +1425,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/shikiji-twoslash'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/sliding-enter-animation.md': {
       routes:
         | '/posts/sliding-enter-animation'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/sponsorship-forwarding.md': {
@@ -1268,11 +1441,23 @@ declare module 'vue-router/auto-routes' {
         | '/posts/sponsorship-forwarding'
       views:
         | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/the-way-i-see-tools.md': {
+      routes:
+        | '/posts/the-way-i-see-tools'
+      views:
+        | never
+      pathParamNames:
+        | never
     }
     'pages/posts/type-inferencing-in-vue.md': {
       routes:
         | '/posts/type-inferencing-in-vue'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/type-your-config.md': {
@@ -1280,11 +1465,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/type-your-config'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/typed-provide-and-inject-in-vue.md': {
       routes:
         | '/posts/typed-provide-and-inject-in-vue'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/types-for-sub-modules.md': {
@@ -1292,11 +1481,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/types-for-sub-modules'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/vite-on-demand-dx-viteconf-2022.md': {
       routes:
         | '/posts/vite-on-demand-dx-viteconf-2022'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/vue-3-notes.md': {
@@ -1304,11 +1497,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/vue-3-notes'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/vue-beijing-2021.md': {
       routes:
         | '/posts/vue-beijing-2021'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/vueuse-best-practice-vueconf-china-2022.md': {
@@ -1316,11 +1513,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/vueuse-best-practice-vueconf-china-2022'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/watch-with-reactivity.md': {
       routes:
         | '/posts/watch-with-reactivity'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/why-not-prettier.md': {
@@ -1328,11 +1529,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/why-not-prettier'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/why-not-prettier-zh.md': {
       routes:
         | '/posts/why-not-prettier-zh'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/why-reproductions-are-required.md': {
@@ -1340,11 +1545,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/why-reproductions-are-required'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/posts/why-reproductions-are-required-zh.md': {
       routes:
         | '/posts/why-reproductions-are-required-zh'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/posts/windicss-and-tailwind-jit.md': {
@@ -1352,11 +1561,15 @@ declare module 'vue-router/auto-routes' {
         | '/posts/windicss-and-tailwind-jit'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/projects.md': {
       routes:
         | '/projects'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/sponsors-list.md': {
@@ -1364,11 +1577,15 @@ declare module 'vue-router/auto-routes' {
         | '/sponsors-list'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/streams.md': {
       routes:
         | '/streams'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'pages/talks.md': {
@@ -1376,11 +1593,15 @@ declare module 'vue-router/auto-routes' {
         | '/talks'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'pages/use.md': {
       routes:
         | '/use'
       views:
+        | never
+      pathParamNames:
         | never
     }
   }
