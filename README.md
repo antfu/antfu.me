@@ -6,4 +6,4 @@ Personal portfolio and travel photography gallery highlighting technical skills 
 
 <br>
 
-<samp>code is licensed under <a href='./LICENSE'>MIT</a><br></samp>
+<samp>code is licensed under <a href='./LICENSE' rel="noopener noreferrer">MIT</a><br></samp>

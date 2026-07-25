@@ -37,10 +37,10 @@ const { y: scroll } = useWindowScroll()
         <RouterLink to="/photos" title="Photos">
           <div i-ri-camera-3-line />
         </RouterLink>
-        <a href="https://github.com/Akshay23504" target="_blank" title="GitHub" class="lt-md:hidden">
+        <a href="https://github.com/Akshay23504" target="_blank" rel="noopener noreferrer" title="GitHub" class="lt-md:hidden">
           <div i-uil-github-alt />
         </a>
-        <a href="https://www.linkedin.com/in/akshay05/" target="_blank" title="LinkedIn" class="lt-md:hidden">
+        <a href="https://www.linkedin.com/in/akshay05/" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="lt-md:hidden">
           <div i-uil-linkedin-alt />
         </a>
         <ToggleTheme />

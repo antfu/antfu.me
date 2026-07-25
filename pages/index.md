@@ -17,6 +17,6 @@ Beyond the digital architectures and logic paths, my truest sense of wonder come
 Find me on
 
 <p flex="~ gap-2 wrap" class="mt--2!">
-  <a href="https://github.com/Akshay23504" target="_blank"><span op75 i-simple-icons-github /> GitHub</a>
-  <a href="https://www.linkedin.com/in/akshay05/" target="_blank"><span op75 i-simple-icons-linkedin /> LinkedIn</a>
+  <a href="https://github.com/Akshay23504" target="_blank" rel="noopener noreferrer"><span op75 i-simple-icons-github /> GitHub</a>
+  <a href="https://www.linkedin.com/in/akshay05/" target="_blank" rel="noopener noreferrer"><span op75 i-simple-icons-linkedin /> LinkedIn</a>
 </p>
