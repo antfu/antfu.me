@@ -9,8 +9,6 @@ dist-ssr
 components.d.ts
 auto-imports.d.ts
 temp
-sponsors.*
 drafts
 *.log
-src/data/sponsors-circles.json
 public/assets/fonts
