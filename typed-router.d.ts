@@ -619,13 +619,6 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/posts/the-way-i-see-tools': RouteRecordInfo<
-      '/posts/the-way-i-see-tools',
-      '/posts/the-way-i-see-tools',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
     '/posts/type-inferencing-in-vue': RouteRecordInfo<
       '/posts/type-inferencing-in-vue',
       '/posts/type-inferencing-in-vue',
@@ -1439,14 +1432,6 @@ declare module 'vue-router/auto-routes' {
     'pages/posts/sponsorship-forwarding.md': {
       routes:
         | '/posts/sponsorship-forwarding'
-      views:
-        | never
-      pathParamNames:
-        | never
-    }
-    'pages/posts/the-way-i-see-tools.md': {
-      routes:
-        | '/posts/the-way-i-see-tools'
       views:
         | never
       pathParamNames:

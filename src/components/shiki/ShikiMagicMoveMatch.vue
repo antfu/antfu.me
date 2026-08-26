@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { KeyedTokensInfo } from 'shiki-magic-move/types'
-import { codeToKeyedTokens, createMagicMoveMachine } from 'shiki-magic-move/core'
+import type { KeyedTokensInfo } from '@shikijs/magic-move/types'
+import { codeToKeyedTokens, createMagicMoveMachine } from '@shikijs/magic-move/core'
 import { h, renderList } from 'vue'
 import { useShikiStore } from '~/store/shiki'
 import { code1, code2 } from './ShikiMagicMoveDemoCode'

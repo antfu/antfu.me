@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ShikiMagicMove } from 'shiki-magic-move/vue'
+import { ShikiMagicMove } from '@shikijs/magic-move/vue'
 import { useShikiStore } from '~/store/shiki'
 import { code1, code2 } from './ShikiMagicMoveDemoCode'
 

@@ -1,7 +1,7 @@
 {
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@11.10.0",
+  "packageManager": "pnpm@11.24.0",
   "scripts": {
     "build": "npm run static && cross-env NODE_ENV=production vite-ssg build && tsx ./scripts/copy-fonts.ts && tsx ./scripts/rss.ts && cp _dist_redirects dist/_redirects",
     "dev": "vite --port 3333 --open",
@@ -14,6 +14,7 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
+    "@shikijs/magic-move": "catalog:frontend",
     "@unhead/vue": "catalog:frontend",
     "@unocss/reset": "catalog:frontend",
     "@vueuse/core": "catalog:frontend",
@@ -27,7 +28,6 @@
     "pinia": "catalog:frontend",
     "pixi.js": "catalog:frontend",
     "shiki": "catalog:frontend",
-    "shiki-magic-move": "catalog:frontend",
     "simplex-noise": "catalog:frontend",
     "vue": "catalog:frontend",
     "vue-router": "catalog:frontend",
