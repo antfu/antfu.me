@@ -6,7 +6,7 @@ settings:
 
 catalogs:
   build:
-    '@shikijs/markdown-it':
+    '@shikijs/markdown-exit':
       specifier: ^4.4.3
       version: 4.4.3
     '@shikijs/transformers':
@@ -241,6 +241,9 @@ catalogs:
       specifier: ^2.4.9
       version: 2.4.9
 
+overrides:
+  markdown-exit: ^1.1.0-beta.2
+
 importers:
 
   .:
@@ -315,7 +318,7 @@ importers:
       '@octokit/rest':
         specifier: catalog:dev
         version: 22.0.1
-      '@shikijs/markdown-it':
+      '@shikijs/markdown-exit':
         specifier: catalog:build
         version: 4.4.3
       '@shikijs/transformers':
@@ -402,6 +405,9 @@ importers:
       lint-staged:
         specifier: catalog:dev
         version: 17.3.0
+      markdown-exit:
+        specifier: ^1.1.0-beta.2
+        version: 1.3.0
       markdown-it:
         specifier: catalog:build
         version: 15.0.0
@@ -1497,14 +1503,9 @@ packages:
       vue:
         optional: true
 
-  '@shikijs/markdown-it@4.4.3':
-    resolution: {integrity: sha512-VcMgQA4Y7jEHAt4ehOAHPP9LchYXQ71jyLmw3fxDJYq9xdsD11iZT48SxNiPTDx99NFks10F4iY95Xwtj+e13Q==}
+  '@shikijs/markdown-exit@4.4.3':
+    resolution: {integrity: sha512-Gtj9Vs7NghsN6xhb/5mKeo31vkDKfFBqzppaRrbgK0Csy9ktc2hpNd3W+YhFT65XZ92ovjH6c3PWtbe+C2HJsg==}
     engines: {node: '>=20'}
-    peerDependencies:
-      markdown-it-async: ^2.2.0
-    peerDependenciesMeta:
-      markdown-it-async:
-        optional: true
 
   '@shikijs/primitive@4.4.3':
     resolution: {integrity: sha512-m0wBeLDQDeIxRdUmrCPdQqfuUamDwRL5isCfYbguKD6NiaKpVbsv+3J81DyIKgNW5h4WAIIr8T4EkgQrBBxvaQ==}
@@ -5081,9 +5082,9 @@ snapshots:
       shiki: 4.4.3
       vue: 3.5.41(typescript@6.0.3)
 
-  '@shikijs/markdown-it@4.4.3':
+  '@shikijs/markdown-exit@4.4.3':
     dependencies:
-      markdown-it: 14.3.0
+      markdown-exit: 1.3.0
       shiki: 4.4.3
 
   '@shikijs/primitive@4.4.3':

@@ -1,6 +1,7 @@
+import type { PluginSimple as MarkdownItPlugin } from 'markdown-exit'
 import { Buffer } from 'node:buffer'
 import { basename, dirname, resolve } from 'node:path'
-import MarkdownItShiki from '@shikijs/markdown-it'
+import MarkdownItShiki from '@shikijs/markdown-exit'
 import { transformerNotationDiff, transformerNotationHighlight, transformerNotationWordHighlight } from '@shikijs/transformers'
 import { rendererRich, transformerTwoslash } from '@shikijs/twoslash'
 import Vue from '@vitejs/plugin-vue'
@@ -82,8 +83,8 @@ export default defineConfig({
       markdownItOptions: {
         quotes: '""\'\'',
       },
-      async markdownItSetup(md) {
-        md.use(await MarkdownItShiki({
+      async markdownSetup(md) {
+        md.use((await MarkdownItShiki({
           themes: {
             dark: 'vitesse-dark',
             light: 'vitesse-light',
@@ -99,9 +100,9 @@ export default defineConfig({
             transformerNotationHighlight(),
             transformerNotationWordHighlight(),
           ],
-        }))
+        })) as unknown as MarkdownItPlugin)
 
-        md.use(anchor, {
+        md.use(anchor as unknown as MarkdownItPlugin, {
           slugify,
           permalink: anchor.permalink.linkInsideHeader({
             symbol: '#',
@@ -109,7 +110,7 @@ export default defineConfig({
           }),
         })
 
-        md.use(LinkAttributes, {
+        md.use(LinkAttributes as unknown as MarkdownItPlugin, {
           matcher: (link: string) => /^https?:\/\//.test(link),
           attrs: {
             target: '_blank',
@@ -123,7 +124,7 @@ export default defineConfig({
           containerHeaderHtml: '<div class="table-of-contents-anchor"><div class="i-ri-menu-2-fill" /></div>',
         })
 
-        md.use(MarkdownItMagicLink, {
+        md.use(MarkdownItMagicLink as unknown as MarkdownItPlugin, {
           linksMap: {
             'NuxtLabs': { link: 'https://nuxtlabs.com', imageUrl: 'https://nuxtlabs.com/nuxt.png' },
             'Vitest': 'https://github.com/vitest-dev/vitest',
@@ -162,7 +163,7 @@ export default defineConfig({
           ],
         })
 
-        md.use(GitHubAlerts)
+        md.use(GitHubAlerts as unknown as MarkdownItPlugin)
       },
       frontmatterPreprocess(frontmatter, options, id, defaults) {
         (() => {

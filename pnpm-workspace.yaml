@@ -7,14 +7,22 @@ trustPolicy: no-downgrade
 
 packages: []
 
+update:
+  ignoreDeps:
+    - typescript@7
+
+overrides:
+  markdown-exit: ^1.1.0-beta.2
+
 catalogs:
   build:
-    '@shikijs/markdown-it': ^4.4.3
+    '@shikijs/markdown-exit': ^4.4.3
     '@shikijs/transformers': ^4.4.3
     '@shikijs/twoslash': ^4.4.3
     '@unocss/preset-web-fonts': ^66.8.1
     '@vitejs/plugin-vue': ^6.0.8
     gray-matter: ^4.0.3
+    markdown-exit: ^1.1.0-beta.2
     markdown-it: ^15.0.0
     markdown-it-anchor: ^9.2.1
     markdown-it-github-alerts: ^1.0.1
