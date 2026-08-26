@@ -91,12 +91,12 @@ html:not(.dark) [img-dark] {
 
 @keyframes slide-enter {
   0% {
-    transform: translateY(10px);
+    translate: 0 10px;
     opacity: 0;
   }
 
   to {
-    transform: translateY(0);
+    translate: 0 0;
     opacity: 1;
   }
 }
