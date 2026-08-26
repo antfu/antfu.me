@@ -38,8 +38,8 @@ There are two ways you can do that:
 
 Create an expense on our Open Collective, it usually take a few seconds to fill the form. You will receive the payment directly to your bank account or PayPal within a few days after approval.
 
-1. Got to https://opencollective.com/antfu/expenses/new, select "Invoice"
-2. Fill in your payment information
+1. Got to https://opencollective.com/antfu/expenses/new
+2. Fill in your payment information, select "Invoice"
 3. For expense title, put <TextCopy inline font-bold :slice="[1, -1]">"One-time Sponsorship, {{month}} {{route.query.year}}"</TextCopy>
 4. For the description field, put <TextCopy inline font-bold :slice="[1, -1]">"One-time sponsorship"</TextCopy> with **a link to your recent work** in the description, and fill in the amount **${{route.query.amount}} USD**.
 5. Click "Next" and then "Submit Expense"
