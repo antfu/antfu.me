@@ -1,6 +1,6 @@
 ---
 title: "Ecosystem Sponsorship Forwarding"
-date: 2026-08-20
+date: 2026-08-25
 lang: en
 description: The sponsorship-forwarding initiative redistributes funds to the dependencies and contributors that make open-source work possible. This living post tracks those redistributions.
 ---
