@@ -255,6 +255,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/posts/ecosystem-sponsorship-forwarding': RouteRecordInfo<
+      '/posts/ecosystem-sponsorship-forwarding',
+      '/posts/ecosystem-sponsorship-forwarding',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/posts/epoch-semver': RouteRecordInfo<
       '/posts/epoch-semver',
       '/posts/epoch-semver',
@@ -1016,6 +1023,14 @@ declare module 'vue-router/auto-routes' {
     'pages/posts/domain-email.md': {
       routes:
         | '/posts/domain-email'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/ecosystem-sponsorship-forwarding.md': {
+      routes:
+        | '/posts/ecosystem-sponsorship-forwarding'
       views:
         | never
       pathParamNames:

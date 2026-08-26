@@ -8,6 +8,9 @@ description: An initiative to support open-source ecosystem by Anthony Fu.
 
 [[toc]]
 
+> [!TIP]
+> The redistribution reports are live in the [Ecosystem Sponsorship Forwarding](/posts/ecosystem-sponsorship-forwarding) post.
+
 It's not a secret that open-source projects are now a critical part of almost every software project. While most open-source projects are maintained by volunteers, the sustainability of these projects becomes a big concern. The recent [xz/liblzma vulnerability](https://robmensching.com/blog/posts/2024/03/30/a-microcosm-of-the-interactions-in-open-source-projects/) accident is a great example that shows the importance of open-source projects and how severe the problem could be.
 
 There are [multiple ways to support open-source projects](https://robmensching.com/blog/posts/2024/03/31/what-could-be-done-to-support-open-source-maintainers/) <span op75 italic>(another excellent article by Rob Mensching, highly recommended)</span>. Funding is indeed one of its essential aspects. I believe most open-source maintainers are not doing it for money. However, maintainers still need to pay their bills to make a living and spend time maintaining the projects. Unrewarded free work is not sustainable in the long run.
