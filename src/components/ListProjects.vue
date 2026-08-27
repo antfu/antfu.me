@@ -77,6 +77,7 @@ function slug(name: string) {
         >
           <div v-if="item.icon" class="pt-2 pr-5">
             <Slidev v-if="item.icon === 'slidev'" class="text-4xl opacity-50" />
+            <Devframe v-else-if="item.icon === 'devframe'" class="text-4xl opacity-50" />
             <VueUse v-else-if="item.icon === 'vueuse'" class="text-4xl opacity-50" />
             <VueReactivity v-else-if="item.icon === 'vue-reactivity'" class="text-4xl opacity-50" />
             <VueDemi v-else-if="item.icon === 'vue-demi'" class="text-4xl opacity-50" />
