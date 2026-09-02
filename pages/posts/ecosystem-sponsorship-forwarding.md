@@ -24,6 +24,9 @@ If you'd like to help, you can join the Open Collective fund:
 
 Here are the the contributors / projects we have distributed sponsorships to in 2026:
 
+- [**jscpd**](https://github.com/kucherenko/jscpd): <SponsorshipBadge :amount="150" />. jscpd detects copy-pasted code across hundreds of source formats through its TypeScript and Rust engines.
+- {@serkodev|SerKo} <SponsorshipBadge :amount="300" />. SerKo created [markdown-exit](https://github.com/serkodev/markdown-exit), a TypeScript rewrite of markdown-it with modern architecture and async hook supports. It now powers Slidev and a lot of other tools in the ecosystem.
+- {@gameroman|Roman} <SponsorshipBadge :amount="300" />. Roman contributed a large number of package replacements to [e18e](https://e18e.dev) and continued a lot to [npmx.dev](https://npmx.dev).
 - {@yuyinws|Leo Liang} <SponsorshipBadge :amount="500" />. Leo created [oxc-inspector](https://github.com/yuyinws/oxc-inspector), then generously donated it to become part of Vite DevTools and continued helping maintain it. This gives Vite users a better way to understand what happens inside the Oxc toolchain and help the migration easier.
 - {@kermanx|Kerman} <SponsorshipBadge :amount="250" />. Kerman has done a wonderful job maintaining [Slidev](https://sli.dev) and bringing many thoughtful features to it. Kerman also created [reactive-vscode](https://github.com/kermanx/reactive-vscode), which gives extension authors a composable, reactive foundation and now powers many of our own VS Code extensions.
 - {@yannbf|Yann Braga} <SponsorshipBadge :amount="250" />. Yann has contributed greatly to [Storybook](https://github.com/storybookjs/storybook) and brought that experience into our collaboration on [Vite DevTools](https://github.com/vitejs/devtools). It was a pleasure to work together and learn from the care he brings to developer-facing tools.
