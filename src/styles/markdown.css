@@ -49,6 +49,57 @@ html:not(.dark) .shiki span {
   margin: 0.5em 0;
 }
 
+.terminal-window {
+  position: relative;
+  overflow: hidden;
+  margin: 1.2em 0;
+  border: 1px solid #8883;
+  border-radius: 0.75rem;
+  background: #fafafa;
+  box-shadow: 0 10px 30px #0000000d;
+}
+
+.terminal-window::before {
+  content: '';
+  display: block;
+  height: 2rem;
+  border-bottom: 1px solid #8882;
+  background: #f1f1f1;
+}
+
+.terminal-window::after {
+  content: '';
+  position: absolute;
+  top: 0.6rem;
+  left: 0.8rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: #ff5f57;
+  box-shadow:
+    1.2rem 0 #febc2e,
+    2.4rem 0 #28c840;
+}
+
+.terminal-window > pre {
+  overflow-x: auto;
+  margin: 0 !important;
+  padding: 1.2rem 1.35rem 1.35rem;
+  border-radius: 0;
+  background: transparent !important;
+}
+
+.dark .terminal-window {
+  border-color: #ffffff18;
+  background: #0e0e0e;
+  box-shadow: 0 10px 30px #0004;
+}
+
+.dark .terminal-window::before {
+  border-bottom-color: #ffffff12;
+  background: #181818;
+}
+
 .prose img {
   width: 100%;
 }
@@ -69,14 +120,14 @@ html:not(.dark) .shiki span {
   color: var(--fg);
 }
 
-.prose a {
+.prose a:not(.border) {
   font-weight: inherit;
   text-decoration: none;
   border-bottom: 1px solid rgba(125, 125, 125, 0.3);
   transition: border 0.3s ease-in-out;
 }
 
-.prose a:hover {
+.prose a:not(.border):hover {
   border-bottom: 1px solid var(--fg);
 }
 

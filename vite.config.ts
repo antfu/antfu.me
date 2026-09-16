@@ -150,6 +150,12 @@ export default defineConfig({
             'Netlify': { link: 'https://netlify.com', imageUrl: 'https://github.com/netlify.png' },
             'Stackblitz': { link: 'https://stackblitz.com', imageUrl: 'https://github.com/stackblitz.png' },
             'Vercel': { link: 'https://vercel.com', imageUrl: 'https://github.com/vercel.png' },
+            'Node Modules Inspector': { link: 'https://github.com/antfu/node-modules-inspector', imageUrl: 'https://node-modules.dev/favicon.svg' },
+            'ESLint Config Inspector': { link: 'https://github.com/eslint/config-inspector', imageUrl: 'https://github.com/eslint.png' },
+            'UnoCSS Inspector': { link: 'https://unocss.dev/tools/inspector#inspector', imageUrl: 'https://github.com/unocss.png' },
+            'Vite Plugin Inspect': { link: 'https://github.com/antfu-collective/vite-plugin-inspect', imageUrl: 'https://github.com/antfu-collective.png' },
+            'Vitest UI': { link: 'https://vitest.dev/guide/ui', imageUrl: 'https://github.com/vitest-dev.png' },
+            'Devframe': { link: 'https://github.com/devframes/devframe', imageUrl: 'https://github.com/devframes.png' },
           },
           imageOverrides: [
             ['https://github.com/vuejs/core', 'https://vuejs.org/logo.svg'],

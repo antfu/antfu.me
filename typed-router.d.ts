@@ -514,6 +514,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/posts/pluggable-extensible-playful-devtools': RouteRecordInfo<
+      '/posts/pluggable-extensible-playful-devtools',
+      '/posts/pluggable-extensible-playful-devtools',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/posts/pnpm-external-disk': RouteRecordInfo<
       '/posts/pnpm-external-disk',
       '/posts/pnpm-external-disk',
@@ -1319,6 +1326,14 @@ declare module 'vue-router/auto-routes' {
     'pages/posts/photos-page.md': {
       routes:
         | '/posts/photos-page'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/pluggable-extensible-playful-devtools.md': {
+      routes:
+        | '/posts/pluggable-extensible-playful-devtools'
       views:
         | never
       pathParamNames:

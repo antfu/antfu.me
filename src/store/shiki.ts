@@ -15,6 +15,7 @@ export const useShikiStore = defineStore('pinia', () => {
         import('shiki/themes/vitesse-light.mjs'),
       ],
       langs: [
+        import('shiki/langs/typescript.mjs'),
         import('shiki/langs/vue.mjs'),
       ],
       engine: createJavaScriptRegexEngine(),

@@ -1,0 +1,23 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_8_208)">
+<path d="M238.464 40H66V236.007H104.577C220.688 236.007 232.79 158.437 232.79 121.733C232.79 108.867 243.38 108.867 243.38 121.733C251.318 236.701 356.35 245.457 365.527 246.223L365.542 246.224C374.619 246.981 382.561 251.521 365.542 254.548C253.592 264.765 243.758 364.282 243.38 375.634C243.002 386.986 235.438 399.851 232.79 375.634C222.957 274.603 144.289 257.954 104.577 257.954H66V460.772H238.464C358.356 460.772 452.152 371.472 452.152 251.521C452.152 131.571 356.465 40 238.464 40Z" fill="url(#paint0_radial_8_208)" shape-rendering="crispEdges"/>
+<path d="M238.464 40H66V236.007H104.577C220.688 236.007 232.79 158.437 232.79 121.733C232.79 108.867 243.38 108.867 243.38 121.733C251.318 236.701 356.35 245.457 365.527 246.223L365.542 246.224C374.619 246.981 382.561 251.521 365.542 254.548C253.592 264.765 243.758 364.282 243.38 375.634C243.002 386.986 235.438 399.851 232.79 375.634C222.957 274.603 144.289 257.954 104.577 257.954H66V460.772H238.464C358.356 460.772 452.152 371.472 452.152 251.521C452.152 131.571 356.465 40 238.464 40Z" stroke="#86997F" stroke-opacity="0.5" stroke-width="1.33156" shape-rendering="crispEdges"/>
+</g>
+<defs>
+<filter id="filter0_d_8_208" x="60.7404" y="39.3342" width="396.671" height="431.358" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4.66045"/>
+<feGaussianBlur stdDeviation="2.29694"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.25464 0 0 0 0 0.285175 0 0 0 0 0.243391 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_8_208"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_8_208" result="shape"/>
+</filter>
+<radialGradient id="paint0_radial_8_208" cx="0" cy="0" r="1" gradientTransform="matrix(399.011 555.102 -568.423 408.982 -11.6221 -34.9218)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#ADC77F"/>
+<stop offset="0.71903" stop-color="#517158"/>
+<stop offset="1" stop-color="#486954"/>
+</radialGradient>
+</defs>
+</svg>
