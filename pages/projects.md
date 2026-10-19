@@ -261,6 +261,11 @@ projects:
       desc: 'A Raycast extension that translates text to multiple languages at once'
       icon: 'i-carbon-ibm-watson-language-translator'
 
+    - name: 'Furifont'
+      link: 'https://github.com/antfu/furifont'
+      desc: 'A Japanese font that shows furigana by itself'
+      icon: 'furifont'
+
   Games:
     - name: 'Handle 汉兜'
       link: 'https://handle.antfu.me'

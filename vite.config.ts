@@ -127,6 +127,8 @@ export default defineConfig({
         md.use(MarkdownItMagicLink as unknown as MarkdownItPlugin, {
           linksMap: {
             'NuxtLabs': { link: 'https://nuxtlabs.com', imageUrl: 'https://nuxtlabs.com/nuxt.png' },
+            'pulls.review': { link: 'https://pulls.review', imageUrl: 'https://pulls.review/favicon.svg' },
+            'Furifont': { link: 'https://furifont.antfu.me', imageUrl: 'https://furifont.antfu.me/favicon.svg' },
             'Vitest': 'https://github.com/vitest-dev/vitest',
             'Slidev': 'https://github.com/slidevjs/slidev',
             'VueUse': 'https://github.com/vueuse/vueuse',
@@ -141,6 +143,7 @@ export default defineConfig({
             'ESLint Stylistic': 'https://github.com/eslint-stylistic/eslint-stylistic',
             'Unplugin': 'https://github.com/unplugin',
             'Nuxt DevTools': 'https://github.com/nuxt/devtools',
+            'Vite DevTools': 'https://github.com/vitejs/devtools',
             'Vite PWA': 'https://github.com/vite-pwa',
             'i18n Ally': 'https://github.com/lokalise/i18n-ally',
             'ESLint': 'https://github.com/eslint/eslint',

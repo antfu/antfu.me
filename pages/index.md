@@ -9,6 +9,7 @@ Hey! I'm Anthony Fu, a fanatical open sourceror and design engineer.
 
 Working at {Vercel} / {Nuxt}<br>
 Creator of {Vitest} {Slidev} {VueUse} {UnoCSS} {Elk} {Type Challenges}<br>
+Recent work {Vite DevTools} {Nuxt DevTools} {Devframe} {pulls.review} {Furifont}<br>
 Core team of {Vue} {Nuxt} {Vite}<br>
 Maintaining {Shiki} {Twoslash} {ESLint Stylistic}
 
