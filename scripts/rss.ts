@@ -1,5 +1,6 @@
 import type { FeedOptions, Item } from 'feed'
 import { dirname } from 'node:path'
+import ansis from 'ansis'
 import fg from 'fast-glob'
 import { Feed } from 'feed'
 import fs from 'fs-extra'
@@ -47,7 +48,8 @@ async function buildBlogRSS() {
           if (data.lang !== 'en')
             return
 
-          const html = markdown.render(content)
+          // ANSI escape codes in code blocks are not valid XML characters, so they must not reach the feed
+          const html = ansis.strip(markdown.render(content))
             .replace('src="/', `src="${DOMAIN}/`)
 
           if (data.image?.startsWith('/'))
